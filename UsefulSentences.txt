@@ -1,0 +1,8 @@
+Vogel, P., Wen, L. J., & Zhang, C. (2015). Neutrino oscillation studies with reactors. Nature communications, 6, 6935.
+
+
+To determine these parameters with precise values is still the main goal of neutrino oscillation experiments.
+
+calibration links the physical information and the measured quantities.
+
+

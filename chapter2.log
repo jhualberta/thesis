@@ -1,0 +1,743 @@
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2018.10.13)  9 APR 2019 13:25
+ restricted \write18 enabled.
+**chapter2.tex
+(./chapter2.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 1 language(s) loaded.
+! Undefined control sequence.
+l.7 \section
+          {A Description of SNO+ Detector}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \section{A
+             Description of SNO+ Detector}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--8
+[][]A
+ []
+
+! Undefined control sequence.
+l.9 \subsection
+             {Overview}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \subsection{O
+               verview}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 10.
+\citation{muonflux}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 ...uons/m^2/minute$ at sea level\cite{muonflux}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `muonflux' on page  undefined on input line 10.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--11
+[][]Overview
+ []
+
+
+Overfull \hbox (27.77786pt too wide) in paragraph at lines 9--11
+\OT1/cmr/m/n/10 2092 \OMS/cmsy/m/n/10 
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 9--11
+\OT1/cmr/m/n/10 6$
+ []
+
+
+Overfull \hbox (27.77786pt too wide) in paragraph at lines 9--11
+\OT1/cmr/m/n/10 5890 \OMS/cmsy/m/n/10 
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 9--11
+\OT1/cmr/m/n/10 94$
+ []
+
+
+Overfull \hbox (86.83827pt too wide) in paragraph at lines 9--11
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 27[]\OML/cmm/m/it/10 muons=m
+[]=day$\nullfont ,
+ []
+
+
+Overfull \hbox (100.01382pt too wide) in paragraph at lines 9--11
+\OT1/cmr/m/n/10 10[][]\OML/cmm/m/it/10 muons=m[]=minute$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 9--11
+level[[]]. 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 T
+    he detector has been running since December 2016\cite{ndpaper},
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{ndpaper}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.12 ...en running since December 2016\cite{ndpaper}
+                                                  ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `ndpaper' on page  undefined on input line 12.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--13
+[][]The
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 12--13
+2016[[]], 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 T
+    he SNO+ detector is the successor of the SNO experiment, which makes use...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 15--16
+[][]The
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 d
+    etector consists of an acrylic vessel (AV) sphere of 12 m in diameter and
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--19
+[][]detector
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 5
+    .5 cm in thickness. The AV sphere is concentric within a stainless steel...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 20--21
+[][]5.5
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 T
+    he SNO+ detector is designed for multi-purpose measurements of neutrino ...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{whitepaper}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.25 ...ill go through three phases\cite{whitepaper}
+                                                  :
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `whitepaper' on page  undefined on input line 25.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--26
+[][]The
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 24--26
+phases[[]]: 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 1
+    . Water phase
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 27--28
+[][]1.
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 T
+    he AV was filled with about 900 tonnes of ultra pure water (UPW). The de...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 29--30
+[][]The
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 T
+    he main physics goal in this phase is to search for the invisible nucleo...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 31--32
+[][]The
+ []
+
+
+Overfull \hbox (8.47226pt too wide) in paragraph at lines 31--32
+[][]$O
+ []
+
+
+Overfull \hbox (13.06949pt too wide) in paragraph at lines 31--32
+[][]$O$[][]$
+ []
+
+
+Overfull \hbox (13.06949pt too wide) in paragraph at lines 31--32
+[][]$O$[][]$,
+ []
+
+
+Overfull \hbox (5.73285pt too wide) in paragraph at lines 31--32
+\OML/cmm/m/it/10 $
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 D
+    uring the water phase, different types of calibration runs have been tak...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 33--34
+[][]During
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 2
+    . Scintillator phase
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
+[][]2.
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 T
+    he AV will be filled with 780 tonnes of liquid scintillator, which is a ...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 37--38
+[][]The
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 I
+    n this phase, the main physics goal is to measure low energy solar neutr...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{borexino}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.39 ...ects in neutrino oscillations\cite{borexino}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `borexino' on page  undefined on input line 39.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
+[][]In
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 39--40
+[][]$B
+ []
+
+
+Overfull \hbox (12.35767pt too wide) in paragraph at lines 39--40
+\OML/cmm/m/it/10 E[]$\nullfont =1.442
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 39--40
+oscillations[[]]. 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 T
+    he solar metallicity is the abundance of elements heavier than $^4$He (c...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{cno}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.41 ...us resolve the metallicity problem\cite{cno}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `cno' on page  undefined on input line 41.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 41--42
+[][]The
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 41--42
+[][]$He
+ []
+
+
+Overfull \hbox (8.47226pt too wide) in paragraph at lines 41--42
+[][]$C,
+ []
+
+
+Overfull \hbox (8.47226pt too wide) in paragraph at lines 41--42
+[][]$N
+ []
+
+
+Overfull \hbox (8.47226pt too wide) in paragraph at lines 41--42
+[][]$O
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 41--42
+problem[[]]. 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 G
+    eoneutrino, reactor antineutrino and supernova neutrino detections are a...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 43--44
+[][]Geoneutrino,
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 A
+     six-month period of scintillator filling and six to twelve months of da...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 45--46
+[][]A
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 3
+    . Tellurium loading phase
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 47--48
+[][]3.
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 I
+    n this final phase, 0.5\% natural Tellurium by mass will be loaded into ...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{Paton:2019kgy}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.50 ...r a further loading plan\cite{Paton:2019kgy}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Paton:2019kgy' on page  undefined on input line 50.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 49--52
+[][]In
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 49--52
+plan[[]].
+ []
+
+
+Overfull \hbox (12.45839pt too wide) in paragraph at lines 49--52
+[][]$Te
+ []
+
+
+Overfull \hbox (22.94444pt too wide) in paragraph at lines 49--52
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 $
+ []
+
+
+Overfull \hbox (12.45839pt too wide) in paragraph at lines 49--52
+[][]$Te. 
+ []
+
+! Undefined control sequence.
+l.54 \subsection
+              {Trigger System}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \subsection{T
+                rigger System}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--55
+[][]Trigger
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 C
+    alibration source
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 57--58
+[][]Calibration
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 T
+    he $^{16}$N source
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 59--61
+[][]The
+ []
+
+
+Overfull \hbox (8.47226pt too wide) in paragraph at lines 59--61
+[][]$N
+ []
+
+
+Overfull \hbox (31.95857pt too wide) in paragraph at lines 59--61
+[][]$H$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p; \OT1/cmr/m/n/10 )[]$\nullfont He
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 L
+    iquid scintillator
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 63--64
+[][]Liquid
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 L
+    inear Alkyl Benzene (LAB)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 65--66
+[][]Linear
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 T
+    he advantages of LAB are:
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 67--68
+[][]The
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \begin{itemize}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 69--69
+[][] 
+ []
+
+
+Overfull \hbox (6.43404pt too wide) in paragraph at lines 71--72
+\OML/cmm/m/it/10 $
+ []
+
+
+Overfull \hbox (6.18402pt too wide) in paragraph at lines 71--72
+\OML/cmm/m/it/10 $
+ []
+
+
+Overfull \hbox (14.21184pt too wide) in paragraph at lines 71--72
+\OML/cmm/m/it/10  \OMS/cmsy/m/n/10  
+ []
+
+
+Overfull \hbox (6.18402pt too wide) in paragraph at lines 71--72
+\OML/cmm/m/it/10 $
+ []
+
+)
+! Emergency stop.
+<*> chapter2.tex
+             
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 31 strings out of 495004
+ 100000,89155 words of node,token memory allocated 26918 words of node memory still in use:
+   186 hlist, 2 disc, 28 math, 861 glue, 10 kern, 79 penalty, 3400 glyph, 176 gl
+ue_spec, 1 temp, 31 local_par, 1 dir nodes
+   avail lists: 2:11,5:1,7:85,10:82
+ 3707 multiletter control sequences out of 65536+600000
+ 26 fonts using 1033735 bytes
+ 18i,2n,21p,519b,94s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

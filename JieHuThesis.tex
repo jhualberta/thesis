@@ -1,0 +1,59 @@
+\documentclass[phd,black]{PrincetonThesis}
+\usepackage{epsfig}
+\usepackage{epigraph}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+\makeatletter
+\newlength\epitextskip
+\pretocmd{\@epitext}{\em}{}{}
+\apptocmd{\@epitext}{\em}{}{}
+\patchcmd{\epigraph}{\@epitext{#1}\\}{\@epitext{#1}\\[\epitextskip]}{}{}
+\makeatother
+
+\title{Reconstruction and Calibration of SNO+ Water}
+\author{Jie Hu}
+\department{Department of Physics}
+\advisor{Aksel Hallin}
+\degreemonth{January}
+\degreeyear{2019}
+
+\begin{document}
+
+\begin{frontmatter}
+  
+  \begin{thesisabstract}
+    \input abstract.tex
+  \end{thesisabstract}
+  
+  \begin{acknowledgements}
+    \input acknowledgements.tex
+  \end{acknowledgements}
+  
+\end{frontmatter}
+
+\cleardoublepage
+\chapter{Introduction}
+\input chapter1.tex
+
+
+\chapter{The SNO+ Experiment}
+\input chapter2.tex
+
+\chapter{Water Phase Analysis}
+\input chapter3.tex
+
+\chapter{Partial-filled Scintillator Phase}
+\input chapter3.tex
+
+\appendix
+
+\cleardoublepage
+\chapter{Appendix Name}
+	%\input appendix1.tex
+	
+	\cleardoublepage
+	\nocite{*} %% use everything in bibtex file, even if not cited
+	\bibliographystyle{abbrv} %% or your favorite style
+	\bibliography{thesis} %% assuming your bibtex file is thesis.bib
+	
+	\end{document}

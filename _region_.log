@@ -1,0 +1,304 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.30)  23 JAN 2018 14:33
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input _region_.tex
+(./_region_.tex  !name(JieHuThesis.tex) (./PrincetonThesis.cls
+Document Class: PrincetonThesis 2002/07/01 v1.0 Princeton Univ. thesis class
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+ (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+./_region_.tex:7: Undefined control sequence.
+l.7 \adviser
+            {Your Adviser}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./_region_.tex:7: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \adviser{Y
+              our Adviser}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+(/home/vphys/.emacs.d/elpa/auctex-12.1.0/latex/preview.sty
+Package: preview 2017/04/24 12.1 (AUCTeX/preview-latex)
+ (/usr/share/texlive/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/03/01 v1.0 pdftex aliases for luatex
+) (/home/vphys/.emacs.d/elpa/auctex-12.1.0/latex/prtightpage.def
+\PreviewBorder=\dimen107
+) (/home/vphys/.emacs.d/elpa/auctex-12.1.0/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count89
+\hfuzz=\dimen108
+(/home/vphys/.emacs.d/elpa/auctex-12.1.0/latex/prauctex.cfg)) (/home/vphys/.emacs.d/elpa/auctex-12.1.0/latex/prfootnotes.def)
+\pr@snippet=\count90
+\pr@box=\box26
+\pr@output=\toks15
+
+Preview: Fontsize 10.95pt
+Preview: PDFoutput 1
+) (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count91
+\scratchdimen=\dimen109
+\scratchbox=\box27
+\nofMPsegments=\count92
+\nofMParguments=\count93
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count94
+\MPscratchDim=\dimen110
+\MPnumerator=\count95
+\makeMPintoPDFobject=\count96
+\everyMPtoPDFconversion=\toks17
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+  !name(JieHuThesis.tex) !offset(-3) 
+./_region_.tex:18: Preview: Snippet 1 started.
+<-><->
+      
+l.18   \begin{thesisabstract}
+                             
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+./_region_.tex:18: Preview: Snippet 1 ended.(6422540+0x28417720).
+<-><->
+      
+l.18   \begin{thesisabstract}
+                             
+Not a real error.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./abstract.tex
+./abstract.tex:1: Preview: Snippet 2 started.
+<-><->
+      
+l.1 \section
+            {Abstract}
+Not a real error.
+
+./abstract.tex:1: Preview: Snippet 2 ended.(655359+0x28417720).
+<-><->
+      
+l.1 \section{Abstract}
+                      
+Not a real error.
+
+[2
+
+])
+./_region_.tex:22: Preview: Snippet 3 started.
+<-><->
+      
+l.22   \begin{acknowledgements}
+                               
+Not a real error.
+
+./_region_.tex:22: Preview: Snippet 3 ended.(6422540+317047x28417720).
+<-><->
+      
+l.22   \begin{acknowledgements}
+                               
+Not a real error.
+
+[3
+
+] (./acknowledgements.tex
+./acknowledgements.tex:1: Preview: Snippet 4 started.
+<-><->
+      
+l.1 \section
+            {Abstract}
+Not a real error.
+
+./acknowledgements.tex:1: Preview: Snippet 4 ended.(655359+0x28417720).
+<-><->
+      
+l.1 \section{Abstract}
+                      
+Not a real error.
+
+[4
+
+])
+./_region_.tex:26: Preview: Snippet 5 started.
+<-><->
+      
+l.26 \end{frontmatter}
+                      
+Not a real error.
+
+./_region_.tex:26: Preview: Snippet 5 ended.(6422540+0x28417720).
+<-><->
+      
+l.26 \end{frontmatter}
+                      
+Not a real error.
+
+[5
+
+]
+No file _region_.toc.
+./_region_.tex:26: Preview: Snippet 6 started.
+<-><->
+      
+l.26 \end{frontmatter}
+                      
+Not a real error.
+
+./_region_.tex:26: Preview: Snippet 6 ended.(6422540+317047x28417720).
+<-><->
+      
+l.26 \end{frontmatter}
+                      
+Not a real error.
+
+[6
+
+]
+No file _region_.lof.
+./_region_.tex:26: Preview: Snippet 7 started.
+<-><->
+      
+l.26 \end{frontmatter}
+                      
+Not a real error.
+
+./_region_.tex:26: Preview: Snippet 7 ended.(6422540+0x28417720).
+<-><->
+      
+l.26 \end{frontmatter}
+                      
+Not a real error.
+
+[7
+
+]
+No file _region_.lot.
+ !name(JieHuThesis.tex) !offset(11)  ) 
+Here is how much of TeX's memory you used:
+ 1793 strings out of 493029
+ 25591 string characters out of 6136234
+ 83726 words of memory out of 5000000
+ 5315 multiletter control sequences out of 15000+600000
+ 6358 words of font info for 23 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,5n,24p,509b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+Output written on _region_.pdf (7 pages, 14132 bytes).
+PDF statistics:
+ 32 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

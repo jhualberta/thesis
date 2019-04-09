@@ -1,0 +1,58 @@
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2018.2.16)  17 MAY 2018 12:13
+ restricted \write18 enabled.
+**chapter1.tex
+(./chapter1.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 1 language(s) loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 A
+    neutrino is one of the elementary particles we currently know and is inc...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
+[][]A
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 S
+   NO+ experiment is planned to explore one of the unknown properties of neu...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--6
+[][]SNO+
+ []
+
+)
+! Emergency stop.
+<*> chapter1.tex
+             
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 7 strings out of 495004
+ 100000,89155 words of node,token memory allocated 2526 words of node memory still in use:
+   6 hlist, 71 glue, 4 penalty, 325 glyph, 37 glue_spec, 2 local_par, 1 dir node
+s
+   avail lists: 2:12,4:16,5:1,6:1,7:42,10:40
+ 3695 multiletter control sequences out of 65536+600000
+ 14 fonts using 562767 bytes
+ 5i,0n,4p,255b,15s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!
