@@ -1,12 +1,12 @@
 %% chapter of SNO+ detector
 
-\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
+%%\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 
 
 \section{A Description of SNO+ Detector}
 
 \subsection{Overview}
-The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada. Deep underground, the SNOLAB provides a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (w.e.m). This rock overburden ensures an extremely low rate of cosmic muons passing through the detector. The rate is $0.27~ muons/m^2/day$, compared to an average flux of about $10^4~muons/m^2/minute$ at sea level\cite{muonflux}.
+The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada. The deep underground facility of the SNOLAB provides a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (w.e.m). This rock overburden ensures an extremely low rate of cosmic muons passing through the detector. The rate is $0.27~\mu/m^2/day$, compared to an average flux of about $1.44\times 10^6~\mu/m^2/day$ at sea level\cite{muonflux}.
 
 The detector has been running since December 2016\cite{ndpaper},
 
@@ -20,12 +20,17 @@ detector consists of an acrylic vessel (AV) sphere of 12 m in diameter and
 
 
 
+
+main upgrades from SNO to SNO+
+
+
+\subsection{SNO+ Physics Phases}
 The SNO+ detector is designed for multi-purpose measurements of neutrino physics.
 The experiment will go through three phases\cite{whitepaper}: 
 
 1. Water phase 
 
-The AV was filled with about 900 tonnes of ultra pure water (UPW). The detector has been collecting physics data since May 2017.
+The AV was filled with about 905 tonnes of ultra pure water (UPW). The detector has been collecting physics data since May 2017.
 
 The main physics goal in this phase is to search for the invisible nucleon decay, which violates baryon number and is a prediction of Grand Unified Theory (GUT). In this decay mode, $^{16}$O decays into $^{15}$O$^*$ or $ ^{15}$O$^*$, which de-excites and produces a $\gamma$ ray of about 6 MeV.
 
@@ -50,13 +55,58 @@ Higher loading concentrations would be possible for a further loading plan\cite{
  The $^{130}$Te is a double beta decay isotope. The main purpose in this phase is searching for $0\nu\beta\beta$ in $^{130}$Te.
 
 
-\subsection{Trigger System}
+\subsection{Electronics}
+
+PMTs are Hamamatsu model R1408.
 
 
-Calibration source
+a single RG59/U type 75 $\Omega$ coaxial cable
 
-The $^{16}$N source
-$^{3}$H$(p,\gamma)^{4}$He reaction.
+19 crates$\times$16 cards$\times$32 channels = 9728 electronics channels.
+
+
+During the experiment running, the maintenance of the electronics is always ongoing.
+
+crate controller card (XL3)
+
+
+
+CAEN v1720 digitizer 
+
+TUBii trigger utility board 
+pulsers and delays
+
+DAQ 
+
+
+nearline provides a real-time analysis of the data quality, 
+
+
+
+
+
+
+
+
+\subsection{Optics}
+
+Optical parameters
+
+
+timing
+
+
+attenuation
+
+scattering
+
+
+laser pulse diffuser, it can run with different wavelengths: 337, 365, 385, 420, 450 and 500 nm.
+The laserball 
+
+
+
+
 
 \subsection{Liquid scintillator}
 
@@ -66,8 +116,16 @@ Linear Alkyl Benzene (LAB)
 The advantages of LAB are:
 
 \begin{itemize}
+	\item It has very low levels of natural radioactive contaminants such as U, Th and K.
+	
+	 since ionic 
+	
+	
+	
 	\item It has a high light yield
-	\item It has different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha-\beta$ discrimination. 
+	\item It has fast timing response 
+	
+	different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha-\beta$ discrimination. 
 	\item It is chemically compatible with AV.
 	\item It is cheap, for 
 \end{itemize}
@@ -75,3 +133,35 @@ The advantages of LAB are:
 
 
 water-based wavelength shifter
+
+\subsection{Calibration}
+Calibration source
+
+The $^{16}$N source
+$^{3}$H$(p,\gamma)^{4}$He reaction.
+
+the SNO+ Source Manipulator System (SMS)
+is inherited from the SNO.
+
+
+
+A Umbilical Retrieval Mechanism (URM) is used to send the source down to the inner vessel.
+
+
+
+The sources are connected to the umbilical.
+
+
+An umbilical encloses electrical cables, optical fibres and gas lines connected to the source.
+
+A Universal Interface (UI) connecting the URM and the detector, 
+Therefore, sealed environment, which 
+ensures radon gas not leaking into the detector when deploying the source.
+
+
+
+
+
+
+
+

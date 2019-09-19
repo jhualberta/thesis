@@ -3,6 +3,11 @@
 \usepackage{epigraph}
 \usepackage{hyperref}
 \usepackage{etoolbox}
+\usepackage{amsmath}
+\usepackage{isotope}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
 \makeatletter
 \newlength\epitextskip
 \pretocmd{\@epitext}{\em}{}{}
@@ -17,6 +22,8 @@
 \degreemonth{January}
 \degreeyear{2019}
 
+
+%\usechemmodule{isotopes} 
 \begin{document}
 
 \begin{frontmatter}
@@ -39,9 +46,8 @@
 \chapter{The SNO+ Experiment}
 \input chapter2.tex
 
-\chapter{Water Phase Analysis}
+\chapter{Event Reconstruction}
 \input chapter3.tex
-
 \chapter{Partial-filled Scintillator Phase}
 \input chapter3.tex
 
