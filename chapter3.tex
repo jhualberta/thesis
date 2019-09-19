@@ -245,7 +245,7 @@ $l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $ r_{neck}$ is the radius of the neck 
 scintillator timing
 
 \[
-\sum^{i=4}_{i=1} a_i\cdot\frac{e^{-\frac{x}{t_i}}-e^{-\frac{x}{t_{rise}}}}{-t_i-t_{rise}}
+\sum^{i=4}_{i=1} a_i\cdot\frac{e^{-\frac{x}{t_i}}-e^{-\frac{x}{t_{rise}}}}{t_i-t_{rise}}
 \]
 
 
@@ -255,25 +255,33 @@ amplitude
 
 
 \begin{table}[ht]
-	\caption{\label{scint_timing} scintillator $\alpha/\beta$ timing parameters.}	
+	\caption{\label{scint_timing} scintillator $\alpha/\beta$ timing parameters\ref{tanner,lattore measurement}.}	
+	
+	
+%	Reference [11]: SNO+-docDB 5950: 0.5 g/L light yield, from in-situ tagged BiPo data
+%	Reference [12]: SNO+-docDB 5997: 0.5 g/L light yield and timing from bench-top
+	
+	
 	{\centering
-		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
+		\begin{tabular*}{165mm}{c@{\extracolsep{\fill}}*9c}
 			\toprule 
-			medium & \multicolumn{4}{c}{timing parameters [ns]} & \multicolumn{4}{c}{amplitudes}\\
-			\cline{2-5} \cline{6-9}		
-			       & $t_1$ & $t_2$ & $t_3$ & $t_4$ & $a_1$ &$a_2$ &$a_3$&$a_4$\\
+			\multicolumn{1}{c}{scintillator} & \multicolumn{4}{c}{timing [ns]} & \multicolumn{4}{c}{amplitudes}\\
+			\cline{0-1}\cline{2-5} \cline{6-9}		
+			 particles      & $t_1$ & $t_2$ & $t_3$ & $t_4$ & $a_1$ &$a_2$ &$a_3$&$a_4$\\
 			\midrule
-			LAB + 2g/L PPO \\
+			\multicolumn{9}{l}{LAB + 2g/L PPO (default scintillator)}\\
+			$e^-$ & 4.88 & 15.4 & 66.0 & 400 & 0.665 & 0.218 & 0.083& 0.0346\\	
+		    $\alpha$ & 4.79 & 18.4 & 92.0 & 900 & 0.427 & 0.313 & 0.157 & 0.1027\\
+		    \hline
+		    \multicolumn{9}{l}{LAB + 0.5g/L PPO (partial-fill phase)} \\
+			$e^-$& 7.19 & 24.81 & 269.87 & -- &0.553 &0.331 &0.116 & --\\
+			$\alpha$& 6.56 &23.82 &224.19&--& 0.574&0.311& 0.115&--\\
 			\hline
-			$e^-$ & 4.88 & 15.4 & 66.0 & 400 & 0.665 & 0.218 & 0.083& 0.0346\\
-			LAB + 0.5g/L PPO \\
+			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations dda} \\
+			$e^-$ & 5.0& 12.1& 33.3& 499.0& 0.68& 0.21& 0.07& 0.04\\
+			$\alpha$ &3.8 &11.3& 65.3& 758.0& 0.48& 0.32& 0.14& 0.06 \\
 			\hline
-			& 7.19 & 24.81 & 269.87 & -- &0.553 &0.331 &0.116 & --\\
-			LAB + 2g/L PPO + Te + 0.5 dda \\
-			\hline
-			& 7.19 & 24.81 & 269.87 & -- &0.553 &0.331 &0.116 & --\\
-			LAB + 2g/L PPO + Te + 0.5 dda\\
-			\hline
+			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations Te+0.5\% molar dda}\\
 			$e^-$ & 3.7 & 10.0 & 52.0  & 500.0 & 0.72 & 0.23 & 0.02 &0.03\\
 			$\alpha$ & 3.69 & 15.5 & 79.3  & 489.0 & 0.63 & 0.23 & 0.07 &0.07\\	
 			\bottomrule	
