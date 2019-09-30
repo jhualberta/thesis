@@ -64,12 +64,22 @@ a single RG59/U type 75 $\Omega$ coaxial cable
 
 19 crates$\times$16 cards$\times$32 channels = 9728 electronics channels.
 
+Each crate processes 16$\times$32 = 512 PMTs.
+9605 channels are actually used and among them, 32 channels are reserved for calibration devices and labelled as FEC Diagnose (FECD) channels
+
 
 During the experiment running, the maintenance of the electronics is always ongoing.
 
 crate controller card (XL3)
 
 
+analog master trigger system (MTC/A+) 
+("+" means an upgrade to SNO MTC/A)
+
+
+digital master trigger system (MTC/D)
+
+the analog waveforms are summed on the MTC/A+ card, then they are digitized 
 
 CAEN v1720 digitizer 
 
@@ -81,9 +91,16 @@ DAQ
 
 nearline provides a real-time analysis of the data quality, 
 
+trigger system
+PMT Interface Card (PMTIC)
+Front End Card (FEC)
 
+NHit20 (N20), NHit100 (N100) trigger pulses.
 
+MTC/A has 3 discriminators: LOW, MED and HI.
 
+Global Trigger (GT)
+the timing and charge from the fired PMT is digitized and stored.
 
 
 
@@ -131,6 +148,17 @@ The advantages of LAB are:
 \end{itemize}
 
 
+telluric acid (TeA), 1,2-butanediol (BD) N,N-dimethyldodecylamine (DDA) as a stabilisation agent.
+Te-loaded liquid scintillator (TeLS)
+
+
+
+
+
+
+
+
+
 
 water-based wavelength shifter
 
@@ -158,7 +186,7 @@ A Universal Interface (UI) connecting the URM and the detector,
 Therefore, sealed environment, which 
 ensures radon gas not leaking into the detector when deploying the source.
 
-
+-
 
 
 

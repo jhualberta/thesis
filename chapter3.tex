@@ -1,4 +1,4 @@
-%\epigraphfontsize{\small\itshape}
+.q%\epigraphfontsize{\small\itshape}
 %\setlength\epigraphwidth{8cm}
 %\setlength\epigraphrule{0pt}
 %\epigraphfontsize{\small\itshape}
@@ -20,8 +20,8 @@ A Multi-path Fitter (MPF) framework was developed by the University of Alberta g
 First, the fitter throws a random vertex (uniformly distributing) inside the PSUP as a trial vertex. The Class Library for High Energy Physics (CLHEP) is used for creating pseudo-random numbers.
 
 $rand0 = Uniform(0,1), rand1 = Uniform(-1,1)$  
-$rand0 = Uniform(0,1), rand1 = Uniform(-1,1)$  
-$rand0 = Uniform(0,1), rand1 = Uniform(-1,1)$  
+
+
   double ran0 = CLHEP::RandFlat::shoot( 0.0, 1.0 );
 double ran1 = CLHEP::RandFlat::shoot( -1.0, 1.0 );
 double ran2Pi = CLHEP::RandFlat::shoot( 0.0, 2.0*CLHEP::pi );
@@ -250,9 +250,12 @@ scintillator timing
 
 
 from bench top measurement, 
-while the rise time, $t_{rise} = 0.8~ns$ the timing parameters
-amplitude
-
+while the rise time, $t_{rise} = 0.8~ns$ the timing parameters $t_i$,
+amplitude $a_i$ are determined by the benchtop measurements 
+%reference: A. LaTorre. LAB+PPO Timing Measurements at Chicago. SNO+ Internal Document (docDB-4189-v1).
+%T. Kaptanoglu. Measurements of light yield and timing of 0.5 g/L LAB+PPO. SNO+ Internal Document (docDB-5997-v1).
+%T. Kaptanoglu. Timing and light yield measurement of Te+DDA LAB+PPO. SNO+ Internal Document (docDB-4813-v4).
+%T. Kaptanoglu. Penn Light Yield Measurements of Te+DDA samples. SNO+ Internal Document (docDB-5124-v2).
 
 \begin{table}[ht]
 	\caption{\label{scint_timing} scintillator $\alpha/\beta$ timing parameters\ref{tanner,lattore measurement}.}	
@@ -277,11 +280,11 @@ amplitude
 			$e^-$& 7.19 & 24.81 & 269.87 & -- &0.553 &0.331 &0.116 & --\\
 			$\alpha$& 6.56 &23.82 &224.19&--& 0.574&0.311& 0.115&--\\
 			\hline
-			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations dda} \\
+			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations DDA} \\
 			$e^-$ & 5.0& 12.1& 33.3& 499.0& 0.68& 0.21& 0.07& 0.04\\
 			$\alpha$ &3.8 &11.3& 65.3& 758.0& 0.48& 0.32& 0.14& 0.06 \\
 			\hline
-			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations Te+0.5\% molar dda}\\
+			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations Te+0.5\% molar DDA}\\
 			$e^-$ & 3.7 & 10.0 & 52.0  & 500.0 & 0.72 & 0.23 & 0.02 &0.03\\
 			$\alpha$ & 3.69 & 15.5 & 79.3  & 489.0 & 0.63 & 0.23 & 0.07 &0.07\\	
 			\bottomrule	
@@ -292,6 +295,53 @@ amplitude
 timing spectrum
 
 pdfs 
+
+
+
+Appendix: Levenberg-Marquardt method for fitter minimization
+(ref: press2007numerical)
+
+for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
+
+the $\chi^2$ function can be expanded and well approximated as
+\[
+\chi^2(\textbf{a})\simeq \gamma - \textbf{d}\cdot\textbf{a}+\frac{1}{2}\textbf{a}\cdot \textbf{D}\cdot \textbf{a},
+\]
+
+
+
+$\textbf{a}_{min} = \textbf{a}_{cur}+\textbf{D}^{-1}\cdot[-\nabla \chi^2(\textbf{a}_{cur})]$
+
+for a fudge factor $\lambda$, 
+
+\[
+\delta a_l = \frac{1}{\lambda \alpha_{ll}}\beta_l~(\alpha_{ll}>0),
+\]
+
+\[
+\sum_{l=0}^{M-1} \alpha_{kl}'\delta a_l = \beta_k
+\]
+
+Let $\alpha\equiv\frac{1}{2}\textbf{D}$, which is the half Hessian, or called as curvature matrix.
+
+$\beta_k = -\frac{1}{2}\frac{\partial\chi^2}{\partial a_k},~\alpha_{kl}=\frac{1}{2}\frac{\partial^2 \chi^2}{\partial a_k\partial a_l}$
+
+by optimizations, the values of tolerance, are set to .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
