@@ -1,9 +1,9 @@
 \BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
 \BOOKMARK [1][-]{section.0.1}{Abstract}{chapter*.1}% 2
 \BOOKMARK [0][-]{chapter*.2}{Acknowledgements}{}% 3
-\BOOKMARK [0][-]{chapter*.2}{Contents}{}% 4
-\BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 5
-\BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 6
+\BOOKMARK [0][-]{chapter*.2}{Table des mati\350res}{}% 4
+\BOOKMARK [0][-]{chapter*.3}{Table des figures}{}% 5
+\BOOKMARK [0][-]{chapter*.4}{Liste des tableaux}{}% 6
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
 \BOOKMARK [1][-]{section.1.1}{Neutrino Oscillation}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.2}{Majorana Neutrino}{chapter.1}% 9
@@ -24,12 +24,10 @@
 \BOOKMARK [1][-]{section.3.4}{Likelihood Calculation}{chapter.3}% 24
 \BOOKMARK [1][-]{section.3.5}{[16]N test}{chapter.3}% 25
 \BOOKMARK [1][-]{section.3.6}{Vertex Reconstruction for the SNO+ Partial-phase}{chapter.3}% 26
-\BOOKMARK [0][-]{chapter.4}{Partial-filled Scintillator Phase}{}% 27
-\BOOKMARK [1][-]{section.4.1}{Reconstruction of the SNO+}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.2}{Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.3}{An Alternative Vertex Reconstruction Algorithm for SNO+}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.4}{Likelihood Calculation}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.5}{[16]N test}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.6}{Vertex Reconstruction for the SNO+ Partial-phase}{chapter.4}% 33
-\BOOKMARK [0][-]{appendix.A}{Appendix Name}{}% 34
-\BOOKMARK [0][-]{appendix*.12}{References}{}% 35
+\BOOKMARK [1][-]{section.3.7}{PMT Selectors}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.8}{[16]N Calibration}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.8.1}{Water Phase Calibration}{section.3.8}% 29
+\BOOKMARK [2][-]{subsection.3.8.2}{Partial-fill Phase Calibration}{section.3.8}% 30
+\BOOKMARK [0][-]{chapter.4}{Partial-filled Scintillator Phase}{}% 31
+\BOOKMARK [0][-]{appendix.A}{Appendix Name}{}% 32
+\BOOKMARK [0][-]{appendix*.9}{Bibliographie}{}% 33

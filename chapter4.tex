@@ -1,0 +1,24 @@
+During the August to October 2019, the PPO is added into the LAB when the water level at 5100 mm. This is for the SNO+ partial-fill phase.
+
+$\phi=\hat{\vec{v}}_e\cdot\hat{\vec{v}}_{assume}$
+
+$\vec{n}=\hat{\vec{v}}_e\times\hat{\vec{v}}_{assume}$
+\[
+R=\begin{bmatrix}
+	n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
+	n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
+	n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
+\end{bmatrix}
+\]
+$\vec{v'}_e=R\vec{v}_e$
+
+$\vec{X'}_{evt}=R\vec{X}_{evt}$
+
+Move $\vec{X'}_{evt}$ to the origin,
+
+$\vec{X'}_{pmt}=R\vec{X}_{pmt}-\vec{X'}_{evt}$
+
+Breit-Wigner function
+\[
+p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
+\]

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{muonflux}
 Muons.
@@ -11,11 +11,23 @@ M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
 \newblock Probing majorana neutrinos with double-$\beta$ decay.
 \newblock {\em Science}, page eaav8613, 2019.
 
+\bibitem{alduino2018first}
+C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
+  F.~Avignone~III, O.~Azzolini, M.~Balata, I.~Bandac, T.~Banks, et~al.
+\newblock First results from cuore: A search for lepton number violation via
+  0$\nu\beta\beta$ decay of te-130.
+\newblock {\em Physical review letters}, 120(13):132501, 2018.
+
 \bibitem{gregory2005bayesian}
 P.~Gregory.
 \newblock {\em Bayesian Logical Data Analysis for the Physical Sciences: A
   Comparative Approach with Mathematica{\textregistered} Support}.
 \newblock Cambridge University Press, 2005.
+
+\bibitem{tanner0p5}
+T.~Kaptanoglu.
+\newblock Measurements of light yield and timing of 0.5 g/l lab+ppo.
+\newblock {\em SNO+ Internal Document, docDB-5997-v1.}
 
 \bibitem{Paton:2019kgy}
 J.~Paton.
@@ -23,9 +35,26 @@ J.~Paton.
 \newblock In {\em {Prospects in Neutrino Physics (NuPhys2018) London, United
   Kingdom, December 19-21, 2018}}, 2019.
 
+\bibitem{piperno2015dark}
+G.~Piperno.
+\newblock Dark matter search with the cuore-0 experiment.
+\newblock 2015.
+
 \bibitem{press2007numerical}
 W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery.
 \newblock {\em Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
+
+\bibitem{joshW1}
+J.-S. Wang.
+\newblock Bipo analysis using partial fill data.
+\newblock {\em SNO+ Internal Document, docDB-5950-v3.}
+
+\bibitem{xing2015preliminary}
+Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
+  D.~Xue-Feng, Z.~Xuan, J.~Quan-Lin, Z.~Li, et~al.
+\newblock Preliminary study of light yield dependence on lab liquid
+  scintillator composition.
+\newblock {\em Chinese Physics C}, 39(9):096003, 2015.
 
 \end{thebibliography}

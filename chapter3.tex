@@ -33,6 +33,14 @@ double costheta = ran1;
 double sintheta = sqrt(1.0 - costheta*costheta);
 
 
+time residual
+\[
+t_{res}=t_{PMT} - t_{transit} - t_{event} 
+\]
+
+
+
+
 
 
 
@@ -56,7 +64,7 @@ The MPW fitter consists of:
 	
 	- Other physics constants: air reflection index (air\_RI), psup radius.
 	
-	- PMT response time (timing) pdf for the position reconstruction, as shown in \ref{MPW_timingPDF}. The pdf shown in red line is modified from the measured PMT response time distribution from SNO time and the late light response is forced to be de-weighted (black). The pdf is modified in [-100,-4] ns region to match the time residue spectrum obtained from %\isotope[16]{N} central run-100934 (blue).
+	- PMT response time (timing) pdf for the position reconstruction, as shown in \ref{MPW_timingPDF}. The pdf shown in red line is modified from the measured PMT response time distribution from SNO time and the late light response is forced to be de-weighted (black). The pdf is modified in [-100,-4] ns region to match the time residual spectrum obtained from %\isotope[16]{N} central run-100934 (blue).
 	
 	\begin{figure}[!htb]
 		\centering
@@ -141,7 +149,10 @@ where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$
 
 In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) as seed and calculates the likelihoods and their derivatives for various paths. These values are sent to the Multi-path Fitter, which is now fitting 2 parameters: ($\theta,\phi$) and to maximize the likelihood function through the MRQ method and to find the best-fit directions.
 
-\paragraph{MPW: Drive Correction}
+\paragraph{Drive Correction}
+
+
+
 
 Once the MPW fitter obtains the fitted position and direction, a drive correction is applied on the fitted position by $\vec{X}_{\mathrm{corrected}} = p_0\vec{X}_{fit}+p_1\vec{u}_{fit}$, where $p_0$ and $p_1$ are the correction parameters. 
 
@@ -183,8 +194,67 @@ is defined as the curvature matrix\cite{gregory2005bayesian}.
 
 \section{\isotope[16]{N} test}
 
+The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter.
 
-emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
+The $\gamma$ rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=9cm]{sx.pdf}
+%	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from simulations.}
+%	\label{hsx}
+%\end{figure}
+
+A position resolution function is defined for the reconstructed electron position distribution\cite{boulay}:
+\[
+R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
+\]
+where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
+the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift  (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
+
+For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay}:
+\[
+N_{R}(x)=\int^{+\infty}_{-\infty} S(x)R(x_{fit}-x)dx.
+\]
+
+Since the $S(x)$ and $N_{R}(x)$ are histograms obtained from the data and MC, we calculate by the bin value $x_i$: 
+\[N_R(x_i)=\sum_{x_i=-\infty}^{+\infty}S(x_i)R(x_{fit}^i-x_i).\].
+
+The $\chi^2$ is calculated by:
+\[
+\chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2,
+\]
+where $N_R^{fit}$ is a trial fit to the $N_R$ by tuning the $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and $\sigma_i$ is taken as the bin width of the histograms.
+
+By minimizing the $\chi^2$, the parameters of the resolution function, $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and a best $N_R^{fit}$ are obtained.
+
+Figure~\ref{posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions are fitted with $N_R^{fit}$.
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=10cm]{posResol.pdf}
+%	\caption{Distributions of the reconstructed position projected on x axis, obtained from SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
+%	\label{posresol}
+%\end{figure}
+
+Table~\ref{table_posresol} summarizes the values of position resolution parameters obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
+\vspace{1mm}
+\begin{table}[ht]
+	\centering
+	\caption{Position resolution parameters for the MP Water Fitter.}
+	\label{table_posresol}
+	\begin{tabular}{|p{2.5cm}|p{2.2cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}| p{2.1cm}|}
+		\hline
+		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) &  $\tau_P$ (mm)& $\mu_P$ (mm)\\
+		\hline 
+		data& 0.58$\pm$0.04 & 175.8$\pm$3.8 & 288.0$\pm$5.7 & -28.8$\pm$1.0\\	
+		\hline 
+		MC & 0.51$\pm$0.05 & 195.2$\pm$3.3 & 298.4$\pm$6.1 & -10.9$\pm$1.0\\
+		\hline
+	\end{tabular}
+\end{table}
+\vspace{1mm}
+
 
 
 \section{Vertex Reconstruction for the SNO+ Partial-phase}
@@ -329,6 +399,75 @@ $\beta_k = -\frac{1}{2}\frac{\partial\chi^2}{\partial a_k},~\alpha_{kl}=\frac{1}
 by optimizations, the values of tolerance, are set to .
 
 
+
+\section{PMT Selectors}
+- Straight Light Path TimeResidual Cut
+
+This selector is used for the direction reconstruction for the water phase.
+
+- Mode cut
+
+
+
+- Early Hit PMT Selector
+
+- Uniform PMT Selector
+Pick up the PMTs uniformly and
+
+reduce the number of PMTs to a designated number to boost up the fit speed.
+
+
+
+
+
+
+\section{\isotope[16]{N} Calibration}
+
+During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deployed for internal detector calibration scans in June and November, 2017 and external detector scans in March, 2018. 
+
+
+
+
+
+
+emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Water Phase Calibration}
+
+\subsection{Partial-fill Phase Calibration}
+
+water level was at 5100 mm from the center of the AV (in AV coordination).
+LAB with a PPO concentration of 0.53 g/L  
+
+
+
+
+Effect of the water level.
+
+
+
+
+
+
+
+The \isotope[16]{N} soure was deployed in the external water region during the partial-fill phase.
+run 251748 2019/09/19 and 
+
+
+Source position was at $(-1120.8, 1041.4, 6172.5)~ mm$ for a 30-minute duration and at $(-1120.8. 1041.4, 6108.0)~mm$ for a 7-hour duration (separated into 7 runs).
 
 
 
