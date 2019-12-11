@@ -18,6 +18,11 @@ C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
   0$\nu\beta\beta$ decay of te-130.
 \newblock {\em Physical review letters}, 120(13):132501, 2018.
 
+\bibitem{fukugita2013physics}
+M.~Fukugita and T.~Yanagida.
+\newblock {\em Physics of Neutrinos: and Application to Astrophysics}.
+\newblock Springer Science \& Business Media, 2013.
+
 \bibitem{gregory2005bayesian}
 P.~Gregory.
 \newblock {\em Bayesian Logical Data Analysis for the Physical Sciences: A
@@ -45,10 +50,25 @@ W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery.
 \newblock {\em Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
 
+\bibitem{smirnov2005msw}
+A.~Y. Smirnov.
+\newblock The msw effect and matter effects in neutrino oscillations.
+\newblock {\em Physica Scripta}, 2005(T121):57, 2005.
+
+\bibitem{smirnov2016solar}
+A.~Y. Smirnov.
+\newblock Solar neutrinos: Oscillations or no-oscillations?
+\newblock {\em arXiv preprint arXiv:1609.02386}, 2016.
+
 \bibitem{joshW1}
 J.-S. Wang.
 \newblock Bipo analysis using partial fill data.
 \newblock {\em SNO+ Internal Document, docDB-5950-v3.}
+
+\bibitem{xing2011neutrinos}
+Z.~Xing and S.~Zhou.
+\newblock {\em Neutrinos in particle physics, astronomy and cosmology}.
+\newblock Springer Science \& Business Media, 2011.
 
 \bibitem{xing2015preliminary}
 Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
@@ -56,5 +76,12 @@ Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
 \newblock Preliminary study of light yield dependence on lab liquid
   scintillator composition.
 \newblock {\em Chinese Physics C}, 39(9):096003, 2015.
+
+\bibitem{zaglauer1988mixing}
+H.~W. Zaglauer and K.~H. Schwarzer.
+\newblock The mixing angles in matter for three generations of neutrinos and
+  the msw mechanism.
+\newblock {\em Zeitschrift f{\"u}r Physik C Particles and Fields},
+  40(2):273--282, 1988.
 
 \end{thebibliography}

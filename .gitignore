@@ -2,6 +2,7 @@
 *.aux
 *.lot
 *.gz
+*.out
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/

@@ -7,6 +7,7 @@
 \usepackage{isotope}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{tikz}
 \usepackage{multirow}
 \usepackage[frenchb]{babel}
 \makeatletter
@@ -16,7 +17,7 @@
 \patchcmd{\epigraph}{\@epitext{#1}\\}{\@epitext{#1}\\[\epitextskip]}{}{}
 \makeatother
 
-\title{Reconstruction and Calibration of SNO+ Water}
+\title{Reconstruction of the SNO+ Experiment}
 \author{Jie Hu}
 \department{Department of Physics}
 \advisor{Aksel Hallin}
@@ -41,16 +42,19 @@
 
 \cleardoublepage
 \chapter{Introduction}
-\input chapter1.tex
-
-
+\input intro.tex
+\chapter{Neutrino physics}
+\input nuPhys.tex
 \chapter{The SNO+ Experiment}
-\input chapter2.tex
-
+\input detector.tex
 \chapter{Event Reconstruction}
-\input chapter3.tex
+\input recon.tex
 \chapter{Partial-filled Scintillator Phase}
-\input chapter4.tex
+\input analysis.tex
+
+
+\chapter{Conclusions}
+
 
 \appendix
 

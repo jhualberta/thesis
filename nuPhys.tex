@@ -1,14 +1,8 @@
 %\epigraph{Yesterday's rose stands only in name, we hold only empty names.}{--- \textup{Umberto Eco}, \textit{The Name of Rose}}
  
 
- Neutrinos are one of the elementary particles we currently know and are included in the Standard Model (SM). However, some properties of neutrinos can not be described by the SM, which shows clues of the new physics beyond the SM.
 
-SNO+ experiment is planned to explore one of the unknown properties of neutrinos: whether the neutrinos are Majorana particles or Dirac particles.
-
-
-
-Massive neutrinos are discussed ...
-\section{Neutrino Oscillation}
+\section{Neutrino Flavor Transformation and Oscillation}
 
 Neutrino oscillation was first discovered in 1998.
 It is the first direct evidence showing that the Standard Model is incomplete. 
@@ -16,13 +10,15 @@ It is the first direct evidence showing that the Standard Model is incomplete.
 
 solar neutrino oscillations
 
+\section{Vacuum Oscillation}
 
 
 
-matter effect
-The matter effect is caused by neutrinos interacting with ambient electrons and nucleons in matter such as the Sun or the Earth. $\nu_e$ interacts with electrons via both charged weak current (exchanging $W$ boson) and neutral weak current ($Z$ boson) while $\nu_\mu$ and $\nu_\tau$ interact only by the neutral current. The $\nu_e$ energy has an addition term, $V_{CC} =\sqrt2G_Fn_e$, where $n_e$ is the number density of the electrons in matter and $G_F$ is the Fermi coupling constant for the weak interaction. This affects the oscillation probabilities for neutrinos propagating in matter compared to vacuum, which is called the Mikheyev-Smirnov-Wolfenstein (MSW) mechanism\cite{smirnov,smirnov_msw}.
+\subsection{Matter Effect}
 
-In vacuum two-flavor mixing, the Schr\"{o}dinger equation can be written (in natural units)\cite{xing}:
+The matter effect is caused by neutrinos interacting with ambient electrons and nucleons in matter such as the Sun or the Earth. $\nu_e$ interacts with electrons via both charged weak current (exchanging $W$ boson) and neutral weak current ($Z$ boson) while $\nu_\mu$ and $\nu_\tau$ interact only by the neutral current. The $\nu_e$ energy has an addition term, $V_{CC} =\sqrt2G_Fn_e$, where $n_e$ is the number density of the electrons in matter and $G_F$ is the Fermi coupling constant for the weak interaction. This affects the oscillation probabilities for neutrinos propagating in matter compared to vacuum, which is called the Mikheyev-Smirnov-Wolfenstein (MSW) mechanism\cite{smirnov2016solar,smirnov2005msw}.
+
+In vacuum two-flavor mixing, the Schr\"{o}dinger equation can be written (in natural units)\cite{xing2011neutrinos}:
 \begin{equation}\label{eq:2flavor_simple}
 	i\frac{d}{dt}\begin{bmatrix}
 		\nu_e\\
@@ -36,22 +32,27 @@ In vacuum two-flavor mixing, the Schr\"{o}dinger equation can be written (in nat
 	\end{bmatrix},
 \end{equation}
 where 
-\begin{equation}\label{eq:H0f}
- H^f_0 = \frac{\Delta m_{21}^2}{4E}\begin{bmatrix}
+
+\begin{equation} \label{eq:H0f}
+\begin{aligned}
+ H^f_0 = \frac{1}{2E}\begin{bmatrix}m^2_1\cos^2\theta+m^2_2\sin^2\theta & (m^2_2-m^2_1)\sin\theta\cos\theta \\ (m^2_2-m^2_1)\sin\theta\cos\theta & m^2_1\sin2\theta+m^2_2\cos^2\theta\end{bmatrix} =
+\\
+\frac{\Delta m_{21}^2}{4E}\begin{bmatrix}
 	-\cos 2\theta & \sin 2\theta\\
 	\sin 2\theta & \cos 2\theta\\
 \end{bmatrix}+\frac{(m_1^2+m_2^2)}{4E}\begin{bmatrix}
 	1 & 0\\
 	0 &1\\
 \end{bmatrix},
+\end{aligned}
 \end{equation}
 and $\Delta m^2_{21}=(m^2_2 - m^2_1)$.
 
-To simplify the calculation, we can drop the second unitary term of $H^f_0$ that is irrelevant to the neutrino flavor conversion. Including the matter effect, we obtain:
+To simplify the calculation, we can drop the second unitary term of $H^f_0$ that is irrelevant to the neutrino flavor transformation. Including the matter effect, we obtain:
 \begin{equation}\label{eq:Hm}
 	H_m = \begin{bmatrix}
-		-\frac{\Delta m_{21}^2}{4E}\cos 2\theta+\sqrt 2G_Fn_e & \frac{\Delta m^2}{4E}\sin 2\theta\\
-		\frac{\Delta m^2}{4E}\sin 2\theta &\frac{\Delta m^2}{4E}\cos 2\theta\\
+		-\frac{\Delta m_{21}^2}{4E}\cos 2\theta+\sqrt 2G_Fn_e & \frac{\Delta m_{21}^2}{4E}\sin 2\theta\\
+		\frac{\Delta m_{21}^2}{4E}\sin 2\theta &\frac{\Delta m_{21}^2}{4E}\cos 2\theta\\
 	\end{bmatrix}
 \end{equation}
 
@@ -80,7 +81,7 @@ In analogy with mixing in vacuum, we can write the mixing equation relating the 
 	\end{bmatrix}.
 \end{equation}
 
-The probability of flavor conversion in matter is:
+The probability of flavor transformation in matter is:
 \begin{equation}
 	P_{\nu_e\to\nu_{\mu}}=\sin^2(2\theta_m)\sin^2\Big(\frac{\Delta m_m^2L}{4E}\Big).
 \end{equation}
@@ -90,7 +91,60 @@ The denominator in equation (\ref{eq:thetaM}) implies a resonance condition:
 	V(n_e)=\sqrt 2G_Fn_e=\frac{\Delta m^2\cos2\theta}{2E}.
 \end{equation}
 
-From this condition, for a given $E$, there is a resonance density $n^{reson}_e$ while for a given $n_e$, there is a resonance energy $E^{reson}$. When the resonance condition is satisfied, $\theta_m = \frac{\pi}{4}$ and two flavor neutrinos are maximally mixed, even if the vacuum mixing angle $\theta$ is small. This is called matter enhanced neutrino oscillation\cite{smirnov,japan_text}.
+From this condition, for a given $E$, there is a resonance density $n^{reson}_e$ while for a given $n_e$, there is a resonance energy $E^{reson}$. When the resonance condition is satisfied, $\theta_m = \frac{\pi}{4}$ and two flavor neutrinos are maximally mixed, even if the vacuum mixing angle $\theta$ is small. This is called matter enhanced neutrino oscillation\cite{smirnov2016solar,fukugita2013physics}.
+
+For three-flavor neutrino mixing, we have\cite{pdg2018}:
+\begin{equation}\label{eq:mixingmatrix}
+|\nu_f> = \sum_{k=1}^3U^*_{fk}|\nu_k>, 
+\end{equation}
+where $f=e,\mu,\tau$ and $k=1,2,3$. The unitary PMNS matrix, $U_{PMNS}$, can be parametrized as: 
+$U_{PMNS} = $
+\begin{equation}
+\begin{bmatrix}
+1 &0 &0\\
+0 &\cos\theta_{23} &\sin\theta_{23}\\
+0 &-\sin\theta_{23} &\cos\theta_{23}\\ 
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta_{13} &0 &e^{-i\delta_{CP}}\sin\theta_{13}\\
+0 &1 &0\\
+e^{-i\delta_{CP}}\sin\theta_{13} &0 &\cos\theta_{13}\\ 
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta_{12} &\sin\theta_{12} &0\\
+-\sin\theta_{12} &\cos\theta_{12} &0\\
+0 &0 &1\\ 
+\end{bmatrix}.
+\end{equation}
+
+In the PMNS matrix, we have four parameters: the three mixing angles $\theta_{12}$, $\theta_{13}$, $\theta_{23}$ and the charge-parity (CP) violation parameter of lepton sector, $\delta_{CP}$. The unknown value of $\delta_{CP}$ is related to leptogenesis, the hypothetical physical process that produced an asymmetry between leptons and antileptons in the very early universe\cite{wiki_cp}. In addition, there are two squared-mass differences, $\Delta m^2_{21}=m_2^2-m_1^2$ and $\Delta m^2_{32}=|m_3^2-m_2^2|$. The sign of $\Delta m^2_{32}$ is unknown and it indicates a mass hierarchy problem of whether neutrino mass is normal hierarchy (NH, $m_3>m_2>m_1$) or inverted hierarchy (IH, $m_3<m_1<m_2$)\cite{pdg2018}. 
+
+Currently, these six parameters have been measured by neutrino oscillation experiments. These experiments can be classified by the neutrino sources they use. They are the solar, the reactor, the atmospheric, the accelerator and the astronomical neutrino experiments. Table~\ref{nu_exp} lists the energy scale of the neutrino source as well as the example experiments.
+
+\begin{table}[ht]
+	\caption{\label{nu_exp} Oscillation neutrino experiments.}	
+	{\centering
+		\begin{tabular*}{135mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			type & source & $E_\nu$ & example\\
+			\midrule
+			solar& the Sun & MeV scale & SNO \\
+			reactor& reactor & MeV scale & DayaBay \\
+			atmospheric& cosmic-ray& GeV scale & SuperK\\
+			accelerator&  $\nu$ beam from accelerator & GeV scale & T2K\\	
+			astronomical& astronomical objects & GeV-EeV scale & IceCube\\	
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+For the $\Delta m^2_{21}$ and $\theta_{12}$, the combined analysis of the measurements from the reactor experiment KamLAND and SNO gave $\Delta m^2_{21} = 7.59^{+0.21}_{-0.21}\times 10^{-5}eV^2$ and $\tan^2{\theta}_{21}=0.47^{+0.06}_{-0.05}$\cite{kamland_measure}.
+
+The accelerator neutrino experiments as well as the atmospheric neutrino experiments have measured $\Delta m^2_{32}$ and $\theta_{23}$. The most recent results from SuperK show that in NH, $\sin^2\theta_{23}=0.588^{+0.031}_{-0.064}$ and $\Delta m^2_{32} = 2.5^{+0.13}_{-0.20}\times 10^{-3} eV^2$\cite{superk_new}. 
+
+In 2012, the reactor neutrino experiment Daya Bay reported the discovery of non-zero $\theta_{13}$ with a significance of 5.2$\sigma$. In 2016, Daya Bay reported that $\sin^2 2\theta_{13} = 0.0841\pm0.0027(stat.)\pm0.0019(syst.)$. This high-precision result makes $\sin^2 2\theta_{13}$ the best measured mixing angle\cite{dayabayresults,reactorNu}.
+
+$\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing}. In 2017, the T2K experiment in Japan rejected the hypothesis that neutrinos and antineutrinos oscillate with the same probability at 95\% confidence (2$\sigma$) level. This indicates a hint of CP symmetry broken by neutrinos\cite{t2k}.
 
 
 
@@ -99,21 +153,11 @@ From this condition, for a given $E$, there is a resonance density $n^{reson}_e$
 
 
 
+The Jiangmen Underground Neutrino Observatory (JUNO) is a reactor neutrino experiment located at Kaiping, Jiangmen in Southern China. a large liquid scintillator detector 
+large active mass of 20 kton
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+the energy resolution (3\% at 1 MeV) 
+\cite{giaz2018status}
 
 
 
@@ -129,8 +173,6 @@ The interpretation of the $0\nu\beta\beta$ process is considered as exchanging l
 \[
 (T^{0\nu\beta\beta}_{1/2})^{-1} = G_{PS}(Q,Z)|M_{Nuclear}|^2<m_{ee}>^2, 
 \]
-
-
 
 
 
@@ -156,8 +198,6 @@ Majorana found a representation of the $\gamma$-matrices as follow:
 
 
 These matrices themselves are pure imaginary. 
-
-
 
 
 \section{Double Beta Decay}
