@@ -8,3 +8,6 @@ Retrigger defined as any event where log10(∆t(ns)) < 2.7
 
 The trigger efficiency measures the probability that the detector triggers
 as a function of the number of in time hits.
+
+
+

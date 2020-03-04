@@ -18,10 +18,49 @@ C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
   0$\nu\beta\beta$ decay of te-130.
 \newblock {\em Physical review letters}, 120(13):132501, 2018.
 
+\bibitem{biller2020slow}
+S.~D. Biller, E.~J. Leming, and J.~L. Paton.
+\newblock Slow fluors for highly effective separation of cherenkov light in
+  liquid scintillators.
+\newblock {\em arXiv preprint arXiv:2001.10825}, 2020.
+
+\bibitem{birks1965theory}
+J.~Birks and F.~Firk.
+\newblock The theory and practice of scintillation counting.
+\newblock {\em Physics Today}, 18:60, 1965.
+
+\bibitem{boulay2004direct}
+M.~G. Boulay.
+\newblock Direct evidence for weak flavour mixing with the sudbury neutrino
+  observatory.
+\newblock 2004.
+
+\bibitem{coulter2013modelling}
+I.~T. Coulter.
+\newblock {\em Modelling and reconstruction of events in SNO+ related to future
+  searches for lepton and baryon number violation}.
+\newblock PhD thesis, University of Oxford, 2013.
+
+\bibitem{denton2019eigenvalues}
+P.~B. Denton, S.~J. Parke, and X.~Zhang.
+\newblock Eigenvalues: The rosetta stone for neutrino oscillations in matter.
+\newblock {\em arXiv preprint arXiv:1907.02534}, 2019.
+
+\bibitem{dunger2018topological}
+J.~Dunger.
+\newblock {\em Topological and time based event classification for neutrinoless
+  double beta decay in liquid scintillator}.
+\newblock PhD thesis, University of Oxford, 2018.
+
 \bibitem{fukugita2013physics}
 M.~Fukugita and T.~Yanagida.
 \newblock {\em Physics of Neutrinos: and Application to Astrophysics}.
 \newblock Springer Science \& Business Media, 2013.
+
+\bibitem{giaz2018status}
+A.~Giaz.
+\newblock Status and perspectives of the juno experiment.
+\newblock {\em arXiv preprint arXiv:1804.03575}, 2018.
 
 \bibitem{gregory2005bayesian}
 P.~Gregory.
@@ -33,6 +72,40 @@ P.~Gregory.
 T.~Kaptanoglu.
 \newblock Measurements of light yield and timing of 0.5 g/l lab+ppo.
 \newblock {\em SNO+ Internal Document, docDB-5997-v1.}
+
+\bibitem{tanner2018PMT}
+T.~Kaptanoglu.
+\newblock Characterization of the hamamatsu 8” r5912-mod photomultiplier
+  tube.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 889:69--77,
+  2018.
+
+\bibitem{kimura2002exact}
+K.~Kimura, A.~Takamura, and H.~Yokomakura.
+\newblock Exact formula of probability and cp violation for neutrino
+  oscillations in matter.
+\newblock {\em Physics Letters B}, 537(1-2):86--94, 2002.
+
+\bibitem{knoll2010radiation}
+G.~F. Knoll.
+\newblock {\em Radiation detection and measurement}.
+\newblock John Wiley \& Sons, 2010.
+
+\bibitem{landau2013electrodynamics}
+L.~D. Landau, J.~Bell, M.~Kearsley, L.~Pitaevskii, E.~Lifshitz, and J.~Sykes.
+\newblock {\em Electrodynamics of continuous media}, volume~8.
+\newblock elsevier, 2013.
+
+\bibitem{mekarski2018electron}
+P.~Mekarski.
+\newblock Electron antineutrinos in the water phase of the sno+ experiment.
+\newblock 2018.
+
+\bibitem{moffat2001optical}
+B.~A. Moffat.
+\newblock {\em The optical calibration of the Sudbury Neutrino Observatory}.
+\newblock PhD thesis, Ph. D. thesis, Queen’s University, 2001.
 
 \bibitem{Paton:2019kgy}
 J.~Paton.
@@ -60,10 +133,21 @@ A.~Y. Smirnov.
 \newblock Solar neutrinos: Oscillations or no-oscillations?
 \newblock {\em arXiv preprint arXiv:1609.02386}, 2016.
 
+\bibitem{pdg2018}
+M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
+  J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, et~al.
+\newblock Review of particle physics.
+\newblock {\em Physical Review D}, 98(3):030001, 2018.
+
 \bibitem{joshW1}
 J.-S. Wang.
 \newblock Bipo analysis using partial fill data.
 \newblock {\em SNO+ Internal Document, docDB-5950-v3.}
+
+\bibitem{weinheimer2006neutrino}
+C.~Weinheimer.
+\newblock Neutrino mass from triton decay.
+\newblock {\em Progress in Particle and Nuclear Physics}, 57(1):22--37, 2006.
 
 \bibitem{xing2011neutrinos}
 Z.~Xing and S.~Zhou.
@@ -83,5 +167,10 @@ H.~W. Zaglauer and K.~H. Schwarzer.
   the msw mechanism.
 \newblock {\em Zeitschrift f{\"u}r Physik C Particles and Fields},
   40(2):273--282, 1988.
+
+\bibitem{zuber1998physics}
+K.~Zuber.
+\newblock On the physics of massive neutrinos.
+\newblock {\em Physics Reports}, 305(6):295--364, 1998.
 
 \end{thebibliography}

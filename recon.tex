@@ -1,4 +1,4 @@
-.q%\epigraphfontsize{\small\itshape}
+%\epigraphfontsize{\small\itshape}
 %\setlength\epigraphwidth{8cm}
 %\setlength\epigraphrule{0pt}
 %\epigraphfontsize{\small\itshape}
@@ -22,7 +22,7 @@ First, the fitter throws a random vertex (uniformly distributing) inside the PSU
 $rand0 = Uniform(0,1), rand1 = Uniform(-1,1)$  
 
 
-  double ran0 = CLHEP::RandFlat::shoot( 0.0, 1.0 );
+double ran0 = CLHEP::RandFlat::shoot( 0.0, 1.0 );
 double ran1 = CLHEP::RandFlat::shoot( -1.0, 1.0 );
 double ran2Pi = CLHEP::RandFlat::shoot( 0.0, 2.0*CLHEP::pi );
 double t = CLHEP::RandFlat::shoot( 100.0, 300.0 );
@@ -144,11 +144,8 @@ where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$
 In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) as seed and calculates the likelihoods and their derivatives for various paths. These values are sent to the Multi-path Fitter, which is now fitting 2 parameters: ($\theta,\phi$) and to maximize the likelihood function through the MRQ method and to find the best-fit directions.
 
 \paragraph{Drive Correction}
+Once the MPW fitter obtains the fitted position and direction, a drive correction is applied on the fitted position by $\vec{X}_{\mathrm{corrected}} = p_0\vec{X}_{fit}+p_1\vec{u}_{fit}$, where $p_0$ and $p_1$ are the correction parameters.
 
-
-
-
-Once the MPW fitter obtains the fitted position and direction, a drive correction is applied on the fitted position by $\vec{X}_{\mathrm{corrected}} = p_0\vec{X}_{fit}+p_1\vec{u}_{fit}$, where $p_0$ and $p_1$ are the correction parameters. 
 
 To obtain the values of $p_0$ and $p_1$, we generated electron events distributed isotropically inside the AV. The simulations of 2, 3, 4, ... ,10 MeV electrons are produced. Then the MPW fitter is applied on each simulations and returns the results of $\vec{X}_{fit}$ and $\vec{u}_{fit}$. Take the Monte Carlo generated positions $\vec{X}_{MC}$ as the true positions, for all the fitted events, a $\chi^2$ function is calculated by:
 \[
@@ -249,6 +246,53 @@ Table~\ref{table_posresol} summarizes the values of position resolution paramete
 \end{table}
 \vspace{1mm}
 
+Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clean global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
+
+\begin{figure}
+	\centering
+	%\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=65mm]{likelihoodSurface_xy.pdf}}
+	%\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=65mm]{likelihoodSurface_yz.pdf}}
+	%\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=65mm]{likelihoodSurface_xz.pdf}}
+	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}}
+	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}}
+	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}
+	\label{likelihoodSurface}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+    \includegraphics[width=160mm]{logL_xyzt.pdf}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}
+	\label{logLxyz}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
+	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
+	\label{derivative_logLxyz}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Vertex Reconstruction for the SNO+ Partial-phase}
@@ -306,11 +350,28 @@ $l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $ r_{neck}$ is the radius of the neck 
 \frac{\partial L}{\partial splitZ} = 0
 \]
 
+the optical response of the liquid scintillator
+
+empirical model. This model consists $n$ ($n=3~or~4$) exponential decays  with a common rise time \cite{biller2020slow}.
+
+timing profile 
+
+
+
+
 scintillator timing
 
-\[
-\sum^{i=4}_{i=1} a_i\cdot\frac{e^{-\frac{x}{t_i}}-e^{-\frac{x}{t_{rise}}}}{t_i-t_{rise}}
+\[\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}
 \]
+
+
+\[
+\{\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}*f_{PMT}(t-t')\}*Gaus(t,0)
+\]
+
+
+
+
 
 
 from bench top measurement, 
@@ -356,9 +417,22 @@ amplitude $a_i$ are determined by the benchtop measurements
 	}
 \end{table}
 
-timing spectrum
 
 pdfs 
+
+
+
+Radial bias is defined as the difference between the fitted and true position, projected along the radial component (unit vector) of the true position \cite{coulter2013modelling}.
+\[
+(\vec{X}_{fit}-\vec{X}_{true})\cdot \hat{X}_{true}
+\]
+
+
+The value of the mean radial bias is taken by fitting the histogram of the distributions of radial biases with a Gaussian profile and then get the mean of the fitted Gaussian profile.
+
+
+
+
 
 
 
@@ -405,10 +479,24 @@ This selector is used for the direction reconstruction for the water phase.
 
 - Early Hit PMT Selector
 
+in prompt light time window
+
+
+
 - Uniform PMT Selector
 Pick up the PMTs uniformly and
 
 reduce the number of PMTs to a designated number to boost up the fit speed.
+
+
+
+
+
+water phase
+fit speed for vertex reconstruction: ~0.0017 s/call
+fit speed for direction reconstruction: ~0.0004 s/call
+
+
 
 
 

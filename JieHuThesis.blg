@@ -4,8 +4,7 @@ The top-level auxiliary file: JieHuThesis.aux
 The style file: abbrv.bst
 Database file #1: thesis.bib
 Warning--entry type for "muonflux" isn't style-file defined
---line 1 of file thesis.bib
-Warning--I didn't find a database entry for "pdg2018"
+--line 176 of file thesis.bib
 Warning--I didn't find a database entry for "wiki_cp"
 Warning--I didn't find a database entry for "kamland_measure"
 Warning--I didn't find a database entry for "superk_new"
@@ -26,48 +25,50 @@ Warning--I didn't find a database entry for "borexino"
 Warning--I didn't find a database entry for "cno"
 Warning--I didn't find a database entry for "boulay"
 Warning--to sort, need author or key in muonflux
+Warning--empty journal in boulay2004direct
 Warning--empty year in tanner0p5
+Warning--empty journal in mekarski2018electron
 Warning--empty journal in piperno2015dark
 Warning--empty year in joshW1
-You've used 15 entries,
+You've used 31 entries,
             2118 wiz_defined-function locations,
-            604 strings with 6478 characters,
-and the built_in function-call counts, 4728 in all, are:
-= -- 424
-> -- 286
-< -- 1
-+ -- 117
-- -- 100
-* -- 319
-:= -- 827
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 88
+            688 strings with 8846 characters,
+and the built_in function-call counts, 9129 in all, are:
+= -- 846
+> -- 514
+< -- 2
++ -- 211
+- -- 176
+* -- 609
+:= -- 1629
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 168
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 181
-empty$ -- 337
-format.name$ -- 100
-if$ -- 956
+cite$ -- 37
+duplicate$ -- 348
+empty$ -- 656
+format.name$ -- 176
+if$ -- 1825
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 18
-newline$ -- 78
-num.names$ -- 28
-pop$ -- 116
+int.to.str$ -- 31
+missing$ -- 33
+newline$ -- 158
+num.names$ -- 60
+pop$ -- 197
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 146
 quote$ -- 0
-skip$ -- 126
+skip$ -- 236
 stack$ -- 0
-substring$ -- 160
-swap$ -- 32
-text.length$ -- 1
+substring$ -- 348
+swap$ -- 47
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
-warning$ -- 4
-while$ -- 34
-width$ -- 17
-write$ -- 154
-(There were 25 warnings)
+type$ -- 112
+warning$ -- 6
+while$ -- 76
+width$ -- 33
+write$ -- 322
+(There were 26 warnings)

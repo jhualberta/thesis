@@ -7,10 +7,14 @@
 Neutrino oscillation was first discovered in 1998.
 It is the first direct evidence showing that the Standard Model is incomplete. 
 
+The neutrinos generated with definite flavor from weak interactions and related to 
+
+
+
 
 solar neutrino oscillations
 
-\section{Vacuum Oscillation}
+\subsection{Vacuum Oscillation}
 
 
 
@@ -93,11 +97,14 @@ The denominator in equation (\ref{eq:thetaM}) implies a resonance condition:
 
 From this condition, for a given $E$, there is a resonance density $n^{reson}_e$ while for a given $n_e$, there is a resonance energy $E^{reson}$. When the resonance condition is satisfied, $\theta_m = \frac{\pi}{4}$ and two flavor neutrinos are maximally mixed, even if the vacuum mixing angle $\theta$ is small. This is called matter enhanced neutrino oscillation\cite{smirnov2016solar,fukugita2013physics}.
 
+\subsection{Three-flavor Mixing}
+
 For three-flavor neutrino mixing, we have\cite{pdg2018}:
 \begin{equation}\label{eq:mixingmatrix}
 |\nu_f> = \sum_{k=1}^3U^*_{fk}|\nu_k>, 
 \end{equation}
 where $f=e,\mu,\tau$ and $k=1,2,3$. The unitary PMNS matrix, $U_{PMNS}$, can be parametrized as: 
+
 $U_{PMNS} = $
 \begin{equation}
 \begin{bmatrix}
@@ -116,6 +123,9 @@ e^{-i\delta_{CP}}\sin\theta_{13} &0 &\cos\theta_{13}\\
 0 &0 &1\\ 
 \end{bmatrix}.
 \end{equation}
+
+
+
 
 In the PMNS matrix, we have four parameters: the three mixing angles $\theta_{12}$, $\theta_{13}$, $\theta_{23}$ and the charge-parity (CP) violation parameter of lepton sector, $\delta_{CP}$. The unknown value of $\delta_{CP}$ is related to leptogenesis, the hypothetical physical process that produced an asymmetry between leptons and antileptons in the very early universe\cite{wiki_cp}. In addition, there are two squared-mass differences, $\Delta m^2_{21}=m_2^2-m_1^2$ and $\Delta m^2_{32}=|m_3^2-m_2^2|$. The sign of $\Delta m^2_{32}$ is unknown and it indicates a mass hierarchy problem of whether neutrino mass is normal hierarchy (NH, $m_3>m_2>m_1$) or inverted hierarchy (IH, $m_3<m_1<m_2$)\cite{pdg2018}. 
 
@@ -147,17 +157,55 @@ In 2012, the reactor neutrino experiment Daya Bay reported the discovery of non-
 $\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing}. In 2017, the T2K experiment in Japan rejected the hypothesis that neutrinos and antineutrinos oscillate with the same probability at 95\% confidence (2$\sigma$) level. This indicates a hint of CP symmetry broken by neutrinos\cite{t2k}.
 
 
+The oscillation probability in matter can be written in a concise and exact form as \cite{kimura2002exact}:
+\[
+P(\nu_e\to\nu_\mu) = A\cos\delta+B\sin\delta+C
+\]
+
+
+
+will also provide the information for the CP- and T-violation
+by investigating the quantities of:
+\[
+A_{CP} = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}
+\]
+
+\[
+A_T = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}
+\]
+ 
 
 
 
 
 
+
+
+
+
+
+
+
+\subsection{Reactor-solar Experiments}
+
+KamLand
+
+Daya Bay
 
 The Jiangmen Underground Neutrino Observatory (JUNO) is a reactor neutrino experiment located at Kaiping, Jiangmen in Southern China. a large liquid scintillator detector 
 large active mass of 20 kton
 
 the energy resolution (3\% at 1 MeV) 
 \cite{giaz2018status}
+
+\subsection{Atmosphere-accelerator Experiments}
+
+
+
+\subsection{Astrophysics Experiments}
+Neutrino telescopes
+Ice cube
+Baikal 
 
 
 
@@ -225,6 +273,48 @@ The interpretation of the $0\nu\beta\beta$ process is considered as exchanging l
 where $G_{PS}$ is the phase space factor and $|M_{Nuclear}|$ is the nuclear matrix element for the physics process describing the $0\nu\beta\beta$ decay process\cite{kaizuber}.
 
 Similar to beta decay, the $2\nu\beta\beta$ process will cause a continuous spectrum in the detector while the $0\nu\beta\beta$ process only has two electrons in the final state, which sum up to give a distinct energy peak. By measuring this exact energy, a detector with high energy resolution is able to search for the $0\nu\beta\beta$ signal from the $0\nu\beta\beta$ decay radioactive isotopes. Diverse technologies have been developed during the past decades. The following section lists some of the mainstream experiments.
+
+\begin{equation}\label{eq:majoranaField}
+\Psi_R=\begin{bmatrix}
+\psi_R\\
+\psi_R^C\\
+\end{bmatrix},
+\Psi_L=\begin{bmatrix}
+\psi_L\\
+\psi_L^C\\
+\end{bmatrix},
+M=\begin{bmatrix}
+m_L^M &  m^D\\
+m^D &  m_R^M\\
+\end{bmatrix},
+\end{equation}
+%
+The mass eigenstates:
+\[
+m_{\pm} = \frac{1}{2}[~(m_L^M+m_R^M)\pm\sqrt{(m_L^M-m_R^M)^2+4(m^D)^2}~]\label{eq:majorana_massEigen},
+\]
+from (\ref{eq:majorana_massEigen}), there are 4 cases for discussion:\\
+(1) If $m_L^M=m_R^M=0$, $m_{1,2}=m^D$, neutrinos are pure Dirac particles.\\
+(2) If $m^D\gg m^M_{L,R}$, $\frac{m^D}{m_{L,R}^M}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\approx m^D$, neutrinos are Pseudo-Dirac-Neutrinos.
+\\
+(3) If $m^D=0$, $m_1=m^M_L, m_2=m^M_R$, neutrinos are pure Majorana particles.\\
+(4) In the case of the seesaw mechanism, where $m_R^M\gg m^D, m_L^M=0$,
+and for $(\frac{m^D}{m_R^M})^2\to 0$, use $(1+x)^\alpha\sim 1+\alpha x ~~(~if~x\to 0~)$, we get:
+\[
+m_1=m_-=\frac{\frac{1}{2}[(m^M_R)^2-(m^M_R)^2-4(m^D)^2]}{m_R^M(1+\sqrt{1+4(\frac{m^D}{m^M_R})^2})}\approx -\frac{(m^D)^2}{m^M_R},
+\]
+
+\[
+m_2=m_+=\frac{1}{2}[m^M_R+m^M_R(1+\frac{1}{2}(\frac{2m^D}{m^M_R})^2)]=m^M_R[1+(\frac{m^D}{m^M_R})^2]\approx m^M_R.
+\]
+
+
+For $\mathcal{O}(1TeV)$, the $\nu$ mass is $0.1~eV$
+
+
+
+
+
 
 \subsection{Status of Double Beta Decay Experiments}
 

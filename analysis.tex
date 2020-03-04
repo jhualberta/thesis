@@ -1,3 +1,5 @@
+
+
 During the August to October 2019, the PPO is added into the LAB when the water level at 5100 mm (in PSUP coordinate). This is for the SNO+ partial-fill phase.
 
 
@@ -10,26 +12,43 @@ $\beta_{14}$ isotropy classifier
 where $P_l(\cos\theta_{ij})$ are Legendre polynomials
 
 $\beta_{14}=\beta_1+4\beta_4$
+\\
+\begin{tikzpicture}[node distance=2cm]
+%%% settings
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+%%%%%%%%%%%%%%%%%%%
+
+\node (start) [startstop] {Loop for events (loop 1, from first to last)};
+\node (pro1) [process, below of=start] {Event \#i};
+\node (dec1) [decision,below of=pro1, aspect=2.5, text width=6cm, yshift = -2cm ] {FV cut~\&~$Nhit_i\in(175,1700)$};
+\node (loop2) [startstop, below of=dec1, yshift = -2cm ]{Loop for the events (loop 2, from i+1 to last)};
+\node (pro2) [process, below of=loop2] {Event \#j};
+\node (dec2) [decision, right of=pro2, text width=2.5cm, xshift =3cm] {$\Delta t=t_j -t_i>2000~\mu s$};
+\node (pro3) [process, right of=loop2, text width=3cm, xshift =6.5cm] {break loop 2};
+\node (dec3) [decision, aspect=2, below of=pro2, text width=5cm, yshift=-2.5cm] {FV cut \& $Nhit_j\in(175,320)$ \& $\Delta t\in(3.69,1000)~\mu s$ \& $|\vec{X}_i-\vec{X}_j|<0.5~m$};
+
+\node (pro4) [process, right of=dec3, text width=4cm, xshift =7cm] {Record event pair: event \#i as prompt event, tagged as $^{214}$Bi; event \#j as delayed event, tagged as $^{214}$Po.};
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\draw [arrow] (start) -- (pro1);
+\draw [arrow] (pro1) -- (dec1);
+\draw [arrow] (dec1)  -| node [anchor=east] {no} ([xshift=-1cm] dec1.west)
+|- ([yshift=+1cm] start.north) coordinate (aux)-- (start.north);
+\draw [arrow] (dec1) -- node[anchor=east] {yes}(loop2);
+\draw [arrow] (loop2) -- (pro2);
+\draw [arrow] (pro2) -- (dec2);
+\draw [arrow] (dec2) -|node [anchor=west] {no} (pro3);
+\draw [arrow] (pro3.north)|-(start.east);
+\draw [arrow] (dec2.south) node[anchor=north]{yes}-|(dec3.north);
+\draw [arrow] (dec3.east)--node[anchor=south] {yes}(pro4.west);
+\draw [arrow] (dec3.west)node[anchor=east] {no}|-(loop2.west);
+\draw [arrow] ([xshift=1.5cm] pro4.north)|-(pro3.east);
+\end{tikzpicture} 
 
 
 

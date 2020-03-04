@@ -53,7 +53,53 @@ Higher loading concentrations would be possible for a further loading plan\cite{
  The $^{130}$Te is a double beta decay isotope. The main purpose in this phase is searching for $0\nu\beta\beta$ in $^{130}$Te.
 
 
+\subsection{Detection Principle}
+
+\subsubsection{Optical Cherenkov Radiation Detection}
+In the SNO+ water phase, the relay on the .
+
+For any charged particle travelling in a transparent medium at an ultrarelativistic speed (a speed greater than the local phase speed of light in the medium), there is an electromagnetic radiation emitted from the medium under the action of the field of the moving particle\cite{landau2013electrodynamics}.
+
+
+\[v>v_p=c/n(\omega)\]   $\cos\theta_c = (1/n\beta)$
+
+
+where c is the speed of light in vacuum, n is the refraction index of the medium and $v=\beta c$ is the speed of the particle in the medium.
+
+
+Frank-Tamm formula
+
+For a particle with a charge of $ze$, the number of photons produced by Cherenkov radiation per unit path lenght and per unit energy interval of the photons is described by :
+ 
+\[
+\frac{d^2N_r}{dEdx}=\frac{\alpha^2 Z^2}{\hbar c}\mu(E)(1-\frac{1}{\beta^2 n(E)^2})
+\]
+
+where $\alpha$ is the fine structure constant
+
+
+
+For the case of $e^-$ travelling in the water, we can find that 0.262 MeV is the lowest kinetic energy to create Cherenkov radiation, which is called the Cherenkov threshold.
+
+\subsubsection{Scintillation Detection}
+
+prompt emission of scintillation light, which is called fluorescence
+delayed emission of scintillation light, which is called delayed fluorescence or phosphorescence.
+
 \subsection{Electronics}
+
+The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
+
+burst 
+from supernova
+
+
+
+
+
+
+
+
 
 PMTs are Hamamatsu model R1408.
 
@@ -110,10 +156,12 @@ dark noise rate is estimated to be 1 kHz.
 
 
 
-
 \subsection{Optics}
 
 Optical parameters
+
+Winston cone
+
 
 
 timing
@@ -127,7 +175,7 @@ scattering
 laser pulse diffuser, it can run with different wavelengths: 337, 365, 385, 420, 450 and 500 nm.
 The laserball 
 
-
+The acrylic of the AV is UV-transparent
 
 
 
@@ -137,29 +185,25 @@ The laserball
 Linear Alkyl Benzene (LAB)
 
 is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
-
-
+Organic liquid scintillators 
 The advantages of LAB are:
 
 \begin{itemize}
-	\item It has very low levels of natural radioactive contaminants such as U, Th and K.
-	
-	 since ionic 
-	
-	
-	
-	\item It has a high light yield
-	\item It has fast timing response 
-	
+	\item[$\bullet$] It has very low levels of natural radioactive contaminants such as U, Th and K.
+	\item[$\bullet$] High light yield and attenuation length.
+	\item[$\bullet$] It has fast timing response 
 	different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha-\beta$ discrimination. 
-	\item It is chemically compatible with AV.
-	\item It is cheap, for 
+	\item[$\bullet$] High flash point and low toxicity for lab safety.
+	\item[$\bullet$] appropriate density for mechanical stability
+	\item[$\bullet$] Good stability and chemically compatible with detector materials, mainly the AV.
+	\item[$\bullet$] Low cost.
 \end{itemize}
 
 
-telluric acid (TeA), 1,2-butanediol (BD) N,N-dimethyldodecylamine (DDA) as a stabilisation agent.
 Te-loaded liquid scintillator (TeLS)
 
+To load the tellurium into the liquid scintillator, a compound is made by 
+condensation reactions between telluric acid (TeA) and 1,2-butanediol (BD), with N,N-dimethyldodecylamine (DDA) being used as a stabilization agent.
 
 
 2 g/L PPO gives an absolute light yield of 11900 photons/MeV.
@@ -168,12 +212,98 @@ Te-loaded liquid scintillator (TeLS)
 for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
 6190 photons/MeV\cite{joshW1,tanner0p5}.
 
+	
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{jablonski.png}
+	\caption{A Jablonski diagram for the liquid scintillator, modified from \cite{knoll2010radiation,birks1965theory}.}
+	\label{jablonski}
+\end{figure}
+
+
+
+
+Tellurium-loaded 65\% of the pure, unloaded scintillator
+
+
 
 water-based wavelength shifter
 
 
+timing profile, the intensity of scintillation light as a function of time
+
+the prompt fluorescence intensity at a time $t$ excitation be $I=I_0e^{-\frac{t}{\tau}}$
+
+
+
+singlet and triplet states 
+ionization density 
+depend
+$\alpha$-particle
+high ionization density 
+quenching, 
+
 
 \subsection{Calibration}
+
+
+Two kinds of calibration sources are used by SNO+: optical sources and radioactive sources. 
+The optical sources are used to calibrate the PMT response and to measure the optical properties of the 
+
+
+The radioactive sources are used to calibrate the energy 
+
+reconstruction performances and uncertainties.
+particle identifications
+
+
+
+
+
+
+
+Calibration sources with known physics parameters: help to
+understand the detector response to the events and to make
+accurate measurements
+Two types of SNO+ calibration sources: optical sources and
+radioactive sources
+Optical sources: phototube response, optical properties of the
+detector media
+Radioactive source: energy scale, resolution, systematic
+uncertainties
+16N calibration source is one of the radioactive sources
+
+
+
+
+
+
+
+Optical calibration  {\emph {in-situ}} 
+\begin{itemize}  
+	\item[$\bullet$] Timing module for the Embedded LED Light Injection Entity (TELLIE)
+	
+	light-emitting diode (LED)
+	
+	
+	time calibration, time response 
+	
+	a precision of $\mathcal{O} (1~ns)$
+	
+	Blinky fibre optics nailed to the PSUP to calibrate stuff.
+	
+	
+	
+	\item[$\bullet$]  
+	
+	
+	\item[$\bullet$] 
+\end{itemize}
+
+
+
+
+
 Calibration source
 
 The $^{16}$N source

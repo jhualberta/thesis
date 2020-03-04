@@ -3,39 +3,47 @@
 \contentsline {section}{\numberline {0.1}Abstract}{iii}{section.0.1}
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Table des mati\`eres}{v}{chapter*.2}
-\contentsline {chapter}{Table des figures}{vii}{chapter*.3}
-\contentsline {chapter}{Liste des tableaux}{viii}{chapter*.4}
+\contentsline {chapter}{Table des figures}{viii}{chapter*.3}
+\contentsline {chapter}{Liste des tableaux}{ix}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Studies on Solar Neutrinos: History and Current Status}{1}{section.1.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Neutrino Flavor Transformation and Oscillation}{2}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Matter Effect}{2}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Majorana Neutrino}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Double Beta Decay}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Status of Double Beta Decay Experiments}{7}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}The SNO+ Experiment}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}A Description of SNO+ Detector}{9}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Overview}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}SNO+ Physics Phases}{10}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Electronics}{11}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Optics}{12}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Liquid scintillator}{12}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}Calibration}{13}{subsection.3.1.6}
-\contentsline {chapter}{\numberline {4}Event Reconstruction}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{14}{section.4.2}
-\contentsline {section}{\numberline {4.3}An Alternative Vertex Reconstruction Algorithm for SNO+}{14}{section.4.3}
-\contentsline {paragraph}{MPW: Fitter Structure}{15}{section*.6}
-\contentsline {paragraph}{MPW: Position and Direction Reconstructions}{18}{section*.7}
-\contentsline {paragraph}{Drive Correction}{19}{section*.8}
-\contentsline {section}{\numberline {4.4}Likelihood Calculation}{20}{section.4.4}
-\contentsline {section}{\numberline {4.5}\isotope [16]{N} test}{21}{section.4.5}
-\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{22}{section.4.6}
-\contentsline {section}{\numberline {4.7}PMT Selectors}{25}{section.4.7}
-\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{25}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{25}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{25}{subsection.4.8.2}
-\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{26}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{27}{chapter.6}
-\contentsline {chapter}{\numberline {A}Appendix Name}{28}{appendix.A}
-\contentsline {chapter}{Bibliographie}{29}{appendix*.9}
+\contentsline {subsection}{\numberline {2.1.1}Vacuum Oscillation}{2}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Matter Effect}{2}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Three-flavor Mixing}{4}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Reactor-solar Experiments}{6}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Atmosphere-accelerator Experiments}{6}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}Astrophysics Experiments}{6}{subsection.2.1.6}
+\contentsline {section}{\numberline {2.2}Majorana Neutrino}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Double Beta Decay}{7}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Status of Double Beta Decay Experiments}{8}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}The SNO+ Experiment}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}A Description of SNO+ Detector}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Overview}{11}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}SNO+ Physics Phases}{12}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Detection Principle}{13}{subsection.3.1.3}
+\contentsline {subsubsection}{Optical Cherenkov Radiation Detection}{13}{section*.6}
+\contentsline {subsubsection}{Scintillation Detection}{14}{section*.7}
+\contentsline {subsection}{\numberline {3.1.4}Electronics}{14}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Optics}{15}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Liquid scintillator}{15}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Calibration}{17}{subsection.3.1.7}
+\contentsline {chapter}{\numberline {4}Event Reconstruction}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}An Alternative Vertex Reconstruction Algorithm for SNO+}{19}{section.4.3}
+\contentsline {paragraph}{MPW: Fitter Structure}{20}{section*.8}
+\contentsline {paragraph}{MPW: Position and Direction Reconstructions}{23}{section*.9}
+\contentsline {paragraph}{Drive Correction}{24}{section*.10}
+\contentsline {section}{\numberline {4.4}Likelihood Calculation}{25}{section.4.4}
+\contentsline {section}{\numberline {4.5}\isotope [16]{N} test}{26}{section.4.5}
+\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{27}{section.4.6}
+\contentsline {section}{\numberline {4.7}PMT Selectors}{32}{section.4.7}
+\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{32}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{33}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{33}{subsection.4.8.2}
+\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{34}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{37}{chapter.6}
+\contentsline {chapter}{\numberline {A}Appendix Name}{38}{appendix.A}
+\contentsline {chapter}{Bibliographie}{39}{appendix*.11}
