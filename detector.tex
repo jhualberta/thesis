@@ -258,10 +258,6 @@ particle identifications
 
 
 
-
-
-
-
 Calibration sources with known physics parameters: help to
 understand the detector response to the events and to make
 accurate measurements
@@ -274,7 +270,7 @@ uncertainties
 16N calibration source is one of the radioactive sources
 
 
-
+\cite{esteban2019global}
 
 
 
@@ -329,6 +325,42 @@ ensures radon gas not leaking into the detector when deploying the source.
 
 -
 
+\section{Monte Carlo Simulation for SNO+}
+The SNO+ collaboration has developed a software framework, called the Reactor Analysis
+Tool (RAT), which integrates a Monte Carlo simulation of the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiemnts, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50.
+
+
+
+
+
+
+
+Geant4 Toolkit and
+incorporates ROOT libraries for data handling and analysis.
+
+
+
+The RAT Monte Carlo was originally developed for the Braidwood Collaboration
+utilising software developed for a generic KamLAND like detector, called Generic Liquid Scintillator GEANT4 simulation (GLG4). It was branched and
+developed into the specialist SNO+ version, starting in 2006/2007.
+
+GLG4sim
+
+
+Braidwood
+
+
+
+
+
+
+ combines both Monte Carlo simulation of the Braidwood detector with event-based analysis tasks, like reconstruction. The primary goals are:
+
+Make it easy to analyze Monte Carlo-generated events as well as data from disk using the same software with only a few command changes. Even in the proposal R\&D phase, where there is no real data, this is still useful for dumping Monte Carlo events to disk to be analyzed by another job. When there is real data, being able to do the analysis with the same code path as was used on Monte Carlo is very reassuring.
+Allow for a modular, user-controlled analysis of events. This includes allowing the user to selected which analysis tasks to perform (different fitters, pruning unneeded data from the event data structure, etc.). It should also be relatively straightforward for users to introduce their own code into the analysis process.
+Separate analysis into small tasks which can be developed asynchronously by different people, yet integrated with minimal (or perhaps zero) pain.
+Integrate into existing GEANT4 and GLG4sim efforts with a minimum of code duplication. As much as possible, RAT should be designed incorporate upgrades of these packages just by relinking. No cut and paste of code (mainly a question with GLG4sim).
+Design\cite{ratManual}
 
 
 

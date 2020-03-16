@@ -5,6 +5,11 @@ Muons.
 \newblock \url{https://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm}, 2001.
 \newblock [Online; accessed 19-July-2019].
 
+\bibitem{ratManual}
+Overview - rat 1.0 documentation.
+\newblock \url{https://rat.readthedocs.io/en/latest/overview.html#goals}, 2014.
+\newblock [Online; accessed 20-Dec-2019].
+
 \bibitem{agostini2019probing}
 M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
   E.~Bellotti, S.~Belogurov, A.~Bettini, L.~Bezrukov, et~al.
@@ -17,6 +22,20 @@ C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
 \newblock First results from cuore: A search for lepton number violation via
   0$\nu\beta\beta$ decay of te-130.
 \newblock {\em Physical review letters}, 120(13):132501, 2018.
+
+\bibitem{anderson2019search}
+M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
+  Z.~Barnard, N.~Barros, D.~Bartlett, et~al.
+\newblock Search for invisible modes of nucleon decay in water with the {SNO+}
+  detector.
+\newblock {\em Physical Review D}, 99(3):032008, 2019.
+
+\bibitem{anderson2019measurement}
+M.~Anderson, S.~Andringa, S.~Asahi, M.~Askins, D.~Auty, N.~Barros, D.~Bartlett,
+  F.~Bar{\~a}o, R.~Bayes, E.~Beier, et~al.
+\newblock Measurement of the {$^8$}{B} solar neutrino flux in {SNO+} with very
+  low backgrounds.
+\newblock {\em Physical Review D}, 99(1):012012, 2019.
 
 \bibitem{biller2020slow}
 S.~D. Biller, E.~J. Leming, and J.~L. Paton.
@@ -51,6 +70,14 @@ J.~Dunger.
 \newblock {\em Topological and time based event classification for neutrinoless
   double beta decay in liquid scintillator}.
 \newblock PhD thesis, University of Oxford, 2018.
+
+\bibitem{esteban2019global}
+I.~Esteban, M.~Gonzalez-Garcia, A.~Hernandez-Cabezudo, M.~Maltoni, and
+  T.~Schwetz.
+\newblock Global analysis of three-flavour neutrino oscillations: synergies and
+  tensions in the determination of $\theta_{23}$, $\delta_{CP}$, and the mass
+  ordering.
+\newblock {\em Journal of High Energy Physics}, 2019(1):106, 2019.
 
 \bibitem{fukugita2013physics}
 M.~Fukugita and T.~Yanagida.

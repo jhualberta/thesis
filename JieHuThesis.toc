@@ -29,21 +29,22 @@
 \contentsline {subsection}{\numberline {3.1.5}Optics}{15}{subsection.3.1.5}
 \contentsline {subsection}{\numberline {3.1.6}Liquid scintillator}{15}{subsection.3.1.6}
 \contentsline {subsection}{\numberline {3.1.7}Calibration}{17}{subsection.3.1.7}
-\contentsline {chapter}{\numberline {4}Event Reconstruction}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}An Alternative Vertex Reconstruction Algorithm for SNO+}{19}{section.4.3}
-\contentsline {paragraph}{MPW: Fitter Structure}{20}{section*.8}
-\contentsline {paragraph}{MPW: Position and Direction Reconstructions}{23}{section*.9}
-\contentsline {paragraph}{Drive Correction}{24}{section*.10}
-\contentsline {section}{\numberline {4.4}Likelihood Calculation}{25}{section.4.4}
-\contentsline {section}{\numberline {4.5}\isotope [16]{N} test}{26}{section.4.5}
-\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{27}{section.4.6}
-\contentsline {section}{\numberline {4.7}PMT Selectors}{32}{section.4.7}
-\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{32}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{33}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{33}{subsection.4.8.2}
-\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{34}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{37}{chapter.6}
-\contentsline {chapter}{\numberline {A}Appendix Name}{38}{appendix.A}
-\contentsline {chapter}{Bibliographie}{39}{appendix*.11}
+\contentsline {section}{\numberline {3.2}Monte Carlo Simulation for SNO+}{18}{section.3.2}
+\contentsline {chapter}{\numberline {4}Event Reconstruction}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{20}{section.4.2}
+\contentsline {section}{\numberline {4.3}An Alternative Vertex Reconstruction Algorithm for SNO+}{20}{section.4.3}
+\contentsline {paragraph}{MPW: Fitter Structure}{21}{section*.8}
+\contentsline {paragraph}{MPW: Position and Direction Reconstructions}{24}{section*.9}
+\contentsline {paragraph}{Drive Correction}{25}{section*.10}
+\contentsline {section}{\numberline {4.4}Likelihood Calculation}{26}{section.4.4}
+\contentsline {section}{\numberline {4.5}\isotope [16]{N} test}{27}{section.4.5}
+\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{28}{section.4.6}
+\contentsline {section}{\numberline {4.7}PMT Selectors}{34}{section.4.7}
+\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{34}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{34}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{34}{subsection.4.8.2}
+\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{35}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{38}{chapter.6}
+\contentsline {chapter}{\numberline {A}Appendix Name}{39}{appendix.A}
+\contentsline {chapter}{Bibliographie}{40}{appendix*.11}

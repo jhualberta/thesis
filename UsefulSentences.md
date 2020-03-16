@@ -1,3 +1,9 @@
+Whether $m_3>m_2$ (normal hierarchy) or $m_3<m_1$ (inverted hierarchy), that is still an unsolved problem. 
+
+
+
+
+
 look for $0\nu\beta\beta$ signal with a sensitivity to a lifetime of $10^{26}$ years.
 
 its potential for 
