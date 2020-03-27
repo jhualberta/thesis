@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{kalpanaMPFitter}
+Multipath fitter processor.
+\newblock {\em SNO+ Internal Document, docDB-3849-v1.}
+
 \bibitem{muonflux}
 Muons.
 \newblock \url{https://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm}, 2001.
@@ -9,6 +13,14 @@ Muons.
 Overview - rat 1.0 documentation.
 \newblock \url{https://rat.readthedocs.io/en/latest/overview.html#goals}, 2014.
 \newblock [Online; accessed 20-Dec-2019].
+
+\bibitem{agostinelli2003geant4}
+S.~Agostinelli, J.~Allison, K.~a. Amako, J.~Apostolakis, H.~Araujo, P.~Arce,
+  M.~Asai, D.~Axen, S.~Banerjee, G.~. Barrand, et~al.
+\newblock Geant4—a simulation toolkit.
+\newblock {\em Nuclear instruments and methods in physics research section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  506(3):250--303, 2003.
 
 \bibitem{agostini2019probing}
 M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
@@ -37,6 +49,11 @@ M.~Anderson, S.~Andringa, S.~Asahi, M.~Askins, D.~Auty, N.~Barros, D.~Bartlett,
   low backgrounds.
 \newblock {\em Physical Review D}, 99(1):012012, 2019.
 
+\bibitem{davidPartialWater}
+D.~Auty and A.~Hallin.
+\newblock Partial water fitter.
+\newblock {\em SNO+ Internal Document, docDB-2965-v2.}
+
 \bibitem{biller2020slow}
 S.~D. Biller, E.~J. Leming, and J.~L. Paton.
 \newblock Slow fluors for highly effective separation of cherenkov light in
@@ -53,6 +70,11 @@ M.~G. Boulay.
 \newblock Direct evidence for weak flavour mixing with the sudbury neutrino
   observatory.
 \newblock 2004.
+
+\bibitem{brunroot}
+R.~Brun, F.~Rademakers, P.~Canal, et~al.
+\newblock Root—an object oriented data analysis framework, 2007.
+\newblock {\em See Also http://root. cern. ch}.
 
 \bibitem{coulter2013modelling}
 I.~T. Coulter.
@@ -94,6 +116,20 @@ P.~Gregory.
 \newblock {\em Bayesian Logical Data Analysis for the Physical Sciences: A
   Comparative Approach with Mathematica{\textregistered} Support}.
 \newblock Cambridge University Press, 2005.
+
+\bibitem{partialWater}
+A.~Hallin.
+\newblock Fitting partial fill data from december 2014.
+\newblock {\em SNO+ Internal Document, docDB-2888-v3.}
+
+\bibitem{horton2006introduction}
+G.~Horton-Smith et~al.
+\newblock Introduction to glg4sim, 2006.
+
+\bibitem{jieMPW}
+J.~Hu and J.~Tseng.
+\newblock Updates on the multipath water fitter 2018.
+\newblock {\em SNO+ Internal Document, docDB-4936-v2.}
 
 \bibitem{tanner0p5}
 T.~Kaptanoglu.
@@ -150,6 +186,16 @@ W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery.
 \newblock {\em Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
 
+\bibitem{kalpanaWLS}
+K.~Singh.
+\newblock Wavelength shifter: Carbostyril 124.
+\newblock {\em SNO+ Internal Document, docDB-3351-v2.}
+
+\bibitem{kalpanaWLS2}
+K.~Singh.
+\newblock Wavelength shifter in water phase of sno+.
+\newblock {\em SNO+ Internal Document, docDB-3869-v2.}
+
 \bibitem{smirnov2005msw}
 A.~Y. Smirnov.
 \newblock The msw effect and matter effects in neutrino oscillations.
@@ -165,6 +211,11 @@ M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
   J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, et~al.
 \newblock Review of particle physics.
 \newblock {\em Physical Review D}, 98(3):030001, 2018.
+
+\bibitem{skyshine}
+J.~Tseng.
+\newblock Skyshine classifier.
+\newblock {\em SNO+ Internal Document, docDB-5341-v1.}
 
 \bibitem{joshW1}
 J.-S. Wang.

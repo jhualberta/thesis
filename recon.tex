@@ -9,42 +9,70 @@
 
 \section{Reconstruction of the SNO+}
 
+event vertex
+
+
+
 \section{Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}
 
 
-\section{An Alternative Vertex Reconstruction Algorithm for SNO+}
-A Multi-path Fitter (MPF) framework was developed by the University of Alberta group as an alternative reconstruction algorithm to the SNO+ official fitter. In this framework, fitters for SNO+ water phase (MP Water Fitter), wavelength shifter (MP WLS Fitter), partial-fill phase (MP Partial Fitter) and scintillator phase (MP Scint Fitter) were developed. In SNO+ water phase, the cavity and the AV are both filled with pure water. This is a relatively simple geometry. Therefore, we start with the MP Water Fitter to explain the reconstruction concepts.
 
 
 
-First, the fitter throws a random vertex (uniformly distributing) inside the PSUP as a trial vertex. The Class Library for High Energy Physics (CLHEP) is used for creating pseudo-random numbers.
 
-$rand0 = Uniform(0,1), rand1 = Uniform(-1,1)$  
+\section{Multi-path Vertex Reconstruction Algorithm for SNO+}
+A Multi-path (MP) reconstruction framework was developed by the University of Alberta group as an additional vertex reconstruction algorithm for SNO+.
+This framework was first developed by Aksel Hallin to reconstruct and investigate the event vertex for the data taken from an early stage of SNO+ when the detector was partially filled with water at the end of 2014\cite{partialWater}. It was further developed by David Auty and Kalpana Singh for investigating the wavelength shifter and water events\cite{davidPartialWater, kalpanaWLS, kalpanaWLS2, kalpanaMPFitter}. Jeff Tseng restructured the related codes into more flexible and efficient C++ codes and implemented into the RAT software\cite{jieMPW}.
 
+In this framework, the fitter is adapted for various SNO+ physics phases, including the water phase, a conceptual wavelength shifter (WLS) phase, the partial-fill phase and the scintillator phase (with and without Tellurium loaded). In the SNO+ water phase, the cavity and the AV are both filled with ultra-pure water. This is a relatively simple geometry since everything inside the PSUP can be simplified as water. Therefore, we start with the MP water fitter (the MPW fitter) to explain the reconstruction concepts.
 
-double ran0 = CLHEP::RandFlat::shoot( 0.0, 1.0 );
-double ran1 = CLHEP::RandFlat::shoot( -1.0, 1.0 );
-double ran2Pi = CLHEP::RandFlat::shoot( 0.0, 2.0*CLHEP::pi );
-double t = CLHEP::RandFlat::shoot( 100.0, 300.0 );
+The MPW fitter fits for position, time and direction of an event in SNO+ water phase. First, the fitter throws a random position built up by random variables which are uniformly distributed inside a sphere with a radius of $10~meters$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$).
+Meanwhile, a random event time is also generated, following a uniform distribution in a range of $100$ to $300~ns$. The Class Library for High Energy Physics (CLHEP) is used for creating pseudo-random numbers (see the Appendix A.1 for details). With random event position and time, a random vertex works as a trial event vertex. 
 
-double wl = CLHEP::RandFlat::shoot( 4000.0, 6000.0 );
-double r = pow(ran0, 1.0/3.0) * fPSUPRadius; // mm
-double costheta = ran1;
-double sintheta = sqrt(1.0 - costheta*costheta);
+Connecting the trial event vertex to the triggered PMTs, the fitter evaluates a timing parameter, called the time residual ($t_{res}$), by calculating the time of flight for photons travelling along the paths between the event position to the triggered PMT positions (light paths).
 
-
-time residual
+The time residual is defined as:
 \[
-t_{res}=t_{PMT} - t_{transit} - t_{event} 
+t_{res}=t_{PMT} - t_{transit} - t_{event},
 \]
+where $t_{PMT}$ is the PMT triggered time recorded by the detector, $t_{event}$ is the time when an event occurs, and $t_{transit}$ is the total transit time (or time of flight) taken by a photon travelling from the event position ($\vec{x}_{event}$) to the triggered PMT ($\vec{x}_{PMT}$) and crossing different materials in the detector.
+
+To calculate the $t_{transit}$, the fitter uses photons from prompt time window (prompt light) and assumes that photons propagate in straight lines (straight light paths). Here it is simple: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. Detailed calculations, such as the refraction and reflection when the lights cross different detector materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel, are neglected. We found that without these details, the fitter can still produce results consistent with the ones using detailed calculations. 
+For a trial vertex $(\vec{x}_0,t_0)$, the fitter calculates a set of $t_{res}$ values with respect to all the triggered PMTs. These values are fed into a likelihood function: 
+\[
+\ln\mathcal{L}(\vec{x}_0,t_0)=\sum_{i=1}^{{\mathrm{Nhits}}}\ln P(t^i_{res}),
+\]
+where $t^i_{res}$ is the time residual calculated from the $i^{th}$ triggered PMT and $\mathrm{Nhits}$ here stands for the number of total triggered PMTs by an event.
+
+A pre-set 1 dimension (1D) probability density function (PDF) comes from the timing profile measurement and the measured detector response.
+
+$P(t^i_{res})$ is the probability returned from the PDF for the $i^{th}$ triggered PMT and a trial event
+vertex.
+
+The Levenberg-Marquardt method, which is commonly used for fitting the nonlinear model for multiple parameters, is used here as an optimizer 
 
 
-The MP Water Fitter uses prompt light and assumes that photons propagate in straight lines (straight light paths) for likelihood calculations. Detailed situations, such as the reflection and lensing effects from different detector components are neglected. Figure~\ref{mpwdiagram} shows the reconstruction concepts for position and direction.
+used to find the event position and time which maximises the log likelihood when
+comparing the time residuals to the scintillation time PDF:
 
 
-The MPW fitter currently fits for position, time and direction of a water phase event. The fitter uses prompt light and straight line paths for likelihood calculations. Then it utilizes the Multi-path Fitter to maximize the likelihood functions and find the best-fit values. The concept of this fitter is the same of the FTU fitter in SNO time.
 
-\paragraph{MPW: Fitter Structure}
+
+As we will see in the following sections, one of the biggest jobs for the fitter is to calculate the $t_{transit}$ by evaluating light paths. In the water phase, we consider photons created in an event travelling along straight line paths and the paths are always in water. In the other situations, for example, when the acrylic vessel is filled with the wavelength shifter or scintillator, the light path calculations will be modified.   
+
+
+
+
+
+Then it utilizes the   to maximize the likelihood functions and find the best-fit values.
+
+
+
+Figure.~\ref{mpwdiagram} shows the reconstruction concepts for position and direction.
+
+
+
+\paragraph{Fitter Structure}
 
 The MPW fitter consists of: 
 \begin{itemize}
@@ -97,10 +125,7 @@ The MPW fitter consists of:
 
 For the position reconstruction of the MPW fitter, the likelihood function simply calculates the likelihood assuming straight line paths of prompt light from a position vertex $\vec{X_0}$ ($\mathrm{fVertex}$) and a starting time offset $t_0$ to each of the hit PMTs. 
 
-The time residue ($t_{res}$) is taken as the fitting parameter of the likelihood function for position reconstruction. The $t_{res}$ of the i-th hit PMT is calculated as $t^i_{res} = t_{{\mathrm{pmt}}}^i - |\vec{X_0}-\vec{X}_{\mathrm{pmt}}^i|/v_g-t_0$, where $t_{{\mathrm{pmt}}}^i$ is the hit time of the i-th hit PMT and $\vec{X}_{\mathrm{pmt}}^i$ ($\mathrm{fPosition}$) is the position of the i-th hit PMT. Then the likelihood function for position reconstruction is constructed as:
-\[
-L(\vec{x}_0,t_0)=\sum_{i=1}^{{\mathrm{Nhits}}}L_i(t^i_{res})
-\]
+
 
 We define the position difference $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$, then the time of flight for prompt light is  $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
 
@@ -163,18 +188,9 @@ It is important to note that since the drive correction parameters are obtained 
 By fitting the simulations of 5 MeV electrons generated at the detector center and travelling along +X direction, the drive effct of the MPW fitter causes a $\sim$50 mm biases from the detector center along +X axis. The drive correction reduces this drive bias down to $\sim$0.2 mm. For the reconstruction of \isotope[16]{N} data, the drive correction can reduce the fitted position RMS by $\sim$20 mm.
 
 
-\section{Likelihood Calculation}
-to fit the nonlinear model for multiple parameters, Levenberg-Marquardt method is used.
 
-Taylor series expansion
-\[
-\chi^2(\theta)\approx\chi^2(\theta_{current})+\sum_k\frac{\partial \chi^2(\theta_{current})}{\partial \theta_k}\delta\theta_k+\frac{1}{2}\sum_{\alpha\beta}\frac{\partial^2\chi^2(\theta_{current})}{\partial\theta_\alpha\theta_\beta}\delta\theta_\alpha\delta\theta_\beta
-\]
 
-where \[
-\kappa_{\alpha\beta}\equiv \frac{1}{2} \frac{\partial^2\chi^2(\theta_{current})}{\partial\theta_\alpha\theta_\beta}
-\]
-is defined as the curvature matrix\cite{gregory2005bayesian}.
+
 
 
 
@@ -449,27 +465,49 @@ by optimizations, the values of tolerance, are set to .
 
 
 
-\section{PMT Selectors}
-- Straight Light Path TimeResidual Cut
+\section{PMT Selectors for the Fitter}
+
+
+\begin{itemize}
+\item[$\bullet$] Straight Light Path TimeResidual Cut
 
 This selector is used for the direction reconstruction for the water phase.
 
-- Mode cut
+
+
+\item[$\bullet$] Mode cut
 
 
 
-- Early Hit PMT Selector
+\item[$\bullet$] Uniform PMT Selector
 
-in prompt light time window
+Group PMTs by their positions. For azimuth angle $\Phi$ in $[-\pi, \pi]$,
+take $n$ intervals; for zenith $\cos\theta$ in $[-1,1]$, also take $n$ intervals.
+This procedure divides the PMT sphere longitude and latitude.
+
+Then group PMTs in $n\times n$ panels.
 
 
-
-- Uniform PMT Selector
 Pick up the PMTs uniformly and
 
 reduce the number of PMTs to a designated number to boost up the fit speed.
 
+	\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5cm]{GroupPMTs.png}
+	\caption{Group the PMTs by dividing the PMT sphere by latitudes and longitudes.}
+	\label{GroupPMTs}
+\end{figure}
 
+
+\item[$\bullet$] Earliest Hit PMT Selector
+
+in prompt light time window
+For each panel, select PMTs with hitTime>100 ns and then
+choose the earliest hit one. We can also set the other hit time
+window for the selected PMT in each panel.
+A similar selector which uses median hitTime for each panel has
+also been tested, but not as good as the earliest hit one.
 
 
 
@@ -479,9 +517,7 @@ fit speed for direction reconstruction: ~0.0004 s/call
 
 
 
-
-
-
+\end{itemize}
 
 
 \section{\isotope[16]{N} Calibration}

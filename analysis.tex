@@ -4,6 +4,13 @@ During the August to October 2019, the PPO is added into the LAB when the water 
 
 
 \subsection{Sky-shine Classifier}
+A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
+
+
+
+ 
+
+
 The SkyShine classifier aims to discriminate "sky shine" events from other backgrounds by looking at the ratio of hit counts in a middle z range and a low z range. It can also look at neck and high-z OWL PMT hits. The classifier's behavior for partial fill is studied using simulation.
 
 \cite{skyshine}
@@ -23,7 +30,16 @@ $\beta_{14}$ isotropy classifier
 where $P_l(\cos\theta_{ij})$ are Legendre polynomials
 
 $\beta_{14}=\beta_1+4\beta_4$
-\\
+
+
+thetaij isotropy classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
+
+\[
+\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
+\]
+
+
+
 \begin{tikzpicture}[node distance=2cm]
 %%% settings
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]

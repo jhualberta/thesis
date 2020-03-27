@@ -33,18 +33,21 @@
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{20}{chapter.4}
 \contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{20}{section.4.1}
 \contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{20}{section.4.2}
-\contentsline {section}{\numberline {4.3}An Alternative Vertex Reconstruction Algorithm for SNO+}{20}{section.4.3}
-\contentsline {paragraph}{MPW: Fitter Structure}{21}{section*.8}
+\contentsline {section}{\numberline {4.3}Multi-path Vertex Reconstruction Algorithm for SNO+}{20}{section.4.3}
+\contentsline {paragraph}{Fitter Structure}{22}{section*.8}
 \contentsline {paragraph}{MPW: Position and Direction Reconstructions}{24}{section*.9}
-\contentsline {paragraph}{Drive Correction}{25}{section*.10}
-\contentsline {section}{\numberline {4.4}Likelihood Calculation}{26}{section.4.4}
+\contentsline {paragraph}{Drive Correction}{26}{section*.10}
+\contentsline {section}{\numberline {4.4}Likelihood Calculation}{27}{section.4.4}
 \contentsline {section}{\numberline {4.5}\isotope [16]{N} test}{27}{section.4.5}
-\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{28}{section.4.6}
-\contentsline {section}{\numberline {4.7}PMT Selectors}{34}{section.4.7}
-\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{34}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{34}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{34}{subsection.4.8.2}
-\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{35}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{38}{chapter.6}
-\contentsline {chapter}{\numberline {A}Appendix Name}{39}{appendix.A}
-\contentsline {chapter}{Bibliographie}{40}{appendix*.11}
+\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{29}{section.4.6}
+\contentsline {section}{\numberline {4.7}PMT Selectors for the Fitter}{34}{section.4.7}
+\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{35}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{35}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{35}{subsection.4.8.2}
+\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{36}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}Sky-shine Classifier}{36}{subsection.5.0.1}
+\contentsline {chapter}{\numberline {6}Conclusions}{40}{chapter.6}
+\contentsline {chapter}{\numberline {A}Some Details for the MultiPath Fitter Code}{41}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{41}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization}{41}{section.A.2}
+\contentsline {chapter}{Bibliographie}{43}{appendix*.11}

@@ -112,28 +112,32 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.7}Calibration}{17}{subsection.3.1.7}}
 \citation{ratManual}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Monte Carlo Simulation for SNO+}{18}{section.3.2}}
+\citation{partialWater}
+\citation{davidPartialWater}
+\citation{kalpanaWLS}
+\citation{kalpanaWLS2}
+\citation{kalpanaMPFitter}
+\citation{jieMPW}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Event Reconstruction}{20}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{20}{section.4.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{20}{section.4.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}An Alternative Vertex Reconstruction Algorithm for SNO+}{20}{section.4.3}}
-\@writefile{toc}{\contentsline {paragraph}{MPW: Fitter Structure}{21}{section*.8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces PMT response time as the timing pdf.}}{22}{figure.4.1}}
-\newlabel{MPW_timingPDF}{{4.1}{22}{PMT response time as the timing pdf}{figure.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT angular distribution as the angular response pdf.}}{22}{figure.4.2}}
-\newlabel{MPW_angularPDF}{{4.2}{22}{PMT angular distribution as the angular response pdf}{figure.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Multi-path Vertex Reconstruction Algorithm for SNO+}{20}{section.4.3}}
+\@writefile{toc}{\contentsline {paragraph}{Fitter Structure}{22}{section*.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces PMT response time as the timing pdf.}}{23}{figure.4.1}}
+\newlabel{MPW_timingPDF}{{4.1}{23}{PMT response time as the timing pdf}{figure.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT angular distribution as the angular response pdf.}}{23}{figure.4.2}}
+\newlabel{MPW_angularPDF}{{4.2}{23}{PMT angular distribution as the angular response pdf}{figure.4.2}{}}
 \@writefile{toc}{\contentsline {paragraph}{MPW: Position and Direction Reconstructions}{24}{section*.9}}
-\@writefile{toc}{\contentsline {paragraph}{Drive Correction}{25}{section*.10}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Likelihood Calculation}{26}{section.4.4}}
-\citation{gregory2005bayesian}
+\@writefile{toc}{\contentsline {paragraph}{Drive Correction}{26}{section*.10}}
 \citation{boulay}
 \citation{boulay}
-\citation{boulay}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Likelihood Calculation}{27}{section.4.4}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}\isotope [16]{N} test}{27}{section.4.5}}
+\citation{boulay}
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Position resolution parameters for the MP Water Fitter.}}{28}{table.4.1}}
 \newlabel{table_posresol}{{4.1}{28}{Position resolution parameters for the MP Water Fitter}{table.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{28}{section.4.6}}
 \newlabel{fig:1a}{{4.3(a)}{29}{Subfigure 4 4.3(a)}{subfigure.4.3.1}{}}
 \newlabel{sub@fig:1a}{{(a)}{29}{Subfigure 4 4.3(a)\relax }{subfigure.4.3.1}{}}
 \newlabel{fig:1b}{{4.3(b)}{29}{Subfigure 4 4.3(b)}{subfigure.4.3.2}{}}
@@ -145,6 +149,7 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Y-Z plane.}}}{29}{figure.4.3}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {X-Z plane.}}}{29}{figure.4.3}}
 \newlabel{likelihoodSurface}{{4.3}{29}{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex}{figure.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Vertex Reconstruction for the SNO+ Partial-phase}{29}{section.4.6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{30}{figure.4.4}}
 \newlabel{logLxyz}{{4.4}{30}{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes}{figure.4.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{31}{figure.4.5}}
@@ -153,55 +158,72 @@
 \citation{coulter2013modelling}
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces  scintillator $\alpha /\beta $ timing parameters\ref  {tanner,lattore measurement}.}}{33}{table.4.2}}
 \newlabel{scint_timing}{{4.2}{33}{scintillator $\alpha /\beta $ timing parameters\ref {tanner,lattore measurement}}{table.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}PMT Selectors}{34}{section.4.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{34}{section.4.8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{34}{subsection.4.8.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{34}{subsection.4.8.2}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{35}{chapter.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}PMT Selectors for the Fitter}{34}{section.4.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Group the PMTs by dividing the PMT sphere by latitudes and longitudes.}}{34}{figure.4.6}}
+\newlabel{GroupPMTs}{{4.6}{34}{Group the PMTs by dividing the PMT sphere by latitudes and longitudes}{figure.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration}{35}{section.4.8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{35}{subsection.4.8.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{35}{subsection.4.8.2}}
+\citation{skyshine}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Partial-filled Scintillator Phase}{36}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{38}{chapter.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.1}Sky-shine Classifier}{36}{subsection.5.0.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{40}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix Name}{39}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Some Details for the MultiPath Fitter Code}{41}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Create a Random Vertex}{41}{section.A.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization}{41}{section.A.2}}
+\citation{gregory2005bayesian}
 \citation{*}
 \bibstyle{abbrv}
 \bibdata{thesis}
-\bibcite{muonflux}{1}
-\bibcite{ratManual}{2}
-\bibcite{agostini2019probing}{3}
-\bibcite{alduino2018first}{4}
-\bibcite{anderson2019search}{5}
-\bibcite{anderson2019measurement}{6}
-\bibcite{biller2020slow}{7}
-\bibcite{birks1965theory}{8}
-\@writefile{toc}{\contentsline {chapter}{Bibliographie}{40}{appendix*.11}}
-\bibcite{boulay2004direct}{9}
-\bibcite{coulter2013modelling}{10}
-\bibcite{denton2019eigenvalues}{11}
-\bibcite{dunger2018topological}{12}
-\bibcite{esteban2019global}{13}
-\bibcite{fukugita2013physics}{14}
-\bibcite{giaz2018status}{15}
-\bibcite{gregory2005bayesian}{16}
-\bibcite{tanner0p5}{17}
-\bibcite{tanner2018PMT}{18}
-\bibcite{kimura2002exact}{19}
-\bibcite{knoll2010radiation}{20}
-\bibcite{landau2013electrodynamics}{21}
-\bibcite{mekarski2018electron}{22}
-\bibcite{moffat2001optical}{23}
-\bibcite{Paton:2019kgy}{24}
-\bibcite{piperno2015dark}{25}
-\bibcite{press2007numerical}{26}
-\bibcite{smirnov2005msw}{27}
-\bibcite{smirnov2016solar}{28}
-\bibcite{pdg2018}{29}
-\bibcite{joshW1}{30}
-\bibcite{weinheimer2006neutrino}{31}
-\bibcite{xing2011neutrinos}{32}
-\bibcite{xing2015preliminary}{33}
-\bibcite{zaglauer1988mixing}{34}
-\bibcite{zuber1998physics}{35}
+\bibcite{kalpanaMPFitter}{1}
+\bibcite{muonflux}{2}
+\bibcite{ratManual}{3}
+\bibcite{agostinelli2003geant4}{4}
+\bibcite{agostini2019probing}{5}
+\bibcite{alduino2018first}{6}
+\bibcite{anderson2019search}{7}
+\bibcite{anderson2019measurement}{8}
+\@writefile{toc}{\contentsline {chapter}{Bibliographie}{43}{appendix*.11}}
+\bibcite{davidPartialWater}{9}
+\bibcite{biller2020slow}{10}
+\bibcite{birks1965theory}{11}
+\bibcite{boulay2004direct}{12}
+\bibcite{brunroot}{13}
+\bibcite{coulter2013modelling}{14}
+\bibcite{denton2019eigenvalues}{15}
+\bibcite{dunger2018topological}{16}
+\bibcite{esteban2019global}{17}
+\bibcite{fukugita2013physics}{18}
+\bibcite{giaz2018status}{19}
+\bibcite{gregory2005bayesian}{20}
+\bibcite{partialWater}{21}
+\bibcite{horton2006introduction}{22}
+\bibcite{jieMPW}{23}
+\bibcite{tanner0p5}{24}
+\bibcite{tanner2018PMT}{25}
+\bibcite{kimura2002exact}{26}
+\bibcite{knoll2010radiation}{27}
+\bibcite{landau2013electrodynamics}{28}
+\bibcite{mekarski2018electron}{29}
+\bibcite{moffat2001optical}{30}
+\bibcite{Paton:2019kgy}{31}
+\bibcite{piperno2015dark}{32}
+\bibcite{press2007numerical}{33}
+\bibcite{kalpanaWLS}{34}
+\bibcite{kalpanaWLS2}{35}
+\bibcite{smirnov2005msw}{36}
+\bibcite{smirnov2016solar}{37}
+\bibcite{pdg2018}{38}
+\bibcite{skyshine}{39}
+\bibcite{joshW1}{40}
+\bibcite{weinheimer2006neutrino}{41}
+\bibcite{xing2011neutrinos}{42}
+\bibcite{xing2015preliminary}{43}
+\bibcite{zaglauer1988mixing}{44}
+\bibcite{zuber1998physics}{45}

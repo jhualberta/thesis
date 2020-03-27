@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.18)  16 MAR 2020 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.18)  27 MAR 2020 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -883,7 +883,7 @@ Overfull \hbox (16.05937pt too wide) in paragraph at lines 205--207
  (BD), with N,N-dimethyldodecylamine
  []
 
-<jablonski.png, id=414, 770.88pt x 708.6475pt>
+<jablonski.png, id=431, 770.88pt x 708.6475pt>
 File: jablonski.png Graphic file (type png)
 <use jablonski.png>
 Package pdftex.def Info: jablonski.png  used on input line 218.
@@ -891,168 +891,188 @@ Package pdftex.def Info: jablonski.png  used on input line 218.
 [16 <./jablonski.png>] [17] [18]) [19]
 Chapitre 4.
 (./recon.tex
-Overfull \hbox (5.80139pt too wide) in paragraph at lines 12--12
+Overfull \hbox (5.80139pt too wide) in paragraph at lines 16--16
 []\OT1/cmr/bx/n/14.4 Reconstruction Al-go-rithms for Po-si-tion, Time and Energ
 y
  []
 
-
-Overfull \hbox (19.58627pt too wide) in paragraph at lines 15--15
-[]\OT1/cmr/bx/n/14.4 An Al-ter-na-tive Ver-tex Re-cons-truc-tion Al-go-rithm fo
-r SNO+ 
- []
-
 [20
 
-]
+] [21]
 
-LaTeX Warning: Reference `mpwdiagram' on page 21 undefined on input line 42.
+LaTeX Warning: Reference `mpwdiagram' on page 22 undefined on input line 63.
 
-[21] [22] [23] [24]
+[22] [23] [24]
 Missing character: There is no „ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no Ä in font cmr10!
  [25] [26]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 186.
+(hyperref)                removing `\isotope' on input line 195.
 
 
-LaTeX Warning: Reference `hsx' on page 27 undefined on input line 190.
-
-
-LaTeX Warning: Citation `boulay' on page 27 undefined on input line 190.
+LaTeX Warning: Reference `hsx' on page 27 undefined on input line 199.
 
 
 LaTeX Warning: Citation `boulay' on page 27 undefined on input line 199.
 
 
-Overfull \hbox (26.3525pt too wide) in paragraph at lines 199--200
+LaTeX Warning: Citation `boulay' on page 27 undefined on input line 208.
+
+
+Overfull \hbox (26.3525pt too wide) in paragraph at lines 208--209
 []\OT1/cmr/m/n/10.95 A po-si-tion re-so-lu-tion func-tion is de-fi-ned for the 
 re-cons-truc-ted elec-tron po-si-tion distribution[[]] : 
  []
 
-
-LaTeX Warning: Citation `boulay' on page 27 undefined on input line 206.
-
 [27]
 
-LaTeX Warning: Reference `posresol' on page 28 undefined on input line 222.
+LaTeX Warning: Citation `boulay' on page 28 undefined on input line 215.
 
-<surf3_likelihoodXY.pdf, id=486, 569.12625pt x 438.63875pt>
+
+LaTeX Warning: Reference `posresol' on page 28 undefined on input line 231.
+
+<surf3_likelihoodXY.pdf, id=513, 569.12625pt x 438.63875pt>
 File: surf3_likelihoodXY.pdf Graphic file (type pdf)
 <use surf3_likelihoodXY.pdf>
-Package pdftex.def Info: surf3_likelihoodXY.pdf  used on input line 256.
+Package pdftex.def Info: surf3_likelihoodXY.pdf  used on input line 265.
 (pdftex.def)             Requested size: 213.39566pt x 164.46904pt.
-<surf3_likelihoodYZ.pdf, id=487, 569.12625pt x 440.64626pt>
+<surf3_likelihoodYZ.pdf, id=514, 569.12625pt x 440.64626pt>
 File: surf3_likelihoodYZ.pdf Graphic file (type pdf)
 <use surf3_likelihoodYZ.pdf>
-Package pdftex.def Info: surf3_likelihoodYZ.pdf  used on input line 257.
+Package pdftex.def Info: surf3_likelihoodYZ.pdf  used on input line 266.
 (pdftex.def)             Requested size: 213.39566pt x 165.22176pt.
-<surf3_likelihoodXZ.pdf, id=488, 569.12625pt x 438.63875pt>
+<surf3_likelihoodXZ.pdf, id=515, 569.12625pt x 438.63875pt>
 File: surf3_likelihoodXZ.pdf Graphic file (type pdf)
 <use surf3_likelihoodXZ.pdf>
-Package pdftex.def Info: surf3_likelihoodXZ.pdf  used on input line 258.
+Package pdftex.def Info: surf3_likelihoodXZ.pdf  used on input line 267.
 (pdftex.def)             Requested size: 213.39566pt x 164.46904pt.
-<logL_xyzt.pdf, id=489, 569.12625pt x 337.26pt>
+[28]
+<logL_xyzt.pdf, id=521, 569.12625pt x 337.26pt>
 File: logL_xyzt.pdf Graphic file (type pdf)
 <use logL_xyzt.pdf>
-Package pdftex.def Info: logL_xyzt.pdf  used on input line 266.
+Package pdftex.def Info: logL_xyzt.pdf  used on input line 275.
 (pdftex.def)             Requested size: 455.24408pt x 269.78778pt.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 266--267
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
-<derivativeLogL_xyzt.pdf, id=490, 569.12625pt x 337.26pt>
+<derivativeLogL_xyzt.pdf, id=522, 569.12625pt x 337.26pt>
 File: derivativeLogL_xyzt.pdf Graphic file (type pdf)
 <use derivativeLogL_xyzt.pdf>
-Package pdftex.def Info: derivativeLogL_xyzt.pdf  used on input line 273.
+Package pdftex.def Info: derivativeLogL_xyzt.pdf  used on input line 282.
 (pdftex.def)             Requested size: 455.24408pt x 269.78778pt.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 273--274
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
-[28] [29 <./surf3_likelihoodXY.pdf, page is rotated 90 degrees> <./surf3_likeli
-hoodYZ.pdf, page is rotated 90 degrees> <./surf3_likelihoodXZ.pdf, page is rota
-ted 90 degrees>] [30 <./logL_xyzt.pdf, page is rotated 90 degrees>] [31 <./deri
-vativeLogL_xyzt.pdf, page is rotated 90 degrees>]
+[29 <./surf3_likelihoodXY.pdf, page is rotated 90 degrees> <./surf3_likelihoodY
+Z.pdf, page is rotated 90 degrees> <./surf3_likelihoodXZ.pdf, page is rotated 9
+0 degrees>] [30 <./logL_xyzt.pdf, page is rotated 90 degrees>] [31 <./derivativ
+eLogL_xyzt.pdf, page is rotated 90 degrees>]
 
 LaTeX Warning: Reference `tanner,lattore measurement' on page 32 undefined on i
-nput line 367.
+nput line 376.
 
 
-Overfull \hbox (35.85046pt too wide) in paragraph at lines 375--399
+Overfull \hbox (35.85046pt too wide) in paragraph at lines 384--408
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--399
+Underfull \hbox (badness 10000) in paragraph at lines 384--408
 
  []
 
-
-Overfull \hbox (11.25912pt too wide) in paragraph at lines 420--422
+[32]
+Overfull \hbox (11.25912pt too wide) in paragraph at lines 429--431
 []\OT1/cmr/m/n/10.95 Appendix : Levenberg-Marquardt me-thod for fit-ter mi-ni-m
 i-za-tion (ref : press2007numerical) 
  []
 
-[32] [33]
+[33]
+<GroupPMTs.png, id=767, 491.8375pt x 362.35374pt>
+File: GroupPMTs.png Graphic file (type png)
+<use GroupPMTs.png>
+Package pdftex.def Info: GroupPMTs.png  used on input line 490.
+(pdftex.def)             Requested size: 142.26378pt x 104.80896pt.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 487.
+(hyperref)                removing `\isotope' on input line 516.
 
-) [34]
+[34 <./GroupPMTs.png>]) [35]
 Chapitre 5.
 (./analysis.tex
-Overfull \hbox (42.93959pt too wide) in paragraph at lines 14--52
-[] 
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 6.
+
+[36
+
+]
+Overfull \hbox (59.93959pt too wide) in paragraph at lines 78--79
+[][] 
  []
 
-[35
-
-] [36]) [37]
+[37] [38]) [39]
 Chapitre 6.
-[38
+[40
 
 ]
 Annexe A.
-[39
+(./appendix1.tex
+Overfull \hbox (32.71162pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/10.95 trial po-si-tion can be built in Car-te-sian co-or-di-nate s
+ys-tem : $[] = (\OML/cmm/m/it/10.95 r [] ^^R [] ^^^; r [] ^^R [] ^^^; r [] ^^R\
+OT1/cmr/m/n/10.95 )$.
+ []
+
+[41
 
 
-] (./JieHuThesis.bbl
-Underfull \hbox (badness 1097) in paragraph at lines 9--12
+]) [42] (./JieHuThesis.bbl
+Underfull \hbox (badness 1097) in paragraph at lines 13--16
 []\OT1/cmr/m/n/10.95 Overview - rat 1.0 do-cu-men-ta-tion.  []$\OT1/cmtt/m/n/10
 .95 https : / / rat . readthedocs . io / en / latest /
  []
 
-[40
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+[43
 
 
 ]
-Underfull \hbox (badness 1571) in paragraph at lines 88--91
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+
+Underfull \hbox (badness 1571) in paragraph at lines 110--113
 []\OT1/cmr/m/n/10.95 A. Giaz.  Sta-tus and pers-pec-tives of the juno ex-pe-rim
 ent.  \OT1/cmr/m/it/10.95 arXiv pre-print
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
+[44]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-[41]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [42] [43])
+ [45] [46])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
  (./JieHuThesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
 Package rerunfilecheck Info: File `JieHuThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2D19A853327C78DE9F029D0E29A0F4B1;3040.
+(rerunfilecheck)             Checksum: 1E1F246F81C8A83F5C5E705DDE1556E4;3321.
 
 
 LaTeX Warning: There were undefined references.
@@ -1060,36 +1080,37 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
  ) 
 Here is how much of TeX's memory you used:
- 19023 strings out of 492982
- 355299 string characters out of 6134896
- 434300 words of memory out of 5000000
- 22075 multiletter control sequences out of 15000+600000
+ 19062 strings out of 492982
+ 355874 string characters out of 6134896
+ 435772 words of memory out of 5000000
+ 22093 multiletter control sequences out of 15000+600000
  13236 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,56p,1462b,622s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,56p,1462b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Paton\\penalty\040\\@M\040\040:2019kgy} has 
 been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on JieHuThesis.pdf (52 pages, 1120324 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on JieHuThesis.pdf (55 pages, 1196330 bytes).
 PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 683 compressed objects within 7 object streams
- 159 named destinations out of 1000 (max. 500000)
- 395 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 950 PDF objects out of 1000 (max. 8388607)
+ 733 compressed objects within 8 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
