@@ -1,0 +1,36 @@
+\section{Create a Random Vertex}
+
+Four random seeds are generated from the uniform distribution function: $RandFlat$ in Class Library for High Energy Physics (CLHEP) library.
+
+One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]~ns$, say, $t\sim U(100,300)$.
+
+Three random seeds are used for generating the position of the trial vertex: $ran0\sim U(0,1)$, $ran1\sim U(-1,1)$ and $ran2Pi\sim U(0,2\pi)$. 
+
+Let $r=\sqrt[3]{ran0}*10000~mm$, $\phi=ran2Pi$, $\cos\theta=ran1$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
+
+\section{Levenberg-Marquardt (MRQ) Method for Minimization}
+
+
+Levenberg-Marquardt method is a 
+
+$f({\bf{x}})=f({\bf{P}})+\sum_i\frac{\partial f}{\partial x_i}\cdot x_i+\frac{1}{2}\sum_{i,j}\frac{\partial^2f}{\partial x_i\partial x_j}\cdot x_ix_j+...$
+
+ $c\equiv f({\bf{P}}), b\equiv -\nabla f|_{\bf{P}}, [A]_{ij}\equiv \frac{\partial^2f}{\partial x_i\partial x_j}|_{\bf{P}}$, 
+
+
+$f(x)=c-b\cdot x+\frac{1}{2}x\cdot A\cdot x$
+
+
+$\chi^2({\bf a})\simeq \gamma-{\bf d\cdot a}+\frac{1}{2}{\bf a\cdot D\cdot a}$
+
+
+
+Taylor series expansion:
+\[
+\chi^2(\theta)\approx\chi^2(\theta_{current})+\sum_k\frac{\partial \chi^2(\theta_{current})}{\partial \theta_k}\delta\theta_k+\frac{1}{2}\sum_{\alpha\beta}\frac{\partial^2\chi^2(\theta_{current})}{\partial\theta_\alpha\theta_\beta}\delta\theta_\alpha\delta\theta_\beta
+\]
+
+where \[
+\kappa_{\alpha\beta}\equiv \frac{1}{2} \frac{\partial^2\chi^2(\theta_{current})}{\partial\theta_\alpha\theta_\beta}
+\]
+is defined as the curvature matrix\cite{gregory2005bayesian}.
