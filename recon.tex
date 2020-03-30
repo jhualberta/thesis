@@ -3,14 +3,10 @@
 %\setlength\epigraphrule{0pt}
 %\epigraphfontsize{\small\itshape}
 %\epigraph{If all mathematics disappeared today, physics would be set back exactly one week.}{---\textup{Richard Feynman}}
-
-
 %\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
-
 \section{Reconstruction of the SNO+}
 
 event vertex
-
 
 
 \section{Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}
@@ -37,7 +33,7 @@ t_{res}=t_{PMT} - t_{transit} - t_{event},
 \]
 where $t_{PMT}$ is the PMT triggered time recorded by the detector, $t_{event}$ is the time when an event occurs, and $t_{transit}$ is the total transit time (or time of flight) taken by a photon travelling from the event position ($\vec{x}_{event}$) to the triggered PMT ($\vec{x}_{PMT}$) and crossing different materials in the detector.
 
-To calculate the $t_{transit}$, the fitter uses photons from prompt time window (prompt light) and assumes that photons propagate in straight lines (straight light paths). Here it is simple: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. Detailed calculations, such as the refraction and reflection when the lights cross different detector materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel, are neglected. We found that without these details, the fitter can still produce results consistent with the ones using detailed calculations. 
+To calculate the $t_{transit}$, the fitter uses photons from prompt time window (prompt light) and assumes that photons propagate in straight lines (straight light paths). Here it is simple: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. Detailed calculations, such as the refraction and reflection when the lights cross different detector materials, absorptions and scatterings from the materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel, are neglected. We found that without these details, the fitter can still produce results consistent with the ones using detailed calculations. 
 For a trial vertex $(\vec{x}_0,t_0)$, the fitter calculates a set of $t_{res}$ values with respect to all the triggered PMTs. These values are fed into a likelihood function: 
 \[
 \ln\mathcal{L}(\vec{x}_0,t_0)=\sum_{i=1}^{{\mathrm{Nhits}}}\ln P(t^i_{res}),

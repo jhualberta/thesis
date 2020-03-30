@@ -8,29 +8,93 @@ Three random seeds are used for generating the position of the trial vertex: $ra
 
 Let $r=\sqrt[3]{ran0}*10000~mm$, $\phi=ran2Pi$, $\cos\theta=ran1$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
 
-\section{Levenberg-Marquardt (MRQ) Method for Minimization}
+\section{Levenberg-Marquardt (MRQ) Method for Minimization\cite{press2007numerical}}
+
+Levenberg-Marquardt method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, a $\chi^2$ merit function with the unknown parameter vector $\bf a$ can be built and by minimizing the function, the best-fit $\bf a$ can be found.
+
+The $\chi^2(\bf a)$ can be approximately expanded into a quadratic form of Taylor-series:
+\begin{equation} \label{eq:1}
+\chi^2({\bf a})\simeq \gamma-{\bf d\cdot a}+\frac{1}{2}{\bf a\cdot D\cdot a},
+\end{equation}
+where $\gamma$ is a $M$-dimension constant vector around $\bf a$, $\bf d$ is a $M$-dimension vector and $\bf D$ is a $M\times M$ Hessian matrix.
+
+To find a ${\bf a}_{min}$ so that a $\min\chi^2({\bf a}_{min})$ is reached, in computing science we usually use iteration steps: 
+\begin{equation} \label{eq:2}{\bf a}_{min}={\bf a}_{cur}+D^{-1}[-\nabla\chi^2({\bf a}_{cur})],\end{equation} 
+where ${\bf a}_{cur}$ is the current trial value of $\bf a$ and we assume matrix $\bf D$ is invertible. The ${\bf a}_{cur}$ thus jumps onto ${\bf a}_{min}$. 
+
+According to the definition of a $\chi^2$ merit function, it can be written out explicitly as:
+$\chi^2({\bf a})=\sum_{i=0}^{N-1}[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}]^2$, with the same Taylor expansion, the quadratic form is written as:
+\begin{equation}\label{eq:3}
+\chi^2({\bf a})\approx\chi^2({\bf a}_{cur})+\sum_k\frac{\partial \chi^2({\bf a}_{cur})}{\partial \alpha_k}\delta\alpha_k+\frac{1}{2}\sum_{kl}\frac{\partial^2\chi^2({\bf a}_{cur})}{\partial\alpha_k\partial\alpha_l}\delta\alpha_k\delta\alpha_l, 
+\end{equation}
+where the first derivatives are:
+\begin{equation}\label{eq:4}
+\frac{\partial \chi^2}{\partial a_k}=-2\sum_{i=0}^{N-1}[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}]\frac{\partial y(x_i|{\bf a})}{\partial a_k}, k = 0,1,...,M-1,
+\end{equation}
+and the second derivatives are:
+\begin{equation}\label{eq:5}
+\frac{\partial^2 \chi^2}{\partial a_k\partial a_l}=2\sum_{i=0}^{N-1}\{\frac{\partial y(x_i|{\bf a})}{\partial a_k}\frac{\partial y(x_i|{\bf a})}{\partial a_l}-[y_i-y(x_i|a)]\frac{\partial^2 y(x_i|{\bf a})}{\partial a_k\partial a_l}\}, k = 0, 1, ..., M-1.
+\end{equation}
+
+Let $\beta_k\equiv-\frac{1}{2}\frac{\partial\chi^2}{\partial a_k}, \alpha_{kl}\equiv \frac{1}{2}\frac{\partial^2\chi^2}{\partial a_k\partial a_l}$, then the factor of 2 is removed. The $\alpha_{kl}$ is defined as the curvature matrix and ${\bf \alpha}=\frac{1}{2}{\bf D}$, which implies that it is the half of the Hessian matrix.
+
+From \ref{eq:2}, we have: $D({\bf a}_{min}-{\bf a}_{cur}) = [-\nabla\chi^2({\bf a}_{cur})]\implies 2{\bf\alpha\delta a}= 2{\bf\beta}$. The \ref{eq:2} is now transformed into a systems of linear equations:
+\begin{equation}\label{eq:6}
+\sum_{l=0}^{M-1}\alpha_{kl}\delta a_l = \beta_k,
+\end{equation} where $\delta a_l$ is 
+a varying amount added to the current value of parameter for the next iteration. 
+
+The main task now is to calculate $\alpha_{kl}$ and $\beta_k$ and then solve for $\delta a_l$ in \ref{eq:6}. Once $\delta a_l$ is solved, we can vary the current trial or approximate values of ${\bf a}_{cur}$ and let it go close to or reach the ${\bf a}_{min}$.
+
+If we consider the method of steepest descent: ${\bf a}_{next}={\bf a}_{cur}-\mathrm{const}\cdot\nabla\chi^2({\bf a}_{cur})$, where $\mathrm{const}$ is a constant, then the $\delta a_l$ is solved by \begin{equation}\label{eq:7}
+\delta a_l=\mathrm{const}\cdot \beta_l, 
+\end{equation}
+where no Hessian matrix is needed.
+
+In the Levenberg-Marquardt method, in order to solve for $\delta a_l$, the detailed calculation of ${\bf D}^{-1}$ in \ref{eq:2} and the simplified calculation of steepest descent in \ref{eq:7} are combined and a smooth transition between \ref{eq:2} and \ref{eq:7} is considered.
+
+In \ref{eq:7}, the $\mathrm{const}$ describes the distance or magnitude of how far the parameter should go along the gradient $\beta_l$. From dimensional analysis, since $\beta_k\equiv-\frac{1}{2}\frac{\partial\chi^2}{\partial a_k}$ and $\chi^2$ is a non-dimensional number, $[\beta_l]=[1/a_l]$. Then from \ref{eq:7}, $[\mathrm{const}]=[a^2_l]$. The $\mathrm{const}$ has the same dimension to the term $1/\alpha_{ll}= 1/(\frac{1}{2}\frac{\partial^2\chi^2}{\partial a_l\partial a_l})$, i.e., the diagonal elements in the curvature matrix. A bridge between \ref{eq:2} and \ref{eq:7} is thus built. The diagonal elements in the curvature matrix can control the magnitude of the $\mathrm{const}$, tells how far the parameter should go along the gradient. 
+
+Then \ref{eq:7} can be written as:
+\begin{equation}\label{eq:8}
+\delta a_l = \frac{1}{\lambda \alpha_{ll}}\beta_l~or~\lambda \alpha_{ll}\delta a_l = \beta_l, 
+\end{equation} 
+where $\alpha_{ll}$ is written in a form of $\alpha_{ll}=\sum_{i=0}^{N-1}\frac{1}{\sigma^2_i}[\frac{\partial y(x_i|{\bf a})}{\partial a_l} \frac{\partial y(x_i|{\bf a})}{\partial a_l}]$ to ensure that $\alpha_{ll}$ is always positive; a fudge factor $\lambda$ can be set to $\lambda \gg 1$ to avoid the case when the value of $\mathrm{const}$ is taken too large.
+
+Compare \ref{eq:6} and \ref{eq:8}, if define a new curvature matrix, $\alpha'$ as the followings, these two equations can be combined: 
+\begin{equation}\label{eq:9}
+\alpha'=\left\{
+\begin{aligned}
+\alpha'_{jj}\equiv \alpha_{jj}(1+\lambda) [for diagonal elements]\\
+\alpha'_{jk}\equiv \alpha_{jk}~~~(j\neq k) [for non-diagonal elements]\\
+\end{aligned}
+\right.
+\end{equation} 
 
 
-Levenberg-Marquardt method is a 
-
-$f({\bf{x}})=f({\bf{P}})+\sum_i\frac{\partial f}{\partial x_i}\cdot x_i+\frac{1}{2}\sum_{i,j}\frac{\partial^2f}{\partial x_i\partial x_j}\cdot x_ix_j+...$
-
- $c\equiv f({\bf{P}}), b\equiv -\nabla f|_{\bf{P}}, [A]_{ij}\equiv \frac{\partial^2f}{\partial x_i\partial x_j}|_{\bf{P}}$, 
-
-
-$f(x)=c-b\cdot x+\frac{1}{2}x\cdot A\cdot x$
-
-
-$\chi^2({\bf a})\simeq \gamma-{\bf d\cdot a}+\frac{1}{2}{\bf a\cdot D\cdot a}$
-
-
-
-Taylor series expansion:
-\[
-\chi^2(\theta)\approx\chi^2(\theta_{current})+\sum_k\frac{\partial \chi^2(\theta_{current})}{\partial \theta_k}\delta\theta_k+\frac{1}{2}\sum_{\alpha\beta}\frac{\partial^2\chi^2(\theta_{current})}{\partial\theta_\alpha\theta_\beta}\delta\theta_\alpha\delta\theta_\beta
-\]
-
-where \[
-\kappa_{\alpha\beta}\equiv \frac{1}{2} \frac{\partial^2\chi^2(\theta_{current})}{\partial\theta_\alpha\theta_\beta}
-\]
-is defined as the curvature matrix\cite{gregory2005bayesian}.
+%
+%得到$\sum_{l=0}^{M-1}\alpha'_{kl}\delta a_l = \beta_k$    ==(15.5.14)==
+%
+%当$\lambda$取大值时，矩阵$\alpha'$被强制为以对角元为主导，从而==(15.5.14)==接近（15.5.12）
+%
+%当$\lambda\to0$时，==(15.5.14)==接近==(15.5.9)==。
+%
+%在对一组拟合参数$\bf a$给出一个合理的初始猜测后，Levenberg-Marquardt方法的流程如下:
+%
+%1. 计算$\chi^2(a)$
+%2. 选择一个合理的$\lambda$值（如$\lambda$ = 0.001）
+%3. 计算(15.5.14)的线性方程组,得到$\delta a$,计算$\chi^2(a+\delta a)
+%4. 判断$\chi^2({\bf a+\delta a})\geq\chi^2({\bf a})$?
+%如果是, 增加$\lambda$:   $\lambda=10\cdot\lambda$, 返回步骤3
+%如果否, 减小$\lambda$:   $\lambda=0.1\cdot\lambda$, 更新${\bf a}$:  ${\bf a}\leftarrow {\bf a}+\delta {\bf a}$, 返回步骤3
+%
+%在此处，没有必要将迭代终止的条件设为精度收敛（达到计算机的精度或者四舍五入的限制），因为通过最小化$\chi^2$所得到的最佳值，只是对参数${\bf a} $的统计估计（而不是用计算方法求得方程的解之类）。通过变化参数来将$\chi^2$增加或减小一个$\ll 1$的量，这没有统计意义（见15.6）。
+%
+%另外，参数曲面的形状可能会比较崎岖，比如最小值处在一个平坦的峡谷中，这样“下坡”寻找最小值可能会总是在最小值附近徘徊而到达不了最小值。在最小值近简并(near-degeneracy)的情况（指存在多个值接近最小值）也会存在问题。0值枢轴量(zero pivot)也有很小的可能会造成寻找最小值完全失败（outright failure)。一个较小的枢轴量会对参数产生一个较大的修正，然后被算法拒绝，$\lambda$的值随之增大。对于一个充分大的$\lambda$，曲度矩阵$\bf \alpha'$为正定阵（positive-definite)，从而不含有小的枢轴量。因此Levenberg-Marquardt方法可以回避0值枢轴量的问题，但代价是对一组不陡峭的简并值形成的山谷，做最陡下降，然后在其中徘徊。
+%
+%因此，Levenberg-Marquardt方法的迭代终止条件设为，当$\chi^2$减小的量可以忽略不计（比如改变量的绝对值小于0.001），在重复了几个相似的值后便终止迭代。此处不要在$\chi^2$增加了一个不能忽略的量后终止迭代，因为此时$\lambda$还没有调整到最佳值。
+%
+%在找到了可以接受的最小值后，设置$\lambda=0$， 然后计算$C\equiv {\bf \alpha^{-1}}$。此为对拟合参数$\bf \alpha$的标准差所估计的协方差矩阵。
+%
+%
+%

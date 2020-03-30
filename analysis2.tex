@@ -1,43 +1,7 @@
+\section{Partial-fill Phase Analysis}
 
 
-During the August to October 2019, the PPO is added into the LAB when the water level at 5100 mm (in PSUP coordinate). This is for the SNO+ partial-fill phase.
-
-
-\subsection{Sky-shine Classifier}
-A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
-
-
-
- 
-
-
-The SkyShine classifier aims to discriminate "sky shine" events from other backgrounds by looking at the ratio of hit counts in a middle z range and a low z range. It can also look at neck and high-z OWL PMT hits. The classifier's behavior for partial fill is studied using simulation.
-
-\cite{skyshine}
-
-
-
-
-
-
-
-
-$\beta_{14}$ isotropy classifier
-\[
-\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
-\]
-
-where $P_l(\cos\theta_{ij})$ are Legendre polynomials
-
-$\beta_{14}=\beta_1+4\beta_4$
-
-
-thetaij isotropy classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
-
-\[
-\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
-\]
-
+\subsection{Bi-Po Analysis}
 
 
 \begin{tikzpicture}[node distance=2cm]
@@ -77,18 +41,17 @@ thetaij isotropy classifier describes the angle subtended at an event vertex by 
 \draw [arrow] ([xshift=1.5cm] pro4.north)|-(pro3.east);
 \end{tikzpicture} 
 
-
-
-
+\subsection{Extract Cherenkov Signals in Partial-Phase}
+\subsubsection{$\isotope[16]{N}$ Source Analysis}
 
 $\phi=\hat{\vec{v}}_e\cdot\hat{\vec{v}}_{assume}$
 
 $\vec{n}=\hat{\vec{v}}_e\times\hat{\vec{v}}_{assume}$
 \[
 R=\begin{bmatrix}
-	n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
-	n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
-	n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
+n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
+n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
+n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
 \end{bmatrix}
 \]
 $\vec{v'}_e=R\vec{v}_e$
@@ -103,3 +66,8 @@ Breit-Wigner function
 \[
 p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
 \]
+
+\subsubsection{$AmBe$ Source Analysis}
+
+
+\section{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}

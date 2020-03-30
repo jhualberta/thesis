@@ -13,7 +13,7 @@
 \usetikzlibrary{shapes.geometric, arrows}
 
 \usepackage{multirow}
-\usepackage[frenchb]{babel}
+%\usepackage[frenchb]{babel}
 \makeatletter
 \newlength\epitextskip
 \pretocmd{\@epitext}{\em}{}{}
@@ -53,17 +53,18 @@
 \input detector.tex
 \chapter{Event Reconstruction}
 \input recon.tex
-\chapter{Partial-filled Scintillator Phase}
-\input analysis.tex
-
-
+\chapter{SNO+ Water Phase Analysis}
+\input waterAnaly.tex
+\chapter{Towards the SNO+ Future Phases}
+\input analysis2.tex
 \chapter{Conclusions}
+\input conclusion.tex
 
 
 \appendix
 
 \cleardoublepage
-\chapter{Some Details for the MultiPath Fitter Code}
+\chapter{Details for the MultiPath Fitter}
 	\input appendix1.tex
 	
 	\cleardoublepage
