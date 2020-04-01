@@ -40,32 +40,30 @@ For a trial vertex $(\vec{x}_0,t_0)$, the fitter calculates a set of $t_{res}$ v
 \]
 where $t^i_{res}$ is the time residual calculated from the $i^{th}$ triggered PMT and $\mathrm{Nhits}$ here stands for the number of total triggered PMTs by an event.
 
-A pre-set 1 dimension (1D) probability density function (PDF) comes from the timing profile measurement and the measured detector response.
+A pre-set 1-dimensional (1D) probability density function (PDF) is used for fitting the model. The pdf was taken from the bench-top timing profile measurement as well as the measured detector response.
 
 $P(t^i_{res})$ is the probability returned from the PDF for the $i^{th}$ triggered PMT and a trial event
 vertex.
 
-The Levenberg-Marquardt method, which is commonly used for fitting the nonlinear model for multiple parameters, is used here as an optimizer 
-
-
-used to find the event position and time which maximises the log likelihood when
-comparing the time residuals to the scintillation time PDF:
-
-
+The Levenberg-Marquardt method, which is commonly used for fitting the nonlinear model for multiple parameters, is used as an optimizer to find the best fit event parameters (position, time and direction). Appendix A.2 describes this method; A.3 describes the implementation of the method to the MultiPath fitter framework. Also see \cite{gregory2005bayesian, press2007numerical}.
 
 
 As we will see in the following sections, one of the biggest jobs for the fitter is to calculate the $t_{transit}$ by evaluating light paths. In the water phase, we consider photons created in an event travelling along straight line paths and the paths are always in water. In the other situations, for example, when the acrylic vessel is filled with the wavelength shifter or scintillator, the light path calculations will be modified.   
 
-
-
-
-
-Then it utilizes the   to maximize the likelihood functions and find the best-fit values.
-
-
-
 Figure.~\ref{mpwdiagram} shows the reconstruction concepts for position and direction.
-
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=5cm]{mpwDiagram.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=5cm]{mpwDiagram2.png}
+	\end{minipage}
+	\caption{Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}
+	\label{mpwdiagram}
+\end{figure}
 
 
 \paragraph{Fitter Structure}
@@ -186,7 +184,96 @@ By fitting the simulations of 5 MeV electrons generated at the detector center a
 
 
 
+In the partial fill geometry, photons will travel with different speeds as they pass through two different mediums, water and scintillator. Assuming a straight light path, the MP Partial Fitter mainly calculates the total length of the light path ($|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$) and separates it into the lengths in scintillator ($d_{sp}$) and in water ($|\vec{l}_p|-d_{sp}$).
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=7cm]{scintpath.png}
+	\caption{Light path calculation for the MP Partial Fitter.}
+	\label{scintpath}
+\end{figure}
+
+As illustrated in Figure~\ref{scintpath}, a detailed calculation of $d_{sp}$ includes evaluations of (1) light path and neck (line-cylinder) intersection; (2) light path and AV sphere (line-sphere) intersection and (3) light path and water-scintillator interface (line-plane) intersection. $d_{sp}$ is further separated into the path length in neck ($d_{sp,neck}$) and in AV ($d_{sp,AV}$).
+
+Then the time of flight is obtained by:
+\begin{equation}
+tof = \frac{|\vec{l}_p|-d_{sp}}{v_{gr,water}} +\frac{d_{sp}}{v_{gr,scint}},
+\end{equation}
+The time residual is $t_{res} = t_\mathrm{PMT}-tof-t_0$.
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=7cm]{scintpdf.pdf}
+	\caption{The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}
+	\label{partialpdf}
+\end{figure}
+
+If $d_{sp}=0$, the light path is always in the water. In this case, the fitter is the same as the MP Water Fitter. The fitter fits with the MP Water Fitter pdf. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing pdf, the PMT time response modified to photon propagation time in scintillator, as shown in Figure~\ref{partialpdf}.
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[scintillator region]{
+		\begin{minipage}[t]{0.38\textwidth}
+			\includegraphics[width=6cm]{partial_top_x.pdf}
+		\end{minipage}
+	}   
+\subfigure[water region]{ 
+		\begin{minipage}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6cm]{partial_bot_x.pdf}
+		\end{minipage}
+	}
+	\subfigure[whole region]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=6cm]{partial_full_x.pdf}
+		\end{minipage}
+	}
+	\caption{Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}
+	\label{partial_fit_x}
+	\subfigure[scintillator region]{ 
+		\begin{minipage}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=5.8cm]{partial_top_r.pdf}
+		\end{minipage}
+	}
+	\subfigure[water region]{ 
+		\begin{minipage}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=5.8cm]{partial_bot_r.pdf}
+		\end{minipage}
+	}
+	\subfigure[whole region]{ 
+		\begin{minipage}[b]{0.35\textwidth}
+			\centering
+			\includegraphics[width=5.8cm]{partial_full_r.pdf}
+		\end{minipage}
+	}
+	\caption{Fit results: $\rho_{fit}=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}
+	\label{partial_fit_rz}
+\end{figure}
+
+The performance of the fitter was studied with MC simulations. In a partial fill geometry with water level at 4.4 m, 2.5 MeV electrons are simulated inside the AV in the scintillator region only, the water region only and the whole AV region.
+
+Figure~\ref{partial_fit_x} and Figure~\ref{partial_fit_rz} show the MP Partial Fitter reconstructed results for these simulations. Figure~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
+
+\begin{table}[ht]
+	\centering
+	\caption{Reconstructed position biases and resolutions for simulated events in partial fill.}
+	\label{partiaResol}
+	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}ccc}
+		\hline
+		regions of simulated events& bias (mm) &  resolution (mm) \\
+		\hline
+		scintillator region & -1.0  & 73.9\\
+		water region & -10.7 & 385.1\\
+		full region &6.9 & 331.72\\
+		\hline
+	\end{tabular*}
+\end{table}
+For the events in water, the fit bias and resolution is comparable to the water phase results in Table~\ref{table_posresol}. The events in the scintillator region have smaller fit bias and better resolution due to more triggered PMTs in the reconstruction.
+
+Figure~\ref{partial_fit_rz} shows the fit $\sqrt{x^2+y^2}$ vs. fit $z$ positions. It shows that the fitter can distinguish different events in the water or scintillator region. The fitter gives reasonable results of the three different MC simulations. 
 
 
 
@@ -434,84 +521,36 @@ Appendix: Levenberg-Marquardt method for fitter minimization
 
 for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
 
-the $\chi^2$ function can be expanded and well approximated as
-\[
-\chi^2(\textbf{a})\simeq \gamma - \textbf{d}\cdot\textbf{a}+\frac{1}{2}\textbf{a}\cdot \textbf{D}\cdot \textbf{a},
-\]
-
-
-
-$\textbf{a}_{min} = \textbf{a}_{cur}+\textbf{D}^{-1}\cdot[-\nabla \chi^2(\textbf{a}_{cur})]$
-
-for a fudge factor $\lambda$, 
-
-\[
-\delta a_l = \frac{1}{\lambda \alpha_{ll}}\beta_l~(\alpha_{ll}>0),
-\]
-
-\[
-\sum_{l=0}^{M-1} \alpha_{kl}'\delta a_l = \beta_k
-\]
-
-Let $\alpha\equiv\frac{1}{2}\textbf{D}$, which is the half Hessian, or called as curvature matrix.
-
-$\beta_k = -\frac{1}{2}\frac{\partial\chi^2}{\partial a_k},~\alpha_{kl}=\frac{1}{2}\frac{\partial^2 \chi^2}{\partial a_k\partial a_l}$
-
-by optimizations, the values of tolerance, are set to .
-
-
 
 \section{PMT Selectors for the Fitter}
-
+Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the selected PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
 
 \begin{itemize}
-\item[$\bullet$] Straight Light Path TimeResidual Cut
+\item[$\bullet$] Straight Light Path Time Residual Cut Selector
 
-This selector is used for the direction reconstruction for the water phase.
+This selector is used for the direction reconstruction for the SNO+ water phase. In the selector, the value of time residual ($t_{res}$) is calculated for each triggered PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
 
+\item[$\bullet$] Mode Cut Selector
 
-
-\item[$\bullet$] Mode cut
-
-
+This selector checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}-50, t_{mode}+100]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection\cite{modeCut}.
 
 \item[$\bullet$] Uniform PMT Selector
 
-Group PMTs by their positions. For azimuth angle $\Phi$ in $[-\pi, \pi]$,
-take $n$ intervals; for zenith $\cos\theta$ in $[-1,1]$, also take $n$ intervals.
-This procedure divides the PMT sphere longitude and latitude.
-
-Then group PMTs in $n\times n$ panels.
-
-
-Pick up the PMTs uniformly and
-
-reduce the number of PMTs to a designated number to boost up the fit speed.
-
-	\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=5cm]{GroupPMTs.png}
-	\caption{Group the PMTs by dividing the PMT sphere by latitudes and longitudes.}
-	\label{GroupPMTs}
-\end{figure}
-
+This selector is mainly designed for the partial-fill phase and the scintillator phase when an event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
 
 \item[$\bullet$] Earliest Hit PMT Selector
 
-in prompt light time window
-For each panel, select PMTs with hitTime>100 ns and then
-choose the earliest hit one. We can also set the other hit time
-window for the selected PMT in each panel.
-A similar selector which uses median hitTime for each panel has
-also been tested, but not as good as the earliest hit one.
+Similar to the uniform PMT selector, this selector reduces the number of the triggered PMTs to boost up the fit speed. It first groups the PMTs by their positions in the PMT support sphere. Take the centre of the sphere as coordinate origin, the sphere is divided by the azimuth angle $\phi$ (as longitude) and zenith angle $\theta$ (as latitude). In the sphere, the positions of the PMTs in $\phi$, ranging in $[-\pi,\pi]$, is uniformly divided into $n$ intervals while the positions of the PMTs in $\cos\theta$, ranging in $[-1, 1]$, is also divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels, see Fig.~\ref{GroupPMTs}. 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5cm]{GroupPMTs.png}
+	\caption{Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}
+	\label{GroupPMTs}
+\end{figure}
 
+For each panel, the selector first drops the PMTs triggered too early ($t_\mathrm{PMT}<100~ns$, where $100~ns$ is set as a default threshold). These PMTs could be triggered by noises, such as pre-pulsing. In the rest of the PMTs, the selector picks up one PMT with the earliest $t_\mathrm{PMT}$ in each panel. Thus the number of the PMTs is reduced to $n\times n$ for the fitter, i.e., $n_{select}=n\times n$. If $N\leq n_{select}$, the selector does nothing. 
 
-
-water phase
-fit speed for vertex reconstruction: ~0.0017 s/call
-fit speed for direction reconstruction: ~0.0004 s/call
-
-
+We can also use the other timing parameter, such as the $t_{mode}$ or the $t_{median}$ for selecting the PMT in each panel. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
 
 \end{itemize}
 

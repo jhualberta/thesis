@@ -48,4 +48,5 @@
 \BOOKMARK [0][-]{appendix.A}{Details for the MultiPath Fitter}{}% 48
 \BOOKMARK [1][-]{section.A.1}{Create a Random Vertex}{appendix.A}% 49
 \BOOKMARK [1][-]{section.A.2}{Levenberg-Marquardt \(MRQ\) Method for Minimizationpress2007numerical}{appendix.A}% 50
-\BOOKMARK [0][-]{appendix*.13}{References}{}% 51
+\BOOKMARK [1][-]{section.A.3}{Implement the MRQ Method for SNO+ Physics Phases}{appendix.A}% 51
+\BOOKMARK [0][-]{appendix*.13}{References}{}% 52

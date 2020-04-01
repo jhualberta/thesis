@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.18)  30 MAR 2020 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.18)  1 APR 2020 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,20 +610,20 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 (./JieHuThesis.aux)
 \openout1 = `JieHuThesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -656,7 +656,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -666,9 +666,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count150
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
 
 (./JieHuThesis.out) (./JieHuThesis.out)
 \@outlinefile=\write4
@@ -678,13 +678,13 @@ LaTeX Info: Redefining \nameref on input line 33.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
  [2
 
 ] (./abstract.tex)
@@ -713,7 +713,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 ] (./JieHuThesis.lot
 
 LaTeX Warning: Reference `tanner,lattore measurement' on page ix undefined on i
-nput line 7.
+nput line 8.
 
 )
 \tf@lot=\write7
@@ -728,7 +728,7 @@ Chapter 1.
 page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.50 \chapter
+l.51 \chapter
              {Neutrino physics} [1
 
 
@@ -740,64 +740,64 @@ Chapter 2.
 page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 \end{equation}
+l.35 \end{equation}
                     [2
 
 ] [3]
 
-LaTeX Warning: Citation `wiki_cp' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `wiki_cp' on page 4 undefined on input line 128.
 
 
-LaTeX Warning: Citation `kamland_measure' on page 4 undefined on input line 151
+LaTeX Warning: Citation `kamland_measure' on page 4 undefined on input line 149
 .
 
 [4]
 
-LaTeX Warning: Citation `superk_new' on page 5 undefined on input line 153.
+LaTeX Warning: Citation `superk_new' on page 5 undefined on input line 151.
 
 
-LaTeX Warning: Citation `dayabayresults' on page 5 undefined on input line 155.
+LaTeX Warning: Citation `dayabayresults' on page 5 undefined on input line 153.
 
 
 
-LaTeX Warning: Citation `reactorNu' on page 5 undefined on input line 155.
+LaTeX Warning: Citation `reactorNu' on page 5 undefined on input line 153.
 
 
-LaTeX Warning: Citation `xing' on page 5 undefined on input line 157.
+LaTeX Warning: Citation `xing' on page 5 undefined on input line 155.
 
 
-LaTeX Warning: Citation `t2k' on page 5 undefined on input line 157.
+LaTeX Warning: Citation `t2k' on page 5 undefined on input line 155.
 
 [5]
 
-LaTeX Warning: Citation `martin' on page 6 undefined on input line 253.
+LaTeX Warning: Citation `martin' on page 6 undefined on input line 251.
 
 [6]
 
-LaTeX Warning: Citation `majorana' on page 7 undefined on input line 255.
+LaTeX Warning: Citation `majorana' on page 7 undefined on input line 253.
 
 
-LaTeX Warning: Reference `feynman1' on page 7 undefined on input line 255.
+LaTeX Warning: Reference `feynman1' on page 7 undefined on input line 253.
 
 
-LaTeX Warning: Citation `kaizuber' on page 7 undefined on input line 273.
+LaTeX Warning: Citation `kaizuber' on page 7 undefined on input line 271.
 
 [7]
 
-LaTeX Warning: Citation `gerda' on page 8 undefined on input line 334.
+LaTeX Warning: Citation `gerda' on page 8 undefined on input line 332.
 
 [8]
 
-LaTeX Warning: Citation `exo' on page 9 undefined on input line 339.
+LaTeX Warning: Citation `exo' on page 9 undefined on input line 337.
 
 
-LaTeX Warning: Citation `nEXO' on page 9 undefined on input line 339.
+LaTeX Warning: Citation `nEXO' on page 9 undefined on input line 337.
 
 
-LaTeX Warning: Citation `kamlandZen' on page 9 undefined on input line 347.
+LaTeX Warning: Citation `kamlandZen' on page 9 undefined on input line 345.
 
 
-Overfull \hbox (1.82141pt too wide) in paragraph at lines 355--356
+Overfull \hbox (1.82141pt too wide) in paragraph at lines 353--354
 []\OT1/cmr/m/n/10.95 The Cryo-genic Un-der-ground Ob-ser-va-tory for Rare Event
 s (CUORE) ex-per-i-ment searches
  []
@@ -826,7 +826,7 @@ Overfull \hbox (6.90395pt too wide) in paragraph at lines 205--207
 D), with N,N-dimethyldodecylamine
  []
 
-<jablonski.png, id=453, 770.88pt x 708.6475pt>
+<jablonski.png, id=473, 770.88pt x 708.6475pt>
 File: jablonski.png Graphic file (type png)
 <use jablonski.png>
 Package pdftex.def Info: jablonski.png  used on input line 218.
@@ -836,136 +836,216 @@ Chapter 4.
 (./recon.tex [20
 
 ] [21]
-
-LaTeX Warning: Reference `mpwdiagram' on page 22 undefined on input line 67.
-
-[22] [23] [24] [25]
+<mpwDiagram.png, id=525, 415.5525pt x 417.56pt>
+File: mpwDiagram.png Graphic file (type png)
+<use mpwDiagram.png>
+Package pdftex.def Info: mpwDiagram.png  used on input line 58.
+(pdftex.def)             Requested size: 142.26378pt x 142.9497pt.
+<mpwDiagram2.png, id=526, 420.57124pt x 419.5675pt>
+File: mpwDiagram2.png Graphic file (type png)
+<use mpwDiagram2.png>
+Package pdftex.def Info: mpwDiagram2.png  used on input line 62.
+(pdftex.def)             Requested size: 142.26378pt x 141.92122pt.
+ [22] [23 <./mpwDiagram.png> <./mpwDiagram2.png>]
+[24] [25]
 Missing character: There is no ã in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no € in font cmr10!
- [26]
+ [26] [27]
+<scintpath.png, id=558, 422.17725pt x 495.65175pt>
+File: scintpath.png Graphic file (type png)
+<use scintpath.png>
+Package pdftex.def Info: scintpath.png  used on input line 191.
+(pdftex.def)             Requested size: 199.16928pt x 233.83366pt.
+<scintpdf.pdf, id=560, 569.12625pt x 405.515pt>
+File: scintpdf.pdf Graphic file (type pdf)
+<use scintpdf.pdf>
+Package pdftex.def Info: scintpdf.pdf  used on input line 206.
+(pdftex.def)             Requested size: 199.16928pt x 141.9138pt.
+ [28 <./scintpath.png>]
+<partial_top_x.pdf, id=569, 569.12625pt x 407.5225pt>
+File: partial_top_x.pdf Graphic file (type pdf)
+<use partial_top_x.pdf>
+Package pdftex.def Info: partial_top_x.pdf  used on input line 219.
+(pdftex.def)             Requested size: 170.71652pt x 122.23903pt.
+
+Overfull \hbox (5.93881pt too wide) in paragraph at lines 219--219
+[][] 
+ []
+
+<partial_bot_x.pdf, id=570, 569.12625pt x 407.5225pt>
+File: partial_bot_x.pdf Graphic file (type pdf)
+<use partial_bot_x.pdf>
+Package pdftex.def Info: partial_bot_x.pdf  used on input line 225.
+(pdftex.def)             Requested size: 170.71652pt x 122.23903pt.
+
+Overfull \hbox (5.93881pt too wide) in paragraph at lines 225--225
+ [][] 
+ []
+
+<partial_full_x.pdf, id=571, 569.12625pt x 407.5225pt>
+File: partial_full_x.pdf Graphic file (type pdf)
+<use partial_full_x.pdf>
+Package pdftex.def Info: partial_full_x.pdf  used on input line 231.
+(pdftex.def)             Requested size: 170.71652pt x 122.23903pt.
+
+Overfull \hbox (31.95496pt too wide) in paragraph at lines 231--231
+ [][] 
+ []
+
+<partial_top_r.pdf, id=572, 569.12625pt x 407.5225pt>
+File: partial_top_r.pdf Graphic file (type pdf)
+<use partial_top_r.pdf>
+Package pdftex.def Info: partial_top_r.pdf  used on input line 239.
+(pdftex.def)             Requested size: 165.02606pt x 118.16606pt.
+<partial_bot_r.pdf, id=573, 569.12625pt x 407.5225pt>
+File: partial_bot_r.pdf Graphic file (type pdf)
+<use partial_bot_r.pdf>
+Package pdftex.def Info: partial_bot_r.pdf  used on input line 245.
+(pdftex.def)             Requested size: 165.02606pt x 118.16606pt.
+<partial_full_r.pdf, id=574, 569.12625pt x 407.5225pt>
+File: partial_full_r.pdf Graphic file (type pdf)
+<use partial_full_r.pdf>
+Package pdftex.def Info: partial_full_r.pdf  used on input line 251.
+(pdftex.def)             Requested size: 165.02606pt x 118.16606pt.
+
+Overfull \hbox (13.25642pt too wide) in paragraph at lines 251--251
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 26.61534pt on input line 254.
+
+[29 <./scintpdf.pdf, page is rotated 90 degrees>] [30 <./partial_top_x.pdf, pag
+e is rotated 90 degrees> <./partial_bot_x.pdf, page is rotated 90 degrees> <./p
+artial_full_x.pdf, page is rotated 90 degrees> <./partial_top_r.pdf, page is ro
+tated 90 degrees> <./partial_bot_r.pdf, page is rotated 90 degrees> <./partial_
+full_r.pdf, page is rotated 90 degrees>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 198.
+(hyperref)                removing `\isotope' on input line 285.
 
 
-LaTeX Warning: Reference `hsx' on page 27 undefined on input line 202.
+LaTeX Warning: Reference `hsx' on page 31 undefined on input line 289.
 
 
-LaTeX Warning: Citation `boulay' on page 27 undefined on input line 202.
+LaTeX Warning: Citation `boulay' on page 31 undefined on input line 289.
 
 
-LaTeX Warning: Citation `boulay' on page 27 undefined on input line 211.
+LaTeX Warning: Citation `boulay' on page 31 undefined on input line 298.
 
 
-Overfull \hbox (23.91916pt too wide) in paragraph at lines 211--212
+Overfull \hbox (23.91916pt too wide) in paragraph at lines 298--299
 []\OT1/cmr/m/n/10.95 A po-si-tion res-o-lu-tion func-tion is de-fined for the r
 e-con-structed elec-tron po-si-tion distribution[[]]: 
  []
 
-[27]
 
-LaTeX Warning: Citation `boulay' on page 28 undefined on input line 218.
+LaTeX Warning: Citation `boulay' on page 31 undefined on input line 305.
 
+[31]
 
-LaTeX Warning: Reference `posresol' on page 28 undefined on input line 234.
+LaTeX Warning: Reference `posresol' on page 32 undefined on input line 321.
 
-<surf3_likelihoodXY.pdf, id=534, 569.12625pt x 438.63875pt>
+<surf3_likelihoodXY.pdf, id=905, 569.12625pt x 438.63875pt>
 File: surf3_likelihoodXY.pdf Graphic file (type pdf)
 <use surf3_likelihoodXY.pdf>
-Package pdftex.def Info: surf3_likelihoodXY.pdf  used on input line 268.
+Package pdftex.def Info: surf3_likelihoodXY.pdf  used on input line 355.
 (pdftex.def)             Requested size: 213.39566pt x 164.46904pt.
-<surf3_likelihoodYZ.pdf, id=535, 569.12625pt x 440.64626pt>
+<surf3_likelihoodYZ.pdf, id=906, 569.12625pt x 440.64626pt>
 File: surf3_likelihoodYZ.pdf Graphic file (type pdf)
 <use surf3_likelihoodYZ.pdf>
-Package pdftex.def Info: surf3_likelihoodYZ.pdf  used on input line 269.
+Package pdftex.def Info: surf3_likelihoodYZ.pdf  used on input line 356.
 (pdftex.def)             Requested size: 213.39566pt x 165.22176pt.
-<surf3_likelihoodXZ.pdf, id=536, 569.12625pt x 438.63875pt>
+<surf3_likelihoodXZ.pdf, id=907, 569.12625pt x 438.63875pt>
 File: surf3_likelihoodXZ.pdf Graphic file (type pdf)
 <use surf3_likelihoodXZ.pdf>
-Package pdftex.def Info: surf3_likelihoodXZ.pdf  used on input line 270.
+Package pdftex.def Info: surf3_likelihoodXZ.pdf  used on input line 357.
 (pdftex.def)             Requested size: 213.39566pt x 164.46904pt.
-[28]
-<logL_xyzt.pdf, id=542, 569.12625pt x 337.26pt>
+<logL_xyzt.pdf, id=908, 569.12625pt x 337.26pt>
 File: logL_xyzt.pdf Graphic file (type pdf)
 <use logL_xyzt.pdf>
-Package pdftex.def Info: logL_xyzt.pdf  used on input line 278.
+Package pdftex.def Info: logL_xyzt.pdf  used on input line 365.
 (pdftex.def)             Requested size: 455.24408pt x 269.78778pt.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 278--279
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
-<derivativeLogL_xyzt.pdf, id=543, 569.12625pt x 337.26pt>
+<derivativeLogL_xyzt.pdf, id=909, 569.12625pt x 337.26pt>
 File: derivativeLogL_xyzt.pdf Graphic file (type pdf)
 <use derivativeLogL_xyzt.pdf>
-Package pdftex.def Info: derivativeLogL_xyzt.pdf  used on input line 285.
+Package pdftex.def Info: derivativeLogL_xyzt.pdf  used on input line 372.
 (pdftex.def)             Requested size: 455.24408pt x 269.78778pt.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 285--286
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
-[29] [30 <./surf3_likelihoodXY.pdf, page is rotated 90 degrees> <./surf3_likeli
+[32] [33 <./surf3_likelihoodXY.pdf, page is rotated 90 degrees> <./surf3_likeli
 hoodYZ.pdf, page is rotated 90 degrees> <./surf3_likelihoodXZ.pdf, page is rota
-ted 90 degrees>] [31 <./logL_xyzt.pdf, page is rotated 90 degrees>] [32 <./deri
+ted 90 degrees>] [34 <./logL_xyzt.pdf, page is rotated 90 degrees>] [35 <./deri
 vativeLogL_xyzt.pdf, page is rotated 90 degrees>]
 
-LaTeX Warning: Reference `tanner,lattore measurement' on page 33 undefined on i
-nput line 379.
+LaTeX Warning: Reference `tanner,lattore measurement' on page 36 undefined on i
+nput line 466.
 
 
-Overfull \hbox (35.85046pt too wide) in paragraph at lines 387--411
+Overfull \hbox (35.85046pt too wide) in paragraph at lines 474--498
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--411
+Underfull \hbox (badness 10000) in paragraph at lines 474--498
 
  []
 
 
-Overfull \hbox (10.03516pt too wide) in paragraph at lines 432--434
+Overfull \hbox (10.03516pt too wide) in paragraph at lines 519--521
 []\OT1/cmr/m/n/10.95 Appendix: Levenberg-Marquardt method for fit-ter min-i-miz
 a-tion (ref: press2007numerical) 
  []
 
-[33]
-<GroupPMTs.png, id=788, 491.8375pt x 362.35374pt>
+[36]
+Missing character: There is no ã in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no € in font cmr10!
+ [37]
+<GroupPMTs.png, id=1160, 491.8375pt x 362.35374pt>
 File: GroupPMTs.png Graphic file (type png)
 <use GroupPMTs.png>
-Package pdftex.def Info: GroupPMTs.png  used on input line 493.
+Package pdftex.def Info: GroupPMTs.png  used on input line 546.
 (pdftex.def)             Requested size: 142.26378pt x 104.80896pt.
- [34]
+ [38 <./GroupPMTs.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 519.
+(hyperref)                removing `\isotope' on input line 558.
 
-[35 <./GroupPMTs.png>]) [36]
+) [39]
 Chapter 5.
 (./waterAnaly.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-[37
+[40
 
-]) [38]
+]) [41]
 Chapter 6.
 (./analysis2.tex
 Overfull \hbox (42.93959pt too wide) in paragraph at lines 42--43
 [] 
  []
 
-[39
+[42
 
 ]
 Overfull \vbox (248.52658pt too high) has occurred while \output is active []
 
 
-[40]) [41]
+[43]) [44]
 Chapter 7.
-(./conclusion.tex) [42
+(./conclusion.tex) [45
 
 ]
 Appendix A.
@@ -986,16 +1066,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 11.
 
 
-Overfull \hbox (34.0971pt too wide) in paragraph at lines 13--14
+Overfull \hbox (34.0971pt too wide) in paragraph at lines 13--15
 \OT1/cmr/m/n/10.95 Levenberg-Marquardt method is a com-mon rou-tine for non-lin
 ear fit-ting. Let $[] = [\OML/cmm/m/it/10.95 a[]; a[]; :::; a[]\OT1/cmr/m/n/10.
 95 ][]$
  []
 
-[43
+[46
 
 
-] [44]) [45] (./JieHuThesis.bbl
+] [47] [48]) [49] (./JieHuThesis.bbl
 Underfull \hbox (badness 1097) in paragraph at lines 13--16
 []\OT1/cmr/m/n/10.95 Overview - rat 1.0 doc-u-men-ta-tion.  []$\OT1/cmtt/m/n/10
 .95 https : / / rat . readthedocs . io / en / latest /
@@ -1004,7 +1084,7 @@ Underfull \hbox (badness 1097) in paragraph at lines 13--16
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
-[46
+[50
 
 
 ]
@@ -1017,7 +1097,7 @@ Underfull \hbox (badness 1571) in paragraph at lines 110--113
 ment.  \OT1/cmr/m/it/10.95 arXiv preprint
  []
 
-[47]
+[51]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
 Missing character: There is no â in font cmr10!
@@ -1026,25 +1106,25 @@ Missing character: There is no  in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [48] [49] [50])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
+ [52] [53] [54])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
  (./JieHuThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `JieHuThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9087C97D37895FD99CFF4C26A9BFF355;3652.
+(rerunfilecheck)             Checksum: 7D2A99DAB813C5CDFB60955ED0537457;3748.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 17895 strings out of 492982
- 338616 string characters out of 6134896
- 408512 words of memory out of 5000000
- 20928 multiletter control sequences out of 15000+600000
+ 17971 strings out of 492982
+ 340070 string characters out of 6134896
+ 410184 words of memory out of 5000000
+ 20975 multiletter control sequences out of 15000+600000
  12935 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,56p,1445b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1064,10 +1144,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on JieHuThesis.pdf (59 pages, 1196437 bytes).
+Output written on JieHuThesis.pdf (63 pages, 5126408 bytes).
 PDF statistics:
- 1011 PDF objects out of 1200 (max. 8388607)
- 791 compressed objects within 8 object streams
- 194 named destinations out of 1000 (max. 500000)
- 456 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1391 PDF objects out of 1440 (max. 8388607)
+ 979 compressed objects within 10 object streams
+ 213 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
 

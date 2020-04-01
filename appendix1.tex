@@ -10,7 +10,10 @@ Let $r=\sqrt[3]{ran0}*10000~mm$, $\phi=ran2Pi$, $\cos\theta=ran1$ and $\sin\thet
 
 \section{Levenberg-Marquardt (MRQ) Method for Minimization\cite{press2007numerical}}
 
-Levenberg-Marquardt method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, a $\chi^2$ merit function with the unknown parameter vector $\bf a$ can be built and by minimizing the function, the best-fit $\bf a$ can be found.
+Levenberg-Marquardt method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, 
+for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
+
+A $\chi^2$ merit function with the unknown parameter vector $\bf a$ can be built and by minimizing the function, the best-fit $\bf a$ can be found.
 
 The $\chi^2(\bf a)$ can be approximately expanded into a quadratic form of Taylor-series:
 \begin{equation} \label{eq:1}
@@ -61,40 +64,27 @@ Then \ref{eq:7} can be written as:
 \end{equation} 
 where $\alpha_{ll}$ is written in a form of $\alpha_{ll}=\sum_{i=0}^{N-1}\frac{1}{\sigma^2_i}[\frac{\partial y(x_i|{\bf a})}{\partial a_l} \frac{\partial y(x_i|{\bf a})}{\partial a_l}]$ to ensure that $\alpha_{ll}$ is always positive; a fudge factor $\lambda$ can be set to $\lambda \gg 1$ to avoid the case when the value of $\mathrm{const}$ is taken too large.
 
-Compare \ref{eq:6} and \ref{eq:8}, if define a new curvature matrix, $\alpha'$ as the followings, these two equations can be combined: 
-\begin{equation}\label{eq:9}
-\alpha'=\left\{
-\begin{aligned}
-\alpha'_{jj}\equiv \alpha_{jj}(1+\lambda) [for diagonal elements]\\
-\alpha'_{jk}\equiv \alpha_{jk}~~~(j\neq k) [for non-diagonal elements]\\
-\end{aligned}
-\right.
-\end{equation} 
+Compare \ref{eq:6} and \ref{eq:8}, if define a new curvature matrix $\alpha'$ as $\alpha'_{jj}\equiv (1+\lambda)\alpha_{jj}$ (for diagonal  elements) and $\alpha'_{jk}\equiv \alpha_{jk}~~~(j\neq k)$ (for non-diagonal elements), these two equations can be combined into one: 
+\begin{equation}\label{eq:10}
+\sum_{l=0}^{M-1}\alpha'_{kl}\delta a_l = \beta_k
+\end{equation}
+
+From the definition of $\alpha'$, if $\lambda$ takes a large value, $\alpha'$ is dominated by diagonal elements, then \ref{eq:10} is close to \ref{eq:8}; while if $\lambda\to0$,  \ref{eq:10} is close to \ref{eq:6}.
+
+The algorithm of Levenberg-Marquardt method requires a reasonable start value (first guess) of the fitting parameter $\bf a$ and a reasonable preset value of $\lambda$ (usually take $\lambda$ = 0.001). 
+The iteration loop of the algorithm is: calculate the value of $\chi^2({\bf a})$, solve for $\bf \delta a$ from \ref{eq:10} and then calculate $\chi^2({\bf a+\delta a})$. During this loop, the algorithm checks whether $\chi^2({\bf a+\delta a})\geq\chi^2({\bf a})$, if it is, $\lambda$ is increased by $\lambda=10\cdot\lambda$; if not, $\lambda$ is decreased by $\lambda=0.1\cdot\lambda$.  
+
+The iteration loop is terminated when the change amount of the $\chi^2$ is negligible: if the loop calculates several $\chi^2$ values which are close to each other (for example, $|\chi^2_{curren}-\chi^2_{previous}|<0.001$), the algorithm will consider the $\chi^2$ is minimized with a set of best-fit parameters. Here the termination condition of iterating the $\chi^2$ value to convergence to machine
+accuracy or to the roundoff limit is not used, since $\chi^2$ is a statistical quantity rather than a solution of an equation. It is not statistical meaningful to vary the value of $\bf a$ to vary $\chi^2$ by a small amount $\ll 1$.
+
+Once the minimum is reached, set $\lambda=0$ and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
+
+\section{Implement the MRQ Method for SNO+ Physics Phases}
 
 
-%
-%得到$\sum_{l=0}^{M-1}\alpha'_{kl}\delta a_l = \beta_k$    ==(15.5.14)==
-%
-%当$\lambda$取大值时，矩阵$\alpha'$被强制为以对角元为主导，从而==(15.5.14)==接近（15.5.12）
-%
-%当$\lambda\to0$时，==(15.5.14)==接近==(15.5.9)==。
-%
-%在对一组拟合参数$\bf a$给出一个合理的初始猜测后，Levenberg-Marquardt方法的流程如下:
-%
-%1. 计算$\chi^2(a)$
-%2. 选择一个合理的$\lambda$值（如$\lambda$ = 0.001）
-%3. 计算(15.5.14)的线性方程组,得到$\delta a$,计算$\chi^2(a+\delta a)
-%4. 判断$\chi^2({\bf a+\delta a})\geq\chi^2({\bf a})$?
-%如果是, 增加$\lambda$:   $\lambda=10\cdot\lambda$, 返回步骤3
-%如果否, 减小$\lambda$:   $\lambda=0.1\cdot\lambda$, 更新${\bf a}$:  ${\bf a}\leftarrow {\bf a}+\delta {\bf a}$, 返回步骤3
-%
-%在此处，没有必要将迭代终止的条件设为精度收敛（达到计算机的精度或者四舍五入的限制），因为通过最小化$\chi^2$所得到的最佳值，只是对参数${\bf a} $的统计估计（而不是用计算方法求得方程的解之类）。通过变化参数来将$\chi^2$增加或减小一个$\ll 1$的量，这没有统计意义（见15.6）。
-%
-%另外，参数曲面的形状可能会比较崎岖，比如最小值处在一个平坦的峡谷中，这样“下坡”寻找最小值可能会总是在最小值附近徘徊而到达不了最小值。在最小值近简并(near-degeneracy)的情况（指存在多个值接近最小值）也会存在问题。0值枢轴量(zero pivot)也有很小的可能会造成寻找最小值完全失败（outright failure)。一个较小的枢轴量会对参数产生一个较大的修正，然后被算法拒绝，$\lambda$的值随之增大。对于一个充分大的$\lambda$，曲度矩阵$\bf \alpha'$为正定阵（positive-definite)，从而不含有小的枢轴量。因此Levenberg-Marquardt方法可以回避0值枢轴量的问题，但代价是对一组不陡峭的简并值形成的山谷，做最陡下降，然后在其中徘徊。
-%
-%因此，Levenberg-Marquardt方法的迭代终止条件设为，当$\chi^2$减小的量可以忽略不计（比如改变量的绝对值小于0.001），在重复了几个相似的值后便终止迭代。此处不要在$\chi^2$增加了一个不能忽略的量后终止迭代，因为此时$\lambda$还没有调整到最佳值。
-%
-%在找到了可以接受的最小值后，设置$\lambda=0$， 然后计算$C\equiv {\bf \alpha^{-1}}$。此为对拟合参数$\bf \alpha$的标准差所估计的协方差矩阵。
-%
-%
-%
+
+
+
+
+
+

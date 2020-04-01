@@ -1,6 +1,8 @@
 Whether $m_3>m_2$ (normal hierarchy) or $m_3<m_1$ (inverted hierarchy), that is still an unsolved problem. 
 
-
+water phase
+fit speed for vertex reconstruction: ~0.0017 s/call
+fit speed for direction reconstruction: ~0.0004 s/call
 
 
 
