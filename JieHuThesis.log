@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.18)  1 APR 2020 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.18)  5 APR 2020 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,12 +710,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
  [8
 
 
-] (./JieHuThesis.lot
-
-LaTeX Warning: Reference `tanner,lattore measurement' on page ix undefined on i
-nput line 8.
-
-)
+] (./JieHuThesis.lot)
 \tf@lot=\write7
 \openout7 = `JieHuThesis.lot'.
 
@@ -784,20 +779,20 @@ LaTeX Warning: Citation `kaizuber' on page 7 undefined on input line 271.
 
 [7]
 
-LaTeX Warning: Citation `gerda' on page 8 undefined on input line 332.
+LaTeX Warning: Citation `gerda' on page 8 undefined on input line 337.
 
 [8]
 
-LaTeX Warning: Citation `exo' on page 9 undefined on input line 337.
+LaTeX Warning: Citation `exo' on page 9 undefined on input line 342.
 
 
-LaTeX Warning: Citation `nEXO' on page 9 undefined on input line 337.
+LaTeX Warning: Citation `nEXO' on page 9 undefined on input line 342.
 
 
-LaTeX Warning: Citation `kamlandZen' on page 9 undefined on input line 345.
+LaTeX Warning: Citation `kamlandZen' on page 9 undefined on input line 350.
 
 
-Overfull \hbox (1.82141pt too wide) in paragraph at lines 353--354
+Overfull \hbox (1.82141pt too wide) in paragraph at lines 358--359
 []\OT1/cmr/m/n/10.95 The Cryo-genic Un-der-ground Ob-ser-va-tory for Rare Event
 s (CUORE) ex-per-i-ment searches
  []
@@ -812,240 +807,240 @@ LaTeX Warning: Citation `ndpaper' on page 11 undefined on input line 11.
 
 ]
 
-LaTeX Warning: Citation `whitepaper' on page 12 undefined on input line 27.
-
-
 LaTeX Warning: Citation `borexino' on page 12 undefined on input line 41.
 
 
 LaTeX Warning: Citation `cno' on page 12 undefined on input line 43.
 
-[12] [13] [14] [15]
-Overfull \hbox (6.90395pt too wide) in paragraph at lines 205--207
+[12] [13]
+Overfull \hbox (0.53482pt too wide) in paragraph at lines 85--86
+[]\OT1/cmr/m/n/10.95 For the Cherenkov ra-di-a-tion caused by $\OML/cmm/m/it/10
+.95 e[]$ \OT1/cmr/m/n/10.95 in a wa-ter de-tec-tor, $\OML/cmm/m/it/10.95 dN=dx 
+\OMS/cmsy/m/n/10.95 ' \OT1/cmr/m/n/10.95 207 []\OML/cmm/m/it/10.95 photons=cm$\
+OT1/cmr/m/n/10.95 ;
+ []
+
+[14] [15]
+Overfull \hbox (6.90395pt too wide) in paragraph at lines 216--218
 \OT1/cmr/m/n/10.95 ac-tions be-tween tel-luric acid (TeA) and 1,2-butanediol (B
 D), with N,N-dimethyldodecylamine
  []
 
-<jablonski.png, id=473, 770.88pt x 708.6475pt>
+[16]
+<jablonski.png, id=515, 770.88pt x 708.6475pt>
 File: jablonski.png Graphic file (type png)
 <use jablonski.png>
-Package pdftex.def Info: jablonski.png  used on input line 218.
+Package pdftex.def Info: jablonski.png  used on input line 235.
 (pdftex.def)             Requested size: 284.52756pt x 261.5575pt.
-[16] [17 <./jablonski.png>] [18]) [19]
+ [17 <./jablonski.png>] [18] [19]) [20]
 Chapter 4.
-(./recon.tex [20
+(./recon.tex [21
 
-] [21]
-<mpwDiagram.png, id=525, 415.5525pt x 417.56pt>
+] [22]
+<mpwDiagram.png, id=567, 415.5525pt x 417.56pt>
 File: mpwDiagram.png Graphic file (type png)
 <use mpwDiagram.png>
 Package pdftex.def Info: mpwDiagram.png  used on input line 58.
 (pdftex.def)             Requested size: 142.26378pt x 142.9497pt.
-<mpwDiagram2.png, id=526, 420.57124pt x 419.5675pt>
+<mpwDiagram2.png, id=568, 420.57124pt x 419.5675pt>
 File: mpwDiagram2.png Graphic file (type png)
 <use mpwDiagram2.png>
 Package pdftex.def Info: mpwDiagram2.png  used on input line 62.
 (pdftex.def)             Requested size: 142.26378pt x 141.92122pt.
- [22] [23 <./mpwDiagram.png> <./mpwDiagram2.png>]
-[24] [25]
+ [23] [24 <./mpwDiagram.png> <./mpwDiagram2.png>]
+[25] [26]
 Missing character: There is no ã in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no € in font cmr10!
- [26] [27]
-<scintpath.png, id=558, 422.17725pt x 495.65175pt>
+ [27] [28]
+Overfull \hbox (22.47452pt too wide) in paragraph at lines 206--206
+[]\OT1/cmr/bx/n/14.4 Vertex Re-con-struc-tion for Partial-fill and Scin-til-la-
+tor Phases 
+ []
+
+<scintpath.png, id=604, 422.17725pt x 495.65175pt>
 File: scintpath.png Graphic file (type png)
 <use scintpath.png>
-Package pdftex.def Info: scintpath.png  used on input line 191.
+Package pdftex.def Info: scintpath.png  used on input line 212.
 (pdftex.def)             Requested size: 199.16928pt x 233.83366pt.
-<scintpdf.pdf, id=560, 569.12625pt x 405.515pt>
+<scintpdf.pdf, id=606, 569.12625pt x 405.515pt>
 File: scintpdf.pdf Graphic file (type pdf)
 <use scintpdf.pdf>
-Package pdftex.def Info: scintpdf.pdf  used on input line 206.
+Package pdftex.def Info: scintpdf.pdf  used on input line 227.
 (pdftex.def)             Requested size: 199.16928pt x 141.9138pt.
- [28 <./scintpath.png>]
-<partial_top_x.pdf, id=569, 569.12625pt x 407.5225pt>
+<partial_top_x.pdf, id=608, 569.12625pt x 407.5225pt>
 File: partial_top_x.pdf Graphic file (type pdf)
 <use partial_top_x.pdf>
-Package pdftex.def Info: partial_top_x.pdf  used on input line 219.
+Package pdftex.def Info: partial_top_x.pdf  used on input line 240.
 (pdftex.def)             Requested size: 170.71652pt x 122.23903pt.
 
-Overfull \hbox (5.93881pt too wide) in paragraph at lines 219--219
+Overfull \hbox (5.93881pt too wide) in paragraph at lines 240--240
 [][] 
  []
 
-<partial_bot_x.pdf, id=570, 569.12625pt x 407.5225pt>
+<partial_bot_x.pdf, id=609, 569.12625pt x 407.5225pt>
 File: partial_bot_x.pdf Graphic file (type pdf)
 <use partial_bot_x.pdf>
-Package pdftex.def Info: partial_bot_x.pdf  used on input line 225.
+Package pdftex.def Info: partial_bot_x.pdf  used on input line 246.
 (pdftex.def)             Requested size: 170.71652pt x 122.23903pt.
 
-Overfull \hbox (5.93881pt too wide) in paragraph at lines 225--225
+Overfull \hbox (5.93881pt too wide) in paragraph at lines 246--246
  [][] 
  []
 
-<partial_full_x.pdf, id=571, 569.12625pt x 407.5225pt>
+<partial_full_x.pdf, id=610, 569.12625pt x 407.5225pt>
 File: partial_full_x.pdf Graphic file (type pdf)
 <use partial_full_x.pdf>
-Package pdftex.def Info: partial_full_x.pdf  used on input line 231.
+Package pdftex.def Info: partial_full_x.pdf  used on input line 252.
 (pdftex.def)             Requested size: 170.71652pt x 122.23903pt.
 
-Overfull \hbox (31.95496pt too wide) in paragraph at lines 231--231
+Overfull \hbox (31.95496pt too wide) in paragraph at lines 252--252
  [][] 
  []
 
-<partial_top_r.pdf, id=572, 569.12625pt x 407.5225pt>
+<partial_top_r.pdf, id=611, 569.12625pt x 407.5225pt>
 File: partial_top_r.pdf Graphic file (type pdf)
 <use partial_top_r.pdf>
-Package pdftex.def Info: partial_top_r.pdf  used on input line 239.
+Package pdftex.def Info: partial_top_r.pdf  used on input line 260.
 (pdftex.def)             Requested size: 165.02606pt x 118.16606pt.
-<partial_bot_r.pdf, id=573, 569.12625pt x 407.5225pt>
+<partial_bot_r.pdf, id=612, 569.12625pt x 407.5225pt>
 File: partial_bot_r.pdf Graphic file (type pdf)
 <use partial_bot_r.pdf>
-Package pdftex.def Info: partial_bot_r.pdf  used on input line 245.
+Package pdftex.def Info: partial_bot_r.pdf  used on input line 266.
 (pdftex.def)             Requested size: 165.02606pt x 118.16606pt.
-<partial_full_r.pdf, id=574, 569.12625pt x 407.5225pt>
+<partial_full_r.pdf, id=613, 569.12625pt x 407.5225pt>
 File: partial_full_r.pdf Graphic file (type pdf)
 <use partial_full_r.pdf>
-Package pdftex.def Info: partial_full_r.pdf  used on input line 251.
+Package pdftex.def Info: partial_full_r.pdf  used on input line 272.
 (pdftex.def)             Requested size: 165.02606pt x 118.16606pt.
 
-Overfull \hbox (13.25642pt too wide) in paragraph at lines 251--251
+Overfull \hbox (13.25642pt too wide) in paragraph at lines 272--272
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 26.61534pt on input line 254.
+LaTeX Warning: Float too large for page by 26.61534pt on input line 275.
 
-[29 <./scintpdf.pdf, page is rotated 90 degrees>] [30 <./partial_top_x.pdf, pag
-e is rotated 90 degrees> <./partial_bot_x.pdf, page is rotated 90 degrees> <./p
-artial_full_x.pdf, page is rotated 90 degrees> <./partial_top_r.pdf, page is ro
-tated 90 degrees> <./partial_bot_r.pdf, page is rotated 90 degrees> <./partial_
-full_r.pdf, page is rotated 90 degrees>]
+[29] [30 <./scintpath.png>] [31 <./scintpdf.pdf, page is rotated 90 degrees>]
+[32 <./partial_top_x.pdf, page is rotated 90 degrees> <./partial_bot_x.pdf, pag
+e is rotated 90 degrees> <./partial_full_x.pdf, page is rotated 90 degrees> <./
+partial_top_r.pdf, page is rotated 90 degrees> <./partial_bot_r.pdf, page is ro
+tated 90 degrees> <./partial_full_r.pdf, page is rotated 90 degrees>]
+Overfull \hbox (35.85046pt too wide) in paragraph at lines 389--413
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--413
+
+ []
+
+[33]
+Overfull \hbox (10.03516pt too wide) in paragraph at lines 430--432
+[]\OT1/cmr/m/n/10.95 Appendix: Levenberg-Marquardt method for fit-ter min-i-miz
+a-tion (ref: press2007numerical) 
+ []
+
+[34]
+Missing character: There is no ã in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no € in font cmr10!
+<GroupPMTs.png, id=963, 491.8375pt x 362.35374pt>
+File: GroupPMTs.png Graphic file (type png)
+<use GroupPMTs.png>
+Package pdftex.def Info: GroupPMTs.png  used on input line 457.
+(pdftex.def)             Requested size: 142.26378pt x 104.80896pt.
+ [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 285.
+(hyperref)                removing `\isotope' on input line 467.
 
 
-LaTeX Warning: Reference `hsx' on page 31 undefined on input line 289.
+LaTeX Warning: Reference `hsx' on page 36 undefined on input line 472.
 
 
-LaTeX Warning: Citation `boulay' on page 31 undefined on input line 289.
+LaTeX Warning: Citation `boulay' on page 36 undefined on input line 472.
+
+[36 <./GroupPMTs.png>]
+
+LaTeX Warning: Citation `boulay' on page 37 undefined on input line 481.
 
 
-LaTeX Warning: Citation `boulay' on page 31 undefined on input line 298.
-
-
-Overfull \hbox (23.91916pt too wide) in paragraph at lines 298--299
+Overfull \hbox (23.91916pt too wide) in paragraph at lines 481--482
 []\OT1/cmr/m/n/10.95 A po-si-tion res-o-lu-tion func-tion is de-fined for the r
 e-con-structed elec-tron po-si-tion distribution[[]]: 
  []
 
 
-LaTeX Warning: Citation `boulay' on page 31 undefined on input line 305.
+LaTeX Warning: Citation `boulay' on page 37 undefined on input line 488.
 
-[31]
 
-LaTeX Warning: Reference `posresol' on page 32 undefined on input line 321.
+LaTeX Warning: Reference `posresol' on page 37 undefined on input line 504.
 
-<surf3_likelihoodXY.pdf, id=905, 569.12625pt x 438.63875pt>
+[37]
+<surf3_likelihoodXY.pdf, id=980, 569.12625pt x 438.63875pt>
 File: surf3_likelihoodXY.pdf Graphic file (type pdf)
 <use surf3_likelihoodXY.pdf>
-Package pdftex.def Info: surf3_likelihoodXY.pdf  used on input line 355.
+Package pdftex.def Info: surf3_likelihoodXY.pdf  used on input line 538.
 (pdftex.def)             Requested size: 213.39566pt x 164.46904pt.
-<surf3_likelihoodYZ.pdf, id=906, 569.12625pt x 440.64626pt>
+<surf3_likelihoodYZ.pdf, id=981, 569.12625pt x 440.64626pt>
 File: surf3_likelihoodYZ.pdf Graphic file (type pdf)
 <use surf3_likelihoodYZ.pdf>
-Package pdftex.def Info: surf3_likelihoodYZ.pdf  used on input line 356.
+Package pdftex.def Info: surf3_likelihoodYZ.pdf  used on input line 539.
 (pdftex.def)             Requested size: 213.39566pt x 165.22176pt.
-<surf3_likelihoodXZ.pdf, id=907, 569.12625pt x 438.63875pt>
+<surf3_likelihoodXZ.pdf, id=982, 569.12625pt x 438.63875pt>
 File: surf3_likelihoodXZ.pdf Graphic file (type pdf)
 <use surf3_likelihoodXZ.pdf>
-Package pdftex.def Info: surf3_likelihoodXZ.pdf  used on input line 357.
+Package pdftex.def Info: surf3_likelihoodXZ.pdf  used on input line 540.
 (pdftex.def)             Requested size: 213.39566pt x 164.46904pt.
-<logL_xyzt.pdf, id=908, 569.12625pt x 337.26pt>
+<logL_xyzt.pdf, id=983, 569.12625pt x 337.26pt>
 File: logL_xyzt.pdf Graphic file (type pdf)
 <use logL_xyzt.pdf>
-Package pdftex.def Info: logL_xyzt.pdf  used on input line 365.
+Package pdftex.def Info: logL_xyzt.pdf  used on input line 548.
 (pdftex.def)             Requested size: 455.24408pt x 269.78778pt.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 365--366
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 548--549
  [][] 
  []
 
-<derivativeLogL_xyzt.pdf, id=909, 569.12625pt x 337.26pt>
+<derivativeLogL_xyzt.pdf, id=984, 569.12625pt x 337.26pt>
 File: derivativeLogL_xyzt.pdf Graphic file (type pdf)
 <use derivativeLogL_xyzt.pdf>
-Package pdftex.def Info: derivativeLogL_xyzt.pdf  used on input line 372.
+Package pdftex.def Info: derivativeLogL_xyzt.pdf  used on input line 555.
 (pdftex.def)             Requested size: 455.24408pt x 269.78778pt.
 
-Overfull \hbox (21.62408pt too wide) in paragraph at lines 372--373
+Overfull \hbox (21.62408pt too wide) in paragraph at lines 555--556
  [][] 
  []
 
-[32] [33 <./surf3_likelihoodXY.pdf, page is rotated 90 degrees> <./surf3_likeli
-hoodYZ.pdf, page is rotated 90 degrees> <./surf3_likelihoodXZ.pdf, page is rota
-ted 90 degrees>] [34 <./logL_xyzt.pdf, page is rotated 90 degrees>] [35 <./deri
-vativeLogL_xyzt.pdf, page is rotated 90 degrees>]
-
-LaTeX Warning: Reference `tanner,lattore measurement' on page 36 undefined on i
-nput line 466.
-
-
-Overfull \hbox (35.85046pt too wide) in paragraph at lines 474--498
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--498
-
- []
-
-
-Overfull \hbox (10.03516pt too wide) in paragraph at lines 519--521
-[]\OT1/cmr/m/n/10.95 Appendix: Levenberg-Marquardt method for fit-ter min-i-miz
-a-tion (ref: press2007numerical) 
- []
-
-[36]
-Missing character: There is no ã in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no € in font cmr10!
- [37]
-<GroupPMTs.png, id=1160, 491.8375pt x 362.35374pt>
-File: GroupPMTs.png Graphic file (type png)
-<use GroupPMTs.png>
-Package pdftex.def Info: GroupPMTs.png  used on input line 546.
-(pdftex.def)             Requested size: 142.26378pt x 104.80896pt.
- [38 <./GroupPMTs.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\isotope' on input line 558.
-
-) [39]
+) [38] [39 <./surf3_likelihoodXY.pdf, page is rotated 90 degrees> <./surf3_like
+lihoodYZ.pdf, page is rotated 90 degrees> <./surf3_likelihoodXZ.pdf, page is ro
+tated 90 degrees>] [40 <./logL_xyzt.pdf, page is rotated 90 degrees>] [41 <./de
+rivativeLogL_xyzt.pdf, page is rotated 90 degrees>]
 Chapter 5.
 (./waterAnaly.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-[40
+[42
 
-]) [41]
+]) [43]
 Chapter 6.
 (./analysis2.tex
 Overfull \hbox (42.93959pt too wide) in paragraph at lines 42--43
 [] 
  []
 
-[42
+[44
 
 ]
 Overfull \vbox (248.52658pt too high) has occurred while \output is active []
 
 
-[43]) [44]
+[45]) [46]
 Chapter 7.
-(./conclusion.tex) [45
+(./conclusion.tex) [47
 
 ]
 Appendix A.
@@ -1072,10 +1067,10 @@ ear fit-ting. Let $[] = [\OML/cmm/m/it/10.95 a[]; a[]; :::; a[]\OT1/cmr/m/n/10.
 95 ][]$
  []
 
-[46
+[48
 
 
-] [47] [48]) [49] (./JieHuThesis.bbl
+] [49] [50]) [51] (./JieHuThesis.bbl
 Underfull \hbox (badness 1097) in paragraph at lines 13--16
 []\OT1/cmr/m/n/10.95 Overview - rat 1.0 doc-u-men-ta-tion.  []$\OT1/cmtt/m/n/10
 .95 https : / / rat . readthedocs . io / en / latest /
@@ -1084,36 +1079,32 @@ Underfull \hbox (badness 1097) in paragraph at lines 13--16
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
-[50
+[52
 
 
-]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ” in font cmr10!
-
-Underfull \hbox (badness 1571) in paragraph at lines 110--113
+] [53]
+Underfull \hbox (badness 1571) in paragraph at lines 122--125
 []\OT1/cmr/m/n/10.95 A. Giaz.  Sta-tus and per-spec-tives of the juno ex-per-i-
 ment.  \OT1/cmr/m/it/10.95 arXiv preprint
  []
 
-[51]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 129.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
+[54]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [52] [53] [54])
+ [55] [56])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
  (./JieHuThesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `JieHuThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7D2A99DAB813C5CDFB60955ED0537457;3748.
+(rerunfilecheck)             Checksum: DE544CEF9E59C30C3A93F5CB7C778A5C;4127.
 
 
 LaTeX Warning: There were undefined references.
@@ -1121,10 +1112,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 17971 strings out of 492982
- 340070 string characters out of 6134896
- 410184 words of memory out of 5000000
- 20975 multiletter control sequences out of 15000+600000
+ 17988 strings out of 492982
+ 340370 string characters out of 6134896
+ 410416 words of memory out of 5000000
+ 20982 multiletter control sequences out of 15000+600000
  12935 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,56p,1445b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1144,10 +1135,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on JieHuThesis.pdf (63 pages, 5126408 bytes).
+Output written on JieHuThesis.pdf (65 pages, 5134242 bytes).
 PDF statistics:
- 1391 PDF objects out of 1440 (max. 8388607)
- 979 compressed objects within 10 object streams
- 213 named destinations out of 1000 (max. 500000)
- 514 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1446 PDF objects out of 1728 (max. 8388607)
+ 1031 compressed objects within 11 object streams
+ 223 named destinations out of 1000 (max. 500000)
+ 546 words of extra memory for PDF output out of 10000 (max. 10000000)
 

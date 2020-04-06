@@ -8,7 +8,12 @@
 \subsection{Overview}
 The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada. The deep underground facility of the SNOLAB provides a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (w.e.m). This rock overburden ensures an extremely low rate of cosmic muons passing through the detector. The rate is $0.27~\mu/m^2/day$, compared to an average flux of about $1.44\times 10^6~\mu/m^2/day$ at sea level\cite{muonflux}.
 
-The detector has been running since December 2016\cite{ndpaper},
+
+
+
+
+The detector has been running since December 2016.
+\cite{anderson2019search},
 
 
 The SNO+ detector is the successor of the SNO experiment, which makes use of the SNO detector structure. 
@@ -54,37 +59,74 @@ Higher loading concentrations would be possible for a further loading plan\cite{
 
 
 \subsection{Detection Principle}
-
-\subsubsection{Optical Cherenkov Radiation Detection}
-In the SNO+ water phase, the relay on the .
-
-For any charged particle travelling in a transparent medium at an ultrarelativistic speed (a speed greater than the local phase speed of light in the medium), there is an electromagnetic radiation emitted from the medium under the action of the field of the moving particle\cite{landau2013electrodynamics}.
+In the SNO+ detector, charged particles are expected to interact with the detection medium and create Cherenkov lights and scintillation lights. 
 
 
-\[v>v_p=c/n(\omega)\]   $\cos\theta_c = (1/n\beta)$
+\subsubsection{Cherenkov Radiation}
+For any charged particle travelling in a transparent medium at an ultrarelativistic speed (a speed greater than the local phase speed of light in the medium), an electromagnetic radiation, called Cherenkov radiation, can be emitted from the coherent response of the medium under the action of the field of the moving particle\cite{jackson2007classical,landau2013electrodynamics}.
 
+Suppose a charged particle moves in a transparent, isotropic and non-magnetic medium and creates an electromagnetic wave. The electromagnetic wave propagates with a wave number $k=n\cdot\omega/c$, where $c$ is the speed of light in vacuum, $n$ is the real-valued refractive index and $\omega$ is the frequency. If the particle travels uniformly along x axis with a velocity of $v$, the x-component of the wave vector is $k_x=\omega/v$. For a freely propagating wave, $k>k_x$, therefore $v>v_p=c/n(\omega)$, where $v_p$ is the phase velocity in the medium. Under this condition that the speed of the charged particle is greater than the $v_p$, the Cherenkov radiation is emitted with a frequency of $\omega$\cite{landau2013electrodynamics}.   
 
-where c is the speed of light in vacuum, n is the refraction index of the medium and $v=\beta c$ is the speed of the particle in the medium.
+The Cherenkov angle, $\theta_c$ is the angle between the direction of the particle and the direction of Cherenkov emission and it is well-defined by $\cos\theta_c(\omega) = \frac{c}{n(\omega)v}$. The radiation is distributed over a surface of a cone with the half-opening angle $\theta_c$. 
 
+Consider the condition $v>v_p=c/n(\omega)$, for the case of $e^-$ travelling in a water detector, if neglecting the dependency on $\omega$, $n_{water}\simeq 1.33$ \cite{pdg2018}, then $\theta_c\simeq 41.25^\circ$ and $v_p\simeq 2.254\times10^8~m/s$, which corresponds to a kinetic energy $E_k=(\gamma-1)mc^2=0.264~MeV$ for $e^-$, where $\gamma=1/\sqrt{1-v_p^2/c^2}$. This is the lowest kinetic energy to create Cherenkov radiation, which is referred to the Cherenkov threshold ($E_{thresh}$). In the case that the LAB-PPO liquid scintillator is the medium, $n\simeq 1.50$\cite{tseung2011ellipsometric}, $\theta_c\simeq 48.19^\circ$ and for $e^-$, $E_{thresh}\simeq 0.175~MeV$.   
 
-Frank-Tamm formula
-
-For a particle with a charge of $ze$, the number of photons produced by Cherenkov radiation per unit path lenght and per unit energy interval of the photons is described by :
- 
+For a particle with a charge of $ze$, the number of photons produced by Cherenkov radiation per unit path length and per unit frequency of the photons is given by\cite{leo2012techniques}:
 \[
-\frac{d^2N_r}{dEdx}=\frac{\alpha^2 Z^2}{\hbar c}\mu(E)(1-\frac{1}{\beta^2 n(E)^2})
+\frac{d^2N}{d\omega dx}=\frac{\alpha^2 (ze)^2}{c}\sin^2\theta_c=\frac{z^2\alpha}{c}(1-\frac{1}{\beta^2 n^2(\omega)}),
+\]
+where $\alpha$ is the fine structure constant.
+
+Translate the frequency into the wavelength ($\lambda=2\pi\omega$) and integrate over the wavelength, we have the number of photons and $x$ is along the particle track\cite{leo2012techniques}:
+\[
+\frac{dN}{dx}=2\pi (ze)^2\alpha\sin\theta_c\int_{\lambda_1}^{\lambda_2}\frac{d\lambda}{\lambda^2},
 \]
 
-where $\alpha$ is the fine structure constant
+For optical photons with wavelengths ranging from $350$ to $550~nm$ (typical PMT detection sensitive range), the above formula can be calculate into\cite{leo2012techniques}:
+\[
+\frac{dN}{dx}=476(ze)^2\sin^2\theta_c~photons/cm.
+\]
+
+For the Cherenkov radiation caused by $e^-$ in a water detector, $dN/dx \simeq 207~photons/cm$; while in the LAB-PPO case: $dN/dx \simeq 264~photons/cm$. In a realistic measurement, the detection efficiency and the coverage of photon sensors are also required to be taken into account.
+
+\subsubsection{Scintillation from Organic Liquid Scintillator}
+
+Organic liquid scintillator can convert the kinetic energy of charged particles into scintillation photons with wavelengths in the sensitive detection region of PMTs.  
 
 
+In the liquid scintillator case, besides the Cherenkov radiations caused by an event, the majority of lights come from scintillation process.
 
-For the case of $e^-$ travelling in the water, we can find that 0.262 MeV is the lowest kinetic energy to create Cherenkov radiation, which is called the Cherenkov threshold.
 
-\subsubsection{Scintillation Detection}
 
 prompt emission of scintillation light, which is called fluorescence
 delayed emission of scintillation light, which is called delayed fluorescence or phosphorescence.
+
+\cite{knoll2010radiation}
+
+2 g/L PPO gives an absolute light yield of 11900 photons/MeV.
+
+
+for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
+6190 photons/MeV\cite{tanner0p5,joshW1}.
+
+
+see Fig.~\ref{jablonski}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{jablonski.png}
+	\caption{A Jablonski diagram for the liquid scintillator, modified from \cite{birks1965theory, knoll2010radiation}.}
+	\label{jablonski}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Electronics}
 
@@ -179,7 +221,7 @@ The acrylic of the AV is UV-transparent
 
 
 
-\subsection{Liquid scintillator}
+\subsection{Liquid Scintillator for SNO+}
 
 
 Linear Alkyl Benzene (LAB)
@@ -206,19 +248,6 @@ To load the tellurium into the liquid scintillator, a compound is made by
 condensation reactions between telluric acid (TeA) and 1,2-butanediol (BD), with N,N-dimethyldodecylamine (DDA) being used as a stabilization agent.
 
 
-2 g/L PPO gives an absolute light yield of 11900 photons/MeV.
-
-
-for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
-6190 photons/MeV\cite{tanner0p5,joshW1}.
-
-	
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{jablonski.png}
-	\caption{A Jablonski diagram for the liquid scintillator, modified from \cite{birks1965theory, knoll2010radiation}.}
-	\label{jablonski}
-\end{figure}
 
 
 
@@ -360,7 +389,13 @@ Make it easy to analyze Monte Carlo-generated events as well as data from disk u
 Allow for a modular, user-controlled analysis of events. This includes allowing the user to selected which analysis tasks to perform (different fitters, pruning unneeded data from the event data structure, etc.). It should also be relatively straightforward for users to introduce their own code into the analysis process.
 Separate analysis into small tasks which can be developed asynchronously by different people, yet integrated with minimal (or perhaps zero) pain.
 Integrate into existing GEANT4 and GLG4sim efforts with a minimum of code duplication. As much as possible, RAT should be designed incorporate upgrades of these packages just by relinking. No cut and paste of code (mainly a question with GLG4sim).
-Design\cite{ratManual}
+Design
+
+
+the detailed processes of data acquisition and trigger systems are \cite{whitepaper}.
+
+
+\cite{ratManual}
 
 
 

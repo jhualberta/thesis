@@ -49,6 +49,12 @@ M.~Anderson, S.~Andringa, S.~Asahi, M.~Askins, D.~Auty, N.~Barros, D.~Bartlett,
   low backgrounds.
 \newblock {\em Physical Review D}, 99(1):012012, 2019.
 
+\bibitem{whitepaper}
+S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back, Z.~Barnard,
+  N.~Barros, E.~Beier, A.~Bialek, et~al.
+\newblock Current status and future prospects of the sno+.
+\newblock {\em Advances in High Energy Physics}, 2016, 2016.
+
 \bibitem{davidPartialWater}
 D.~Auty and A.~Hallin.
 \newblock Partial water fitter.
@@ -71,16 +77,22 @@ M.~G. Boulay.
   observatory.
 \newblock 2004.
 
+\bibitem{brice1996monte}
+S.~J. Brice.
+\newblock {\em Monte Carlo and Analysis Techniques for the Sudbury Neutrino
+  Observatory.}
+\newblock PhD thesis, 1996.
+
 \bibitem{brunroot}
 R.~Brun, F.~Rademakers, P.~Canal, et~al.
-\newblock Root—an object oriented data analysis framework, 2007.
+\newblock Root: An object oriented data analysis framework, 2007.
 \newblock {\em See Also http://root. cern. ch}.
 
 \bibitem{coulter2013modelling}
 I.~T. Coulter.
-\newblock {\em Modelling and reconstruction of events in SNO+ related to future
-  searches for lepton and baryon number violation}.
-\newblock PhD thesis, University of Oxford, 2013.
+\newblock {\em Modelling and Reconstruction of Events in SNO+ related to Future
+  Searches for Lepton and Baryon Number Violation.}
+\newblock PhD thesis, Ph. D. thesis, University of Oxford, 2013.
 
 \bibitem{denton2019eigenvalues}
 P.~B. Denton, S.~J. Parke, and X.~Zhang.
@@ -131,6 +143,11 @@ J.~Hu and J.~Tseng.
 \newblock Updates on the multipath water fitter 2018.
 \newblock {\em SNO+ Internal Document, docDB-4936-v2.}
 
+\bibitem{jackson2007classical}
+J.~D. Jackson.
+\newblock {\em Classical Electrodynamics}.
+\newblock John Wiley \& Sons, 2007.
+
 \bibitem{tanner0p5}
 T.~Kaptanoglu.
 \newblock Measurements of light yield and timing of 0.5 g/l lab+ppo.
@@ -152,18 +169,30 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura.
 
 \bibitem{knoll2010radiation}
 G.~F. Knoll.
-\newblock {\em Radiation detection and measurement}.
+\newblock {\em Radiation Detection and Measurement}.
 \newblock John Wiley \& Sons, 2010.
 
 \bibitem{landau2013electrodynamics}
 L.~D. Landau, J.~Bell, M.~Kearsley, L.~Pitaevskii, E.~Lifshitz, and J.~Sykes.
-\newblock {\em Electrodynamics of continuous media}, volume~8.
+\newblock {\em Electrodynamics of Continuous Media}, volume~8.
 \newblock elsevier, 2013.
+
+\bibitem{chicagoTiming}
+A.~LaTorre.
+\newblock New measurements for the timing spectrum of electrons and alphas in
+  lab+ppo.
+\newblock {\em SNO+ Internal Document, docDB-4081-v1.}
 
 \bibitem{modeCut}
 L.~Lebanowski.
 \newblock Improved mode cut.
 \newblock {\em SNO+ Internal Document, docDB-5488-v1.}
+
+\bibitem{leo2012techniques}
+W.~R. Leo.
+\newblock {\em Techniques for Nuclear and Particle Physics Experiments: a
+  How-to Approach}.
+\newblock Springer Science \& Business Media, 2012.
 
 \bibitem{mekarski2018electron}
 P.~Mekarski.
@@ -221,6 +250,12 @@ M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
 J.~Tseng.
 \newblock Skyshine classifier.
 \newblock {\em SNO+ Internal Document, docDB-5341-v1.}
+
+\bibitem{tseung2011ellipsometric}
+H.~W.~C. Tseung and N.~Tolich.
+\newblock Ellipsometric measurements of the refractive indices of linear
+  alkylbenzene and ej-301 scintillators from 210 to 1000 nm.
+\newblock {\em Physica Scripta}, 84(3):035701, 2011.
 
 \bibitem{joshW1}
 J.-S. Wang.

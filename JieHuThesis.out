@@ -24,29 +24,33 @@
 \BOOKMARK [2][-]{subsection.3.1.3}{Detection Principle}{section.3.1}% 24
 \BOOKMARK [2][-]{subsection.3.1.4}{Electronics}{section.3.1}% 25
 \BOOKMARK [2][-]{subsection.3.1.5}{Optics}{section.3.1}% 26
-\BOOKMARK [2][-]{subsection.3.1.6}{Liquid scintillator}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.6}{Liquid Scintillator}{section.3.1}% 27
 \BOOKMARK [2][-]{subsection.3.1.7}{Calibration}{section.3.1}% 28
 \BOOKMARK [1][-]{section.3.2}{Monte Carlo Simulation for SNO+}{chapter.3}% 29
 \BOOKMARK [0][-]{chapter.4}{Event Reconstruction}{}% 30
 \BOOKMARK [1][-]{section.4.1}{Reconstruction of the SNO+}{chapter.4}% 31
 \BOOKMARK [1][-]{section.4.2}{Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{chapter.4}% 32
 \BOOKMARK [1][-]{section.4.3}{Multi-path Vertex Reconstruction Algorithm for SNO+}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.4}{[16]N test}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.5}{Vertex Reconstruction for the SNO+ Partial-phase}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.6}{PMT Selectors for the Fitter}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.7}{[16]N Calibration}{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.7.1}{Water Phase Calibration}{section.4.7}% 38
-\BOOKMARK [2][-]{subsection.4.7.2}{Partial-fill Phase Calibration}{section.4.7}% 39
-\BOOKMARK [0][-]{chapter.5}{SNO+ Water Phase Analysis}{}% 40
-\BOOKMARK [1][-]{subsection.5.0.1}{Sky-shine Classifier}{chapter.5}% 41
-\BOOKMARK [0][-]{chapter.6}{Towards the SNO+ Future Phases}{}% 42
-\BOOKMARK [1][-]{section.6.1}{Partial-fill Phase Analysis}{chapter.6}% 43
-\BOOKMARK [2][-]{subsection.6.1.1}{Bi-Po Analysis}{section.6.1}% 44
-\BOOKMARK [2][-]{subsection.6.1.2}{Extract Cherenkov Signals in Partial-Phase}{section.6.1}% 45
-\BOOKMARK [1][-]{section.6.2}{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{chapter.6}% 46
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 47
-\BOOKMARK [0][-]{appendix.A}{Details for the MultiPath Fitter}{}% 48
-\BOOKMARK [1][-]{section.A.1}{Create a Random Vertex}{appendix.A}% 49
-\BOOKMARK [1][-]{section.A.2}{Levenberg-Marquardt \(MRQ\) Method for Minimizationpress2007numerical}{appendix.A}% 50
-\BOOKMARK [1][-]{section.A.3}{Implement the MRQ Method for SNO+ Physics Phases}{appendix.A}% 51
-\BOOKMARK [0][-]{appendix*.13}{References}{}% 52
+\BOOKMARK [1][-]{section.4.4}{MPW Position and Direction Reconstructions}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.4.1}{Vertex Reconstruction}{section.4.4}% 35
+\BOOKMARK [2][-]{subsection.4.4.2}{Direction Reconstruction}{section.4.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.3}{Drive Correction}{section.4.4}% 37
+\BOOKMARK [1][-]{section.4.5}{Vertex and Direction Reconstruction for Wavelength-shifter}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.6}{Vertex Reconstruction for Partial-fill and Scintillator Phases}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.7}{PMT Selectors for the Fitter}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.8}{[16]N Calibration Test}{chapter.4}% 41
+\BOOKMARK [2][-]{subsection.4.8.1}{Water Phase Calibration}{section.4.8}% 42
+\BOOKMARK [2][-]{subsection.4.8.2}{Partial-fill Phase Calibration}{section.4.8}% 43
+\BOOKMARK [0][-]{chapter.5}{SNO+ Water Phase Analysis}{}% 44
+\BOOKMARK [1][-]{subsection.5.0.1}{Sky-shine Classifier}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter.6}{Towards the SNO+ Future Phases}{}% 46
+\BOOKMARK [1][-]{section.6.1}{Partial-fill Phase Analysis}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.1.1}{Bi-Po Analysis}{section.6.1}% 48
+\BOOKMARK [2][-]{subsection.6.1.2}{Extract Cherenkov Signals in Partial-Phase}{section.6.1}% 49
+\BOOKMARK [1][-]{section.6.2}{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{chapter.6}% 50
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 51
+\BOOKMARK [0][-]{appendix.A}{Details for the MultiPath Fitter}{}% 52
+\BOOKMARK [1][-]{section.A.1}{Create a Random Vertex}{appendix.A}% 53
+\BOOKMARK [1][-]{section.A.2}{Levenberg-Marquardt \(MRQ\) Method for Minimizationpress2007numerical}{appendix.A}% 54
+\BOOKMARK [1][-]{section.A.3}{Implement the MRQ Method for SNO+ Physics Phases}{appendix.A}% 55
+\BOOKMARK [0][-]{appendix*.11}{References}{}% 56
