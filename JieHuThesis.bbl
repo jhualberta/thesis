@@ -86,7 +86,13 @@ S.~J. Brice.
 \bibitem{brunroot}
 R.~Brun, F.~Rademakers, P.~Canal, et~al.
 \newblock Root: An object oriented data analysis framework, 2007.
-\newblock {\em See Also http://root. cern. ch}.
+\newblock {\em See Also http://root.cern.ch}.
+
+\bibitem{scintillatorPaper}
+S.~Collaboration.
+\newblock Development and characterisation of a linear alkylbenzene-based
+  scintillator for the {SNO+} experiment (draft).
+\newblock {\em Not submitted yet}.
 
 \bibitem{coulter2013modelling}
 I.~T. Coulter.
@@ -240,6 +246,12 @@ A.~Y. Smirnov.
 \newblock Solar neutrinos: Oscillations or no-oscillations?
 \newblock {\em arXiv preprint arXiv:1609.02386}, 2016.
 
+\bibitem{sorensen2016temperature}
+A.~S{\"o}rensen.
+\newblock Temperature quenching in lab based liquid scintillator and
+  muon-induced backgrounds in the sno+ experiment.
+\newblock 2016.
+
 \bibitem{pdg2018}
 M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
   J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, et~al.
@@ -256,6 +268,13 @@ H.~W.~C. Tseung and N.~Tolich.
 \newblock Ellipsometric measurements of the refractive indices of linear
   alkylbenzene and ej-301 scintillators from 210 to 1000 nm.
 \newblock {\em Physica Scripta}, 84(3):035701, 2011.
+
+\bibitem{von2015measurement}
+B.~Von~Krosigk.
+\newblock Measurement of proton and $\alpha$ particle quenching in lab based
+  scintillators and determination of spectral sensitivities to supernova
+  neutrinos in the sno+ detector.
+\newblock 2015.
 
 \bibitem{joshW1}
 J.-S. Wang.

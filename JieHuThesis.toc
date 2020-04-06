@@ -22,40 +22,40 @@
 \contentsline {subsection}{\numberline {3.1.1}Overview}{11}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}SNO+ Physics Phases}{12}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Detection Principle}{13}{subsection.3.1.3}
-\contentsline {subsubsection}{Optical Cherenkov Radiation}{13}{section*.6}
-\contentsline {subsubsection}{Scintillation Detection}{14}{section*.7}
-\contentsline {subsection}{\numberline {3.1.4}Electronics}{15}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Optics}{16}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}Liquid Scintillator}{16}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Calibration}{18}{subsection.3.1.7}
-\contentsline {section}{\numberline {3.2}Monte Carlo Simulation for SNO+}{19}{section.3.2}
-\contentsline {chapter}{\numberline {4}Event Reconstruction}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{21}{section.4.2}
-\contentsline {section}{\numberline {4.3}Multi-path Vertex Reconstruction Algorithm for SNO+}{21}{section.4.3}
-\contentsline {paragraph}{Fitter Structure}{23}{section*.8}
-\contentsline {section}{\numberline {4.4}MPW Position and Direction Reconstructions}{26}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Vertex Reconstruction}{26}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Direction Reconstruction}{27}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Drive Correction}{27}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Vertex and Direction Reconstruction for Wavelength-shifter}{29}{section.4.5}
-\contentsline {section}{\numberline {4.6}Vertex Reconstruction for Partial-fill and Scintillator Phases}{29}{section.4.6}
-\contentsline {section}{\numberline {4.7}PMT Selectors for the Fitter}{34}{section.4.7}
-\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration Test}{36}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{38}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{38}{subsection.4.8.2}
-\contentsline {chapter}{\numberline {5}SNO+ Water Phase Analysis}{42}{chapter.5}
-\contentsline {subsection}{\numberline {5.0.1}Sky-shine Classifier}{42}{subsection.5.0.1}
-\contentsline {chapter}{\numberline {6}Towards the SNO+ Future Phases}{44}{chapter.6}
-\contentsline {section}{\numberline {6.1}Partial-fill Phase Analysis}{45}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Bi-Po Analysis}{45}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Extract Cherenkov Signals in Partial-Phase}{46}{subsection.6.1.2}
-\contentsline {subsubsection}{$\isotope [16]{N}$ Source Analysis}{46}{section*.9}
-\contentsline {subsubsection}{$AmBe$ Source Analysis}{46}{section*.10}
-\contentsline {section}{\numberline {6.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{46}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{48}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{48}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{48}{section.A.2}
-\contentsline {section}{\numberline {A.3}Implement the MRQ Method for SNO+ Physics Phases}{51}{section.A.3}
-\contentsline {chapter}{References}{52}{appendix*.11}
+\contentsline {subsubsection}{Cherenkov Radiation}{13}{section*.6}
+\contentsline {subsubsection}{Scintillation from Organic Scintillator}{15}{section*.7}
+\contentsline {subsection}{\numberline {3.1.4}Electronics}{17}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Optics}{18}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Liquid Scintillator for SNO+}{19}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Calibration}{20}{subsection.3.1.7}
+\contentsline {section}{\numberline {3.2}Monte Carlo Simulation for SNO+}{21}{section.3.2}
+\contentsline {chapter}{\numberline {4}Event Reconstruction}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Reconstruction of the SNO+}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Multi-path Vertex Reconstruction Algorithm for SNO+}{23}{section.4.3}
+\contentsline {paragraph}{Fitter Structure}{25}{section*.8}
+\contentsline {section}{\numberline {4.4}MPW Position and Direction Reconstructions}{28}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Vertex Reconstruction}{28}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Direction Reconstruction}{29}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Drive Correction}{29}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Vertex and Direction Reconstruction for Wavelength-shifter}{31}{section.4.5}
+\contentsline {section}{\numberline {4.6}Vertex Reconstruction for Partial-fill and Scintillator Phases}{31}{section.4.6}
+\contentsline {section}{\numberline {4.7}PMT Selectors for the Fitter}{36}{section.4.7}
+\contentsline {section}{\numberline {4.8}\isotope [16]{N} Calibration Test}{38}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Water Phase Calibration}{40}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Partial-fill Phase Calibration}{40}{subsection.4.8.2}
+\contentsline {chapter}{\numberline {5}SNO+ Water Phase Analysis}{44}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}Sky-shine Classifier}{44}{subsection.5.0.1}
+\contentsline {chapter}{\numberline {6}Towards the SNO+ Future Phases}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Partial-fill Phase Analysis}{47}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Bi-Po Analysis}{47}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Extract Cherenkov Signals in Partial-Phase}{48}{subsection.6.1.2}
+\contentsline {subsubsection}{$\isotope [16]{N}$ Source Analysis}{48}{section*.9}
+\contentsline {subsubsection}{$AmBe$ Source Analysis}{48}{section*.10}
+\contentsline {section}{\numberline {6.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{48}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusions}{49}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{50}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{50}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{50}{section.A.2}
+\contentsline {section}{\numberline {A.3}Implement the MRQ Method for SNO+ Physics Phases}{53}{section.A.3}
+\contentsline {chapter}{References}{54}{appendix*.11}

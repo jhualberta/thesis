@@ -89,114 +89,34 @@ For optical photons with wavelengths ranging from $350$ to $550~nm$ (typical PMT
 
 For the Cherenkov radiation caused by $e^-$ in a water detector, $dN/dx \simeq 207~photons/cm$; while in the LAB-PPO case: $dN/dx \simeq 264~photons/cm$. In a realistic measurement, the detection efficiency and the coverage of photon sensors are also required to be taken into account.
 
-\subsubsection{Scintillation from Organic Liquid Scintillator}
+\subsubsection{Scintillation from Organic Scintillator}
 
-Organic liquid scintillator can convert the kinetic energy of charged particles into scintillation photons with wavelengths in the sensitive detection region of PMTs.  
+Besides the Cherenkov photons described in the last section, the majority lights emitted from organic scintillator are scintillation photons.
 
-
-In the liquid scintillator case, besides the Cherenkov radiations caused by an event, the majority of lights come from scintillation process.
-
-
-
-prompt emission of scintillation light, which is called fluorescence
-delayed emission of scintillation light, which is called delayed fluorescence or phosphorescence.
-
-\cite{knoll2010radiation}
-
-2 g/L PPO gives an absolute light yield of 11900 photons/MeV.
-
-
-for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
-6190 photons/MeV\cite{tanner0p5,joshW1}.
-
-
-see Fig.~\ref{jablonski}.
+The organic liquid scintillator can convert the kinetic energy of charged particles into scintillation photons with wavelengths in the sensitive detection region of PMTs. They are aromatic hydrocarbon compounds with benzene-ring structures. When ionizing radiation happens in the scintillator, the free valence electrons of the molecules are excited and transit to occupy the $\pi$-molecular orbitals with the benzene rings. These highly delocalized electrons are called $\pi$-electrons, which can occupy a series of energy levels. A Jablonski diagram, invented by Polish physicist Aleksander Jab\l o\'{n}ski, is generally used to describe molecular absorbance and emission of light. In Fig.~\ref{jablonski}, the Jablonski diagram illustrates the $\pi$-electronic energy levels of an organic scintillator molecule\cite{knoll2010radiation,leo2012techniques}. 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{jablonski.png}
-	\caption{A Jablonski diagram for the liquid scintillator, modified from \cite{birks1965theory, knoll2010radiation}.}
+	\caption{A Jablonski diagram for the organic scintillator, modified from \cite{birks1965theory, knoll2010radiation}.}
 	\label{jablonski}
 \end{figure}
 
+In the diagram, $S_{0,1,2,3,...}$ are the energy levels of the spin-0 singlet states, where $S_0$ is the ground state and $S^*=S_{1,2,3,...}$ are the excited singlet states. Above the ground state $S_0$, there are also a set of spin-1 triplet states $T_{1,2,3,...}$, where $T_1$ is the lowest triplet state. These electron energy levels are labelled with thick black lines. The energy spacing between these levels are $\mathcal{O}(eV)$. In each levels, there are also fine structure levels which corresponds to excited vibration modes of the molecule (labelled with gray lines and can be marked as $S_{10}, S_{11}, ..., S_{20},S_{21}, ...$). The energy spacing between these fine levels are $\mathcal{O}(0.15~eV)$\cite{leo2012techniques, knoll2010radiation}.
 
+The ionization radiation transfers the energy to the molecules and excites the electron levels as well as the vibrational levels, labelled as the absorption lines (in green). The decays between the excited singlet states (not to the ground state) are almost immediate ($\leq 10~ps$) without the emission of light. This process is called internal degradation. The decays from the excited singlet state $S_1$ (as well as the vibrational states $S_{10},S_{11},S_{12},...$) to the ground state (as well as the vibration states $S_{01}, S_{02}, ...$) happen promptly ($\mathcal{O}(ns)$) and emit lights (labelled as red lines). This process is called fluorescence which contributes the prompt component of the emission of scintillation light. The probability of $S_1$ decays into the vibrational states $S_1 \to S_{01},S_{02},...$ among the ground state is more than $S_1\to S_0$. Since the absorbed energy of $S_0 \to S_1$ is larger than the emitted energy of $S_1 \to S_{01},S_{02},...$, the scintillators have very little self-absorption of the fluorescence and are transparent to their own radiation. The effect of Stokes shift, which refers to the overlap between the optical absorption and emission spectra, is small for the organic scintillator\cite{leo2012techniques,knoll2010radiation}. 
 
+The transitions between the singlet and triplet states are highly forbidden due to the
+electron spin-flip is involved\cite{von2015measurement,sorensen2016temperature}. There also exists a relatively rare process called intersystem crossing (ISC), which converts excited singlet states into triplet states. Besides this, 75\% of triplet states can be produced by ionization-recombination\cite{von2015measurement,dunger2018topological}.
 
+For the de-excitation, the similar processes of internal degradation occur among $T_{2,3, ...} \to T_1$. $T_1$ is a relatively stable state. $T_1\to S_0$ is highly forbidden. However, the $T_1$ state can go through an indirect decay process by interacting with another excited $T_1$ molecule and forms an excited singlet state:
+\[
+T_1+T_1\to S^*+S_0+phonons
+\]
+The $S^*$ will de-excite and emit delayed scintillation light. The process for emitting this delayed scintillation light is called delayed fluorescence or phosphorescence\cite{leo2012techniques}. This process contributes to the delayed component of scintillation light.
 
+For a typical scintillator detector, the time scale of detector response is $\mathcal{O}(1-100~ns)$. In this time region, the emission of the scintillation light contains the primary fluorescence from the de-excitation of the singlet states (prompt component) and the delayed fluorescence from the de-excitation of the indirect triplet states (delayed component)\cite{dunger2018topological}. The time profile of the scintillation light emission is a mixture of prompt and delayed components. 
 
-
-
-
-
-
-\subsection{Electronics}
-
-The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
-
-burst 
-from supernova
-
-
-
-
-
-
-
-
-
-PMTs are Hamamatsu model R1408.
-
-
-a single RG59/U type 75 $\Omega$ coaxial cable
-
-19 crates$\times$16 cards$\times$32 channels = 9728 electronics channels.
-
-Each crate processes 16$\times$32 = 512 PMTs.
-9605 channels are actually used and among them, 32 channels are reserved for calibration devices and labelled as FEC Diagnose (FECD) channels
-
-
-During the experiment running, the maintenance of the electronics is always ongoing.
-
-crate controller card (XL3)
-
-
-analog master trigger system (MTC/A+) 
-("+" means an upgrade to SNO MTC/A)
-
-
-digital master trigger system (MTC/D)
-
-the analog waveforms are summed on the MTC/A+ card, then they are digitized 
-
-CAEN v1720 digitizer 
-
-TUBii trigger utility board 
-pulsers and delays
-
-DAQ 
-
-
-nearline provides a real-time analysis of the data quality, 
-
-trigger system
-PMT Interface Card (PMTIC)
-Front End Card (FEC)
-
-NHit20 (N20), NHit100 (N100) trigger pulses.
-
-MTC/A has 3 discriminators: LOW, MED and HI.
-
-Global Trigger (GT)
-the timing and charge from the fired PMT is digitized and stored.
-
-
-
-
-Nhit means the number of live hit PMTs in the detector for a given event.
-
-
-dark noise rate is estimated to be 1 kHz.
-
-
+Different charged particles can cause different ionization density when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed component or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, scintillatorPaper}. 
 
 \subsection{Optics}
 
@@ -271,6 +191,83 @@ depend
 $\alpha$-particle
 high ionization density 
 quenching, 
+
+
+
+
+2 g/L PPO gives an absolute light yield of 11900 photons/MeV.
+
+
+for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
+6190 photons/MeV\cite{tanner0p5,joshW1}.
+
+\subsection{Electronics}
+
+The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
+
+burst 
+from supernova
+
+
+
+
+
+
+
+
+
+PMTs are Hamamatsu model R1408.
+
+
+a single RG59/U type 75 $\Omega$ coaxial cable
+
+19 crates$\times$16 cards$\times$32 channels = 9728 electronics channels.
+
+Each crate processes 16$\times$32 = 512 PMTs.
+9605 channels are actually used and among them, 32 channels are reserved for calibration devices and labelled as FEC Diagnose (FECD) channels
+
+
+During the experiment running, the maintenance of the electronics is always ongoing.
+
+crate controller card (XL3)
+
+
+analog master trigger system (MTC/A+) 
+("+" means an upgrade to SNO MTC/A)
+
+
+digital master trigger system (MTC/D)
+
+the analog waveforms are summed on the MTC/A+ card, then they are digitized 
+
+CAEN v1720 digitizer 
+
+TUBii trigger utility board 
+pulsers and delays
+
+DAQ 
+
+
+nearline provides a real-time analysis of the data quality, 
+
+trigger system
+PMT Interface Card (PMTIC)
+Front End Card (FEC)
+
+NHit20 (N20), NHit100 (N100) trigger pulses.
+
+MTC/A has 3 discriminators: LOW, MED and HI.
+
+Global Trigger (GT)
+the timing and charge from the fired PMT is digitized and stored.
+
+
+
+
+Nhit means the number of live hit PMTs in the detector for a given event.
+
+
+dark noise rate is estimated to be 1 kHz.
 
 
 \subsection{Calibration}

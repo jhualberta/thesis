@@ -1,28 +1,28 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A Jablonski diagram for the liquid scintillator, modified from \cite {birks1965theory, knoll2010radiation}.}}{17}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A Jablonski diagram for the organic scintillator, modified from \cite {birks1965theory, knoll2010radiation}.}}{15}{figure.3.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}}{24}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT response time as the timing pdf.}}{24}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces PMT angular distribution as the angular response pdf.}}{24}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Light path calculation for the MP Partial Fitter.}}{30}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}}{31}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{32}{figure.4.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{32}{figure.4.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{32}{figure.4.6}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{32}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{32}{figure.4.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{32}{figure.4.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{32}{figure.4.7}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{32}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{36}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{39}{figure.4.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{39}{figure.4.9}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{39}{figure.4.9}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{39}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{40}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{41}{figure.4.11}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}}{26}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT response time as the timing pdf.}}{26}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PMT angular distribution as the angular response pdf.}}{26}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Light path calculation for the MP Partial Fitter.}}{32}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}}{33}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{34}{figure.4.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{34}{figure.4.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{34}{figure.4.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{34}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{34}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{38}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{41}{figure.4.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{41}{figure.4.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{41}{figure.4.9}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{41}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{42}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{43}{figure.4.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

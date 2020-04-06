@@ -7,7 +7,7 @@ Warning--entry type for "muonflux" isn't style-file defined
 --line 218 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
 --line 300 of file thesis.bib
-I was expecting a `,' or a `}'---line 428 of file thesis.bib
+I was expecting a `,' or a `}'---line 434 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -26,7 +26,6 @@ Warning--I didn't find a database entry for "gerda"
 Warning--I didn't find a database entry for "exo"
 Warning--I didn't find a database entry for "nEXO"
 Warning--I didn't find a database entry for "kamlandZen"
-Warning--I didn't find a database entry for "ndpaper"
 Warning--I didn't find a database entry for "borexino"
 Warning--I didn't find a database entry for "cno"
 Warning--I didn't find a database entry for "boulay"
@@ -39,6 +38,7 @@ Warning--empty year in davidPartialWater
 Warning--empty journal in boulay2004direct
 Warning--empty school in brice1996monte
 Warning--empty year in brunroot
+Warning--empty year in scintillatorPaper
 Warning--empty year in partialWater
 Warning--empty year in jieMPW
 Warning--empty year in tanner0p5
@@ -48,47 +48,49 @@ Warning--empty journal in mekarski2018electron
 Warning--empty journal in piperno2015dark
 Warning--empty year in kalpanaWLS
 Warning--empty year in kalpanaWLS2
+Warning--empty journal in sorensen2016temperature
 Warning--empty year in skyshine
+Warning--empty journal in von2015measurement
 Warning--empty year in joshW1
-You've used 52 entries,
+You've used 55 entries,
             2118 wiz_defined-function locations,
-            786 strings with 12129 characters,
-and the built_in function-call counts, 15327 in all, are:
-= -- 1395
-> -- 914
+            796 strings with 12651 characters,
+and the built_in function-call counts, 15938 in all, are:
+= -- 1452
+> -- 935
 < -- 2
-+ -- 372
-- -- 316
-* -- 1063
-:= -- 2739
-add.period$ -- 154
-call.type$ -- 52
-change.case$ -- 292
++ -- 381
+- -- 322
+* -- 1089
+:= -- 2853
+add.period$ -- 163
+call.type$ -- 55
+change.case$ -- 304
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 560
-empty$ -- 1075
-format.name$ -- 316
-if$ -- 3035
+cite$ -- 78
+duplicate$ -- 590
+empty$ -- 1126
+format.name$ -- 322
+if$ -- 3155
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 53
-newline$ -- 261
-num.names$ -- 98
-pop$ -- 351
+int.to.str$ -- 55
+missing$ -- 56
+newline$ -- 276
+num.names$ -- 104
+pop$ -- 369
 preamble$ -- 1
-purify$ -- 252
+purify$ -- 261
 quote$ -- 0
-skip$ -- 381
+skip$ -- 401
 stack$ -- 0
-substring$ -- 541
-swap$ -- 68
+substring$ -- 556
+swap$ -- 69
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
-warning$ -- 20
-while$ -- 120
-width$ -- 54
-write$ -- 524
+type$ -- 204
+warning$ -- 23
+while$ -- 126
+width$ -- 57
+write$ -- 551
 (There was 1 error message)
