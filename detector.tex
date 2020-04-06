@@ -1,16 +1,9 @@
 %% chapter of SNO+ detector
 
 %%\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
-
-
-\section{A Description of SNO+ Detector}
-
-\subsection{Overview}
+A Description of SNO+ Detector
+\section{Overview}
 The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada. The deep underground facility of the SNOLAB provides a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (w.e.m). This rock overburden ensures an extremely low rate of cosmic muons passing through the detector. The rate is $0.27~\mu/m^2/day$, compared to an average flux of about $1.44\times 10^6~\mu/m^2/day$ at sea level\cite{muonflux}.
-
-
-
-
 
 The detector has been running since December 2016.
 \cite{anderson2019search},
@@ -27,7 +20,7 @@ detector consists of an acrylic vessel (AV) sphere of 12 m in diameter and
 main upgrades from SNO to SNO+
 BiPo tagging on partial fill data
 
-\subsection{SNO+ Physics Phases}
+\section{SNO+ Physics Phases}
 The SNO+ detector is designed for multi-purpose measurements of neutrino physics.
 The experiment will go through three phases\cite{whitepaper}: 
 
@@ -58,11 +51,10 @@ Higher loading concentrations would be possible for a further loading plan\cite{
  The $^{130}$Te is a double beta decay isotope. The main purpose in this phase is searching for $0\nu\beta\beta$ in $^{130}$Te.
 
 
-\subsection{Detection Principle}
+\section{Detection Medium}
 In the SNO+ detector, charged particles are expected to interact with the detection medium and create Cherenkov lights and scintillation lights. 
 
-
-\subsubsection{Cherenkov Radiation}
+\subsection{Cherenkov Radiation}
 For any charged particle travelling in a transparent medium at an ultrarelativistic speed (a speed greater than the local phase speed of light in the medium), an electromagnetic radiation, called Cherenkov radiation, can be emitted from the coherent response of the medium under the action of the field of the moving particle\cite{jackson2007classical,landau2013electrodynamics}.
 
 Suppose a charged particle moves in a transparent, isotropic and non-magnetic medium and creates an electromagnetic wave. The electromagnetic wave propagates with a wave number $k=n\cdot\omega/c$, where $c$ is the speed of light in vacuum, $n$ is the real-valued refractive index and $\omega$ is the frequency. If the particle travels uniformly along x axis with a velocity of $v$, the x-component of the wave vector is $k_x=\omega/v$. For a freely propagating wave, $k>k_x$, therefore $v>v_p=c/n(\omega)$, where $v_p$ is the phase velocity in the medium. Under this condition that the speed of the charged particle is greater than the $v_p$, the Cherenkov radiation is emitted with a frequency of $\omega$\cite{landau2013electrodynamics}.   
@@ -89,7 +81,7 @@ For optical photons with wavelengths ranging from $350$ to $550~nm$ (typical PMT
 
 For the Cherenkov radiation caused by $e^-$ in a water detector, $dN/dx \simeq 207~photons/cm$; while in the LAB-PPO case: $dN/dx \simeq 264~photons/cm$. In a realistic measurement, the detection efficiency and the coverage of photon sensors are also required to be taken into account.
 
-\subsubsection{Scintillation from Organic Scintillator}
+\subsection{Scintillation from Organic Scintillator}
 
 Besides the Cherenkov photons described in the last section, the majority lights emitted from organic scintillator are scintillation photons.
 
@@ -117,29 +109,6 @@ The $S^*$ will de-excite and emit delayed scintillation light. The process for e
 For a typical scintillator detector, the time scale of detector response is $\mathcal{O}(1-100~ns)$. In this time region, the emission of the scintillation light contains the primary fluorescence from the de-excitation of the singlet states (prompt component) and the delayed fluorescence from the de-excitation of the indirect triplet states (delayed component)\cite{dunger2018topological}. The time profile of the scintillation light emission is a mixture of prompt and delayed components. 
 
 Different charged particles can cause different ionization density when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed component or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, scintillatorPaper}. 
-
-\subsection{Optics}
-
-Optical parameters
-
-Winston cone
-
-
-
-timing
-
-
-attenuation
-
-scattering
-
-
-laser pulse diffuser, it can run with different wavelengths: 337, 365, 385, 420, 450 and 500 nm.
-The laserball 
-
-The acrylic of the AV is UV-transparent
-
-
 
 \subsection{Liquid Scintillator for SNO+}
 
@@ -201,19 +170,37 @@ quenching,
 for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
 6190 photons/MeV\cite{tanner0p5,joshW1}.
 
-\subsection{Electronics}
+
+
+
+
+\section{Optics}
+
+Optical parameters
+
+Winston cone
+
+
+
+timing
+
+
+attenuation
+
+scattering
+
+
+laser pulse diffuser, it can run with different wavelengths: 337, 365, 385, 420, 450 and 500 nm.
+The laserball 
+
+The acrylic of the AV is UV-transparent
+
+\section{Electronics}
 
 The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
 
 burst 
 from supernova
-
-
-
-
-
-
-
 
 
 PMTs are Hamamatsu model R1408.
@@ -270,7 +257,7 @@ Nhit means the number of live hit PMTs in the detector for a given event.
 dark noise rate is estimated to be 1 kHz.
 
 
-\subsection{Calibration}
+\section{Calibration}
 
 
 Two kinds of calibration sources are used by SNO+: optical sources and radioactive sources. 
