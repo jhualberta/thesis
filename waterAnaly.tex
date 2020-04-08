@@ -1,29 +1,135 @@
+The SNO+ water data taking from May 2017 to September 2018. During the period from October 2018 to July 2019, LAB (without PPO) was filled into the detector and had been sit inside the neck.
+
+\section{Classifiers}
+
+have been developed since the SNO analysis \cite{highlevel}.
 
 
-During the August to October 2019, the PPO is added into the LAB when the water level at 5100 mm (in PSUP coordinate). This is for the SNO+ partial-fill phase.
+\begin{itemize}
+
+\item[$\bullet$] In time ratio (ITR) classifier
 
 
-\subsection{Sky-shine Classifier}
-A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
 
 
-The SkyShine classifier aims to discriminate "sky shine" events from other backgrounds by looking at the ratio of hit counts in a middle z range and a low z range. It can also look at neck and high-z OWL PMT hits. The classifier's behavior for partial fill is studied using simulation.
 
-\cite{skyshine}
+\item[$\bullet$] $\beta_{14}$ isotropy classifier
 
-
-$\beta_{14}$ isotropy classifier
+This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical	harmonics of an event, where:
 \[
 \beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
 \]
+and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
 
-where $P_l(\cos\theta_{ij})$ are Legendre polynomials
+The	combination	of these two polynomials returned by the classifier	was	
+practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
+as	this	gives	something	that	looks	kinda gaussian-like	for	Cerenkov	events.	
+Essentially	any	deviation	from	zero	suggests	some	polarity	(i.e.	the	event	is	not	
+isotropic).	
 
-$\beta_{14}=\beta_1+4\beta_4$
 
 
-thetaij isotropy classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
+\item[$\bullet$] $\theta_{ij}$ isotropy classifier 
+
+describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 
 \[
 \cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
 \]
+\end{itemize}
+
+
+\section{\isotope[16]{N} Calibration Test in the Water Phase}
+During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deployed for internal detector calibration scans in June and November, 2017 and external detector scans in March, 2018. 
+
+The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter.
+
+The $\gamma$ rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=9cm]{sx.pdf}
+%	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from simulations.}
+%	\label{hsx}
+%\end{figure}
+
+A position resolution function is defined for the reconstructed electron position distribution\cite{boulay}:
+\[
+R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
+\]
+where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
+the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift  (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
+
+For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay}:
+\[
+N_{R}(x)=\int^{+\infty}_{-\infty} S(x)R(x_{fit}-x)dx.
+\]
+
+Since the $S(x)$ and $N_{R}(x)$ are histograms obtained from the data and MC, we calculate by the bin value $x_i$: 
+\[N_R(x_i)=\sum_{x_i=-\infty}^{+\infty}S(x_i)R(x_{fit}^i-x_i).\].
+
+The $\chi^2$ is calculated by:
+\[
+\chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2,
+\]
+where $N_R^{fit}$ is a trial fit to the $N_R$ by tuning the $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and $\sigma_i$ is taken as the bin width of the histograms.
+
+By minimizing the $\chi^2$, the parameters of the resolution function, $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and a best $N_R^{fit}$ are obtained.
+
+Figure~\ref{posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions are fitted with $N_R^{fit}$.
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=10cm]{posResol.pdf}
+%	\caption{Distributions of the reconstructed position projected on x axis, obtained from SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
+%	\label{posresol}
+%\end{figure}
+
+Table~\ref{table_posresol} summarizes the values of position resolution parameters obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
+\vspace{1mm}
+\begin{table}[ht]
+	\centering
+	\caption{Position resolution parameters for the MP Water Fitter.}
+	\label{table_posresol}
+	\begin{tabular}{|p{2.5cm}|p{2.2cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}| p{2.1cm}|}
+		\hline
+		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) &  $\tau_P$ (mm)& $\mu_P$ (mm)\\
+		\hline 
+		data& 0.58$\pm$0.04 & 175.8$\pm$3.8 & 288.0$\pm$5.7 & -28.8$\pm$1.0\\	
+		\hline 
+		MC & 0.51$\pm$0.05 & 195.2$\pm$3.3 & 298.4$\pm$6.1 & -10.9$\pm$1.0\\
+		\hline
+	\end{tabular}
+\end{table}
+\vspace{1mm}
+
+Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clean global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
+
+\begin{figure}
+	\centering
+	%\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=65mm]{likelihoodSurface_xy.pdf}}
+	%\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=65mm]{likelihoodSurface_yz.pdf}}
+	%\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=65mm]{likelihoodSurface_xz.pdf}}
+	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}}
+	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}}
+	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}
+	\label{likelihoodSurface}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{logL_xyzt.pdf}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}
+	\label{logLxyz}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
+	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
+	\label{derivative_logLxyz}
+\end{figure}
+
+emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.

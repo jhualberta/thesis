@@ -25,7 +25,7 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{Scintillation from Organic Scintillator}{section.3.3}% 25
 \BOOKMARK [2][-]{subsection.3.3.3}{Liquid Scintillator for SNO+}{section.3.3}% 26
 \BOOKMARK [1][-]{section.3.4}{Optics}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{Trigger and Readout of the SNO+ Detector}{chapter.3}% 28
 \BOOKMARK [1][-]{section.3.6}{Calibration}{chapter.3}% 29
 \BOOKMARK [1][-]{section.3.7}{Monte Carlo Simulation for SNO+}{chapter.3}% 30
 \BOOKMARK [0][-]{chapter.4}{Event Reconstruction}{}% 31
@@ -43,15 +43,16 @@
 \BOOKMARK [2][-]{subsection.4.8.1}{Water Phase Calibration}{section.4.8}% 43
 \BOOKMARK [2][-]{subsection.4.8.2}{Partial-fill Phase Calibration}{section.4.8}% 44
 \BOOKMARK [0][-]{chapter.5}{SNO+ Water Phase Analysis}{}% 45
-\BOOKMARK [1][-]{subsection.5.0.1}{Sky-shine Classifier}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.1}{Classifiers}{chapter.5}% 46
 \BOOKMARK [0][-]{chapter.6}{Towards the SNO+ Future Phases}{}% 47
 \BOOKMARK [1][-]{section.6.1}{Partial-fill Phase Analysis}{chapter.6}% 48
-\BOOKMARK [2][-]{subsection.6.1.1}{Bi-Po Analysis}{section.6.1}% 49
-\BOOKMARK [2][-]{subsection.6.1.2}{Extract Cherenkov Signals in Partial-Phase}{section.6.1}% 50
-\BOOKMARK [1][-]{section.6.2}{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{chapter.6}% 51
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 52
-\BOOKMARK [0][-]{appendix.A}{Details for the MultiPath Fitter}{}% 53
-\BOOKMARK [1][-]{section.A.1}{Create a Random Vertex}{appendix.A}% 54
-\BOOKMARK [1][-]{section.A.2}{Levenberg-Marquardt \(MRQ\) Method for Minimizationpress2007numerical}{appendix.A}% 55
-\BOOKMARK [1][-]{section.A.3}{Implement the MRQ Method for SNO+ Physics Phases}{appendix.A}% 56
-\BOOKMARK [0][-]{appendix*.9}{References}{}% 57
+\BOOKMARK [2][-]{subsection.6.1.1}{Sky-shine Classifier}{section.6.1}% 49
+\BOOKMARK [2][-]{subsection.6.1.2}{Bi-Po Analysis}{section.6.1}% 50
+\BOOKMARK [2][-]{subsection.6.1.3}{Extract Cherenkov Signals in Partial-Phase}{section.6.1}% 51
+\BOOKMARK [1][-]{section.6.2}{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{chapter.6}% 52
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 53
+\BOOKMARK [0][-]{appendix.A}{Details for the MultiPath Fitter}{}% 54
+\BOOKMARK [1][-]{section.A.1}{Create a Random Vertex}{appendix.A}% 55
+\BOOKMARK [1][-]{section.A.2}{Levenberg-Marquardt \(MRQ\) Method for Minimizationpress2007numerical}{appendix.A}% 56
+\BOOKMARK [1][-]{section.A.3}{Implement the MRQ Method for SNO+ Physics Phases}{appendix.A}% 57
+\BOOKMARK [0][-]{appendix*.9}{References}{}% 58

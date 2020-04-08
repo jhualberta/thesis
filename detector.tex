@@ -2,7 +2,7 @@
 
 %%\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 A Description of SNO+ Detector
-\section{Overview}
+\section{Overview}\label{overview}
 The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada. The deep underground facility of the SNOLAB provides a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (w.e.m). This rock overburden ensures an extremely low rate of cosmic muons passing through the detector. The rate is $0.27~\mu/m^2/day$, compared to an average flux of about $1.44\times 10^6~\mu/m^2/day$ at sea level\cite{muonflux}.
 
 The detector has been running since December 2016.
@@ -100,7 +100,7 @@ The ionization radiation transfers the energy to the molecules and excites the e
 The transitions between the singlet and triplet states are highly forbidden due to the
 electron spin-flip is involved\cite{von2015measurement,sorensen2016temperature}. There also exists a relatively rare process called intersystem crossing (ISC), which converts excited singlet states into triplet states. Besides this, 75\% of triplet states can be produced by ionization-recombination\cite{von2015measurement,dunger2018topological}.
 
-For the de-excitation, the similar processes of internal degradation occur among $T_{2,3, ...} \to T_1$. $T_1$ is a relatively stable state. $T_1\to S_0$ is highly forbidden. However, the $T_1$ state can go through an indirect decay process by interacting with another excited $T_1$ molecule and forms an excited singlet state:
+For the de-excitation, the similar processes of internal degradation occur among $T_{2,3, ...} \to T_1$. $T_1$ is a relatively stable state and the lifetime of the molecule in the triplet state is in $\mathcal{O}(10^{-4}~-~10~s)$\cite{mcquarrie1997physical}. $T_1\to S_0$ is highly forbidden. However, the $T_1$ state can go through an indirect decay process by interacting with another excited $T_1$ molecule and forms an excited singlet state:
 \[
 T_1+T_1\to S^*+S_0+phonons
 \]
@@ -112,6 +112,7 @@ Different charged particles can cause different ionization density when they dep
 
 \subsection{Liquid Scintillator for SNO+}
 
+The SNO+ collaboration has been developing liquid scintillator 
 
 Linear Alkyl Benzene (LAB)
 
@@ -195,9 +196,64 @@ The laserball
 
 The acrylic of the AV is UV-transparent
 
-\section{Electronics}
+\section{Trigger and Readout of the SNO+ Detector}
+
+As mentioned in \ref{overview}, the Hamamatsu 8-inch R1408 PMTs, as photon sensors, are the basic detection elements for the SNO+ detector. The photons created from particle interactions in the detector can propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The photo-electron is accelerated and focused by the electric field and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the photo-electron transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode \cite{hamamatsu2018photomultiplier}.
+
+
+ will cause an electrical signal in the form of
+a voltage drop. If this is larger than a threshold value, the electronics of that
+PMT sends a trigger pulse.
+
+
+
 
 The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
+
+
+Charged particles within the SNO+ detector are detected through the light that
+they produce. For the water phase of the experiment, the detector measures
+Cherenkov light using PMTs. A photon incident on a PMT may strike its
+photocathode and produce a photoelectron. This photoelectron, after passing
+through the PMT’s dynode chain,
+
+For the SNO+ detector specifically, each PMT that triggers sends multiple
+trigger pulses down the electronics chain, which then performs higher logic.
+These include both a 93 ns long square pulse (N100) and a 48 ns square pulse
+(N20) [76]. These widths are chosen to match the characteristic travel times
+of photons across the detector. More specifically, the N100 width is chosen
+such that a set of photons from a Cherenkov cone will result in overlayed PMT
+pulses. The shorter N20 width limits this overlaying of PMT pulses to events
+originating from the centre of the detector.
+If the total height of either of these summed pulses passes a set thresh-
+27
+old value, a global trigger (GT) is issued. This global trigger defines an
+event" within the detector and results in all the associated information being
+saved. Multiple different trigger thresholds can be set. For example: N100Lo,
+N100Med, N100Hi are triggers based on the N100 pulses, where each has a
+different threshold value set. So it is possible, and likely, that an event within
+the detector passes several of these trigger thresholds.
+Additionally, the detector can trigger from the charge in the PMTs directly.
+The voltage pulses from all of the PMTs are summed together (ESUM). If this
+combined voltage trace drops below a threshold value (for example, ESUMHi,
+ESUMLo), this can also issue a GT to the detector.
+Figure 3.4 shows the event display of a typical muon event in the detector. Each individual PMT that triggered for that event is highlighted at its
+position on the support structure. A muon event is characterized by the large
+number of triggered PMTs. As with nearly all muons that pass through the
+detector, it is traveling in a downward direction. This is seen in Figure 3.4 as
+the excess of PMT charge (i.e. photons) in the bottom of the detector. As all
+atmospheric muons traveling upwards would be attenuated by the Earth, the
+small flux of upward-going muons are the result of neutrino interactions in the
+rock surrounding the detector [56].
+Figure 3.5 shows a more typical event. The circular pattern seen is produced
+by the projection of the Cherenkov light cone onto the PMTs. With 24 triggered
+PMTs, this event is considered a high-energy event within the detector. The
+size of the pattern indicates that this event took place closer to the PMTs
+traveling in an outward direction, specifically in the water between the acrylic
+sphere and the PMTs.
+
+
+
 
 burst 
 from supernova
@@ -255,6 +311,14 @@ Nhit means the number of live hit PMTs in the detector for a given event.
 
 
 dark noise rate is estimated to be 1 kHz.
+
+
+
+
+
+
+
+
 
 
 \section{Calibration}

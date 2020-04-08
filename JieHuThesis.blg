@@ -4,10 +4,10 @@ The top-level auxiliary file: JieHuThesis.aux
 The style file: abbrv.bst
 Database file #1: thesis.bib
 Warning--entry type for "muonflux" isn't style-file defined
---line 218 of file thesis.bib
+--line 229 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 300 of file thesis.bib
-I was expecting a `,' or a `}'---line 434 of file thesis.bib
+--line 327 of file thesis.bib
+I was expecting a `,' or a `}'---line 462 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -40,6 +40,7 @@ Warning--empty school in brice1996monte
 Warning--empty year in brunroot
 Warning--empty year in scintillatorPaper
 Warning--empty year in partialWater
+Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty year in jieMPW
 Warning--empty year in tanner0p5
 Warning--empty year in chicagoTiming
@@ -52,45 +53,45 @@ Warning--empty journal in sorensen2016temperature
 Warning--empty year in skyshine
 Warning--empty journal in von2015measurement
 Warning--empty year in joshW1
-You've used 55 entries,
+You've used 58 entries,
             2118 wiz_defined-function locations,
-            796 strings with 12651 characters,
-and the built_in function-call counts, 15938 in all, are:
-= -- 1452
-> -- 935
-< -- 2
-+ -- 381
-- -- 322
-* -- 1089
-:= -- 2853
-add.period$ -- 163
-call.type$ -- 55
-change.case$ -- 304
+            810 strings with 13126 characters,
+and the built_in function-call counts, 17014 in all, are:
+= -- 1547
+> -- 1013
+< -- 3
++ -- 413
+- -- 350
+* -- 1174
+:= -- 3045
+add.period$ -- 172
+call.type$ -- 58
+change.case$ -- 325
 chr.to.int$ -- 0
-cite$ -- 78
-duplicate$ -- 590
-empty$ -- 1126
-format.name$ -- 322
-if$ -- 3155
+cite$ -- 82
+duplicate$ -- 623
+empty$ -- 1192
+format.name$ -- 350
+if$ -- 3363
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 56
-newline$ -- 276
-num.names$ -- 104
-pop$ -- 369
+int.to.str$ -- 58
+missing$ -- 60
+newline$ -- 291
+num.names$ -- 110
+pop$ -- 394
 preamble$ -- 1
-purify$ -- 261
+purify$ -- 280
 quote$ -- 0
-skip$ -- 401
+skip$ -- 424
 stack$ -- 0
-substring$ -- 556
-swap$ -- 69
-text.length$ -- 2
+substring$ -- 597
+swap$ -- 72
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
-warning$ -- 23
-while$ -- 126
-width$ -- 57
-write$ -- 551
+type$ -- 214
+warning$ -- 24
+while$ -- 134
+width$ -- 60
+write$ -- 582
 (There was 1 error message)

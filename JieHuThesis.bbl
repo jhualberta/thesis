@@ -71,6 +71,14 @@ J.~Birks and F.~Firk.
 \newblock The theory and practice of scintillation counting.
 \newblock {\em Physics Today}, 18:60, 1965.
 
+\bibitem{boger2000sudbury}
+J.~Boger, R.~Hahn, J.~Rowley, A.~Carter, B.~Hollebone, D.~Kessler, I.~Blevis,
+  F.~Dalnoki-Veress, A.~DeKok, J.~Farine, et~al.
+\newblock The sudbury neutrino observatory.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  449(1-2):172--207, 2000.
+
 \bibitem{boulay2004direct}
 M.~G. Boulay.
 \newblock Direct evidence for weak flavour mixing with the sudbury neutrino
@@ -126,7 +134,7 @@ M.~Fukugita and T.~Yanagida.
 
 \bibitem{giaz2018status}
 A.~Giaz.
-\newblock Status and perspectives of the juno experiment.
+\newblock Status and perspectives of the {JUNO} experiment.
 \newblock {\em arXiv preprint arXiv:1804.03575}, 2018.
 
 \bibitem{gregory2005bayesian}
@@ -139,6 +147,11 @@ P.~Gregory.
 A.~Hallin.
 \newblock Fitting partial fill data from december 2014.
 \newblock {\em SNO+ Internal Document, docDB-2888-v3.}
+
+\bibitem{hamamatsu2018photomultiplier}
+K.~Hamamatsu~Photonics.
+\newblock Photomultiplier tubes: Basics and applications, 2007.
+\newblock 2018.
 
 \bibitem{horton2006introduction}
 G.~Horton-Smith et~al.
@@ -199,6 +212,11 @@ W.~R. Leo.
 \newblock {\em Techniques for Nuclear and Particle Physics Experiments: a
   How-to Approach}.
 \newblock Springer Science \& Business Media, 2012.
+
+\bibitem{mcquarrie1997physical}
+D.~A. McQuarrie and J.~D. Simon.
+\newblock {\em Physical chemistry: a molecular approach}, volume~1.
+\newblock University science books Sausalito, CA, 1997.
 
 \bibitem{mekarski2018electron}
 P.~Mekarski.
