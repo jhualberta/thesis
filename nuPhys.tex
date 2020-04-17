@@ -1,9 +1,8 @@
 %\epigraph{Yesterday's rose stands only in name, we hold only empty names.}{--- \textup{Umberto Eco}, \textit{The Name of Rose}}
- 
+
 \section{Neutrino Flavor Transformation and Oscillation}
 
-Neutrino oscillation was first discovered in 1998.
-It is the first direct evidence showing that the Standard Model is incomplete. 
+Neutrino oscillation was first discovered in 1998\cite{fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the Standard Model is incomplete. 
 
 The neutrinos generated with definite flavor from weak interactions and related to 
 
@@ -13,6 +12,94 @@ The neutrinos generated with definite flavor from weak interactions and related 
 solar neutrino oscillations
 
 \subsection{Vacuum Oscillation}
+
+\[
+|\nu_\alpha>=\sum_{i=1}^n U^*_{\alpha i}|\nu_i>
+\]
+
+
+
+For three-flavor neutrino mixing, we have\cite{pdg2018}:
+\begin{equation}\label{eq:mixingmatrix}
+|\nu_f> = \sum_{k=1}^3U^*_{fk}|\nu_k>, 
+\end{equation}
+where $f=e,\mu,\tau$ and $k=1,2,3$. The unitary PMNS matrix, $U_{PMNS}$, can be parametrized as: 
+
+$U_{PMNS} = $
+\begin{equation}
+\begin{bmatrix}
+1 &0 &0\\
+0 &\cos\theta_{23} &\sin\theta_{23}\\
+0 &-\sin\theta_{23} &\cos\theta_{23}\\ 
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta_{13} &0 &e^{-i\delta_{CP}}\sin\theta_{13}\\
+0 &1 &0\\
+e^{-i\delta_{CP}}\sin\theta_{13} &0 &\cos\theta_{13}\\ 
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta_{12} &\sin\theta_{12} &0\\
+-\sin\theta_{12} &\cos\theta_{12} &0\\
+0 &0 &1\\ 
+\end{bmatrix}.
+\end{equation}
+
+
+\[
+P_{\alpha\beta}=\delta_{\alpha\beta}-4\sum_{i<j}^n Re[U_{\alpha i}U^*_{\beta i}U^*_{\alpha j}U_{\beta j}]\sin^2
+\]
+
+In the PMNS matrix, we have four parameters: the three mixing angles $\theta_{12}$, $\theta_{13}$, $\theta_{23}$ and the charge-parity (CP) violation parameter of lepton sector, $\delta_{CP}$. The unknown value of $\delta_{CP}$ is related to leptogenesis, the hypothetical physical process that produced an asymmetry between leptons and antileptons in the very early universe\cite{wiki_cp}. In addition, there are two squared-mass differences, $\Delta m^2_{21}=m_2^2-m_1^2$ and $\Delta m^2_{32}=|m_3^2-m_2^2|$. The sign of $\Delta m^2_{32}$ is unknown and it indicates a mass hierarchy problem of whether neutrino mass is normal hierarchy (NH, $m_3>m_2>m_1$) or inverted hierarchy (IH, $m_3<m_1<m_2$)\cite{pdg2018}. 
+
+Currently, these six parameters have been measured by neutrino oscillation experiments. These experiments can be classified by the neutrino sources they use. They are the solar, the reactor, the atmospheric, the accelerator and the astronomical and cosmological neutrino experiments. Table~\ref{nu_exp} lists the energy scale of the neutrino source as well as the example experiments.
+
+\begin{table}[ht]
+	\caption{\label{nu_exp} Oscillation neutrino experiments.}	
+	{\centering
+		\begin{tabular*}{135mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			type & source & $E_\nu$ & example\\
+			\midrule
+			solar& the Sun & MeV scale & SNO \\
+			reactor& reactor & MeV scale & DayaBay \\
+			atmospheric& cosmic-ray& GeV scale & SuperK\\
+			accelerator&  $\nu$ beam from accelerator & GeV scale & T2K\\	
+			astronomical& astronomical objects & GeV-EeV scale & IceCube\\	
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+
+
+For the $\Delta m^2_{21}$ and $\theta_{12}$, the combined analysis of the measurements from the reactor experiment KamLAND and SNO gave $\Delta m^2_{21} = 7.59^{+0.21}_{-0.21}\times 10^{-5}eV^2$ and $\tan^2{\theta}_{21}=0.47^{+0.06}_{-0.05}$\cite{kamland_measure}.
+
+The accelerator neutrino experiments as well as the atmospheric neutrino experiments have measured $\Delta m^2_{32}$ and $\theta_{23}$. The most recent results from SuperK show that in NH, $\sin^2\theta_{23}=0.588^{+0.031}_{-0.064}$ and $\Delta m^2_{32} = 2.5^{+0.13}_{-0.20}\times 10^{-3} eV^2$\cite{superk_new}. 
+
+In 2012, the reactor neutrino experiment Daya Bay reported the discovery of non-zero $\theta_{13}$ with a significance of 5.2$\sigma$. In 2016, Daya Bay reported that $\sin^2 2\theta_{13} = 0.0841\pm0.0027(stat.)\pm0.0019(syst.)$. This high-precision result makes $\sin^2 2\theta_{13}$ the best measured mixing angle\cite{dayabayresults,reactorNu}.
+
+$\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing}. In 2017, the T2K experiment in Japan rejected the hypothesis that neutrinos and antineutrinos oscillate with the same probability at 95\% confidence (2$\sigma$) level. This indicates a hint of CP symmetry broken by neutrinos\cite{t2k}.
+
+
+The oscillation probability in matter can be written in a concise and exact form as \cite{kimura2002exact}:
+\[
+P(\nu_e\to\nu_\mu) = A\cos\delta+B\sin\delta+C
+\]
+
+
+
+will also provide the information for the CP- and T-violation
+by investigating the quantities of:
+\[
+A_{CP} = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}
+\]
+
+\[
+A_T = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}
+\]
+
+
 
 
 
@@ -95,95 +182,6 @@ The denominator in equation (\ref{eq:thetaM}) implies a resonance condition:
 
 From this condition, for a given $E$, there is a resonance density $n^{reson}_e$ while for a given $n_e$, there is a resonance energy $E^{reson}$. When the resonance condition is satisfied, $\theta_m = \frac{\pi}{4}$ and two flavor neutrinos are maximally mixed, even if the vacuum mixing angle $\theta$ is small. This is called matter enhanced neutrino oscillation\cite{smirnov2016solar,fukugita2013physics}.
 
-\subsection{Three-flavor Mixing}
-
-For three-flavor neutrino mixing, we have\cite{pdg2018}:
-\begin{equation}\label{eq:mixingmatrix}
-|\nu_f> = \sum_{k=1}^3U^*_{fk}|\nu_k>, 
-\end{equation}
-where $f=e,\mu,\tau$ and $k=1,2,3$. The unitary PMNS matrix, $U_{PMNS}$, can be parametrized as: 
-
-$U_{PMNS} = $
-\begin{equation}
-\begin{bmatrix}
-1 &0 &0\\
-0 &\cos\theta_{23} &\sin\theta_{23}\\
-0 &-\sin\theta_{23} &\cos\theta_{23}\\ 
-\end{bmatrix}
-\begin{bmatrix}
-\cos\theta_{13} &0 &e^{-i\delta_{CP}}\sin\theta_{13}\\
-0 &1 &0\\
-e^{-i\delta_{CP}}\sin\theta_{13} &0 &\cos\theta_{13}\\ 
-\end{bmatrix}
-\begin{bmatrix}
-\cos\theta_{12} &\sin\theta_{12} &0\\
--\sin\theta_{12} &\cos\theta_{12} &0\\
-0 &0 &1\\ 
-\end{bmatrix}.
-\end{equation}
-
-
-
-
-In the PMNS matrix, we have four parameters: the three mixing angles $\theta_{12}$, $\theta_{13}$, $\theta_{23}$ and the charge-parity (CP) violation parameter of lepton sector, $\delta_{CP}$. The unknown value of $\delta_{CP}$ is related to leptogenesis, the hypothetical physical process that produced an asymmetry between leptons and antileptons in the very early universe\cite{wiki_cp}. In addition, there are two squared-mass differences, $\Delta m^2_{21}=m_2^2-m_1^2$ and $\Delta m^2_{32}=|m_3^2-m_2^2|$. The sign of $\Delta m^2_{32}$ is unknown and it indicates a mass hierarchy problem of whether neutrino mass is normal hierarchy (NH, $m_3>m_2>m_1$) or inverted hierarchy (IH, $m_3<m_1<m_2$)\cite{pdg2018}. 
-
-Currently, these six parameters have been measured by neutrino oscillation experiments. These experiments can be classified by the neutrino sources they use. They are the solar, the reactor, the atmospheric, the accelerator and the astronomical neutrino experiments. Table~\ref{nu_exp} lists the energy scale of the neutrino source as well as the example experiments.
-
-\begin{table}[ht]
-	\caption{\label{nu_exp} Oscillation neutrino experiments.}	
-	{\centering
-		\begin{tabular*}{135mm}{c@{\extracolsep{\fill}}cccc}
-			\toprule 
-			type & source & $E_\nu$ & example\\
-			\midrule
-			solar& the Sun & MeV scale & SNO \\
-			reactor& reactor & MeV scale & DayaBay \\
-			atmospheric& cosmic-ray& GeV scale & SuperK\\
-			accelerator&  $\nu$ beam from accelerator & GeV scale & T2K\\	
-			astronomical& astronomical objects & GeV-EeV scale & IceCube\\	
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-
-For the $\Delta m^2_{21}$ and $\theta_{12}$, the combined analysis of the measurements from the reactor experiment KamLAND and SNO gave $\Delta m^2_{21} = 7.59^{+0.21}_{-0.21}\times 10^{-5}eV^2$ and $\tan^2{\theta}_{21}=0.47^{+0.06}_{-0.05}$\cite{kamland_measure}.
-
-The accelerator neutrino experiments as well as the atmospheric neutrino experiments have measured $\Delta m^2_{32}$ and $\theta_{23}$. The most recent results from SuperK show that in NH, $\sin^2\theta_{23}=0.588^{+0.031}_{-0.064}$ and $\Delta m^2_{32} = 2.5^{+0.13}_{-0.20}\times 10^{-3} eV^2$\cite{superk_new}. 
-
-In 2012, the reactor neutrino experiment Daya Bay reported the discovery of non-zero $\theta_{13}$ with a significance of 5.2$\sigma$. In 2016, Daya Bay reported that $\sin^2 2\theta_{13} = 0.0841\pm0.0027(stat.)\pm0.0019(syst.)$. This high-precision result makes $\sin^2 2\theta_{13}$ the best measured mixing angle\cite{dayabayresults,reactorNu}.
-
-$\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing}. In 2017, the T2K experiment in Japan rejected the hypothesis that neutrinos and antineutrinos oscillate with the same probability at 95\% confidence (2$\sigma$) level. This indicates a hint of CP symmetry broken by neutrinos\cite{t2k}.
-
-
-The oscillation probability in matter can be written in a concise and exact form as \cite{kimura2002exact}:
-\[
-P(\nu_e\to\nu_\mu) = A\cos\delta+B\sin\delta+C
-\]
-
-
-
-will also provide the information for the CP- and T-violation
-by investigating the quantities of:
-\[
-A_{CP} = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}
-\]
-
-\[
-A_T = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}
-\]
- 
-
-
-
-
-
-
-
-
-
-
-
-
 \subsection{Reactor-solar Experiments}
 
 KamLand
@@ -246,23 +244,21 @@ Majorana found a representation of the $\gamma$-matrices as follow:
 These matrices themselves are pure imaginary. 
 
 
-\section{Double Beta Decay}
+For heavy radioactive isotopes with nuclei of even neutron number ($N$) and even proton number ($Z$) (called even-even nucleus), beta decay will lead to an odd-odd nucleus which is less stable. For some such isotopes the beta decay is energetically forbidden. In 1935, Maria Goeppert-Mayer pointed out that they can still decay through a double beta decay process: $(Z,A) \to (Z+2,A)+2e^{-}+2\bar{\nu_e}+Q_{\beta\beta}$, where the $Q_{\beta\beta}$ is the released energy. This is called ordinary double beta decay or $2\nu\beta\beta$, which is allowed by the Standard Model and with a typical half-life $T_{1/2}>10^{19}$ years\cite{martin}.
 
-For heavy radioactive isotopes with nuclei of even neutron number (N) and even proton number (Z) (called even-even nucleus), beta decay will lead to an odd-odd nucleus which is less stable. For some such isotopes the beta decay is energetically forbidden. In 1935, Maria Goeppert-Mayer pointed out that they can still decay through a double beta decay process: $(Z,A) \to (Z+2,A)+2e^{-}+2\bar{\nu_e}+Q_{\beta\beta}$, where the $Q_{\beta\beta}$ is the released energy. This is called ordinary double beta decay or $2\nu\beta\beta$, which is allowed by the Standard Model and with a typical half-life $T_{1/2}>10^{19}$ years\cite{martin}.
+If neutrinos are Majorana particles, a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Figure~\ref{feynman1}.
 
-In 1937, Ettore Majorana proposed that neutral spin-1/2 particles (fermions) can be their own antiparticles\cite{majorana}. If neutrinos have this behaviour, the process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Figure~\ref{feynman1}.
-
-%\begin{figure}[htbp]
-%	\centering	
-%	\begin{minipage}[t]{0.45\textwidth}
-%		\includegraphics[width=5cm]{doubleBeta2nu_feynman.png}
-%	\end{minipage}
-%	\begin{minipage}[t]{0.45\textwidth}
-%		\includegraphics[width=5cm]{doubleBeta_feynman.png}
-%	\end{minipage}
-%	\caption{ Feynman diagrams for $2\nu\beta\beta$ (left) and $0\nu\beta\beta$ (right).}
-%	\label{feynman1}
-%\end{figure}
+\begin{figure}[htbp]
+	\centering	
+	\begin{minipage}[t]{0.45\textwidth}
+		\includegraphics[width=5cm]{doubleBeta2nu_feynman.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.45\textwidth}
+		\includegraphics[width=5cm]{doubleBeta_feynman.png}
+	\end{minipage}
+	\caption{ Feynman diagrams for $2\nu\beta\beta$ (left) and $0\nu\beta\beta$ (right).}
+	\label{feynman1}
+\end{figure}
 
 The interpretation of the $0\nu\beta\beta$ process is considered as exchanging light Majorana neutrinos. In this case the effective Majorana mass $<m_{ee}>=\sum_{i=1}^{3} |U_{ei}|^2m_i~(i=1,2,3)$, $U_{ei}$ are the elements of the neutrino mixing matrix for the flavor state $\nu_e$, and $m_i$ are the mass eigenvalues of the mass eigenstates (from (\ref{eq:mixingmatrix})). The observable quantity is the half-life:
 \[
@@ -319,7 +315,27 @@ For $\mathcal{O}(1TeV)$, the $\nu$ mass is $0.1~eV$
 
 
 
+
+
+
+
+
+
+
+
 \subsection{Status of Double Beta Decay Experiments}
+
+There are 35 isotopes can undergo the double beta decay process, but only a few of them are suitable for the application in direct $0\nu\beta\beta$ search experiments\cite{giunti2007fundamentals}. From the experimental view, the candidate isotopes are expected to have relatively high natural abundances, high Q-values, be deployed in a large amount with low costs, and are not toxic to the environment as well. However, in realistic situation there is no isotope fulfills all these properties and the current experiments making trade-offs\cite{dolinski2019neutrinoless}.
+
+The experiments searching for direct signals of $0\nu\beta\beta$ mainly measure the physics properties of the two emitted electrons, such as their energies, momentum and tracks. 
+
+inhomogeneous experiments use external $\beta\beta$ source
+while homogeneous experiments use $\beta\beta$ source as the detection medium, which are mainly referred as calorimeter experiments\cite{cremonesi2014challenges,shimizu2019double}.
+
+
+
+
+$^{136}$Xe, $^{48}$Ca, $^{76}$Ge, $^{130}$Te
 
 At the time of writing, 
 
@@ -327,19 +343,27 @@ $0\nu\beta\beta$ in the range of $10^{25}-10^{26}$ year,
 
 
 
+The observed number of event in expectation is: 
+\[
+N_{event} = \ln 2 \frac{N_A}{M_A}\frac{\alpha\cdot\epsilon\cdot m\cdot t}{T^{0\nu}_{1/2}},
+\]
 
-The GERmanium Detector Array (GERDA) experiment searches for $0\nu\beta\beta$ of $^{76}$Ge. The experiment uses bare germanium crystals with an enrichment of up to $\sim$87\% $^{76}$Ge operated in a radiopure cryogenic liquid argon (LAr). GERDA Phase I had an exposure of 21.6 kg$\cdot$yr and Phase-II started with 35.6kg from enriched material in December 2015. With combined data of Phase I and Phase II, 
+where $N_A$ is the Avogadro's number, $\alpha$ is the abundance of the isotope in the element, 
+$M$ is the molar mass of the isotope
+and $t$ is the measurement time of total exposure.
+
+
+
+The GERmanium Detector Array (GERDA) experiment searches for $0\nu\beta\beta$ of $^{76}$Ge. The experiment uses bare germanium crystals with an enrichment of up to $\sim$87\% $^{76}$Ge operated in a radiopure cryogenic liquid argon (LAr)\cite{agostini2016search}. GERDA Phase I had an exposure of 21.6 kg$\cdot$yr and Phase-II started with 35.6kg from enriched material in December 2015. With combined data of Phase I and Phase II, 
 
 a total exposure of 82.4 kg$\cdot$yr 
 
+In 2017, GERDA reported a 90\% confidence level (C.L.) lower limit for the half-life of $^{76}$Ge, $T^{0\nu}_{1/2}(^{76}$Ge$)>8.0\times 10^{25}$ years.
+
+GERDA reported in 2019 a lower limit half-life of $T^{0\nu}_{1/2}(^{76}$Ge$)>0.9\times 10^{26}$ years at 90\% C.L.\cite{agostini2019probing}. effective $m_{ee}$ is [104,228]~meV.
 
 
-GERDA reported in 2019 a lower limit half-life of $T^{0\nu}_{1/2}(^{76}$Ge$)>0.9\times 10^{26}$ years at 90\% C.L.\cite{gerda,agostini2019probing}.
-
-
-
-
-The Enriched Xenon Observatory (EXO) experiment uses 200-kg liquid Xenon (LXe) time projection chamber (TPC) to search for $0\nu\beta\beta$ in $^{136}$Xe. In 2011 they observed the half life of double beta decay of $^{136}$Xe to be $2.11\times 10^{21}$ years and in 2014 they set a limit on $T^{0\nu}_{1/2}(^{136}$Xe$)>1.1\times 10^{25}$ yr\cite{exo}. EXO is now upgrading to the next 5-tonne experiment (nEXO) and is expected to reach an exclusion sensitivity of $T^{0\nu}_{1/2}(^{136}$Xe) to about $10^{28}$ years at 90\% C.L.\cite{nEXO}.
+The Enriched Xenon Observatory (EXO) experiment uses 200-kg liquid Xenon (LXe) time projection chamber (TPC) to search for $0\nu\beta\beta$ in $^{136}$Xe. In 2011 they observed the half life of double beta decay of $^{136}$Xe to be $2.11\times 10^{21}$ years and in 2014 they set a limit on $T^{0\nu}_{1/2}(^{136}$Xe$)>1.1\times 10^{25}$ yr\cite{exo}. EXO is now upgrading to the next 5-tonne experiment (nEXO) and is expected to reach an exclusion sensitivity of $T^{0\nu}_{1/2}(^{136}$Xe) to about $10^{28}$ years at 90\% C.L.\cite{albert2018sensitivity}.
 
 Also looking into $^{136}$Xe, the KamLAND-Zen (ZEroNeutrino) experiment exploits the existing facilities of KamLAND by setting a 3.08-m-diameter spherical inner balloon filled with 13 tons of Xe-loaded liquid scintillator at the center of the KamLAND detector.
 

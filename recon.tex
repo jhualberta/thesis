@@ -165,10 +165,18 @@ In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) a
 An effect of `fitter pull' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The cause of this effect is that the Cherenkov photons trigger the majority of PMT hits with early timing and these hits are located within the Cherenkov cone; while the scattered or reflected light with later timing trigger PMT hits throughout the detector. This 
 
 
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=6cm]{partialN16.png}
+%\caption{ modified from Fig.~C.2 in \cite{brice1996monte}.}
+%	\label{drivecor}
+%\end{figure}
+
  as illustrated in Fig. .
 
   
-  modified from Fig. C.2 in \cite{brice1996monte}.
+ 
 
 shift 
 
@@ -445,6 +453,7 @@ The partial fitter is invulnerable to the change of pdfs caused by different PPO
 
 
 \section{Energy Reconstruction}
+ 
 
 The previous sections mainly focus on vertex and direction reconstruction. For the energy reconstruction in the water phase 
 
@@ -452,11 +461,23 @@ energy response processor, or the energy RSP fitter, is derived from SNO \cite{b
 
 It uses the fitted position and direction of an event as inputs and then calculates an effective 
 
+estimated $N_\gamma$,
+
+detailed detector effects are taken into account.
+
+the asymmetric geometry of the detector, for example the neck cylinder on the top of the AV sphere; the actual number of online PMTs in a realistic physics run.
 
 
 
 
 
+\isotope[16]{N} calibration scans at certain detector points.
+
+Energy lookup table built from the simulation data set.
+
+
+
+energy look up\cite{energyRSP}.
 
 (energyRSP)
 
@@ -468,13 +489,21 @@ to scale $NHits$ based on several sets of simulations.
 
 
 
+\section{Machine Learning Algorithm}
+
+artificial neural network (ANN)
+Position ANN,
+
+
+\cite{neuronetwork}
+
 
 
 
 
 
 \section{PMT Selectors for the Fitter}
-Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the selected PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
+Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the proper PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
 
 \begin{itemize}
 \item[$\bullet$] Straight Light Path Time Residual Cut Selector

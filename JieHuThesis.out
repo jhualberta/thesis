@@ -10,46 +10,46 @@
 \BOOKMARK [1][-]{section.2.1}{Neutrino Flavor Transformation and Oscillation}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.1.1}{Vacuum Oscillation}{section.2.1}% 11
 \BOOKMARK [2][-]{subsection.2.1.2}{Matter Effect}{section.2.1}% 12
-\BOOKMARK [2][-]{subsection.2.1.3}{Three-flavor Mixing}{section.2.1}% 13
-\BOOKMARK [2][-]{subsection.2.1.4}{Reactor-solar Experiments}{section.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.1.5}{Atmosphere-accelerator Experiments}{section.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.1.6}{Astrophysics Experiments}{section.2.1}% 16
-\BOOKMARK [1][-]{section.2.2}{Majorana Neutrino}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.3}{Double Beta Decay}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.3.1}{Status of Double Beta Decay Experiments}{section.2.3}% 19
-\BOOKMARK [0][-]{chapter.3}{The SNO+ Experiment}{}% 20
-\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.2}{SNO+ Physics Phases}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.3}{Detection Medium}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.1}{Cherenkov Radiation}{section.3.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.2}{Scintillation from Organic Scintillator}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.3}{Liquid Scintillator for SNO+}{section.3.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Optics}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Trigger and Readout of the SNO+ Detector}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.6}{Calibration}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.7}{Monte Carlo Simulation for SNO+}{chapter.3}% 30
-\BOOKMARK [0][-]{chapter.4}{Event Reconstruction}{}% 31
-\BOOKMARK [1][-]{section.4.1}{Reconstruction of the SNO+}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.2}{Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.3}{Multi-path Vertex Reconstruction Algorithm for SNO+}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.4}{MPW Position and Direction Reconstructions}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.4.1}{Vertex Reconstruction}{section.4.4}% 36
-\BOOKMARK [2][-]{subsection.4.4.2}{Direction Reconstruction}{section.4.4}% 37
-\BOOKMARK [2][-]{subsection.4.4.3}{Drive Correction}{section.4.4}% 38
-\BOOKMARK [1][-]{section.4.5}{Vertex and Direction Reconstruction for Wavelength-shifter}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.6}{Vertex Reconstruction for Partial-fill and Scintillator Phases}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.7}{PMT Selectors for the Fitter}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.8}{[16]N Calibration Test}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.8.1}{Water Phase Calibration}{section.4.8}% 43
-\BOOKMARK [2][-]{subsection.4.8.2}{Partial-fill Phase Calibration}{section.4.8}% 44
-\BOOKMARK [0][-]{chapter.5}{SNO+ Water Phase Analysis}{}% 45
-\BOOKMARK [1][-]{section.5.1}{Classifiers}{chapter.5}% 46
-\BOOKMARK [0][-]{chapter.6}{Towards the SNO+ Future Phases}{}% 47
-\BOOKMARK [1][-]{section.6.1}{Partial-fill Phase Analysis}{chapter.6}% 48
-\BOOKMARK [2][-]{subsection.6.1.1}{Sky-shine Classifier}{section.6.1}% 49
-\BOOKMARK [2][-]{subsection.6.1.2}{Bi-Po Analysis}{section.6.1}% 50
-\BOOKMARK [2][-]{subsection.6.1.3}{Extract Cherenkov Signals in Partial-Phase}{section.6.1}% 51
-\BOOKMARK [1][-]{section.6.2}{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.2.1.3}{Reactor-solar Experiments}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.4}{Atmosphere-accelerator Experiments}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.5}{Astrophysics Experiments}{section.2.1}% 15
+\BOOKMARK [1][-]{section.2.2}{Majorana Neutrino}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.1}{Status of Double Beta Decay Experiments}{section.2.2}% 17
+\BOOKMARK [0][-]{chapter.3}{The SNO+ Experiment}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{SNO+ Physics Phases}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Detection Medium}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Cherenkov Radiation}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Scintillation from Organic Scintillator}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.3}{Liquid Scintillator for SNO+}{section.3.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Optics}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.5}{Trigger and Readout of the SNO+ Detector}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.6}{Calibration}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.7}{Monte Carlo Simulation for SNO+}{chapter.3}% 28
+\BOOKMARK [0][-]{chapter.4}{Event Reconstruction}{}% 29
+\BOOKMARK [1][-]{section.4.1}{Reconstruction of the SNO+}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.2}{Reconstruction Algorithms for Position, Time and Energy of Events in SNO+}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.3}{Multi-path Vertex Reconstruction Algorithm for SNO+}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.4}{MPW Position and Direction Reconstructions}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.4.1}{Vertex Reconstruction}{section.4.4}% 34
+\BOOKMARK [2][-]{subsection.4.4.2}{Direction Reconstruction}{section.4.4}% 35
+\BOOKMARK [2][-]{subsection.4.4.3}{Drive Correction}{section.4.4}% 36
+\BOOKMARK [1][-]{section.4.5}{Vertex and Direction Reconstruction for Wavelength-shifter}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.6}{Vertex Reconstruction for Partial-fill and Scintillator Phases}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.7}{Energy Reconstruction}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.8}{Machine Learning Algorithm}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.9}{PMT Selectors for the Fitter}{chapter.4}% 41
+\BOOKMARK [0][-]{chapter.5}{SNO+ Water Phase Analysis}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Classifiers}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.2}{[16]N Calibration Scans in the Water Phase}{chapter.5}% 44
+\BOOKMARK [0][-]{chapter.6}{Towards the SNO+ Future Phases}{}% 45
+\BOOKMARK [1][-]{section.6.1}{Partial-fill Phase Analysis}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.1.1}{Sky-shine Classifier}{section.6.1}% 47
+\BOOKMARK [2][-]{subsection.6.1.2}{Bi-Po Analysis}{section.6.1}% 48
+\BOOKMARK [2][-]{subsection.6.1.3}{Partial-fill Phase Calibration}{section.6.1}% 49
+\BOOKMARK [2][-]{subsection.6.1.4}{Extract Cherenkov Signals in Partial-fill Phase}{section.6.1}% 50
+\BOOKMARK [1][-]{section.6.2}{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{chapter.6}% 51
+\BOOKMARK [2][-]{subsection.6.2.1}{Measurement Setup and Data Acquisition}{section.6.2}% 52
 \BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 53
 \BOOKMARK [0][-]{appendix.A}{Details for the MultiPath Fitter}{}% 54
 \BOOKMARK [1][-]{section.A.1}{Create a Random Vertex}{appendix.A}% 55

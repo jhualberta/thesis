@@ -12,7 +12,6 @@ have been developed since the SNO analysis \cite{highlevel}.
 
 
 
-
 \item[$\bullet$] $\beta_{14}$ isotropy classifier
 
 This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical	harmonics of an event, where:
@@ -39,19 +38,42 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 \end{itemize}
 
 
-\section{\isotope[16]{N} Calibration Test in the Water Phase}
+\section{\isotope[16]{N} Calibration Scans in the Water Phase}
 During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deployed for internal detector calibration scans in June and November, 2017 and external detector scans in March, 2018. 
+
+This source is inherit from SNO, 
+
+A deuterium-tritium (DT) generator 
+$D+T\to n+^{4}$He, 
+flow $CO_2$ gas stream through pipe lines
+the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$,
+
+
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter.
 
+
+Fig.~\ref{n16pic}
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{n16geom_zach.pdf}
+	\caption{ A picture of the $^{16}N$ source.}
+	\label{n16pic}
+\end{figure}
+
+
+
+
 The $\gamma$ rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=9cm]{sx.pdf}
-%	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from simulations.}
-%	\label{hsx}
-%\end{figure}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{sx.pdf}
+	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}N$ source.}
+	\label{hsx}
+\end{figure}
 
 A position resolution function is defined for the reconstructed electron position distribution\cite{boulay}:
 \[

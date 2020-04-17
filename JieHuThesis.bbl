@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{nndc}
+{MS Windows NT} kernel description.
+\newblock
+  \url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}.
+\newblock Accessed: 2010-09-30.
+
 \bibitem{kalpanaMPFitter}
 Multipath fitter processor.
 \newblock {\em SNO+ Internal Document, docDB-3849-v1.}
@@ -14,6 +20,13 @@ Overview - rat 1.0 documentation.
 \newblock \url{https://rat.readthedocs.io/en/latest/overview.html#goals}, 2014.
 \newblock [Online; accessed 20-Dec-2019].
 
+\bibitem{abe2019constraint}
+K.~Abe, R.~Akutsu, A.~Ali, C.~Alt, C.~Andreopoulos, L.~Anthony, M.~Antonova,
+  S.~Aoki, A.~Ariga, Y.~Asada, et~al.
+\newblock Constraint on the matter-antimatter symmetry-violating phase in
+  neutrinooscillations.
+\newblock {\em arXiv preprint arXiv:1910.03887}, 2019.
+
 \bibitem{agostinelli2003geant4}
 S.~Agostinelli, J.~Allison, K.~a. Amako, J.~Apostolakis, H.~Araujo, P.~Arce,
   M.~Asai, D.~Axen, S.~Banerjee, G.~. Barrand, et~al.
@@ -22,11 +35,38 @@ S.~Agostinelli, J.~Allison, K.~a. Amako, J.~Apostolakis, H.~Araujo, P.~Arce,
   Accelerators, Spectrometers, Detectors and Associated Equipment},
   506(3):250--303, 2003.
 
+\bibitem{agostini2016search}
+M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
+  C.~Bauer, N.~Becerici-Schmidt, E.~Bellotti, S.~Belogurov, et~al.
+\newblock Search of neutrinoless double beta decay with the gerda experiment.
+\newblock {\em Nuclear and particle physics proceedings}, 273:1876--1882, 2016.
+
+\bibitem{agostini2017background}
+M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
+  C.~Bauer, E.~Bellotti, S.~Belogurov, S.~Belyaev, et~al.
+\newblock Background-free search for neutrinoless double-$\beta$ decay of 76 ge
+  with gerda.
+\newblock {\em Nature}, 544(7648):47--52, 2017.
+
+\bibitem{agostini2018improved}
+M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
+  E.~Bellotti, S.~Belogurov, A.~Bettini, L.~Bezrukov, et~al.
+\newblock Improved limit on neutrinoless double-$\beta$ decay of ge 76 from
+  gerda phase ii.
+\newblock {\em Physical review letters}, 120(13):132503, 2018.
+
 \bibitem{agostini2019probing}
 M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
   E.~Bellotti, S.~Belogurov, A.~Bettini, L.~Bezrukov, et~al.
 \newblock Probing majorana neutrinos with double-$\beta$ decay.
-\newblock {\em Science}, page eaav8613, 2019.
+\newblock {\em Science}, 365(6460):1445--1448, 2019.
+
+\bibitem{albert2018sensitivity}
+J.~Albert, G.~Anton, I.~Arnquist, I.~Badhrees, P.~Barbeau, D.~Beck, V.~Belov,
+  F.~Bourque, J.~Brodsky, E.~Brown, et~al.
+\newblock Sensitivity and discovery potential of the proposed nexo experiment
+  to neutrinoless double-$\beta$ decay.
+\newblock {\em Physical Review C}, 97(6):065503, 2018.
 
 \bibitem{alduino2018first}
 C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
@@ -34,6 +74,11 @@ C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
 \newblock First results from cuore: A search for lepton number violation via
   0$\nu\beta\beta$ decay of te-130.
 \newblock {\em Physical review letters}, 120(13):132501, 2018.
+
+\bibitem{neuronetwork}
+M.~Anderson.
+\newblock Neural network fitter updates.
+\newblock {\em SNO+ Internal Document, docDB-6298-v1.}
 
 \bibitem{anderson2019search}
 M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
@@ -108,10 +153,21 @@ I.~T. Coulter.
   Searches for Lepton and Baryon Number Violation.}
 \newblock PhD thesis, Ph. D. thesis, University of Oxford, 2013.
 
+\bibitem{cremonesi2014challenges}
+O.~Cremonesi and M.~Pavan.
+\newblock Challenges in double beta decay.
+\newblock {\em Advances in High Energy Physics}, 2014, 2014.
+
 \bibitem{denton2019eigenvalues}
 P.~B. Denton, S.~J. Parke, and X.~Zhang.
 \newblock Eigenvalues: The rosetta stone for neutrino oscillations in matter.
 \newblock {\em arXiv preprint arXiv:1907.02534}, 2019.
+
+\bibitem{dolinski2019neutrinoless}
+M.~J. Dolinski, A.~W. Poon, and W.~Rodejohann.
+\newblock Neutrinoless double-beta decay: status and prospects.
+\newblock {\em Annual Review of Nuclear and Particle Science}, 69:219--251,
+  2019.
 
 \bibitem{dunger2018topological}
 J.~Dunger.
@@ -127,6 +183,12 @@ I.~Esteban, M.~Gonzalez-Garcia, A.~Hernandez-Cabezudo, M.~Maltoni, and
   ordering.
 \newblock {\em Journal of High Energy Physics}, 2019(1):106, 2019.
 
+\bibitem{fukuda1998evidence}
+Y.~Fukuda, T.~Hayakawa, E.~Ichihara, K.~Inoue, K.~Ishihara, H.~Ishino, Y.~Itow,
+  T.~Kajita, J.~Kameda, S.~Kasuga, et~al.
+\newblock Evidence for oscillation of atmospheric neutrinos.
+\newblock {\em Physical Review Letters}, 81(8):1562, 1998.
+
 \bibitem{fukugita2013physics}
 M.~Fukugita and T.~Yanagida.
 \newblock {\em Physics of Neutrinos: and Application to Astrophysics}.
@@ -136,6 +198,11 @@ M.~Fukugita and T.~Yanagida.
 A.~Giaz.
 \newblock Status and perspectives of the {JUNO} experiment.
 \newblock {\em arXiv preprint arXiv:1804.03575}, 2018.
+
+\bibitem{giunti2007fundamentals}
+C.~Giunti and C.~W. Kim.
+\newblock {\em Fundamentals of neutrino physics and astrophysics}.
+\newblock Oxford university press, 2007.
 
 \bibitem{gregory2005bayesian}
 P.~Gregory.
@@ -186,6 +253,11 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura.
   oscillations in matter.
 \newblock {\em Physics Letters B}, 537(1-2):86--94, 2002.
 
+\bibitem{highlevel}
+J.~Klein.
+\newblock Leta high level cuts (including qpdt and itr).
+\newblock {\em SNO+ Internal Document, docDB-2512-v1.}
+
 \bibitem{knoll2010radiation}
 G.~F. Knoll.
 \newblock {\em Radiation Detection and Measurement}.
@@ -228,6 +300,16 @@ B.~A. Moffat.
 \newblock {\em The optical calibration of the Sudbury Neutrino Observatory}.
 \newblock PhD thesis, Ph. D. thesis, Queen’s University, 2001.
 
+\bibitem{partialEnergy}
+M.~Mottram.
+\newblock Energy reconstruction in partial scintillator fill.
+\newblock {\em SNO+ Internal Document, docDB-3133-v1.}
+
+\bibitem{energyRSP}
+M.~Mottram.
+\newblock Note on {RSP} fitter.
+\newblock {\em SNO+ Internal Document, docDB-3939-v1.}
+
 \bibitem{Paton:2019kgy}
 J.~Paton.
 \newblock {Neutrinoless Double Beta Decay in the SNO+ Experiment}.
@@ -243,6 +325,17 @@ G.~Piperno.
 W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery.
 \newblock {\em Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
+
+\bibitem{andyElectronics}
+A.~M. Richie~Bonventre.
+\newblock Everything a detector operator ever wanted to know about electronics
+  and much more you didn’t want to know.
+\newblock {\em SNO+ Internal Document, docDB-1316-v1.}
+
+\bibitem{shimizu2019double}
+I.~Shimizu and M.~Chen.
+\newblock Double beta decay experiments with loaded liquid scintillator.
+\newblock {\em Frontiers in Physics}, 7:33, 2019.
 
 \bibitem{kalpanaWLS}
 K.~Singh.
@@ -322,6 +415,11 @@ H.~W. Zaglauer and K.~H. Schwarzer.
   the msw mechanism.
 \newblock {\em Zeitschrift f{\"u}r Physik C Particles and Fields},
   40(2):273--282, 1988.
+
+\bibitem{partialEnergyYang}
+Y.~Zhang.
+\newblock Performance of qenergy based on q.
+\newblock {\em SNO+ Internal Document, docDB-6065-v1.}
 
 \bibitem{zuber1998physics}
 K.~Zuber.

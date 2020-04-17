@@ -132,12 +132,16 @@ The advantages of LAB are:
 \end{itemize}
 
 
+
+
+
+
 Te-loaded liquid scintillator (TeLS)
 
 To load the tellurium into the liquid scintillator, a compound is made by 
 condensation reactions between telluric acid (TeA) and 1,2-butanediol (BD), with N,N-dimethyldodecylamine (DDA) being used as a stabilization agent.
 
-
+A tertiary amine (N,N-Dimethyldodecylamine, DDA) was added during the reaction to stabilize TeBD complexes and avoid any phase separation. 
 
 
 
@@ -264,7 +268,18 @@ PMTs are Hamamatsu model R1408.
 
 a single RG59/U type 75 $\Omega$ coaxial cable
 
-19 crates$\times$16 cards$\times$32 channels = 9728 electronics channels.
+
+cables bundle into groups
+
+connected to the Paddle Cards, 
+PMT Interface Card (PMTIC) 
+\cite{andyElectronics}
+
+19 crates$\times$16 Front End Cards (FEC)$\times$32 channels = 9728 electronics channels.
+
+
+
+
 
 Each crate processes 16$\times$32 = 512 PMTs.
 9605 channels are actually used and among them, 32 channels are reserved for calibration devices and labelled as FEC Diagnose (FECD) channels

@@ -3,11 +3,23 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: abbrv.bst
 Database file #1: thesis.bib
+Repeated entry---line 287 of file thesis.bib
+ : @article{agostini2019probing
+ :                             ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 229 of file thesis.bib
+--line 350 of file thesis.bib
+Repeated entry---line 401 of file thesis.bib
+ : @article{tanner0p5
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 407 of file thesis.bib
+ : @article{tanner0p5
+ :                   ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "ratManual" isn't style-file defined
---line 327 of file thesis.bib
-I was expecting a `,' or a `}'---line 462 of file thesis.bib
+--line 468 of file thesis.bib
+I was expecting a `,' or a `}'---line 641 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -20,11 +32,8 @@ Warning--I didn't find a database entry for "reactorNu"
 Warning--I didn't find a database entry for "xing"
 Warning--I didn't find a database entry for "t2k"
 Warning--I didn't find a database entry for "martin"
-Warning--I didn't find a database entry for "majorana"
 Warning--I didn't find a database entry for "kaizuber"
-Warning--I didn't find a database entry for "gerda"
 Warning--I didn't find a database entry for "exo"
-Warning--I didn't find a database entry for "nEXO"
 Warning--I didn't find a database entry for "kamlandZen"
 Warning--I didn't find a database entry for "borexino"
 Warning--I didn't find a database entry for "cno"
@@ -32,8 +41,10 @@ Warning--I didn't find a database entry for "boulay"
 Warning--to sort, need author or key in muonflux
 Warning--to sort, need author or key in ratManual
 Warning--to sort, need author or key in kalpanaMPFitter
+Warning--to sort, need author or key in nndc
 Warning--empty author in kalpanaMPFitter
 Warning--empty year in kalpanaMPFitter
+Warning--empty year in neuronetwork
 Warning--empty year in davidPartialWater
 Warning--empty journal in boulay2004direct
 Warning--empty school in brice1996monte
@@ -43,55 +54,60 @@ Warning--empty year in partialWater
 Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty year in jieMPW
 Warning--empty year in tanner0p5
+Warning--empty year in highlevel
 Warning--empty year in chicagoTiming
 Warning--empty year in modeCut
 Warning--empty journal in mekarski2018electron
+Warning--empty year in partialEnergy
+Warning--empty year in energyRSP
 Warning--empty journal in piperno2015dark
+Warning--empty year in andyElectronics
 Warning--empty year in kalpanaWLS
 Warning--empty year in kalpanaWLS2
 Warning--empty journal in sorensen2016temperature
 Warning--empty year in skyshine
 Warning--empty journal in von2015measurement
 Warning--empty year in joshW1
-You've used 58 entries,
+Warning--empty year in partialEnergyYang
+You've used 75 entries,
             2118 wiz_defined-function locations,
-            810 strings with 13126 characters,
-and the built_in function-call counts, 17014 in all, are:
-= -- 1547
-> -- 1013
-< -- 3
-+ -- 413
-- -- 350
-* -- 1174
-:= -- 3045
-add.period$ -- 172
-call.type$ -- 58
-change.case$ -- 325
+            894 strings with 16097 characters,
+and the built_in function-call counts, 22934 in all, are:
+= -- 2065
+> -- 1461
+< -- 2
++ -- 592
+- -- 512
+* -- 1669
+:= -- 4129
+add.period$ -- 223
+call.type$ -- 75
+change.case$ -- 450
 chr.to.int$ -- 0
-cite$ -- 82
-duplicate$ -- 623
-empty$ -- 1192
-format.name$ -- 350
-if$ -- 3363
+cite$ -- 106
+duplicate$ -- 782
+empty$ -- 1550
+format.name$ -- 512
+if$ -- 4483
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 60
-newline$ -- 291
-num.names$ -- 110
-pop$ -- 394
+int.to.str$ -- 75
+missing$ -- 77
+newline$ -- 376
+num.names$ -- 142
+pop$ -- 524
 preamble$ -- 1
-purify$ -- 280
+purify$ -- 389
 quote$ -- 0
-skip$ -- 424
+skip$ -- 521
 stack$ -- 0
-substring$ -- 597
+substring$ -- 826
 swap$ -- 72
-text.length$ -- 3
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 214
-warning$ -- 24
-while$ -- 134
-width$ -- 60
-write$ -- 582
-(There was 1 error message)
+type$ -- 280
+warning$ -- 31
+while$ -- 177
+width$ -- 77
+write$ -- 753
+(There were 4 error messages)
