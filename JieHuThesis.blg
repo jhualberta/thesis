@@ -9,17 +9,9 @@ Repeated entry---line 287 of file thesis.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
 --line 350 of file thesis.bib
-Repeated entry---line 401 of file thesis.bib
- : @article{tanner0p5
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 407 of file thesis.bib
- : @article{tanner0p5
- :                   ,
-I'm skipping whatever remains of this entry
 Warning--entry type for "ratManual" isn't style-file defined
---line 468 of file thesis.bib
-I was expecting a `,' or a `}'---line 641 of file thesis.bib
+--line 481 of file thesis.bib
+I was expecting a `,' or a `}'---line 654 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -46,12 +38,17 @@ Warning--empty author in kalpanaMPFitter
 Warning--empty year in kalpanaMPFitter
 Warning--empty year in neuronetwork
 Warning--empty year in davidPartialWater
+Warning--empty year in n16geom_zach
+Warning--empty year in n16pic
 Warning--empty journal in boulay2004direct
 Warning--empty school in brice1996monte
 Warning--empty year in brunroot
 Warning--empty year in scintillatorPaper
+Warning--empty school in dragowsky1999sudbury
+Warning--empty school in dunford2006measurement
 Warning--empty year in partialWater
 Warning--empty journal in hamamatsu2018photomultiplier
+Warning--empty school in hamer2001energy
 Warning--empty year in jieMPW
 Warning--empty year in tanner0p5
 Warning--empty year in highlevel
@@ -69,45 +66,45 @@ Warning--empty year in skyshine
 Warning--empty journal in von2015measurement
 Warning--empty year in joshW1
 Warning--empty year in partialEnergyYang
-You've used 75 entries,
+You've used 81 entries,
             2118 wiz_defined-function locations,
-            894 strings with 16097 characters,
-and the built_in function-call counts, 22934 in all, are:
-= -- 2065
-> -- 1461
+            918 strings with 16881 characters,
+and the built_in function-call counts, 24549 in all, are:
+= -- 2216
+> -- 1554
 < -- 2
-+ -- 592
-- -- 512
-* -- 1669
-:= -- 4129
-add.period$ -- 223
-call.type$ -- 75
-change.case$ -- 450
++ -- 631
+- -- 544
+* -- 1784
+:= -- 4431
+add.period$ -- 241
+call.type$ -- 81
+change.case$ -- 480
 chr.to.int$ -- 0
-cite$ -- 106
-duplicate$ -- 782
-empty$ -- 1550
-format.name$ -- 512
-if$ -- 4483
+cite$ -- 117
+duplicate$ -- 840
+empty$ -- 1653
+format.name$ -- 544
+if$ -- 4787
 int.to.chr$ -- 0
-int.to.str$ -- 75
-missing$ -- 77
-newline$ -- 376
-num.names$ -- 142
-pop$ -- 524
+int.to.str$ -- 81
+missing$ -- 80
+newline$ -- 406
+num.names$ -- 154
+pop$ -- 559
 preamble$ -- 1
-purify$ -- 389
+purify$ -- 416
 quote$ -- 0
-skip$ -- 521
+skip$ -- 559
 stack$ -- 0
-substring$ -- 826
-swap$ -- 72
+substring$ -- 882
+swap$ -- 78
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 280
-warning$ -- 31
-while$ -- 177
-width$ -- 77
-write$ -- 753
-(There were 4 error messages)
+type$ -- 304
+warning$ -- 36
+while$ -- 191
+width$ -- 83
+write$ -- 812
+(There were 2 error messages)

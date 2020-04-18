@@ -41,32 +41,55 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}
 During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deployed for internal detector calibration scans in June and November, 2017 and external detector scans in March, 2018. 
 
-This source is inherit from SNO, 
+This source is inherit from SNO experiment\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}, 
 
-A deuterium-tritium (DT) generator 
-$D+T\to n+^{4}$He, 
+A deuterium-tritium (DT) generator in SNOLAB can produce neutrons through: $D+T\to n+^{4}$He, 
 flow $CO_2$ gas stream through pipe lines
 the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$,
+
+
+The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$
+
+a simplified decay scheme is shown in Fig.~\ref{n16decay}.
+
+6.13 MeV $\gamma$ rays.
+
+tagged by a small PMT inside
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5cm]{n16_decay.png}
+	\caption{$^{16}$N main decay scheme, modified from \cite{dragowsky200216n}.}
+	\label{n16decay}
+\end{figure}
+
+
+Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber.
+The chamber is a stainless steel cylinder contains 
+
+
+ The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside; 
+to ensure a high fraction of the $\gamma$-rays 
+
+\cite{dragowsky1999sudbury}.
+ 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{n16geom.png}
+	\caption{$^{16}$N calibration source. Left: a diagram , ; Middle: source geometry implemented in RAT, modified from \cite{n16geom_zach}; a picture of the $^{16}N$ source, taken from \cite{n16pic}.}
+	\label{n16pic}
+\end{figure}
 
 
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter.
 
 
-Fig.~\ref{n16pic}
 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=9cm]{n16geom_zach.pdf}
-	\caption{ A picture of the $^{16}N$ source.}
-	\label{n16pic}
-\end{figure}
-
-
-
-
-The $\gamma$ rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
 \begin{figure}[!htb]
 	\centering

@@ -105,6 +105,16 @@ D.~Auty and A.~Hallin.
 \newblock Partial water fitter.
 \newblock {\em SNO+ Internal Document, docDB-2965-v2.}
 
+\bibitem{n16geom_zach}
+Z.~Barnard.
+\newblock Update to n16 geometry.
+\newblock {\em SNO+ Internal Document, docDB-4414-v1.}
+
+\bibitem{n16pic}
+R.~Bayes.
+\newblock Analysis of n16 scan.
+\newblock {\em SNO+ Internal Document, docDB-4482-v2.}
+
 \bibitem{biller2020slow}
 S.~D. Biller, E.~J. Leming, and J.~L. Paton.
 \newblock Slow fluors for highly effective separation of cherenkov light in
@@ -169,6 +179,27 @@ M.~J. Dolinski, A.~W. Poon, and W.~Rodejohann.
 \newblock {\em Annual Review of Nuclear and Particle Science}, 69:219--251,
   2019.
 
+\bibitem{dragowsky200216n}
+M.~Dragowsky, A.~Hamer, Y.~Chan, R.~Deal, E.~Earle, W.~Frati, E.~Gaudette,
+  A.~Hallin, C.~Hearns, J.~Hewett, et~al.
+\newblock The $^{16}${N} calibration source for the sudbury neutrino
+  observatory.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  481(1-3):284--296, 2002.
+
+\bibitem{dragowsky1999sudbury}
+M.~R. Dragowsky.
+\newblock {\em Sudbury Neutrino Observatory energy calibration using gamma-ray
+  sources}.
+\newblock PhD thesis, 1999.
+
+\bibitem{dunford2006measurement}
+M.~Dunford.
+\newblock {\em Measurement of the $^8${B} solar neutrino energy spectrum at the
+  Sudbury Neutrino Observatory}.
+\newblock PhD thesis, 2006.
+
 \bibitem{dunger2018topological}
 J.~Dunger.
 \newblock {\em Topological and time based event classification for neutrinoless
@@ -219,6 +250,12 @@ A.~Hallin.
 K.~Hamamatsu~Photonics.
 \newblock Photomultiplier tubes: Basics and applications, 2007.
 \newblock 2018.
+
+\bibitem{hamer2001energy}
+A.~S. Hamer.
+\newblock {\em Energy calibration of SNO for measurement of the charged-current
+  neutrino reaction.}
+\newblock PhD thesis, 2001.
 
 \bibitem{horton2006introduction}
 G.~Horton-Smith et~al.
