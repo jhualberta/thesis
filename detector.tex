@@ -110,6 +110,19 @@ For a typical scintillator detector, the time scale of detector response is $\ma
 
 Different charged particles can cause different ionization density when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed component or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, scintillatorPaper}. 
 
+
+
+
+
+an empirical formula, called follows Birk's law\cite{birks1951scintillations, birks1965theory}, describes the photon yield along unit distance by the incident particle:
+\[
+\frac{dY}{dx}=A\frac{dE/dx}{1+k_B\cdot dE/dx},
+\]
+where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
+
+
+
+
 \subsection{Liquid Scintillator for SNO+}
 
 The SNO+ collaboration has been developing liquid scintillator 
@@ -132,7 +145,7 @@ The advantages of LAB are:
 \end{itemize}
 
 
-
+An additional wavelength shifter, 2,5-diphenyloxazole (PPO) is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor and it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments [cite dayabay, borexino] as well as bench-top measurements [cite dayabayBench, novikov, tanner]. The absolute light yield of LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
 
 
 

@@ -5,9 +5,6 @@ During the August to October 2019, the PPO is added into the LAB when the water 
 
 
 \subsection{Sky-shine Classifier}
-
-
-
 A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
 
 
@@ -22,6 +19,20 @@ The SkyShine classifier aims to discriminate "sky shine" events from other backg
 \caption{ An illustration for skyShine classifier, modified from \cite{skyshine}.}
 	\label{drivecor}
 \end{figure}
+
+\subsection{Different PPO Concentrations during the Filling}
+
+Oxford group has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
+
+The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
+
+The partial fitter is re-coordinated according to these measurements.
+
+
+
+
+
+The partial fitter is robust with changes of time profile pdfs.
 
 
 
@@ -163,13 +174,11 @@ p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2
 
 \section{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
 
-If the predicted process of 0νββ-decay exists,  the tellurium isotope will undergo the process: 130Te→130Xe+2e-, where two electrons are emitted from the nuclei.  These two energetic electrons will pass through the liquid scintillator (such as LAB) and deposit energy to excite the molecules of the scintillator. When the molecules de-excite, fluorescence light is released. This process is called scintillation [cite birks, leo, knoll, markchen]. The fluorescence light can be detected by the photosensors designed for particle physics experiments. The photosensors, typically used are photomultiplier tubes (PMTs) [cite pmt], can convert the light into photoelectrons (p.e.) and the p.e.s are further magnified into measurable electrical signals. By measuring the amount of the fluorescence light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible 0νββ-decay signal.
+As described in Chapter 3, charged particles can deposit their energies into the liquid scintillator and the scintillator can emit photons, which are converted by PMTs into measurable electrical signals. By measuring the amount of the light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible 0νββ-decay signal.
 
-For the \isotope[130]{Te} 0νββ-decay process, the signature energy peak is at $2.5~MeV$ [cite whitepaper].  This peak is relatively small and can be immerged in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials [cite whitepaper]. Therefore, the 0νββ-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
+For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak is at $2.5~MeV$\cite{whitepaper}.  This peak is relatively small and can be immerged in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials [cite whitepaper]. Therefore, the 0νββ-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
 
-An additional wavelength shifter, 2,5-diphenyloxazole (PPO) is usually added and dissolved into the LAB [cite ppo]. This wavelength shifter is used as a fluor and it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+ [cite whitepaper]. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments [cite dayabay, borexino] as well as bench-top measurements [cite dayabayBench, novikov, tanner]. The absolute light yield of LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
-
-In this paper, we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the 0νββ-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators [cite stevebiller].
+Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the 0νββ-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators [cite stevebiller].
 
 \subsection{Measurement Setup and Data Acquisition}
 

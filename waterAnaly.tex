@@ -48,38 +48,52 @@ flow $CO_2$ gas stream through pipe lines
 the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$,
 
 
-The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$
+The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$.
+It has a 66.2\% chance to emit an electron with an end-point energy of 4.29 MeV and 22.8\% chance to 
+10.42 MeV
+
+\cite{nndc}
 
 a simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
 6.13 MeV $\gamma$ rays.
-
-tagged by a small PMT inside
-
-
-
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=5cm]{n16_decay.png}
+	\includegraphics[width=6cm]{n16_decay.png}
 	\caption{$^{16}$N main decay scheme, modified from \cite{dragowsky200216n}.}
 	\label{n16decay}
 \end{figure}
 
 
-Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber.
-The chamber is a stainless steel cylinder contains 
+Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside; 
 
 
- The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside; 
 to ensure a high fraction of the $\gamma$-rays 
+
+
+lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
+
+
+tagged by a small PMT inside
+
+A polyethelene bumper cone is at the bottom of the source.
+
+ 
+
+
+
+gas capillary tube
+
+
+ 
 
 \cite{dragowsky1999sudbury}.
  
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=9cm]{n16geom.png}
-	\caption{$^{16}$N calibration source. Left: a diagram , ; Middle: source geometry implemented in RAT, modified from \cite{n16geom_zach}; a picture of the $^{16}N$ source, taken from \cite{n16pic}.}
+	\includegraphics[width=10cm]{n16geom.png}
+	\caption{$^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite{maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite{n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite{n16pic}.}
 	\label{n16pic}
 \end{figure}
 
@@ -89,7 +103,12 @@ The $^{16}$N calibration runs provide an ideal test of fitter performance. From 
 
 
 
-The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+
+
+
+
+
 
 \begin{figure}[!htb]
 	\centering
@@ -98,14 +117,14 @@ The $\gamma$-rays emitted from the $^{16}$N source interact with the water in th
 	\label{hsx}
 \end{figure}
 
-A position resolution function is defined for the reconstructed electron position distribution\cite{boulay}:
+A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
 \[
 R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
 \]
 where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
 the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift  (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
 
-For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay}:
+For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay2004direct}:
 \[
 N_{R}(x)=\int^{+\infty}_{-\infty} S(x)R(x_{fit}-x)dx.
 \]
