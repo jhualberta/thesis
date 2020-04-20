@@ -1,0 +1,37 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Solar neutrino energy spectrum ($E_\nu $ vs. flux) for the solar model BS05(OP)\cite {BP05}.}}{4}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Feynman diagrams for $2\nu \beta \beta $ (left) and $0\nu \beta \beta $ (right).}}{10}{figure.2.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A Jablonski diagram for the organic scintillator, modified from \cite {birks1965theory, knoll2010radiation}.}}{19}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}}{32}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT response time as the timing pdf.}}{32}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PMT angular distribution as the angular response pdf.}}{32}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Light path calculation for the MP Partial Fitter.}}{37}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}}{38}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{39}{figure.4.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{39}{figure.4.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{39}{figure.4.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{39}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{39}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{39}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{39}{figure.4.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{39}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{45}{figure.4.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces $^{16}$N main decay scheme, modified from \cite {dragowsky200216n}.}}{47}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces $^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite {maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite {n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite {n16pic}.}}{48}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Spatial distributions of {$^{16}$}N first $\gamma $-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}N$ source.}}{49}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{51}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{51}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{51}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{51}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{52}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{53}{figure.5.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for skyShine classifier, modified from \cite {skyshine}.}}{55}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{57}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{58}{figure.6.3}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,112 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: JieHuThesis.aux
+The style file: ieeetr.bst
+Database file #1: thesis.bib
+Repeated entry---line 368 of file thesis.bib
+ : @article{agostini2019probing
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "muonflux" isn't style-file defined
+--line 431 of file thesis.bib
+Warning--entry type for "ratManual" isn't style-file defined
+--line 591 of file thesis.bib
+I was expecting a `,' or a `}'---line 772 of file thesis.bib
+ :   
+ :   school={Ph. D. thesis, University of Oxford}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "BP05"
+Warning--I didn't find a database entry for "bahcall1"
+Warning--I didn't find a database entry for "raymond"
+Warning--I didn't find a database entry for "imb"
+Warning--I didn't find a database entry for "soudan2"
+Warning--I didn't find a database entry for "atmNuReview"
+Warning--I didn't find a database entry for "wiki_cp"
+Warning--I didn't find a database entry for "kamland_measure"
+Warning--I didn't find a database entry for "superk_new"
+Warning--I didn't find a database entry for "dayabayresults"
+Warning--I didn't find a database entry for "reactorNu"
+Warning--I didn't find a database entry for "xing"
+Warning--I didn't find a database entry for "t2k"
+Warning--I didn't find a database entry for "martin"
+Warning--I didn't find a database entry for "exo"
+Warning--I didn't find a database entry for "kamlandZen"
+Warning--I didn't find a database entry for "borexino"
+Warning--I didn't find a database entry for "cno"
+Warning--empty school in maclellan2009energy
+Warning--empty year in matt_deployedsource
+Warning--empty year in n16geom_zach
+Warning--empty year in n16pic
+Warning--empty year in skyshine
+Warning--empty year in chicagoTiming
+Warning--empty year in tanner0p5
+Warning--empty journal in piperno2015dark
+Warning--empty journal in von2015measurement
+Warning--empty journal in sorensen2016temperature
+Warning--empty year in scintillatorPaper
+Warning--empty year in joshW1
+Warning--empty journal in hamamatsu2018photomultiplier
+Warning--empty year in andyElectronics
+Warning--empty year in partialWater
+Warning--empty year in davidPartialWater
+Warning--empty year in kalpanaWLS
+Warning--empty year in kalpanaWLS2
+Warning--empty year in kalpanaMPFitter
+Warning--empty year in jieMPW
+Warning--empty school in brice1996monte
+Warning--empty journal in boulay2004direct
+Warning--empty year in energyRSP
+Warning--empty year in partialEnergy
+Warning--empty year in neuronetwork
+Warning--empty year in modeCut
+Warning--empty year in highlevel
+Warning--empty school in dragowsky1999sudbury
+Warning--empty school in hamer2001energy
+Warning--empty year in oxfordMeasurement
+Warning--empty year in partialEnergyYang
+Warning--empty year in brunroot
+Warning--empty school in dunford2006measurement
+Warning--empty journal in mekarski2018electron
+You've used 94 entries,
+            1876 wiz_defined-function locations,
+            974 strings with 18368 characters,
+and the built_in function-call counts, 19761 in all, are:
+= -- 1754
+> -- 1023
+< -- 0
++ -- 390
+- -- 296
+* -- 1386
+:= -- 3041
+add.period$ -- 116
+call.type$ -- 94
+change.case$ -- 76
+chr.to.int$ -- 0
+cite$ -- 128
+duplicate$ -- 1069
+empty$ -- 1866
+format.name$ -- 296
+if$ -- 4678
+int.to.chr$ -- 0
+int.to.str$ -- 94
+missing$ -- 92
+newline$ -- 307
+num.names$ -- 91
+pop$ -- 360
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 532
+stack$ -- 0
+substring$ -- 602
+swap$ -- 343
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 34
+while$ -- 153
+width$ -- 96
+write$ -- 843
+(There were 2 error messages)
