@@ -159,7 +159,7 @@ In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) a
 
 \subsection{Drive Correction}
 
-An effect of `fitter pull' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The cause of this effect is that the Cherenkov photons trigger the majority of PMT hits with early timing and these hits are located within the Cherenkov cone; while the scattered or reflected light with later timing trigger PMT hits throughout the detector. This 
+An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The cause of this effect is that the Cherenkov photons trigger the majority of PMT hits with early timing and these hits are located within the Cherenkov cone; while the scattered or reflected light with later timing trigger PMT hits throughout the detector. This 
 
 
 
@@ -203,10 +203,93 @@ It is important to note that since the drive correction parameters are obtained 
 By fitting the simulations of 5 MeV electrons generated at the detector center and travelling along +X direction, the drive effct of the MPW fitter causes a $\sim$50 mm biases from the detector center along +X axis. The drive correction reduces this drive bias down to $\sim$0.2 mm. For the reconstruction of \isotope[16]{N} data, the drive correction can reduce the fitted position RMS by $\sim$20 mm.
 
 
+\section{Vertex and Direction Reconstruction for Water-based Wavelength-shifter}
+X. Dai et al. proposed adding wavelength shifters (WLS) into a water Cherenkov detector like SNO\cite{dai2008wavelength}. Compared to the water Cherenkov detector, a water-based wavelength shifter (wbWLS) detector has a higher light yield (about threefold higher than SNO\cite{dai2008wavelength}) and thus lowers down the energy threshold and opens opportunity to detect low energy events. At the meantime, it will still keep the directionality from Cherenkov signals compared to a loss of the directionality for the liquid scintillator detector, which can be used to suppress the backgrounds when analyzing directional signals, such as solar neutrinos. This technology is being studied by future neutrino experiments, such as the Advanced Scintillation Detector Concept (ASDC)\cite{alonso2014advanced}, WATCHMAN experiment\cite{askins2015physics} and Jinping experiment\cite{beacom2017physics}.
+
+There was a proposal of adding wavelength shifter (WLS) into the SNO+ detector in the water phase. The specific wavelength shifter we considered is PPO, which is a well-studied ingredient of the liquid scintillator used in the SNO+ scintillator phase and Te-loaded phase. Although this proposal was rejected due to the experiment schedule, it is still worthwhile for a conceptual study of a SNO+-like detector that uses water-based wavelength shifter (wbWLS) as detection medium. 
+
+Figure~\ref{pmt_wls} shows the position distributions of triggered PMTs for MC simulated 5 MeV electrons travelling along $+x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water plus 0.1 ppm PPO. For the same electrons, the number of triggered PMTs ($NHit$) in wbWLS is about 2.4 times greater than the pure water one. Although there is extra isotropic light emitted, the Cherenkov ring can still be seen clearly, allowing reconstruction of the directionality.  
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=7cm]{PMT_5MeVElectronWater.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=7cm]{PMT_5MeVElectron0p1ppmPPO.pdf}
+	\end{minipage}
+	\caption{Position distributions of triggered PMTs (in zenith and azimuth angles) for 5 MeV electrons travelling along $+x$ direction in the pure water (left) and the water plus 0.1 ppm PPO (right).}
+	\label{pmt_wls}
+\end{figure}
+
+Figure~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $NHit$ distribution (mean nhits). In pure water, a 1 MeV electron simulation does not trigger any PMTs while in wbWLS case we have a mean nhits of 20.
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=9cm]{nhits_wls.pdf}
+	\caption{ The energies of simulated electrons as a function of mean nhits. The values in the 0.1 ppm PPO (solid line with inverted triangle) are compared with the water (dashed line with star).}
+	\label{nhit_wls}
+\end{figure}
+
+In the wbWLS case, since WLS absorbs and re-emits photons, the reconstruction mentioned in section  \ref{reconsection} is slightly modified to build the MP WLS Fitter. According to the optical property of PPO, the prompt light emitted from an event has a probability of $\sim$0.6 to be absorbed by the WLS and then re-emitted at a shifted vertex along the particle direction $\hat{n}$. Then the fitter returns a shifted vertex, $\vec{X}_{0,shifted}=\vec{X}_0+\mathrm{offset}\cdot\hat{n}$. The offset we set in the fitter is 100 mm obtained from simulations. Figure~\ref{WLS_pdf} shows the timing pdf for the wbWLS, which is the PMT response time modified to photon propagation time in the wbWLS.
+\begin{figure}[htbp]	
+	\centering		
+	\begin{minipage}[b]{0.5\textwidth}			
+		%\centering			
+		\includegraphics[height=6cm]{WLSTime_pdf.pdf}			
+	\end{minipage}%				
+	%	\begin{minipage}[b]{0.5\textwidth}		
+	%		%\centering	
+	%		\includegraphics[height=5cm]{ChAngle_pdf.pdf}	
+	%	\end{minipage}	
+	\caption{\label{WLS_pdf} The timing pdf for the wbWLS.}	
+\end{figure}
+
+To reconstruct the direction, besides the angular distribution of Cherenkov photons, $\cos\theta_{Ch}$, we also consider the fraction of the re-emitted and wavelength shifted photons that cause a flat angular distribution.
+
+To test the performance of the MP WLS Fitter, 5 MeV electrons were simulated at the center of the AV filled with wbWLS and travelling along +x direction. As a comparison, the same simulation was done for the AV filled with pure water and the simulated events were reconstructed by the water fitter.
+
+Figure~\ref{WLSFitPos} shows the performance of the WLS fitter reconstructed positions of the MC simulations compared to the pure water case. For the fit position distribution of 5 MeV electrons in the wbWLS, we get a root mean square (RMS) of 201 mm and a bias to the center (the mean of histogram) of 29 mm. Compared to the pure water case, the fit bias is about 19 mm better and the RMS is 188 mm better.
+
+\begin{figure}[htbp]	
+	\centering			
+	\includegraphics[height=5cm]{WLS_FittedPos.pdf}		
+	\caption{\label{WLSFitPos} Fit position projected on x axis. The WLS fitter reconstructed $x$ positions of the 5 MeV electron events in the wbWLS (red) are compared to the ones in the water (blue).
+	}
+\end{figure}
+
+For a given Cherenkov event, the error in the reconstructed event direction is defined as\cite{boulay}: $\cos(\theta_e)=\vec{u}_{fit}\cdot\vec{u}_e$, where $\vec{u}_e$ is the simulated electron direction and $\vec{u}_{fit}$ is the reconstructed direction. To quantify this error, we define a $\cos\theta_{a}$ so that:
+\[
+\frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_0^1 P(\cos\theta_e) d\cos\theta_e} = a.
+\] 
+where $P(\cos\theta_e)$ is the distribution of $\cos\theta_e$ from MC data. The value of $\cos\theta_{a}$ is found numerically to let $\cos\theta_e$ contain $ a\cdot 100\%$ of the reconstructed data. A larger $\cos\theta_{a}$ means better direction reconstruction.
+
+Table~\ref{quantAngular} shows the results of $\cos\theta_{a}$ for SNO heavy water data\cite{boulay} and simulations for SNO+ pure water and wbWLS. 
+
+\begin{table}[ht]
+	\caption{\label{quantAngular}A comparison of quantitative estimates for the angular resolution between the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.}	
+	{\centering
+		\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			medium & $\cos\theta_{0.9}$ & $\cos\theta_{0.8}$ & $\cos\theta_{0.5}$
+			\\
+			\midrule
+			SNO heavy water  & 0.50 & 0.71 & 0.92  \\	
+			SNO+ water  & 0.53 & 0.76 & 0.93	 \\
+			wbWLS  & 0.37 & 0.63 & 0.90  \\	
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+Comparing a pure water SNO+ detector and the wbWLS one, using the MP WLS Fitter for physics events gives a better position resolution without a significant loss in the performance of the direction reconstruction.
+
+This fitter was tested for in \cite{mekarski2018electron}.
 
 
 
-\section{Vertex and Direction Reconstruction for Wavelength-shifter}
 
 
 
@@ -379,20 +462,14 @@ scintillator timing
 
 from bench top measurement, 
 while the rise time, $t_{rise} = 0.8~ns$ the timing parameters $t_i$,
-amplitude $a_i$ are determined by the benchtop measurements 
+amplitude $a_i$ are determined by the benchtop measurements \cite{}.
 %reference: A. LaTorre. LAB+PPO Timing Measurements at Chicago. SNO+ Internal Document (docDB-4189-v1).
 %T. Kaptanoglu. Measurements of light yield and timing of 0.5 g/L LAB+PPO. SNO+ Internal Document (docDB-5997-v1).
 %T. Kaptanoglu. Timing and light yield measurement of Te+DDA LAB+PPO. SNO+ Internal Document (docDB-4813-v4).
 %T. Kaptanoglu. Penn Light Yield Measurements of Te+DDA samples. SNO+ Internal Document (docDB-5124-v2).
 
 \begin{table}[ht]
-	\caption{\label{scint_timing} scintillator $\alpha/\beta$ timing parameters\cite{chicagoTiming,tanner0p5}.}	
-	
-	
-%	Reference [11]: SNO+-docDB 5950: 0.5 g/L light yield, from in-situ tagged BiPo data
-%	Reference [12]: SNO+-docDB 5997: 0.5 g/L light yield and timing from bench-top
-	
-	
+	\caption[]{\label{scint_timing} scintillator $\alpha/\beta$ timing parameters\cite{tanner0p5,joshW1,chicagoTiming}.}		
 	{\centering
 		\begin{tabular*}{165mm}{c@{\extracolsep{\fill}}*9c}
 			\toprule 
@@ -421,9 +498,14 @@ amplitude $a_i$ are determined by the benchtop measurements
 \end{table}
 
 
-pdfs 
+pdfs for all timing
 
-
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{plotAllTiming.pdf}
+	\caption{Timing profiles for liquid scintillators in different SNO+ phases.}
+	\label{allTiming}
+\end{figure}
 
 Radial bias is defined as the difference between the fitted and true position, projected along the radial component (unit vector) of the true position \cite{coulter2013modelling}.
 \[

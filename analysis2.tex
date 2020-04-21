@@ -1,8 +1,10 @@
 \section{Partial-fill Phase Analysis}
 
+During the August to October 2019, the PPO is added into the LAB when the water level was at 5100 mm (in PSUP coordinate). This is one of the stages of the partial-fill phase.
 
-During the August to October 2019, the PPO is added into the LAB when the water level at 5100 mm (in PSUP coordinate). This is for the SNO+ partial-fill phase.
+As mentioned in Chapter 3, the main purpose of the partial-fill phase is to identify the background level of the liquid scintillator. $^{16}$N and $AmBe$ calibration sources were also deployed in the external water to test the response of the detector. 
 
+During the filling, the LAB was first filled into the AV to replace the water. PPO was later mixed with LAB and added into the AV. At some stage, the PPO concentration was kept at 0.53 g/L, which was lower than the nominal 2 g/L. At the lower PPO concentration, the liquid scintillator has a slower timing profile. This also brings an opportunity to extract the Cherenkov signals from the liquid scintillator with low PPO concentration.
 
 \subsection{Sky-shine Classifier}
 A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
@@ -17,24 +19,96 @@ The SkyShine classifier aims to discriminate "sky shine" events from other backg
 	\centering
 	\includegraphics[width=6cm]{skyShine.png}
 \caption{ An illustration for skyShine classifier, modified from \cite{skyshine}.}
-	\label{drivecor}
+	\label{skyshine}
 \end{figure}
 
 \subsection{Different PPO Concentrations during the Filling}
 
-Oxford group has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
+Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
 
 The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
 
 The partial fitter is re-coordinated according to these measurements.
 
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure} time constants and amplitudes measured by Oxford group \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
+			\toprule 
+			PPO [g/L] & $\tau_{rise}$ [ns] & $\tau_1$ [ns] & $\tau_2$ [ns] & $\tau_3$ [ns] & $A_1$ [\%]  & $A_2$ [\%]   & $A_3$ [\%]  & $A'$ [\%] \\
+			\midrule
+		 0.25 & 1.25 & 8.1 & 25.0 & 68.2 & 29.2 & 53.1 & 13.9 & 3.8\\
+		 0.5  & 1.12 & 7.2 & 18.7 & 49.1 & 43.5 & 40.4 & 12.6 & 3.5 \\
+		 1.0 & 1.18 & 5.5 & 13.3 & 40.9 &	45.6 & 37.5 & 13.3 & 3.6 \\
+		 2.0 & 1.06 & 4.2 & 11.7 & 48.9 & 57.9 & 27.8 & 8.9 & 5.4	\\
+		 6.0 & 0.94 & 2.5 & 9.3  & 46.0 & 63.7 & 17.0 & 8.6 & 10.7\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
 
 
+\[
+\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}}
+\]
+
+based on these measured parameters, pdfs were built. 
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=6cm]{skyShine.png}
+	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
+	\label{oxford_pdf}
+\end{figure}
+
+
+
+
+
+
+relative light yield (2g/L = 11900)
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure2}Relative light yield measured by \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
+			\toprule 
+			PPO [g/L] & RLY \\
+			\midrule
+			0.25 & 0.57\\
+			0.5 & 0.65\\
+			1.0 & 0.9\\
+			2.0 & 1.0\\
+			6.0 & 0.93\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
 
 
 The partial fitter is robust with changes of time profile pdfs.
 
 
+radial biases
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_groupV}Tuned effective group velocities for different PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
+			\toprule 
+			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_{scint}$ & $V_{gr,water}$ [mm/ns]& $n_{water,tuned}$\\
+			\midrule
+			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
+			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\
+			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
+			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
+			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
 
 \subsection{Bi-Po Analysis}
 
@@ -123,21 +197,24 @@ A Hough transformation was used to
 	\label{cherenkov_variousE}
 \end{figure}
 
-
-
-
-
-
-
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=6cm]{partialN16.png}
+	\includegraphics[width=8cm]{partialN16.png}
 	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
 	\label{partialN16}
 \end{figure}
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=4cm]{partial_rotateAndShift.png}
+	\caption{For isotropically generated events, rotate and shift.}
+	\label{rotateAndShift}
+\end{figure}
 
-\subsubsection{$\isotope[16]{N}$ Source Analysis}
+
+
+In the case that $e^-$ are generated uniformly and isotropically in the detector, to enhance the 
+Cherenkov ring pattern, a transformation is applied as following:
 
 $\phi=\hat{\vec{v}}_e\cdot\hat{\vec{v}}_{assume}$
 
@@ -164,7 +241,7 @@ p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2
 
 \subsubsection{$AmBe$ Source Analysis}
 
-
+The $AmBe$ source
 
 
 
@@ -174,21 +251,45 @@ p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2
 
 \section{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
 
-As described in Chapter 3, charged particles can deposit their energies into the liquid scintillator and the scintillator can emit photons, which are converted by PMTs into measurable electrical signals. By measuring the amount of the light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible 0νββ-decay signal.
+As described in Chapter 3, the energies of charged particles are converted into photons by the scintillator medium. By measuring the amount of the light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible $0\nu\beta\beta$-decay signal.
 
 For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak is at $2.5~MeV$\cite{whitepaper}.  This peak is relatively small and can be immerged in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials [cite whitepaper]. Therefore, the 0νββ-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
 
-Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the 0νββ-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators [cite stevebiller].
+Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators \cite{biller2017new}.
 
 \subsection{Measurement Setup and Data Acquisition}
 
-We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, which can affect the light yield, for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples.  Te-butanediol samples from both of the DDA and SOP synthesis procedures are prepared and are referred as TeDDA and TeSOP samples respectively. These samples are further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. To avoid air bubbles created by squeezing the vial cap into the liquid, the liquid level for each sample is kept at 30 mm. The dimensions of the vial is shown in the left picture of Fig.~ 12.
+We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, which can affect the light yield, for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples.  Te-butanediol samples from both of the DDA and SOP synthesis procedures are prepared and are referred as TeDDA and TeSOP samples respectively. These samples are further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. To avoid air bubbles created by squeezing the vial cap into the liquid, the liquid level for each sample is kept at 30 mm. The dimensions of the vial is shown in the left picture of Fig.~\ref{scintVial}.
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.38\textwidth}
+			\includegraphics[width=4cm]{scintVial.png}
+		\end{minipage}
+	}   
+		\subfigure{ 
+		\begin{minipage}[b]{0.35\textwidth}
+			\centering
+			\includegraphics[width=6cm]{plasticHolder.png}
+		\end{minipage}
+	}
+	\caption{ Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}
+	\label{scintVial}
+\end{figure}
 
 Two Hamamatsu R580 PMTs [cite PMT] were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~12.  The plastic piece is in a cylindrical shape with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to go inside from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable PLA filament and was machined by 3D-printing facility. The pictures of the piece are shown in Fig.~ 13.
 
-Fig.~ 14 shows a diagram of the whole measurement setup. The plastic piece held the radioactive source and the scintillation vial. It also aligned two PMTs to face to the scintillation vial from each side. The piece can shield lights from outside as well. These setups were placed in a dark box to prevent the lights from lab. Two RG59/U type high voltage (HV) cables connected the PMTs to an HV supply outside the dark box. The HV cables were connected to two signal/HV split boxes to separate the HV current and electrical signals. Due to the resistor of the split box, the HV supply was set to 2200 Volts (V) for the PMT operation while the operation voltage suggested by the Hamamatsu is 1800 V. 
 
-The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{teLSsetup.png}
+	\caption{A diagram shows the light yield measurement setup. See the text for details.}
+	\label{teLSsetup}
+\end{figure}
+
+Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic piece held the radioactive source and the scintillation vial. It also aligned two PMTs to face to the scintillation vial from each side. The piece can shield lights from outside as well. These setups were placed in a dark box to prevent the lights from lab. Two RG59/U type high voltage (HV) cables connected the PMTs to an HV supply outside the dark box. The HV cables were connected to two signal/HV split boxes to separate the HV current and electrical signals. Due to the resistor of the split box, the HV supply was set to 2200 Volts (V) for the PMT operation while the operation voltage suggested by the Hamamatsu is 1800 V. 
+
+The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. This amplifier inverted the signals and amplified them by 26 dB. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
 
 To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel [cite CAEN].
 
@@ -215,34 +316,39 @@ in this thesis, considering a half-life of 30.08 years for the \isotope[137]{Cs}
 
 
 
-  has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays [cite nndc]. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
+  has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
 
-For each sample, measurements were taken for one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Figure 15 is a typical waveform caused by γ rays interacted with the LAB-PPO sample. For the p.e. signals, pulses formed in the waveform. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time tag. From this trigger time tag, in the following 80 ns window the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also from the trigger time tag, a pre-gate of 8 ns was set. The waveform was integrated in the time gate of  [trigger time - 8,  trigger time + 72] ns. This gives the integrated charge, which was calculated as a A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we simply used ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Time stamps were recorded as event time when the triggered event hapfpened. The waveform was recorded and the ADC channel number (energy) of this event was calculated.
+For each sample, measurements were taken for one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$ rays interacted with the LAB-PPO sample. The p.e. signals triggered PMT pulses and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time tag. From this trigger time tag, in the following 80 ns window the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also from the trigger time tag, a pre-gate of 8 ns was set. The waveform was integrated in the time gate of  [trigger time - 8,  trigger time + 72] ns. This gives the integrated charge, which was calculated as a A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we simply used ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Time stamps were recorded as event time when the triggered event hapfpened. The waveform was recorded and the ADC channel number (energy) of this event was calculated.
 
-
-Figure 15.  A typical waveform triggered by scintillation photons from 137Cs $\gamma$-rays interaction with LAB-PPO sample.
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=8cm]{teLS_waveform.png}
+	\caption{A typical waveform triggered by scintillation photons from 137Cs $\gamma$-rays interaction with LAB-PPO sample.}
+	\label{teLSwaveform}
+\end{figure}
 
 In a coincidence time measurement, the event times of the events recorded by each of the two PMTs were compared. If the event time differences between two events from each PMTs were too long, these two events were considered as random noises rather than the physics events and were not recorded. We optimized a coincidence time cut as 40 ns and set that cut during the digitizer data-taking. 
 
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{TeLScoinCut.png}
+	\caption{Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0.  A threshold for counting is set by comparing the two spectrum.}
+	\label{teLScoinCut}
+\end{figure}
 
-Figure 16. Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0.  A threshold for counting is set by comparing the two spectrum. 
-
-Fig.~ 16 shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there exists a zero peak, which is caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT [cite leo].  The peak on the right is the multiple p.e. peak, in our case is mainly caused by a number of scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peak is removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement.  A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
-
-
-Fig.~ 17. A 2D energy spectrum of LAB-PPO sample, after a 10-ns coincidence window cut between two channels. The colour scale is for the counted number of events. The single p.e. and multiple p.e. peaks are also shown.
-
-Fig.~ 17 shows the result of one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events of the 0 ADC channel numbers, which represent noises, were totally cut off after applying the coincidence. Fig.~ 18 shows the results of the TeSOP and TeDDA samples.  Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
-
+Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there exists a zero peak, which is caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT [cite leo].  The peak on the right is the multiple p.e. peak, in our case is mainly caused by a number of scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peak is removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
 
 
-Fig.~ 18. 2D energy spectrum of the counting measurements of TeSOP (left) and TeDDA (right) samples, after a 10-ns coincidence window cut between two channels.
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{TeLS_2Denergy.png}
+	\caption{ 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}
+	\label{teLSresults}
+\end{figure}
 
+Fig.~\ref{teLSresults} shows the result of one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~ 18 shows the results of the TeSOP and TeDDA samples.  Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
 
-
-Fig.~ 18. Project the 2D plots onto channel 0.
-
-In Fig.~ 18, the 2D plots in Fig.~ 17 are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
+In Fig.~ 18, the 2D plots in Fig.~\ref{teLSresults} are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
 
 From this plot, the single p.e. peaks for all the samples as well as the background match together. The multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can clearly see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP is slightly larger than the TeDDA. 
 
@@ -255,7 +361,6 @@ $f_{asym}=c\cdot e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\cdot Erfc(\xi)$
 
 $p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$ 
 
-
 Then for the multiple p.e. region, weighting (dividing) the counts of the event in each channel with the single p.e. ADC channel number to calculate the total number of the photons.
 
 
@@ -263,20 +368,29 @@ Fig.~ 19. Fit the single p.e. peak with an asymmetric Gaussian function (fasym) 
 
 To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
 
-
 Fig.~\ref{2dplot} 2D LABPPO spectrum with coincidence cut. A box cut is defined for multiple PE counting. 
 
 Once the total number of the photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
 
-Results
+\subsubsection{Results}
 
-Table 1. Number of photons calculated by Charge weighted photon number method.
-sample	Number of photons (x106)	Ratio to the LABPPO
-LABPPO	2.0811	1 
-TeDDA	1.2652	0.61
-TeSOP	1.3976	0.67
+\begin{table}[ht]
+	\centering
+	\caption{\label{lightyield1} Number of photons calculated by Charge weighted photon number method.}	
+	{\centering
+		\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			Sample & Number of photons ($\times 10^6$) & RLY\\
+			\midrule
+		LAB-PPO& 2.0811 & 1\\
+		TeDDA& 1.2652 & 	0.61 \\
+		TeSOP& 1.3976 & 0.67\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
 
-Table 1 shows the number of photons calculated by Charge weighted photon number method.
+Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
 
 Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In [cite billerTe],  a relative light yield of ~0.65 was reported.
 
@@ -316,4 +430,3 @@ Here we quantify the relative light yields of our samples. The light yield of th
 %[nndc] Decay Radiation Results, Brookhaven National Laboratory, www.nndc.bnl.gov/nudat2/decaysearchdirect.jsp?nuc=137CS&unc=nds.
 %
 %[billerTe] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
-

@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{press2007numerical}
 W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery, {\em
@@ -40,14 +40,6 @@ R.~Bayes, ``Analysis of {N16} scan,'' {\em SNO+ Internal Document,
 \bibitem{skyshine}
 J.~Tseng, ``Skyshine classifier,'' {\em SNO+ Internal Document, docDB-5341-v1.}
 
-\bibitem{chicagoTiming}
-A.~LaTorre, ``New measurements for the timing spectrum of electrons and alphas
-  in lab+ppo,'' {\em SNO+ Internal Document, docDB-4081-v1.}
-
-\bibitem{tanner0p5}
-T.~Kaptanoglu, ``Measurements of light yield and timing of 0.5 g/l lab+ppo,''
-  {\em SNO+ Internal Document, docDB-5997-v1.}
-
 \bibitem{leite1996weak}
 J.~Leite-Lopes, ``Weak interaction physics: from its origin to the electroweak
   model,'' tech. rep., SCAN-9607019, 1996.
@@ -80,6 +72,22 @@ J.~N. Bahcall, A.~M. Serenelli, and S.~Basu, ``New solar opacities, abundances,
   helioseismology, and neutrino fluxes,'' {\em The Astrophysical Journal
   Letters}, vol.~621, no.~1, p.~L85, 2005.
 
+\bibitem{becker1992electron}
+R.~Becker-Szendy, C.~Bratton, D.~Casper, S.~Dye, W.~Gajewski, M.~Goldhaber,
+  T.~Haines, P.~Halverson, D.~Kielczewska, W.~Kropp, {\em et~al.},
+  ``Electron-and muon-neutrino content of the atmospheric flux,'' {\em Physical
+  Review D}, vol.~46, no.~9, p.~3720, 1992.
+
+\bibitem{allison1997measurement}
+W.~Allison, G.~Alner, D.~Ayres, W.~Barrett, C.~Bode, P.~Border, C.~Brooks,
+  J.~Cobb, D.~Cockerill, R.~Cotton, {\em et~al.}, ``Measurement of the
+  atmospheric neutrino flavour composition in soudan 2,'' {\em Physics Letters
+  B}, vol.~391, no.~3-4, pp.~491--500, 1997.
+
+\bibitem{kajita2012atmospheric}
+T.~Kajita, ``Atmospheric neutrinos,'' {\em Advances in High Energy Physics},
+  vol.~2012, 2012.
+
 \bibitem{akhmedov2019quantum}
 E.~Akhmedov, ``Quantum mechanics aspects and subtleties of neutrino
   oscillations,'' {\em arXiv preprint arXiv:1901.05232}, 2019.
@@ -94,6 +102,19 @@ Y.~Fukuda, T.~Hayakawa, E.~Ichihara, K.~Inoue, K.~Ishihara, H.~Ishino, Y.~Itow,
 M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
   J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, {\em et~al.}, ``Review of
   particle physics,'' {\em Physical Review D}, vol.~98, no.~3, p.~030001, 2018.
+
+\bibitem{abe2017measurement}
+K.~Abe, J.~Amey, C.~Andreopoulos, M.~Antonova, S.~Aoki, A.~Ariga, Y.~Ashida,
+  S.~Ban, M.~Barbi, G.~Barker, {\em et~al.}, ``Measurement of neutrino and
+  antineutrino oscillations by the t2k experiment including a new additional
+  sample of $\nu$ e interactions at the far detector,'' {\em Physical Review
+  D}, vol.~96, no.~9, p.~092006, 2017.
+
+\bibitem{abe2019constraint}
+K.~Abe, R.~Akutsu, A.~Ali, C.~Alt, C.~Andreopoulos, L.~Anthony, M.~Antonova,
+  S.~Aoki, A.~Ariga, Y.~Asada, {\em et~al.}, ``Constraint on the
+  matter-antimatter symmetry-violating phase in neutrinooscillations,'' {\em
+  arXiv preprint arXiv:1910.03887}, 2019.
 
 \bibitem{kimura2002exact}
 K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
@@ -242,6 +263,10 @@ S.~W. Wunderly and J.~M. Kauffman, ``New quench-resistant fluors for liquid
   Applications and Instrumentation. Part A. Applied Radiation and Isotopes},
   vol.~41, no.~9, pp.~809--815, 1990.
 
+\bibitem{tanner0p5}
+T.~Kaptanoglu, ``Measurements of light yield and timing of 0.5 g/l lab+ppo,''
+  {\em SNO+ Internal Document, docDB-5997-v1.}
+
 \bibitem{joshW1}
 J.-S. Wang, ``Bipo analysis using partial fill data,'' {\em SNO+ Internal
   Document, docDB-5950-v3.}
@@ -313,10 +338,44 @@ I.~T. Coulter, {\em Modelling and Reconstruction of Events in SNO+ related to
   Future Searches for Lepton and Baryon Number Violation.}
 \newblock PhD thesis, Ph. D. thesis, University of Oxford, 2013.
 
+\bibitem{dai2008wavelength}
+X.~Dai, E.~Rollin, A.~Bellerive, C.~Hargrove, D.~Sinclair, C.~Mifflin, and
+  F.~Zhang, ``Wavelength shifters for water cherenkov detectors,'' {\em Nuclear
+  Instruments and Methods in Physics Research Section A: Accelerators,
+  Spectrometers, Detectors and Associated Equipment}, vol.~589, no.~2,
+  pp.~290--295, 2008.
+
+\bibitem{alonso2014advanced}
+J.~Alonso, N.~Barros, M.~Bergevin, A.~Bernstein, L.~Bignell, E.~Blucher,
+  F.~Calaprice, J.~Conrad, F.~Descamps, M.~Diwan, {\em et~al.}, ``Advanced
+  scintillator detector concept (asdc): a concept paper on the physics
+  potential of water-based liquid scintillator,'' {\em arXiv preprint
+  arXiv:1409.5864}, 2014.
+
+\bibitem{askins2015physics}
+M.~Askins, M.~Bergevin, A.~Bernstein, S.~Dazeley, S.~Dye, T.~Handler,
+  A.~Hatzikoutelis, D.~Hellfeld, P.~Jaffke, Y.~Kamyshkov, {\em et~al.}, ``The
+  physics and nuclear nonproliferation goals of watchman: A water cherenkov
+  monitor for antineutrinos,'' {\em arXiv preprint arXiv:1502.01132}, 2015.
+
+\bibitem{beacom2017physics}
+J.~F. Beacom, S.~Chen, J.~Cheng, S.~N. Doustimotlagh, Y.~Gao, G.~Gong, H.~Gong,
+  L.~Guo, R.~Han, H.-J. He, {\em et~al.}, ``Physics prospects of the jinping
+  neutrino experiment,'' {\em Chinese physics C}, vol.~41, no.~2, p.~023002,
+  2017.
+
+\bibitem{mekarski2018electron}
+P.~Mekarski, ``Electron antineutrinos in the water phase of the sno+
+  experiment,'' 2018.
+
 \bibitem{biller2020slow}
 S.~D. Biller, E.~J. Leming, and J.~L. Paton, ``Slow fluors for highly effective
   separation of cherenkov light in liquid scintillators,'' {\em arXiv preprint
   arXiv:2001.10825}, 2020.
+
+\bibitem{chicagoTiming}
+A.~LaTorre, ``New measurements for the timing spectrum of electrons and alphas
+  in lab+ppo,'' {\em SNO+ Internal Document, docDB-4081-v1.}
 
 \bibitem{boulay2004direct}
 M.~G. Boulay, ``Direct evidence for weak flavour mixing with the sudbury
@@ -365,11 +424,28 @@ A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
 E.~Leming, ``{O}xford {LAB} + {PPO} timing and light yield measurements,'' {\em
   SNO+ Internal Document, docDB-6179-v1.}
 
-\bibitem{abe2019constraint}
-K.~Abe, R.~Akutsu, A.~Ali, C.~Alt, C.~Andreopoulos, L.~Anthony, M.~Antonova,
-  S.~Aoki, A.~Ariga, Y.~Asada, {\em et~al.}, ``Constraint on the
-  matter-antimatter symmetry-violating phase in neutrinooscillations,'' {\em
-  arXiv preprint arXiv:1910.03887}, 2019.
+\bibitem{biller2017new}
+S.~Biller, S.~Manecki, S.~collaboration, {\em et~al.}, ``A new technique to
+  load 130te in liquid scintillator for neutrinoless double beta decay
+  experiments,'' in {\em Journal of Physics: Conference Series}, vol.~888,
+  p.~012084, IOP Publishing, 2017.
+
+\bibitem{chen1985direct}
+H.~H. Chen, ``Direct approach to resolve the solar-neutrino problem,'' {\em
+  Physical Review Letters}, vol.~55, no.~14, p.~1534, 1985.
+
+\bibitem{ahmad2002direct}
+Q.~R. Ahmad, R.~Allen, T.~Andersen, J.~Anglin, J.~Barton, E.~Beier,
+  M.~Bercovitch, J.~Bigu, S.~Biller, R.~Black, {\em et~al.}, ``Direct evidence
+  for neutrino flavor transformation from neutral-current interactions in the
+  sudbury neutrino observatory,'' {\em Physical review letters}, vol.~89,
+  no.~1, p.~011301, 2002.
+
+\bibitem{aharmim2013combined}
+B.~Aharmim, S.~Ahmed, A.~Anthony, N.~Barros, E.~Beier, A.~Bellerive,
+  B.~Beltran, M.~Bergevin, S.~Biller, K.~Boudjemline, {\em et~al.}, ``Combined
+  analysis of all three phases of solar neutrino data from the sudbury neutrino
+  observatory,'' {\em Physical Review C}, vol.~88, no.~2, p.~025501, 2013.
 
 \bibitem{zaglauer1988mixing}
 H.~W. Zaglauer and K.~H. Schwarzer, ``The mixing angles in matter for three
@@ -441,9 +517,5 @@ G.~Horton-Smith {\em et~al.}, ``Introduction to glg4sim,'' 2006.
 M.~Dunford, {\em Measurement of the $^8${B} solar neutrino energy spectrum at
   the Sudbury Neutrino Observatory}.
 \newblock PhD thesis, 2006.
-
-\bibitem{mekarski2018electron}
-P.~Mekarski, ``Electron antineutrinos in the water phase of the sno+
-  experiment,'' 2018.
 
 \end{thebibliography}
