@@ -110,6 +110,63 @@ radial biases
 	}
 \end{table}
 
+
+Simulate 5000 events for 3 MeV $e^-$,  
+
+
+$\Delta x = x_{fit}-x_{mc}$
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccc}
+			\toprule 
+			PPO [g/L] & fit speed [s/event]& $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & radial bias [mm] & \\
+			\midrule
+			0.25 & 0.190 &6.65 &2.64& -18.24& -7.22\\
+			0.5  & 0.144 &-0.73 &-1.69& -8.14& 3.30 \\
+			1.0 &0.190 & 1.42 &0.57 &-5.65& 10.67 \\
+			2.0 &0.194 & 0.34 &1.78& -4.01& 13.37	\\
+			6.0 &0.145 & -0.11& -0.12& -25.97& -10.97\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+%% fit resolutions
+$z_{fit}$ resolution [mm] 
+
+%& 120.6
+%& 90.02
+%& 67.39
+%& 55.81
+%& 58.62
+
+fit with wrong PPO concentrations:  
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+			\toprule 
+			PPO [g/L] & $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & radial bias [mm] &  & &\\
+			\midrule
+			0.25 & 6.80& 2.90& -14.61& 121.6& -4.82& 120.3& 93.70\%\\
+			0.5  & 5.15& 2.82& -12.85 &120.2 &1.34 &123.0 &93.46\% \\
+			1.0 &2.32 &1.95 &-13.22& 120.3& 0.344& 121.9 &93.78\% \\
+			2.0 &5.76& 3.03& -9.61& 119.3& 7.264 &125.1& 93.26\% \\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+
+PPO in Fitter
+configuration
+
+
 \subsection{Bi-Po Analysis}
 
 
@@ -173,23 +230,31 @@ For an event happens in liquid scintillator, the number of Cherenkov photons it 
 of the total photon numbers, which is a very small fraction compared to the number of scintillation photons. This causes the directional Cherenkov signals are submerged in the isotropic lights.
 
 
+
+
+
+
+
+
 a time cut window on the time residual was optimized for the searching based on MC.
 
 simulations in pure scintillator phase.
 
 
 
+Hough transformation is a pattern recognition algorithm used in image analysis and computer vision\cite{davies1997machine}. This algorithm was first invent to extract patterns in bubble chamber\cite{houghwiki}, 
+
+is used by Super-K\cite{shiozawa1999reconstruction}.
+
+The Hough transformation algorithm was suggested by Eugene W. Beier for the reconstruction of event direction in the SNO+ scintillator phase.\cite{houghTransform}
 
 
-A Hough transformation was used to 
+
+
+
 
 
  
-
-
-
-
-
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{cherenkov_scint_variousE.png}
@@ -197,19 +262,36 @@ A Hough transformation was used to
 	\label{cherenkov_variousE}
 \end{figure}
 
-\begin{figure}[!htb]
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=8cm]{partialN16.png}
-	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
-	\label{partialN16}
+	\subfigure[]{%PMT pattern before transformation.]{
+		\begin{minipage}[t]{0.32\textwidth}
+			\includegraphics[width=5.5cm]{partial0p5_6MeV_noRotate.pdf}
+		\end{minipage}
+	}   
+	\subfigure[]{%PMT pattern before transformation, in sinusoidal map.]{ 
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_noRotate.pdf}
+		\end{minipage}
+	}
+	\subfigure[]{%PMT pattern after transformation.]{ 
+	\begin{minipage}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=5.5cm]{partial0p5_6MeV_rotate.pdf}
+	\end{minipage}
+    }
+	\subfigure[]{%PMT pattern after transformation, in sinusoidal map.]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_rotate.pdf}
+		\end{minipage}
+	}
+	\caption{PMT hit patterns after the prompt time cut and NHit cut.}
+	\label{6MeVisoPattern}
 \end{figure}
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=4cm]{partial_rotateAndShift.png}
-	\caption{For isotropically generated events, rotate and shift.}
-	\label{rotateAndShift}
-\end{figure}
 
 
 
@@ -234,10 +316,27 @@ Move $\vec{X'}_{evt}$ to the origin,
 
 $\vec{X'}_{pmt}=R\vec{X}_{pmt}-\vec{X'}_{evt}$
 
+
+
+
+
+
+
 Breit-Wigner function
 \[
 p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
 \]
+
+
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{partialN16.png}
+	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
+	\label{partialN16}
+\end{figure}
 
 \subsubsection{$AmBe$ Source Analysis}
 

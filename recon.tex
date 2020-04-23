@@ -159,25 +159,29 @@ In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) a
 
 \subsection{Drive Correction}
 
-An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The cause of this effect is that the Cherenkov photons trigger the majority of PMT hits with early timing and these hits are located within the Cherenkov cone; while the scattered or reflected light with later timing trigger PMT hits throughout the detector. This 
+An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The distribution of $(\vec{x}_{fit}-\vec{x}_mc)/|\vec{x}_{fit}-\vec{x}_mc|\cdot \vec{u}$ shows a large peak at +1, which indicates that the fitted position $\vec{x}$ is prone to be pulled away systematically from the true position along the event direction $\vec{u}$\cite{driveCorPeter,brice1996monte}. 
+
+The cause of this effect is that the Cherenkov photons trigger the majority of PMT hits with early timing and these hits are located within the Cherenkov cone; while the scattered or reflected light with later timing trigger PMT hits throughout the detector. This 
 
 
+geometry effect: consider an event happens at the center of the PSUP, then the Cherenkov cone it produced will intersect the PSUP by an area of $2\pi R^2_{PSUP}(1-\cos41^\circ)$, which occupies about 12\% of the total area of the PSUP sphere. Therefore, for a random PMT hit on the PSUP sphere, it has more than 88\% of chance to be placed outside the Cherenkov cone.  
 
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=6cm]{partialN16.png}
-%\caption{ modified from Fig.~C.2 in \cite{brice1996monte}.}
-%	\label{drivecor}
-%\end{figure}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{driveCor.png}
+\caption{ A diagram shows fitter pull effect, modified from Fig.~C.2 in \cite{brice1996monte}.}
+	\label{drivecor}
+\end{figure}
 
- as illustrated in Fig. .
+ as illustrated in Fig.~\ref{drivecor}.
 
   
- 
-
 shift 
 
 fitter pull.
+
+
+
 
 
 

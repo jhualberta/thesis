@@ -13,6 +13,11 @@ J.~Birks and F.~Firk, ``The theory and practice of scintillation counting,''
 G.~F. Knoll, {\em Radiation Detection and Measurement}.
 \newblock John Wiley \& Sons, 2010.
 
+\bibitem{brice1996monte}
+S.~J. Brice, {\em Monte Carlo and Analysis Techniques for the Sudbury Neutrino
+  Observatory.}
+\newblock PhD thesis, 1996.
+
 \bibitem{dragowsky200216n}
 M.~Dragowsky, A.~Hamer, Y.~Chan, R.~Deal, E.~Earle, W.~Frati, E.~Gaudette,
   A.~Hallin, C.~Hearns, J.~Hewett, {\em et~al.}, ``The $^{16}${N} calibration
@@ -39,6 +44,10 @@ R.~Bayes, ``Analysis of {N16} scan,'' {\em SNO+ Internal Document,
 
 \bibitem{skyshine}
 J.~Tseng, ``Skyshine classifier,'' {\em SNO+ Internal Document, docDB-5341-v1.}
+
+\bibitem{oxfordMeasurement}
+E.~Leming, ``{O}xford {LAB} + {PPO} timing and light yield measurements,'' {\em
+  SNO+ Internal Document, docDB-6179-v1.}
 
 \bibitem{leite1996weak}
 J.~Leite-Lopes, ``Weak interaction physics: from its origin to the electroweak
@@ -328,10 +337,9 @@ P.~Gregory, {\em Bayesian Logical Data Analysis for the Physical Sciences: A
   Comparative Approach with Mathematica{\textregistered} Support}.
 \newblock Cambridge University Press, 2005.
 
-\bibitem{brice1996monte}
-S.~J. Brice, {\em Monte Carlo and Analysis Techniques for the Sudbury Neutrino
-  Observatory.}
-\newblock PhD thesis, 1996.
+\bibitem{driveCorPeter}
+P.~Skensved and B.~Robertson, ``Miscellaneous effects,'' {\em SNO Techinical
+  Report, SNO-STR-90-28.}
 
 \bibitem{coulter2013modelling}
 I.~T. Coulter, {\em Modelling and Reconstruction of Events in SNO+ related to
@@ -417,12 +425,26 @@ A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
 \newblock PhD thesis, 2001.
 
 \bibitem{nndc}
-``National nuclear data center.'' \url{https://www.nndc.bnl.gov/}.
-\newblock Accessed: 2019-10-30.
+{\em National Nuclear Data Center}, 2019 (accessed Oct 30, 2019).
+\newblock \url{https://www.nndc.bnl.gov/}.
 
-\bibitem{oxfordMeasurement}
-E.~Leming, ``{O}xford {LAB} + {PPO} timing and light yield measurements,'' {\em
-  SNO+ Internal Document, docDB-6179-v1.}
+\bibitem{davies1997machine}
+E.~Davies, ``Machine vision: Theory, algorithms, practicalities. academic
+  press., 2-nd edition,'' 1997.
+
+\bibitem{houghwiki}
+wikipedia, {\em Hough Transform}, 2019 (accessed Nov 3, 2019).
+\newblock \url{https://en.wikipedia.org/wiki/Hough_transform}.
+
+\bibitem{shiozawa1999reconstruction}
+M.~Shiozawa, ``Reconstruction algorithms in the super-kamiokande large water
+  cherenkov detector,'' {\em Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}, vol.~433, no.~1-2, pp.~240--246, 1999.
+
+\bibitem{houghTransform}
+G.~Beier, ``Study of direction reconstruction in scintillator,'' {\em SNO+
+  Internal Document, docDB-3503-v4.}
 
 \bibitem{biller2017new}
 S.~Biller, S.~Manecki, S.~collaboration, {\em et~al.}, ``A new technique to

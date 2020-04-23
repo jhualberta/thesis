@@ -15,7 +15,11 @@ Warning--entry type for "muonflux" isn't style-file defined
 --line 519 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
 --line 677 of file thesis.bib
-I was expecting a `,' or a `}'---line 896 of file thesis.bib
+Repeated entry---line 859 of file thesis.bib
+ : @article{biller2020slow
+ :                        ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 940 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -35,11 +39,13 @@ Warning--I didn't find a database entry for "kamlandZen"
 Warning--I didn't find a database entry for "borexino"
 Warning--I didn't find a database entry for "cno"
 Warning--I didn't find a database entry for "boulay"
+Warning--empty school in brice1996monte
 Warning--empty school in maclellan2009energy
 Warning--empty year in matt_deployedsource
 Warning--empty year in n16geom_zach
 Warning--empty year in n16pic
 Warning--empty year in skyshine
+Warning--empty year in oxfordMeasurement
 Warning--empty journal in piperno2015dark
 Warning--empty journal in von2015measurement
 Warning--empty journal in sorensen2016temperature
@@ -54,7 +60,7 @@ Warning--empty year in kalpanaWLS
 Warning--empty year in kalpanaWLS2
 Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
-Warning--empty school in brice1996monte
+Warning--empty year in driveCorPeter
 Warning--empty journal in mekarski2018electron
 Warning--empty year in chicagoTiming
 Warning--empty journal in boulay2004direct
@@ -65,50 +71,51 @@ Warning--empty year in modeCut
 Warning--empty year in highlevel
 Warning--empty school in dragowsky1999sudbury
 Warning--empty school in hamer2001energy
-Warning--empty year in oxfordMeasurement
+Warning--empty journal in davies1997machine
+Warning--empty year in houghTransform
 Warning--can't use both volume and number fields in biller2017new
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 106 entries,
+You've used 111 entries,
             1876 wiz_defined-function locations,
-            1031 strings with 21277 characters,
-and the built_in function-call counts, 23860 in all, are:
-= -- 2084
-> -- 1348
+            1054 strings with 21871 characters,
+and the built_in function-call counts, 24692 in all, are:
+= -- 2163
+> -- 1372
 < -- 0
-+ -- 503
-- -- 397
-* -- 1724
-:= -- 3684
-add.period$ -- 128
-call.type$ -- 106
-change.case$ -- 88
++ -- 514
+- -- 403
+* -- 1776
+:= -- 3807
+add.period$ -- 134
+call.type$ -- 111
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 141
-duplicate$ -- 1272
-empty$ -- 2148
-format.name$ -- 397
-if$ -- 5629
+cite$ -- 149
+duplicate$ -- 1325
+empty$ -- 2240
+format.name$ -- 403
+if$ -- 5825
 int.to.chr$ -- 0
-int.to.str$ -- 106
-missing$ -- 104
-newline$ -- 343
-num.names$ -- 103
-pop$ -- 390
+int.to.str$ -- 111
+missing$ -- 108
+newline$ -- 359
+num.names$ -- 108
+pop$ -- 404
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 685
+skip$ -- 706
 stack$ -- 0
-substring$ -- 742
-swap$ -- 448
+substring$ -- 774
+swap$ -- 462
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 35
-while$ -- 178
-width$ -- 109
-write$ -- 967
-(There were 3 error messages)
+warning$ -- 38
+while$ -- 186
+width$ -- 114
+write$ -- 1008
+(There were 4 error messages)
