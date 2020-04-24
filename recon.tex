@@ -243,10 +243,25 @@ Finally we take the average values from the 5 to 10 MeV electrons simulations an
 
 It is important to note that since the drive correction parameters are obtained from the reconstructions of Monte Carlo, it depends on the Monte Carlo and the results of reconstruction. Therefore, the n$_{water}$, mode cut and time residue cut affecting the fitted results will also affect the drive correction parameters, but not significantly.
 
-By fitting the simulations of 5 MeV electrons generated at the detector center and travelling along +X direction, the drive effct of the MPW fitter causes a $\sim$50 mm biases from the detector center along +X axis. The drive correction reduces this drive bias down to $\sim$0.2 mm. For the reconstruction of \isotope[16]{N} data, the drive correction can reduce the fitted position RMS by $\sim$20 mm.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{pullParVsEnergy.pdf}
+	\caption{ Drive correction parameter $p_0$, $p_1$ vs energy.}
+	\label{pullParVsEnergy}
+\end{figure}
+
+Electron events with various energies were generated at the detector center and their momentum were along +x direction. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{pullEffectVsEnergy.pdf}
+	\caption{ Radial biases of simulated electron events before and after the drive correction, as a function of energy.}
+	\label{drivecorVsEnergy}
+\end{figure}
 
 
-
+By fitting the simulations of 5 MeV electrons generated at the detector center and travelling along +x direction, the drive effct of the MPW fitter causes a $\sim$50 mm biases from the detector center along +x axis. The drive correction reduces this drive bias down to $\sim$0.2 mm. For the reconstruction of $^{16}$N data, the drive correction can reduce the fitted position RMS by $\sim$20 mm.
 
 
 
