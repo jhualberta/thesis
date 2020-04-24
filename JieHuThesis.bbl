@@ -13,10 +13,18 @@ J.~Birks and F.~Firk, ``The theory and practice of scintillation counting,''
 G.~F. Knoll, {\em Radiation Detection and Measurement}.
 \newblock John Wiley \& Sons, 2010.
 
+\bibitem{laserball_groupVelocity}
+E.~Turner, ``A water scattering scaling factor for rat,'' {\em SNO+ Internal
+  Document, docDB-5864-v2.}
+
 \bibitem{brice1996monte}
 S.~J. Brice, {\em Monte Carlo and Analysis Techniques for the Sudbury Neutrino
   Observatory.}
 \newblock PhD thesis, 1996.
+
+\bibitem{driveCorPeter}
+P.~Skensved and B.~Robertson, ``Miscellaneous effects,'' {\em SNO Techinical
+  Report, SNO-STR-90-28.}
 
 \bibitem{dragowsky200216n}
 M.~Dragowsky, A.~Hamer, Y.~Chan, R.~Deal, E.~Earle, W.~Frati, E.~Gaudette,
@@ -337,9 +345,9 @@ P.~Gregory, {\em Bayesian Logical Data Analysis for the Physical Sciences: A
   Comparative Approach with Mathematica{\textregistered} Support}.
 \newblock Cambridge University Press, 2005.
 
-\bibitem{driveCorPeter}
-P.~Skensved and B.~Robertson, ``Miscellaneous effects,'' {\em SNO Techinical
-  Report, SNO-STR-90-28.}
+\bibitem{groupVmeasure}
+F.~Barao and J.~Maneira, ``Group velocity measurement, plot for approval,''
+  {\em SNO+ Internal Document, docDB-5071-v1.}
 
 \bibitem{coulter2013modelling}
 I.~T. Coulter, {\em Modelling and Reconstruction of Events in SNO+ related to
