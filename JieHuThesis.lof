@@ -21,14 +21,14 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Fit position projected on x axis. The WLS fitter reconstructed $x$ positions of the 5 MeV electron events in the wbWLS (red) are compared to the ones in the water (blue). }}{44}{figure.4.14}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Light path calculation for the MP Partial Fitter.}}{46}{figure.4.15}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}}{47}{figure.4.16}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{48}{figure.4.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{48}{figure.4.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{48}{figure.4.17}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{48}{figure.4.17}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{48}{figure.4.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{48}{figure.4.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{48}{figure.4.18}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{48}{figure.4.18}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{49}{figure.4.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{49}{figure.4.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{49}{figure.4.17}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{49}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{49}{figure.4.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{49}{figure.4.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{49}{figure.4.18}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{49}{figure.4.18}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Timing profiles for liquid scintillators in different SNO+ phases.}}{50}{figure.4.19}
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{53}{figure.4.20}
 \addvspace {10\p@ }
@@ -44,17 +44,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for skyShine classifier, modified from \cite {skyshine}.}}{64}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}}{65}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{69}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{70}{figure.6.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{70}{figure.6.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{70}{figure.6.4}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{70}{figure.6.4}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{70}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{71}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{72}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{73}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{76}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{76}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{77}{figure.6.10}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A flow chart for Bi-Po tagging.}}{68}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{69}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{70}{figure.6.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{70}{figure.6.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{70}{figure.6.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{70}{figure.6.5}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{70}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{71}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{73}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{73}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{76}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{77}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{78}{figure.6.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

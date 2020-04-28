@@ -182,7 +182,11 @@ Therefore, an overestimated group velocity (too fast) brings a positive radial b
 In practice, the effective group velocity is tuned by an effective refractive index $n_{eff}$ (or called $RI$ value): $v_{water}=c/n_{eff}$. To select a reasonable effective group velocity for the water-phase vertex fitter, my first approach is to test on all the values of the refractive index provided by the SNO+ laserball measurements. The values are listed in Fig.~\ref{nVsWavelength}. 
 
 
-I choose the one which gives the smallest radial bias based on MC simulations. As shown in Fig.~\ref{plotGroupV}, $n_{eff}=1.40$ gives the smallest radial bias and is adopt for the MC case.
+I choose the one which gives the smallest radial bias based on MC simulations. 
+For typical 5 MeV $e^-$ events simulated uniformly inside the AV and isotropic momentum,  
+
+
+As shown in Fig.~\ref{plotGroupV}, $n_{eff}=1.40$ gives the smallest radial bias and is adopt for the MC case.
 
 %\begin{figure}[!htb]
 %	\centering
@@ -266,9 +270,9 @@ By fitting the simulations of 5 MeV electrons generated at the detector center a
 
 
 \section{Vertex and Direction Reconstruction for Water-based Wavelength-shifter}
-X. Dai et al. proposed adding wavelength shifters (WLS) into a water Cherenkov detector like SNO\cite{dai2008wavelength}. Compared to the water Cherenkov detector, a water-based wavelength shifter (wbWLS) detector has a higher light yield (about threefold higher than SNO\cite{dai2008wavelength}) and thus lowers down the energy threshold and opens opportunity to detect low energy events. At the meantime, it will still keep the directionality from Cherenkov signals compared to a loss of the directionality for the liquid scintillator detector, which can be used to suppress the backgrounds when analyzing directional signals, such as solar neutrinos. This technology is being studied by future neutrino experiments, such as the Advanced Scintillation Detector Concept (ASDC)\cite{alonso2014advanced}, WATCHMAN experiment\cite{askins2015physics} and Jinping experiment\cite{beacom2017physics}.
+X. Dai et al.\cite{dai2008wavelength} made a proposal for adding wavelength shifters (WLS) into a water Cherenkov detector like SNO. Compared to the water Cherenkov detector, a water-based wavelength shifter (wbWLS) detector has a higher light yield (about threefold higher than SNO\cite{dai2008wavelength}) and thus lowers down the energy threshold and opens opportunity to detect low energy events. At the meantime, it will still keep the directionality from Cherenkov signals compared to a loss of the directionality for the liquid scintillator detector, which can be used to suppress the backgrounds when analyzing directional signals, such as solar neutrinos. This technology is being studied by future neutrino experiments, such as the Advanced Scintillation Detector Concept (ASDC)\cite{alonso2014advanced}, WATCHMAN experiment\cite{askins2015physics} and Jinping experiment\cite{beacom2017physics}.
 
-There was a proposal of adding wavelength shifter (WLS) into the SNO+ detector in the water phase. The specific wavelength shifter we considered is PPO, which is a well-studied ingredient of the liquid scintillator used in the SNO+ scintillator phase and Te-loaded phase. Although this proposal was rejected due to the experiment schedule, it is still worthwhile for a conceptual study of a SNO+-like detector that uses water-based wavelength shifter (wbWLS) as detection medium. 
+There was a proposal of adding wavelength shifter (WLS) into the SNO+ detector in the middle of the water phase. The specific wavelength shifter we considered is PPO, which is a well-studied ingredient of the liquid scintillator used in the SNO+ scintillator phase and Te-loaded phase. Although this proposal was not adopted due to the experiment schedule, it is still worthwhile for a conceptual study of a SNO+-like detector that uses water-based wavelength shifter (wbWLS) as detection medium. 
 
 Figure~\ref{pmt_wls} shows the position distributions of triggered PMTs for MC simulated 5 MeV electrons travelling along $+x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water plus 0.1 ppm PPO. For the same electrons, the number of triggered PMTs ($NHit$) in wbWLS is about 2.4 times greater than the pure water one. Although there is extra isotropic light emitted, the Cherenkov ring can still be seen clearly, allowing reconstruction of the directionality.  
 
@@ -302,10 +306,10 @@ In the wbWLS case, since WLS absorbs and re-emits photons, the reconstruction me
 		%\centering			
 		\includegraphics[height=6cm]{WLSTime_pdf.pdf}			
 	\end{minipage}%				
-	%	\begin{minipage}[b]{0.5\textwidth}		
-	%		%\centering	
-	%		\includegraphics[height=5cm]{ChAngle_pdf.pdf}	
-	%	\end{minipage}	
+%		\begin{minipage}[b]{0.5\textwidth}		
+%			%\centering	
+%			\includegraphics[height=5cm]{ChAngle_pdf.pdf}	
+%		\end{minipage}	
 	\caption{\label{WLS_pdf} The timing pdf for the wbWLS.}	
 \end{figure}
 
@@ -358,7 +362,7 @@ This fitter was tested for in \cite{mekarski2018electron}.
 
 \section{Vertex Reconstruction for Partial-fill and Scintillator Phases}\label{scintFitter}
 
-In the partial fill geometry, photons will travel with different speeds as they pass through two different mediums, water and scintillator. Assuming a straight light path, the MP Partial Fitter mainly calculates the total length of the light path ($|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$) and separates it into the lengths in scintillator ($d_{sp}$) and in water ($|\vec{l}_p|-d_{sp}$).
+In the partial fill geometry, photons will travel with different speeds as they pass through two different mediums, water and scintillator. Assuming a straight light path, the MP Partial Fitter mainly calculates the total length of the light path ($|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$) and separates the $|\vec{l}_p|$ into the lengths in scintillator ($d_{sp}$) and in water ($|\vec{l}_p|-d_{sp}$).
 
 \begin{figure}[!htb]
 	\centering
@@ -367,13 +371,45 @@ In the partial fill geometry, photons will travel with different speeds as they 
 	\label{scintpath}
 \end{figure}
 
-As illustrated in Figure~\ref{scintpath}, a detailed calculation of $d_{sp}$ includes evaluations of (1) light path and neck (line-cylinder) intersection; (2) light path and AV sphere (line-sphere) intersection and (3) light path and water-scintillator interface (line-plane) intersection. $d_{sp}$ is further separated into the path length in neck ($d_{sp,neck}$) and in AV ($d_{sp,AV}$).
+In the partial-fill phase, the SNO+ detector can be considered as a geometry composed of the neck (cylinder), AV sphere and water-scintillator interface (plane). A ray connecting a position inside the PSUP to the PMT can intersect with these three geometries. As illustrated in Fig.~\ref{scintpath}, a detailed calculation of $d_{sp}$ includes evaluations of (1) light path and neck (line-cylinder) intersection; (2) light path and AV sphere (line-sphere) intersection and (3) light path and water-scintillator interface (line-plane) intersection. $d_{sp}$ is further separated into the path length in the neck ($d_{sp,neck}$) and in the AV ($d_{sp,AV}$).
+
+For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a triggered PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$, define a ray-vector $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between vertex and intersection point and it is the parameter to be determined; $\vec u=(\vec{X}_{\mathrm{pmt}}-\vec{X}_0)$ is the direction of the ray-vector or light path. It is a unit vector pointing from the $\vec{X}_0$ to the $\vec{X}_{\mathrm{pmt}}$.
+
+In the ray-sphere intersection case (light path goes through the AV), the intersection equation is:
+$(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$, where $\vec{O}_{av}$ is the origin of the AV sphere. In the PSUP coordinate, $\vec{O}_{av} = (0,0,108)~mm$.
+
+Let $\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av}$, if $\Delta>0$, solve the equation and get:
+\[a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if  ~\Delta>0.\]
+
+In this case, the ray has two intersection points on the sphere and the light path penetrates through the AV. 
+
+If $\Delta\leq0$,
+there is no intersection point or only one intersection point at the AV, the light path never passes through the AV sphere.
+
+For the ray-plane intersection, the equation is:
+$l_{0,z}=Z_{split}$, where $Z_{split}$ is the water level, i.e., the z position of the water-scintillator intersection and $l_{0,z}=z_0+a\cdot u_z$.
+
+If $u_z=z_\mathrm{pmt}-z_0=0$, the ray is parallel to the plane and never intersects the plane.
+
+If $u_z\neq 0$, solve the equation, we have: $a=(Z_{split}-z_0)/u_z=(Z_{split}-z_0)$.
+Let: 
+\[
+a_3 \equiv a = \frac{(Z_{split}-z_0)|\vec{X}_{\mathrm{pmt}}-\vec{X_0}|}{z_\mathrm{pmt}-z_0}~~(if ~z_\mathrm{pmt}-z_0\neq 0).
+\]
+
+For the ray-cylinder intersection, the equation is:
+$l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $ r_{neck}$ is the radius of the neck cylinder.
+
+\[
+t_{transit}=
+(a_+-a_3)/v_{gr,scint}+[|\vec{X}_{\mathrm{pmt}}-\vec{X}_0|-(a_+-a_3)]/v_{gr,water}
+\]
 
 Then the time of flight is obtained by:
 \begin{equation}
-tof = \frac{|\vec{l}_p|-d_{sp}}{v_{gr,water}} +\frac{d_{sp}}{v_{gr,scint}},
+t_{transit} = \frac{|\vec{l}_p|-d_{sp}}{v_{gr,water}} +\frac{d_{sp}}{v_{gr,scint}},
 \end{equation}
-The time residual is $t_{res} = t_\mathrm{PMT}-tof-t_0$.
+The time residual is $t_{res} = t_\mathrm{PMT}-t_{transit}-t_0$.
 
 \begin{figure}[htbp]
 	\centering	
@@ -382,7 +418,21 @@ The time residual is $t_{res} = t_\mathrm{PMT}-tof-t_0$.
 	\label{partialpdf}
 \end{figure}
 
-If $d_{sp}=0$, the light path is always in the water. In this case, the fitter is the same as the MP Water Fitter. The fitter fits with the MP Water Fitter pdf. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing pdf, the PMT time response modified to photon propagation time in scintillator, as shown in Figure~\ref{partialpdf}.
+If $d_{sp}=0$, the light path is always in the water. In this case, the fitter is the same as the MP Water Fitter. The fitter fits with the MP Water Fitter pdf. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing pdf, the PMT time response modified to photon propagation time in scintillator, as shown in Fig.~\ref{partialpdf}.
+
+
+\[
+\frac{\partial L}{\partial splitZ} = \frac{\partial L}{\partial tof}\cdot\frac{\partial tof}{\partial splitZ}=\frac{\partial L}{\partial tof}\cdot\frac{\partial a_3}{\partial splitZ}
+\]
+
+
+\[
+\frac{\partial L}{\partial splitZ} = 0
+\]
+
+
+$a_1$, $a_2$ and $a_3$
+
 
 \begin{figure}[htbp]
 	\centering
@@ -429,7 +479,7 @@ If $d_{sp}=0$, the light path is always in the water. In this case, the fitter i
 
 The performance of the fitter was studied with MC simulations. In a partial fill geometry with water level at 4.4 m, 2.5 MeV electrons are simulated inside the AV in the scintillator region only, the water region only and the whole AV region.
 
-Figure~\ref{partial_fit_x} and Figure~\ref{partial_fit_rz} show the MP Partial Fitter reconstructed results for these simulations. Figure~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
+Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the MP Partial Fitter reconstructed results for these simulations. Fig.~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
 
 \begin{table}[ht]
 	\centering
@@ -447,61 +497,9 @@ Figure~\ref{partial_fit_x} and Figure~\ref{partial_fit_rz} show the MP Partial F
 \end{table}
 For the events in water, the fit bias and resolution is comparable to the water phase results in Table~\ref{table_posresol}. The events in the scintillator region have smaller fit bias and better resolution due to more triggered PMTs in the reconstruction.
 
-Figure~\ref{partial_fit_rz} shows the fit $\sqrt{x^2+y^2}$ vs. fit $z$ positions. It shows that the fitter can distinguish different events in the water or scintillator region. The fitter gives reasonable results of the three different MC simulations. 
-
-For the partial-phase geometry, the SNO+ acrylic vessel can be considered as composed of the neck (cylinder), AV sphere and water-scintillator interface (plane). The ray coming from the vertex to the PMT can intersect with these three geometries.
-
-line-sphere intersection and line-plane intersection
-
-$a_1$, $a_2$ and $a_3$
+Fig.~\ref{partial_fit_rz} shows the fitted $\sqrt{x^2+y^2}$ vs. fitted $z$ positions. It shows that the fitter can distinguish different events in the water or scintillator region. The fitter gives reasonable results of the three different MC simulations. 
 
 
-trial position $\vec{X}_0=(x_0,y_0,z_0)$,  PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$
-
-
-ray-vector $\vec{l}_0=\vec{X}_0+a\cdot \vec{u}$,
-where $a$ is the distance between vertex and intersection point. It is the parameter to be determined.
-$\vec{u}=(\vec{X}_{\mathrm{pmt}}-\vec{X}_0)$ is the direction of the ray-vector/light path.
-
-$\vec{O}_{av}$ is the origin of the AV sphere. In the PSUP coordinate, $\vec{O}_{av} = (0,0,108)~mm$.
-For the ray-sphere intersection,
-$(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$
-
-To solve this equation, let $\Delta = {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av}$
-then
-\[
-a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},
-~if \Delta>0\]
-
-if $\Delta\leq0$,
-there is no intersection point or only one intersection point at the AV, the ray never passes through the AV sphere.
-
-For the ray-plane intersection, 
-$l_{0,z} = Z_{split}$, where $Z_{split}$ is the water level.
-If $u_z=z_\mathrm{pmt}-z_0=0$, the ray is parallel to the plane and never intersects the plane.
-To solve this equation, we have $a=(Z_{split}-z_0)/u_z=(Z_{split}-z_0),~~if~u_z\neq 0$.
-Let: 
-\[
-a_3 \equiv a = \frac{(Z_{split}-z_0)|\vec{X}_{\mathrm{pmt}}-\vec{X_0}|}{z_\mathrm{pmt}-z_0}~~(if ~z_\mathrm{pmt}-z_0\neq 0),
-\]
-
-
-For the ray-cylinder intersection,
-$l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $ r_{neck}$ is the radius of the neck cylinder.
-
-\[time~of~flight~(tof)=
-(a_+-a_3)/v_{gr,scint}+[|\vec{X}_{\mathrm{pmt}}-\vec{X}_0|-(a_+-a_3)]/v_{gr,water}
-\]
-
-
-\[
-\frac{\partial L}{\partial splitZ} = \frac{\partial L}{\partial tof}\cdot\frac{\partial tof}{\partial splitZ}=\frac{\partial L}{\partial tof}\cdot\frac{\partial a_3}{\partial splitZ}
-\]
-
-
-\[
-\frac{\partial L}{\partial splitZ} = 0
-\]
 
 the optical response of the liquid scintillator
 

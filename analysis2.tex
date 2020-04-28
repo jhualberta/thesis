@@ -10,9 +10,7 @@ During the filling, the LAB was first filled into the AV to replace the water. P
 A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
 
 
-The SkyShine classifier aims to discriminate "sky shine" events from other backgrounds by looking at the ratio of hit counts in a middle z range and a low z range. It can also look at neck and high-z OWL PMT hits. The classifier's behavior for partial fill is studied using simulation.
-
-\cite{skyshine}
+The SkyShine classifier aims to discriminate "sky shine" events from other backgrounds by looking at the ratio of hit counts in a middle z range and a low z range. It can also look at neck and high-z OWL PMT hits. The classifier's behavior for partial fill is studied using simulation.\cite{skyshine}
 
 
 \begin{figure}[!htb]
@@ -21,6 +19,37 @@ The SkyShine classifier aims to discriminate "sky shine" events from other backg
 \caption{ An illustration for skyShine classifier, modified from \cite{skyshine}.}
 	\label{skyshine}
 \end{figure}
+
+\subsubsection{Sky-shine vs Reconstruction Positions}
+Test on the simulations of $^{208}$Tl decay events.
+
+
+The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
+
+
+\subsubsection{Optimize Sky-shine Cuts}
+Apply different cuts of Sky-shine classifier values ($skyShine$),
+
+plot xfit - xmc when	skyShine$>1,	>1.01,	...	,>1.99,	>2.0$ with a 0.01 step.
+
+
+Fit	a gaussian to $x_{fit} - x_{mc}$ and get $\sigma_x$,
+Do the same thing to the $y_{fit} - y_{mc}$, $z_{fit} - z_{mc}$ and	obtain	$\sigma_x, \sigma_y, \sigma_z$
+Fill a 1D histogram of Sky-shine cut and
+$\Delta R= \sqrt{\sigma^2_x+\sigma^2_y+\sigma^2_z}$
+
+
+Compare to the numbe of MC events inside the scintillator $sqrt(x2+y2+(z108)2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events
+after cut:
+$skyShine>1.6$: 3149/3376
+$skyShine1.7$: 3149/3351
+Can check with more productions/higher statistics
+
+
+
+
+
+
 
 \subsection{Different PPO Concentrations during the Filling}
 
@@ -169,43 +198,13 @@ configuration
 
 \subsection{Bi-Po Analysis}
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=15cm]{flowchart_latex.pdf}
+	\caption{A flow chart for Bi-Po tagging.}
+	\label{biPo_flowchart}
+\end{figure}
 
-\begin{tikzpicture}[node distance=2cm]
-%%% settings
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-%%%%%%%%%%%%%%%%%%%
-
-\node (start) [startstop] {Loop for events (loop 1, from first to last)};
-\node (pro1) [process, below of=start] {Event \#i};
-\node (dec1) [decision,below of=pro1, aspect=2.5, text width=6cm, yshift = -2cm ] {FV cut~\&~$Nhit_i\in(175,1700)$};
-\node (loop2) [startstop, below of=dec1, yshift = -2cm ]{Loop for the events (loop 2, from i+1 to last)};
-\node (pro2) [process, below of=loop2] {Event \#j};
-\node (dec2) [decision, right of=pro2, text width=2.5cm, xshift =3cm] {$\Delta t=t_j -t_i>2000~\mu s$};
-\node (pro3) [process, right of=loop2, text width=3cm, xshift =6.5cm] {break loop 2};
-\node (dec3) [decision, aspect=2, below of=pro2, text width=5cm, yshift=-2.5cm] {FV cut \& $Nhit_j\in(175,320)$ \& $\Delta t\in(3.69,1000)~\mu s$ \& $|\vec{X}_i-\vec{X}_j|<0.5~m$};
-
-\node (pro4) [process, right of=dec3, text width=4cm, xshift =7cm] {Record event pair: event \#i as prompt event, tagged as $^{214}$Bi; event \#j as delayed event, tagged as $^{214}$Po.};
-
-
-
-\draw [arrow] (start) -- (pro1);
-\draw [arrow] (pro1) -- (dec1);
-\draw [arrow] (dec1)  -| node [anchor=east] {no} ([xshift=-1cm] dec1.west)
-|- ([yshift=+1cm] start.north) coordinate (aux)-- (start.north);
-\draw [arrow] (dec1) -- node[anchor=east] {yes}(loop2);
-\draw [arrow] (loop2) -- (pro2);
-\draw [arrow] (pro2) -- (dec2);
-\draw [arrow] (dec2) -|node [anchor=west] {no} (pro3);
-\draw [arrow] (pro3.north)|-(start.east);
-\draw [arrow] (dec2.south) node[anchor=north]{yes}-|(dec3.north);
-\draw [arrow] (dec3.east)--node[anchor=south] {yes}(pro4.west);
-\draw [arrow] (dec3.west)node[anchor=east] {no}|-(loop2.west);
-\draw [arrow] ([xshift=1.5cm] pro4.north)|-(pro3.east);
-\end{tikzpicture} 
 
 
 
