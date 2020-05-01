@@ -304,12 +304,9 @@ A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know
   about electronics and much more you didn’t want to know,'' {\em SNO+
   Internal Document, docDB-1316-v1.}
 
-\bibitem{esteban2019global}
-I.~Esteban, M.~Gonzalez-Garcia, A.~Hernandez-Cabezudo, M.~Maltoni, and
-  T.~Schwetz, ``Global analysis of three-flavour neutrino oscillations:
-  synergies and tensions in the determination of $\theta_{23}$, $\delta_{CP}$,
-  and the mass ordering,'' {\em Journal of High Energy Physics}, vol.~2019,
-  no.~1, p.~106, 2019.
+\bibitem{rat}
+{\em RAT Overview}, 2020 (accessed Mar 15, 2020).
+\newblock \url{https://rat.readthedocs.io/en/latest/overview.html}.
 
 \bibitem{ratManual}
 ``Overview - rat 1.0 documentation.''
@@ -353,6 +350,17 @@ F.~Barao and J.~Maneira, ``Group velocity measurement, plot for approval,''
 I.~T. Coulter, {\em Modelling and Reconstruction of Events in SNO+ related to
   Future Searches for Lepton and Baryon Number Violation.}
 \newblock PhD thesis, Ph. D. thesis, University of Oxford, 2013.
+
+\bibitem{JSONwiki}
+wikipedia, {\em JSON}, 2020 (accessed Mar 15, 2020).
+\newblock \url{https://en.wikipedia.org/wiki/JSON}.
+
+\bibitem{TDecompQRH}
+ROOT, {\em TDecompQRH Class Reference}, 2020 (accessed Mar 15, 2020).
+\newblock \url{https://root.cern.ch/doc/master/classTDecompQRH.html}.
+
+\bibitem{waterunidoc}
+W.~P. Group, ``Water physics unidoc,'' {\em SNO+ Internal Document}.
 
 \bibitem{dai2008wavelength}
 X.~Dai, E.~Rollin, A.~Bellerive, C.~Hargrove, D.~Sinclair, C.~Mifflin, and
@@ -498,6 +506,13 @@ M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
   E.~Bellotti, S.~Belogurov, A.~Bettini, L.~Bezrukov, {\em et~al.}, ``Improved
   limit on neutrinoless double-$\beta$ decay of ge 76 from gerda phase ii,''
   {\em Physical review letters}, vol.~120, no.~13, p.~132503, 2018.
+
+\bibitem{esteban2019global}
+I.~Esteban, M.~Gonzalez-Garcia, A.~Hernandez-Cabezudo, M.~Maltoni, and
+  T.~Schwetz, ``Global analysis of three-flavour neutrino oscillations:
+  synergies and tensions in the determination of $\theta_{23}$, $\delta_{CP}$,
+  and the mass ordering,'' {\em Journal of High Energy Physics}, vol.~2019,
+  no.~1, p.~106, 2019.
 
 \bibitem{zuber1998physics}
 K.~Zuber, ``On the physics of massive neutrinos,'' {\em Physics Reports},

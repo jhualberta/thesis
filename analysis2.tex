@@ -7,49 +7,108 @@ As mentioned in Chapter 3, the main purpose of the partial-fill phase is to iden
 During the filling, the LAB was first filled into the AV to replace the water. PPO was later mixed with LAB and added into the AV. At some stage, the PPO concentration was kept at 0.53 g/L, which was lower than the nominal 2 g/L. At the lower PPO concentration, the liquid scintillator has a slower timing profile. This also brings an opportunity to extract the Cherenkov signals from the liquid scintillator with low PPO concentration.
 
 \subsection{Sky-shine Classifier}
-A ``sky shine'' (SkyShine) classifier was developed by the collaboration to discriminate 
+During the partial-fill phase, a Sky-shine classifier was suggested by Mark Chen and developed by Jeff Tseng to discriminate the noise events coming from the top of the detector, the so-called ``sky shine'' events, from other backgrounds events in the AV detection region\cite{skyshine}. These sky shine events are mostly the backgrounds from radioactive decays happening in the neck region. 
 
-
-The SkyShine classifier aims to discriminate "sky shine" events from other backgrounds by looking at the ratio of hit counts in a middle z range and a low z range. It can also look at neck and high-z OWL PMT hits. The classifier's behavior for partial fill is studied using simulation.\cite{skyshine}
-
+For an event happens in the neck region, it can trigger more PMTs in the bottom (or 
+the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illustrated in Fig.~\ref{skyshine}. The classifier counts the number of the triggered PMTs with $z_{PMT}<-1000~mm$ (in PSUP coordinate) as $nSignal$ and the number of the ones with $-1000<z_{PMT}<8000~mm$ as $nSide$. The ratio $skyShine=nSide/nSignal$ is the output value of the classifier. Meanwhile, the classifier also saves the counts of the triggered neck PMTs ($nNeck$) as well as the triggered outward looking (OWL) PMTs in high z positions with $z_{OWL}>8000~mm$ ($nOWL$).
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=6cm]{skyShine.png}
-\caption{ An illustration for skyShine classifier, modified from \cite{skyshine}.}
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{ An illustration for the Sky-shine classifier, modified from \cite{skyshine}.}
 	\label{skyshine}
 \end{figure}
 
-\subsubsection{Sky-shine vs Reconstruction Positions}
-Test on the simulations of $^{208}$Tl decay events.
+In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
 
+\subsubsection{Performance of the Sky-shine Classifier}
+MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set 
+at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. RAT version 6.16.9 was used.
+
+\begin{figure}
+	\centering
+	\subfigure[MC positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_mc.png}}
+	\subfigure[Fitted positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_fit.png}}
+	\caption{MC positions (left) and fitted positions (right) of $^{208}$Tl simulations.}
+	\label{Tl208simu}
+\end{figure}
+
+
+Recall that the neck of the detector is 8-m tall, in PSUP coordination, the bottom of the neck is at $z_{neck}=6108~mm$ while the top of the neck is about $14000~mm$, which means that only a small volume of the neck cylinder is inside the PSUP sphere. In the MC simulations, events are distributed in the AV as well as the whole region of the neck.
 
 The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
 
+\begin{figure}
+	\centering
+	\subfigure[$x_{mc}$ vs. $skyShine$.]{\label{fig:1a}\includegraphics[width=60mm]{skyShineVsXmc.png}}
+	\subfigure[$y_{mc}$ vs. $skyShine$.]{\label{fig:1b}\includegraphics[width=60mm]{skyShineVsYmc.png}}
+	\subfigure[$z_{mc}$ vs. $skyShine$.]{\label{fig:1c}\includegraphics[width=60mm]{skyShineVsZmc.png}}
+	\subfigure[$r_{mc}$ vs. $skyShine$.]{\label{fig:1d}\includegraphics[width=60mm]{skyShineVsRmc.png}}
+	\caption{MC positions vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsPos}
+\end{figure}
 
-\subsubsection{Optimize Sky-shine Cuts}
-Apply different cuts of Sky-shine classifier values ($skyShine$),
 
-plot xfit - xmc when	skyShine$>1,	>1.01,	...	,>1.99,	>2.0$ with a 0.01 step.
+\begin{figure}
+	\centering
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.7$.]{\label{fig:2a}\includegraphics[width=60mm]{skyShineVsRho_mc.png}}
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.5$.]{\label{fig:2b}\includegraphics[width=60mm]{skyShineVsRho_mc1p5.png}}
+	\caption{MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}\label{skySHineCutsVsMCpos}
+\end{figure}
 
+By checking the MC events positions (``true'' event positions),  for all the triggered events, 16.8\% of them are outside the AV. Apply skyShine>1.7 can remove 98.6\% of the events outside the AV (mostly in the neck) with a sacrifice of 0.2\% of the events inside the AV.
+
+\subsubsection{Optimize the Sky-shine Cuts}
+
+Since the Sky-shine classifier removes neck events (most of them are outside the PSUP) which are not properly fitted, a skyShine cut can reduce the fit biases and improve the fit resolution.
+
+skyShine vs. fit biases (208Tl)
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig:3a}\includegraphics[width=50mm]{skyShineVsXbias.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig:3b}\includegraphics[width=50mm]{skyShineVsYbias.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig:3c}\includegraphics[width=50mm]{skyShineVsZbias.png}}
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitBias}
+\end{figure}
+
+An improvement of $\sim 18$ mm in z resolution.
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig:4a}\includegraphics[width=50mm]{fitBiasX_noCuts_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig:4b}\includegraphics[width=50mm]{fitBiasY_noCuts_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig:4c}\includegraphics[width=50mm]{fitBiasZ_noCuts_Tl208_partial.png}}
+	
+		\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig:4d}\includegraphics[width=50mm]{fitBiasX_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig:4e}\includegraphics[width=50mm]{fitBiasY_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig:4f}\includegraphics[width=50mm]{fitBiasZ_skyShine1p7_Tl208_partial.png}}
+	
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitResol}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=60mm]{skyShineCuts.png}
+	\caption{ Radial resolutions with different skyShine cuts.}
+	\label{skySHineCutVsFitResol}.
+\end{figure}
+
+Apply different cuts of $skyShine$: $skyShine>1, 1.01, 2.0$, begins from 1.0 with a 0.01 step until 2.0.
+Plot the x bias $x_{fit}-x_{mc}$ versus the $skyShine$ cut values.
 
 Fit	a gaussian to $x_{fit} - x_{mc}$ and get $\sigma_x$,
 Do the same thing to the $y_{fit} - y_{mc}$, $z_{fit} - z_{mc}$ and	obtain	$\sigma_x, \sigma_y, \sigma_z$
 Fill a 1D histogram of Sky-shine cut and
 $\Delta R= \sqrt{\sigma^2_x+\sigma^2_y+\sigma^2_z}$
 
-
-Compare to the numbe of MC events inside the scintillator $sqrt(x2+y2+(z108)2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events
+Compare to the number of MC events inside the scintillator $sqrt(x2+y2+(z108)2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events
 after cut:
 $skyShine>1.6$: 3149/3376
 $skyShine1.7$: 3149/3351
-Can check with more productions/higher statistics
-
-
-
-
-
-
+Can check with more productions/higher statistics.
 
 \subsection{Different PPO Concentrations during the Filling}
 
@@ -85,17 +144,12 @@ The partial fitter is re-coordinated according to these measurements.
 based on these measured parameters, pdfs were built. 
 
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=6cm]{skyShine.png}
-	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
-	\label{oxford_pdf}
-\end{figure}
-
-
-
-
-
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=6cm]{skyShine.png}
+%	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
+%	\label{oxford_pdf}
+%\end{figure}
 
 relative light yield (2g/L = 11900)
 \begin{table}[ht]

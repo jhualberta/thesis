@@ -363,21 +363,10 @@ particle identifications
 
 
 
-Calibration sources with known physics parameters: help to
-understand the detector response to the events and to make
-accurate measurements
-Two types of SNO+ calibration sources: optical sources and
-radioactive sources
-Optical sources: phototube response, optical properties of the
-detector media
-Radioactive source: energy scale, resolution, systematic
+Calibration sources with known physics parameters: help to understand the detector response to the events and to make accurate measurements
+Two types of SNO+ calibration sources: optical sources and radioactive sources Optical sources: phototube response, optical properties of the detector media Radioactive source: energy scale, resolution, systematic
 uncertainties
-16N calibration source is one of the radioactive sources
-
-
-\cite{esteban2019global}
-
-
+$^{16}$N calibration source is one of the radioactive sources
 
 
 Optical calibration  {\emph {in-situ}} 
@@ -402,9 +391,6 @@ Optical calibration  {\emph {in-situ}}
 \end{itemize}
 
 
-
-
-
 Calibration source
 
 The $^{16}$N source
@@ -413,14 +399,9 @@ $^{3}$H$(p,\gamma)^{4}$He reaction.
 the SNO+ Source Manipulator System (SMS)
 is inherited from the SNO.
 
-
-
 A Umbilical Retrieval Mechanism (URM) is used to send the source down to the inner vessel.
 
-
-
 The sources are connected to the umbilical.
-
 
 An umbilical encloses electrical cables, optical fibres and gas lines connected to the source.
 
@@ -428,22 +409,12 @@ A Universal Interface (UI) connecting the URM and the detector,
 Therefore, sealed environment, which 
 ensures radon gas not leaking into the detector when deploying the source.
 
--
-
-\section{Monte Carlo Simulation for SNO+}
+\section{Monte Carlo Simulation and the RAT Software}
 The SNO+ collaboration has developed a software framework, called the Reactor Analysis
-Tool (RAT), which integrates a Monte Carlo simulation of the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiemnts, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50.
-
-
-
-
-
-
+Tool (RAT), which integrates a Monte Carlo simulation of the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiemnts, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
 
 Geant4 Toolkit and
 incorporates ROOT libraries for data handling and analysis.
-
-
 
 The RAT Monte Carlo was originally developed for the Braidwood Collaboration
 utilising software developed for a generic KamLAND like detector, called Generic Liquid Scintillator GEANT4 simulation (GLG4). It was branched and
@@ -454,12 +425,7 @@ GLG4sim
 
 Braidwood
 
-
-
-
-
-
- combines both Monte Carlo simulation of the Braidwood detector with event-based analysis tasks, like reconstruction. The primary goals are:
+combines both Monte Carlo simulation of the Braidwood detector with event-based analysis tasks, like reconstruction. The primary goals are:
 
 Make it easy to analyze Monte Carlo-generated events as well as data from disk using the same software with only a few command changes. Even in the proposal R\&D phase, where there is no real data, this is still useful for dumping Monte Carlo events to disk to be analyzed by another job. When there is real data, being able to do the analysis with the same code path as was used on Monte Carlo is very reassuring.
 Allow for a modular, user-controlled analysis of events. This includes allowing the user to selected which analysis tasks to perform (different fitters, pruning unneeded data from the event data structure, etc.). It should also be relatively straightforward for users to introduce their own code into the analysis process.
@@ -467,9 +433,7 @@ Separate analysis into small tasks which can be developed asynchronously by diff
 Integrate into existing GEANT4 and GLG4sim efforts with a minimum of code duplication. As much as possible, RAT should be designed incorporate upgrades of these packages just by relinking. No cut and paste of code (mainly a question with GLG4sim).
 Design
 
-
 the detailed processes of data acquisition and trigger systems are \cite{whitepaper}.
-
 
 \cite{ratManual}
 
