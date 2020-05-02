@@ -444,6 +444,10 @@ A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
 {\em National Nuclear Data Center}, 2019 (accessed Oct 30, 2019).
 \newblock \url{https://www.nndc.bnl.gov/}.
 
+\bibitem{markchen_bkg}
+M.~C. Helen~O'Keeffe, Valentina~Lozza, ``Lab backgrounds expected numbers,''
+  {\em SNO+ Internal Document, docDB-507-v42.}
+
 \bibitem{davies1997machine}
 E.~Davies, ``Machine vision: Theory, algorithms, practicalities. academic
   press., 2-nd edition,'' 1997.

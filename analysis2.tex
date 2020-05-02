@@ -22,22 +22,19 @@ the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illus
 In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
 
 \subsubsection{Performance of the Sky-shine Classifier}
-MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set 
-at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. RAT version 6.16.9 was used.
+The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. RAT version 6.16.9 was used. 
+
+Fig.~\ref{Tl208simu} shows the positions of the simulated events and the fitted events. In the MC simulations, events are distributed in the AV as well as the whole region of the neck. Recall that the neck of the detector is 8-m tall, the MC simulated neck events from $z_{neck_bottom}=6108~mm$ up to about $z_{neck_top}=13000~mm$ in the PSUP coordinate. The valid reconstruction region is inside the PSUP sphere, thus only a small fraction of the neck events in the volume of the neck cylinder inside the PSUP sphere can be fitted or even be triggered.
 
 \begin{figure}
 	\centering
 	\subfigure[MC positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_mc.png}}
 	\subfigure[Fitted positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_fit.png}}
-	\caption{MC positions (left) and fitted positions (right) of $^{208}$Tl simulations.}
+	\caption{MC (left) and fitted positions (right) of $^{208}$Tl simulations.}
 	\label{Tl208simu}
 \end{figure}
 
-
-Recall that the neck of the detector is 8-m tall, in PSUP coordination, the bottom of the neck is at $z_{neck}=6108~mm$ while the top of the neck is about $14000~mm$, which means that only a small volume of the neck cylinder is inside the PSUP sphere. In the MC simulations, events are distributed in the AV as well as the whole region of the neck.
-
 The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
-
 \begin{figure}
 	\centering
 	\subfigure[$x_{mc}$ vs. $skyShine$.]{\label{fig:1a}\includegraphics[width=60mm]{skyShineVsXmc.png}}
@@ -47,7 +44,6 @@ The plots shows events with small values of Sky-shine calculations can be tagged
 	\caption{MC positions vs. skyShine values for simulated $^{208}$Tl events.}
 	\label{skyShineVsPos}
 \end{figure}
-
 
 \begin{figure}
 	\centering

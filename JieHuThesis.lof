@@ -19,65 +19,68 @@
 \contentsline {figure}{\numberline {4.12}{\ignorespaces The energies of simulated electrons as a function of mean nhits. The values in the 0.1 ppm PPO (solid line with inverted triangle) are compared with the water (dashed line with star).}}{44}{figure.4.12}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces The timing pdf for the wbWLS.}}{45}{figure.4.13}
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Fit position projected on x axis. The WLS fitter reconstructed $x$ positions of the 5 MeV electron events in the wbWLS (red) are compared to the ones in the water (blue). }}{46}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Light path calculation for the MP Partial Fitter.}}{47}{figure.4.15}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}}{49}{figure.4.16}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{50}{figure.4.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{50}{figure.4.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{50}{figure.4.17}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{50}{figure.4.17}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{50}{figure.4.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{50}{figure.4.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{50}{figure.4.18}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{50}{figure.4.18}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Timing profiles for liquid scintillators in different SNO+ phases.}}{52}{figure.4.19}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{55}{figure.4.20}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Light path calculation for the MP Partial Fitter. The light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, sp), $d_{sp}$ is evaluated by intersection calculations.}}{47}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Line-sphere intersections. (a): the ray-vector intersects the sphere with 2 points; (b): the ray-vector intersects the sphere with 1 point; (c) and (d): the ray-vector never passes through the sphere.}}{49}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Evaluate the length of the light path in the scintillator region.}}{50}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Evaluate the length of the light path in the neck region.}}{51}{figure.4.18}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}}{52}{figure.4.19}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{53}{figure.4.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{53}{figure.4.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{53}{figure.4.20}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{53}{figure.4.20}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{53}{figure.4.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{53}{figure.4.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{53}{figure.4.21}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{53}{figure.4.21}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Timing profiles for liquid scintillators in different SNO+ phases.}}{55}{figure.4.22}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{58}{figure.4.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces $^{16}$N main decay scheme, modified from \cite {dragowsky200216n}.}}{57}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces $^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite {maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite {n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite {n16pic}.}}{58}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Spatial distributions of {$^{16}$}N first $\gamma $-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}N$ source.}}{59}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{61}{figure.5.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{61}{figure.5.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{61}{figure.5.4}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{61}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{62}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{63}{figure.5.6}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces $^{16}$N main decay scheme, modified from \cite {dragowsky200216n}.}}{61}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces $^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite {maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite {n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite {n16pic}.}}{62}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Spatial distributions of {$^{16}$}N first $\gamma $-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}N$ source.}}{63}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{65}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{65}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{65}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{65}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{66}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{67}{figure.5.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{65}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces MC positions and fitted positions of $^{208}$Tl simulations.}}{66}{figure.6.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _mc$)}}}{66}{figure.6.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _mc$)}}}{66}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces MC positions vs. skyShine values for simulated $^{208}$Tl events.}}{67}{figure.6.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{mc}$ vs. $skyShine$.}}}{67}{figure.6.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{mc}$ vs. $skyShine$.}}}{67}{figure.6.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{mc}$ vs. $skyShine$.}}}{67}{figure.6.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$r_{mc}$ vs. $skyShine$.}}}{67}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{67}{figure.6.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{67}{figure.6.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{67}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{68}{figure.6.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{68}{figure.6.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{68}{figure.6.5}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{68}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{68}{figure.6.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{68}{figure.6.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{68}{figure.6.6}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{68}{figure.6.6}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{68}{figure.6.6}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{68}{figure.6.6}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{68}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Radial resolutions with different skyShine cuts.}}{68}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces A flow chart for Bi-Po tagging.}}{72}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{73}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{74}{figure.6.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{74}{figure.6.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{74}{figure.6.10}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{74}{figure.6.10}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{74}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{75}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{76}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{77}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{80}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{80}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{81}{figure.6.16}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{69}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{70}{figure.6.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{70}{figure.6.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{70}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces MC positions vs. skyShine values for simulated $^{208}$Tl events.}}{71}{figure.6.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{mc}$ vs. $skyShine$.}}}{71}{figure.6.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{mc}$ vs. $skyShine$.}}}{71}{figure.6.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{mc}$ vs. $skyShine$.}}}{71}{figure.6.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$r_{mc}$ vs. $skyShine$.}}}{71}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{71}{figure.6.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{71}{figure.6.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{71}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{72}{figure.6.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{72}{figure.6.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{72}{figure.6.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{72}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{73}{figure.6.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{73}{figure.6.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{73}{figure.6.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{73}{figure.6.6}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{73}{figure.6.6}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{73}{figure.6.6}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{73}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Radial resolutions with different skyShine cuts.}}{73}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces A flow chart for Bi-Po tagging.}}{76}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{77}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{78}{figure.6.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{78}{figure.6.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{78}{figure.6.10}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{78}{figure.6.10}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{78}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{79}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{81}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{82}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{85}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{85}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{86}{figure.6.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
