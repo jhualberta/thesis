@@ -391,27 +391,27 @@ In the partial fill geometry, photons will travel with different speeds as they 
 
 In the partial-fill phase, the SNO+ detector can be considered as a geometry composed of the neck (cylinder), AV sphere and water-scintillator interface (plane). A ray connecting a position inside the PSUP to the PMT can intersect with these three geometries. As illustrated in Fig.~\ref{scintpath}, a detailed calculation of $d_{sp}$ includes evaluations of (1) light path and neck (ray-cylinder) intersection; (2) light path and AV sphere (ray-sphere) intersection and (3) light path and water-scintillator interface (ray-plane) intersection. $d_{sp}$ is further separated into the path length in the neck ($d_{sp,neck}$) and in the AV ($d_{sp,AV}$). 
 
-For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a triggered PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$, define a ray-vector (rather than a line without direction) $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between vertex and intersection point and it is the parameter to be determined; $\vec u=(\vec{X}_{\mathrm{pmt}}-\vec{X}_0)$ is the direction of the ray-vector or light path. It is a unit vector pointing from the $\vec{X}_0$ to the $\vec{X}_{\mathrm{pmt}}$.
+For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a triggered PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$, define a light ray (rather than a line without direction) $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between vertex and intersection point and it is the parameter to be determined; $\vec u=\frac{\vec{X}_{\mathrm{pmt}}-\vec{X}_0}{|\vec{X}_{\mathrm{pmt}}-\vec{X}_0|}$ is the direction of the light ray. It is a unit vector pointing from the $\vec{X}_0$ to the $\vec{X}_{\mathrm{pmt}}$.
 
-In the ray-sphere intersection case (light path passes through the AV sphere), the intersection equation is:
-$(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$, where $\vec{O}_{av}$ is the origin of the AV sphere. In the PSUP coordinate, $\vec{O}_{av} = (0,0,108)~mm$.
+In the ray-sphere intersection case (light ray passes through the AV sphere), the intersection points on the $\vec{l}_0$ satisfy the sphere equation $(\vec{X}-\vec{O}_{av})^2= r^2_{av}$, where $\vec{O}_{av}$ is the origin of the AV sphere and $\vec{O}_{av} = (0,0,108)~mm$ in the PSUP coordinate. Thus the intersection equation is:
+$(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$.
 
 Let $\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av}$, if $\Delta>0$, solve the equation and get:
-\[a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if  ~\Delta>0.\]
+\[a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if~\Delta>0.\]
 
-In this case, both $a_+$ and $a_-$ exist and have different values. If $a_+>a_->0$, the length of the path inside the sphere is $a_+-a_-$, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_{AV}$ is automatically met. If $a_+>0>a_-$, $a_-$ determines an intersection point along the opposite direction of the ray-vector, which means the ray-vector actually does not pass that point (though the line without direction passes). Thus the length of the path inside the sphere is $a_+$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0|<r_{AV}$ is automatically met. 
+In this case, both $a_+$ and $a_-$ exist and have different values. If $a_+>a_->0$, the length of the path inside the sphere is $a_+-a_-$, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_{AV}$ is automatically met. If $a_+>0>a_-$, $a_-$ determines the intersection point along the opposite direction of the light ray. Thus the light ray actually does not pass that point (different to the line intersection with no direction). Thus the length of the path inside the sphere is $a_+$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0|<r_{AV}$ is automatically met. 
 
 If $\Delta\leq0$,
-there is no intersection point or only one intersection point at the AV, the light path never passes through the AV sphere, as illustrated in Fig.~\ref{line-sphere} (c) and (d).
+there is no intersection point or only one intersection point at the AV, the light ray never passes through the AV sphere, as illustrated in Fig.~\ref{line-sphere} (c) and (d).
 
 \begin{figure}
 	\centering
 {\includegraphics[width=80mm]{line-sphere.png}}
-\caption{Line-sphere intersections. (a): the ray-vector intersects the sphere with 2 points; (b): the ray-vector intersects the sphere with 1 point; (c) and (d): the ray-vector never passes through the sphere.}\label{line-sphere}
+\caption{Line-sphere intersections. (a): the light ray intersects the sphere with 2 points; (b): the light ray intersects the sphere with 1 point; (c) and (d): the light ray never passes through the sphere.}\label{line-sphere}
 \end{figure}
 
-For the ray-plane intersection, the equation is:
-$l_{0,z}=Z_{split}$, where $Z_{split}$ is the water level, i.e., the z position of the water-scintillator intersection and $l_{0,z}=z_0+a\cdot u_z$.
+For the ray-plane intersection, the z components of the intersection points on $\vec{l}_0$ satisfy the plane equation $z=Z_{split}$, where $Z_{split}$ is the water level, i.e., the z position of the water-scintillator intersection. Thus the intersection equation is:
+$l_{0,z}=Z_{split}$, where $l_{0,z}=z_0+a\cdot u_z$.
 
 If $u_z=z_\mathrm{pmt}-z_0=0$, the ray is parallel to the plane and never intersects the plane.
 
@@ -420,26 +420,23 @@ Let:
 \[
 a_3 \equiv a = \frac{(Z_{split}-z_0)|\vec{X}_{\mathrm{pmt}}-\vec{X_0}|}{z_\mathrm{pmt}-z_0}~~(if ~z_\mathrm{pmt}-z_0\neq 0).
 \]
-Similar to the case of ray-sphere intersection, if $a_3<0$, the ray-plane intersection point is on the extended line along the opposite direction to the ray; $a_3 \geq 0$ ensures the ray hits the interface. If $a_3 = 0$, 
 
-For the ray-cylinder intersection, the equation is:
-$l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $ r_{neck}$ is the radius of the neck cylinder ($r_{neck}=785~mm$).
-Solve the equation we get: 
+Similar to the case of ray-sphere intersection, if $a_3<0$, the ray-plane intersection point is on the extended line along the opposite direction to the ray; $a_3 \geq 0$ ensures the ray hits the interface. Note that here we consider the plane is infinitely large. Later we will combine with the calculations of the other geometries to cut it off. 
 
+For the ray-cylinder intersection, the x and y components of the intersection points on the $\vec l_0$ satisfy the intersection equation: $l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $r_{neck}$ is the radius of the neck cylinder ($r_{neck}=785~mm$).
 
-$\Delta = bneck*bneck - ( fx*fx+fy*fy-r^2_{neck})*drPerp2$
+To solve the equation,  let:
 
+$\Delta \equiv [x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2]$,
+
+and we get: 
 \[
-a_{neck,\pm} = |\vec{X}_{PMT}-\vec{X}_0|\cdot\frac{-bneck \pm \sqrt\Delta }{(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2},~if~\Delta>0,
+a'_{\pm} = |\vec{X}_{PMT}-\vec{X}_0|\cdot\frac{-[x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)] \pm \sqrt\Delta }{(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2},~if~\Delta>0,
 \]
 
-%	double aneck1 = dr*( -bneck + sqrt(sqrValneck) )/drPerp2; // dr comes from direction.Unit()
-%	double aneck2 = dr*( -bneck - sqrt(sqrValneck) )/drPerp2;
+Similar to the ray-sphere case, if $a'_{+}>a'_->0$, the length of the path inside the cylinder is $a'_+-a'_-$. Due to this geometry, the event position should be outside the cylinder, the condition $(x^2_0+y^2_0\geq r_{neck}$ is automatically met. If $a'_+>0>a'_-$, the event position should be inside the cylinder and the ray-vector intersects the cylinder with one point (while the other point is along the opposite direction). Thus the length of the path inside the cylinder is $a'_+$. If $\Delta\leq0$, the light ray never passes through the neck cylinder. Also note that here we consider the cylinder is infinitely long. This will also be cut off by the combined calculations of the other geometries. In addition, since only the neck region inside the PSUP is valid for the fitter, we should also ensure $z<8390~mm$ (in PSUP coordination).
 
-
-
-
-To evaluate the length of the light path in the scintillator region ($d_{sp}$), the above three geometries needs to be combined carefully. The following procedure goes through all the possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the length of the light path in the AV scintillator region ($d_{sp,AV}$):
+To evaluate the length of the light ray (light path) in the scintillator region ($d_{sp}$), the above three geometries needs to be combined carefully. The following procedure goes through all the possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the light path in the AV scintillator region ($d_{sp,AV}$):
 
 \begin{algorithm}
 First check the ray-sphere intersection:\\
@@ -488,11 +485,56 @@ If {$\Delta>0$},
 \begin{figure}
 	\centering
 	{\includegraphics[width=100mm]{scintPathAV.png}}
-	\caption{Evaluate the length of the light path in the scintillator region.}\label{lightpath_scintAV}
+	\caption{Evaluate the light path in the scintillator region.}\label{lightpath_scintAV}
 \end{figure}
 
 
-Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the length of the light path in the neck scintillator region ($d_{sp,neck}$):
+Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the light path in the neck scintillator region ($d_{sp,neck}$):
+
+Since the valid fit requires the events inside the PSUP sphere, only the neck region inside the PSUP (with $6108<z_{neck}<8390~mm$) needs to be considered. the neck path calculation is allowed to be turned off.
+
+\begin{algorithm}
+	
+First check the ray-cylinder intersection:\\
+If {$\Delta>0$}, 
+	
+\hspace{2mm}if $a'_+a'_-<0$ (event position is inside the cylinder), check the z position of the intersection point on neck, $z_+ = z_0 + a'_+u_z$: 
+	
+\hspace{6mm}if $6108<z_+<8390~mm$ (in the valid neck region), then check the AV sphere:
+	 
+\hspace{8mm}if $|\vec{X}_0|\geq r_{AV}$, $d_{sp,neck}=a'_+$, see Fig.~\ref{lightpath_scintNeck} (a).
+	
+\hspace{8mm}if $|\vec{X}_0|<r_{AV}$ and $a_+a_-<0$:
+	
+\hspace{10mm}the light ray first hits the sphere inside the cylinder and then hits the cylinder, then $d_{sp,neck}=a'_+-a_+$, see Fig.~\ref{lightpath_scintNeck} (b). 
+	
+\hspace{6mm}if $z_+<6108~mm$:
+	
+\hspace{8mm}if $|\vec X_0|\geq r_{AV}$ and $6108<z_0<8390~mm$:
+	
+\hspace{10mm}if $a_+>a_->0$: $d_{sp,neck}=a_-$, see Fig.~\ref{lightpath_scintNeck} (c).
+			
+\hspace{2mm}if $a'_+>a'_->0$ (event position is outside the cylinder), check the z position of the intersection point on neck, $z'_{\pm}=z_0+a'_\pm\cdot u_z$:
+	 
+\hspace{4mm}if $6108<z_\pm<8390~mm$: 
+	 
+\hspace{6mm}$d_{sp,neck}=a'_+ - a'_-$, see Fig.~\ref{lightpath_scintNeck} (d).
+	 
+\hspace{6mm} if $a_+>a_->0$:
+	 
+\hspace{8mm} Evaluate the z positions of the ray-sphere intersection points: $z_\pm=z_0+a_\pm\cdot u_z$
+	  
+\hspace{10mm}if $z_\pm\geq 6108~mm$: $d_{sp,neck}=a'_+ - a'_--(a_+-a_-)$, see Fig.~\ref{lightpath_scintNeck} (e). The path inside the sphere is subtracted to avoid duplicated calculation.
+	 
+\hspace{10mm}if $z_+<6108$ and $6108<z_-<8390$ (if one intersection point below neck while the other in neck):
+	 
+\hspace{12mm}if $a_+>a_->0$: $d_{sp,neck}=a_--a'_-$, see Fig.~\ref{lightpath_scintNeck} (f).
+			   
+\hspace{12mm}if $z_-<6108$ and $6108<z_+<8390~mm$:
+               
+\hspace{14mm}in this case, either the event position is inside the sphere ($a_+a_-<0$, see Fig.~\ref{lightpath_scintNeck} (g)), or outside the sphere ($a_+a_-<0$, see Fig.~\ref{lightpath_scintNeck} (h)), the path in neck is the same: $d_{sp,neck}=a'_+ - a_+$.
+\end{algorithm}
+
 
 \begin{figure}
 	\centering
@@ -501,116 +543,16 @@ Then combine the evaluations of the ray-sphere and the ray-cylinder intersection
 \end{figure}
 
 
-
-Since the valid fit requires the events inside the PSUP sphere, only the neck region inside the PSUP (with $6108<z_{neck}<8390~mm$) needs to be considered. the neck path calculation is allowed to be turned off.
-
-\begin{algorithm}
-	
-	First check the ray-cylinder intersection:\\
-	If {$\Delta>0$}, 
-	
-	\hspace{2mm}if $|\vec{x}_0|<r_{AV}$ (and $a_+>0>a_-$), 
-	
-	\hspace{2mm}check the ray-plane intersection:
-	
-	\hspace{4mm}if $a_3>0$, the ray-vector hits the interface plane: 
-	
-	\hspace{6mm}if $z_0<Z_{split}$ and $a_3<a_+$:
-	
-	\hspace{8mm}$d_{sp,AV}=a_+-a_3$, see Fig.~\ref{lightpath_scintAV} (a).
-	
-	\hspace{6mm}if $z_0\geq Z_{split}$:
-	
-	\hspace{8mm}if $a_3<a_+$:  $d_{sp,AV}=a_3$, see Fig.~\ref{lightpath_scintAV} (b). 
-	
-	\hspace{8mm}if $a_3\geq a_+$:  $d_{sp,AV}=a_+$, see Fig.~\ref{lightpath_scintAV} (c).
-	
-	\hspace{4mm}if $a_3\leq0$ and $z_0>Z_{split}$:
-	
-	\hspace{6mm}$d_{sp,AV}=a_+$, see Fig.~\ref{lightpath_scintAV} (d).
-	
-	\hspace{2mm}if $|\vec{x}_0|\geq r_{AV}$ (and $a_+>a_->0$), calculate the z position of the intersection point: 
-	
-	\hspace{4mm}$z_{\pm}=z_0+a_\pm\cdot(z_{PMT}-z_0)/|\vec{X}_{PMT}-\vec{X}_0|$,
-	
-	\hspace{4mm}if $z_- \geq Z_{split}$ and $z_+\geq Z_{split}$:
-	
-	\hspace{8mm}$d_{sp,AV} = a_+ - a_-$, see Fig.~\ref{lightpath_scintAV} (e).
-	
-	\hspace{6mm}if $z_- \geq Z_{split}$ and $z_+\geq Z_{split}$ and $a_3>0$:
-	
-	\hspace{8mm}if $z_-< Z_{split}$ and $z_+> Z_{split}$:
-	
-	\hspace{10mm}$d_{sp,AV} = a_+ - a_3$, see Fig.~\ref{lightpath_scintAV} (f).
-	
-	\hspace{8mm}if $z_->Z_{split}$ and $z_+<Z_{split}$:
-	
-	\hspace{10mm}$d_{sp,AV}= a_3 - a_-$, see Fig.~\ref{lightpath_scintAV} (g).
-\end{algorithm}
-
-
 %  double fZneckHi = fPSUPRadius; // top Z of the neck = Zpsup
 %double bneck = fx*dx + fy*dy;
 %double drPerp2 = dx*dx + dy*dy;
 %double sqrValneck = bneck*bneck - ( fx*fx+fy*fy-fNeckRadiusOuter*fNeckRadiusOuter )*drPerp2;
 %
 %if( sqrValneck > 0 ) { // check the line passes through the neck
-%	double aneck1 = dr*( -bneck + sqrt(sqrValneck) )/drPerp2; // dr comes from direction.Unit()
-%	double aneck2 = dr*( -bneck - sqrt(sqrValneck) )/drPerp2;
+
 %	/// the z position of intersection point is checked, to cancel out the duplications in AV
 %	
-%	if( aneck1*aneck2<0 ) { // vertex inside cylinder, one hit point on cylinder
-%		double aneckplus = aneck1; // aneck1>0>aneck2
-%		double zplus = fz + aneckplus*dz/dr;
-%		if( zplus < fZneckHi && zplus > fZneckLo ) { // hit point in neck region
-%			if( rVertex>=fAVRadiusOuter ) { // vertex outside AV
-%				scintpathInNeck = aneckplus;
-%			}
-%			else { // vertex inside AV
-%				if( a1*a2<0 ) scintpathInNeck = aneckplus - aplus; // hit AV at one point and then hit neck
-%			}
-%		}
-%		if( zplus < fZneckLo ) { // hit below the neck but on cylinder
-%			if( rVertex>=fAVRadiusOuter && fz>fZneckLo && fz<fZneckHi ) { // this case forces vertex inside neck and outside AV
-%				if( a1>0 && a2>0 ) { // must hits the AV at 2 points
-%					scintpathInNeck = asmall;
-%				}
-%			}
-%		}
-%	} // vertex inside cylinder
 %	
-%	if( aneck1>0 && aneck2>0 ) { // vertex outside cylinder, two intersection points on cylinder
-%		double aneckbig = aneck1>aneck2? aneck1:aneck2; // far hit point
-%		double anecksmall = aneck1<aneck2? aneck1:aneck2; // near hit point
-%		double zbig = fz + aneckbig*dz/dr; // z of far hit point
-%		double zsmall = fz + anecksmall*dz/dr; // z of near hit point
-%		/// if two intersection points are in neck region
-%		if( zbig<fZneckHi && zbig>fZneckLo && zsmall<fZneckHi && zsmall>fZneckLo )
-%		{
-%			scintpathInNeck = aneckbig - anecksmall;
-%			// an extreme condition: pass thru neck as well as virtual AV sphere inside neck
-%			if(a1>0 && a2>0) {
-%				double zAVbig = fz + abig*dz/dr, zAVsmall = fz + asmall*dz/dr; // z of AV hit points
-%				if(zAVbig>=fZneckLo && zAVsmall>=fZneckLo) scintpathInNeck = scintpathInNeck - (abig-asmall);
-%			}
-%		}
-%		/// if one intersection point below neck while the other in neck
-%		if( zbig<fZneckLo && zsmall>fZneckLo && zsmall<fZneckHi ) {
-%			if(a1>0 && a2>0) { // must pass the AV at 2 points and outside the AV
-%				scintpathInNeck = asmall - anecksmall;
-%			}
-%		}
-%		if( zsmall<fZneckLo && zbig>fZneckLo && zbig<fZneckHi) {
-%			if(a1*a2<0) {// inside AV
-%				scintpathInNeck = aneckbig - aplus;
-%			}
-%			if(a1>0 && a2>0) { // outside AV
-%				scintpathInNeck = aneckbig - abig;
-%			}
-%		}
-%	} // vertex outside the neck, aneck1>0 and aneck2>0
-%} // line hits the neck
-%} // enalbe neck path calculation
 
 
 

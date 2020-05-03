@@ -41,7 +41,7 @@
 \contentsline {section}{\numberline {4.5}Vertex and Direction Reconstruction for Water-based Wavelength-shifter}{43}{section.4.5}
 \contentsline {section}{\numberline {4.6}Vertex Reconstruction for Partial-fill and Scintillator Phases}{47}{section.4.6}
 \contentsline {section}{\numberline {4.7}Energy Reconstruction}{56}{section.4.7}
-\contentsline {section}{\numberline {4.8}Machine Learning Algorithm}{56}{section.4.8}
+\contentsline {section}{\numberline {4.8}Machine Learning Algorithm}{57}{section.4.8}
 \contentsline {section}{\numberline {4.9}PMT Selectors for the Fitter}{57}{section.4.9}
 \contentsline {chapter}{\numberline {5}SNO+ Water Phase Analysis}{60}{chapter.5}
 \contentsline {section}{\numberline {5.1}Classifiers}{60}{section.5.1}
