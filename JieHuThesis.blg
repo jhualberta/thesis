@@ -3,23 +3,23 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 239 of file thesis.bib
+Repeated entry---line 251 of file thesis.bib
  : @article{abe2019constraint
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 457 of file thesis.bib
+Repeated entry---line 469 of file thesis.bib
  : @article{agostini2019probing
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 520 of file thesis.bib
+--line 532 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 678 of file thesis.bib
-Repeated entry---line 888 of file thesis.bib
+--line 697 of file thesis.bib
+Repeated entry---line 907 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 969 of file thesis.bib
+I was expecting a `,' or a `}'---line 988 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -50,12 +50,14 @@ Warning--empty year in n16pic
 Warning--empty year in skyshine
 Warning--empty year in oxfordMeasurement
 Warning--empty journal in piperno2015dark
-Warning--empty journal in von2015measurement
-Warning--empty journal in sorensen2016temperature
+Warning--empty school in von2015measurement
+Warning--empty school in sorensen2016temperature
 Warning--empty year in scintillatorPaper
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--empty journal in hamamatsu2018photomultiplier
+Warning--empty year in rattime
+Warning--empty school in bonventre2014neutron
 Warning--empty year in andyElectronics
 Warning--empty year in partialWater
 Warning--empty year in davidPartialWater
@@ -65,7 +67,7 @@ Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
 Warning--empty year in groupVmeasure
 Warning--empty year in waterunidoc
-Warning--empty journal in mekarski2018electron
+Warning--empty school in mekarski2018electron
 Warning--empty year in chicagoTiming
 Warning--empty journal in boulay2004direct
 Warning--empty year in energyRSP
@@ -82,45 +84,45 @@ Warning--can't use both volume and number fields in biller2017new
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 118 entries,
+You've used 122 entries,
             1876 wiz_defined-function locations,
-            1086 strings with 22629 characters,
-and the built_in function-call counts, 25578 in all, are:
-= -- 2239
-> -- 1401
+            1100 strings with 23190 characters,
+and the built_in function-call counts, 26289 in all, are:
+= -- 2323
+> -- 1433
 < -- 0
-+ -- 528
-- -- 410
-* -- 1825
-:= -- 3940
-add.period$ -- 144
-call.type$ -- 118
-change.case$ -- 95
++ -- 541
+- -- 419
+* -- 1870
+:= -- 4057
+add.period$ -- 153
+call.type$ -- 122
+change.case$ -- 94
 chr.to.int$ -- 0
-cite$ -- 160
-duplicate$ -- 1381
-empty$ -- 2352
-format.name$ -- 410
-if$ -- 6033
+cite$ -- 166
+duplicate$ -- 1419
+empty$ -- 2397
+format.name$ -- 419
+if$ -- 6195
 int.to.chr$ -- 0
-int.to.str$ -- 118
-missing$ -- 112
-newline$ -- 383
-num.names$ -- 114
-pop$ -- 432
+int.to.str$ -- 122
+missing$ -- 111
+newline$ -- 400
+num.names$ -- 118
+pop$ -- 435
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 720
+skip$ -- 747
 stack$ -- 0
-substring$ -- 774
-swap$ -- 471
+substring$ -- 786
+swap$ -- 490
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 42
-while$ -- 192
-width$ -- 121
-write$ -- 1062
+warning$ -- 44
+while$ -- 197
+width$ -- 125
+write$ -- 1105
 (There were 4 error messages)

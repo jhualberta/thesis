@@ -209,6 +209,12 @@ G.~Piperno, ``Dark matter search with the cuore-0 experiment,'' 2015.
 ``Muons.'' \url{https://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm}, 2001.
 \newblock [Online; accessed 19-July-2019].
 
+\bibitem{beacom2017physics}
+J.~F. Beacom, S.~Chen, J.~Cheng, S.~N. Doustimotlagh, Y.~Gao, G.~Gong, H.~Gong,
+  L.~Guo, R.~Han, H.-J. He, {\em et~al.}, ``Physics prospects of the jinping
+  neutrino experiment,'' {\em Chinese physics C}, vol.~41, no.~2, p.~023002,
+  2017.
+
 \bibitem{anderson2019search}
 M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
   Z.~Barnard, N.~Barros, D.~Bartlett, {\em et~al.}, ``Search for invisible
@@ -246,13 +252,15 @@ W.~R. Leo, {\em Techniques for Nuclear and Particle Physics Experiments: a
 \newblock Springer Science \& Business Media, 2012.
 
 \bibitem{von2015measurement}
-B.~Von~Krosigk, ``Measurement of proton and $\alpha$ particle quenching in lab
-  based scintillators and determination of spectral sensitivities to supernova
-  neutrinos in the sno+ detector,'' 2015.
+B.~Von~Krosigk, {\em Measurement of Proton and $\alpha$ Particle Quenching in
+  LAB Based Scintillators and Determination of Spectral Sensitivities to
+  Supernova Neutrinos in the SNO+ Detector}.
+\newblock PhD thesis, 2015.
 
 \bibitem{sorensen2016temperature}
-A.~S{\"o}rensen, ``Temperature quenching in lab based liquid scintillator and
-  muon-induced backgrounds in the sno+ experiment,'' 2016.
+A.~S{\"o}rensen, {\em Temperature quenching in LAB based liquid scintillator
+  and muon-induced backgrounds in the SNO+ experiment}.
+\newblock PhD thesis, 2016.
 
 \bibitem{dunger2018topological}
 J.~Dunger, {\em Topological and time based event classification for
@@ -298,6 +306,15 @@ J.~Boger, R.~Hahn, J.~Rowley, A.~Carter, B.~Hollebone, D.~Kessler, I.~Blevis,
 \bibitem{hamamatsu2018photomultiplier}
 K.~Hamamatsu~Photonics, ``Photomultiplier tubes: Basics and applications,
   2007,'' 2018.
+
+\bibitem{rattime}
+G.~O. Gann, ``Dealing with time in rat,'' {\em SNO+ Internal Document,
+  docDB-480-v1.}
+
+\bibitem{bonventre2014neutron}
+R.~Bonventre, {\em Neutron multiplicity in atmospheric neutrino events at the
+  Sudbury Neutrino Observatory}.
+\newblock PhD thesis, 2014.
 
 \bibitem{andyElectronics}
 A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know
@@ -382,15 +399,10 @@ M.~Askins, M.~Bergevin, A.~Bernstein, S.~Dazeley, S.~Dye, T.~Handler,
   physics and nuclear nonproliferation goals of watchman: A water cherenkov
   monitor for antineutrinos,'' {\em arXiv preprint arXiv:1502.01132}, 2015.
 
-\bibitem{beacom2017physics}
-J.~F. Beacom, S.~Chen, J.~Cheng, S.~N. Doustimotlagh, Y.~Gao, G.~Gong, H.~Gong,
-  L.~Guo, R.~Han, H.-J. He, {\em et~al.}, ``Physics prospects of the jinping
-  neutrino experiment,'' {\em Chinese physics C}, vol.~41, no.~2, p.~023002,
-  2017.
-
 \bibitem{mekarski2018electron}
-P.~Mekarski, ``Electron antineutrinos in the water phase of the sno+
-  experiment,'' 2018.
+P.~Mekarski, {\em Electron Antineutrinos in the Water Phase of the SNO+
+  Experiment}.
+\newblock PhD thesis, 2018.
 
 \bibitem{biller2020slow}
 S.~D. Biller, E.~J. Leming, and J.~L. Paton, ``Slow fluors for highly effective
@@ -471,6 +483,12 @@ S.~Biller, S.~Manecki, S.~collaboration, {\em et~al.}, ``A new technique to
   load 130te in liquid scintillator for neutrinoless double beta decay
   experiments,'' in {\em Journal of Physics: Conference Series}, vol.~888,
   p.~012084, IOP Publishing, 2017.
+
+\bibitem{bramante2019foraging}
+J.~Bramante, B.~Broerman, J.~Kumar, R.~F. Lang, M.~Pospelov, and N.~Raj,
+  ``Foraging for dark matter in large volume liquid scintillator neutrino
+  detectors with multiscatter events,'' {\em Physical Review D}, vol.~99,
+  no.~8, p.~083010, 2019.
 
 \bibitem{chen1985direct}
 H.~H. Chen, ``Direct approach to resolve the solar-neutrino problem,'' {\em
@@ -566,5 +584,10 @@ G.~Horton-Smith {\em et~al.}, ``Introduction to glg4sim,'' 2006.
 M.~Dunford, {\em Measurement of the $^8${B} solar neutrino energy spectrum at
   the Sudbury Neutrino Observatory}.
 \newblock PhD thesis, 2006.
+
+\bibitem{jones2011background}
+P.~G. Jones, {\em Background rejection for the neutrinoless double beta decay
+  experiment SNO+}.
+\newblock PhD thesis, University of Oxford, 2011.
 
 \end{thebibliography}

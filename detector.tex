@@ -1,24 +1,27 @@
 %% chapter of SNO+ detector
 
 %%\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
-A Description of SNO+ Detector
-\section{Overview}\label{overview}
-The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada. The deep underground facility of the SNOLAB provides a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (w.e.m). This rock overburden ensures an extremely low rate of cosmic muons passing through the detector. The rate is $0.27~\mu/m^2/day$, compared to an average flux of about $1.44\times 10^6~\mu/m^2/day$ at sea level\cite{muonflux}.
 
-The detector has been running since December 2016.
-\cite{anderson2019search},
+\section{Overview}\label{An Overview of SNO+}
+The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). The deep underground facility of the SNOLAB provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$l\cite{muonflux}. Cosmic muons with high energies ($\mathcal{O}(GeV)$) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
 
+The SNO+ detector is the successor of the SNO experiment. The detector makes use of the SNO structure and has been upgraded. The detector consists of an acrylic vessel (AV) sphere of 12 m in diameter and 5.5 cm in thickness. The AV sphere is concentric within a stainless steel photomultiplier(PMT) support structure (PSUP), which is a geodesic dome with an average radius of 8.4 m. The Hamamatsu 8-inch R1408 PMTs are mounted on the PSUP. 9394 PMTs are looking inward to the AV, giving a 50\% effective coverage, while 90 PMTs are looking outward, serving as muon vetos. These two structures are housed in a rock cavity filled with 7000 tonnes of ultrapure water (UPW) to provide both buoyancy for the vessel and radiation shielding of the surrounding backgrounds, such as the cosmic rays and isotope decays from the rock.
 
-The SNO+ detector is the successor of the SNO experiment, which makes use of the SNO detector structure. 
-
-
-detector consists of an acrylic vessel (AV) sphere of 12 m in diameter and
-
-5.5 cm in thickness. The AV sphere is concentric within a stainless steel photomultiplier(PMT) support structure (PSUP), which is a geodesic dome with an average radius of 8.4 m. The Hamamatsu 8-inch R1408 PMTs are mounted on the PSUP. 9394 PMTs are looking inward to the AV, giving a 50\% effective coverage, while 90 PMTs are looking outward, serving as muon vetos. These two structures are housed in a rock cavity filled with 7000 tonnes of ultrapure water (UPW) to provide both buoyancy for the vessel and radiation shielding.
+%
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=10cm]{SNOPdetector.png}
+	\caption{The SNO+ detector labelled with main structures, figure modified from \cite{mekarski2018electron}; the original version is from \cite{jones2011background}}.
+	\label{snopdetector}
+\end{figure}
 
 
 main upgrades from SNO to SNO+
 BiPo tagging on partial fill data
+
+
+The detector has been running since December 2016.
+\cite{anderson2019search},
 
 \section{SNO+ Physics Phases}
 The SNO+ detector is designed for multi-purpose measurements of neutrino physics.
@@ -215,80 +218,19 @@ The acrylic of the AV is UV-transparent
 
 \section{Trigger and Readout of the SNO+ Detector}
 
-As mentioned in \ref{overview}, the Hamamatsu 8-inch R1408 PMTs, as photon sensors, are the basic detection elements for the SNO+ detector. The photons created from particle interactions in the detector can propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The photo-electron is accelerated and focused by the electric field and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the photo-electron transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode \cite{hamamatsu2018photomultiplier}.
+As mentioned in \ref{overview}, the Hamamatsu 8-inch R1408 PMTs, as photon sensors, are the basic detection elements for the SNO+ detector. 
 
-
- will cause an electrical signal in the form of
-a voltage drop. If this is larger than a threshold value, the electronics of that
-PMT sends a trigger pulse.
-
-
-
-
-The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
-
-
-Charged particles within the SNO+ detector are detected through the light that
-they produce. For the water phase of the experiment, the detector measures
-Cherenkov light using PMTs. A photon incident on a PMT may strike its
-photocathode and produce a photoelectron. This photoelectron, after passing
-through the PMT’s dynode chain,
-
-For the SNO+ detector specifically, each PMT that triggers sends multiple
-trigger pulses down the electronics chain, which then performs higher logic.
-These include both a 93 ns long square pulse (N100) and a 48 ns square pulse
-(N20) [76]. These widths are chosen to match the characteristic travel times
-of photons across the detector. More specifically, the N100 width is chosen
-such that a set of photons from a Cherenkov cone will result in overlayed PMT
-pulses. The shorter N20 width limits this overlaying of PMT pulses to events
-originating from the centre of the detector.
-If the total height of either of these summed pulses passes a set thresh-
-27
-old value, a global trigger (GT) is issued. This global trigger defines an
-event" within the detector and results in all the associated information being
-saved. Multiple different trigger thresholds can be set. For example: N100Lo,
-N100Med, N100Hi are triggers based on the N100 pulses, where each has a
-different threshold value set. So it is possible, and likely, that an event within
-the detector passes several of these trigger thresholds.
-Additionally, the detector can trigger from the charge in the PMTs directly.
-The voltage pulses from all of the PMTs are summed together (ESUM). If this
-combined voltage trace drops below a threshold value (for example, ESUMHi,
-ESUMLo), this can also issue a GT to the detector.
-Figure 3.4 shows the event display of a typical muon event in the detector. Each individual PMT that triggered for that event is highlighted at its
-position on the support structure. A muon event is characterized by the large
-number of triggered PMTs. As with nearly all muons that pass through the
-detector, it is traveling in a downward direction. This is seen in Figure 3.4 as
-the excess of PMT charge (i.e. photons) in the bottom of the detector. As all
-atmospheric muons traveling upwards would be attenuated by the Earth, the
-small flux of upward-going muons are the result of neutrino interactions in the
-rock surrounding the detector [56].
-Figure 3.5 shows a more typical event. The circular pattern seen is produced
-by the projection of the Cherenkov light cone onto the PMTs. With 24 triggered
-PMTs, this event is considered a high-energy event within the detector. The
-size of the pattern indicates that this event took place closer to the PMTs
-traveling in an outward direction, specifically in the water between the acrylic
-sphere and the PMTs.
-
-
-
-
-burst 
-from supernova
-
-
-PMTs are Hamamatsu model R1408.
-
-
-a single RG59/U type 75 $\Omega$ coaxial cable
-
-
-cables bundle into groups
-
-connected to the Paddle Cards, 
-PMT Interface Card (PMTIC) 
-\cite{andyElectronics}
+The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The photo-electron is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the photo-electron transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode \cite{hamamatsu2018photomultiplier}.
 
 19 crates$\times$16 Front End Cards (FEC)$\times$32 channels = 9728 electronics channels.
+
+
+The PMT hit time of 
+
+
+Once the global trigger signal is issued, the integrated charges and time from an event are stored in each channel.
+
+\cite{rattime,bonventre2014neutron}
 
 
 
@@ -341,13 +283,78 @@ Nhit means the number of live hit PMTs in the detector for a given event.
 dark noise rate is estimated to be 1 kHz.
 
 
+For the SNO+ detector specifically, each PMT that triggers sends multiple
+trigger pulses down the electronics chain, which then performs higher logic.
+These include both a 93 ns long square pulse (N100) and a 48 ns square pulse
+(N20) 
+
+These widths are chosen to match the characteristic travel times
+of photons across the detector. More specifically, the N100 width is chosen
+such that a set of photons from a Cherenkov cone will result in overlayed PMT
+pulses. The shorter N20 width limits this overlaying of PMT pulses to events
+originating from the centre of the detector.
+If the total height of either of these summed pulses passes a set thresh-
+27
+old value, a global trigger (GT) is issued. This global trigger defines an
+event" within the detector and results in all the associated information being
+saved. Multiple different trigger thresholds can be set. For example: N100Lo,
+N100Med, N100Hi are triggers based on the N100 pulses, where each has a
+different threshold value set. So it is possible, and likely, that an event within
+the detector passes several of these trigger thresholds.
+Additionally, the detector can trigger from the charge in the PMTs directly.
+The voltage pulses from all of the PMTs are summed together (ESUM). If this
+combined voltage trace drops below a threshold value (for example, ESUMHi,
+ESUMLo), this can also issue a GT to the detector.
+Figure 3.4 shows the event display of a typical muon event in the detector. Each individual PMT that triggered for that event is highlighted at its
+position on the support structure. A muon event is characterized by the large
+number of triggered PMTs. As with nearly all muons that pass through the
+detector, it is traveling in a downward direction. This is seen in Figure 3.4 as
+the excess of PMT charge (i.e. photons) in the bottom of the detector. As all
+atmospheric muons traveling upwards would be attenuated by the Earth, the
+small flux of upward-going muons are the result of neutrino interactions in the
+rock surrounding the detector [56].
+Figure 3.5 shows a more typical event. The circular pattern seen is produced
+by the projection of the Cherenkov light cone onto the PMTs. With 24 triggered
+PMTs, this event is considered a high-energy event within the detector. The
+size of the pattern indicates that this event took place closer to the PMTs
+traveling in an outward direction, specifically in the water between the acrylic
+sphere and the PMTs.
 
 
 
 
+ will cause an electrical signal in the form of
+a voltage drop. If this is larger than a threshold value, the electronics of that
+PMT sends a trigger pulse.
 
 
 
+
+The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
+
+
+Charged particles within the SNO+ detector are detected through the light that
+they produce. For the water phase of the experiment, the detector measures
+Cherenkov light using PMTs. A photon incident on a PMT may strike its
+photocathode and produce a photoelectron. This photoelectron, after passing
+through the PMT’s dynode chain,
+
+
+burst 
+from supernova
+
+
+PMTs are Hamamatsu model R1408.
+
+
+a single RG59/U type 75 $\Omega$ coaxial cable
+
+
+cables bundle into groups
+
+connected to the Paddle Cards, 
+PMT Interface Card (PMTIC) 
+\cite{andyElectronics}
 
 \section{Calibration}
 

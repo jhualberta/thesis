@@ -206,7 +206,7 @@ Once the MPW fitter obtains both of the fitted position and direction, the drive
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{driveCor.png}
-	\caption{ A cartoon illustrates the drive correction.}
+	\caption{ A diagram illustrates the drive correction.}
 	\label{drivecor}
 \end{figure}
 
@@ -427,119 +427,100 @@ For the ray-cylinder intersection, the x and y components of the intersection po
 
 To solve the equation,  let:
 
-$\Delta \equiv [x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2]$,
+$\Delta'\equiv [x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2]$,
 
 and we get: 
 \[
 a'_{\pm} = |\vec{X}_{PMT}-\vec{X}_0|\cdot\frac{-[x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)] \pm \sqrt\Delta }{(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2},~if~\Delta>0,
 \]
 
-Similar to the ray-sphere case, if $a'_{+}>a'_->0$, the length of the path inside the cylinder is $a'_+-a'_-$. Due to this geometry, the event position should be outside the cylinder, the condition $(x^2_0+y^2_0\geq r_{neck}$ is automatically met. If $a'_+>0>a'_-$, the event position should be inside the cylinder and the ray-vector intersects the cylinder with one point (while the other point is along the opposite direction). Thus the length of the path inside the cylinder is $a'_+$. If $\Delta\leq0$, the light ray never passes through the neck cylinder. Also note that here we consider the cylinder is infinitely long. This will also be cut off by the combined calculations of the other geometries. In addition, since only the neck region inside the PSUP is valid for the fitter, we should also ensure $z<8390~mm$ (in PSUP coordination).
+Similar to the ray-sphere case, if $a'_{+}>a'_->0$, the length of the path inside the cylinder is $a'_+-a'_-$. Due to this geometry, the event position should be outside the cylinder, the condition $(x^2_0+y^2_0\geq r_{neck}$ is automatically met. If $a'_+>0>a'_-$, the event position should be inside the cylinder and the ray-vector intersects the cylinder with one point (while the other point is along the opposite direction). Thus the length of the path inside the cylinder is $a'_+$. If $\Delta'\leq0$, the light ray never passes through the neck cylinder. Also note that here we consider the cylinder is infinitely long. This will also be cut off by the combined calculations of the other geometries. In addition, since only the neck region inside the PSUP is valid for the fitter, we should also ensure $z<8390~mm$ (in PSUP coordination).
 
-To evaluate the length of the light ray (light path) in the scintillator region ($d_{sp}$), the above three geometries needs to be combined carefully. The following procedure goes through all the possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the light path in the AV scintillator region ($d_{sp,AV}$):
+To evaluate the length of the light ray (light path) in the scintillator region ($d_{sp}$), the above three geometries needs to be combined carefully. The following two procedures go through all the possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the light path in the AV scintillator region ($d_{sp,AV}$). The following algorithm shows the detailed evaluation. Each check steps are marked by number and if-conditions are marked by a, b or c. 
 
 \begin{algorithm}
 First check the ray-sphere intersection:\\
 If {$\Delta>0$}, 
 
-\hspace{2mm}if $|\vec{x}_0|<r_{AV}$ (and $a_+>0>a_-$), 
+\hspace{2mm}(step. 1a) if $|\vec{x}_0|<r_{AV}$ (and $a_+>0>a_-$), check the ray-plane intersection:
 
-\hspace{2mm}check the ray-plane intersection:
+\hspace{4mm}(2a-a) if $a_3>0$, the ray-vector hits the interface plane: 
 
-\hspace{4mm}if $a_3>0$, the ray-vector hits the interface plane: 
+\hspace{6mm}(3a-a-a) if $z_0<Z_{split}$ and $a_3<a_+$: $d_{sp,AV}=a_+-a_3$, see Fig.~\ref{lightpath_scintAV} (a).
 
-\hspace{6mm}if $z_0<Z_{split}$ and $a_3<a_+$:
+\hspace{6mm}(3a-a-b) if $z_0\geq Z_{split}$:
 
-\hspace{8mm}$d_{sp,AV}=a_+-a_3$, see Fig.~\ref{lightpath_scintAV} (a).
+\hspace{8mm}(4a-a-b-a) if $a_3<a_+$:  $d_{sp,AV}=a_3$, see Fig.~\ref{lightpath_scintAV} (b). 
 
-\hspace{6mm}if $z_0\geq Z_{split}$:
+\hspace{8mm}(4a-a-b-b) if $a_3\geq a_+$:  $d_{sp,AV}=a_+$, see Fig.~\ref{lightpath_scintAV} (c).
 
-\hspace{8mm}if $a_3<a_+$:  $d_{sp,AV}=a_3$, see Fig.~\ref{lightpath_scintAV} (b). 
+\hspace{4mm}(2a-b) if $a_3\leq0$:
 
-\hspace{8mm}if $a_3\geq a_+$:  $d_{sp,AV}=a_+$, see Fig.~\ref{lightpath_scintAV} (c).
+\hspace{6mm}(3a-b) if $z_0>Z_{split}$: $d_{sp,AV}=a_+$, see Fig.~\ref{lightpath_scintAV} (d).
 
-\hspace{4mm}if $a_3\leq0$ and $z_0>Z_{split}$:
+\hspace{2mm}(step. 1b) if $|\vec{x}_0|\geq r_{AV}$ (and $a_+>a_->0$), calculate the z position of the intersection point: $z_{\pm}=z_0+a_\pm\cdot(z_{PMT}-z_0)/|\vec{X}_{PMT}-\vec{X}_0|$:
 
-\hspace{6mm}$d_{sp,AV}=a_+$, see Fig.~\ref{lightpath_scintAV} (d).
-
-\hspace{2mm}if $|\vec{x}_0|\geq r_{AV}$ (and $a_+>a_->0$), calculate the z position of the intersection point: 
-
-\hspace{4mm}$z_{\pm}=z_0+a_\pm\cdot(z_{PMT}-z_0)/|\vec{X}_{PMT}-\vec{X}_0|$,
-
-\hspace{4mm}if $z_- \geq Z_{split}$ and $z_+\geq Z_{split}$:
-
-\hspace{8mm}$d_{sp,AV} = a_+ - a_-$, see Fig.~\ref{lightpath_scintAV} (e).
-
-\hspace{6mm}if $z_- \geq Z_{split}$ and $z_+\geq Z_{split}$ and $a_3>0$:
+\hspace{4mm}(1-b-a) if $z_- \geq Z_{split}$ and $z_+\geq Z_{split}$: $d_{sp,AV} = a_+ - a_-$, see Fig.~\ref{lightpath_scintAV} (e).
 	
-\hspace{8mm}if $z_-< Z_{split}$ and $z_+> Z_{split}$:
+\hspace{4mm}(1-b-b) if $z_-< Z_{split}$ and $z_+> Z_{split}$ and $a_3>0$: $d_{sp,AV} = a_+ - a_3$, see Fig.~\ref{lightpath_scintAV} (f).
 
-\hspace{10mm}$d_{sp,AV} = a_+ - a_3$, see Fig.~\ref{lightpath_scintAV} (f).
-
-\hspace{8mm}if $z_->Z_{split}$ and $z_+<Z_{split}$:
-
-\hspace{10mm}$d_{sp,AV}= a_3 - a_-$, see Fig.~\ref{lightpath_scintAV} (g).
+\hspace{4mm}(1-b-c) if $z_->Z_{split}$ and $z_+<Z_{split}$ and $a_3>0$: $d_{sp,AV}= a_3 - a_-$, see Fig.~\ref{lightpath_scintAV} (g).
 \end{algorithm}
-	
 	
 \begin{figure}
 	\centering
-	{\includegraphics[width=100mm]{scintPathAV.png}}
-	\caption{Evaluate the light path in the scintillator region.}\label{lightpath_scintAV}
+	{\includegraphics[width=130mm]{scintPathAV.png}}
+	\caption{Layouts for the scintillator light paths inside the AV sphere.}\label{lightpath_scintAV}
 \end{figure}
 
 
-Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the light path in the neck scintillator region ($d_{sp,neck}$):
+Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the light path in the neck scintillator region ($d_{sp,neck}$) as the following:
 
 Since the valid fit requires the events inside the PSUP sphere, only the neck region inside the PSUP (with $6108<z_{neck}<8390~mm$) needs to be considered. the neck path calculation is allowed to be turned off.
 
 \begin{algorithm}
 	
 First check the ray-cylinder intersection:\\
-If {$\Delta>0$}, 
+If {$\Delta_{neck}>0$}, 
 	
-\hspace{2mm}if $a'_+a'_-<0$ (event position is inside the cylinder), check the z position of the intersection point on neck, $z_+ = z_0 + a'_+u_z$: 
+\hspace{2mm}(step. 1a) if $a'_+a'_-<0$ (event position is inside the cylinder), check the z position of the intersection point on neck, $z_+ = z_0 + a'_+u_z$: 
 	
-\hspace{6mm}if $6108<z_+<8390~mm$ (in the valid neck region), then check the AV sphere:
+\hspace{6mm}(2a-a) if $6108<z_+<8390~mm$ (in the valid neck region), then check the AV sphere:
 	 
-\hspace{8mm}if $|\vec{X}_0|\geq r_{AV}$, $d_{sp,neck}=a'_+$, see Fig.~\ref{lightpath_scintNeck} (a).
+\hspace{8mm}(3a-a-a) if $|\vec{X}_0|\geq r_{AV}$: $d_{sp,neck}=a'_+$, see Fig.~\ref{lightpath_scintNeck} (a).
 	
-\hspace{8mm}if $|\vec{X}_0|<r_{AV}$ and $a_+a_-<0$:
+\hspace{8mm}(3a-a-b) if $|\vec{X}_0|<r_{AV}$ and $a_+a_-<0$: $d_{sp,neck}=a'_+-a_+$, the light ray first hits the sphere inside the cylinder and then hits the cylinder, see Fig.~\ref{lightpath_scintNeck} (b). 
 	
-\hspace{10mm}the light ray first hits the sphere inside the cylinder and then hits the cylinder, then $d_{sp,neck}=a'_+-a_+$, see Fig.~\ref{lightpath_scintNeck} (b). 
+\hspace{6mm}(2a-b) if $z_+<6108~mm$:
 	
-\hspace{6mm}if $z_+<6108~mm$:
+\hspace{8mm}(3a-b) if $|\vec X_0|\geq r_{AV}$ and $6108<z_0<8390~mm$:
 	
-\hspace{8mm}if $|\vec X_0|\geq r_{AV}$ and $6108<z_0<8390~mm$:
-	
-\hspace{10mm}if $a_+>a_->0$: $d_{sp,neck}=a_-$, see Fig.~\ref{lightpath_scintNeck} (c).
+\hspace{10mm}(4a-b) if $a_+>a_->0$: $d_{sp,neck}=a_-$, see Fig.~\ref{lightpath_scintNeck} (c).
 			
-\hspace{2mm}if $a'_+>a'_->0$ (event position is outside the cylinder), check the z position of the intersection point on neck, $z'_{\pm}=z_0+a'_\pm\cdot u_z$:
+\hspace{2mm}(step. 1b) if $a'_+>a'_->0$ (event position is outside the cylinder), check the z position of the intersection point on neck, $z'_{\pm}=z_0+a'_\pm\cdot u_z$:
 	 
-\hspace{4mm}if $6108<z_\pm<8390~mm$: 
+\hspace{6mm}(2b-a) if $6108<z'_\pm-<8390~mm$, check the AV intersection:
+ 
+\hspace{8mm}(3b-a-a) if $a_\pm$ do not exit (never passes through AV), $d_{sp,neck}=a'_+ - a'_-$, see Fig.~\ref{lightpath_scintNeck} (d).
 	 
-\hspace{6mm}$d_{sp,neck}=a'_+ - a'_-$, see Fig.~\ref{lightpath_scintNeck} (d).
-	 
-\hspace{6mm} if $a_+>a_->0$:
-	 
-\hspace{8mm} Evaluate the z positions of the ray-sphere intersection points: $z_\pm=z_0+a_\pm\cdot u_z$
+\hspace{8mm}(3b-a-b) if $a_+>a_->0$, evaluate the z positions of the ray-sphere intersection points $z_\pm=z_0+a_\pm\cdot u_z$:
 	  
-\hspace{10mm}if $z_\pm\geq 6108~mm$: $d_{sp,neck}=a'_+ - a'_--(a_+-a_-)$, see Fig.~\ref{lightpath_scintNeck} (e). The path inside the sphere is subtracted to avoid duplicated calculation.
+\hspace{10mm}(4b-a-a) if $z_\pm\geq 6108~mm$: $d_{sp,neck}=a'_+ - a'_--(a_+-a_-)$, see Fig.~\ref{lightpath_scintNeck} (e). The path inside the sphere is subtracted to avoid duplicated calculation.
 	 
-\hspace{10mm}if $z_+<6108$ and $6108<z_-<8390$ (if one intersection point below neck while the other in neck):
+\hspace{10mm}(4b-a-b) if $z_+<6108$ and $6108<z_-<8390~mm$:
 	 
-\hspace{12mm}if $a_+>a_->0$: $d_{sp,neck}=a_--a'_-$, see Fig.~\ref{lightpath_scintNeck} (f).
+\hspace{12mm}(5b-a-b-a) if $a_+>a_->0$: $d_{sp,neck}=a_--a'_-$, see Fig.~\ref{lightpath_scintNeck} (f).
 			   
-\hspace{12mm}if $z_-<6108$ and $6108<z_+<8390~mm$:
+\hspace{12mm}(5b-a-b-b) if $z_-<6108$ and $6108<z_+<8390~mm$:
                
-\hspace{14mm}in this case, either the event position is inside the sphere ($a_+a_-<0$, see Fig.~\ref{lightpath_scintNeck} (g)), or outside the sphere ($a_+a_-<0$, see Fig.~\ref{lightpath_scintNeck} (h)), the path in neck is the same: $d_{sp,neck}=a'_+ - a_+$.
+\hspace{14mm}in this case, either the event position is inside the sphere ($a_+a_-<0$), shown in Fig.~\ref{lightpath_scintNeck} (g), or outside the sphere ($a_+a_-<0$), shown in Fig.~\ref{lightpath_scintNeck} (h)), the path in neck is same: $d_{sp,neck}=a'_+ - a_+$.
 \end{algorithm}
 
 
 \begin{figure}
 	\centering
-	{\includegraphics[width=80mm]{sphere-plane1.png}}
-	\caption{Evaluate the length of the light path in the neck region.}\label{lightpath_scintNeck}
+	{\includegraphics[width=130mm]{scintpathNeck.png}}
+	\caption{Layouts of the scintillator light paths inside the neck cylinder.}\label{lightpath_scintNeck}
 \end{figure}
 
 
@@ -581,7 +562,7 @@ and thus the time residual, $t_{res}$ is calculated.
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=7cm]{scintpdf.pdf}
-	\caption{The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; Red: the scintillator timing pdf.}
+	\caption{The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; red: the scintillator timing pdf.}
 	\label{partialpdf}
 \end{figure}
 
@@ -759,7 +740,6 @@ The partial fitter is invulnerable to the change of pdfs caused by different PPO
 
 \section{Energy Reconstruction}
  
-
 The previous sections mainly focus on vertex and direction reconstruction. For the energy reconstruction in the water phase 
 
 energy response processor, or the energy RSP fitter, is derived from SNO \cite{boulay2004direct,moffat2001optical}.
@@ -815,11 +795,11 @@ This selector is used for the direction reconstruction for the SNO+ water phase.
 
 \item[$\bullet$] Mode Cut Selector
 
-This selector checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the partialFitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
+This selector checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
 
 \item[$\bullet$] Uniform PMT Selector
 
-This selector is mainly designed for the partial-fill phase and the scintillator phase when an event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
+This selector is mainly designed for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
 
 \item[$\bullet$] Earliest Hit PMT Selector
 
