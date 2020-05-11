@@ -5,6 +5,11 @@ W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery, {\em
   Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
 
+\bibitem{jones2011background}
+P.~G. Jones, {\em Background rejection for the neutrinoless double beta decay
+  experiment SNO+}.
+\newblock PhD thesis, University of Oxford, 2011.
+
 \bibitem{birks1965theory}
 J.~Birks and F.~Firk, ``The theory and practice of scintillation counting,''
   {\em Physics Today}, vol.~18, p.~60, 1965.
@@ -120,6 +125,16 @@ M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
   J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, {\em et~al.}, ``Review of
   particle physics,'' {\em Physical Review D}, vol.~98, no.~3, p.~030001, 2018.
 
+\bibitem{wiki_cp}
+wikipedia, {\em CP violation}, 2020 (accessed Mar 15, 2020).
+\newblock \url{https://en.wikipedia.org/wiki/CP_violation}.
+
+\bibitem{aitchison2012gauge}
+I.~J. Aitchison and A.~J. Hey, {\em Gauge theories in particle physics: A
+  practical introduction, Volume 2: Non-Abelian Gauge theories: QCD and the
+  electroweak theory}, vol.~2.
+\newblock CRC Press, 2012.
+
 \bibitem{abe2017measurement}
 K.~Abe, J.~Amey, C.~Andreopoulos, M.~Antonova, S.~Aoki, A.~Ariga, Y.~Ashida,
   S.~Ban, M.~Barbi, G.~Barker, {\em et~al.}, ``Measurement of neutrino and
@@ -215,17 +230,17 @@ J.~F. Beacom, S.~Chen, J.~Cheng, S.~N. Doustimotlagh, Y.~Gao, G.~Gong, H.~Gong,
   neutrino experiment,'' {\em Chinese physics C}, vol.~41, no.~2, p.~023002,
   2017.
 
-\bibitem{anderson2019search}
-M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
-  Z.~Barnard, N.~Barros, D.~Bartlett, {\em et~al.}, ``Search for invisible
-  modes of nucleon decay in water with the {SNO+} detector,'' {\em Physical
-  Review D}, vol.~99, no.~3, p.~032008, 2019.
-
 \bibitem{whitepaper}
 S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back, Z.~Barnard,
   N.~Barros, E.~Beier, A.~Bialek, {\em et~al.}, ``Current status and future
   prospects of the sno+,'' {\em Advances in High Energy Physics}, vol.~2016,
   2016.
+
+\bibitem{anderson2019search}
+M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
+  Z.~Barnard, N.~Barros, D.~Bartlett, {\em et~al.}, ``Search for invisible
+  modes of nucleon decay in water with the {SNO+} detector,'' {\em Physical
+  Review D}, vol.~99, no.~3, p.~032008, 2019.
 
 \bibitem{Paton:2019kgy}
 J.~Paton, ``{Neutrinoless Double Beta Decay in the SNO+ Experiment},'' in {\em
@@ -584,10 +599,5 @@ G.~Horton-Smith {\em et~al.}, ``Introduction to glg4sim,'' 2006.
 M.~Dunford, {\em Measurement of the $^8${B} solar neutrino energy spectrum at
   the Sudbury Neutrino Observatory}.
 \newblock PhD thesis, 2006.
-
-\bibitem{jones2011background}
-P.~G. Jones, {\em Background rejection for the neutrinoless double beta decay
-  experiment SNO+}.
-\newblock PhD thesis, University of Oxford, 2011.
 
 \end{thebibliography}
