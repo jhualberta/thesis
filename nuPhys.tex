@@ -87,37 +87,44 @@ e^{-i\delta_{CP}}\sin\theta_{13} &0 &\cos\theta_{13}\\
 
 In the PMNS matrix, we have four parameters: the three mixing angles $\theta_{12}$, $\theta_{13}$, $\theta_{23}$ and the charge-parity (CP) violation parameter of lepton sector, $\delta_{CP}$. The unknown value of $\delta_{CP}$ is related to leptogenesis, the hypothetical physical process that produced an asymmetry between leptons and antileptons in the very early universe\cite{wiki_cp}. 
 
-Now discuss the vacuum flavor oscillation: in the lab frame, assume a neutrino is generated at time $t_0=0$ from a source with a certain flavor state $|\nu_\alpha>$. It then propagates in vacuum with a speed close to the speed of light (ultra-relativistic) for a distance $L$ and is finally detected at time $t$ in a detector. The flavor eigenstate evolves in space-time is $|\nu_\alpha> = \sum_{i=1}^3U^*_{\alpha i}|\nu_i,p_i>$, where $p_i$ is the 4-momentum of $\nu_i$. The momentum is assumed to be along the direction from the source to the detector and only in one dimension. In the ultra-relativistic case, $p\simeq E\gg m$, then $E_i=\sqrt{p^2_i+m^2_i}\simeq p_i+\frac{m_i^2}{2p_i}$ (from here use the natural units: $\hbar=c=1$). Via the Schr\"{o}dinger equation, the amplitude for the flavor eigenstate $|\nu_\beta>$ in the detector at $(L,T)$ is\cite{aitchison2012gauge}:
+Now discuss the vacuum flavor oscillation: in the lab frame, assume a neutrino is generated at time $t_0=0$ from a source with a certain flavor state $|\nu_\alpha>$. It then propagates in vacuum with a speed close to the speed of light (ultra-relativistic) for a distance $L$ and is finally detected at time $t$ in a detector. The flavor eigenstate evolves in space-time is $|\nu_\alpha> = \sum_{i=1}^3U^*_{\alpha i}|\nu_i,p_i>$, where $p_i$ is the 4-momentum of $\nu_i$. The momentum is assumed to be along the direction from the source to the detector and only in one dimension. Via the Schr\"{o}dinger equation, the amplitude for the flavor eigenstate $|\nu_\beta>$ in the detector at $(L,T)$ is (use the natural units: $\hbar=c=1$) \cite{aitchison2012gauge}:
 \begin{equation}
 \mathcal{A}(\nu_\alpha\to\nu_\beta;L,E)=\sum_{i}U^*_{\alpha i}e^{-iE_i t+ip_iL}<\nu_\beta|\nu_i,p_i>=\sum_{i}U^*_{\alpha i}U_{\beta i}e^{-iE_it+ip_iL},
 \end{equation}
 
 Then the probability of $\nu_\alpha$ at time $t_0=0$ transforms into a $\nu_\beta$ at time $t$ is:
-\begin{equation}
+\begin{equation}\label{oscillationEq1}
  \begin{split}
 &P(\nu_\alpha\to\nu_\beta;L,E)=|<\mathcal{A}(\nu_\alpha\to\nu_\beta;L,E)|\mathcal{A}(\nu_\alpha\to\nu_\beta;L,E)>|^2=\\
 &(U^*_{\alpha 1}U_{\beta 1}e^{-iE_1t+ip_1L}+U^*_{\alpha 2}U_{\beta 2}e^{-iE_2t+ip_2L}+...)(U_{\alpha 1}U^*_{\beta 1}e^{+iE_1t-ip_1L}+U_{\alpha 2}U^*_{\beta 2}e^{+iE_2t-ip_2L}+...)=\\
-&\sum_i |U_{\alpha i}|^2|U_{\beta i}|^2 + 2\sum_{i>j}|U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j}|
+&\sum_i |U_{\alpha i}|^2|U_{\beta i}|^2 + \sum_{i>j}(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})\exp\{-i(E_i-E_j)t+i(p_i-p_j)L\}+(i\leftrightarrow j),
+\end{split}
+\end{equation}
+where $(i\leftrightarrow j)$ stands for the term exchanging index $i,j$.
+
+For the second term in \ref{oscillationEq1}: in the ultra-relativistic case, $p_i\simeq p_j\equiv p\simeq E\gg m$, where $E$ is the average energy. Then $E_i=\sqrt{p^2_i+m^2_i}\simeq p+\frac{m_i^2}{2E}$ and thus $E_i-E_j\simeq \frac{m^2_i-m^2_j}{2E}\equiv \frac{\Delta m^2_{ij}}{2E}$\cite{pdg2018,aitchison2012gauge}. Here $\Delta m^2_{ij}$ is a set of parameters called mass square difference, popping out in the flavor transition probability. Also, $L\simeq ct=t~(c\equiv 1)$. In addition, $U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}=|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\exp\{i\phi_{\alpha\beta;ij}\}$, where $\phi_{\alpha\beta;ij}=\mathrm{Arg}(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})$ and $\phi_{\alpha\beta;ij}=-\phi_{\alpha\beta;ji}$. Thus the second term containing $\exp$ is simplified to be:
+$\exp\{-i\frac{\Delta m^2_{ij}}{2E}L+i\phi_{\alpha\beta;ij}\}+(i\leftrightarrow j)=2\cos(\frac{\Delta m^2_{ij}}{2E}L-\phi_{\alpha\beta;ij})$. Therefore, \ref{oscillationEq1} can be written as\cite{aitchison2012gauge}:
+\begin{equation}\label{oscillationEq2}
+P(\nu_\alpha\to\nu_\beta;L,E)=
+\sum_i |U_{\alpha i}|^2|U_{\beta i}|^2 + 2\sum_{i>j}|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\cos(\frac{\Delta m^2_{ij}}{2E}L-\phi_{\alpha\beta;ij}),
+\end{equation}
+
+Further expand the second term in \ref{oscillationEq2}:
+\begin{equation}
+ \begin{split}
+&|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\{\cos(\phi_{\alpha\beta;ij})\cos(\frac{\Delta m^2_{ij}}{2E}L)+\sin(\phi_{\alpha\beta;ij})\sin(\frac{\Delta m^2_{ij}}{2E}L)\}=\\
+&\Re(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})(1-2\sin^2\frac{\Delta m^2_{ij}L}{4E})+\Im(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})\sin\frac{\Delta m^2_{ij}L}{2E},
  \end{split}
 \end{equation}
 
-the orthogonality of the mass eigenstates, $<\nu_j|\nu_i> =\delta_{ij}$.
+Since the mass eigenstates have relation $<\nu_j|\nu_i> =\delta_{ij}$ and the matrix $U$ is unitary,
+
+finally it comes out:
+\[
+P_{\alpha\beta}(L,E)=\delta_{\alpha\beta}-4\sum_{i>j} \Re[U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j}]\sin^2\frac{\Delta m^2_{ij}L}{4E}+2\sum_{i>j} \Im(U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j})\sin\frac{\Delta m^2_{ij}L}{2E}
+\]
 
 
-In natural units and ultra-relativistic case, $L\simeq ct=t$.
-
-
-
-
-
-
-
-
-then $P_{\nu_e\to\nu_\mu}$ can be simplified to be:
-\begin{equation}\label{eq:oscillation}
-P_{\nu_e\to\nu_\mu} = \sin^2( 2\theta)\sin^2(\frac{m_2^2-m_1^2}{4E}t)=\sin^2( 2\theta)\sin^2(\frac{\Delta m^2}{4E}L),
-\end{equation}
-where $\Delta m^2=m_2^2-m_1^2$. $L = t$ is the distance neutrino travels. 
 
 Maximum oscillation occurs at $\frac{\Delta m^2}{4E}L\sim \pi$, which gives an effective length $L^{osc}=4\pi E/\Delta m^2$.
 
@@ -129,15 +136,6 @@ The survival probability is defined as:
 \begin{equation}
 P_{\nu_e\to\nu_e}=1-P_{\nu_e\to\nu_{\mu}}.
 \end{equation}
-
-
-
-
-\[
-P_{\alpha\beta}=\delta_{\alpha\beta}-4\sum_{i>j} \Re[U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j}]\sin^2\frac{\Delta m^2_{ij}L}{4E}+2\sum_{i>j} \Im(U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j})\sin\frac{\Delta m^2_{ij}L}{2E}
-\]
-
-
 
 
 
