@@ -105,7 +105,7 @@ where $(i\leftrightarrow j)$ stands for the term exchanging index $i,j$.
 For the second term in \ref{oscillationEq1}: in the ultra-relativistic case, $p_i\simeq p_j\equiv p\simeq E\gg m$, where $E$ is the average energy. Then $E_i=\sqrt{p^2_i+m^2_i}\simeq p+\frac{m_i^2}{2E}$ and thus $E_i-E_j\simeq \frac{m^2_i-m^2_j}{2E}\equiv \frac{\Delta m^2_{ij}}{2E}$\cite{pdg2018,aitchison2012gauge}. Here $\Delta m^2_{ij}$ is a set of parameters called mass square difference, popping out in the flavor transition probability. Also, $L\simeq ct=t~(c\equiv 1)$. In addition, $U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}=|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\exp\{i\phi_{\alpha\beta;ij}\}$, where $\phi_{\alpha\beta;ij}=\mathrm{Arg}(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})$ and $\phi_{\alpha\beta;ij}=-\phi_{\alpha\beta;ji}$. Thus the second term containing $\exp$ is simplified to be:
 $\exp\{-i\frac{\Delta m^2_{ij}}{2E}L+i\phi_{\alpha\beta;ij}\}+(i\leftrightarrow j)=2\cos(\frac{\Delta m^2_{ij}}{2E}L-\phi_{\alpha\beta;ij})$. Therefore, \ref{oscillationEq1} can be written as\cite{aitchison2012gauge}:
 \begin{equation}\label{oscillationEq2}
-P(\nu_\alpha\to\nu_\beta;L,E)=
+P_{\nu_\alpha\to\nu_\beta}(L,E)=
 \sum_i |U_{\alpha i}|^2|U_{\beta i}|^2 + 2\sum_{i>j}|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\cos(\frac{\Delta m^2_{ij}}{2E}L-\phi_{\alpha\beta;ij}),
 \end{equation}
 
@@ -117,12 +117,20 @@ Further expand the second term in \ref{oscillationEq2}:
  \end{split}
 \end{equation}
 
-Since the mass eigenstates have relation $<\nu_j|\nu_i> =\delta_{ij}$ and the matrix $U$ is unitary,
+Since the matrix $U$ is unitary and when $t=0$, 
+\begin{equation}
+P_{\nu_\alpha\to\nu_\beta}=\delta_{\alpha\beta}=\sum_i |U_{\alpha i}|^2|U_{\beta i}|^2+2\sum_{i>j}\Re(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}),
+\end{equation} 
 
-finally it comes out:
-\[
-P_{\alpha\beta}(L,E)=\delta_{\alpha\beta}-4\sum_{i>j} \Re[U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j}]\sin^2\frac{\Delta m^2_{ij}L}{4E}+2\sum_{i>j} \Im(U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j})\sin\frac{\Delta m^2_{ij}L}{2E}
-\]
+finally it comes out the commonly used flavor transformation equation\cite{pdg2018,aitchison2012gauge}:
+\begin{equation}
+P_{\nu_\alpha\to\nu_\beta}(L,E)=\delta_{\alpha\beta}-4\sum_{i>j} \Re[U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j}]\sin^2\frac{\Delta m^2_{ij}L}{4E}+2\sum_{i>j} \Im(U_{\beta i}U^*_{\alpha i}U_{\alpha j}U^*_{\beta j})\sin\frac{\Delta m^2_{ij}L}{2E}.
+\end{equation}
+
+Choose a set of units commonly used by experiments and with dimensional transformation, we have\cite{pdg2018}:
+\begin{equation}
+X_{ij}\equiv \frac{\Delta m^2_{ij}L}{4E}=\frac{1.267\Delta m_{ij}^2[eV^2]L[m]}{E_\nu[MeV]}.
+\end{equation}
 
 
 
@@ -130,7 +138,7 @@ Maximum oscillation occurs at $\frac{\Delta m^2}{4E}L\sim \pi$, which gives an e
 
 For a set of units commonly used by experiments, a neutrino with energy $E_\nu$, after flying for a distance of $L$, has an oscillation probability of: 
 \begin{equation}
-P_{\nu_e\to\nu_{\mu}}=\sin^2(2\theta)\sin^2\Big(\frac{1.27\Delta m^2[eV^2]L[km]}{E_\nu[GeV]}\Big).
+P_{\nu_e\to\nu_{\mu}}=\sin^2(2\theta)\sin^2\Big(\Big).
 \end{equation}
 The survival probability is defined as:
 \begin{equation}
