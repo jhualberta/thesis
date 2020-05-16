@@ -7,19 +7,19 @@ Repeated entry---line 298 of file thesis.bib
  : @article{abe2019constraint
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 524 of file thesis.bib
+Repeated entry---line 577 of file thesis.bib
  : @article{agostini2019probing
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 587 of file thesis.bib
+--line 640 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 752 of file thesis.bib
-Repeated entry---line 962 of file thesis.bib
+--line 817 of file thesis.bib
+Repeated entry---line 1027 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1043 of file thesis.bib
+I was expecting a `,' or a `}'---line 1108 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -28,7 +28,6 @@ Warning--I didn't find a database entry for "BP05"
 Warning--I didn't find a database entry for "bahcall1"
 Warning--I didn't find a database entry for "raymond"
 Warning--I didn't find a database entry for "xing"
-Warning--I didn't find a database entry for "martin"
 Warning--I didn't find a database entry for "exo"
 Warning--I didn't find a database entry for "kamlandZen"
 Warning--I didn't find a database entry for "borexino"
@@ -67,57 +66,58 @@ Warning--empty year in chicagoTiming
 Warning--empty journal in boulay2004direct
 Warning--empty year in energyRSP
 Warning--empty year in partialEnergy
+Warning--empty journal in davies1997machine
+Warning--empty year in houghTransform
 Warning--empty year in neuronetwork
 Warning--empty year in modeCut
 Warning--empty year in highlevel
 Warning--empty school in dragowsky1999sudbury
 Warning--empty school in hamer2001energy
 Warning--empty year in markchen_bkg
-Warning--empty journal in davies1997machine
-Warning--empty year in houghTransform
 Warning--can't use both volume and number fields in biller2017new
+Warning--there's a number but no series in perkins2009particle
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 128 entries,
+You've used 139 entries,
             1876 wiz_defined-function locations,
-            1122 strings with 24271 characters,
-and the built_in function-call counts, 28100 in all, are:
-= -- 2483
-> -- 1558
+            1164 strings with 25546 characters,
+and the built_in function-call counts, 29931 in all, are:
+= -- 2663
+> -- 1638
 < -- 0
-+ -- 585
-- -- 457
-* -- 1997
-:= -- 4325
-add.period$ -- 161
-call.type$ -- 128
-change.case$ -- 98
++ -- 618
+- -- 479
+* -- 2098
+:= -- 4599
+add.period$ -- 182
+call.type$ -- 139
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 172
-duplicate$ -- 1518
-empty$ -- 2528
-format.name$ -- 457
-if$ -- 6633
+cite$ -- 184
+duplicate$ -- 1611
+empty$ -- 2728
+format.name$ -- 479
+if$ -- 7084
 int.to.chr$ -- 0
-int.to.str$ -- 128
-missing$ -- 117
-newline$ -- 420
-num.names$ -- 124
-pop$ -- 451
+int.to.str$ -- 139
+missing$ -- 130
+newline$ -- 463
+num.names$ -- 133
+pop$ -- 492
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 830
+skip$ -- 864
 stack$ -- 0
-substring$ -- 834
-swap$ -- 545
+substring$ -- 866
+swap$ -- 564
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 44
-while$ -- 207
-width$ -- 131
-write$ -- 1168
+warning$ -- 45
+while$ -- 219
+width$ -- 142
+write$ -- 1272
 (There were 4 error messages)

@@ -738,6 +738,15 @@ The pdf can be expanded and fit with Chebyshev polynomials to obtain an analytic
 The partial fitter is invulnerable to the change of pdfs caused by different PPO concentrations.
 
 
+
+
+
+
+
+
+
+
+
 \section{Energy Reconstruction}
  
 The previous sections mainly focus on vertex and direction reconstruction. For the energy reconstruction in the water phase 
@@ -771,10 +780,31 @@ In the partial-fill phase, there is no proper energy fitter works.  In \cite{par
 to scale $NHits$ based on several sets of simulations.
 
 
+\section{Other Reconstruction Algorithms}
+\subsection{Hough Transformation for Direction Reconstruction}
+
+
+Hough transformation is a pattern recognition algorithm used in image analysis and computer vision\cite{davies1997machine}. This algorithm was first invent to extract patterns in bubble chamber\cite{houghwiki}, 
+
+is used by Super-K\cite{shiozawa1999reconstruction}.
+
+The Hough transformation algorithm was used in SNO data analysis for counting the numbers of the Cherenkov rings caused by multiple charged particles in a high energy event such as atmospheric neutrinos event\cite{bonventre2014neutron}. It is also suggested for the reconstruction of event direction in the SNO+ scintillator phase\cite{houghTransform}.
+
+As illustrated in Fig.~\ref{houghTrans}, 
+
+
+circular Hough transformation
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{houghTransform.png}
+	\caption{Hough transformation for catching the ring structure of Cherenkov signals and fitting the direction.}
+	\label{houghTrans}
+\end{figure}
 
 
 
-\section{Machine Learning Algorithm}
+
+\subsection{Machine Learning Algorithm}
 
 artificial neural network (ANN)
 Position ANN,

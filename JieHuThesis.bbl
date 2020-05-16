@@ -157,6 +157,11 @@ F.~P. An, A.~Balantekin, H.~Band, M.~Bishai, S.~Blyth, D.~Cao, G.~Cao, J.~Cao,
 X.~Qian and J.-C. Peng, ``Physics with reactor neutrinos,'' {\em Reports on
   Progress in Physics}, vol.~82, no.~3, p.~036201, 2019.
 
+\bibitem{antonio2018state}
+E.~Antonio, {\em State Of The Art Of Neutrino Physics, The: A Tutorial For
+  Graduate Students And Young Researchers}, vol.~28.
+\newblock World Scientific, 2018.
+
 \bibitem{abe2017measurement}
 K.~Abe, J.~Amey, C.~Andreopoulos, M.~Antonova, S.~Aoki, A.~Ariga, Y.~Ashida,
   S.~Ban, M.~Barbi, G.~Barker, {\em et~al.}, ``Measurement of neutrino and
@@ -169,11 +174,6 @@ K.~Abe, R.~Akutsu, A.~Ali, C.~Alt, C.~Andreopoulos, L.~Anthony, M.~Antonova,
   S.~Aoki, A.~Ariga, Y.~Asada, {\em et~al.}, ``Constraint on the
   matter-antimatter symmetry-violating phase in neutrinooscillations,'' {\em
   arXiv preprint arXiv:1910.03887}, 2019.
-
-\bibitem{kimura2002exact}
-K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
-  cp violation for neutrino oscillations in matter,'' {\em Physics Letters B},
-  vol.~537, no.~1-2, pp.~86--94, 2002.
 
 \bibitem{smirnov2016solar}
 A.~Y. Smirnov, ``Solar neutrinos: Oscillations or no-oscillations?,'' {\em
@@ -193,9 +193,31 @@ M.~Fukugita and T.~Yanagida, {\em Physics of Neutrinos: and Application to
   Astrophysics}.
 \newblock Springer Science \& Business Media, 2013.
 
+\bibitem{kimura2002exact}
+K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
+  cp violation for neutrino oscillations in matter,'' {\em Physics Letters B},
+  vol.~537, no.~1-2, pp.~86--94, 2002.
+
 \bibitem{giaz2018status}
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
   preprint arXiv:1804.03575}, 2018.
+
+\bibitem{zee2010quantum}
+A.~Zee, {\em Quantum field theory in a nutshell}, vol.~7.
+\newblock Princeton university press, 2010.
+
+\bibitem{kane2017modern}
+G.~Kane, {\em Modern elementary particle physics: explaining and extending the
+  standard model}.
+\newblock Cambridge University Press, 2017.
+
+\bibitem{povh2008particles}
+B.~Povh, K.~Rith, and F.~Zetsche, {\em Particles and nuclei}, vol.~1.
+\newblock Springer, 2008.
+
+\bibitem{martin2019nuclear}
+B.~R. Martin and G.~Shaw, {\em Nuclear and particle physics: an introduction}.
+\newblock John Wiley \& Sons, 2019.
 
 \bibitem{zuber2011neutrino}
 K.~Zuber, {\em Neutrino physics}.
@@ -251,6 +273,15 @@ J.~F. Beacom, S.~Chen, J.~Cheng, S.~N. Doustimotlagh, Y.~Gao, G.~Gong, H.~Gong,
   L.~Guo, R.~Han, H.-J. He, {\em et~al.}, ``Physics prospects of the jinping
   neutrino experiment,'' {\em Chinese physics C}, vol.~41, no.~2, p.~023002,
   2017.
+
+\bibitem{waterfield2017optical}
+J.~Waterfield, {\em Optical calibration system for SNO+ and sensitivity to
+  neutrinoless double-beta decay}.
+\newblock PhD thesis, University of Sussex, 2017.
+
+\bibitem{stringer2019sensitivity}
+M.~Stringer, {\em Sensitivity of SNO+ to supernova neutrinos}.
+\newblock PhD thesis, University of Sussex, 2019.
 
 \bibitem{whitepaper}
 S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back, Z.~Barnard,
@@ -467,6 +498,24 @@ M.~Mottram, ``Note on {RSP} fitter,'' {\em SNO+ Internal Document,
 M.~Mottram, ``Energy reconstruction in partial scintillator fill,'' {\em SNO+
   Internal Document, docDB-3133-v1.}
 
+\bibitem{davies1997machine}
+E.~Davies, ``Machine vision: Theory, algorithms, practicalities. academic
+  press., 2-nd edition,'' 1997.
+
+\bibitem{houghwiki}
+wikipedia, {\em Hough Transform}, 2019 (accessed Nov 3, 2019).
+\newblock \url{https://en.wikipedia.org/wiki/Hough_transform}.
+
+\bibitem{shiozawa1999reconstruction}
+M.~Shiozawa, ``Reconstruction algorithms in the super-kamiokande large water
+  cherenkov detector,'' {\em Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment}, vol.~433, no.~1-2, pp.~240--246, 1999.
+
+\bibitem{houghTransform}
+G.~Beier, ``Study of direction reconstruction in scintillator,'' {\em SNO+
+  Internal Document, docDB-3503-v4.}
+
 \bibitem{neuronetwork}
 M.~Anderson, ``Neural network fitter updates,'' {\em SNO+ Internal Document,
   docDB-6298-v1.}
@@ -493,27 +542,18 @@ A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
 {\em National Nuclear Data Center}, 2019 (accessed Oct 30, 2019).
 \newblock \url{https://www.nndc.bnl.gov/}.
 
+\bibitem{tmvaWebsite}
+{\em TMVA}, 2020 (accessed Mar 30, 2020).
+\newblock \url{https://root.cern.ch/tmva}.
+
+\bibitem{sprWebsite}
+{\em StatPatternRecognition and Machine Learning in HEP}, 2020 (accessed Mar
+  30, 2020).
+\newblock \url{http://www.hep.caltech.edu/~narsky/spr.html}.
+
 \bibitem{markchen_bkg}
 M.~C. Helen~O'Keeffe, Valentina~Lozza, ``Lab backgrounds expected numbers,''
   {\em SNO+ Internal Document, docDB-507-v42.}
-
-\bibitem{davies1997machine}
-E.~Davies, ``Machine vision: Theory, algorithms, practicalities. academic
-  press., 2-nd edition,'' 1997.
-
-\bibitem{houghwiki}
-wikipedia, {\em Hough Transform}, 2019 (accessed Nov 3, 2019).
-\newblock \url{https://en.wikipedia.org/wiki/Hough_transform}.
-
-\bibitem{shiozawa1999reconstruction}
-M.~Shiozawa, ``Reconstruction algorithms in the super-kamiokande large water
-  cherenkov detector,'' {\em Nuclear Instruments and Methods in Physics
-  Research Section A: Accelerators, Spectrometers, Detectors and Associated
-  Equipment}, vol.~433, no.~1-2, pp.~240--246, 1999.
-
-\bibitem{houghTransform}
-G.~Beier, ``Study of direction reconstruction in scintillator,'' {\em SNO+
-  Internal Document, docDB-3503-v4.}
 
 \bibitem{biller2017new}
 S.~Biller, S.~Manecki, S.~collaboration, {\em et~al.}, ``A new technique to
@@ -554,6 +594,10 @@ P.~B. Denton, S.~J. Parke, and X.~Zhang, ``Eigenvalues: The rosetta stone for
   neutrino oscillations in matter,'' {\em arXiv preprint arXiv:1907.02534},
   2019.
 
+\bibitem{perkins2009particle}
+D.~H. Perkins, {\em Particle astrophysics}.
+\newblock No.~10, Oxford University Press, 2009.
+
 \bibitem{agostini2017background}
 M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
   C.~Bauer, E.~Bellotti, S.~Belogurov, S.~Belyaev, {\em et~al.},
@@ -586,6 +630,14 @@ Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
   D.~Xue-Feng, Z.~Xuan, J.~Quan-Lin, Z.~Li, {\em et~al.}, ``Preliminary study
   of light yield dependence on lab liquid scintillator composition,'' {\em
   Chinese Physics C}, vol.~39, no.~9, p.~096003, 2015.
+
+\bibitem{bialek2016rope}
+A.~Bialek, M.~Chen, B.~Cleveland, P.~Gorel, A.~Hallin, P.~Harvey, J.~Heise,
+  C.~Kraus, C.~Krauss, I.~Lawson, {\em et~al.}, ``A rope-net support system for
+  the liquid scintillator detector for the sno+ experiment,'' {\em Nuclear
+  Instruments and Methods in Physics Research Section A: Accelerators,
+  Spectrometers, Detectors and Associated Equipment}, vol.~827, pp.~152--160,
+  2016.
 
 \bibitem{tanner2018PMT}
 T.~Kaptanoglu, ``Characterization of the hamamatsu 8” r5912-mod
