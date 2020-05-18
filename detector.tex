@@ -5,7 +5,8 @@
 \section{Overview}\label{overview}
 The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). The deep underground facility of the SNOLAB provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$l\cite{muonflux}. Cosmic muons with high energies ($\mathcal{O}(GeV)$) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
 
-The SNO+ detector is the successor of the SNO experiment. The detector makes use of the SNO infrastructure and has been upgraded to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and aheight of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide both buoyancy for the vessel and radiation shielding of the surrounding backgrounds, such as the cosmic rays and isotope decays from the rock. 
+The SNO+ detector is the successor of the SNO experiment. The detector makes use of the SNO infrastructure and has been upgraded to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a
+height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide both buoyancy for the vessel and radiation shielding of the surrounding backgrounds, such as the cosmic rays and isotope decays from the rock. 
 
 The detector consists of an acrylic vessel (AV) sphere of 12.01 m in diameter and 5.5 cm in thickness. The AV contains detection medium and is held in place by a rope net system including hold-up and hold-down Tensylon ropes. This spheric structure is simple in geometry and reduces the complexities for simulation and event reconstruction. Furthermore, this geometry allows for spherical fiducial volume cuts from the center of the AV to further get rid of external backgrounds, which makes the SNO+ as a graded-shield type detector\cite{waterfield2017optical}.
 On the top of the AV sphere, there is an acrylic neck cylinder with 6.8 m high and 1.46 m inner diameter. The neck connects the AV sphere to the facilities on the deck above the detector. Through the neck, pipes can fill detection medium into the AV and recirculate as well. Calibration sources for internal scans can also be lowered down into the AV through the neck.
@@ -22,7 +23,7 @@ The AV sphere is concentric within a stainless steel photomultiplier(PMT) suppor
 \section{SNO+ Physics Phases}
 The SNO+ experiment is designed for multi-purpose measurements of neutrino physics. The detector has been running since December 2016. There are three physics phases of the experiment\cite{whitepaper}: 
 
-1. Water phase 
+\subsubsection{Water Phase} 
 
 The AV was filled with about 905 tonnes of ultra pure water (UPW). The detector collected water physics data from May 2017 to July 2019.
 
@@ -32,7 +33,7 @@ The main physics goal in this phase is to search for the invisible nucleon decay
 
 During the water phase, different types of calibration runs have been taken. The detector timing and energy response, systematics and backgrounds are studied. Multiple physics analyses of solar neutrinos, reactor antineutrinos and nucleon decay are going on. The external backgrounds are also measured, which will be the same as the following two phases. 
 
-2. Scintillator phase
+\subsubsection{Scintillator Phase}
 
 The AV will be filled with 780 tonnes of liquid scintillator, which is a mixture of linear alkylbenzene (LAB) as a solvent and 2 g/L of 2,5-diphenyloxazole (PPO) as a fluor.
 
@@ -44,7 +45,7 @@ Geoneutrino, reactor antineutrino and supernova neutrino detections are addition
 
 A six-month period of scintillator filling and six to twelve months of data-taking are expected for this phase. During the filling, it is planned to operate the partially filled detector at a water level about 4.4 m for about two weeks. This partial filled transition phase is mainly aimed to understand the in-situ backgrounds of scintillator. 
 
-3. Tellurium loading phase
+\subsubsection{Tellurium Loading Phase}
 
 In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilotonnes of $^{130}$Te) will be loaded into the scintillator. Higher loading concentrations would be possible for a further loading plan\cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
 
@@ -125,8 +126,6 @@ Organic liquid scintillators
 The advantages of LAB are:
 
 As mentioned in \ref{overview}, 
-
-
 
 
 \begin{itemize}
@@ -215,24 +214,15 @@ As mentioned in \ref{overview}, the PMTs as photon sensors are the basic detecti
 
 The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode \cite{hamamatsu2018photomultiplier}.
 
-The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. To control, manage and take data from over 9000 PMTs in the SNO+ detector, the coaxial cables connected to PMTs are grouped into bundles of eight and the bundles are connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC).
+The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. To control, manage and take data from over 9000 PMTs in the SNO+ detector, the coaxial cables connected to eight PMTs are grouped into one bundle and the bundle is connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives the signals of up to 32 PMTs. The 32 channels in PMTIC are connected to a Front End Card (FEC) that processes, digitizes and stores PMT signals. Each FEC has 4 Daughter Boards (DB) and each DB handles 8 channels. 16 PMTICs and FECs are inserted in one crate and then each crate processes 512 PMTs. 19 crates tackle 9728 PMT channels, 32 channels are reserved for calibration inputs and labelled as FEC Diagnose (FECD) channels. 
 
-There are 19 crates, 
+%9605 are actually used
+There are , 
 
 s logical channel number (lcn) where
 \begin{equation}
 lcn = 512 \times crate + 32 \times FEC + channel:
 \end{equation}
-
-Each crate processes 16$\times$32 = 512 PMTs.
-9605 channels are actually used and among them, 32 channels are reserved for calibration devices and labelled as FEC Diagnose (FECD) channels
-
-the electronics are  
-
-
-
-19 crates$\times$16 Front End Cards (FEC)$\times$32 channels = 9728 electronics channels.
-
 
 
 The PMT hit time of 
