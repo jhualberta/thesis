@@ -209,43 +209,66 @@ The laserball
 The acrylic of the AV is UV-transparent
 
 \section{Trigger and Readout of the SNO+ Detector}
+In this section, the SNO+ electronics system is overviewed. The system includes trigger and readout systems. As mentioned in \ref{overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charge information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
 
-As mentioned in \ref{overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. 
+The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode\cite{hamamatsu2018photomultiplier}.
 
-The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode \cite{hamamatsu2018photomultiplier}.
+The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. 
 
-The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. To control, manage and take data from over 9000 PMTs in the SNO+ detector, the coaxial cables connected to eight PMTs are grouped into one bundle and the bundle is connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives the signals of up to 32 PMTs. The 32 channels in PMTIC are connected to a Front End Card (FEC) that processes, digitizes and stores PMT signals. Each FEC has 4 Daughter Boards (DB) and each DB handles 8 channels. 16 PMTICs and FECs are inserted in one crate and then each crate processes 512 PMTs. 19 crates tackle 9728 PMT channels, 32 channels are reserved for calibration inputs and labelled as FEC Diagnose (FECD) channels. 
-
-%9605 are actually used
-There are , 
-
-s logical channel number (lcn) where
+To tackle with more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle with 8 PMTs is connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives the signals of up to 32 channels. Each channel for one PMT. 32 channels in PMTIC are connected to a Front End Card (FEC) that processes, digitizes and stores PMT signals. Each FEC has 4 Daughter Boards (DB) and each DB handles 8 channels. 16 PMTICs and FECs are inserted in one crate and thus each crate processes 512 PMTs. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labelled as FEC Diagnose (FECD) channels. Thus the triggered PMTs can be labelled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_nim,stringer2019sensitivity}:
 \begin{equation}
-lcn = 512 \times crate + 32 \times FEC + channel:
+lcn = 512 \times crate + 32 \times FEC + channel
 \end{equation}
+ %9605 are actually used
+ 
+To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to realize three functions:
+\begin{itemize} 
+\item[$\bullet$] Two four-channel discriminator (SNOD) chips set thresholds for PMT signals.
+
+Once the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20).
 
 
-The PMT hit time of 
-
-
-Once the global trigger signal is issued, the integrated charges and time from an event are stored in each channel.
-
-\cite{rattime,bonventre2014neutron}
+NHit20 (N20), NHit100 (N100) trigger pulses.
 
 
 
 
+\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulse over time interval to obtain PMT charge information. 
 
-During the experiment running, the maintenance of the electronics is always ongoing.
+QHS　(charge High gain Short integration time), integrate the pulse over 60 ns
 
-crate controller card (XL3)
+QHL  (Charge High gain Long integration time), integrate the pulse over 400 ns
 
-
-analog master trigger system (MTC/A+) 
-("+" means an upgrade to SNO MTC/A)
+QLX Charge Low Gain, integrate the low gain PMT pulse and integrate over either time window.
 
 
-digital master trigger system (MTC/D)
+
+
+
+\item[$\bullet$] Eight single-channel CMOS chips to record the time when the PMT pulse cross the thresholds.
+
+time-to-amplitude converter (TAC)
+
+\end{itemize}  
+
+In each crate, the signals from 16 FECs are sent to and summed up by a Crate Trigger Card (CTC). 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) ("+" means an upgrade to SNO system) which sums all the crates
+
+the number of hit PMTs, 
+
+The MTCA checks whether the trigger signals cross the thresholds and then sends the satisfied triggers to the digital master trigger system (MTC/D).
+
+If the total height of either of these summed pulses passes a set threshold value, 
+
+The MTC/D　checks the trigger type with the operator-defined trigger mask, if it is satisfied, then  
+a Global Trigger (GT) is issued.
+
+
+ This global trigger defines an event within the detector and results in all the associated information being saved. Multiple different trigger thresholds can be set. For example: N100Lo, N100Med, N100Hi are triggers based on the N100 pulses, where each has a different threshold value set. So it is possible, and likely, that an event within the detector passes several of these trigger thresholds.
+
+
+trigger system are to check whether the signal passes through a preset threshold value.
+
+
 
 the analog waveforms are summed on the MTC/A+ card, then they are digitized 
 
@@ -254,24 +277,11 @@ CAEN v1720 digitizer
 TUBii trigger utility board 
 pulsers and delays
 
-DAQ 
 
 
-nearline provides a real-time analysis of the data quality, 
-
-trigger system
-PMT Interface Card (PMTIC)
-Front End Card (FEC)
-
-NHit20 (N20), NHit100 (N100) trigger pulses.
-
-MTC/A has 3 discriminators: LOW, MED and HI.
-
-Global Trigger (GT)
 the timing and charge from the fired PMT is digitized and stored.
 
-
-
+Not all of the information from PMTs are recorded. 
 
 Nhit means the number of live hit PMTs in the detector for a given event.
 
@@ -281,80 +291,78 @@ dark noise rate is estimated to be 1 kHz.
 
 For the SNO+ detector specifically, each PMT that triggers sends multiple
 trigger pulses down the electronics chain, which then performs higher logic.
-These include both a 93 ns long square pulse (N100) and a 48 ns square pulse
-(N20) 
+
+
+
+
+
+
+
+MTC/A has 3 discriminators: LOW, MED and HI.
 
 These widths are chosen to match the characteristic travel times
-of photons across the detector. More specifically, the N100 width is chosen
-such that a set of photons from a Cherenkov cone will result in overlayed PMT
-pulses. The shorter N20 width limits this overlaying of PMT pulses to events
-originating from the centre of the detector.
-If the total height of either of these summed pulses passes a set thresh-
-27
-old value, a global trigger (GT) is issued. This global trigger defines an
-event" within the detector and results in all the associated information being
-saved. Multiple different trigger thresholds can be set. For example: N100Lo,
-N100Med, N100Hi are triggers based on the N100 pulses, where each has a
-different threshold value set. So it is possible, and likely, that an event within
-the detector passes several of these trigger thresholds.
-Additionally, the detector can trigger from the charge in the PMTs directly.
-The voltage pulses from all of the PMTs are summed together (ESUM). If this
-combined voltage trace drops below a threshold value (for example, ESUMHi,
+of photons across the detector. More specifically, the N100 width is chosen such that a set of photons from a Cherenkov cone will result in overlayed PMT pulses. The shorter N20 width limits this overlaying of PMT pulses to events originating from the centre of the detector.
+
+
+Additionally, the detector can trigger from the charge in the PMTs directly. The voltage pulses from all of the PMTs are summed together (ESUM). If this combined voltage trace drops below a threshold value (for example, ESUMHi,
 ESUMLo), this can also issue a GT to the detector.
 Figure 3.4 shows the event display of a typical muon event in the detector. Each individual PMT that triggered for that event is highlighted at its
-position on the support structure. A muon event is characterized by the large
-number of triggered PMTs. As with nearly all muons that pass through the
-detector, it is traveling in a downward direction. This is seen in Figure 3.4 as
-the excess of PMT charge (i.e. photons) in the bottom of the detector. As all
-atmospheric muons traveling upwards would be attenuated by the Earth, the
+position on the support structure. A muon event is characterized by the large number of triggered PMTs. As with nearly all muons that pass through the detector, it is traveling in a downward direction. This is seen in Figure 3.4 as the excess of PMT charge (i.e. photons) in the bottom of the detector. As all atmospheric muons travelling upwards would be attenuated by the Earth, the
 small flux of upward-going muons are the result of neutrino interactions in the
 rock surrounding the detector [56].
-Figure 3.5 shows a more typical event. The circular pattern seen is produced
-by the projection of the Cherenkov light cone onto the PMTs. With 24 triggered
-PMTs, this event is considered a high-energy event within the detector. The
-size of the pattern indicates that this event took place closer to the PMTs
-traveling in an outward direction, specifically in the water between the acrylic
-sphere and the PMTs.
+Figure 3.5 shows a more typical event. The circular pattern seen is produced by the projection of the Cherenkov light cone onto the PMTs. With 24 triggered
+PMTs, this event is considered a high-energy event within the detector. The size of the pattern indicates that this event took place closer to the PMTs travelling in an outward direction, specifically in the water between the acrylic sphere and the PMTs.
+
+
+Once the global trigger signal is issued, the integrated charges and time from an event are stored in each channel. The values of the TAC, QHS, QHL and QLX (i.e., the time and charge information of triggered PMTs) are read out by a Crate Controller Card (XL3) and sent to the Data Acquisition System (DAQ) and event builder, 
+
+
+
+The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations. 
+
+
+
+The PMT hit time of 
+
+\cite{snop_nim,boger2000sudbury,bonventre2014neutron,stringer2019sensitivity}
 
 
 
 
- will cause an electrical signal in the form of
-a voltage drop. If this is larger than a threshold value, the electronics of that
-PMT sends a trigger pulse.
+
+\cite{rattime,bonventre2014neutron}
 
 
+During the experiment running, the maintenance of the electronics is always ongoing.
 
+nearline provides a real-time analysis of the data quality, 
 
-The SNO+ electronics system includes trigger and readout systems, which record the time and charge information of PMT signals. The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations.
-
-
-Charged particles within the SNO+ detector are detected through the light that
-they produce. For the water phase of the experiment, the detector measures
-Cherenkov light using PMTs. A photon incident on a PMT may strike its
-photocathode and produce a photoelectron. This photoelectron, after passing
-through the PMT’s dynode chain,
 
 
 burst 
 from supernova
 
-
-PMTs are Hamamatsu model R1408.
-
-
-a single coaxial cable
-
-
-cables bundle into groups
-
-connected to the Paddle Cards, 
-PMT Interface Card (PMTIC) 
 \cite{andyElectronics}
 
+event time:
+
+The universal time of an event is calculated as the time elapsed from a predefined $T_{zero}, $the midnight of January 1, 2010 (GMT) to the moment when the event happens．A 10 MHz clock used for counting the absolute time started at $T_{zero}$\cite{rattime}. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system.
+
+A 50 MHz clock , this clock limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days.
+
+
+
+absolute time of that event 
+
+
+that has  
+
+relative time is the time between events.
+
+PMT hit time refers to all the PMTs triggered by an event.
+
+
 \section{Calibration}
-
-
 Two kinds of calibration sources are used by SNO+: optical sources and radioactive sources. 
 The optical sources are used to calibrate the PMT response and to measure the optical properties of the 
 
@@ -363,8 +371,6 @@ The radioactive sources are used to calibrate the energy
 
 reconstruction performances and uncertainties.
 particle identifications
-
-
 
 Calibration sources with known physics parameters: help to understand the detector response to the events and to make accurate measurements
 Two types of SNO+ calibration sources: optical sources and radioactive sources Optical sources: phototube response, optical properties of the detector media Radioactive source: energy scale, resolution, systematic
@@ -395,6 +401,17 @@ Optical calibration  {\emph {in-situ}}
 	\item[$\bullet$] 
 \end{itemize}
 
+optical source, named as laserball, is a light diffusing sphere, which nitrogen dye laser glass bubbles.
+
+
+
+fast pulsing LED or lasers
+measures optical properties, such as scattering, attenuation of the detector materials, the response of PMTs, 
+angular and wavelength dependent
+wavelength dependent absorption and the optical degradation
+
+
+
 
 The $^{16}$N source
 $^{3}$H$(p,\gamma)^{4}$He reaction.
@@ -416,10 +433,6 @@ ensures radon gas not leaking into the detector when deploying the source.
 In the scintillator and Te-loaded phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co will be implemented.
 
 $^{46}$Sc source
-
-
-
-
 
 \section{Monte Carlo Simulation and the RAT Software}
 The SNO+ collaboration has developed a software framework, called the Reactor Analysis
@@ -447,9 +460,6 @@ Design
 
 the detailed processes of data acquisition and trigger systems are \cite{whitepaper}.
 
+The SNO+ version of RAT is being developed by the whole collaboration and evolves with the experiment progress.
+Besides more functions are added into the RAT, it is also tuned and optimized with the updated parameters from more precise descriptions of the physics processes or the detector responses to the calibration sources. Therefore, different versions of RAT may give different results. For the work in this thesis, multiple RAT versions are used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the RAT version when I discuss a certain analysis.
 \cite{ratManual}
-
-
-
-
-

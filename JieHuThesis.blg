@@ -12,14 +12,14 @@ Repeated entry---line 577 of file thesis.bib
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 640 of file thesis.bib
+--line 646 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 817 of file thesis.bib
-Repeated entry---line 1027 of file thesis.bib
+--line 823 of file thesis.bib
+Repeated entry---line 1033 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1108 of file thesis.bib
+I was expecting a `,' or a `}'---line 1114 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -50,6 +50,7 @@ Warning--empty year in scintillatorPaper
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--empty journal in hamamatsu2018photomultiplier
+Warning--empty year in snop_nim
 Warning--empty year in rattime
 Warning--empty school in bonventre2014neutron
 Warning--empty year in andyElectronics
@@ -79,45 +80,45 @@ Warning--there's a number but no series in perkins2009particle
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 139 entries,
+You've used 140 entries,
             1876 wiz_defined-function locations,
-            1164 strings with 25546 characters,
-and the built_in function-call counts, 29931 in all, are:
-= -- 2663
-> -- 1638
+            1168 strings with 25616 characters,
+and the built_in function-call counts, 30063 in all, are:
+= -- 2673
+> -- 1642
 < -- 0
-+ -- 618
-- -- 479
-* -- 2098
-:= -- 4599
-add.period$ -- 182
-call.type$ -- 139
-change.case$ -- 99
++ -- 620
+- -- 480
+* -- 2107
+:= -- 4620
+add.period$ -- 183
+call.type$ -- 140
+change.case$ -- 100
 chr.to.int$ -- 0
-cite$ -- 184
-duplicate$ -- 1611
-empty$ -- 2728
-format.name$ -- 479
-if$ -- 7084
+cite$ -- 186
+duplicate$ -- 1620
+empty$ -- 2745
+format.name$ -- 480
+if$ -- 7114
 int.to.chr$ -- 0
-int.to.str$ -- 139
-missing$ -- 130
-newline$ -- 463
-num.names$ -- 133
-pop$ -- 492
+int.to.str$ -- 140
+missing$ -- 131
+newline$ -- 466
+num.names$ -- 134
+pop$ -- 497
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 864
+skip$ -- 865
 stack$ -- 0
 substring$ -- 866
-swap$ -- 564
+swap$ -- 565
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 45
-while$ -- 219
-width$ -- 142
-write$ -- 1272
+warning$ -- 46
+while$ -- 220
+width$ -- 143
+write$ -- 1279
 (There were 4 error messages)

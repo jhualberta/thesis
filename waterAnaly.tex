@@ -1,4 +1,27 @@
-The SNO+ water data taking from May 2017 to September 2018. During the period from October 2018 to July 2019, LAB (without PPO) was filled into the detector and had been sit inside the neck.
+The SNO+ water data taking from May 2017 to September 2018. During the period from October 2018 to July 2019, LAB (without PPO) was filled into the detector and had been sit inside the neck. With nitrogen cover gas on the top, the data in this period is considered as low background data.
+
+
+
+
+The water phase data in 
+
+
+The open dataset 100000 to 100399, from 4 to 14 May 2017.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Classifiers}
 
@@ -199,7 +222,36 @@ Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-10093
 emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
 
 
-\section{Solar $\nu_e$ Analysis and Background Separation}
+\subsection{Angular Resolution}
+Direction resolutions, with a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$:
+
+
+Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ cuts.
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{angularResol_107055_mpw.pdf}
+	\caption{Angular resolutions, compared the data (red solid line) and MC (black dashed line).}
+	\label{angularResolMPW}
+\end{figure}
+
+The fitted results are shown in Table.~\ref{angularResolValues}.
+\begin{table}[ht]
+\begin{tabular}{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+	\hline
+	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+	\hline
+	Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
+	Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
+	\hline
+	MPW data & 3.79$\pm$0.12 & 18.58$\pm$0.95 & 0.53$\pm$0.02 & 154.6/143 & 0.982 & 0.743 & 0.379\\
+	MPW MC &4.01$\pm$0.19 & 18.41$\pm$1.06 & 0.48$\pm$0.03 & 128.4/127 & 1 & 0.779 & 0.433  \\
+	\hline
+\end{tabular}
+\label{angularResolValues}
+\end{table}
+
+
+\section{Solar $\nu_e$ Analysis and Background Separation in Water Phase}
 
 
 The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite}
@@ -208,6 +260,18 @@ TMVA
 
 
 other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
+
+\subsubsection{Open Dataset Analysis}
+
+MPW fit results
+
+
+
+
+
+
+
+
 
 
 
