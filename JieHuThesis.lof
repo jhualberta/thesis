@@ -80,11 +80,3 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{89}{figure.6.10}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{89}{figure.6.10}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{89}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{90}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{92}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{93}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{95}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{96}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{97}{figure.6.16}
-\addvspace {10\p@ }
-\addvspace {10\p@ }

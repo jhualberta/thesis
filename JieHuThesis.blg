@@ -3,30 +3,29 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 298 of file thesis.bib
+Repeated entry---line 308 of file thesis.bib
  : @article{abe2019constraint
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 591 of file thesis.bib
+Repeated entry---line 601 of file thesis.bib
  : @article{agostini2019probing
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 660 of file thesis.bib
+--line 670 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 837 of file thesis.bib
-Repeated entry---line 1047 of file thesis.bib
+--line 847 of file thesis.bib
+Repeated entry---line 1057 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1128 of file thesis.bib
+I was expecting a `,' or a `}'---line 1138 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "BP05"
 Warning--I didn't find a database entry for "bahcall1"
-Warning--I didn't find a database entry for "raymond"
 Warning--I didn't find a database entry for "xing"
 Warning--I didn't find a database entry for "exo"
 Warning--I didn't find a database entry for "kamlandZen"
@@ -80,45 +79,45 @@ Warning--there's a number but no series in perkins2009particle
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 141 entries,
+You've used 142 entries,
             1876 wiz_defined-function locations,
-            1175 strings with 25759 characters,
-and the built_in function-call counts, 30316 in all, are:
-= -- 2700
-> -- 1650
+            1180 strings with 25825 characters,
+and the built_in function-call counts, 30531 in all, are:
+= -- 2723
+> -- 1654
 < -- 0
-+ -- 623
-- -- 482
-* -- 2122
-:= -- 4654
-add.period$ -- 184
-call.type$ -- 141
-change.case$ -- 101
++ -- 625
+- -- 483
+* -- 2135
+:= -- 4684
+add.period$ -- 185
+call.type$ -- 142
+change.case$ -- 102
 chr.to.int$ -- 0
-cite$ -- 187
-duplicate$ -- 1637
-empty$ -- 2767
-format.name$ -- 482
-if$ -- 7180
+cite$ -- 188
+duplicate$ -- 1652
+empty$ -- 2788
+format.name$ -- 483
+if$ -- 7236
 int.to.chr$ -- 0
-int.to.str$ -- 141
-missing$ -- 132
-newline$ -- 469
-num.names$ -- 135
-pop$ -- 499
+int.to.str$ -- 142
+missing$ -- 133
+newline$ -- 472
+num.names$ -- 136
+pop$ -- 501
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 879
+skip$ -- 889
 stack$ -- 0
-substring$ -- 874
-swap$ -- 574
+substring$ -- 880
+swap$ -- 581
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 46
-while$ -- 222
-width$ -- 144
-write$ -- 1290
+while$ -- 224
+width$ -- 145
+write$ -- 1301
 (There were 4 error messages)
