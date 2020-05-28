@@ -359,8 +359,8 @@ where $P(\cos\theta_e)$ is the distribution of $\cos\theta_e$ from MC data. The 
 Table~\ref{quantAngular} shows the results of $\cos\theta_{a}$ for SNO heavy water data\cite{boulay} and simulations for SNO+ pure water and wbWLS. 
 
 \begin{table}[ht]
-	\caption{\label{quantAngular}A comparison of quantitative estimates for the angular resolution between the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.}	
-	{\centering
+	\caption{A comparison of quantitative estimates for the angular resolution between the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.}\label{quantAngular}
+				\centering		
 		\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 			\toprule 
 			medium & $\cos\theta_{0.9}$ & $\cos\theta_{0.8}$ & $\cos\theta_{0.5}$
@@ -371,7 +371,6 @@ Table~\ref{quantAngular} shows the results of $\cos\theta_{a}$ for SNO heavy wat
 			wbWLS  & 0.37 & 0.63 & 0.90  \\	
 			\bottomrule	
 		\end{tabular*}
-	}
 \end{table}
 
 Comparing a pure water SNO+ detector and the wbWLS one, using the MP WLS Fitter for physics events gives a better position resolution without a significant loss in the performance of the direction reconstruction.
@@ -629,9 +628,10 @@ The performance of the fitter was studied with MC simulations. In a partial fill
 Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the MP Partial Fitter reconstructed results for these simulations. Fig.~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
 
 \begin{table}[ht]
-	\centering
+
 	\caption{Reconstructed position biases and resolutions for simulated events in partial fill.}
 	\label{partiaResol}
+	\centering
 	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}ccc}
 		\hline
 		regions of simulated events& bias (mm) &  resolution (mm) \\
@@ -676,8 +676,8 @@ amplitude $a_i$ are determined by the benchtop measurements \cite{}.
 %T. Kaptanoglu. Penn Light Yield Measurements of Te+DDA samples. SNO+ Internal Document (docDB-5124-v2).
 
 \begin{table}[ht]
-	\caption[]{\label{scint_timing} scintillator $\alpha/\beta$ timing parameters\cite{tanner0p5,joshW1,chicagoTiming}.}		
-	{\centering
+	\caption[]{scintillator $\alpha/\beta$ timing parameters\cite{tanner0p5,joshW1,chicagoTiming}.}	\label{scint_timing} 
+				\centering
 		\begin{tabular*}{165mm}{c@{\extracolsep{\fill}}*9c}
 			\toprule 
 			\multicolumn{1}{c}{scintillator} & \multicolumn{4}{c}{timing [ns]} & \multicolumn{4}{c}{amplitudes}\\
@@ -701,7 +701,6 @@ amplitude $a_i$ are determined by the benchtop measurements \cite{}.
 			$\alpha$ & 3.69 & 15.5 & 79.3  & 489.0 & 0.63 & 0.23 & 0.07 &0.07\\	
 			\bottomrule	
 		\end{tabular*}
-	}
 \end{table}
 
 

@@ -387,9 +387,9 @@ p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2
 
 The $AmBe$ source
 
+\section{Towards the Te-loaded Phase}
 
-
-\section{Muon Induced Backgrounds in Te-loaded Phase}
+\subsection{Muon Induced Backgrounds in Te-loaded Phase}
 This analysis is 
 
 based on the work
@@ -398,9 +398,9 @@ To simulate these backgrounds, the optics for $0.3~\%$ Te by weight and with $bi
 and RAT-5.2.3 were used.
 
 \begin{table}[ht]
-	\caption{\label{productionRates}Production Rates}	
-	{\centering
-		\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+	\caption{Production rates for $^{11}$C, $^{10}$C and $^{6}$He backgrounds in SNO+ Te-loaded Phase.}\label{productionRates}
+				\centering	
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
 			\toprule 
 			isotope & rates [$kt^{-1}\cdot yr^{-1}$]& rates [Hz]\\
 			\midrule
@@ -408,44 +408,51 @@ and RAT-5.2.3 were used.
 		 $^{10}$C & 21.20 & 0.0000006722\\
 		 $^{6}$He &43.09& 0.0000013663 \\
 			\bottomrule	
-		\end{tabular*}
-	}
+	\end{tabular*}
 \end{table}
 
 \begin{table}[ht]
-	\caption{Event rates of cosmic muon induced $^{11}$C, $^{10}$C and $^{6}$He backgrounds in SNO+ Te-loaded Phase (unit: $kt^{-1}\cdot yr^{-1}$). The ``MC" Column presents the values obtained from the Monte Carlo and the ``Recon" column presents the values
-%obtained from the reconstructed energies.}
+	\caption{Event rates of cosmic muon induced $^{11}$C, $^{10}$C and $^{6}$He backgrounds in SNO+ Te-loaded Phase (unit: $kt^{-1}\cdot yr^{-1}$). 
+	Different fiducial volume (FV) cuts and ROI region cuts are applied. The ``MC" Column presents the values obtained from the Monte Carlo and the ``Recon" column presents the values obtained from the reconstructed energies.}
 \centering
 		\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
 			\toprule
-				FV cuts & ROI window [MeV] & a & b & c & d & e & f \\%\multicolumn{2}{c}{$^{11}$C} & \multicolumn{2}{c}{$^{10}$C} & \multicolumn{2}{c}{$^{6}$He}\\
+				\multirow{2}{*}{FV cuts} & \multirow{2}{*}{ROI [MeV]} & \multicolumn{2}{c}{$^{11}$C} & \multicolumn{2}{c}{$^{10}$C} & \multicolumn{2}{c}{$^{6}$He}\\
+			 \cline{3-4}  \cline{5-6} \cline{7-8}
+					 &  & MC&Recon. &MC&Recon.& MC&Recon.\\
 	\midrule
-					No cuts & all regions& 1063.55& 989.17 &21.39 &20.06& 43.31& 40.07\\
-%			%		
-%			%		&[2.47, 2.70] &0 &1& 4.52& 4.31 &2.78& 2.88\\
-%			%		&[2.492, 2.737] &0& 0& 4.44& 4.25& 2.67& 2.79\\
-%			%		&5.5-m & all regions & 807.06& 786.81& 16.24& 15.72& 32.92& 32.04\\
-%			%		&[2.47, 2.70] &0 &0 &3.63 &3.45 &2.13 &2.25\\
-%						%		&[2.487, 2.711] &0 &0 &3.28 &3.12 &1.90 &2.00\\
-%			%		&4.5-m & all regions & 442.00 &437.00 &8.87 &8.72 &18.04 &17.83\\
-%			%		&[2.47, 2.70]& 0 &0& 2.00& 1.92& 1.16& 1.23\\
-%			%		&[2.477, 2.692]& 0& 0& 1.64 &1.57& 0.95& 1.01\\
-%			%		&3.5-m & all regions & 207.84& 206.34& 4.20& 4.16& 8.47& 8.42\\
-%			%		&[2.47, 2.70]& 0& 0& 0.95& 0.92& 0.54& 0.57\\
-%			%		&[2.477, 2.688]& 0& 0& 0.78& 0.76& 0.44& 0.46\\	
+					No cuts & all regions& 1063.55& 989.17 &21.39 &20.06& 43.31& 40.07\\	
+		&[2.47, 2.70] &0 &1& 4.52& 4.31 &2.78& 2.88\\
+		&[2.492, 2.737] &0& 0& 4.44& 4.25& 2.67& 2.79\\
+		5.5-m & all regions & 807.06& 786.81& 16.24& 15.72& 32.92& 32.04\\
+		&[2.47, 2.70] &0 &0 &3.63 &3.45 &2.13 &2.25\\
+		&[2.487, 2.711] &0 &0 &3.28 &3.12 &1.90 &2.00\\
+		4.5-m & all regions & 442.00 &437.00 &8.87 &8.72 &18.04 &17.83\\
+		&[2.47, 2.70]& 0 &0& 2.00& 1.92& 1.16& 1.23\\
+		&[2.477, 2.692]& 0& 0& 1.64 &1.57& 0.95& 1.01\\
+		3.5-m & all regions & 207.84& 206.34& 4.20& 4.16& 8.47& 8.42\\
+		&[2.47, 2.70]& 0& 0& 0.95& 0.92& 0.54& 0.57\\
+		&[2.477, 2.688]& 0& 0& 0.78& 0.76& 0.44& 0.46\\
 	\bottomrule		
 		\end{tabular*}\label{muon_eventrates}
 \end{table}
 
-
-Event rates of cosmic muon induced 11C, 10C and 6He backgrounds in SNO+ Solar Phase [kt−1yr−1].
-FV Cuts ROI window [MeV] 11C events 10C events 6He events
-MC Recon MC Recon MC Recon
-No cuts all regions (total) 1136.32 1107.50 24.04 23.07 46.99 45.30
-5.5-m FV cut all regions (total) 862.32 855.56 18.20 17.64 35.64 35.25
-4.5-m FV cut all regions (total) 472.12 470.22 9.92 9.77 19.44 19.41
-3.5-m FV cut all regions (total) 222.05 221.94 4.63 4.66 9.17 9.24
-
+\begin{table}[ht]
+	\caption{Event rates of cosmic muon induced 11C, 10C and 6He backgrounds in SNO+ Solar Phase (unit: $kt^{-1}\cdot yr^{-1}$). FV Cuts ROI [MeV] $^{11}$C events $^{10}$C events $^{6}$He events}
+	\centering
+	\begin{tabular*}{130mm}{c@{\extracolsep{\fill}}cccccccc}
+	\toprule
+\multirow{2}{*}{FV cuts} & \multirow{2}{*}{ROI [MeV]} & \multicolumn{2}{c}{$^{11}$C} & \multicolumn{2}{c}{$^{10}$C} & \multicolumn{2}{c}{$^{6}$He}\\
+\cline{3-4}  \cline{5-6} \cline{7-8}
+ &  & MC & Recon.& MC& Recon.& MC& Recon.\\
+	\midrule
+No cuts & all regions &  1136.32 & 1107.50 & 24.04& 23.07& 46.99& 45.30\\
+5.5-m & all regions & 862.32& 855.56& 18.20& 17.64& 35.64& 35.25\\
+4.5-m & all regions & 472.12&470.22& 9.92& 9.77& 19.44& 19.41\\
+3.5-m & all regions & 222.05& 221.94& 4.63& 4.66& 9.17& 9.24\\
+	\bottomrule		
+\end{tabular*}\label{muon_eventrates2}
+\end{table}
 
 \begin{figure}[htbp]
 	\subfigure{
@@ -463,7 +470,7 @@ No cuts all regions (total) 1136.32 1107.50 24.04 23.07 46.99 45.30
 	\caption{Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
 	\label{muon_c10}
 \end{figure}
-
+%
 \begin{figure}[htbp]
 	\subfigure{
 		\begin{minipage}[t]{0.45\textwidth}
@@ -500,17 +507,7 @@ No cuts all regions (total) 1136.32 1107.50 24.04 23.07 46.99 45.30
 \end{figure}
 
 
-
-
-
-
-
-
-
-
-
-
-\section{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
+\subsection{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
 
 As described in Chapter 3, the energies of charged particles are converted into photons by the scintillator medium. By measuring the amount of the light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible $0\nu\beta\beta$-decay signal.
 
@@ -534,7 +531,7 @@ We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO
 			\includegraphics[width=6cm]{plasticHolder.png}
 		\end{minipage}
 	}
-	\caption{ Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}
+	\caption{Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}
 	\label{scintVial}
 \end{figure}
 
@@ -576,8 +573,7 @@ in this thesis, considering a half-life of 30.08 years for the \isotope[137]{Cs}
 
 
 
-
-  has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
+has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
 
 For each sample, measurements were taken for one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$ rays interacted with the LAB-PPO sample. The p.e. signals triggered PMT pulses and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time tag. From this trigger time tag, in the following 80 ns window the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also from the trigger time tag, a pre-gate of 8 ns was set. The waveform was integrated in the time gate of  [trigger time - 8,  trigger time + 72] ns. This gives the integrated charge, which was calculated as a A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we simply used ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Time stamps were recorded as event time when the triggered event hapfpened. The waveform was recorded and the ADC channel number (energy) of this event was calculated.
 
@@ -637,8 +633,8 @@ Once the total number of the photons for a certain sample is counted, we can cal
 
 \begin{table}[ht]
 	\centering
-	\caption{\label{lightyield1} Number of photons calculated by Charge weighted photon number method.}	
-	{\centering
+	\caption{\label{lightyield1} Number of photons calculated by Charge weighted photon number method.}
+				\centering	
 		\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
 			\toprule 
 			Sample & Number of photons ($\times 10^6$) & RLY\\
@@ -648,7 +644,6 @@ Once the total number of the photons for a certain sample is counted, we can cal
 		TeSOP& 1.3976 & 0.67\\
 			\bottomrule	
 		\end{tabular*}
-	}
 \end{table}
 
 Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
