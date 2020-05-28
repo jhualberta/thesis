@@ -7,19 +7,19 @@ Repeated entry---line 298 of file thesis.bib
  : @article{abe2019constraint
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 577 of file thesis.bib
+Repeated entry---line 591 of file thesis.bib
  : @article{agostini2019probing
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 646 of file thesis.bib
+--line 660 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 823 of file thesis.bib
-Repeated entry---line 1033 of file thesis.bib
+--line 837 of file thesis.bib
+Repeated entry---line 1047 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1114 of file thesis.bib
+I was expecting a `,' or a `}'---line 1128 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
@@ -51,8 +51,8 @@ Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty year in snop_nim
-Warning--empty year in rattime
 Warning--empty school in bonventre2014neutron
+Warning--empty year in rattime
 Warning--empty year in andyElectronics
 Warning--empty year in partialWater
 Warning--empty year in davidPartialWater
@@ -80,45 +80,45 @@ Warning--there's a number but no series in perkins2009particle
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 140 entries,
+You've used 141 entries,
             1876 wiz_defined-function locations,
-            1168 strings with 25616 characters,
-and the built_in function-call counts, 30063 in all, are:
-= -- 2673
-> -- 1642
+            1175 strings with 25759 characters,
+and the built_in function-call counts, 30316 in all, are:
+= -- 2700
+> -- 1650
 < -- 0
-+ -- 620
-- -- 480
-* -- 2107
-:= -- 4620
-add.period$ -- 183
-call.type$ -- 140
-change.case$ -- 100
++ -- 623
+- -- 482
+* -- 2122
+:= -- 4654
+add.period$ -- 184
+call.type$ -- 141
+change.case$ -- 101
 chr.to.int$ -- 0
-cite$ -- 186
-duplicate$ -- 1620
-empty$ -- 2745
-format.name$ -- 480
-if$ -- 7114
+cite$ -- 187
+duplicate$ -- 1637
+empty$ -- 2767
+format.name$ -- 482
+if$ -- 7180
 int.to.chr$ -- 0
-int.to.str$ -- 140
-missing$ -- 131
-newline$ -- 466
-num.names$ -- 134
-pop$ -- 497
+int.to.str$ -- 141
+missing$ -- 132
+newline$ -- 469
+num.names$ -- 135
+pop$ -- 499
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 865
+skip$ -- 879
 stack$ -- 0
-substring$ -- 866
-swap$ -- 565
+substring$ -- 874
+swap$ -- 574
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 46
-while$ -- 220
-width$ -- 143
-write$ -- 1279
+while$ -- 222
+width$ -- 144
+write$ -- 1290
 (There were 4 error messages)

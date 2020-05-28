@@ -742,11 +742,6 @@ The partial fitter is invulnerable to the change of pdfs caused by different PPO
 
 
 
-
-
-
-
-
 \section{Energy Reconstruction}
  
 The previous sections mainly focus on vertex and direction reconstruction. For the energy reconstruction in the water phase 
@@ -812,24 +807,21 @@ Position ANN,
 
 \cite{neuronetwork}
 
-
-
-
 \section{PMT Selectors for the Fitter}\label{PMTselector}
 Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the proper PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
 
 \begin{itemize}
 \item[$\bullet$] Straight Light Path Time Residual Cut Selector
 
-This selector is used for the direction reconstruction for the SNO+ water phase. In the selector, the value of time residual ($t_{res}$) is calculated for each triggered PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
+This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time residual ($t_{res}$) is calculated for each triggered PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
 
 \item[$\bullet$] Mode Cut Selector
 
-This selector checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
+This selector was developed by the collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
 
 \item[$\bullet$] Uniform PMT Selector
 
-This selector is mainly designed for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
+I designed this selector for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
 
 \item[$\bullet$] Earliest Hit PMT Selector
 
@@ -845,3 +837,10 @@ For each panel, the selector first drops the PMTs triggered too early ($t_\mathr
 
 We can also use the other timing parameter, such as the $t_{mode}$ or the $t_{median}$ for selecting the PMT in each panel. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
 \end{itemize}
+
+\section{Conclusion}
+The Multi-path Fitter framework of event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the Multi-path Water Fitter works as an alternative fitter to provide additional reconstruction information for the water data and it gives proper position and direction resolutions for the water analysis. The Multi-path Scint-Water Fitter works as the prime fitter for the SNO+ partial-fill phase.
+
+
+
+

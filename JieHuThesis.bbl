@@ -5,6 +5,11 @@ W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery, {\em
   Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
 
+\bibitem{schechter1982neutrinoless}
+J.~Schechter and J.~W. Valle, ``Neutrinoless double-$\beta$ decay in su
+  (2)$\times$ u (1) theories,'' {\em Physical Review D}, vol.~25, no.~11,
+  p.~2951, 1982.
+
 \bibitem{jones2011background}
 P.~G. Jones, {\em Background rejection for the neutrinoless double beta decay
   experiment SNO+}.
@@ -378,14 +383,14 @@ K.~Hamamatsu~Photonics, ``Photomultiplier tubes: Basics and applications,
 \bibitem{snop_nim}
 the {SNO+}~collaboration, ``{T}he {SNO+} experiment,'' {\em To be published}.
 
-\bibitem{rattime}
-G.~O. Gann, ``Dealing with time in rat,'' {\em SNO+ Internal Document,
-  docDB-480-v1.}
-
 \bibitem{bonventre2014neutron}
 R.~Bonventre, {\em Neutron multiplicity in atmospheric neutrino events at the
   Sudbury Neutrino Observatory}.
 \newblock PhD thesis, 2014.
+
+\bibitem{rattime}
+G.~O. Gann, ``Dealing with time in rat,'' {\em SNO+ Internal Document,
+  docDB-480-v1.}
 
 \bibitem{andyElectronics}
 A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know

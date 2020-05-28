@@ -215,55 +215,58 @@ The photons created from particle interactions in the detector propagate to the 
 
 The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. 
 
-To tackle with more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle with 8 PMTs is connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives the signals of up to 32 channels. Each channel for one PMT. 32 channels in PMTIC are connected to a Front End Card (FEC) that processes, digitizes and stores PMT signals. Each FEC has 4 Daughter Boards (DB) and each DB handles 8 channels. 16 PMTICs and FECs are inserted in one crate and thus each crate processes 512 PMTs. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labelled as FEC Diagnose (FECD) channels. Thus the triggered PMTs can be labelled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_nim,stringer2019sensitivity}:
+To tackle with more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle with 8 PMTs is connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives the signals of up to 32 channels. Each channel for one PMT. 32 channels in PMTIC are plugged to a Front End Card (FEC) that processes, digitizes and stores PMT signals. Each FEC has 4 Daughter Boards (DB) and each DB handles 8 channels. 16 PMTICs and FECs are inserted in one electronic crate and thus each crate processes 512 PMTs. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labelled as FEC Diagnose (FECD) channels. The triggered PMTs can be labelled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_nim,stringer2019sensitivity}:
 \begin{equation}
 lcn = 512 \times crate + 32 \times FEC + channel
 \end{equation}
  %9605 are actually used
  
-To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to realize three functions:
+To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to implement three functions:
 \begin{itemize} 
 \item[$\bullet$] Two four-channel discriminator (SNOD) chips set thresholds for PMT signals.
-
-Once the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20).
-
-
-NHit20 (N20), NHit100 (N100) trigger pulses.
-
-
-
-
-\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulse over time interval to obtain PMT charge information. 
-
-QHS　(charge High gain Short integration time), integrate the pulse over 60 ns
-
-QHL  (Charge High gain Long integration time), integrate the pulse over 400 ns
-
-QLX Charge Low Gain, integrate the low gain PMT pulse and integrate over either time window.
-
-
-
-
-
-\item[$\bullet$] Eight single-channel CMOS chips to record the time when the PMT pulse cross the thresholds.
-
-time-to-amplitude converter (TAC)
-
+\item[$\bullet$] Eight single-channel CMOS chips record the time when the PMT pulse cross the discriminator thresholds.
+\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulse over time interval to obtain PMT charge information. There are three different time windows for the integral, resulting in three types of charge values: QHS　(Charge High gain Short integration time), by integrating the pulse over 60 ns; QHL  (Charge High gain Long integration time), by integrating the pulse over 400 ns; and the QLX (Charge Low gain), by integrating the low gain PMT pulse and integrate over either time window.
 \end{itemize}  
 
-In each crate, the signals from 16 FECs are sent to and summed up by a Crate Trigger Card (CTC). 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) ("+" means an upgrade to SNO system) which sums all the crates
+First, the discriminator checks the input pulse with the predefined threshold voltages. If the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20). At the same time, CMOS chips produces a time-to-amplitude (TAC) voltage.  as the PMT hit time. 
 
-the number of hit PMTs, 
+Each trigger pulse has three different threshold values of NHits. During the water phase, N100Med  
 
-The MTCA checks whether the trigger signals cross the thresholds and then sends the satisfied triggers to the digital master trigger system (MTC/D).
 
-If the total height of either of these summed pulses passes a set threshold value, 
+N100Lo, N100Med, N100Hi are triggers based on the N100 pulses, where each has a different threshold value set.
+
+In each crate, the trigger pulses from the 16 FECs are sent to and summed up by a Crate Trigger Card (CTC). 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to an upgrade to the old SNO system), which are installed in an individual rack. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above threshold. 
+
+The digital master trigger system (MTC/D) checks 
+
+7 MTC/A+ triggers.
 
 The MTC/D　checks the trigger type with the operator-defined trigger mask, if it is satisfied, then  
 a Global Trigger (GT) is issued.
+MTC/A has 3 discriminators: LOW, MED and HI.
+
+These widths are chosen to match the characteristic travel times
+of photons across the detector. More specifically, the N100 width is chosen such that a set of photons from a Cherenkov cone will result in overlayed PMT pulses. The shorter N20 width limits this overlaying of PMT pulses to events originating from the centre of the detector.
 
 
- This global trigger defines an event within the detector and results in all the associated information being saved. Multiple different trigger thresholds can be set. For example: N100Lo, N100Med, N100Hi are triggers based on the N100 pulses, where each has a different threshold value set. So it is possible, and likely, that an event within the detector passes several of these trigger thresholds.
+the number of hit PMTs in the time window, 
+
+
+
+
+
+the TAC is stopped when the GT is issued;if there is no GT, the TAC resets and the PMT hit is not recorded as an event.
+
+ This global trigger defines an event within the detector and results in all the associated information being saved. Multiple different trigger thresholds can be set.  So it is possible, and likely, that an event within the detector passes several of these trigger thresholds.
+
+the number of hit PMTs, 
+
+If the total height of either of these summed pulses passes a set threshold value, 
+
+
+
+
+
 
 
 trigger system are to check whether the signal passes through a preset threshold value.
@@ -296,14 +299,6 @@ trigger pulses down the electronics chain, which then performs higher logic.
 
 
 
-
-
-MTC/A has 3 discriminators: LOW, MED and HI.
-
-These widths are chosen to match the characteristic travel times
-of photons across the detector. More specifically, the N100 width is chosen such that a set of photons from a Cherenkov cone will result in overlayed PMT pulses. The shorter N20 width limits this overlaying of PMT pulses to events originating from the centre of the detector.
-
-
 Additionally, the detector can trigger from the charge in the PMTs directly. The voltage pulses from all of the PMTs are summed together (ESUM). If this combined voltage trace drops below a threshold value (for example, ESUMHi,
 ESUMLo), this can also issue a GT to the detector.
 Figure 3.4 shows the event display of a typical muon event in the detector. Each individual PMT that triggered for that event is highlighted at its
@@ -314,8 +309,19 @@ Figure 3.5 shows a more typical event. The circular pattern seen is produced by 
 PMTs, this event is considered a high-energy event within the detector. The size of the pattern indicates that this event took place closer to the PMTs travelling in an outward direction, specifically in the water between the acrylic sphere and the PMTs.
 
 
-Once the global trigger signal is issued, the integrated charges and time from an event are stored in each channel. The values of the TAC, QHS, QHL and QLX (i.e., the time and charge information of triggered PMTs) are read out by a Crate Controller Card (XL3) and sent to the Data Acquisition System (DAQ) and event builder, 
 
+
+
+event data: 
+trigger types
+trigger ID number (GTID)
+MTC/D clock time
+GPS clock time
+CAEN digitized trigger pulses
+hit information: 
+the integrated charges and time from an event are stored in each channel. The values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of triggered PMTs) and status flags.
+
+Once the global trigger signal is issued, the integrated charges and time from an event are stored in each channel. The hit information are read out by a Crate Controller Card (XL3) and sent to the Data Acquisition System (DAQ) and event builder, 
 
 
 The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations. 
@@ -387,13 +393,17 @@ Optical calibration  {\emph {in-situ}}
 	light-emitting diode (LED)
 	
 	
-	time calibration, time response 
+	time calibration, time response
+	calibrates the gain and charge response of the PMTs, which is important to estimate the event energy.
 	
 	a precision of $\mathcal{O} (1~ns)$
 	
 	Blinky fibre optics nailed to the PSUP to calibrate stuff.
 	
+	AMELLIE
+	optical attenuation in the detector over time
 	
+	SMELLIE scattering of the detector media
 	
 	\item[$\bullet$]  
 	
