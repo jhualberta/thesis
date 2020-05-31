@@ -99,6 +99,10 @@ J.~N. Bahcall, A.~M. Serenelli, and S.~Basu, ``New solar opacities, abundances,
   helioseismology, and neutrino fluxes,'' {\em The Astrophysical Journal
   Letters}, vol.~621, no.~1, p.~L85, 2005.
 
+\bibitem{bahcall1964solar}
+J.~N. Bahcall, ``Solar neutrinos. i. theoretical,'' {\em Physical Review
+  Letters}, vol.~12, no.~11, p.~300, 1964.
+
 \bibitem{davis1964solar}
 R.~Davis~Jr, ``Solar neutrinos. ii. experimental,'' {\em Physical Review
   Letters}, vol.~12, no.~11, p.~303, 1964.
@@ -220,6 +224,10 @@ G.~Kane, {\em Modern elementary particle physics: explaining and extending the
   standard model}.
 \newblock Cambridge University Press, 2017.
 
+\bibitem{majorana2006symmetric}
+E.~Majorana and L.~Maiani, ``A symmetric theory of electrons and positrons,''
+  in {\em Ettore Majorana Scientific Papers}, pp.~201--233, Springer, 2006.
+
 \bibitem{povh2008particles}
 B.~Povh, K.~Rith, and F.~Zetsche, {\em Particles and nuclei}, vol.~1.
 \newblock Springer, 2008.
@@ -303,6 +311,11 @@ M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
   Z.~Barnard, N.~Barros, D.~Bartlett, {\em et~al.}, ``Search for invisible
   modes of nucleon decay in water with the {SNO+} detector,'' {\em Physical
   Review D}, vol.~99, no.~3, p.~032008, 2019.
+
+\bibitem{cerdeno2018cno}
+D.~G. Cerdeno, J.~H. Davis, M.~Fairbairn, and A.~C. Vincent, ``Cno neutrino
+  grand prix: The race to solve the solar metallicity problem,'' {\em Journal
+  of Cosmology and Astroparticle Physics}, vol.~2018, no.~04, p.~037, 2018.
 
 \bibitem{Paton:2019kgy}
 J.~Paton, ``{Neutrinoless Double Beta Decay in the SNO+ Experiment},'' in {\em

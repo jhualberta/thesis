@@ -3,7 +3,7 @@
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Contents}{v}{chapter*.2}
 \contentsline {chapter}{List of Figures}{viii}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xii}{chapter*.4}
+\contentsline {chapter}{List of Tables}{xiii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{3}{chapter.2}
 \contentsline {subsection}{\numberline {2.0.1}Discovery of Neutrino}{3}{subsection.2.0.1}
@@ -68,11 +68,11 @@
 \contentsline {subsubsection}{$AmBe$ Source Analysis}{90}{section*.14}
 \contentsline {section}{\numberline {6.2}Towards the Te-loaded Phase}{90}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Muon Induced Backgrounds in Te-loaded Phase}{90}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{92}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Measurement Setup and Data Acquisition}{93}{subsection.6.2.3}
-\contentsline {subsubsection}{Results}{100}{section*.15}
-\contentsline {chapter}{\numberline {7}Conclusions}{102}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{103}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{103}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{103}{section.A.2}
-\contentsline {chapter}{References}{107}{appendix*.16}
+\contentsline {subsection}{\numberline {6.2.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{95}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Measurement Setup and Data Acquisition}{96}{subsection.6.2.3}
+\contentsline {subsubsection}{Results}{103}{section*.15}
+\contentsline {chapter}{\numberline {7}Conclusions}{105}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{106}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{106}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{106}{section.A.2}
+\contentsline {chapter}{References}{110}{appendix*.16}

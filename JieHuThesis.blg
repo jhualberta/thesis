@@ -3,34 +3,32 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 308 of file thesis.bib
+Repeated entry---line 334 of file thesis.bib
  : @article{abe2019constraint
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 601 of file thesis.bib
+Repeated entry---line 636 of file thesis.bib
  : @article{agostini2019probing
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 670 of file thesis.bib
+--line 705 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 847 of file thesis.bib
-Repeated entry---line 1057 of file thesis.bib
+--line 882 of file thesis.bib
+Repeated entry---line 1092 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1138 of file thesis.bib
+I was expecting a `,' or a `}'---line 1173 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "BP05"
-Warning--I didn't find a database entry for "bahcall1"
 Warning--I didn't find a database entry for "xing"
 Warning--I didn't find a database entry for "exo"
 Warning--I didn't find a database entry for "kamlandZen"
 Warning--I didn't find a database entry for "borexino"
-Warning--I didn't find a database entry for "cno"
 Warning--I didn't find a database entry for "press2007numerica"
 Warning--I didn't find a database entry for "boulay"
 Warning--empty year in laserball_groupVelocity
@@ -79,45 +77,45 @@ Warning--there's a number but no series in perkins2009particle
 Warning--empty year in partialEnergyYang
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 142 entries,
+You've used 145 entries,
             1876 wiz_defined-function locations,
-            1180 strings with 25825 characters,
-and the built_in function-call counts, 30531 in all, are:
-= -- 2723
-> -- 1654
+            1193 strings with 26241 characters,
+and the built_in function-call counts, 31359 in all, are:
+= -- 2807
+> -- 1680
 < -- 0
-+ -- 625
-- -- 483
-* -- 2135
-:= -- 4684
-add.period$ -- 185
-call.type$ -- 142
-change.case$ -- 102
++ -- 635
+- -- 490
+* -- 2190
+:= -- 4796
+add.period$ -- 188
+call.type$ -- 145
+change.case$ -- 105
 chr.to.int$ -- 0
-cite$ -- 188
-duplicate$ -- 1652
-empty$ -- 2788
-format.name$ -- 483
-if$ -- 7236
+cite$ -- 191
+duplicate$ -- 1702
+empty$ -- 2869
+format.name$ -- 490
+if$ -- 7447
 int.to.chr$ -- 0
-int.to.str$ -- 142
-missing$ -- 133
-newline$ -- 472
-num.names$ -- 136
-pop$ -- 501
+int.to.str$ -- 145
+missing$ -- 136
+newline$ -- 481
+num.names$ -- 139
+pop$ -- 510
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 889
+skip$ -- 925
 stack$ -- 0
-substring$ -- 880
-swap$ -- 581
+substring$ -- 924
+swap$ -- 604
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 46
-while$ -- 224
-width$ -- 145
-write$ -- 1301
+while$ -- 232
+width$ -- 148
+write$ -- 1333
 (There were 4 error messages)
