@@ -175,6 +175,11 @@ E.~Antonio, {\em State Of The Art Of Neutrino Physics, The: A Tutorial For
   Graduate Students And Young Researchers}, vol.~28.
 \newblock World Scientific, 2018.
 
+\bibitem{xing2011neutrinos}
+Z.~Xing and S.~Zhou, {\em Neutrinos in particle physics, astronomy and
+  cosmology}.
+\newblock Springer Science \& Business Media, 2011.
+
 \bibitem{abe2017measurement}
 K.~Abe, J.~Amey, C.~Andreopoulos, M.~Antonova, S.~Aoki, A.~Ariga, Y.~Ashida,
   S.~Ban, M.~Barbi, G.~Barker, {\em et~al.}, ``Measurement of neutrino and
@@ -195,11 +200,6 @@ A.~Y. Smirnov, ``Solar neutrinos: Oscillations or no-oscillations?,'' {\em
 \bibitem{smirnov2005msw}
 A.~Y. Smirnov, ``The msw effect and matter effects in neutrino oscillations,''
   {\em Physica Scripta}, vol.~2005, no.~T121, p.~57, 2005.
-
-\bibitem{xing2011neutrinos}
-Z.~Xing and S.~Zhou, {\em Neutrinos in particle physics, astronomy and
-  cosmology}.
-\newblock Springer Science \& Business Media, 2011.
 
 \bibitem{fukugita2013physics}
 M.~Fukugita and T.~Yanagida, {\em Physics of Neutrinos: and Application to
@@ -265,11 +265,23 @@ M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
   majorana neutrinos with double-$\beta$ decay,'' {\em Science}, vol.~365,
   no.~6460, pp.~1445--1448, 2019.
 
+\bibitem{albert2014search}
+J.~Albert, D.~Auty, P.~Barbeau, E.~Beauchamp, D.~Beck, V.~Belov,
+  C.~Benitez-Medina, J.~Bonatt, M.~Breidenbach, T.~Brunner, {\em et~al.},
+  ``Search for majorana neutrinos with the first two years of exo-200 data,''
+  {\em Nature}, vol.~510, no.~7504, pp.~229--234, 2014.
+
 \bibitem{albert2018sensitivity}
 J.~Albert, G.~Anton, I.~Arnquist, I.~Badhrees, P.~Barbeau, D.~Beck, V.~Belov,
   F.~Bourque, J.~Brodsky, E.~Brown, {\em et~al.}, ``Sensitivity and discovery
   potential of the proposed nexo experiment to neutrinoless double-$\beta$
   decay,'' {\em Physical Review C}, vol.~97, no.~6, p.~065503, 2018.
+
+\bibitem{gando2016search}
+A.~Gando, Y.~Gando, T.~Hachiya, A.~Hayashi, S.~Hayashida, H.~Ikeda, K.~Inoue,
+  K.~Ishidoshiro, Y.~Karino, M.~Koga, {\em et~al.}, ``Search for majorana
+  neutrinos near the inverted mass hierarchy region with kamland-zen,'' {\em
+  Physical Review Letters}, vol.~117, no.~8, p.~082503, 2016.
 
 \bibitem{alduino2018first}
 C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
@@ -311,6 +323,12 @@ M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
   Z.~Barnard, N.~Barros, D.~Bartlett, {\em et~al.}, ``Search for invisible
   modes of nucleon decay in water with the {SNO+} detector,'' {\em Physical
   Review D}, vol.~99, no.~3, p.~032008, 2019.
+
+\bibitem{davini2016cno}
+S.~Davini, M.~Agostini, S.~Appel, G.~Bellini, J.~Benziger, D.~Bick, G.~Bonfini,
+  D.~Bravo, B.~Caccianiga, F.~Calaprice, {\em et~al.}, ``{CNO} and pep solar
+  neutrino measurements and perspectives in borexino,'' in {\em Journal of
+  Physics: Conference Series}, vol.~675, p.~012040, IOP Publishing, 2016.
 
 \bibitem{cerdeno2018cno}
 D.~G. Cerdeno, J.~H. Davis, M.~Fairbairn, and A.~C. Vincent, ``Cno neutrino
@@ -492,6 +510,10 @@ M.~Askins, M.~Bergevin, A.~Bernstein, S.~Dazeley, S.~Dye, T.~Handler,
   physics and nuclear nonproliferation goals of watchman: A water cherenkov
   monitor for antineutrinos,'' {\em arXiv preprint arXiv:1502.01132}, 2015.
 
+\bibitem{boulay2004direct}
+M.~G. Boulay, ``Direct evidence for weak flavour mixing with the sudbury
+  neutrino observatory.,'' 2004.
+
 \bibitem{mekarski2018electron}
 P.~Mekarski, {\em Electron Antineutrinos in the Water Phase of the SNO+
   Experiment}.
@@ -506,9 +528,9 @@ S.~D. Biller, E.~J. Leming, and J.~L. Paton, ``Slow fluors for highly effective
 A.~LaTorre, ``New measurements for the timing spectrum of electrons and alphas
   in lab+ppo,'' {\em SNO+ Internal Document, docDB-4081-v1.}
 
-\bibitem{boulay2004direct}
-M.~G. Boulay, ``Direct evidence for weak flavour mixing with the sudbury
-  neutrino observatory.,'' 2004.
+\bibitem{modeCut}
+L.~Lebanowski, ``Improved mode cut,'' {\em SNO+ Internal Document,
+  docDB-5488-v1.}
 
 \bibitem{moffat2001optical}
 B.~A. Moffat, {\em The optical calibration of the Sudbury Neutrino
@@ -544,10 +566,6 @@ G.~Beier, ``Study of direction reconstruction in scintillator,'' {\em SNO+
 \bibitem{neuronetwork}
 M.~Anderson, ``Neural network fitter updates,'' {\em SNO+ Internal Document,
   docDB-6298-v1.}
-
-\bibitem{modeCut}
-L.~Lebanowski, ``Improved mode cut,'' {\em SNO+ Internal Document,
-  docDB-5488-v1.}
 
 \bibitem{highlevel}
 J.~Klein, ``Leta high level cuts (including qpdt and itr),'' {\em SNO+ Internal
