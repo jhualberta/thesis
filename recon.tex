@@ -4,7 +4,7 @@
 %\epigraphfontsize{\small\itshape}
 %\epigraph{If all mathematics disappeared today, physics would be set back exactly one week.}{---\textup{Richard Feynman}}
 %\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
-\section{An Overview for the Reconstruction Algorithms in SNO+}
+\section{An Overview of the Reconstruction Algorithms in SNO+}
 An event happens in the SNO+ detector can produce Cherenkov photons or scintillation photons and these photons propagate through the detector and finally reach the PMTs and are detected.
 
 
@@ -21,7 +21,7 @@ Multi-site or multi-vertex reconstruction algorithm is being developed.
 In this chapter, we do not consider the case of multi-vertex.
 
 
-\section{Multi-path Vertex Reconstruction Algorithm for SNO+}\label{water_vertex}
+\section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
 A Multi-path (MP) reconstruction framework was developed by the University of Alberta group as an additional vertex reconstruction algorithm for SNO+.
 This framework was first developed by Aksel Hallin to reconstruct and investigate the event vertex for the data taken from an early stage of SNO+ when the detector was partially filled with water at the end of 2014 (partial water fill stage)\cite{partialWater}. This Multi-path partial water fitter was further developed by David Auty and Kalpana Singh for investigating the wavelength shifter and water events\cite{davidPartialWater, kalpanaWLS, kalpanaWLS2, kalpanaMPFitter}. Jeff Tseng restructured the framework into more flexible and efficient C++ codes and implemented into the RAT software\cite{jieMPW}.
 
@@ -69,8 +69,7 @@ Fig.~\ref{mpwdiagram} shows the reconstruction concepts for position and directi
 	\label{mpwdiagram}
 \end{figure}
 	
-\section{MPW Position and Direction Reconstructions}
-
+\section{Multi-path Position and Direction Reconstructions for the Water Phase}
 
 \subsection{Vertex Reconstruction}
 For the position reconstruction of the MPW fitter, the likelihood function simply calculates the likelihood assuming straight line paths of prompt light from a position vertex $\vec{X_0}$ ($\mathrm{fVertex}$) and a starting time offset $t_0$ to each of the hit PMTs. 
@@ -134,7 +133,7 @@ where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$
 
 In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) as seed and calculates the likelihoods and their derivatives for various paths. These values are sent to the Multi-path Fitter, which is now fitting 2 parameters: ($\theta,\phi$) and to maximize the likelihood function through the MRQ method and to find the best-fit directions.
 
-\section{Effective Group Velocity}\label{tuneGroupVelocity}
+\subsection{Effective Group Velocity}\label{tuneGroupVelocity}
 When photons travel through the detector, their group velocities change with different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons as $v_g=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive indices as a function of wavelength, obtained from the measurements of laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. Furthermore, the group velocities can change when these photons are scattered, absorbed, refracted and reflected. To simplify these complicated situations for the reconstruction, an averaged value of the group velocity is used in the straight line light path calculation. This fixed group velocity is considered as an effective value.
 
 \begin{figure}[!htb]
@@ -144,7 +143,7 @@ When photons travel through the detector, their group velocities change with dif
 	\label{nVsWavelength}
 \end{figure}
 
-A reasonable selection of this value is required, since the value can introduce biases in the fitted position. This kind of bias is mainly due to a ``complementary'' effect of the fitter. As mentioned in section \ref{water_vertex}, the water vertex fitter calculates the $t_{transit}$ by evaluating the distances from the trial vertex to the triggered PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. If the value of the group velocity $v_{water}$ is set large (or fast speed), the value of $t_{transit}$ will decrease, and the corresponding value of $t_{res}$ will increase according to the definition of $t_{res}$(\ref{tres_define}). These calculated $t_{res}$ value is compared to the time pdf for the fitting. If $t_{res}$ is larger than the expected value, the fitter will place the trial vertex away from the 
+A reasonable selection of this value is required, since the value can introduce biases in the fitted position. This kind of bias is mainly due to a ``complementary'' effect of the fitter. As mentioned in section \ref{sect:mpw}, the water vertex fitter calculates the $t_{transit}$ by evaluating the distances from the trial vertex to the triggered PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. If the value of the group velocity $v_{water}$ is set large (or fast speed), the value of $t_{transit}$ will decrease, and the corresponding value of $t_{res}$ will increase according to the definition of $t_{res}$(\ref{tres_define}). These calculated $t_{res}$ value is compared to the time pdf for the fitting. If $t_{res}$ is larger than the expected value, the fitter will place the trial vertex away from the 
 hit PMTs to increase the $t_{transit}$ and then decrease the $t_{res}$, as illustrated in Fig.~\ref{effectiveVg}. On the other hand, if $v_{water}$ is set small (or slow speed), $t_{transit}$ increases and $t_{res}$ decreases, and the fitter will place the trial vertex closer towards the hit PMTs.
 Therefore, an overestimated group velocity (too fast) brings a positive radial bias to the true event position while an underestimated one (too slow) brings a negative radial bias.
 \begin{figure}[!htb]
@@ -284,16 +283,16 @@ This is a function inside the Multi-path Fitter. It stores the likelihood surfac
 
 \item[$\bullet$] SDecompQRH
 
-This s a fit method class modified from ROOT TDecompQRH class\cite{TDecompQRH}. It is used by the Multi-path fitter to invert the Hessian matrix through QR decomposition method\cite{press2007numerica}. Compared to ROOT, Solve() for Ax=b is modified to zero the component of x for which the diagonal element in R is small. This allows a Levenberg-Marquardt optimization to continue in many cases
+This s a fit method class modified from ROOT TDecompQRH class\cite{TDecompQRH}. It is used by the Multi-path fitter to invert the Hessian matrix through QR decomposition method\cite{press2007numerical}. Compared to ROOT, Solve() for Ax=b is modified to zero the component of x for which the diagonal element in R is small. This allows a Levenberg-Marquardt optimization to continue in many cases
 when the matrix is singular. For the MPW case, it is used to invert a 4$\times$4 matrix of the WaterPosition Class while the inversion of 2$\times$2 matrix of the WaterDirection is calculated directly\cite{waterunidoc}.
 
 \item[$\bullet$] PMT selectors
 
-Detailed descriptions are shown in section \ref{PMTselector}.
+Detailed descriptions are shown in section \ref{sect:PMTselector}.
 
 \end{itemize}
 
-\section{Vertex and Direction Reconstruction for Water-based Wavelength-shifter}
+\section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}
 X. Dai et al.\cite{dai2008wavelength} made a proposal for adding wavelength shifters (WLS) into a water Cherenkov detector like SNO. Compared to the water Cherenkov detector, a water-based wavelength shifter (wbWLS) detector has a higher light yield (about threefold higher than SNO\cite{dai2008wavelength}) and thus lowers down the energy threshold and opens opportunity to detect low energy events. At the meantime, it will still keep the directionality from Cherenkov signals compared to a loss of the directionality for the liquid scintillator detector, which can be used to suppress the backgrounds when analyzing directional signals, such as solar neutrinos. This technology is being studied by future neutrino experiments, such as the Advanced Scintillation Detector Concept (ASDC)\cite{alonso2014advanced}, WATCHMAN experiment\cite{askins2015physics} and Jinping experiment\cite{beacom2017physics}.
 
 There was a proposal of adding wavelength shifter (WLS) into the SNO+ detector in the middle of the water phase. The specific wavelength shifter we considered is PPO, which is a well-studied ingredient of the liquid scintillator used in the SNO+ scintillator phase and Te-loaded phase. Although this proposal was not adopted due to the experiment schedule, it is still worthwhile for a conceptual study of a SNO+-like detector that uses water-based wavelength shifter (wbWLS) as detection medium. 
@@ -323,7 +322,7 @@ Figure~\ref{nhit_wls} shows the energies of simulated electrons as a function of
 	\label{nhit_wls}
 \end{figure}
 
-In the wbWLS case, since WLS absorbs and re-emits photons, the reconstruction mentioned in section  \ref{reconsection} is slightly modified to build the MP WLS Fitter. According to the optical property of PPO, the prompt light emitted from an event has a probability of $\sim$0.6 to be absorbed by the WLS and then re-emitted at a shifted vertex along the particle direction $\hat{n}$. Then the fitter returns a shifted vertex, $\vec{X}_{0,shifted}=\vec{X}_0+\mathrm{offset}\cdot\hat{n}$. The offset we set in the fitter is 100 mm obtained from simulations. Figure~\ref{WLS_pdf} shows the timing pdf for the wbWLS, which is the PMT response time modified to photon propagation time in the wbWLS.
+In the wbWLS case, since WLS absorbs and re-emits photons, the reconstruction mentioned in section \ref{sect:mpw} is slightly modified to build the MP WLS Fitter. According to the optical property of PPO, the prompt light emitted from an event has a probability of $\sim$0.6 to be absorbed by the WLS and then re-emitted at a shifted vertex along the particle direction $\hat{n}$. Then the fitter returns a shifted vertex, $\vec{X}_{0,shifted}=\vec{X}_0+\mathrm{offset}\cdot\hat{n}$. The offset we set in the fitter is 100 mm obtained from simulations. Figure~\ref{WLS_pdf} shows the timing pdf for the wbWLS, which is the PMT response time modified to photon propagation time in the wbWLS.
 \begin{figure}[htbp]	
 	\centering		
 	\begin{minipage}[b]{0.5\textwidth}			
@@ -350,13 +349,13 @@ Figure~\ref{WLSFitPos} shows the performance of the WLS fitter reconstructed pos
 	}
 \end{figure}
 
-For a given Cherenkov event, the error in the reconstructed event direction is defined as\cite{boulay}: $\cos(\theta_e)=\vec{u}_{fit}\cdot\vec{u}_e$, where $\vec{u}_e$ is the simulated electron direction and $\vec{u}_{fit}$ is the reconstructed direction. To quantify this error, we define a $\cos\theta_{a}$ so that:
+For a given Cherenkov event, the error in the reconstructed event direction is defined as\cite{boulay2004direct}: $\cos(\theta_e)=\vec{u}_{fit}\cdot\vec{u}_e$, where $\vec{u}_e$ is the simulated electron direction and $\vec{u}_{fit}$ is the reconstructed direction. To quantify this error, we define a $\cos\theta_{a}$ so that:
 \[
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_0^1 P(\cos\theta_e) d\cos\theta_e} = a.
 \] 
 where $P(\cos\theta_e)$ is the distribution of $\cos\theta_e$ from MC data. The value of $\cos\theta_{a}$ is found numerically to let $\cos\theta_e$ contain $ a\cdot 100\%$ of the reconstructed data. A larger $\cos\theta_{a}$ means better direction reconstruction.
 
-Table~\ref{quantAngular} shows the results of $\cos\theta_{a}$ for SNO heavy water data\cite{boulay} and simulations for SNO+ pure water and wbWLS. 
+Table~\ref{quantAngular} shows the results of $\cos\theta_{a}$ for SNO heavy water data\cite{boulay2004direct} and simulations for SNO+ pure water and wbWLS. 
 
 \begin{table}[ht]
 	\caption{A comparison of quantitative estimates for the angular resolution between the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.}\label{quantAngular}
@@ -377,7 +376,7 @@ Comparing a pure water SNO+ detector and the wbWLS one, using the MP WLS Fitter 
 
 This fitter was tested for in \cite{mekarski2018electron}.
 
-\section{Vertex Reconstruction for Partial-fill and Scintillator Phases}\label{scintFitter}
+\section{Vertex Reconstruction for the Partial-fill and Scintillator Phases}\label{scintFitter}
 
 In the partial fill geometry, photons will travel with different speeds as they pass through two different mediums, water and scintillator. Assuming a straight light path, the MP Partial Fitter mainly calculates the total length of the light path ($|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$) and separates the $|\vec{l}_p|$ into the lengths in scintillator ($d_{sp}$) and in water ($|\vec{l}_p|-d_{sp}$).
 
@@ -628,7 +627,6 @@ The performance of the fitter was studied with MC simulations. In a partial fill
 Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the MP Partial Fitter reconstructed results for these simulations. Fig.~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
 
 \begin{table}[ht]
-
 	\caption{Reconstructed position biases and resolutions for simulated events in partial fill.}
 	\label{partiaResol}
 	\centering
@@ -736,10 +734,36 @@ The pdf can be expanded and fit with Chebyshev polynomials to obtain an analytic
 
 The partial fitter is invulnerable to the change of pdfs caused by different PPO concentrations.
 
+\section{PMT Selectors for the Reconstruction}\label{sect:PMTselector}
+Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the proper PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
 
-
-
-
+\begin{itemize}
+	\item[$\bullet$] Straight Light Path Time Residual Cut Selector
+	
+	This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time residual ($t_{res}$) is calculated for each triggered PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
+	
+	\item[$\bullet$] Mode Cut Selector
+	
+	This selector was developed by the collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
+	
+	\item[$\bullet$] Uniform PMT Selector
+	
+	I designed this selector for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
+	
+	\item[$\bullet$] Earliest Hit PMT Selector
+	
+	Similar to the uniform PMT selector, this selector reduces the number of the triggered PMTs to boost up the fit speed. It first groups the PMTs by their positions in the PMT support sphere. Take the centre of the sphere as coordinate origin, the sphere is divided by the azimuth angle $\phi$ (as longitude) and zenith angle $\theta$ (as latitude). In the sphere, the positions of the PMTs in $\phi$, ranging in $[-\pi,\pi]$, is uniformly divided into $n$ intervals while the positions of the PMTs in $\cos\theta$, ranging in $[-1, 1]$, is also divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels, see Fig.~\ref{GroupPMTs}. 
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[width=5cm]{GroupPMTs.png}
+		\caption{Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}
+		\label{GroupPMTs}
+	\end{figure}
+	
+	For each panel, the selector first drops the PMTs triggered too early ($t_\mathrm{PMT}<100~ns$, where $100~ns$ is set as a default threshold). These PMTs could be triggered by noises, such as pre-pulsing. In the rest of the PMTs, the selector picks up one PMT with the earliest $t_\mathrm{PMT}$ in each panel. Thus the number of the PMTs is reduced to $n\times n$ for the fitter, i.e., $n_{select}=n\times n$. If $N\leq n_{select}$, the selector does nothing. 
+	
+	We can also use the other timing parameter, such as the $t_{mode}$ or the $t_{median}$ for selecting the PMT in each panel. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
+\end{itemize}
 
 \section{Energy Reconstruction}
  
@@ -773,7 +797,6 @@ energy look up\cite{energyRSP}.
 In the partial-fill phase, there is no proper energy fitter works.  In \cite{partialEnergy}, 
 to scale $NHits$ based on several sets of simulations.
 
-
 \section{Other Reconstruction Algorithms}
 \subsection{Hough Transformation for Direction Reconstruction}
 
@@ -806,40 +829,7 @@ Position ANN,
 
 \cite{neuronetwork}
 
-\section{PMT Selectors for the Fitter}\label{PMTselector}
-Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the proper PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
 
-\begin{itemize}
-\item[$\bullet$] Straight Light Path Time Residual Cut Selector
-
-This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time residual ($t_{res}$) is calculated for each triggered PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
-
-\item[$\bullet$] Mode Cut Selector
-
-This selector was developed by the collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
-
-\item[$\bullet$] Uniform PMT Selector
-
-I designed this selector for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
-
-\item[$\bullet$] Earliest Hit PMT Selector
-
-Similar to the uniform PMT selector, this selector reduces the number of the triggered PMTs to boost up the fit speed. It first groups the PMTs by their positions in the PMT support sphere. Take the centre of the sphere as coordinate origin, the sphere is divided by the azimuth angle $\phi$ (as longitude) and zenith angle $\theta$ (as latitude). In the sphere, the positions of the PMTs in $\phi$, ranging in $[-\pi,\pi]$, is uniformly divided into $n$ intervals while the positions of the PMTs in $\cos\theta$, ranging in $[-1, 1]$, is also divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels, see Fig.~\ref{GroupPMTs}. 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=5cm]{GroupPMTs.png}
-	\caption{Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}
-	\label{GroupPMTs}
-\end{figure}
-
-For each panel, the selector first drops the PMTs triggered too early ($t_\mathrm{PMT}<100~ns$, where $100~ns$ is set as a default threshold). These PMTs could be triggered by noises, such as pre-pulsing. In the rest of the PMTs, the selector picks up one PMT with the earliest $t_\mathrm{PMT}$ in each panel. Thus the number of the PMTs is reduced to $n\times n$ for the fitter, i.e., $n_{select}=n\times n$. If $N\leq n_{select}$, the selector does nothing. 
-
-We can also use the other timing parameter, such as the $t_{mode}$ or the $t_{median}$ for selecting the PMT in each panel. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
-\end{itemize}
 
 \section{Conclusion}
 The Multi-path Fitter framework of event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the Multi-path Water Fitter works as an alternative fitter to provide additional reconstruction information for the water data and it gives proper position and direction resolutions for the water analysis. The Multi-path Scint-Water Fitter works as the prime fitter for the SNO+ partial-fill phase.
-
-
-
-

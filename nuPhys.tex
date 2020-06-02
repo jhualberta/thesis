@@ -1,13 +1,13 @@
 %\epigraph{Yesterday's rose stands only in name, we hold only empty names.}{--- \textup{Umberto Eco}, \textit{The Name of Rose}}
 
-\subsection{Discovery of Neutrino}
+\section{Discovery of Neutrino}
 The existence of neutrinos was first put forward by Wolfgang Pauli in the 1930s to solve the contradictions observed in beta decay experiments. It was shown definitively by James Chadwick in 1914 that the electrons emitted in beta decay did not have a discrete set of energies but instead had a continuous spectrum\cite{leite1996weak}. This means that the energy, momentum and angular momentum (spin) were not conserved between the nucleus and electron. To solve this problem, Wolfgang Pauli introduced a charge-neutral, spin-1/2 and nearly massless new particle. The sum of the energies of the new particle, the nucleus and electron is constant, which solved the problem. 
 
 In 1934, Bethe and Peierls suggested direct neutrino detection via a neutrino-induced interaction, called the inverse beta decay (IBD): $\bar{\nu}_e+p\to e^+ + n$. Their calculation showed that the IBD cross section was of the order of $10^{-44}$ cm$^2$. Such a small cross section indicates that the neutrino is difficult to detect\cite{bethe1934neutrino}.
 
 In 1956, Fred Reines and Clyde Cowan made the first discovery of the neutrino (specifically, it was electron antineutrinos $\bar{\nu}_e$) by using a nuclear reactor as an intense neutrino source with neutrino fluxes on the order of $10^{12}-10^{13}$ neutrinos/second/cm$^2$. The active volume of their detector was two tanks filled with water in which cadmium chloride (CdCl$_2$) was dissolved. The water tanks were surrounded by liquid scintillator layers coupled with photomultiplier tubes (PMT) to detect emitted photons. The incoming antineutrinos interacted with the water via IBD. The produced positrons quickly annihilated with $e^-$ and gave $\gamma$ signals while the produced neutrons went through the neutron capture process: $n+^{108}$Cd$\to^{109}$Cd$^*\to^{109}$Cd$+\gamma$ and gave delayed $\gamma$ signals. A coincidence of these two characteristic signals provided a distinctive signature for the neutrino reaction. They measured the cross-section as $6.3\times10^{-44}$ cm$^2$, which was consistent with Bethe's calculation\cite{reines1960detection}.
 
-\subsection{Solar Neutrino}
+\section{Solar Neutrino}
 In the 1930s, Hans Bethe et al. explained the origin of the Sun's energy as a series of nuclear reactions\cite{bethe1939energy}.
 
 Based on the available physics and experimental data, the Standard Solar Model (SSM) is a modern accepted theory for the evolution of the Sun. The energy in the Sun is mainly produced by two classes of reactions: the proton-proton (pp) chain and the Carbon-Nitrogen-Oxygen (CNO) cycle. The result of the two reactions is: $4p+2e^-\to^{4}$He$+2\nu_e+Q$, where the released energy, $Q$ is 26.73 MeV. The $\nu_e$ produced in the Sun (the solar neutrinos) can be detected on the Earth\cite{giunti2007fundamentals}.
@@ -49,7 +49,7 @@ Due to the branching ratios and unterminated chains in the pp chain and CNO cycl
 	\label{bp05plot}
 \end{figure}
 
-\subsection{Early Solar Neutrino Experiments}
+%\subsection{Early Experiments}
 In 1964, John Bahcall and Raymond Davis proposed the first experiment to detect solar neutrinos\cite{bahcall1964solar,davis1964solar}. Raymond Davis designed an experiment that used a 380 m$^3$ tank filled with Perchloroethylene (C$_2$Cl$_4$), a dry-cleaning fluid rich in chlorine. Solar neutrinos were expected to change $^{37}$C1 to $^{37}$Ar via the endothermic reaction $\nu_e+^{37}$Cl$\to^{37}$Ar$+e^-$ and the produced $^{37}$Ar were extracted and counted. The neutrino energy threshold ($E_{thresh}$) of the experiment was 0.814 MeV, which allowed a measurement mostly of the $^8$B neutrino flux but also including some lower energy neutrinos\cite{davis1964solar}. Their first results, announced in 1968, showed that only about one-third of the predicted radioactive argon atoms were measured. This raised a problem of missing solar neutrinos.
 
 \subsection{Atmospheric Neutrino}
@@ -60,13 +60,13 @@ Neutrino flavor transformation is a quantum mechanical interference phenomenon\c
 
 Based on current knowledge, neutrinos only interact via the weak force and gravity. A neutrino $\nu_\alpha$ is generated with a definite flavor from weak interaction and is related to a charged lepton with a given flavor: the electron ($e$), the muon ($\mu$) or the tauon ($\tau$) and thus $\alpha=e,\mu,\tau$.
 
-\subsection{Vacuum Oscillation}
+\subsection{Vacuum Oscillation}\label{sectVacuumOsci}
 For neutrino flavor oscillation experiments, neutrinos are detected in certain flavor eigenstates via weak interaction. A neutrino flavor state vector can be taken as a linear superposition of the mass eigenstates. For three-flavor neutrino mixing, we have\cite{pdg2018}:
 \begin{equation}\label{eq:mixingmatrix}
 |\nu_f\rangle = \sum_{i=1}^3U^*_{fi}|\nu_i\rangle, 
 \end{equation}
-where $f=e,\mu,\tau$ and $k=1,2,3$. The unitary PMNS matrix, $U_{PMNS}$, can be parametrized as\footnote{Here we ignore the Majorana CP violation phases, which are cancelled out when tackling with the flavor transformation probability.}: 
-\begin{equation}
+where $f=e,\mu,\tau$ and $k=1,2,3$. The unitary PMNS matrix, $U_{PMNS}$, can be parameterized as\footnote{Here we ignore the Majorana CP violation phases, which are cancelled out when tackling with the flavor transformation probability. We will come to this part in section.~\ref{sectMajorana}}: 
+\begin{equation}\label{eq:uPMNS}
 U_{PMNS} =
 \begin{bmatrix}
 1 &0 &0\\
@@ -187,7 +187,7 @@ This provides a measure of CP violation\cite{aitchison2012gauge}:
 
 
 
-$\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing}. In 2017, the Tokai-to-Kamioka (T2K) experiment in Japan rejected the hypothesis that neutrinos and antineutrinos oscillate with the same probability at 95\% confidence (2$\sigma$) level. This indicates a hint of CP symmetry broken by neutrinos\cite{abe2017measurement}. In 2019, T2K  claimed confidence intervals for $\delta_{CP}$ with three standard deviations ($3\sigma$): [-3.41,-0.03] for NH and [-2.54,-0.32] for IH. This result indicates that the CP violation exists in leptons\cite{abe2019constraint}.
+$\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing2011neutrinos}. In 2017, the Tokai-to-Kamioka (T2K) experiment in Japan rejected the hypothesis that neutrinos and antineutrinos oscillate with the same probability at 95\% confidence (2$\sigma$) level. This indicates a hint of CP symmetry broken by neutrinos\cite{abe2017measurement}. In 2019, T2K  claimed confidence intervals for $\delta_{CP}$ with three standard deviations ($3\sigma$): [-3.41,-0.03] for NH and [-2.54,-0.32] for IH. This result indicates that the CP violation exists in leptons\cite{abe2019constraint}.
 
 %\subsection{Atmosphere-accelerator Experiments}
 %
@@ -291,7 +291,7 @@ A_{CP} = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)}{
 A_T = \frac{P(\nu_\alpha\to\nu_\beta)-P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}{P(\nu_\alpha\to\nu_\beta)+P(\bar{\nu}_\beta\to\bar{\nu}_\alpha)}
 \]
 
-\subsection{Reactor-solar Experiments}
+\subsection{Status of the Neutrino Flavor Transformation Experiments}
 
 Since neutrinos' extremely low interaction cross-sections, neutrinos produced in the Sun can reach the detectors on the Earth without being interrupted. This enables the solar neutrino to be a probe to the stellar physics.
 
@@ -306,8 +306,11 @@ the energy resolution (3\% at 1 MeV)
 \cite{giaz2018status}
 
 
-\section{Neutrino Mass and Majorana Neutrino}
+\section{Neutrino Mass and Majorana Neutrino}\label{sectMajorana}
 The results from the neutrino flavor transformation experiments prove that neutrinos are not massless and have finite masses. However, there is no mechanism in the Standard Model to explain the neutrino masses.
+
+
+In the Standard Model, neutrinos are the only fermions without carrying electrical charges, which is one of the reasons why they are special.
 
 For a free fermion field $\psi$ following the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, the Lagrangian density is $\mathcal{L}_D = \bar\psi(i\gamma^\nu\partial_\nu-m_D)\psi$. Here $\psi$ is a Dirac spinor field and can be decomposed into left and right handed fields:
 $\psi=\psi_L+\psi_R$\cite{zee2010quantum}. Then the Dirac mass term is\cite{kane2017modern}:
@@ -402,12 +405,43 @@ The interpretation of the $0\nu\beta\beta$ process is considered as exchanging l
 upper bound for the $\nu_e$ mass
 KATRIN experiment
 
+The $U_{PMNS}$ (\ref{eq:uPMNS}) in section.~\ref{sectVacuumOsci} only takes the Dirac case, or it should be written as $U^D$. 
+Take the Majorana case into account, 
+
+$D^M$ is a diagonal unitary matrix and $D^M=diag(e^{i\eta_1},e^{i\eta_2},1)$. Thu $U_{PMNS}=U^DD^M$.
+
+
+
+
+
+
+
 
 
 the Schechter-Valle Theorem, or the Black Box theorem.
 From the Black Box theorem, if the $0\nu\beta\beta$ process is observed, the Majorana nature of neutrinos is demonstrated.
 
 violate lepton number by two units and shows that the lepton number is not conserved.
+
+the $\nu_e$ in the $0\nu\beta\beta$ process has a non-zero effective Majorana mass
+
+underlying mechanims 
+
+the u, d quarks and the electron are massive
+the Standard Model left-handed interaction $\bar{\nu}_{eL}\gamma_\mu e_L+\bar{u}_L\gamma_\mu d_L W^\mu$ exists
+
+the Black Box theorem relates the effective Majorana neutrino mass with the $0\nu\beta\beta$ amplitude $<m_\nu>$, or the Majorana property of the $\nu_e$ with the existence of the $0\nu\beta\beta$ process. 
+
+
+the See-saw mechanism explains the smallness of neutrino masses compared to the other fermions in the Standard Model.
+
+A Dirac neutrino can be conceived of as a pair of
+mass-degenerate Majorana neutrinos with opposite CP
+assignments. As pointed out by L. Wolfenstein
+[Carnegie-Mellon Report No. COO-3066-180 (unpublished)], their contributions to the $0\nu\beta\beta$ rate cancel
+due to their relative CP phase. With several Majorana neutrinos with different CP eigenvalues the neutrinoless diagrams discussed here may not be entirely
+negligible.
+
 
 
 \begin{figure}[htbp]
@@ -444,6 +478,7 @@ The interpretation of the $0\nu\beta\beta$ process is considered as exchanging l
 where $G_{PS}$ is the phase space factor and $|M_{Nuclear}|$ is the nuclear matrix element for the physics process describing the $0\nu\beta\beta$ decay process\cite{zuber2011neutrino}.
 
 Similar to beta decay, the $2\nu\beta\beta$ process will cause a continuous spectrum in the detector while the $0\nu\beta\beta$ process only has two electrons in the final state, which sum up to give a distinct energy peak. By measuring this exact energy, a detector with high energy resolution is able to search for the $0\nu\beta\beta$ signal from the $0\nu\beta\beta$ decay radioactive isotopes. Diverse technologies have been developed during the past decades. The following section lists some of the mainstream experiments.
+
 
 
 
@@ -498,7 +533,7 @@ In 2017, GERDA reported a 90\% confidence level (C.L.) lower limit for the half-
 GERDA reported in 2019 a lower limit half-life of $T^{0\nu}_{1/2}(^{76}$Ge$)>0.9\times 10^{26}$ years at 90\% C.L.\cite{agostini2019probing}. effective $m_{ee}$ is [104,228]~meV.
 
 
-The Enriched Xenon Observatory (EXO) experiment uses 200-kg liquid Xenon (LXe) time projection chamber (TPC) to search for $0\nu\beta\beta$ in $^{136}$Xe. In 2011 they observed the half life of double beta decay of $^{136}$Xe to be $2.11\times 10^{21}$ years and in 2014 they set a limit on $T^{0\nu}_{1/2}(^{136}$Xe$)>1.1\times 10^{25}$ yr\cite{exo}. EXO is now upgrading to the next 5-tonne experiment (nEXO) and is expected to reach an exclusion sensitivity of $T^{0\nu}_{1/2}(^{136}$Xe) to about $10^{28}$ years at 90\% C.L.\cite{albert2018sensitivity}.
+The Enriched Xenon Observatory (EXO) experiment uses 200-kg liquid Xenon (LXe) time projection chamber (TPC) to search for $0\nu\beta\beta$ in $^{136}$Xe. In 2011 they observed the half life of double beta decay of $^{136}$Xe to be $2.11\times 10^{21}$ years and in 2014 they set a limit on $T^{0\nu}_{1/2}(^{136}$Xe$)>1.1\times 10^{25}$ yr\cite{albert2014search}. EXO is now upgrading to the next 5-tonne experiment (nEXO) and is expected to reach an exclusion sensitivity of $T^{0\nu}_{1/2}(^{136}$Xe) to about $10^{28}$ years at 90\% C.L.\cite{albert2018sensitivity}.
 
 Also looking into $^{136}$Xe, the KamLAND-Zen (ZEroNeutrino) experiment exploits the existing facilities of KamLAND by setting a 3.08-m-diameter spherical inner balloon filled with 13 tons of Xe-loaded liquid scintillator at the center of the KamLAND detector.
 
@@ -506,7 +541,7 @@ liquid scintillator cocktail of 82\% decane and 18\% pseudocumene by volume, 2.7
 
 photocathode coverage of 34\%.
 
- Their 2016 results from a 504 kg$\cdot$yr exposure obtained a lower limit for the $0\nu\beta\beta$ decay half-life of $T^{0\nu}_{1/2}(^{136}$Xe$)>1.07\times 10^{26}$ yr at 90\% C.L. and the corresponding upper limits on the effective Majorana neutrino mass are in the range $61-165$ meV\cite{kamlandZen}.
+ Their 2016 results from a 504 kg$\cdot$yr exposure obtained a lower limit for the $0\nu\beta\beta$ decay half-life of $T^{0\nu}_{1/2}(^{136}$Xe$)>1.07\times 10^{26}$ yr at 90\% C.L. and the corresponding upper limits on the effective Majorana neutrino mass are in the range $61-165$ meV\cite{gando2016search}.
 
 The Particle and Astrophysical Xenon Experiment III (PandaX-III) 
 high pressure gas-phase time projection chamber (TPC)  

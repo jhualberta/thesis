@@ -242,29 +242,48 @@ The fitted results are shown in Table.~\ref{angularResolValues}.
 
 solar neutrino candidate events in the open dataset.
 
-
-\begin{table}[ht]
+\begin{figure}[htbp]
 	\centering
-	\caption{candidate events in the open dataset.}
-	\label{opendata}
-	\begin{tabular*}{155mm}{c@{\extracolsep{\fill}}ccccccc}
-		\hline
-	Run &  GTID &  $z$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$ & SNO+ Day\\
-	\hline 
-	100093 &11108354 &3.49 &3.57 &0.21 &-0.954459 &2683.92
-\\
-	100207 &5079885 &-2.61 &4.60 &0.45 &0.816215 &2687.04
-\\
-	100632 &7882360 &1.77 &3.19 &0.15 &0.937212 &2696.93
-\\
-	100663 &15767175 &-4.33& 4.96 &0.56 &0.977517 &2698.18
-\\
-	100915 &169700 &-1.00 &5.10 &0.61 &0.341287 &2701.23\\
-		\hline
-	\end{tabular*}
-\end{table}
-
-
+	\subfigure[Run 100093, GTID 11108354]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100093.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100207, GTID 5079885]{ 
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100207.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100632, GTID 7882360]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100632.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100663, GTID 15767175]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100663.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100915, GTID 169700]{ 
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		{\includegraphics[width=6cm]{PMTmap_100915.pdf}}
+	\end{minipage}
+    }
+	\subfigure[Legends]{ 
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		{\includegraphics[width=5cm]{solarLegends.png}}
+	\end{minipage}
+    }
+	\caption{Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for
+	the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}
+	\label{openDataSetCandidate}
+\end{figure}
 
 
 
@@ -288,7 +307,27 @@ other packages developed for high energy particle physics, such as StatPatternRe
 MPW fit results
 
 
-
+\begin{table}[ht]
+	\centering
+	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
+	\label{opendata}
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+		\hline
+	 Fitter &	Run &  GTID &  $z$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$ & SNO+ Day\\
+		\hline 
+	Rat & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954459 &2683.92 \\	
+	MPW &  --& --& 3.43 &	3.52 &	0.20	& -0.906388 & --\\
+	Rat &	100207 &5079885 &-2.61 &4.60 &0.45 &0.816215 &2687.04\\
+	MPW &	 --& --& -3.63 & \textbf{7.61} &	2.03 & \textbf{0.656374} & -- \\
+	Rat &100632 &7882360 &1.77 &3.19 &0.15 &0.937212 &2696.93\\
+	 MPW &    --& --&  1.67 & 3.11 &	0.14 & 0.910527 & -- \\
+	Rat &100663 &15767175 &-4.33& 4.96 &0.56 &0.977517 &2698.18\\
+	MPW & --& -- &-4.45 &	5.07 &	0.60 &	0.979943 & -- \\
+	Rat &100915 &169700 &-1.00 &5.10 &0.61 &0.341287 &2701.23\\
+	MPW &	--& --& -1.08 &	5.08 &	0.61 &	0.336706 & -- \\	
+		\hline
+	\end{tabular*}
+\end{table}
 
 
 
