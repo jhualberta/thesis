@@ -5,6 +5,11 @@ W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery, {\em
   Numerical recipes 3rd edition: The art of scientific computing}.
 \newblock Cambridge university press, 2007.
 
+\bibitem{bahcall2005new}
+J.~N. Bahcall, A.~M. Serenelli, and S.~Basu, ``New solar opacities, abundances,
+  helioseismology, and neutrino fluxes,'' {\em The Astrophysical Journal
+  Letters}, vol.~621, no.~1, p.~L85, 2005.
+
 \bibitem{schechter1982neutrinoless}
 J.~Schechter and J.~W. Valle, ``Neutrinoless double-$\beta$ decay in su
   (2)$\times$ u (1) theories,'' {\em Physical Review D}, vol.~25, no.~11,
@@ -93,11 +98,6 @@ C.~Giunti and C.~W. Kim, {\em Fundamentals of neutrino physics and
 W.~C. Haxton, R.~Hamish~Robertson, and A.~M. Serenelli, ``Solar neutrinos:
   status and prospects,'' {\em Annual Review of Astronomy and Astrophysics},
   vol.~51, pp.~21--61, 2013.
-
-\bibitem{bahcall2005new}
-J.~N. Bahcall, A.~M. Serenelli, and S.~Basu, ``New solar opacities, abundances,
-  helioseismology, and neutrino fluxes,'' {\em The Astrophysical Journal
-  Letters}, vol.~621, no.~1, p.~L85, 2005.
 
 \bibitem{bahcall1964solar}
 J.~N. Bahcall, ``Solar neutrinos. i. theoretical,'' {\em Physical Review
@@ -441,6 +441,15 @@ A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know
   \url{https://rat.readthedocs.io/en/latest/overview.html#goals}, 2014.
 \newblock [Online; accessed 20-Dec-2019].
 
+\bibitem{markNeuralNetwork}
+M.~Anderson, ``Status and updates on neural network fitter,'' {\em SNO+
+  Internal Document, docDB-6298-v1.}
+
+\bibitem{markNeuralTalk}
+M.~Anderson, ``Deep learning to reconstruct particle interaction properties for
+  the {SNO+} neutrino physics experiment,'' {\em Canadian AI Conference 2020 -
+  Talk}.
+
 \bibitem{partialWater}
 A.~Hallin, ``Fitting partial fill data from december 2014,'' {\em SNO+ Internal
   Document, docDB-2888-v3.}
@@ -562,10 +571,6 @@ M.~Shiozawa, ``Reconstruction algorithms in the super-kamiokande large water
 \bibitem{houghTransform}
 G.~Beier, ``Study of direction reconstruction in scintillator,'' {\em SNO+
   Internal Document, docDB-3503-v4.}
-
-\bibitem{neuronetwork}
-M.~Anderson, ``Neural network fitter updates,'' {\em SNO+ Internal Document,
-  docDB-6298-v1.}
 
 \bibitem{highlevel}
 J.~Klein, ``Leta high level cuts (including qpdt and itr),'' {\em SNO+ Internal
@@ -691,6 +696,10 @@ T.~Kaptanoglu, ``Characterization of the hamamatsu 8” r5912-mod
 \bibitem{partialEnergyYang}
 Y.~Zhang, ``Performance of qenergy based on q,'' {\em SNO+ Internal Document,
   docDB-6065-v1.}
+
+\bibitem{neuronetwork}
+M.~Anderson, ``Neural network fitter updates,'' {\em SNO+ Internal Document,
+  docDB-6298-v1.}
 
 \bibitem{anderson2019measurement}
 M.~Anderson, S.~Andringa, S.~Asahi, M.~Askins, D.~Auty, N.~Barros, D.~Bartlett,

@@ -2,8 +2,8 @@
 \contentsline {section}{\numberline {0.1}Abstract}{iii}{section.0.1}
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Contents}{v}{chapter*.2}
-\contentsline {chapter}{List of Figures}{ix}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xiv}{chapter*.4}
+\contentsline {chapter}{List of Figures}{viii}{chapter*.3}
+\contentsline {chapter}{List of Tables}{xiii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Discovery of Neutrino}{3}{section.2.1}
@@ -36,20 +36,19 @@
 \contentsline {section}{\numberline {3.7}Monte Carlo Simulation and the RAT Software}{36}{section.3.7}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{38}{chapter.4}
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{38}{section.4.1}
-\contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{38}{section.4.2}
+\contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{39}{section.4.2}
 \contentsline {section}{\numberline {4.3}Multi-path Position and Direction Reconstructions for the Water Phase}{41}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Vertex Reconstruction}{41}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Direction Reconstruction}{43}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Effective Group Velocity}{43}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Fitter Pull and Drive Correction}{45}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.2}Direction Reconstruction}{42}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Effective Group Velocity}{44}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Fitter Pull and Drive Correction}{46}{subsection.4.3.4}
 \contentsline {subsection}{\numberline {4.3.5}Multi-path Fitter Structure}{49}{subsection.4.3.5}
 \contentsline {section}{\numberline {4.4}Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}{52}{section.4.4}
 \contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Partial-fill and Scintillator Phases}{56}{section.4.5}
-\contentsline {section}{\numberline {4.6}PMT Selectors for the Reconstruction}{63}{section.4.6}
-\contentsline {section}{\numberline {4.7}Energy Reconstruction}{65}{section.4.7}
+\contentsline {section}{\numberline {4.6}PMT Selectors for the Reconstruction}{64}{section.4.6}
+\contentsline {section}{\numberline {4.7}Energy Reconstruction}{66}{section.4.7}
 \contentsline {section}{\numberline {4.8}Other Reconstruction Algorithms}{66}{section.4.8}
 \contentsline {subsection}{\numberline {4.8.1}Hough Transformation for Direction Reconstruction}{66}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Machine Learning Algorithm}{66}{subsection.4.8.2}
 \contentsline {section}{\numberline {4.9}Conclusion}{67}{section.4.9}
 \contentsline {chapter}{\numberline {5}SNO+ Water Phase Analysis}{68}{chapter.5}
 \contentsline {section}{\numberline {5.1}High Level Cuts: Classifiers}{68}{section.5.1}

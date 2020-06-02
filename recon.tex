@@ -5,7 +5,7 @@
 %\epigraph{If all mathematics disappeared today, physics would be set back exactly one week.}{---\textup{Richard Feynman}}
 %\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
 \section{An Overview of the Reconstruction Algorithms in SNO+}
-An event happens in the SNO+ detector can produce Cherenkov photons or scintillation photons and these photons propagate through the detector and finally reach the PMTs and are detected.
+An event happens in the SNO+ detector can produce Cherenkov or scintillation photons and these photons propagate through the detector and finally being measured by the PMTs.
 
 
 to determine the vertex (position and time), direction and energy of an event.
@@ -19,6 +19,18 @@ energy of
 Multi-site or multi-vertex reconstruction algorithm is being developed.
 
 In this chapter, we do not consider the case of multi-vertex.
+
+
+The huge amount of data provided by particle detectors make the field of experimental particle physics an ideal place for implementing machine learning. The machine learning algorithms, such as artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. This algorithm trains the neural network from calibration data to find the position of an event\cite{markNeuralNetwork,markNeuralTalk}.
+
+
+using calibrated hit time
+// and angle between PMTs and an estimated event orientation as inputs to find
+// a radius.
+
+
+
+
 
 
 \section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
@@ -704,19 +716,6 @@ circular Hough transformation
 	\caption{Hough transformation for catching the ring structure of Cherenkov signals and fitting the direction.}
 	\label{houghTrans}
 \end{figure}
-
-
-
-
-\subsection{Machine Learning Algorithm}
-
-artificial neural network (ANN)
-Position ANN,
-
-
-\cite{neuronetwork}
-
-
 
 \section{Conclusion}
 The Multi-path Fitter framework of event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the Multi-path Water Fitter works as an alternative fitter to provide additional reconstruction information for the water data and it gives proper position and direction resolutions for the water analysis. The Multi-path Scint-Water Fitter works as the prime fitter for the SNO+ partial-fill phase.

@@ -7,24 +7,27 @@ Repeated entry---line 334 of file thesis.bib
  : @article{abe2019constraint
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 671 of file thesis.bib
+Repeated entry---line 591 of file thesis.bib
+ : @article{bahcall2005new
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 681 of file thesis.bib
  : @article{agostini2019probing
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "muonflux" isn't style-file defined
---line 740 of file thesis.bib
+--line 750 of file thesis.bib
 Warning--entry type for "ratManual" isn't style-file defined
---line 917 of file thesis.bib
-Repeated entry---line 1127 of file thesis.bib
+--line 927 of file thesis.bib
+Repeated entry---line 1152 of file thesis.bib
  : @article{biller2020slow
  :                        ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1208 of file thesis.bib
+I was expecting a `,' or a `}'---line 1233 of file thesis.bib
  :   
  :   school={Ph. D. thesis, University of Oxford}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "BP05"
 Warning--empty year in laserball_groupVelocity
 Warning--empty school in brice1996monte
 Warning--empty year in driveCorPeter
@@ -46,6 +49,8 @@ Warning--empty year in snop_nim
 Warning--empty school in bonventre2014neutron
 Warning--empty year in rattime
 Warning--empty year in andyElectronics
+Warning--empty year in markNeuralNetwork
+Warning--empty year in markNeuralTalk
 Warning--empty year in partialWater
 Warning--empty year in davidPartialWater
 Warning--empty year in kalpanaWLS
@@ -62,7 +67,6 @@ Warning--empty year in energyRSP
 Warning--empty year in partialEnergy
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
-Warning--empty year in neuronetwork
 Warning--empty year in highlevel
 Warning--empty school in dragowsky1999sudbury
 Warning--empty school in hamer2001energy
@@ -70,47 +74,48 @@ Warning--empty year in markchen_bkg
 Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in partialEnergyYang
+Warning--empty year in neuronetwork
 Warning--empty year in brunroot
 Warning--empty school in dunford2006measurement
-You've used 148 entries,
+You've used 150 entries,
             1876 wiz_defined-function locations,
-            1201 strings with 26954 characters,
-and the built_in function-call counts, 32653 in all, are:
-= -- 2911
-> -- 1785
+            1206 strings with 27188 characters,
+and the built_in function-call counts, 32917 in all, are:
+= -- 2931
+> -- 1793
 < -- 0
-+ -- 671
-- -- 523
-* -- 2300
-:= -- 4992
-add.period$ -- 191
-call.type$ -- 148
-change.case$ -- 108
++ -- 675
+- -- 525
+* -- 2318
+:= -- 5034
+add.period$ -- 193
+call.type$ -- 150
+change.case$ -- 110
 chr.to.int$ -- 0
-cite$ -- 195
-duplicate$ -- 1764
-empty$ -- 2954
-format.name$ -- 523
-if$ -- 7747
+cite$ -- 199
+duplicate$ -- 1782
+empty$ -- 2988
+format.name$ -- 525
+if$ -- 7807
 int.to.chr$ -- 0
-int.to.str$ -- 148
-missing$ -- 139
-newline$ -- 490
-num.names$ -- 142
-pop$ -- 518
+int.to.str$ -- 150
+missing$ -- 141
+newline$ -- 496
+num.names$ -- 144
+pop$ -- 528
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 979
+skip$ -- 981
 stack$ -- 0
 substring$ -- 980
-swap$ -- 640
+swap$ -- 642
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 47
-while$ -- 240
-width$ -- 151
-write$ -- 1366
-(There were 4 error messages)
+warning$ -- 49
+while$ -- 242
+width$ -- 153
+write$ -- 1380
+(There were 5 error messages)
