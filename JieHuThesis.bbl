@@ -35,7 +35,7 @@ E.~Turner, ``A water scattering scaling factor for rat,'' {\em SNO+ Internal
 \bibitem{brice1996monte}
 S.~J. Brice, {\em Monte Carlo and Analysis Techniques for the Sudbury Neutrino
   Observatory.}
-\newblock PhD thesis, 1996.
+\newblock PhD thesis, University of Oxford, 1996.
 
 \bibitem{driveCorPeter}
 P.~Skensved and B.~Robertson, ``Miscellaneous effects,'' {\em SNO Techinical
@@ -51,7 +51,7 @@ M.~Dragowsky, A.~Hamer, Y.~Chan, R.~Deal, E.~Earle, W.~Frati, E.~Gaudette,
 \bibitem{maclellan2009energy}
 R.~F. MacLellan, {\em The energy calibration for the solar neutrino analysis of
   all three phases of the Sudbury Neutrino Observatory}.
-\newblock PhD thesis, 2009.
+\newblock PhD thesis, Queen's University, 2009.
 
 \bibitem{matt_deployedsource}
 M.~Mottram, ``{N16} source update,'' {\em SNO+ Internal Document,
@@ -215,9 +215,13 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
   preprint arXiv:1804.03575}, 2018.
 
+\bibitem{akhmedov2014majorana}
+E.~Akhmedov, ``Majorana neutrinos and other majorana particles: Theory and
+  experiment,'' {\em arXiv preprint arXiv:1412.3320}, 2014.
+
 \bibitem{zee2010quantum}
-A.~Zee, {\em Quantum field theory in a nutshell}, vol.~7.
-\newblock Princeton university press, 2010.
+A.~Zee, {\em Quantum field theory in a nutshell, 2nd edn.}, vol.~7.
+\newblock Princeton university press, 2011.
 
 \bibitem{kane2017modern}
 G.~Kane, {\em Modern elementary particle physics: explaining and extending the
@@ -294,7 +298,7 @@ C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
 G.~Piperno, ``Dark matter search with the cuore-0 experiment,'' 2015.
 
 \bibitem{muonflux}
-``Muons.'' \url{https://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm}, 2001.
+``Muons,'' 2001.
 \newblock [Online; accessed 19-July-2019].
 
 \bibitem{beacom2017physics}
@@ -363,12 +367,12 @@ W.~R. Leo, {\em Techniques for Nuclear and Particle Physics Experiments: a
 B.~Von~Krosigk, {\em Measurement of Proton and $\alpha$ Particle Quenching in
   LAB Based Scintillators and Determination of Spectral Sensitivities to
   Supernova Neutrinos in the SNO+ Detector}.
-\newblock PhD thesis, 2015.
+\newblock PhD thesis, Technische Universitaet Dresden, 2015.
 
 \bibitem{sorensen2016temperature}
 A.~S{\"o}rensen, {\em Temperature quenching in LAB based liquid scintillator
   and muon-induced backgrounds in the SNO+ experiment}.
-\newblock PhD thesis, 2016.
+\newblock PhD thesis, Technische Universitaet Dresden, 2016.
 
 \bibitem{dunger2018topological}
 J.~Dunger, {\em Topological and time based event classification for
@@ -421,24 +425,33 @@ the {SNO+}~collaboration, ``{T}he {SNO+} experiment,'' {\em To be published}.
 \bibitem{bonventre2014neutron}
 R.~Bonventre, {\em Neutron multiplicity in atmospheric neutrino events at the
   Sudbury Neutrino Observatory}.
-\newblock PhD thesis, 2014.
+\newblock PhD thesis, University of Pennsylvania, 2014.
+
+\bibitem{joshTrigger}
+``Triggering options for sno+ water fill,'' {\em SNO+ Internal Document,
+  docDB-4323-v1.}
+
+\bibitem{operator}
+``Sno+ detector operator manual,'' {\em SNO+ Internal Document}.
 
 \bibitem{rattime}
 G.~O. Gann, ``Dealing with time in rat,'' {\em SNO+ Internal Document,
   docDB-480-v1.}
 
+\bibitem{walker2016study}
+J.~M. Walker, {\em Study of Invisible Mode Nucleon Decay in the SNO+ Detector}.
+\newblock PhD thesis, University of Liverpool, 2016.
+
 \bibitem{andyElectronics}
 A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know
-  about electronics and much more you didn’t want to know,'' {\em SNO+
-  Internal Document, docDB-1316-v1.}
+  about electronics and much more you didn’t want to know.''
 
 \bibitem{rat}
 {\em RAT Overview}, 2020 (accessed Mar 15, 2020).
 \newblock \url{https://rat.readthedocs.io/en/latest/overview.html}.
 
 \bibitem{ratManual}
-``Overview - rat 1.0 documentation.''
-  \url{https://rat.readthedocs.io/en/latest/overview.html#goals}, 2014.
+``Overview - rat 1.0 documentation,'' 2014.
 \newblock [Online; accessed 20-Dec-2019].
 
 \bibitem{markNeuralNetwork}
@@ -486,7 +499,7 @@ F.~Barao and J.~Maneira, ``Group velocity measurement, plot for approval,''
 \bibitem{coulter2013modelling}
 I.~T. Coulter, {\em Modelling and Reconstruction of Events in SNO+ related to
   Future Searches for Lepton and Baryon Number Violation.}
-\newblock PhD thesis, Ph. D. thesis, University of Oxford, 2013.
+\newblock PhD thesis, University of Oxford, 2013.
 
 \bibitem{JSONwiki}
 wikipedia, {\em JSON}, 2020 (accessed Mar 15, 2020).
@@ -519,14 +532,10 @@ M.~Askins, M.~Bergevin, A.~Bernstein, S.~Dazeley, S.~Dye, T.~Handler,
   physics and nuclear nonproliferation goals of watchman: A water cherenkov
   monitor for antineutrinos,'' {\em arXiv preprint arXiv:1502.01132}, 2015.
 
-\bibitem{boulay2004direct}
-M.~G. Boulay, ``Direct evidence for weak flavour mixing with the sudbury
-  neutrino observatory.,'' 2004.
-
 \bibitem{mekarski2018electron}
 P.~Mekarski, {\em Electron Antineutrinos in the Water Phase of the SNO+
   Experiment}.
-\newblock PhD thesis, 2018.
+\newblock PhD thesis, University of Alberta, 2018.
 
 \bibitem{biller2020slow}
 S.~D. Biller, E.~J. Leming, and J.~L. Paton, ``Slow fluors for highly effective
@@ -544,7 +553,7 @@ L.~Lebanowski, ``Improved mode cut,'' {\em SNO+ Internal Document,
 \bibitem{moffat2001optical}
 B.~A. Moffat, {\em The optical calibration of the Sudbury Neutrino
   Observatory}.
-\newblock PhD thesis, Ph. D. thesis, Queen’s University, 2001.
+\newblock PhD thesis, Queen’s University, 2001.
 
 \bibitem{energyRSP}
 M.~Mottram, ``Note on {RSP} fitter,'' {\em SNO+ Internal Document,
@@ -579,12 +588,12 @@ J.~Klein, ``Leta high level cuts (including qpdt and itr),'' {\em SNO+ Internal
 \bibitem{dragowsky1999sudbury}
 M.~R. Dragowsky, {\em Sudbury Neutrino Observatory energy calibration using
   gamma-ray sources}.
-\newblock PhD thesis, 1999.
+\newblock PhD thesis, Oregon State University, 1999.
 
 \bibitem{hamer2001energy}
 A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
   charged-current neutrino reaction.}
-\newblock PhD thesis, 2001.
+\newblock PhD thesis, Queen's University, 2001.
 
 \bibitem{nndc}
 {\em National Nuclear Data Center}, 2019 (accessed Oct 30, 2019).
@@ -724,6 +733,11 @@ G.~Horton-Smith {\em et~al.}, ``Introduction to glg4sim,'' 2006.
 \bibitem{dunford2006measurement}
 M.~Dunford, {\em Measurement of the $^8${B} solar neutrino energy spectrum at
   the Sudbury Neutrino Observatory}.
-\newblock PhD thesis, 2006.
+\newblock PhD thesis, University of Pennsylvania, 2006.
+
+\bibitem{{boulay2004direct}
+M.~G. Boulay, {\em Direct Evidence for Weak Flavour Mixing with the Sudbury
+  Neutrino Observatory.}
+\newblock PhD thesis, Queen’s University, 2004.
 
 \end{thebibliography}

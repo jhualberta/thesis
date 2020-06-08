@@ -221,119 +221,39 @@ lcn = 512 \times crate + 32 \times FEC + channel
 \end{equation}
  %9605 are actually used
  
-To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to implement three functions:
+To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to implement three functions\cite{boger2000sudbury,bonventre2014neutron,snop_nim}:
 \begin{itemize} 
 \item[$\bullet$] Two four-channel discriminator (SNOD) chips set thresholds for PMT signals.
 \item[$\bullet$] Eight single-channel CMOS chips record the time when the PMT pulse cross the discriminator thresholds.
-\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulse over time interval to obtain PMT charge information. There are three different time windows for the integral, resulting in three types of charge values: QHS　(Charge High gain Short integration time), by integrating the pulse over 60 ns; QHL  (Charge High gain Long integration time), by integrating the pulse over 400 ns; and the QLX (Charge Low gain), by integrating the low gain PMT pulse and integrate over either time window.
-\end{itemize}  
+\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulses over time interval to obtain PMT charge information. There are three different time windows for the integral, resulting in three types of charge values: QHS　(Charge High gain Short integration time), by integrating the pulse over 60 ns; QHL (Charge High gain Long integration time), by integrating the pulse over 400 ns; and the QLX (Charge Low gain),by integrating the the low gain PMTs over either 60 or 400 ns.
+\end{itemize}
 
-First, the discriminator checks the input pulse with the predefined threshold voltages. If the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20). At the same time, CMOS chips produces a time-to-amplitude (TAC) voltage.  as the PMT hit time. 
+First, the discriminator checks the input pulses from a PMT channel with the predefined threshold voltages. If the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20)\cite{joshTrigger}. These time widths are optimized for the timing of the photon propagation in the detector and later to determine the number of hit PMTs in a specific time window. Beside these two, there are also two triggers which copies the analog pulses of high and low gain of each hit PMTs, known as ESUMHi(gh) and ESUMLo(w). These triggers mainly measure the stability of the detector, in case that there would be large signals in the PMTs while the number of the hit PMTs are small due to one or a few PMTs being exposed to high amount of light or experiencing break downs\cite{operator}. At the same time, CMOS chips produces a time-to-amplitude (TAC) voltage and the TAC starts to ramp. The SNOINT starts to integrate all pulses from the PMT channel from 10 ns before the threshold crossing time to 390 ns or 50 ns to get QHL, QHS or QLX values mentioned before\cite{boger2000sudbury,stringer2019sensitivity}. 
 
-Each trigger pulse has three different threshold values of NHits. During the water phase, N100Med  
+The trigger pulses from all the channels in one crate with 16 FECs are sent to a Crate Trigger Card (CTC) and are summed up. For 19 crates, 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to SNO+'s upgrading from the SNO), which are installed in an individual rack. It takes about 110 ns for the signals to travel to the MTC/A+. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above the trigger threshold. Then the summed trigger pulse is sent to the digital master trigger system (MTC/D) which checks 7 MTC/A+ triggers. As mentioned in the last paragraph, the summed triggers of N100 and N20 indicate the number of hit PMTs within the pulse time widths. In the MTC/A+ discriminators, there are three different threshold values of the number of the hit PMTs for the summed trigger pulses: Lo(w), Med(ium) and Hi(gh). During the water phase, N100Lo, N100Med, N100Hi are set based on the N100 pulses, where each has a different threshold value set. from lower value to higher value (for example, a setting of N100Lo=11, N100Med=16, N100Hi=21 was used in the water phase simulations). A lower threshold can increase the data-taking rates by including more signals as well as background noise. A high event rate can also make the detector unstable. On the other hand, a higher threshold removes more noises with a sacrifice of signals. The MTC/D checks the trigger type with the pre-defined trigger mask (a set of multiple trigger types with different trigger thresholds can be set), if it is satisfied, a Global Trigger (GT) is issued\cite{snop_nim,stringer2019sensitivity,rattime}. 
 
+Once the GT is issued, an event is triggered and the MTCD sends the GT to the FEC which ramps the TAC within the next 20 ns (determined by a 50 MHz clock mentioned later). This takes another 110 ns. Thus there is a total delay of 220 ns after the FEC ramping the TAC. When the TAC ramps, a time gate of 400 ns is set for waiting the GT. If there is a GT in this 400 ns window, the TAC is stopped and resultant voltage is digitized and recorded as the PMT hit time. If there is no GT, the TAC resets and the PMT hit is not recorded. Meanwhile, for the square trigger pulses from each PMT channels, if they are within the 400 ns gate and before the GT arrives, they will be recorded as the hits of an event. The charge information of the event is also recorded\cite{stringer2019sensitivity,rattime}.
 
-N100Lo, N100Med, N100Hi are triggers based on the N100 pulses, where each has a different threshold value set.
+A 10 MHz and a 50 MHz clocks are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined $T_{zero}, $the midnight of January 1, 2010 (GMT) to the moment when the event happens．A 10 MHz clock used for counting the absolute time started at $T_{zero}$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays\cite{rattime,stringer2019sensitivity}. 
 
-In each crate, the trigger pulses from the 16 FECs are sent to and summed up by a Crate Trigger Card (CTC). 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to an upgrade to the old SNO system), which are installed in an individual rack. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above threshold. 
-
-The digital master trigger system (MTC/D) checks 
-
-7 MTC/A+ triggers.
-
-The MTC/D　checks the trigger type with the operator-defined trigger mask, if it is satisfied, then  
-a Global Trigger (GT) is issued.
-MTC/A has 3 discriminators: LOW, MED and HI.
-
-These widths are chosen to match the characteristic travel times
-of photons across the detector. More specifically, the N100 width is chosen such that a set of photons from a Cherenkov cone will result in overlayed PMT pulses. The shorter N20 width limits this overlaying of PMT pulses to events originating from the centre of the detector.
+The recorded hit information of the triggered event, including the values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of hit PMTs of the event) and the status flags are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher event rates compared to SNO. They read out the recorded data and wrap them as ethernet packets and send to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system aggregates these fragments into event records based on their GT identification number (GTID) andwrites complete events to disk.aggregates these fragments into event records based on their global trigger identification number andwrites complete events to disk\cite{snop_nim}.
 
 
-the number of hit PMTs in the time window, 
+The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations. 
 
 
+The number of the hit PMTs for a given event is referred to as NHits.
 
-
-
-the TAC is stopped when the GT is issued;if there is no GT, the TAC resets and the PMT hit is not recorded as an event.
-
- This global trigger defines an event within the detector and results in all the associated information being saved. Multiple different trigger thresholds can be set.  So it is possible, and likely, that an event within the detector passes several of these trigger thresholds.
-
-the number of hit PMTs, 
-
-If the total height of either of these summed pulses passes a set threshold value, 
-
-
-
-
-
-
-
-trigger system are to check whether the signal passes through a preset threshold value.
-
-
-
-the analog waveforms are summed on the MTC/A+ card, then they are digitized 
 
 CAEN v1720 digitizer 
 
 TUBii trigger utility board 
 pulsers and delays
 
-
-
 the timing and charge from the fired PMT is digitized and stored.
 
 Not all of the information from PMTs are recorded. 
-
-Nhit means the number of live hit PMTs in the detector for a given event.
-
-
 dark noise rate is estimated to be 1 kHz.
-
-
-For the SNO+ detector specifically, each PMT that triggers sends multiple
-trigger pulses down the electronics chain, which then performs higher logic.
-
-
-Additionally, the detector can trigger from the charge in the PMTs directly. The voltage pulses from all of the PMTs are summed together (ESUM). If this combined voltage trace drops below a threshold value (for example, ESUMHi,
-ESUMLo), this can also issue a GT to the detector.
-Figure 3.4 shows the event display of a typical muon event in the detector. Each individual PMT that triggered for that event is highlighted at its
-position on the support structure. A muon event is characterized by the large number of triggered PMTs. As with nearly all muons that pass through the detector, it is traveling in a downward direction. This is seen in Figure 3.4 as the excess of PMT charge (i.e. photons) in the bottom of the detector. As all atmospheric muons travelling upwards would be attenuated by the Earth, the
-small flux of upward-going muons are the result of neutrino interactions in the
-rock surrounding the detector [56].
-Figure 3.5 shows a more typical event. The circular pattern seen is produced by the projection of the Cherenkov light cone onto the PMTs. With 24 triggered
-PMTs, this event is considered a high-energy event within the detector. The size of the pattern indicates that this event took place closer to the PMTs travelling in an outward direction, specifically in the water between the acrylic sphere and the PMTs.
-
-
-
-
-
-event data: 
-trigger types
-trigger ID number (GTID)
-MTC/D clock time
-GPS clock time
-CAEN digitized trigger pulses
-hit information: 
-the integrated charges and time from an event are stored in each channel. The values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of triggered PMTs) and status flags.
-
-Once the global trigger signal is issued, the integrated charges and time from an event are stored in each channel. The hit information are read out by a Crate Controller Card (XL3) and sent to the Data Acquisition System (DAQ) and event builder, 
-
-
-The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations. 
-
-
-
-The PMT hit time of 
-
-\cite{snop_nim,boger2000sudbury,bonventre2014neutron,stringer2019sensitivity}
-
-
-
-
-
-\cite{rattime,bonventre2014neutron}
 
 
 During the experiment running, the maintenance of the electronics is always ongoing.
@@ -342,33 +262,11 @@ nearline provides a real-time analysis of the data quality,
 
 
 
-burst 
-from supernova
-
 \cite{andyElectronics}
-
-event time:
-
-The universal time of an event is calculated as the time elapsed from a predefined $T_{zero}, $the midnight of January 1, 2010 (GMT) to the moment when the event happens．A 10 MHz clock used for counting the absolute time started at $T_{zero}$\cite{rattime}. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system.
-
-A 50 MHz clock , this clock limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days.
-
-
-
-absolute time of that event 
-
-
-that has  
-
-relative time is the time between events.
-
-PMT hit time refers to all the PMTs triggered by an event.
-
 
 \section{Calibration}
 Two kinds of calibration sources are used by SNO+: optical sources and radioactive sources. 
 The optical sources are used to calibrate the PMT response and to measure the optical properties of the 
-
 
 The radioactive sources are used to calibrate the energy 
 

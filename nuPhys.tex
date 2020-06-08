@@ -319,9 +319,9 @@ K(T)\equiv \sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathca
 The $\beta$-decay in Tritium: $^3H\to^3He+e^-+\bar{\nu}_e$
 
 The effective $\nu_e$ mass in $\beta$-decay:
-\[
+\begin{equation}
 m^2_\beta = \sum_i |U_{ek}|^2 m_i^2.
-\]
+\end{equation}
 
 
 
@@ -333,25 +333,38 @@ m^2_\beta = \sum_i |U_{ek}|^2 m_i^2.
 
 
 
-\subsection{Majorana Neutrino}
-In the Standard Model, neutrinos are the only fermions without carrying electrical charges, which is one of the reasons why they are special.
+\subsection{From Dirac to Majorana}
+In the Standard Model, neutrinos are the only spin-1/2 elementary particles without carrying electrical charges, which is one of the reasons why they are special. No charge-like quantum number can be used to distinguish a neutrino and an antineutrino. As a comparison, a spin-1/2 and neutral charge neutron carries a magnetic moment opposite to an antineutron\cite{akhmedov2014majorana}.
 
-For a free fermion field $\psi$ following the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, the Lagrangian density is $\mathcal{L}_D = \bar\psi(i\gamma^\nu\partial_\nu-m_D)\psi$. Here $\psi$ is a Dirac spinor field and can be decomposed into left and right handed fields:
-$\psi=\psi_L+\psi_R$\cite{zee2010quantum}. Then the Dirac mass term is\cite{kane2017modern}:
+A free spin-1/2 fermion field with a mass $m$ follows the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, where $\partial_\mu\equiv \partial/\partial x^\mu$, $\psi$ is a four-component spinor (Dirac spinor) field, and $\gamma^\mu~(\mu=0,1,2,3)$ is a set of $4\times 4$ matrices forming a Clifford algebra, i.e, satisfying the following relations\cite{akhmedov2014majorana,zee2010quantum}:
+\begin{equation}\label{eq:clifford}
+\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}, 
+\end{equation}
+where $\eta^{\mu\nu}=diag(1,-1,-1,-1)$ is the Minkowski metric. From \ref{eq:clifford} we can also get $(\gamma^0)^2=+1$, $(\gamma^i)^2=-1~(i=1,2,3)$ and $\gamma^0\gamma^{\mu\dag}\gamma^0=\gamma^\mu$. The product of four gamma matrices is defined as $\gamma^5\equiv i\gamma^0\gamma^1\gamma^2\gamma^3$, which satisfies $\{\gamma^5,\gamma^\mu\}=0$ and $(\gamma^5)^2=1$. From $\gamma^5$, we can define the left-handed and right-handed chirality projector operators: $P_L\equiv\frac{1}{2}(1-\gamma^5)$ and $P_R\equiv\frac{1}{2}(1+\gamma^5)$.
+
+Define the adjoint field $\bar{\psi}\equiv \psi^{\dag}\gamma^0$, the Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$.The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. Then the Dirac Lagrangian density can be written as\cite{zee2010quantum}:
 \begin{equation} 
-\mathcal{L}_D = -m_D\bar\psi\psi= -m_D(\bar{\psi}_R\psi_L+\bar{\psi}_L\psi_R),
+\mathcal{L}_D = (\bar{\psi}_L i\gamma^\mu\partial_\mu\psi_L+\bar{\psi}_R i\gamma^\mu\partial_\mu\psi_R)-m(\bar{\psi}_R\psi_L+\bar{\psi}_L\psi_R),
 \end{equation} 
+where the first two terms on the right hand side are kinetic energy terms, where the chiral components are separate; and the last is the Dirac mass term $\mathcal{L}^{Dirac}_M$, where the chiral components are coupled.
 
 
-
-
-
+A particle-antiparticle conjugation operator $\hat C$ is defined as\cite{akhmedov2014majorana}:
+\begin{equation}
+\hat C: \psi\to \psi^c=\mathcal{C}\bar\psi^T
+\end{equation}
 
 
 
 
 since only left-handed $\nu$ and right-handed $\bar\nu$ involve in the weak interaction in the Standard Model, 
-the Dirac mass term is not economical\cite{aitchison2012gauge}.
+the Dirac mass term is not economical and natural\cite{aitchison2012gauge}.
+
+
+
+
+charge conjugation
+
 
 
 get coupled equations
@@ -428,7 +441,7 @@ m_2=m_+=\frac{1}{2}[m^M_R+m^M_R(1+\frac{1}{2}(\frac{2m^D}{m^M_R})^2)]=m^M_R[1+(\
 
 For $\mathcal{O}(1TeV)$, the $\nu$ mass is $0.1~eV$
 
-The interpretation of the $0\nu\beta\beta$ process is considered as exchanging light Majorana neutrinos. In this case the effective Majorana mass $\langle m_{ee}\rangle=\sum_{i=1}^{3} |U_{ei}|^2m_i~(i=1,2,3)$, where $U_{ei}$ are the elements of the neutrino mixing matrix for the flavor state $\nu_e$, and $m_i$ are the mass eigenvalues of the mass eigenstates (from (\ref{eq:mixingmatrix})). The observable quantity is the half-life:
+The interpretation of the $0\nu\beta\beta$ process is considered as exchanging light Majorana neutrinos. In this case the effective Majorana mass $\langle m_{ee}\rangle=\sum_{i=1}^{3} |U_{ei}|^2m_i$, where $U_{ei}$ are the elements of the neutrino mixing matrix for the flavor state $\nu_e$, and $m_i$ are the mass eigenvalues of the mass eigenstates (from (\ref{eq:mixingmatrix})). The observable quantity is the half-life:
 \[
 (T^{0\nu\beta\beta}_{1/2})^{-1} = G_{PS}(Q,Z)|M_{Nuclear}|^2\langle m_{ee}\rangle^2, 
 \]
@@ -440,7 +453,7 @@ KATRIN experiment
 The $U_{PMNS}$ (\ref{eq:uPMNS}) in section.~\ref{sectVacuumOsci} only takes the Dirac case, or it should be written as $U^D$. 
 Take the Majorana case into account, 
 
-$D^M$ is a diagonal unitary matrix and $D^M=diag(e^{i\eta_1},e^{i\eta_2},1)$. Thu $U_{PMNS}=U^DD^M$.
+$D^M$ is a diagonal unitary matrix and $D^M=diag(1,e^{i\phi_1},e^{i\phi_2})$, where $\phi_1$ and $\phi_2$ are are the Majorana-type CP-violation phases. Thu $U_{PMNS}=U^DD^M$.
 
 
 
@@ -511,7 +524,11 @@ where $G_{PS}$ is the phase space factor and $|M_{Nuclear}|$ is the nuclear matr
 
 Similar to beta decay, the $2\nu\beta\beta$ process will cause a continuous spectrum in the detector while the $0\nu\beta\beta$ process only has two electrons in the final state, which sum up to give a distinct energy peak. By measuring this exact energy, a detector with high energy resolution is able to search for the $0\nu\beta\beta$ signal from the $0\nu\beta\beta$ decay radioactive isotopes. Diverse technologies have been developed during the past decades. The following section lists some of the mainstream experiments.
 
+\begin{equation}
+\langle m_{ee} \rangle = |c^2_{13}c^2_{12}m_1+c^2_{13}s^2_{12}e^{2i\phi_1}m_2+s^2_{13}e^{2i(\phi_2-\delta_{CP})}m_3|
+\end{equation}
 
+From the pdg, $\Delta m^2_{21}\simeq 7.4\times 10^{-5}~eV^2,~|\Delta m^2_{31}|\simeq 2.4\times 10^{-3}~eV^2 ,\theta_{12}\simeq 33.8^\circ, \theta_{23}\simeq 48.6^\circ,\theta_{13}\simeq 8.6^\circ, \delta_{CP}\simeq 221^\circ$.
 
 
 

@@ -5,32 +5,35 @@
 %\epigraph{If all mathematics disappeared today, physics would be set back exactly one week.}{---\textup{Richard Feynman}}
 %\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
 \section{An Overview of the Reconstruction Algorithms in SNO+}
-An event happens in the SNO+ detector can produce Cherenkov or scintillation photons and these photons propagate through the detector and finally being measured by the PMTs.
+An event happens in the SNO+ detector can produce Cherenkov or scintillation photons. These photons propagate through the detector and finally are measured by the PMTs.
 
-
-to determine the vertex (position and time), direction and energy of an event.
+By utilizing the time and charge information recorded by the PMTs, reconstruction algorithms aim to determine the vertex (position and time), direction and energy of an event. Sets of algorithms have been or being developed for the SNO+ event reconstruction. These algorithms are based on different methods and are optimized for the different SNO+ physics phases. For a certain algorithm, its performances are basically tested by the Monte Carlo simulations as well as the calibration data. Once the algorithm shows proper results and approved by the collaboration, it is implemented into the SNO+ RAT software and process the SNO+ data and simulations.
 
 The event vertex are evaluated by the timing parameter of the photon propagation. 
 
-The 
-
-energy of 
+The energy of an event is mainly determined by the number of the triggered PMTs ($NHits$). 
 
 Multi-site or multi-vertex reconstruction algorithm is being developed.
 
 In this chapter, we do not consider the case of multi-vertex.
 
 
-The huge amount of data provided by particle detectors make the field of experimental particle physics an ideal place for implementing machine learning. The machine learning algorithms, such as artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. This algorithm trains the neural network from calibration data to find the position of an event\cite{markNeuralNetwork,markNeuralTalk}.
+
+
+Muon tracking
+
+
+The huge amount of data provided by particle detectors make the field of experimental particle physics an ideal place for implementing machine learning. The machine learning algorithms, such as artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. This algorithm trains the neural network from calibration data to find the position of an event.
+
+Once a neural network is trained, Traditional approach can fail to converge
+
+
+\cite{markNeuralNetwork,markNeuralTalk}.
 
 
 using calibrated hit time
-// and angle between PMTs and an estimated event orientation as inputs to find
-// a radius.
-
-
-
-
+ and angle between PMTs and an estimated event orientation as inputs to find
+a radius.
 
 
 \section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
@@ -407,8 +410,9 @@ In the ray-sphere intersection case (light ray passes through the AV sphere), th
 $(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$.
 
 Let $\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av}$, if $\Delta>0$, solve the equation and get:
-\[a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if~\Delta>0.\]
-
+\begin{equation}\label{eq:ray-sphere}
+a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if~\Delta>0.
+\end{equation}
 In this case, both $a_+$ and $a_-$ exist and have different values. If $a_+>a_->0$, the length of the path inside the sphere is $a_+-a_-$, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_{AV}$ is automatically met. If $a_+>0>a_-$, $a_-$ determines the intersection point along the opposite direction of the light ray. Thus the light ray actually does not pass that point (different to the line intersection with no direction). Thus the length of the path inside the sphere is $a_+$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0|<r_{AV}$ is automatically met. 
 
 If $\Delta\leq0$,
@@ -435,14 +439,10 @@ Similar to the case of ray-sphere intersection, if $a_3<0$, the ray-plane inters
 
 For the ray-cylinder intersection, the x and y components of the intersection points on the $\vec l_0$ satisfy the intersection equation: $l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $r_{neck}$ is the radius of the neck cylinder ($r_{neck}=785~mm$).
 
-To solve the equation,  let:
-
-$\Delta'\equiv [x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2]$,
-
-and we get: 
-\[
+To solve the equation,  let: $\Delta'\equiv [x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2]$, and then we get: 
+\begin{equation}\label{eq:ray-cylinder}
 a'_{\pm} = |\vec{X}_{PMT}-\vec{X}_0|\cdot\frac{-[x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)] \pm \sqrt\Delta }{(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2},~if~\Delta>0,
-\]
+\end{equation}
 
 Similar to the ray-sphere case, if $a'_{+}>a'_->0$, the length of the path inside the cylinder is $a'_+-a'_-$. Due to this geometry, the event position should be outside the cylinder, the condition $(x^2_0+y^2_0\geq r_{neck}$ is automatically met. If $a'_+>0>a'_-$, the event position should be inside the cylinder and the ray-vector intersects the cylinder with one point (while the other point is along the opposite direction). Thus the length of the path inside the cylinder is $a'_+$. If $\Delta'\leq0$, the light ray never passes through the neck cylinder. Also note that here we consider the cylinder is infinitely long. This will also be cut off by the combined calculations of the other geometries. In addition, since only the neck region inside the PSUP is valid for the fitter, we should also ensure $z<8390~mm$ (in PSUP coordination).
 
