@@ -532,6 +532,11 @@ M.~Askins, M.~Bergevin, A.~Bernstein, S.~Dazeley, S.~Dye, T.~Handler,
   physics and nuclear nonproliferation goals of watchman: A water cherenkov
   monitor for antineutrinos,'' {\em arXiv preprint arXiv:1502.01132}, 2015.
 
+\bibitem{boulay2004direct}
+M.~G. Boulay, {\em Direct Evidence for Weak Flavour Mixing with the Sudbury
+  Neutrino Observatory}.
+\newblock PhD thesis, Queen’s University, 2004.
+
 \bibitem{mekarski2018electron}
 P.~Mekarski, {\em Electron Antineutrinos in the Water Phase of the SNO+
   Experiment}.
@@ -734,10 +739,5 @@ G.~Horton-Smith {\em et~al.}, ``Introduction to glg4sim,'' 2006.
 M.~Dunford, {\em Measurement of the $^8${B} solar neutrino energy spectrum at
   the Sudbury Neutrino Observatory}.
 \newblock PhD thesis, University of Pennsylvania, 2006.
-
-\bibitem{{boulay2004direct}
-M.~G. Boulay, {\em Direct Evidence for Weak Flavour Mixing with the Sudbury
-  Neutrino Observatory.}
-\newblock PhD thesis, Queen’s University, 2004.
 
 \end{thebibliography}
