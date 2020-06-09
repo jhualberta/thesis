@@ -208,8 +208,8 @@ The laserball
 
 The acrylic of the AV is UV-transparent
 
-\section{Trigger and Readout of the SNO+ Detector}
-In this section, the SNO+ electronics system is overviewed. The system includes trigger and readout systems. As mentioned in \ref{overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charge information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
+\section{Electronics}
+In this section, the SNO+ electronics system is　introduced. The system includes trigger and readout systems. As mentioned in \ref{overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charge information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
 
 The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin caesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by the a custom-made operating circuit (PMT base) at the anode\cite{hamamatsu2018photomultiplier}.
 
@@ -232,37 +232,13 @@ First, the discriminator checks the input pulses from a PMT channel with the pre
 
 The trigger pulses from all the channels in one crate with 16 FECs are sent to a Crate Trigger Card (CTC) and are summed up. For 19 crates, 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to SNO+'s upgrading from the SNO), which are installed in an individual rack. It takes about 110 ns for the signals to travel to the MTC/A+. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above the trigger threshold. Then the summed trigger pulse is sent to the digital master trigger system (MTC/D) which checks 7 MTC/A+ triggers. As mentioned in the last paragraph, the summed triggers of N100 and N20 indicate the number of hit PMTs within the pulse time widths. In the MTC/A+ discriminators, there are three different threshold values of the number of the hit PMTs for the summed trigger pulses: Lo(w), Med(ium) and Hi(gh). During the water phase, N100Lo, N100Med, N100Hi are set based on the N100 pulses, where each has a different threshold value set. from lower value to higher value (for example, a setting of N100Lo=11, N100Med=16, N100Hi=21 was used in the water phase simulations). A lower threshold can increase the data-taking rates by including more signals as well as background noise. A high event rate can also make the detector unstable. On the other hand, a higher threshold removes more noises with a sacrifice of signals. The MTC/D checks the trigger type with the pre-defined trigger mask (a set of multiple trigger types with different trigger thresholds can be set), if it is satisfied, a Global Trigger (GT) is issued\cite{snop_nim,stringer2019sensitivity,rattime}. 
 
-Once the GT is issued, an event is triggered and the MTCD sends the GT to the FEC which ramps the TAC within the next 20 ns (determined by a 50 MHz clock mentioned later). This takes another 110 ns. Thus there is a total delay of 220 ns after the FEC ramping the TAC. When the TAC ramps, a time gate of 400 ns is set for waiting the GT. If there is a GT in this 400 ns window, the TAC is stopped and resultant voltage is digitized and recorded as the PMT hit time. If there is no GT, the TAC resets and the PMT hit is not recorded. Meanwhile, for the square trigger pulses from each PMT channels, if they are within the 400 ns gate and before the GT arrives, they will be recorded as the hits of an event. The charge information of the event is also recorded\cite{stringer2019sensitivity,rattime}.
+Once the GT is issued, an event is triggered and the MTCD sends the GT to the FEC which ramps the TAC within the next 20 ns (determined by a 50 MHz clock mentioned later). This takes another 110 ns. Thus there is a total delay of 220 ns after the FEC ramping the TAC. When the TAC ramps, a time gate of 400 ns is set for waiting the GT. If there is a GT in this 400 ns window, the TAC is stopped and resultant voltage is digitized and recorded as the PMT hit time. If there is no GT, the TAC resets and the PMT hit is not recorded. Meanwhile, for the square trigger pulses from each PMT channels, if they are within the 400 ns gate and before the GT arrives, they will be recorded as the hits of an event. The recorded number of the hit PMTs for a given event is referred to as NHits. The charge information of the event is also recorded\cite{stringer2019sensitivity,rattime}.
 
 A 10 MHz and a 50 MHz clocks are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined $T_{zero}, $the midnight of January 1, 2010 (GMT) to the moment when the event happens．A 10 MHz clock used for counting the absolute time started at $T_{zero}$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays\cite{rattime,stringer2019sensitivity}. 
 
-The recorded hit information of the triggered event, including the values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of hit PMTs of the event) and the status flags are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher event rates compared to SNO. They read out the recorded data and wrap them as ethernet packets and send to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system aggregates these fragments into event records based on their GT identification number (GTID) andwrites complete events to disk.aggregates these fragments into event records based on their global trigger identification number andwrites complete events to disk\cite{snop_nim}.
+The recorded hit information of the triggered event, including the values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of hit PMTs of the event) and the trigger settings are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher event rates compared to SNO. They read out the recorded data and wrap them as ethernet packets and send to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system writes these information into event records based on their GT identification number (GTID) and saves them on storage disk\cite{snop_nim}. These raw data are written in the ZEBRA data bank (ZDAB) format and then are further processed into ROOT format by high-performance computing clusters.
 
-
-The system can measure signals with a nanosecond-level timing resolution and single-photon level charge resolution and handle a rate of several kHz for normal operations. 
-
-
-The number of the hit PMTs for a given event is referred to as NHits.
-
-
-CAEN v1720 digitizer 
-
-TUBii trigger utility board 
-pulsers and delays
-
-the timing and charge from the fired PMT is digitized and stored.
-
-Not all of the information from PMTs are recorded. 
-dark noise rate is estimated to be 1 kHz.
-
-
-During the experiment running, the maintenance of the electronics is always ongoing.
-
-nearline provides a real-time analysis of the data quality, 
-
-
-
-\cite{andyElectronics}
+As a summary, the SNO+ electronic system can measure signals with a nanosecond-level timing resolution and a single-photon level charge resolution. It can handle an event rate of several kHz and even much higher rates for cases such as the burst events from a galactic supernova\cite{snop_nim}.
 
 \section{Calibration}
 Two kinds of calibration sources are used by SNO+: optical sources and radioactive sources. 

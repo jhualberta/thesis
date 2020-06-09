@@ -31,9 +31,9 @@
 \contentsline {subsubsection}{Unloaded Liquid Scintillator}{29}{section*.9}
 \contentsline {subsubsection}{Tellurium-loaded liquid scintillator (TeLS)}{30}{section*.10}
 \contentsline {section}{\numberline {3.4}Optics}{30}{section.3.4}
-\contentsline {section}{\numberline {3.5}Trigger and Readout of the SNO+ Detector}{31}{section.3.5}
+\contentsline {section}{\numberline {3.5}Electronics}{31}{section.3.5}
 \contentsline {section}{\numberline {3.6}Calibration}{35}{section.3.6}
-\contentsline {section}{\numberline {3.7}Monte Carlo Simulation and the RAT Software}{37}{section.3.7}
+\contentsline {section}{\numberline {3.7}Monte Carlo Simulation and the RAT Software}{36}{section.3.7}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{39}{chapter.4}
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{39}{section.4.1}
 \contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{40}{section.4.2}
