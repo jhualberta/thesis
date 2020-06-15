@@ -40,54 +40,54 @@ Warning--empty year in chicagoTiming
 Warning--empty year in modeCut
 Warning--empty year in energyRSP
 Warning--empty year in partialEnergy
+Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in highlevel
 Warning--empty year in markchen_bkg
 Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
-Warning--empty year in partialEnergyYang
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 154 entries,
+You've used 157 entries,
             1876 wiz_defined-function locations,
-            1223 strings with 27632 characters,
-and the built_in function-call counts, 33393 in all, are:
-= -- 2985
-> -- 1803
+            1237 strings with 28013 characters,
+and the built_in function-call counts, 34097 in all, are:
+= -- 3058
+> -- 1826
 < -- 0
-+ -- 681
-- -- 527
-* -- 2336
-:= -- 5116
-add.period$ -- 198
-call.type$ -- 154
-change.case$ -- 112
++ -- 690
+- -- 533
+* -- 2382
+:= -- 5215
+add.period$ -- 202
+call.type$ -- 157
+change.case$ -- 114
 chr.to.int$ -- 0
-cite$ -- 200
-duplicate$ -- 1819
-empty$ -- 3043
-format.name$ -- 527
-if$ -- 7924
+cite$ -- 203
+duplicate$ -- 1858
+empty$ -- 3113
+format.name$ -- 533
+if$ -- 8101
 int.to.chr$ -- 0
-int.to.str$ -- 154
-missing$ -- 144
-newline$ -- 510
-num.names$ -- 146
-pop$ -- 531
+int.to.str$ -- 157
+missing$ -- 148
+newline$ -- 520
+num.names$ -- 149
+pop$ -- 540
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 990
+skip$ -- 1013
 stack$ -- 0
-substring$ -- 980
-swap$ -- 646
+substring$ -- 1016
+swap$ -- 661
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 46
-while$ -- 244
-width$ -- 157
-write$ -- 1419
+while$ -- 251
+width$ -- 160
+write$ -- 1450
 (There were 46 warnings)

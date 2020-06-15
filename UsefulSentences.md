@@ -1,3 +1,9 @@
+a genuine indication of the incompleteness of the SM.
+
+
+
+
+
 Whether $m_3>m_2$ (normal hierarchy) or $m_3<m_1$ (inverted hierarchy), that is still an unsolved problem. 
 
 water phase
@@ -35,20 +41,6 @@ this allows to install a large target mass
 There are 35 isotopes can go through double $\beta$ decay process. However, only 11 of these isotopes are good experimental candidates since they can release a Q-value larger than 2 MeV for detection. For these 11 isotopes, most of them have been observed with normal double $\beta$ decay signals.
 
 Currently, the search for the $0\nu\beta\beta$ is the only way to check the Majorana character of neutrinos as well as the existence of lepton number violation.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

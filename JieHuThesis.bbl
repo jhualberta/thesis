@@ -215,6 +215,11 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
   preprint arXiv:1804.03575}, 2018.
 
+\bibitem{valle2015neutrinos}
+J.~W.~F. Valle and J.~Romao, {\em Neutrinos in high energy and astroparticle
+  physics}.
+\newblock John Wiley \& Sons, 2015.
+
 \bibitem{akhmedov2014majorana}
 E.~Akhmedov, ``Majorana neutrinos and other majorana particles: Theory and
   experiment,'' {\em arXiv preprint arXiv:1412.3320}, 2014.
@@ -223,14 +228,18 @@ E.~Akhmedov, ``Majorana neutrinos and other majorana particles: Theory and
 A.~Zee, {\em Quantum field theory in a nutshell, 2nd edn.}, vol.~7.
 \newblock Princeton university press, 2011.
 
+\bibitem{majorana2006symmetric}
+E.~Majorana and L.~Maiani, ``A symmetric theory of electrons and positrons,''
+  in {\em Ettore Majorana Scientific Papers}, pp.~201--233, Springer, 2006.
+
 \bibitem{kane2017modern}
 G.~Kane, {\em Modern elementary particle physics: explaining and extending the
   standard model}.
 \newblock Cambridge University Press, 2017.
 
-\bibitem{majorana2006symmetric}
-E.~Majorana and L.~Maiani, ``A symmetric theory of electrons and positrons,''
-  in {\em Ettore Majorana Scientific Papers}, pp.~201--233, Springer, 2006.
+\bibitem{zuber1998physics}
+K.~Zuber, ``On the physics of massive neutrinos,'' {\em Physics Reports},
+  vol.~305, no.~6, pp.~295--364, 1998.
 
 \bibitem{povh2008particles}
 B.~Povh, K.~Rith, and F.~Zetsche, {\em Particles and nuclei}, vol.~1.
@@ -243,6 +252,16 @@ B.~R. Martin and G.~Shaw, {\em Nuclear and particle physics: an introduction}.
 \bibitem{zuber2011neutrino}
 K.~Zuber, {\em Neutrino physics}.
 \newblock CRC press, 2011.
+
+\bibitem{takasugi1984can}
+E.~Takasugi, ``Can the neutrinoless double beta decay take place in the case of
+  dirac neutrinos?,'' {\em Physics Letters B}, vol.~149, no.~4-5, pp.~372--376,
+  1984.
+
+\bibitem{duerr2011quantitative}
+M.~Duerr, M.~Lindner, and A.~Merle, ``On the quantitative impact of the
+  schechter-valle theorem,'' {\em Journal of High Energy Physics}, vol.~2011,
+  no.~6, p.~91, 2011.
 
 \bibitem{dolinski2019neutrinoless}
 M.~J. Dolinski, A.~W. Poon, and W.~Rodejohann, ``Neutrinoless double-beta
@@ -400,6 +419,12 @@ S.~W. Wunderly and J.~M. Kauffman, ``New quench-resistant fluors for liquid
   Applications and Instrumentation. Part A. Applied Radiation and Isotopes},
   vol.~41, no.~9, pp.~809--815, 1990.
 
+\bibitem{xing2015preliminary}
+Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
+  D.~Xue-Feng, Z.~Xuan, J.~Quan-Lin, Z.~Li, {\em et~al.}, ``Preliminary study
+  of light yield dependence on lab liquid scintillator composition,'' {\em
+  Chinese Physics C}, vol.~39, no.~9, p.~096003, 2015.
+
 \bibitem{tanner0p5}
 T.~Kaptanoglu, ``Measurements of light yield and timing of 0.5 g/l lab+ppo,''
   {\em SNO+ Internal Document, docDB-5997-v1.}
@@ -441,10 +466,6 @@ G.~O. Gann, ``Dealing with time in rat,'' {\em SNO+ Internal Document,
 \bibitem{walker2016study}
 J.~M. Walker, {\em Study of Invisible Mode Nucleon Decay in the SNO+ Detector}.
 \newblock PhD thesis, University of Liverpool, 2016.
-
-\bibitem{andyElectronics}
-A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know
-  about electronics and much more you didn’t want to know.''
 
 \bibitem{rat}
 {\em RAT Overview}, 2020 (accessed Mar 15, 2020).
@@ -568,6 +589,10 @@ M.~Mottram, ``Note on {RSP} fitter,'' {\em SNO+ Internal Document,
 M.~Mottram, ``Energy reconstruction in partial scintillator fill,'' {\em SNO+
   Internal Document, docDB-3133-v1.}
 
+\bibitem{partialEnergyYang}
+Y.~Zhang, ``Performance of qenergy based on q,'' {\em SNO+ Internal Document,
+  docDB-6065-v1.}
+
 \bibitem{davies1997machine}
 E.~Davies, ``Machine vision: Theory, algorithms, practicalities. academic
   press., 2-nd edition,'' 1997.
@@ -679,19 +704,9 @@ I.~Esteban, M.~Gonzalez-Garcia, A.~Hernandez-Cabezudo, M.~Maltoni, and
   and the mass ordering,'' {\em Journal of High Energy Physics}, vol.~2019,
   no.~1, p.~106, 2019.
 
-\bibitem{zuber1998physics}
-K.~Zuber, ``On the physics of massive neutrinos,'' {\em Physics Reports},
-  vol.~305, no.~6, pp.~295--364, 1998.
-
 \bibitem{weinheimer2006neutrino}
 C.~Weinheimer, ``Neutrino mass from triton decay,'' {\em Progress in Particle
   and Nuclear Physics}, vol.~57, no.~1, pp.~22--37, 2006.
-
-\bibitem{xing2015preliminary}
-Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
-  D.~Xue-Feng, Z.~Xuan, J.~Quan-Lin, Z.~Li, {\em et~al.}, ``Preliminary study
-  of light yield dependence on lab liquid scintillator composition,'' {\em
-  Chinese Physics C}, vol.~39, no.~9, p.~096003, 2015.
 
 \bibitem{bialek2016rope}
 A.~Bialek, M.~Chen, B.~Cleveland, P.~Gorel, A.~Hallin, P.~Harvey, J.~Heise,
@@ -701,15 +716,15 @@ A.~Bialek, M.~Chen, B.~Cleveland, P.~Gorel, A.~Hallin, P.~Harvey, J.~Heise,
   Spectrometers, Detectors and Associated Equipment}, vol.~827, pp.~152--160,
   2016.
 
+\bibitem{andyElectronics}
+A.~M. Richie~Bonventre, ``Everything a detector operator ever wanted to know
+  about electronics and much more you didn’t want to know.''
+
 \bibitem{tanner2018PMT}
 T.~Kaptanoglu, ``Characterization of the hamamatsu 8” r5912-mod
   photomultiplier tube,'' {\em Nuclear Instruments and Methods in Physics
   Research Section A: Accelerators, Spectrometers, Detectors and Associated
   Equipment}, vol.~889, pp.~69--77, 2018.
-
-\bibitem{partialEnergyYang}
-Y.~Zhang, ``Performance of qenergy based on q,'' {\em SNO+ Internal Document,
-  docDB-6065-v1.}
 
 \bibitem{neuronetwork}
 M.~Anderson, ``Neural network fitter updates,'' {\em SNO+ Internal Document,

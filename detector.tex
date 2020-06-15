@@ -2,7 +2,7 @@
 
 %%\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 
-\section{Overview}\label{overview}
+\section{Overview}\label{sect:overview}
 The SNO+ experiment is located at SNOLAB in Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). The deep underground facility of the SNOLAB provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$l\cite{muonflux}. Cosmic muons with high energies ($\mathcal{O}(GeV)$) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
 
 The SNO+ detector is the successor of the SNO experiment. The detector makes use of the SNO infrastructure and has been upgraded to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a
@@ -35,7 +35,7 @@ During the water phase, different types of calibration runs have been taken. The
 
 \subsubsection{Scintillator Phase}
 
-The AV will be filled with 780 tonnes of liquid scintillator, which is a mixture of linear alkylbenzene (LAB) as a solvent and 2 g/L of 2,5-diphenyloxazole (PPO) as a fluor.
+The AV will be filled with 780 tonnes of liquid scintillator, which is a mixture of linear alkylbenzene (LAB) as a solvent and 2 g/L of 2,5-diphenyloxazole (PPO) as a fluor. This LAB-based organic liquid scintillator is referred to as the ``unloaded'' liquid scintillator.
 
 In this phase, the main physics goal is to measure low energy solar neutrinos: the CNO, pep and low energy $^8$B neutrinos. The pep neutrinos are mono-energetic, with $E_\nu$=1.442 MeV and their flux is well predicted by the Standard Solar Model\cite{davini2016cno}. A measurement of the pep neutrinos will give more information of the matter effects in neutrino oscillations. 
 
@@ -47,7 +47,7 @@ A six-month period of scintillator filling and six to twelve months of data-taki
 
 \subsubsection{Tellurium Loading Phase}
 
-In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilotonnes of $^{130}$Te) will be loaded into the scintillator. Higher loading concentrations would be possible for a further loading plan\cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
+In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilotonnes of $^{130}$Te) will be loaded into the scintillator, which is referred to as the ``Te-loaded'' scintillator. Higher loading concentrations would be possible for a further loading plan\cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
 
 \section{Detection Medium}
 In the SNO+ detector, charged particles are expected to interact with the detection medium and create Cherenkov lights and scintillation lights. 
@@ -108,26 +108,25 @@ For a typical scintillator detector, the time scale of detector response is $\ma
 
 Different charged particles can cause different ionization density when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed component or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, scintillatorPaper}. 
 
-an empirical formula, called follows Birk's law\cite{birks1951scintillations, birks1965theory}, describes the photon yield along unit distance by the incident particle:
+An empirical formula, called follows Birk's law\cite{birks1951scintillations, birks1965theory}, describes the photon yield along unit distance by the incident particle:
 \[
 \frac{dY}{dx}=A\frac{dE/dx}{1+k_B\cdot dE/dx},
 \]
 where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
 
-
 \subsection{Liquid Scintillator for SNO+}
+As mentioned in \ref{sect:overview}, organic scintillators can release large amount of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. Among the organic scintillators, liquid aromatic solvents have been extensively developed as detection mediums for large particle detectors, especially for the neutrino experiments, such as KAMLAND, Borexino and Daya Bay. 
 
-The SNO+ collaboration has been developing liquid scintillator 
+SNO+ has developed liquid scintillators that are compatible with the detector components, especially with the AV.   
+
+
 
 \subsubsection{Unloaded Liquid Scintillator}
-Linear Alkyl Benzene (LAB)
-is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
-Organic liquid scintillators 
+
+
+The LAB is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
+
 The advantages of LAB are:
-
-As mentioned in \ref{overview}, 
-
-
 \begin{itemize}
 	\item[$\bullet$] It has very low levels of natural radioactive contaminants such as U, Th and K.
 	\item[$\bullet$] High light yield and attenuation length.
@@ -139,10 +138,18 @@ As mentioned in \ref{overview},
 	\item[$\bullet$] Low cost.
 \end{itemize}
 
+Fig.~\ref{absLength} shows absorption lengths.
 
-An additional wavelength shifter, 2,5-diphenyloxazole (PPO) is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor and it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments [cite dayabay, borexino] as well as bench-top measurements [cite dayabayBench, novikov, tanner]. The absolute light yield of LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{absLength.png}
+	\caption{Absorption length of SNO+ optical components. ;the internal (solid blue line) and external water (dashed blue line) absorption curves are based on the measurements of the laserball scans in July 2018 during the SNO+ water phase. The horizontal lines are due to absence of the measurements and they are conservative assumptions.}
+	\label{absLength}
+\end{figure}
 
 
+
+An additional wavelength shifter, 2,5-diphenyloxazole (PPO) is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor and it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino] as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
 
 \subsubsection{Tellurium-loaded liquid scintillator (TeLS)}
 
@@ -230,13 +237,13 @@ To properly process and record information from PMTs, each DB tackling with 8 ch
 
 First, the discriminator checks the input pulses from a PMT channel with the predefined threshold voltages. If the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20)\cite{joshTrigger}. These time widths are optimized for the timing of the photon propagation in the detector and later to determine the number of hit PMTs in a specific time window. Beside these two, there are also two triggers which copies the analog pulses of high and low gain of each hit PMTs, known as ESUMHi(gh) and ESUMLo(w). These triggers mainly measure the stability of the detector, in case that there would be large signals in the PMTs while the number of the hit PMTs are small due to one or a few PMTs being exposed to high amount of light or experiencing break downs\cite{operator}. At the same time, CMOS chips produces a time-to-amplitude (TAC) voltage and the TAC starts to ramp. The SNOINT starts to integrate all pulses from the PMT channel from 10 ns before the threshold crossing time to 390 ns or 50 ns to get QHL, QHS or QLX values mentioned before\cite{boger2000sudbury,stringer2019sensitivity}. 
 
-The trigger pulses from all the channels in one crate with 16 FECs are sent to a Crate Trigger Card (CTC) and are summed up. For 19 crates, 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to SNO+'s upgrading from the SNO), which are installed in an individual rack. It takes about 110 ns for the signals to travel to the MTC/A+. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above the trigger threshold. Then the summed trigger pulse is sent to the digital master trigger system (MTC/D) which checks 7 MTC/A+ triggers. As mentioned in the last paragraph, the summed triggers of N100 and N20 indicate the number of hit PMTs within the pulse time widths. In the MTC/A+ discriminators, there are three different threshold values of the number of the hit PMTs for the summed trigger pulses: Lo(w), Med(ium) and Hi(gh). During the water phase, N100Lo, N100Med, N100Hi are set based on the N100 pulses, where each has a different threshold value set. from lower value to higher value (for example, a setting of N100Lo=11, N100Med=16, N100Hi=21 was used in the water phase simulations). A lower threshold can increase the data-taking rates by including more signals as well as background noise. A high event rate can also make the detector unstable. On the other hand, a higher threshold removes more noises with a sacrifice of signals. The MTC/D checks the trigger type with the pre-defined trigger mask (a set of multiple trigger types with different trigger thresholds can be set), if it is satisfied, a Global Trigger (GT) is issued\cite{snop_nim,stringer2019sensitivity,rattime}. 
+The trigger pulses from all the channels in one crate with 16 FECs are sent to a Crate Trigger Card (CTC) and are summed up. For 19 crates, 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to SNO+'s upgrading from the SNO), which are installed in an individual rack. It takes about 110 ns for the signals to travel to the MTC/A+. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above the trigger threshold. Then the summed trigger pulse is sent to the digital master trigger system (MTC/D) which checks 7 MTC/A+ triggers. As mentioned in the previous paragraph, the summed triggers of N100 and N20 indicate the number of hit PMTs within the pulse time widths. In the MTC/A+ discriminators, there are three different threshold values of the number of the hit PMTs for the summed trigger pulses: Lo(w), Med(ium) and Hi(gh). During the water phase, N100Lo, N100Med, N100Hi are set based on the N100 pulses, where each has a different threshold value set. from lower value to higher value (for example, a setting of N100Lo=11, N100Med=16, N100Hi=21 was used in the water phase simulations). A lower threshold can increase the data-taking rates by including more signals as well as background noise. A high event rate can also make the detector unstable. On the other hand, a higher threshold removes more noises with a sacrifice of signals. The MTC/D checks the trigger type with the pre-defined trigger mask (a set of multiple trigger types with different trigger thresholds can be set), if it is satisfied, a Global Trigger (GT) is issued\cite{snop_nim,stringer2019sensitivity,rattime}. 
 
 Once the GT is issued, an event is triggered and the MTCD sends the GT to the FEC which ramps the TAC within the next 20 ns (determined by a 50 MHz clock mentioned later). This takes another 110 ns. Thus there is a total delay of 220 ns after the FEC ramping the TAC. When the TAC ramps, a time gate of 400 ns is set for waiting the GT. If there is a GT in this 400 ns window, the TAC is stopped and resultant voltage is digitized and recorded as the PMT hit time. If there is no GT, the TAC resets and the PMT hit is not recorded. Meanwhile, for the square trigger pulses from each PMT channels, if they are within the 400 ns gate and before the GT arrives, they will be recorded as the hits of an event. The recorded number of the hit PMTs for a given event is referred to as NHits. The charge information of the event is also recorded\cite{stringer2019sensitivity,rattime}.
 
 A 10 MHz and a 50 MHz clocks are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined $T_{zero}, $the midnight of January 1, 2010 (GMT) to the moment when the event happens．A 10 MHz clock used for counting the absolute time started at $T_{zero}$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays\cite{rattime,stringer2019sensitivity}. 
 
-The recorded hit information of the triggered event, including the values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of hit PMTs of the event) and the trigger settings are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher event rates compared to SNO. They read out the recorded data and wrap them as ethernet packets and send to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system writes these information into event records based on their GT identification number (GTID) and saves them on storage disk\cite{snop_nim}. These raw data are written in the ZEBRA data bank (ZDAB) format and then are further processed into ROOT format by high-performance computing clusters.
+The recorded hit information of the triggered event, including the values of the TAC, QHS, QHL, QLX (i.e., the time and charge information of hit PMTs of the event) and the trigger settings are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher data transfer rates compared to SNO, with a max rate of 14 MB/s, which is equivalent to approximately 2 million hits per second\cite{bonventre2014neutron}. They read out the recorded data and wrap them as ethernet packets and send to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system writes these information into event records based on their GT identification number (GTID) and saves them on storage disk\cite{snop_nim}. These raw data are written in the ZEBRA data bank (ZDAB) format and then are further processed into ROOT format by high-performance computing clusters.
 
 As a summary, the SNO+ electronic system can measure signals with a nanosecond-level timing resolution and a single-photon level charge resolution. It can handle an event rate of several kHz and even much higher rates for cases such as the burst events from a galactic supernova\cite{snop_nim}.
 
