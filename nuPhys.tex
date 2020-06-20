@@ -454,7 +454,7 @@ n_L=\begin{pmatrix}
 \chi_{2L}\\
 \end{pmatrix},
 \end{equation}
-where $\tan2\theta =\frac{2m_D}{m_R-m_L}$.
+
 
 Use a real orthogonal matrix $\mathcal{O}$ to diagonalize the $\mathcal M$
 
@@ -467,12 +467,14 @@ From the mass matrix, the eigenstates are solved:
 \begin{equation}
 m_{1,2}\equiv m_{\mp} = \frac{1}{2}[~(m_L^M+m_R^M)\mp\sqrt{(m_L^M-m_R^M)^2+4(m^D)^2}~]\label{eq:majorana_massEigen},
 \end{equation}
-from (\ref{eq:majorana_massEigen}), there are 4 cases for discussion:\\
-(1) If $m_L^M=m_R^M=0$, $m_{1,2}=m^D$, neutrinos are pure Dirac particles.\\
-(2) If $m^D\gg m^M_{L,R}$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino which is called a Pseudo-(or quasi-)Dirac Neutrino.
+and with $\tan2\theta =\frac{2m_D}{m_R-m_L}$.
+
+From (\ref{eq:majorana_massEigen}), there are 4 cases for discussion:\\
+(1) If $m_L^M=m_R^M=0$ (Dirac limit), $m_{1,2}=m^D$, neutrinos are pure Dirac particles.\\
+(2) If $m^D\gg m^M_{L,R}$, then $\tan2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino which is called a Pseudo-(or quasi-)Dirac Neutrino.
 \\
 (3) If $m^D=0$, $m_1=m^M_L, m_2=m^M_R$, neutrinos are pure Majorana particles.\\
-(4) If $m_R^M\gg m^D, m_L^M$, then $\tan2\theta=\frac{2m^D}{m^M_R-m^M_L}$ and $\theta\simeq(\frac{m^D}{m_R^M})\ll 1$, we get:
+(4) If $m_R^M\gg m^D, m_L^M$, then $\theta\simeq(\frac{m^D}{m_R^M})\ll 1$ and $\tan2\theta=\frac{2m^D}{m^M_R-m^M_L}\to 0$, we get:
 \begin{equation}
 \begin{aligned}
 m_1=m_-&=\frac{1}{2}\frac{(m^M_L+m^M_R)^2-(m^M_L-m^M_R)^2-4(m^D)^2}{m^M_L+m^M_R+|m^M_L-m^M_R|\sqrt{1+(\frac{2m^D}{m^M_L-m^M_R})^2}}\simeq 

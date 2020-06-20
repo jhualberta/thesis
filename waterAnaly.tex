@@ -87,15 +87,7 @@ tagged by a small PMT inside
 
 A polyethelene bumper cone is at the bottom of the source.
 
- 
-
-
-
-gas capillary tube
-
-
- 
-
+gas capillary tube 
 \cite{dragowsky1999sudbury}.
  
 
@@ -107,10 +99,7 @@ gas capillary tube
 \end{figure}
 
 
-
-The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter.
-
-
+The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the RAT water fitter and the MPW. The vertex shifts as well as the uncertainties are evaluated. 
 
 The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
@@ -172,14 +161,14 @@ Table~\ref{table_posresol} summarizes the values of position resolution paramete
 	\centering
 	\caption{Position resolution parameters for the MP Water Fitter.}
 	\label{table_posresol}
-	\begin{tabular}{|p{2.5cm}|p{2.2cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}| p{2.1cm}|}
-		\hline
+	\begin{tabular}{ccccc}
+		\toprule
 		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) &  $\tau_P$ (mm)& $\mu_P$ (mm)\\
 		\hline 
 		data& 0.58$\pm$0.04 & 175.8$\pm$3.8 & 288.0$\pm$5.7 & -28.8$\pm$1.0\\	
 		\hline 
 		MC & 0.51$\pm$0.05 & 195.2$\pm$3.3 & 298.4$\pm$6.1 & -10.9$\pm$1.0\\
-		\hline
+		\bottomrule
 	\end{tabular}
 \end{table}
 \vspace{1mm}
@@ -220,6 +209,8 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 Direction resolutions, with a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$:
 
 
+
+
 Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ cuts.
 \begin{figure}
 	\centering
@@ -228,10 +219,13 @@ Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\
 	\label{angularResolMPW}
 \end{figure}
 
+To describe the $\cos\theta_e$ distribution, if integrating from a $\cos\theta_e$ value to $+1$ contains 50\% of the reconstructed events, then this $\cos\theta_e$ is defined as $\cos\theta_{0.5}$. Similarly, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ are defined for 80\% and 90\% cases respectively. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
+
+
 The fitted results are shown in Table.~\ref{angularResolValues}.
 \begin{table}[ht]
-\begin{tabular}{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
-	\hline
+\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+	\toprule
 	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
 	\hline
 	Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
@@ -239,10 +233,14 @@ The fitted results are shown in Table.~\ref{angularResolValues}.
 	\hline
 	MPW data & 3.79$\pm$0.12 & 18.58$\pm$0.95 & 0.53$\pm$0.02 & 154.6/143 & 0.982 & 0.743 & 0.379\\
 	MPW MC &4.01$\pm$0.19 & 18.41$\pm$1.06 & 0.48$\pm$0.03 & 128.4/127 & 1 & 0.779 & 0.433  \\
-	\hline
+	\bottomrule
 \end{tabular}
 \label{angularResolValues}
 \end{table}
+
+
+
+
 
 \section{Extracting \texorpdfstring{$\gamma$}{Lg}-rays from Neutron Capture}
 
@@ -324,7 +322,7 @@ MPW fit results
 	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
 	\label{opendata}
 	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
-		\hline
+		\toprule
 	 Fitter &	Run &  GTID &  $z$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$ & SNO+ Day\\
 		\hline 
 	Rat & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954459 &2683.92 \\	
@@ -337,7 +335,7 @@ MPW fit results
 	MPW & --& -- &-4.45 &	5.07 &	0.60 &	0.979943 & -- \\
 	Rat &100915 &169700 &-1.00 &5.10 &0.61 &0.341287 &2701.23\\
 	MPW &	--& --& -1.08 &	5.08 &	0.61 &	0.336706 & -- \\	
-		\hline
+		\bottomrule
 	\end{tabular*}
 \end{table}
 
