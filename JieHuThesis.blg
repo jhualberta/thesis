@@ -13,7 +13,8 @@ Warning--empty year in oxfordMeasurement
 Warning--empty journal in piperno2015dark
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
-Warning--can't use both volume and number fields in davini2016cno
+Warning--empty journal in davini2016cno
+Warning--empty journal in Paton:2019kgy
 Warning--empty year in scintillatorPaper
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
@@ -49,45 +50,45 @@ Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 157 entries,
+You've used 158 entries,
             1876 wiz_defined-function locations,
-            1237 strings with 28013 characters,
-and the built_in function-call counts, 34097 in all, are:
-= -- 3058
-> -- 1826
+            1243 strings with 28115 characters,
+and the built_in function-call counts, 34119 in all, are:
+= -- 3061
+> -- 1837
 < -- 0
-+ -- 690
-- -- 533
-* -- 2382
-:= -- 5215
-add.period$ -- 202
-call.type$ -- 157
++ -- 694
+- -- 536
+* -- 2381
+:= -- 5231
+add.period$ -- 204
+call.type$ -- 158
 change.case$ -- 114
 chr.to.int$ -- 0
-cite$ -- 203
-duplicate$ -- 1858
-empty$ -- 3113
-format.name$ -- 533
-if$ -- 8101
+cite$ -- 205
+duplicate$ -- 1857
+empty$ -- 3102
+format.name$ -- 536
+if$ -- 8104
 int.to.chr$ -- 0
-int.to.str$ -- 157
-missing$ -- 148
-newline$ -- 520
-num.names$ -- 149
+int.to.str$ -- 158
+missing$ -- 150
+newline$ -- 524
+num.names$ -- 150
 pop$ -- 540
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1013
+skip$ -- 1009
 stack$ -- 0
-substring$ -- 1016
-swap$ -- 661
+substring$ -- 992
+swap$ -- 659
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 46
-while$ -- 251
-width$ -- 160
-write$ -- 1450
-(There were 46 warnings)
+warning$ -- 47
+while$ -- 250
+width$ -- 161
+write$ -- 1458
+(There were 47 warnings)

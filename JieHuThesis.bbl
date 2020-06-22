@@ -229,8 +229,8 @@ A.~Zee, {\em Quantum field theory in a nutshell, 2nd edn.}, vol.~7.
 \newblock Princeton university press, 2011.
 
 \bibitem{majorana2006symmetric}
-E.~Majorana and L.~Maiani, ``A symmetric theory of electrons and positrons,''
-  in {\em Ettore Majorana Scientific Papers}, pp.~201--233, Springer, 2006.
+E.~Majorana and L.~Maiani, {\em A symmetric theory of electrons and positrons}.
+\newblock Springer, 2006.
 
 \bibitem{kane2017modern}
 G.~Kane, {\em Modern elementary particle physics: explaining and extending the
@@ -350,8 +350,8 @@ M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
 \bibitem{davini2016cno}
 S.~Davini, M.~Agostini, S.~Appel, G.~Bellini, J.~Benziger, D.~Bick, G.~Bonfini,
   D.~Bravo, B.~Caccianiga, F.~Calaprice, {\em et~al.}, ``{CNO} and pep solar
-  neutrino measurements and perspectives in borexino,'' in {\em Journal of
-  Physics: Conference Series}, vol.~675, p.~012040, IOP Publishing, 2016.
+  neutrino measurements and perspectives in borexino,'' vol.~675, no.~1,
+  p.~012040, 2016.
 
 \bibitem{cerdeno2018cno}
 D.~G. Cerdeno, J.~H. Davis, M.~Fairbairn, and A.~C. Vincent, ``Cno neutrino
@@ -359,9 +359,7 @@ D.~G. Cerdeno, J.~H. Davis, M.~Fairbairn, and A.~C. Vincent, ``Cno neutrino
   of Cosmology and Astroparticle Physics}, vol.~2018, no.~04, p.~037, 2018.
 
 \bibitem{Paton:2019kgy}
-J.~Paton, ``{Neutrinoless Double Beta Decay in the SNO+ Experiment},'' in {\em
-  {Prospects in Neutrino Physics (NuPhys2018) London, United Kingdom, December
-  19-21, 2018}}, 2019.
+J.~Paton, ``{Neutrinoless Double Beta Decay in the SNO+ Experiment},'' 2019.
 
 \bibitem{jackson2007classical}
 J.~D. Jackson, {\em Classical Electrodynamics}.
@@ -684,6 +682,10 @@ P.~B. Denton, S.~J. Parke, and X.~Zhang, ``Eigenvalues: The rosetta stone for
 \bibitem{perkins2009particle}
 D.~H. Perkins, {\em Particle astrophysics}.
 \newblock No.~10, Oxford University Press, 2009.
+
+\bibitem{goldhaber1958helicity}
+M.~Goldhaber, L.~Grodzins, and A.~Sunyar, ``Helicity of neutrinos,'' {\em
+  Physical Review}, vol.~109, no.~3, p.~1015, 1958.
 
 \bibitem{agostini2017background}
 M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,

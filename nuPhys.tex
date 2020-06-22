@@ -303,9 +303,8 @@ the energy resolution (3\% at 1 MeV)
 \cite{giaz2018status}
 
 
-\section{Neutrino Mass and Majorana Neutrino}\label{sectMajorana}
-The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) direct measurements for the $\beta$-decay spectrum; (2) a search for the $0\nu\beta\beta$ process and (3) cosmological measurements \cite{valle2015neutrinos}.  In the last case, the $Planck$
-experiment
+\section{Majorana Neutrino and Neutrino Mass}\label{sectMajorana}
+The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) direct measurements for the $\beta$-decay spectrum; (2) a search for the $0\nu\beta\beta$ process and (3) cosmological measurements \cite{valle2015neutrinos}.  In the last case, the $Planck$ experiment
 based on the measurements of Cosmic Microwave Background (CMB), 
 
 $\sum m_\nu<0.34~eV$ (at $95\%$ C.L.). The following sections focus on the $\beta$-decay and $0\nu\beta\beta$ approaches.
@@ -335,13 +334,13 @@ I & 0
 \end{equation}
 where $\sigma^i~(i=1,2,3)$ are $2\times 2$ Pauli matrices and $I$ is  $2\times 2$ identity matrix.
 
-Define the adjoint field $\bar{\psi}\equiv \psi^{\dag}\gamma^0$, the Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$. The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. Then the Dirac Lagrangian density can be written as\cite{zee2010quantum}:
+Define the adjoint field $\bar{\psi}\equiv \psi^{\dag}\gamma^0$, the Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$. The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. The Dirac Lagrangian density which satisfies the Lorentz invariance and is hermitian can be written as\cite{zee2010quantum}:
 \begin{equation} 
 \mathcal{L}^D = (\bar{\psi}_L i\gamma^\mu\partial_\mu\psi_L+\bar{\psi}_R i\gamma^\mu\partial_\mu\psi_R)-m(\bar{\psi}_R\psi_L+\bar{\psi}_L\psi_R),
 \end{equation} 
-where the first two terms on the right hand side are kinetic energy terms, where the chiral components are separate; and the last is the Dirac mass term $\mathcal{L}^{D}_{mass}$, where the chiral components are coupled.
+where the first two terms on the right hand side are kinetic energy terms, where the chiral components are separate; and the last is the Dirac mass term $\mathcal{L}^{D}_{mass}$, where the chiral components are coupled. For the massive Dirac fields, the left-handed component $\psi_L$ is completely independent of the right-handed $\psi_R$. 
 
-A particle-antiparticle conjugation operator $\hat C$ is defined as\cite{akhmedov2014majorana}:
+A particle-antiparticle conjugation operator $\hat C$ can associate the $\psi_L$ with the $\psi_R$. It is defined as\cite{akhmedov2014majorana}:
 \begin{equation}
 \hat C: \psi\to \psi^c=\mathcal{C}\bar\psi^T=\mathcal{C}\gamma^0\psi^*,
 \end{equation}
@@ -350,34 +349,19 @@ where $\mathcal C$ is the charge conjugation matrix and satisfies the following 
 \mathcal C^{-1}\gamma^\mu\mathcal C=-(\gamma^\mu)^T,~~\mathcal{C}^{-1}\gamma_5\mathcal{C}=(\gamma_5)^T,~~\mathcal{C}^\dagger = \mathcal{C}^{-1}=-\mathcal{C}^*
 \end{equation}
 
-In the Weyl representation, $\mathcal{C}=i\gamma^2\gamma^0$, then $\mathcal {C}^2=1$, $(\psi^c)^c=\psi$, $(\psi_L)^c=P_R\psi^c=(\psi^c)_R$ and $(\psi_R)^c=P_L\psi^c=(\psi^c)_L$.
-
-$\psi^c=\mathcal{C}{\bar{\psi}}^T=(i\gamma^2\gamma^0){({(\psi^*)}^T\gamma^0)}^T=i\gamma^2\psi^*=\psi$.
-
-
-therefore the particle-antiparticle operation $\hat C$ converts the antiparticle of a left-handed field to a particle of right handed and vice versa (both the charge and chirality are changed).
-
-
+In the Weyl representation, $\mathcal{C}=i\gamma^2\gamma^0$, then $\mathcal {C}^2=1$, $(\psi^c)^c=\psi$, $(\psi_L)^c=P_R\psi^c=(\psi^c)_R$ and $(\psi_R)^c=P_L\psi^c=(\psi^c)_L$. Therefore the particle-antiparticle operation $\hat C$ converts the antiparticle of a left-handed field to a particle of right handed and vice versa (both the charge and chirality are changed).
 
 In the Standard Model, neutrinos are the spin-1/2 fermions without carrying electrical charges and they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why they are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
 
-By mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Also, the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which is also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion, which is tailored for neutrinos\cite{zee2010quantum}. 
+By mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Also, the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which is also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion\cite{zee2010quantum}. 
+
+Unlike the Dirac case, for the Majorana field $\psi^M$, the $\psi^M_L$ and $\psi^M_R$ are not independent. The right-handed component can be the charge conjugate of the left-handed component (or vice versa): $\psi_R=(\psi_L)^c$\cite{akhmedov2014majorana}. Therefore Majorana field can be written as: $\psi^M=\psi_L^M+\psi_R^M=\psi^M_L+(\psi^M_L)^c=\psi^M_L+((\psi^M)^c)_R$, which immediately gives $(\psi^M)^c=\psi^M$. This result implies that the particles associated with the Majorana fields, or the Majorana fermions, are their own antiparticles and ``truly neutral''\cite{akhmedov2014majorana}. Also, the Majorana equation preserves the handedness\cite{zee2010quantum}. Since the $\psi^M_L$ and $\psi^M_R$ are not independent and can be constructed by each other, the Majorana spinor $\psi_M$ only has two degrees of freedom compared to the Dirac spinor which has four degrees of freedom, which is more economical. All these facts indicate that the Majorana fermion theory is tailored for describing neutrinos. 
 
 
 
 
 since only left-handed $\nu$ and right-handed $\bar\nu$ involve in the weak interaction in the Standard Model, 
-the Dirac mass term is not economical and natural\cite{aitchison2012gauge}.
-
-
-
-\begin{equation}
-\mathcal \psi=
-\begin{pmatrix}
-\phi\\
--i\sigma^2\phi^*\\
-\end{pmatrix},
-\end{equation}
+the Dirac mass term is not  and natural\cite{aitchison2012gauge}.
 
 \begin{equation}
 \nu_L=
@@ -388,15 +372,6 @@ the Dirac mass term is not economical and natural\cite{aitchison2012gauge}.
 \end{equation}
 
 
-
-charge conjugation
-
-
-
-get coupled equations
-
-
-In the flavor transformation experiments, the mass differences, rather than the absolute mass values are measured. 
                                                                                                                 
 In the Majorana case, the field can be taken as $\psi=\psi_L+\psi_L^c$ and thus $\psi^c=\psi$.
 

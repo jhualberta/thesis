@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Vacuum Oscillation}{6}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Matter Effect}{10}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Status of the Neutrino Flavor Transformation Experiments}{12}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Neutrino Mass and Majorana Neutrino}{13}{section.2.4}
+\contentsline {section}{\numberline {2.4}Majorana Neutrino and Neutrino Mass}{13}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Neutrino Mass Terms}{13}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Neutrino Mass in Beta Decay}{18}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}Double Beta Decay}{18}{section.2.5}
