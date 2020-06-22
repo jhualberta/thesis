@@ -129,9 +129,11 @@ The LAB is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
 The advantages of LAB are:
 \begin{itemize}
 	\item[$\bullet$] It has very low levels of natural radioactive contaminants such as U, Th and K.
+	The target background levels for the SNO+ LAB are expected to be $\mathcal O(10^{-17})$ gram of $^{238}$U in per gram LAB (g$^{238}$U/gLAB), which is equal to be thousands of events per year;
+	The $^{232}$Th and $^{40}$K levels are $\mathcal O(10^{-17})$ g/gLAB, which is equal to be hundreds of events per year\cite{markchen_bkg}.
+	
 	\item[$\bullet$] High light yield and attenuation length.
-	\item[$\bullet$] It has fast timing response 
-	different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha-\beta$ discrimination. 
+	\item[$\bullet$] It has fast timing response different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha-\beta$ discrimination. 
 	\item[$\bullet$] High flash point and low toxicity for lab safety.
 	\item[$\bullet$] appropriate density for mechanical stability
 	\item[$\bullet$] Good stability and chemically compatible with detector materials, mainly the AV.
@@ -250,19 +252,94 @@ As a summary, the SNO+ electronic system can measure signals with a nanosecond-l
 \section{Calibration}
 Two kinds of calibration sources are used by SNO+: optical sources and radioactive sources. 
 The optical sources are used to calibrate the PMT response and to measure the optical properties of the 
+detector media 
 
-The radioactive sources are used to calibrate the energy 
+
+
+Radioactive source: energy scale, resolution, systematic
+uncertainties
 
 reconstruction performances and uncertainties.
 particle identifications
 
 Calibration sources with known physics parameters: help to understand the detector response to the events and to make accurate measurements
-Two types of SNO+ calibration sources: optical sources and radioactive sources Optical sources: phototube response, optical properties of the detector media Radioactive source: energy scale, resolution, systematic
-uncertainties
-$^{16}$N calibration source is one of the radioactive sources
+
+the SNO+ Source Manipulator System (SMS) is inherited from the SNO.
+
+A Umbilical Retrieval Mechanism (URM) is used to send the source down to the inner vessel.
+
+The sources are connected to the umbilical.
+
+An umbilical encloses electrical cables, optical fibres and gas lines connected to the source.
+
+A Universal Interface (UI) connecting the URM and the detector, 
+Therefore, sealed environment, which 
+ensures radon gas not leaking into the detector when deploying the source.
+
+The source manipulator system (see Section 6.3) allows the insertion of various types of calibration
+devices inside the acrylic vessel. 
+
+\subsection{$^{16}$N calibration source}
 
 
-Americium Beryllium (AmBe) calibration source
+ is one of the radioactive sources
+
+This source is inherit from SNO experiment\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}, 
+
+A deuterium-tritium (DT) generator in SNOLAB can produce neutrons through: $D+T\to n+^{4}$He, 
+flow $CO_2$ gas stream through pipe lines
+the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$,
+
+
+The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$.
+It has a 66.2\% chance to emit an electron with an end-point energy of 4.29 MeV and 22.8\% chance to 
+10.42 MeV
+
+\cite{nndc}
+
+a simplified decay scheme is shown in Fig.~\ref{n16decay}.
+
+6.13 MeV $\gamma$ rays.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=6cm]{n16_decay.png}
+	\caption{$^{16}$N main decay scheme, modified from \cite{dragowsky200216n}.}
+	\label{n16decay}
+\end{figure}
+
+
+Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside; 
+
+
+to ensure a high fraction of the $\gamma$-rays 
+
+
+lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
+
+
+tagged by a small PMT inside
+
+A polyethelene bumper cone is at the bottom of the source.
+
+gas capillary tube 
+
+\cite{dragowsky1999sudbury}.
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{n16geom.png}
+	\caption{$^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite{maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite{n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite{n16pic}.}
+	\label{n16pic}
+\end{figure}
+
+The $^{16}$N source
+$^{3}$H$(p,\gamma)^{4}$He reaction.
+
+
+
+
+\subsection{Americium Beryllium (AmBe) Calibration Source}
 
 Optical calibration  {\emph {in-situ}} 
 \begin{itemize}  
@@ -297,26 +374,6 @@ fast pulsing LED or lasers
 measures optical properties, such as scattering, attenuation of the detector materials, the response of PMTs, 
 angular and wavelength dependent
 wavelength dependent absorption and the optical degradation
-
-
-
-
-The $^{16}$N source
-$^{3}$H$(p,\gamma)^{4}$He reaction.
-
-the SNO+ Source Manipulator System (SMS)
-is inherited from the SNO.
-
-A Umbilical Retrieval Mechanism (URM) is used to send the source down to the inner vessel.
-
-The sources are connected to the umbilical.
-
-An umbilical encloses electrical cables, optical fibres and gas lines connected to the source.
-
-A Universal Interface (UI) connecting the URM and the detector, 
-Therefore, sealed environment, which 
-ensures radon gas not leaking into the detector when deploying the source.
-
 
 In the scintillator and Te-loaded phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co will be implemented.
 

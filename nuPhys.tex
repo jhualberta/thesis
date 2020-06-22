@@ -335,7 +335,7 @@ I & 0
 where $\sigma^i~(i=1,2,3)$ are $2\times 2$ Pauli matrices and $I$ is  $2\times 2$ identity matrix.
 
 Define the adjoint field $\bar{\psi}\equiv \psi^{\dag}\gamma^0$, the Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$. The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. The Dirac Lagrangian density which satisfies the Lorentz invariance and is hermitian can be written as\cite{zee2010quantum}:
-\begin{equation} 
+\begin{equation}\label{diracLagrange}
 \mathcal{L}^D = (\bar{\psi}_L i\gamma^\mu\partial_\mu\psi_L+\bar{\psi}_R i\gamma^\mu\partial_\mu\psi_R)-m(\bar{\psi}_R\psi_L+\bar{\psi}_L\psi_R),
 \end{equation} 
 where the first two terms on the right hand side are kinetic energy terms, where the chiral components are separate; and the last is the Dirac mass term $\mathcal{L}^{D}_{mass}$, where the chiral components are coupled. For the massive Dirac fields, the left-handed component $\psi_L$ is completely independent of the right-handed $\psi_R$. 
@@ -355,49 +355,43 @@ In the Standard Model, neutrinos are the spin-1/2 fermions without carrying elec
 
 By mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Also, the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which is also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion\cite{zee2010quantum}. 
 
-Unlike the Dirac case, for the Majorana field $\psi^M$, the $\psi^M_L$ and $\psi^M_R$ are not independent. The right-handed component can be the charge conjugate of the left-handed component (or vice versa): $\psi_R=(\psi_L)^c$\cite{akhmedov2014majorana}. Therefore Majorana field can be written as: $\psi^M=\psi_L^M+\psi_R^M=\psi^M_L+(\psi^M_L)^c=\psi^M_L+((\psi^M)^c)_R$, which immediately gives $(\psi^M)^c=\psi^M$. This result implies that the particles associated with the Majorana fields, or the Majorana fermions, are their own antiparticles and ``truly neutral''\cite{akhmedov2014majorana}. Also, the Majorana equation preserves the handedness\cite{zee2010quantum}. Since the $\psi^M_L$ and $\psi^M_R$ are not independent and can be constructed by each other, the Majorana spinor $\psi_M$ only has two degrees of freedom compared to the Dirac spinor which has four degrees of freedom, which is more economical. All these facts indicate that the Majorana fermion theory is tailored for describing neutrinos. 
+Unlike the Dirac case, for the Majorana field $\psi^M$, the $\psi^M_L$ and $\psi^M_R$ are not independent. The right-handed component can be the charge conjugate of the left-handed component (or vice versa): $\psi_R=(\psi_L)^c$\cite{akhmedov2014majorana}. Therefore Majorana field can be written as: $\psi^M=\psi_L^M+\psi_R^M=\psi^M_L+(\psi^M_L)^c=\psi^M_L+((\psi^M)^c)_R$, which immediately gives $(\psi^M)^c=\psi^M$ (Majorana condition). This result implies that the particles associated with the Majorana fields, or the Majorana fermions, are their own antiparticles and ``truly neutral''\cite{akhmedov2014majorana}. Also, the Majorana equation preserves the handedness\cite{zee2010quantum}. Since the $\psi^M_L$ and $\psi^M_R$ are not independent and can be constructed by each other, the Majorana spinor $\psi_M$ only has two degrees of freedom compared to the Dirac spinor which has four degrees of freedom, which is more economical. All these facts indicate that the Majorana fermion theory is tailored for describing neutrinos. It is natural that neutrinos are of Majorana nature.
 
+In the Standard Model, the Majorana fermions are not included. Also, the $V-A$ theory as well as the experimental observations such as the measurement of neutrino helicity\cite{goldhaber1958helicity} allow only the left-handed flavor states $\nu_f~(f=e,\mu,\tau)$ (or called ``active'' neutrinos) and right-handed flavor states $\bar\nu_f$ involving in the weak interaction. 
 
+If neutrinos are Majorana fermions, the neutrino field $\nu=\nu_L+\nu_L^c$, then the Majorana mass term is:  
+\begin{equation}\label{major_mass}
+\mathcal{L}^M_{\nu~mass} = -m\bar{\nu}\nu=-\frac{1}{2}m\overline{\nu_L^c}\nu_L+h.c.,
+\end{equation}
+where $h.c.$ means hermitian conjugate and the $1/2$ factor is to avoid double counting of $\nu_L^c$ and $\overline{\nu_L}$ since $\nu_L^c=\mathcal{C}\overline{\nu_L}^T$\cite{giunti2007fundamentals}. The Majorana mass term also couples $\nu_L$, with lepton number ($L$)=1, to $(\nu_L)^c$, which is a right-handed antiparticle with $L=-1$. This indicates that the lepton number for the Majorana fermion is not conserved, which is not described in the Standard Model. The neutrinoless double beta decay process discussed in the following section will come back to this point. 
 
+The simplest extension to the Standard Model to create neutrino masses is to introduce the SU(2) singlet states, or the right-handed neutrino fields $\nu_R$. 
 
-since only left-handed $\nu$ and right-handed $\bar\nu$ involve in the weak interaction in the Standard Model, 
-the Dirac mass term is not  and natural\cite{aitchison2012gauge}.
+left-handed neutrino fields $SU(2)_L$
+doublet neutrinos, active neutrinos
+
+electroweak singlets
+which do not participate in the electroweak interactions and are thus called sterile neutrinos. 
+
+introduce right-handed neutrino fields 
 
 \begin{equation}
 \nu_L=
 \begin{pmatrix}
 \nu_L\\
 (\nu_R)^c\\
+\end{pmatrix},\\
+\nu_R=
+\begin{pmatrix}
+\nu_L\\
+(\nu_R)^c\\
 \end{pmatrix},
 \end{equation}
 
-
-                                                                                                                
-In the Majorana case, the field can be taken as $\psi=\psi_L+\psi_L^c$ and thus $\psi^c=\psi$.
-
-
-The Majorana mass term is\cite{kane2017modern}:  
-\begin{equation}\label{major_mass}
-\mathcal{L}^M_{\nu~mass} = -\frac{1}{2}m_L(\bar{\nu}_R^c\nu_R+\bar{\nu}_R\nu^c_R)+h.c.,
-\end{equation}
-
-the Dirac mass term can be written as the same form: $\mathcal{L}_D =  -\frac{1}{2}m_D(\bar{\nu}_L\nu_R+\overline{\nu^c_R}\nu^c_L)+h.c.,$
-
-left-handed neutrino fields $SU(2)_L$
-doublet neutrinos, active neutrinos
-
-
-
-electroweak singlets
-which do not participate in the electroweak interactions and are thus called sterile neutrinos. 
-
-
-introduce right-handed neutrino fields 
-
-A hybrid mass term combining the Majorana fields (with $m_L$ for the left-handed neutrino field and $m_R$ for the right-handed field) and Dirac is\cite{akhmedov2014majorana,zuber1998physics}:
+The Dirac mass term in \ref{diracLagrange} can be written as the same form of the Majorana mass term: $\mathcal{L}_{\nu~mass}^D = -\frac{1}{2}m_D(\overline{\nu_L}\nu_R+\overline{\nu^c_R}\nu^c_L)+h.c.$. Then a hybrid mass term combining the Majorana fields (with $m_L$ for the left-handed neutrino field and $m_R$ for the right-handed field) and Dirac is\cite{akhmedov2014majorana,zuber1998physics}:
 \begin{equation} 
-\mathcal{L}^{D+M}_{\nu~mass} = -\frac{1}{2}\begin{pmatrix} \bar{\nu}_L & \overline{\nu^c_R}\end{pmatrix}
-\mathcal{M}\begin{pmatrix} \nu^c_L \\ \nu_R\end{pmatrix}+h.c.,
+\mathcal{L}^{D+M}_{\nu~mass} = -\frac{1}{2}\begin{pmatrix} \bar{\nu}_L & \overline{(N_R)^c}\end{pmatrix}
+\mathcal{M}\begin{pmatrix} \nu^c_L \\ N_R\end{pmatrix}+h.c.,
 \end{equation} 
 where the mass matrix \footnote{Here only considering one neutrino generation ($\nu_e$) for simplicity. In the general case $\mathcal M$ is a $(n_a+n_s)\times(n_a+n_s)$ matrix, for $n_a$ active neutrinos and $n_s$ sterile neutrinos\cite{zuber1998physics,akhmedov2014majorana}.}  
 \begin{equation}
@@ -407,6 +401,10 @@ where the mass matrix \footnote{Here only considering one neutrino generation ($
 	m^D &  m_R^M\\
 \end{pmatrix},
 \end{equation}
+
+
+
+
 
 Using a unitary matrix $U$ to diagonalize the $\mathcal M$ so that ${U}^T\mathcal{M}\mathcal{U}=\mathcal {M}_d = diag(m_1, m_2)$, where $m_{1,2}\geq 0$ are the mass eigenstates of the eigenstates $\chi_{1,2}$ and 
 \begin{equation}\label{eq:massTransform}
@@ -428,8 +426,6 @@ n_L=U
 \chi_{2L}\\
 \end{pmatrix},
 \end{equation}
-
-
 
 The mass eigenvalues are solved as:
 \begin{equation}

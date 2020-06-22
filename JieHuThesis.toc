@@ -3,7 +3,7 @@
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Contents}{v}{chapter*.2}
 \contentsline {chapter}{List of Figures}{ix}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xiv}{chapter*.4}
+\contentsline {chapter}{List of Tables}{xv}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Discovery of Neutrino}{3}{section.2.1}
@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.4}Majorana Neutrino and Neutrino Mass}{13}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Neutrino Mass Terms}{13}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Neutrino Mass in Beta Decay}{18}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Double Beta Decay}{18}{section.2.5}
+\contentsline {section}{\numberline {2.5}Double Beta Decay}{19}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Status of Double Beta Decay Experiments}{21}{subsection.2.5.1}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{24}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{24}{section.3.1}
@@ -33,31 +33,33 @@
 \contentsline {section}{\numberline {3.4}Optics}{34}{section.3.4}
 \contentsline {section}{\numberline {3.5}Electronics}{35}{section.3.5}
 \contentsline {section}{\numberline {3.6}Calibration}{39}{section.3.6}
-\contentsline {section}{\numberline {3.7}Monte Carlo Simulation and the RAT Software}{40}{section.3.7}
-\contentsline {chapter}{\numberline {4}Event Reconstruction}{42}{chapter.4}
-\contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{42}{section.4.1}
-\contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{43}{section.4.2}
-\contentsline {section}{\numberline {4.3}Multi-path Position and Direction Reconstructions for the Water Phase}{46}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Vertex Reconstruction}{46}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Direction Reconstruction}{46}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Effective Group Velocity}{48}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Fitter Pull and Drive Correction}{50}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}Multi-path Fitter Structure}{53}{subsection.4.3.5}
-\contentsline {section}{\numberline {4.4}Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}{57}{section.4.4}
-\contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Partial-fill and Scintillator Phases}{61}{section.4.5}
-\contentsline {subsubsection}{Water Level}{68}{section*.11}
-\contentsline {section}{\numberline {4.6}PMT Selectors for the Reconstruction}{68}{section.4.6}
-\contentsline {section}{\numberline {4.7}Energy Reconstruction}{70}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Energy Reconstruction in Partial-fill Phase}{71}{subsection.4.7.1}
-\contentsline {subsubsection}{NHit Scale}{71}{section*.12}
-\contentsline {subsubsection}{NHit Ratio}{71}{section*.13}
-\contentsline {section}{\numberline {4.8}Other Reconstruction Algorithms}{72}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Hough Transformation for Direction Reconstruction}{72}{subsection.4.8.1}
-\contentsline {section}{\numberline {4.9}Conclusion}{72}{section.4.9}
-\contentsline {chapter}{\numberline {5}SNO+ Water Phase Analysis}{73}{chapter.5}
-\contentsline {section}{\numberline {5.1}High Level Cuts: Classifiers}{73}{section.5.1}
-\contentsline {section}{\numberline {5.2}\isotope [16]{N} Calibration Scans in the Water Phase}{74}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Angular Resolution}{82}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {3.6.1}$^{16}$N calibration source}{39}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Americium Beryllium (AmBe) Calibration Source}{41}{subsection.3.6.2}
+\contentsline {section}{\numberline {3.7}Monte Carlo Simulation and the RAT Software}{42}{section.3.7}
+\contentsline {chapter}{\numberline {4}Event Reconstruction}{44}{chapter.4}
+\contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{44}{section.4.1}
+\contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Multi-path Position and Direction Reconstructions for the Water Phase}{48}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Vertex Reconstruction}{48}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Direction Reconstruction}{48}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Effective Group Velocity}{50}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Fitter Pull and Drive Correction}{52}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Multi-path Fitter Structure}{55}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}{59}{section.4.4}
+\contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Partial-fill and Scintillator Phases}{63}{section.4.5}
+\contentsline {subsubsection}{Water Level}{70}{section*.11}
+\contentsline {section}{\numberline {4.6}PMT Selectors for the Reconstruction}{70}{section.4.6}
+\contentsline {section}{\numberline {4.7}Energy Reconstruction}{72}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Energy Reconstruction in Partial-fill Phase}{73}{subsection.4.7.1}
+\contentsline {subsubsection}{NHit Scale}{73}{section*.12}
+\contentsline {subsubsection}{NHit Ratio}{73}{section*.13}
+\contentsline {section}{\numberline {4.8}Other Reconstruction Algorithms}{74}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Hough Transformation for Direction Reconstruction}{74}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Conclusion}{74}{section.4.9}
+\contentsline {chapter}{\numberline {5}SNO+ Water Phase Analysis}{75}{chapter.5}
+\contentsline {section}{\numberline {5.1}High Level Cuts: Classifiers}{75}{section.5.1}
+\contentsline {section}{\numberline {5.2}\isotope [16]{N} Calibration Scans in the Water Phase}{76}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Angular Resolution}{79}{subsection.5.2.1}
 \contentsline {section}{\numberline {5.3}Extracting $\gamma $-rays from Neutron Capture}{83}{section.5.3}
 \contentsline {section}{\numberline {5.4}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{83}{section.5.4}
 \contentsline {subsubsection}{Open Dataset Analysis}{83}{section*.14}
