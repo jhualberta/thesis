@@ -304,36 +304,21 @@ the energy resolution (3\% at 1 MeV)
 
 
 \section{Neutrino Mass and Majorana Neutrino}\label{sectMajorana}
-The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) direct measurements for the $\beta$-decay spectrum; (2) a search for the $0\nu\beta\beta$ process and (3) cosmological measurements \cite{valle2015neutrinos}.  The $Planck$
+The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) direct measurements for the $\beta$-decay spectrum; (2) a search for the $0\nu\beta\beta$ process and (3) cosmological measurements \cite{valle2015neutrinos}.  In the last case, the $Planck$
 experiment
 based on the measurements of Cosmic Microwave Background (CMB), 
 
-
 $\sum m_\nu<0.34~eV$ (at $95\%$ C.L.). The following sections focus on the $\beta$-decay and $0\nu\beta\beta$ approaches.
 
-\subsection{Neutrino Mass in Beta Decay}
 
-A Kurie function is defined for estimating the $\nu_e$ mass \cite{giunti2007fundamentals}:
-\begin{equation}
-K(T)\equiv \sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathcal{M}|^2F(Z,E_e)E_e p_e}}
-=\left[(Q-E_k)\sqrt{(Q-E_k)^2-m^2_{\nu_e}}\right]^{1/2}
-\end{equation}
-
-The $\beta$-decay in Tritium: $^3H\to^3He+e^-+\bar{\nu}_e$
-
-The effective $\nu_e$ mass in $\beta$-decay:
-\begin{equation}
-m^2_\beta = \sum_i |U_{ek}|^2 m_i^2.
-\end{equation}
-
-\subsection{From Dirac to Majorana}
+\subsection{Neutrino Mass Terms}
 A free spin-1/2 fermion field with a mass $m$ follows the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, where $\partial_\mu\equiv \partial/\partial x^\mu$, $\psi$ is a four-component spinor (Dirac spinor) field, and $\gamma^\mu~(\mu=0,1,2,3)$ is a set of $4\times 4$ matrices forming a Clifford algebra, i.e, satisfying the following relations\cite{akhmedov2014majorana,zee2010quantum}:
 \begin{equation}\label{eq:clifford}
 \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}, 
 \end{equation}
 where $\eta^{\mu\nu}=diag(1,-1,-1,-1)$ is the Minkowski metric. From \ref{eq:clifford} we can also get $(\gamma^0)^2=+1$, $(\gamma^i)^2=-1~(i=1,2,3)$ and $\gamma^0\gamma^{\mu\dag}\gamma^0=\gamma^\mu$. The product of four gamma matrices is defined as $\gamma_5\equiv i\gamma^0\gamma^1\gamma^2\gamma^3$, which satisfies $\{\gamma_5,\gamma^\mu\}=0$ and $(\gamma_5)^2=1$. From $\gamma_5$, we can define the left-handed and right-handed chirality projector operators: $P_L\equiv\frac{1}{2}(1-\gamma_5)$ and $P_R\equiv\frac{1}{2}(1+\gamma_5)$.
 
-For fast moving particles, it's convenient to take $\gamma$ matrices in chiral or Weyl representation\footnote{In Weyl representation $\gamma_5$ is diagonal while in Dirac representation $\gamma^0$ is diagonal.} as\cite{zee2010quantum}:
+For fast moving particles, it's convenient to take $\gamma$ matrices in chiral or Weyl representation (in which $\gamma_5$ is diagonal) as\cite{zee2010quantum}:
 \begin{equation}
 \gamma^0 = \begin{pmatrix} 
 0 & I \\
@@ -362,11 +347,46 @@ A particle-antiparticle conjugation operator $\hat C$ is defined as\cite{akhmedo
 \end{equation}
 where $\mathcal C$ is the charge conjugation matrix and satisfies the following relations:
 \begin{equation}
-\mathcal C^{-1}\psi^\mu\mathcal C=-(\gamma^\mu)^T,~~\mathcal{C}^{-1}\gamma_5\mathcal{C}=(\gamma_5)^T,~~\mathcal{C}^\dagger = \mathcal{C}^{-1}=-\mathcal{C}^*
+\mathcal C^{-1}\gamma^\mu\mathcal C=-(\gamma^\mu)^T,~~\mathcal{C}^{-1}\gamma_5\mathcal{C}=(\gamma_5)^T,~~\mathcal{C}^\dagger = \mathcal{C}^{-1}=-\mathcal{C}^*
 \end{equation}
+
+In the Weyl representation, $\mathcal{C}=i\gamma^2\gamma^0$, then $\mathcal {C}^2=1$, $(\psi^c)^c=\psi$, $(\psi_L)^c=P_R\psi^c=(\psi^c)_R$ and $(\psi_R)^c=P_L\psi^c=(\psi^c)_L$.
+
+$\psi^c=\mathcal{C}{\bar{\psi}}^T=(i\gamma^2\gamma^0){({(\psi^*)}^T\gamma^0)}^T=i\gamma^2\psi^*=\psi$.
+
+
+therefore the particle-antiparticle operation $\hat C$ converts the antiparticle of a left-handed field to a particle of right handed and vice versa (both the charge and chirality are changed).
+
+
+
+In the Standard Model, neutrinos are the spin-1/2 fermions without carrying electrical charges and they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why they are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
+
+By mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Also, the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which is also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion, which is tailored for neutrinos\cite{zee2010quantum}. 
+
+
+
 
 since only left-handed $\nu$ and right-handed $\bar\nu$ involve in the weak interaction in the Standard Model, 
 the Dirac mass term is not economical and natural\cite{aitchison2012gauge}.
+
+
+
+\begin{equation}
+\mathcal \psi=
+\begin{pmatrix}
+\phi\\
+-i\sigma^2\phi^*\\
+\end{pmatrix},
+\end{equation}
+
+\begin{equation}
+\nu_L=
+\begin{pmatrix}
+\nu_L\\
+(\nu_R)^c\\
+\end{pmatrix},
+\end{equation}
+
 
 
 charge conjugation
@@ -377,54 +397,27 @@ get coupled equations
 
 
 In the flavor transformation experiments, the mass differences, rather than the absolute mass values are measured. 
-
-In the Standard Model, neutrinos are the only spin-1/2 elementary particles without carrying electrical charges, which is one of the reasons why they are special. No charge-like quantum number can be used to distinguish a neutrino and an antineutrino. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
-
-By mathematical aesthetics, Majorana found a representation of the $\gamma$-matrices as following\cite{majorana2006symmetric}:
-\begin{equation}
-\gamma_M^0 = \begin{pmatrix} 
-0 & \sigma^2 \\
-\sigma^2 & 0
-\end{pmatrix},
-\gamma_M^1 = \begin{pmatrix} 
-i\sigma^3 & 0 \\
-0 & i\sigma^3
-\end{pmatrix},
-\gamma_M^2 = \begin{pmatrix} 
--\sigma^2 & 0 \\
-0 & \sigma^2
-\end{pmatrix},
-\gamma_M^3 = -i\begin{pmatrix} 
-\sigma^1 & 0 \\
-0 & \sigma^1
-\end{pmatrix}
-\end{equation}
-
-These matrices themselves are pure imaginary. 
-\begin{equation}
-\mathcal \psi=
-\begin{pmatrix}
-\phi\\
--i\sigma^2\phi^*\\
-\end{pmatrix},
-\end{equation}
-
-
-
-
-$\mathcal{C}=i\gamma^2\gamma^0$, then 
-$\psi^c=\mathcal{C}{\bar{\psi}}^T=(i\gamma^2\gamma^0){({(\psi^*)}^T\gamma^0)}^T=i\gamma^2\psi^*=\psi$.
-
-
-In the Majorana case, the field can be taken as $\psi=\psi_L+\psi_L^c$ and thus $\psi^C=\psi$.
+                                                                                                                
+In the Majorana case, the field can be taken as $\psi=\psi_L+\psi_L^c$ and thus $\psi^c=\psi$.
 
 
 The Majorana mass term is\cite{kane2017modern}:  
 \begin{equation}\label{major_mass}
-\mathcal{L}_M = -\frac{1}{2}m_L(\bar{\nu}_R^c\nu_R+\bar{\nu}_R\nu^c_R)+h.c.,
+\mathcal{L}^M_{\nu~mass} = -\frac{1}{2}m_L(\bar{\nu}_R^c\nu_R+\bar{\nu}_R\nu^c_R)+h.c.,
 \end{equation}
 
 the Dirac mass term can be written as the same form: $\mathcal{L}_D =  -\frac{1}{2}m_D(\bar{\nu}_L\nu_R+\overline{\nu^c_R}\nu^c_L)+h.c.,$
+
+left-handed neutrino fields $SU(2)_L$
+doublet neutrinos, active neutrinos
+
+
+
+electroweak singlets
+which do not participate in the electroweak interactions and are thus called sterile neutrinos. 
+
+
+introduce right-handed neutrino fields 
 
 A hybrid mass term combining the Majorana fields (with $m_L$ for the left-handed neutrino field and $m_R$ for the right-handed field) and Dirac is\cite{akhmedov2014majorana,zuber1998physics}:
 \begin{equation} 
@@ -440,15 +433,21 @@ where the mass matrix \footnote{Here only considering one neutrino generation ($
 \end{pmatrix},
 \end{equation}
 
-\begin{equation}\label{eq:majorana_fields}
-n_L=\begin{pmatrix}
-\nu_L\\
-\nu_L^C\\
-\end{pmatrix}=
-\begin{pmatrix}
+Using a unitary matrix $U$ to diagonalize the $\mathcal M$ so that ${U}^T\mathcal{M}\mathcal{U}=\mathcal {M}_d = diag(m_1, m_2)$, where $m_{1,2}\geq 0$ are the mass eigenstates of the eigenstates $\chi_{1,2}$ and 
+\begin{equation}\label{eq:massTransform}
+U=\mathcal{O}\rho=\begin{pmatrix}
 \cos\theta & \sin\theta\\
 -\sin\theta & \cos\theta\\
-\end{pmatrix}
+\end{pmatrix}\begin{pmatrix}
+\rho_1 & 0\\
+0 & \rho_2\\
+\end{pmatrix},
+\end{equation}
+where $\mathcal O$ is a real orthodox matrix and $\rho$ is a phase matrix with $(\rho_{1,2})^2=\pm1$, which guarantees $m_{1,2}\geq 0$.
+From the transformation, the off-diagonal elements give a relation of $\theta$: $\tan 2\theta = \frac{2m_D}{m^M_R-m^M_L}$, which indicates a mixing of the normal active Dirac neutrino with a pair of the sterile Majorana neutrinos.
+
+\begin{equation}\label{eq:majorana_fields}
+n_L=U
 \begin{pmatrix}
 \chi_{1L}\\
 \chi_{2L}\\
@@ -456,50 +455,42 @@ n_L=\begin{pmatrix}
 \end{equation}
 
 
-Use a real orthogonal matrix $\mathcal{O}$ to diagonalize the $\mathcal M$
 
-so that $\mathcal{O}^T\mathcal{M}\mathcal{O}=\mathcal {M}_d = diag(m_1, m_2)$, and the mass eigenstates $\chi_{1,2}$ are correspond to $m_{1,2}$. 
-
-$C^{-1}\gamma_\mu C=-\gamma_\mu^T$
-
-
-From the mass matrix, the eigenstates are solved:
+The mass eigenvalues are solved as:
 \begin{equation}
 m_{1,2}\equiv m_{\mp} = \frac{1}{2}[~(m_L^M+m_R^M)\mp\sqrt{(m_L^M-m_R^M)^2+4(m^D)^2}~]\label{eq:majorana_massEigen},
 \end{equation}
-and with $\tan2\theta =\frac{2m_D}{m_R-m_L}$.
 
-From (\ref{eq:majorana_massEigen}), there are 4 cases for discussion:\\
-(1) If $m_L^M=m_R^M=0$ (Dirac limit), $m_{1,2}=m^D$, neutrinos are pure Dirac particles.\\
-(2) If $m^D\gg m^M_{L,R}$, then $\tan2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino which is called a Pseudo-(or quasi-)Dirac Neutrino.
+From (\ref{eq:majorana_massEigen}), there are 4 cases to discuss:\\
+(1) If $m_L^M=m_R^M=0$ (called ``Dirac limit''), then $m_{1,2}=m^D$, neutrinos are pure Dirac particles.\\
+(2) If $m^D\gg m^M_{L,R}$, then $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino which is called a Pseudo-(or quasi-)Dirac Neutrino.
 \\
 (3) If $m^D=0$, $m_1=m^M_L, m_2=m^M_R$, neutrinos are pure Majorana particles.\\
-(4) If $m_R^M\gg m^D, m_L^M$, then $\theta\simeq(\frac{m^D}{m_R^M})\ll 1$ and $\tan2\theta=\frac{2m^D}{m^M_R-m^M_L}\to 0$, we get:
+(4) If $m_R^M\gg m^D, m_L^M$, then $\theta\simeq(\frac{m^D}{m_R^M})\ll 1$ and $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\to 0$, we get:
 \begin{equation}
 \begin{aligned}
 m_1=m_-&=\frac{1}{2}\frac{(m^M_L+m^M_R)^2-(m^M_L-m^M_R)^2-4(m^D)^2}{m^M_L+m^M_R+|m^M_L-m^M_R|\sqrt{1+(\frac{2m^D}{m^M_L-m^M_R})^2}}\simeq 
 \frac{2m^M_Lm^M_R-2(m^D)^2}{m_L^M+m_R^M+(m_R^M-m_L^M)}\\
-&=m^M_L-\frac{(m^D)^2}{m^M_R},
+&=|m^M_L-\frac{(m^D)^2}{m^M_R}|,
 \end{aligned}
-\end{equation}
+\end{equation}\footnote{Here the absolute value is taken because we can find proper $\rho_{1,2}$ values to ensure $m_1\geq 0$.}
 and
 \begin{equation}
 m_2=m_+=\frac{1}{2}[m^M_R+m^M_R(1+\frac{1}{2}(\frac{2m^D}{m^M_R})^2)]=m^M_R[1+(\frac{m^D}{m^M_R})^2]\simeq m^M_R.
 \end{equation}
 
-$\mathcal L=\frac{1}{2}(|m_1|\bar\chi_1\chi_1+|m_2|\bar\chi_2\chi_2)$
-a simple extension of the Standard Model with
-
-In the case of (4), a heavy, sterile right-handed neutrino causes the normal, active neutrino being light. 
-This mechanism is called the Seesaw Mechanism\footnote{There are mainly three types of Seesaw Mechanism, depending on the new particles added into the Standard Model. Here adding heavy right-handed neutrinos is the type-I, or conventional seesaw\cite{xing2011neutrinos}.}. It has the potential to explain why the neutrino mass is so small,
-because, if the mass for the heavy sterile is very large then the left-handed Majorana
-mass is very small.
-
+In the case of (4), a heavy, sterile right-handed neutrino $\nu_2$ causes the normal, active neutrino $\nu_1$ being light.
+Since $\tan 2\theta\ll 1$, the mixing angle is very small.
+ 
+This is called the Seesaw mechanism\footnote{There are mainly three types of Seesaw mechanism, depending on the new particles added into the Standard Model. Here adding heavy right-handed neutrinos is the type-I, or conventional seesaw\cite{xing2011neutrinos}.}. It has the potential to explain why the neutrino mass is so small ($m~\mathcal{O}~(eV)$) compared to the other fermions ($m~\mathcal{O}~(GeV)$).
 
 For $\mathcal{O}(1~TeV)$, the $\nu$ mass is $0.1~eV$
 
+$\mathcal L=\frac{1}{2}(|m_1|\bar\chi_1\chi_1+|m_2|\bar\chi_2\chi_2)$
+a simple extension of the Standard Model with
 
- Majorana neutrinos could also explain a matter dominated universe.
+
+Majorana neutrinos could also explain a matter dominated universe.
 In the theory of leptogenesis, if the Sakharov conditions2 are met, heavy neutrinos in the
 early universe could decay to left-handed and right-handed neutrinos as well as Higgs
 decaying to quarks. Majorana neutrinos violate lepton number so more left-handed
@@ -511,6 +502,8 @@ Extending the one-generational case given above to three generations results in 
 modification to the PMNS matrix. The matrix given in Equation 1.43 transforms to,
 U ! UD(α1; α2); (1.82)
 
+
+
 upper bound for the $\nu_e$ mass
 KATRIN experiment
 
@@ -519,13 +512,26 @@ Take the Majorana case into account,
 
 $D^M$ is a diagonal unitary matrix and $D^M=diag(1,e^{i\phi_1},e^{i\phi_2})$, where $\phi_1$ and $\phi_2$ are are the Majorana-type CP-violation phases. Thu $U_{PMNS}=U^DD^M$.
 
-the Seesaw mechanism explains the smallness of neutrino masses compared to the other fermions in the Standard Model.
 
 A Dirac neutrino can be conceived of as a pair of
 mass-degenerate Majorana neutrinos with opposite CP
 assignments. As pointed out by L. Wolfenstein
-[Carnegie-Mellon Report No. COO-3066-180 (unpublished)], their contributions to the $0\nu\beta\beta$ rate cancel
-due to their relative CP phase. With several Majorana neutrinos with different CP eigenvalues the neutrinoless diagrams discussed here may not be entirely negligible.
+[Carnegie-Mellon Report No. COO-3066-180 (unpublished)], their contributions to the $0\nu\beta\beta$ rate cancel due to their relative CP phase. With several Majorana neutrinos with different CP eigenvalues the neutrinoless diagrams discussed here may not be entirely negligible.
+
+\subsection{Neutrino Mass in Beta Decay}
+
+A Kurie function is defined for estimating the $\nu_e$ mass \cite{giunti2007fundamentals}:
+\begin{equation}
+K(T)\equiv \sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathcal{M}|^2F(Z,E_e)E_e p_e}}
+=\left[(Q-E_k)\sqrt{(Q-E_k)^2-m^2_{\nu_e}}\right]^{1/2}
+\end{equation}
+
+The $\beta$-decay in Tritium: $^3H\to^3He+e^-+\bar{\nu}_e$
+
+The effective $\nu_e$ mass in $\beta$-decay:
+\begin{equation}
+m^2_\beta = \sum_i |U_{ek}|^2 m_i^2.
+\end{equation}
 
 
 \section{Double Beta Decay}
