@@ -3,11 +3,11 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Warning--empty year in laserball_groupVelocity
-Warning--empty year in driveCorPeter
 Warning--empty year in matt_deployedsource
 Warning--empty year in n16geom_zach
 Warning--empty year in n16pic
+Warning--empty year in laserball_groupVelocity
+Warning--empty year in driveCorPeter
 Warning--empty year in skyshine
 Warning--empty year in oxfordMeasurement
 Warning--empty journal in piperno2015dark
@@ -16,6 +16,7 @@ Warning--empty journal in muonflux
 Warning--empty journal in davini2016cno
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in scintillatorPaper
+Warning--empty year in markchen_bkg
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--empty journal in hamamatsu2018photomultiplier
@@ -45,50 +46,49 @@ Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in highlevel
-Warning--empty year in markchen_bkg
 Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 158 entries,
+You've used 160 entries,
             1876 wiz_defined-function locations,
-            1243 strings with 28115 characters,
-and the built_in function-call counts, 34119 in all, are:
-= -- 3061
-> -- 1837
+            1255 strings with 28653 characters,
+and the built_in function-call counts, 34872 in all, are:
+= -- 3117
+> -- 1907
 < -- 0
-+ -- 694
-- -- 536
-* -- 2381
-:= -- 5231
-add.period$ -- 204
-call.type$ -- 158
-change.case$ -- 114
++ -- 718
+- -- 558
+* -- 2445
+:= -- 5353
+add.period$ -- 206
+call.type$ -- 160
+change.case$ -- 116
 chr.to.int$ -- 0
-cite$ -- 205
-duplicate$ -- 1857
-empty$ -- 3102
-format.name$ -- 536
-if$ -- 8104
+cite$ -- 207
+duplicate$ -- 1893
+empty$ -- 3147
+format.name$ -- 558
+if$ -- 8277
 int.to.chr$ -- 0
-int.to.str$ -- 158
-missing$ -- 150
-newline$ -- 524
-num.names$ -- 150
-pop$ -- 540
+int.to.str$ -- 160
+missing$ -- 152
+newline$ -- 530
+num.names$ -- 152
+pop$ -- 545
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1009
+skip$ -- 1038
 stack$ -- 0
-substring$ -- 992
-swap$ -- 659
+substring$ -- 1010
+swap$ -- 679
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 47
-while$ -- 250
-width$ -- 161
-write$ -- 1458
+while$ -- 254
+width$ -- 163
+write$ -- 1479
 (There were 47 warnings)
