@@ -1,3 +1,6 @@
+%\setlength{\epigraphwidth}{0.5\textwidth}
+%\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
+
 The SNO+ water data taking from May 2017 to September 2018. During the period from October 2018 to July 2019, LAB (without PPO) was filled into the detector and had been sit inside the neck. With nitrogen cover gas on the top, the data in this period is considered as low background data.
 
 
@@ -262,6 +265,12 @@ other packages developed for high energy particle physics, such as StatPatternRe
 
 MPW fit results
 
+fiducial volume cut
+
+
+
+
+
 
 \begin{table}[ht]
 	\centering
@@ -310,7 +319,15 @@ the maximum kinetic energy of the recoil electron is
 $T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$
 the cross section is $\sigma(\nu_e+e^-\to \nu_e+e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
 the expected solar neutrino rate is 
-$R=A\int_{T_thresh}^{T_{max}}$
+$R=A\int_{T_{thresh}}^{T_{max}}$
+
+A ``solar angle'', $\theta_{sun}$ is the direction of the event relative to the Sun's location,
+$\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, where $\vec{X}_{event}-\vec{X}_{sun}$ can be replaced by the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun.
+
+
+
+
+
 
 
 

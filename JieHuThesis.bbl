@@ -72,6 +72,30 @@ J.~Tseng, ``Skyshine classifier,'' {\em SNO+ Internal Document, docDB-5341-v1.}
 E.~Leming, ``{O}xford {LAB} + {PPO} timing and light yield measurements,'' {\em
   SNO+ Internal Document, docDB-6179-v1.}
 
+\bibitem{partialWater}
+A.~Hallin, ``Fitting partial fill data from december 2014,'' {\em SNO+ Internal
+  Document, docDB-2888-v3.}
+
+\bibitem{davidPartialWater}
+D.~Auty and A.~Hallin, ``Partial water fitter,'' {\em SNO+ Internal Document,
+  docDB-2965-v2.}
+
+\bibitem{kalpanaWLS}
+K.~Singh, ``Wavelength shifter: Carbostyril 124,'' {\em SNO+ Internal Document,
+  docDB-3351-v2.}
+
+\bibitem{kalpanaWLS2}
+K.~Singh, ``Wavelength shifter in water phase of sno+,'' {\em SNO+ Internal
+  Document, docDB-3869-v2.}
+
+\bibitem{kalpanaMPFitter}
+K.~Singh, ``Multipath fitter processor,'' {\em SNO+ Internal Document,
+  docDB-3849-v1.}
+
+\bibitem{jieMPW}
+J.~Hu and J.~Tseng, ``Updates on the multipath water fitter 2018,'' {\em SNO+
+  Internal Document, docDB-4936-v2.}
+
 \bibitem{leite1996weak}
 J.~Leite-Lopes, ``Weak interaction physics: from its origin to the electroweak
   model,'' tech. rep., SCAN-9607019, 1996.
@@ -510,30 +534,6 @@ M.~Anderson, ``Status and updates on neural network fitter,'' {\em SNO+
 M.~Anderson, ``Deep learning to reconstruct particle interaction properties for
   the {SNO+} neutrino physics experiment,'' {\em Canadian AI Conference 2020 -
   Talk}.
-
-\bibitem{partialWater}
-A.~Hallin, ``Fitting partial fill data from december 2014,'' {\em SNO+ Internal
-  Document, docDB-2888-v3.}
-
-\bibitem{davidPartialWater}
-D.~Auty and A.~Hallin, ``Partial water fitter,'' {\em SNO+ Internal Document,
-  docDB-2965-v2.}
-
-\bibitem{kalpanaWLS}
-K.~Singh, ``Wavelength shifter: Carbostyril 124,'' {\em SNO+ Internal Document,
-  docDB-3351-v2.}
-
-\bibitem{kalpanaWLS2}
-K.~Singh, ``Wavelength shifter in water phase of sno+,'' {\em SNO+ Internal
-  Document, docDB-3869-v2.}
-
-\bibitem{kalpanaMPFitter}
-K.~Singh, ``Multipath fitter processor,'' {\em SNO+ Internal Document,
-  docDB-3849-v1.}
-
-\bibitem{jieMPW}
-J.~Hu and J.~Tseng, ``Updates on the multipath water fitter 2018,'' {\em SNO+
-  Internal Document, docDB-4936-v2.}
 
 \bibitem{gregory2005bayesian}
 P.~Gregory, {\em Bayesian Logical Data Analysis for the Physical Sciences: A

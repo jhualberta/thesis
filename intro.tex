@@ -1,13 +1,45 @@
-%\epigraph{Yesterday's rose stands only in name, we hold only empty names.}{--- \textup{Umberto Eco}, \textit{The Name of Rose}}
- 
-A neutrino　is a fermion with neutral electric charge and interacts only via weak interaction and gravity, which is described by the Standard Model. The Standard Model is a theory describing all of the elementary particles to our current knowledge and their interactions.In the Standard Model, neutrinos are created from weak interactions in one of three leptonic flavors:electron neutrinos ($\nu_e$), muon neutrinos ($\nu_\mu$) and tauon neutrinos ($\nu_\tau$), accompanied by electrons ($e$), muons ($\mu$) and tauons ($\tau$) respectively. The weak interactions are described by fermions exchanging $W^{\pm}$ and $Z^0$ bosons as weak force carriers.
+%\setlength{\epigraphwidth}{0.5\textwidth}
+%\epigraph{``Even so," said Trevize, ``I must search. Even if the endless powdering of stars in the Galaxy makes the quest seem hopeless, and even if I must do it alone."}{--- \textup{Isaac Asimov}, \textit{Foundation and Earth }}
+
+A neutrino is a fermion with neutral electric charge and interacts only via weak interaction and gravity, which is described by the Standard Model. The Standard Model is a theory describing all of the elementary particles to our current knowledge and their interactions.
+In the Standard Model, neutrinos are created from weak interactions in one of three leptonic flavors:
+electron neutrinos ($\nu_e$), muon neutrinos ($\nu_\mu$) and tauon neutrinos ($\nu_\tau$), accompanied by electrons ($e$), muons ($\mu$) and tauons ($\tau$) respectively. The weak interactions are described by fermions exchanging $W^{\pm}$ and $Z^0$ bosons as weak force carriers.
 
 The Standard Model has successfully explained and predicted phenomena in particle physics since the latter half of the 20th century, including the discovery of Higgs bosons in 2012, which is a crucial piece in the Standard Model. However, it has issues such as the requirement of input parameters which can not be determined by the theory itself. Moreover, there are a few questions and problems the Standard Model can not answer or solve. The mystery properties and behaviors of neutrinos contribute a few of those questions: What are the masses of neutrinos? How do neutrinos obtain their masses? Why their masses are so small compared to the other elementary particles? Are neutrinos their own antiparticles? And so on. To answer these questions about neutrinos will open a door to the new physics theories beyond the Standard Model.
 
 Since neutrinos weakly interact with other particles and fields, they can penetrate through massive matter or travel a long way through the space without being interrupted. Neutrinos produced in the core of the Sun, in Supernovae, or in the galactic core of the Milky Way can carry original information of these astrophysics objects and easily reach the detectors on the Earth. This enables neutrinos as a probe to study the status of astrophysics objects.
 
-These interesting facts put the researches of neutrinos under the spotlight. Among neutrino experiments, SNO+ is a multi-purpose experiment with a main goal to search for an extremely rare process called neutrinoless double beta decay. This will explore the unknown nature of neutrinos: whether they are Majorana or Diracparticles, unravel the masses of neutrinos, and test the new physics theories as well.
+These interesting facts put the researches of neutrinos under the spotlight. Among neutrino experiments, SNO+ is a multi-purpose experiment with a main goal to search for an extremely rare process called neutrinoless double beta decay. This will explore the unknown nature of neutrinos: whether they are Majorana or Dirac
+particles, unravel the masses of neutrinos, and test the new physics theories as well.
 
 SNO+ has measured the high energy components of the neutrinos from the Sun, or solar neutrinos along with an extremely low backgrounds. It will measure the low energy component of the solar neutrinos.
 
-In this thesis, a set of position and time reconstruction algorithms is developed for multiple SNO+ physics phases. The algorithms have been tested in the calibration runs. They are applied in solar neutrino and backgrounds analysis.
+In Chapter 2, 
+
+neutrino physics
+
+solar neutrinos
+neutrino flavor transformation, neutrino mass, neutrinoless double beta decay.
+
+In Chapter 3, the SNO+ experiment, how the SNO+ detector works and reads the physics data.
+The properties of the liquid scintillator
+
+In this thesis, a framework of event position and time reconstruction algorithms is developed for multiple SNO+ physics phases. This event reconstruction framework was first developed by the author's supervisor, Dr. Aksel Hallin, to reconstruct and investigate the data taken at an early stage of SNO+ when the detector was partially filled with water at the end of 2014 (called ``partial water fill stage'')\cite{partialWater}. It was further developed by the researchers from the University of Alberta: Dr. Kalpana Singh and Dr. David Auty, for investigating the wavelength shifter and water events\cite{davidPartialWater, kalpanaWLS, kalpanaWLS2, kalpanaMPFitter}. Dr. Jeff Tseng from the University of Oxford restructured the framework into more flexible and efficient C++ codes and implemented it into the SNO+ software\cite{jieMPW}. I first involved in testing and optimizing this reconstruction framework on the simulations and data. Then I further developed and completed it for multiple SNO+ physics phases, especially for the ``partial-fill phase'', which refers to the transition statuses when the SNO+ detector is partially filled with the liquid scintillator. The data taken from these statuses are used for background estimations. The framework is also extended for the scintillator phase and the Tellurium-loading phase as well. The principles and optimizations are described in Chapter 4.
+
+In Chapter 5, this reconstruction framework is applied for the water phase physics analyses. I analyzed the calibration source data during the water phase. By comparing the simulations and data, I obtained the reconstruction resolutions and uncertainties. Then it is applied for the solar neutrino and backgrounds analysis.
+
+Moving towards the Tellurium-loading phase for searching $0\nu\beta\beta$ process, the SNO+ collaboration started filling the liquid scintillator into the detector from July 2019. 
+
+for background analysis.
+
+These transition statuses are called "partial-fill".  
+
+In Chapter 6, 
+
+based on Monte Carlo simulations.
+
+higher light yield
+
+A light yield measurement for Tellurium-loaded liquid scintillator
+
+The last chapter summarizes the works of this thesis.

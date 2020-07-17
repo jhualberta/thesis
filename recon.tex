@@ -38,7 +38,6 @@ a radius.
 
 \section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
 A Multi-path (MP) reconstruction framework was developed by the University of Alberta group as an additional vertex reconstruction algorithm for SNO+.
-This framework was first developed by Aksel Hallin to reconstruct and investigate the event vertex for the data taken from an early stage of SNO+ when the detector was partially filled with water at the end of 2014 (partial water fill stage)\cite{partialWater}. This Multi-path partial water fitter was further developed by David Auty and Kalpana Singh for investigating the wavelength shifter and water events\cite{davidPartialWater, kalpanaWLS, kalpanaWLS2, kalpanaMPFitter}. Jeff Tseng restructured the framework into more flexible and efficient C++ codes and implemented into the RAT software\cite{jieMPW}.
 
 In this framework, the fitter is able to be adapted for various SNO+ physics phases, including the water phase, the conceptual wavelength shifter (WLS) phase, the partial-fill phase and the scintillator phase (with and without loading tellurium). In the SNO+ water phase, the cavity and the AV are both filled with ultra-pure water. This is a relatively simple geometry since everything inside the PSUP can be simplified as water. Therefore, we start with the MP water fitter (the MPW fitter) to explain the reconstruction concepts.
 
