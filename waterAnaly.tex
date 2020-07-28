@@ -1,12 +1,7 @@
 %\setlength{\epigraphwidth}{0.5\textwidth}
 %\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 
-The SNO+ water data taking from May 2017 to September 2018. During the period from October 2018 to July 2019, LAB (without PPO) was filled into the detector and had been sit inside the neck. With nitrogen cover gas on the top, the data in this period is considered as low background data.
-
-
-
-
-The water phase data in 
+The SNO+ water data taking from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the liquid mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top, the data taken during this period is considered as low background data.
 
 
 The open dataset 100000 to 100399, from 4 to 14 May 2017.
@@ -87,7 +82,7 @@ where $N_R^{fit}$ is a trial fit to the $N_R$ by tuning the $\{\alpha_e,\mu_p,\s
 
 By minimizing the $\chi^2$, the parameters of the resolution function, $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and a best $N_R^{fit}$ are obtained.
 
-Figure~\ref{posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions are fitted with $N_R^{fit}$.
+Fig.~\ref{posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions are fitted with $N_R^{fit}$.
 
 %\begin{figure}[!htb]
 %	\centering
@@ -96,12 +91,10 @@ Figure~\ref{posresol} shows a comparison of the reconstructed x position of {$^{
 %	\label{posresol}
 %\end{figure}
 
-
 \begin{figure}
 	\centering
-	\includegraphics[width=140mm]{posResol.pdf}
+	\includegraphics[width=140mm]{posResol.pdf}\label{posresol}
 	\caption{Position resolutions, compared the data (red) and MC (black). The resolution fit functions are overlaid with histograms.}
-	\label{positionResolMPW}
 \end{figure}
 
 Table~\ref{table_posresol} summarizes the values of position resolution parameters obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
@@ -157,9 +150,6 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 \subsection{Angular Resolution}
 Direction resolutions, with a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$:
 
-
-
-
 Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ cuts.
 \begin{figure}
 	\centering
@@ -169,6 +159,12 @@ Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\
 \end{figure}
 
 To describe the $\cos\theta_e$ distribution, if integrating from a $\cos\theta_e$ value to $+1$ contains 50\% of the reconstructed events, then this $\cos\theta_e$ is defined as $\cos\theta_{0.5}$. Similarly, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ are defined for 80\% and 90\% cases respectively. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
+
+
+The angular resolution function is defined as:
+\begin{equation}
+P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)}
+\end{equation}
 
 
 The fitted results are shown in Table.~\ref{angularResolValues}.
