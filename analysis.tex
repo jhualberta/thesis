@@ -1,0 +1,858 @@
+\section{Partial-fill Phase Analysis}
+
+During the August to October 2019, the PPO is added into the LAB when the water level was at 5100 mm (in PSUP coordinate). This is one of the stages of the partial-fill phase.
+
+As mentioned in Chapter 3, the main purpose of the partial-fill phase is to identify the background level of the liquid scintillator. $^{16}$N and $AmBe$ calibration sources were also deployed in the external water to test the response of the detector. 
+
+During the filling, the LAB was first filled into the AV to replace the water. PPO was later mixed with LAB and added into the AV. At some stage, the PPO concentration was kept at 0.53 g/L, which was lower than the nominal 2 g/L. At the lower PPO concentration, the liquid scintillator has a slower timing profile. This also brings an opportunity to extract the Cherenkov signals from the liquid scintillator with low PPO concentration.
+
+\subsection{High Level Cuts: Sky-shine Classifier}
+During the partial-fill phase, a Sky-shine classifier was suggested by Mark Chen and developed by Jeff Tseng to discriminate the noise events coming from the top of the detector, the so-called ``sky shine'' events, from other backgrounds events in the AV detection region\cite{skyshine}. These sky shine events are mostly the backgrounds from radioactive decays happening in the neck region. 
+
+For an event happens in the neck region, it can trigger more PMTs in the bottom (or 
+the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illustrated in Fig.~\ref{skyshine}. The classifier counts the number of the triggered PMTs with $z_{PMT}<-1000~mm$ (in PSUP coordinate) as $nSignal$ and the number of the ones with $-1000<z_{PMT}<8000~mm$ as $nSide$. The ratio $skyShine=nSide/nSignal$ is the output value of the classifier. Meanwhile, the classifier also saves the counts of the triggered neck PMTs ($nNeck$) as well as the triggered outward looking (OWL) PMTs in high z positions with $z_{OWL}>8000~mm$ ($nOWL$).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{ An illustration for the Sky-shine classifier, modified from \cite{skyshine}.}
+	\label{skyshine}
+\end{figure}
+
+In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
+
+\subsubsection{Performance of the Sky-shine Classifier}
+The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. RAT version 6.16.9 was used. 
+
+Fig.~\ref{Tl208simu} shows the positions of the simulated events and the fitted events. In the MC simulations, events are distributed in the AV as well as the whole region of the neck. Recall that the neck of the detector is 8-m tall, the MC simulated neck events from $z_{neck_bottom}=6108~mm$ up to about $z_{neck_top}=13000~mm$ in the PSUP coordinate. The valid reconstruction region is inside the PSUP sphere, thus only a small fraction of the neck events in the volume of the neck cylinder inside the PSUP sphere can be fitted or even be triggered.
+
+\begin{figure}
+	\centering
+	\subfigure[MC positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_mc.png}}
+	\subfigure[Fitted positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_fit.png}}
+	\caption{MC (left) and fitted positions (right) of $^{208}$Tl simulations.}
+	\label{Tl208simu}
+\end{figure}
+
+The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
+\begin{figure}
+	\centering
+	\subfigure[$x_{mc}$ vs. $skyShine$.]{\label{fig2:1a}\includegraphics[width=60mm]{skyShineVsXmc.png}}
+	\subfigure[$y_{mc}$ vs. $skyShine$.]{\label{fig2:1b}\includegraphics[width=60mm]{skyShineVsYmc.png}}
+	\subfigure[$z_{mc}$ vs. $skyShine$.]{\label{fig2:1c}\includegraphics[width=60mm]{skyShineVsZmc.png}}
+	\subfigure[$r_{mc}$ vs. $skyShine$.]{\label{fig2:1d}\includegraphics[width=60mm]{skyShineVsRmc.png}}
+	\caption{MC positions vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsPos}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.7$.]{\label{fig2:2a}\includegraphics[width=60mm]{skyShineVsRho_mc.png}}
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.5$.]{\label{fig2:2b}\includegraphics[width=60mm]{skyShineVsRho_mc1p5.png}}
+	\caption{MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}\label{skySHineCutsVsMCpos}
+\end{figure}
+
+By checking the MC events positions (``true'' event positions),  for all the triggered events, 16.8\% of them are outside the AV. Apply skyShine>1.7 can remove 98.6\% of the events outside the AV (mostly in the neck) with a sacrifice of 0.2\% of the events inside the AV.
+
+\subsubsection{Optimize the Sky-shine Cuts}
+
+Since the Sky-shine classifier removes neck events (most of them are outside the PSUP) which are not properly fitted, a skyShine cut can reduce the fit biases and improve the fit resolution.
+
+skyShine vs. fit biases (208Tl)
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:3a}\includegraphics[width=50mm]{skyShineVsXbias.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:3b}\includegraphics[width=50mm]{skyShineVsYbias.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:3c}\includegraphics[width=50mm]{skyShineVsZbias.png}}
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitBias}
+\end{figure}
+
+An improvement of $\sim 18$ mm in z resolution.
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4a}\includegraphics[width=50mm]{fitBiasX_noCuts_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4b}\includegraphics[width=50mm]{fitBiasY_noCuts_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4c}\includegraphics[width=50mm]{fitBiasZ_noCuts_Tl208_partial.png}}
+	
+		\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4d}\includegraphics[width=50mm]{fitBiasX_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4e}\includegraphics[width=50mm]{fitBiasY_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4f}\includegraphics[width=50mm]{fitBiasZ_skyShine1p7_Tl208_partial.png}}
+	
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitResol}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=60mm]{skyShineCuts.png}
+	\caption{ Radial resolutions with different skyShine cuts.}
+	\label{skySHineCutVsFitResol}.
+\end{figure}
+
+Apply different cuts of $skyShine$: $skyShine>1, 1.01, 2.0$, begins from 1.0 with a 0.01 step until 2.0.
+Plot the x bias $x_{fit}-x_{mc}$ versus the $skyShine$ cut values.
+
+Fit	a gaussian to $x_{fit} - x_{mc}$ and get $\sigma_x$,
+Do the same thing to the $y_{fit} - y_{mc}$, $z_{fit} - z_{mc}$ and	obtain	$\sigma_x, \sigma_y, \sigma_z$
+Fill a 1D histogram of Sky-shine cut and
+$\Delta R= \sqrt{\sigma^2_x+\sigma^2_y+\sigma^2_z}$
+
+Compare to the number of MC events inside the scintillator $\sqrt(x^2+y^2+(z-108)^2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events after cut:
+$skyShine>1.6$: 3149/3376
+$skyShine>1.7$: 3149/3351
+Can check with more productions/higher statistics.
+
+\subsection{Different PPO Concentrations during the Filling}
+
+Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
+
+The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
+
+The partial fitter is re-coordinated according to these measurements.
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure} time constants and amplitudes measured by Oxford group \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
+			\toprule 
+			PPO [g/L] & $\tau_{rise}$ [ns] & $\tau_1$ [ns] & $\tau_2$ [ns] & $\tau_3$ [ns] & $A_1$ [\%]  & $A_2$ [\%]   & $A_3$ [\%]  & $A'$ [\%] \\
+			\midrule
+		 0.25 & 1.25 & 8.1 & 25.0 & 68.2 & 29.2 & 53.1 & 13.9 & 3.8\\
+		 0.5  & 1.12 & 7.2 & 18.7 & 49.1 & 43.5 & 40.4 & 12.6 & 3.5 \\
+		 1.0 & 1.18 & 5.5 & 13.3 & 40.9 &	45.6 & 37.5 & 13.3 & 3.6 \\
+		 2.0 & 1.06 & 4.2 & 11.7 & 48.9 & 57.9 & 27.8 & 8.9 & 5.4	\\
+		 6.0 & 0.94 & 2.5 & 9.3  & 46.0 & 63.7 & 17.0 & 8.6 & 10.7\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+\[
+\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}}
+\]
+
+based on these measured parameters, pdfs were built. 
+
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=6cm]{skyShine.png}
+%	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
+%	\label{oxford_pdf}
+%\end{figure}
+
+relative light yield (2g/L = 11900)
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
+			\toprule 
+			PPO [g/L] & RLY \\
+			\midrule
+			0.25 & 0.57\\
+			0.5 & 0.65\\
+			1.0 & 0.9\\
+			2.0 & 1.0\\
+			6.0 & 0.93\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{oxfordPdf_log.png}
+	\caption{Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}
+	\label{oxfordPdf}
+\end{figure}
+
+
+
+
+The partial fitter is robust with changes of time profile pdfs.
+
+
+radial biases
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_groupV}Tuned effective group velocities for different PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
+			\toprule 
+			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_{scint}$ & $V_{gr,water}$ [mm/ns]& $n_{water,tuned}$\\
+			\midrule
+			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
+			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\
+			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
+			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
+			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+Simulate 5000 events for 3 MeV $e^-$,  
+
+
+$\Delta x = x_{fit}-x_{mc}$
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{145         mm}{c@{\extracolsep{\fill}}cccccc}
+			\toprule 
+			PPO [g/L] & fit speed [s/event]& $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & $r_{bias}$ [mm] & \\
+			\midrule
+			0.25 & 0.190 &6.65 &2.64& -18.24& -7.22\\
+			0.5  & 0.144 &-0.73 &-1.69& -8.14& 3.30 \\
+			1.0 &0.190 & 1.42 &0.57 &-5.65& 10.67 \\
+			2.0 &0.194 & 0.34 &1.78& -4.01& 13.37	\\
+			6.0 &0.145 & -0.11& -0.12& -25.97& -10.97\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+%% fit resolutions
+$z_{fit}$ resolution [mm] 
+
+%& 120.6
+%& 90.02
+%& 67.39
+%& 55.81
+%& 58.62
+
+fit with wrong PPO concentrations:  
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias1} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccccccc}
+			\toprule 
+			PPO [g/L] & $\Delta x$ & $\Delta y$ & $\Delta z$  & $\sigma_z$ & $r_{bias}$  & $\sigma_r$ & ratio in FV (\%)&\\
+			\midrule
+			0.25 & 6.80& 2.90& -14.61& 121.6& -4.82& 120.3& 93.70\%\\
+			0.5  & 5.15& 2.82& -12.85 &120.2 &1.34 &123.0 &93.46\% \\
+			1.0 &2.32 &1.95 &-13.22& 120.3& 0.344& 121.9 &93.78\% \\
+			2.0 &5.76& 3.03& -9.61& 119.3& 7.264 &125.1& 93.26\% \\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+
+PPO in Fitter
+configuration
+
+
+\subsection{Bi-Po Analysis}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=15cm]{flowchart_latex.pdf}
+	\caption{A flow chart for Bi-Po tagging.}
+	\label{biPo_flowchart}
+\end{figure}
+
+
+
+
+\subsection{$^{16}$N Calibration Calibration in the Partial-fill Phase}
+
+water level was at 5100 mm from the center of the AV (in AV coordination).
+LAB with a PPO concentration of 0.53 g/L  
+
+Effect of the water level.
+
+
+
+The \isotope[16]{N} source was deployed in the external water region during the partial-fill phase.
+run 251748 2019/09/19 and 
+
+Source position was at $(-1120.8, 1041.4, 6172.5)~ mm$ for a 30-minute duration and at $(-1120.8. 1041.4, 6108.0)~mm$ for a 7-hour duration (separated into 7 runs).
+
+
+
+
+
+\subsection{Extracting the Cherenkov Signals in Partial-fill Phase}
+
+For an event happens in liquid scintillator, the number of Cherenkov photons it created is only $\sim 5\%$ 
+of the total photon numbers, which is a very small fraction compared to the number of scintillation photons. This causes the directional Cherenkov signals are submerged in the isotropic lights.
+
+Since the \isotope[16]{N} source provides high energy events around 6 MeV, 
+
+
+
+
+
+
+a time cut window on the time residual was optimized for the searching based on MC.
+
+simulations in pure scintillator phase.
+
+
+
+
+
+
+ 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cherenkov_scint_variousE.png}
+	\caption{Distributions of $\cos\theta_{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}
+	\label{cherenkov_variousE}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{%PMT pattern before transformation.]{
+		\begin{minipage}[t]{0.32\textwidth}
+			\includegraphics[width=5.5cm]{partial0p5_6MeV_noRotate.pdf}
+		\end{minipage}
+	}   
+	\subfigure[]{%PMT pattern before transformation, in sinusoidal map.]{ 
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_noRotate.pdf}
+		\end{minipage}
+	}
+	\subfigure[]{%PMT pattern after transformation.]{ 
+	\begin{minipage}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=5.5cm]{partial0p5_6MeV_rotate.pdf}
+	\end{minipage}
+    }
+	\subfigure[]{%PMT pattern after transformation, in sinusoidal map.]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_rotate.pdf}
+		\end{minipage}
+	}
+	\caption{PMT hit patterns after the prompt time cut and NHit cut.}
+	\label{6MeVisoPattern}
+\end{figure}
+
+
+
+
+In the case that $e^-$ are generated uniformly and isotropically in the detector, to enhance the 
+Cherenkov ring pattern, a transformation is applied as following:
+
+$\phi=\arccos(\hat{\vec{u}}_e\cdot\hat{\vec{u}}_{assume})$
+
+$\vec{n}=\hat{\vec{u}}_e\times\hat{\vec{u}}_{assume}$
+\[
+R=\begin{bmatrix}
+n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
+n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
+n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
+\end{bmatrix}
+\]
+$\vec{u'}_e=R\vec{u}_e$
+
+$\vec{X'}_{evt}=R\vec{X}_{evt}$
+
+Move $\vec{X'}_{evt}$ to the origin,
+
+$\vec{X'}_{pmt}=R\vec{X}_{pmt}-\vec{X'}_{evt}$
+
+
+
+Turning off the Cherenkov process in the Monte Carlo simulations.
+
+
+
+
+
+
+
+
+
+Breit-Wigner function
+\[
+p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
+\]
+
+
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{partialN16.png}
+	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
+	\label{partialN16}
+\end{figure}
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{track_partial_N16.png}
+	\caption{Simulated main track of 7.1 MeV $\gamma$ for one event from $\isotope[16]{N}$ source in the external water during the partial-fill phase.}	
+	\label{track_partial_N16}
+\end{figure}
+
+
+
+
+
+
+
+
+\subsubsection{$AmBe$ Source Analysis}
+
+The $AmBe$ source
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Towards the Te-loaded Phase}
+
+\subsection{Muon Induced Backgrounds in the Te-loaded Phase}
+This analysis is 
+
+based on the work
+
+
+
+\begin{table}[ht]
+	%%%%\footnotesize
+	\caption{Cosmic muon induced isotopes production rates $R_i~[kt^{-1}yr^{−1}]$.}\label{estimateRates}
+	\centering
+	\scriptsize
+	\begin{tabular*}{170mm}{c@{\extracolsep{\fill}}cccccccc}
+		\toprule 
+		\multirow{2}{*}{isotopes} &\multicolumn{2}{c}{NA54 mean}& NA54 distr.& \multicolumn{2}{c}{KamLAND}& \multicolumn{2}{c}{Borexino}\\
+		\cline{2-3}   \cline{5-6} \cline{7-8}
+		& solar & Te & solar  & solar & Te & solar & Te\\
+		\midrule
+		$^{11}$C &559.72$\pm$55.81 &524.34$\pm$52.28 &190$\pm$33 &1135.1$\pm$206.21 &1063.34$\pm$193.17& 1048$\pm$121 &981.75$\pm$113.35\\
+		$^{12}$B & -- & -- & -- & 59.94$\pm$5.41& 56.15$\pm$5.07 &69$\pm$3 &65$\pm$3\\
+		$^{11}Be$&  1.45$\pm$0.11& 1.36$\pm$0.10& -- &1.50$\pm$0.35 &1.41$\pm$0.33& $<8.5$ & $<7.96$ \\
+                $^{11}Li$ & -- & -- & -- & -- & -- & -- & --\\
+		$^8$Li & 2.49$\pm$0.92 & 2.33$\pm$0.86 & 1$\pm$1 & 15.64$\pm$3.47 & 14.65$\pm$2.35 & 8$\pm$7 & 7$\pm$7\\
+		$^8$He ($^8$He+$^9$Li) & 1.31$\pm$0.24 & 1.23$\pm$0.22 & -- & 1.13$\pm$0.57 & 1.05$\pm$0.53 & $<1.9$ & $<1.8$\\
+		$^9$Li & --&  --&  --&  3.04$\pm$0.34 & 2.85$\pm$0.32 & 3.6$\pm$0.3 & 3.4$\pm$0.3\\
+        $^6$He & 9.91$\pm$1.25 & 9.28$\pm$1.17 & 3$\pm$1 &-- &-- &46$\pm$16 & 43$\pm$15\\
+		$^{10}$C & 71.37$\pm$10.55 & 66.86$\pm$9.88 & 24$\pm$6 & 22.63$\pm$2.73 & 21.20$\pm$2.56 & 22$\pm$5 & 21$\pm$5\\
+        $^9$C & 2.99$\pm$0.96 & 2.80$\pm$0.90 & -- & 4.09$\pm$1.65 & 3.83$\pm$1.55 & $<19.3$ & $<18.1$\\
+        $^8$B & 4.41$\pm$0.96 & 4.13$\pm$0.90 & 2$\pm$1 & 10.05$\pm$2.86 & 9.41$\pm$2.68 & 16$\pm$6 & 15$\pm$6\\
+		$^7$Be &142.25$\pm$17.90 & 133.26$\pm$16.77 & 55$\pm$15 & -- & -- & -- & --\\
+		$^{12}$N & -- &--& --& --& --& $<1.88$ & $<1.76$\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+* These data are taken from \cite{nndc}.
+
+\begin{table}[ht]
+	\caption{Decay information of the isotopes.}\label{decayIso}
+	\centering	
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+		\toprule 
+		isotope &half-life & Q-value &  Decay mode\\
+		\midrule
+		$^{11}$C & 20.334 min & 0.96 MeV&  $^{11}$C$\to ^{11}$B$+e^++\nu_e$\\
+		$^{10}$C & 19.308 s & 3.65 MeV & $^{10}$C$\to^{10}$B$+e^+ +\nu_e$\\
+		$^{6}$He &806.7 ms & 3.51 MeV &  $^{6}$He$\to^{6}Li+e^-+\nu_e$\\
+		\bottomrule	
+	\end{tabular*}
+\end{table}  
+* These data are taken from \cite{nndc}.
+
+
+To simulate these backgrounds, the optics for $0.3~\%$ Te by weight and with $bisMSB$ ($te\_0p3\_labppo\_scintillator\_bisMSB\_Feb2015$)
+and RAT-5.2.3 were used.
+
+
+
+I looked into 10000 simulations of the cosmic muon induced $^{11}$C, $^{10}$C and $^6$He backgrounds events. Each simulation runs for one
+year duration.
+
+Fig.~\ref{muon_c11}, Fig.~\ref{muon_c10} and Fig.~\ref{muon_He6} show the spectrum of the Monte Carlo energies (mc Edep quenched) scaled from 10000 simulations
+(left) and the scaled spectrum of the reconstructed energies (right) for one year duration and one kilo-tonne of the
+cocktail. The fiducial volume (FV) cuts of 5.5-m, 4.5-m, 3.5-m are applied.
+
+The Monte Carlo results give a total 11C background rate of 1063.55 $kt^{-1}yr^{-1}$ without cuts, 21.39 $kt^{-1}yr^{-1}$ for
+$^{10}$C and 43.31 $kt^{-1}yr^{-1}$ for $^6$He.
+From results of the reconstructed energies, a total background rate of 989.17 $kt^{-1}yr^{-1}$ for $^{11}$C is evaluated while
+20.06 $kt^{-1}yr^{-1}$ for $^{10}$C and 40.07 $kt^{-1}yr^{-1}$ for $^6$He.
+
+For the region of interest (ROI) of the $^{130}$Te $0\nu\beta\beta$ search, we defined the ROI windows by simulating 10000 events of $0\nu\beta\beta$,
+fitting the $0\nu\beta\beta$ signal peak with Gaussian function and taking the -0.5$\sigma$ to 1.5$\sigma$ region around the Gaussian signal
+peak. The ROI window of $[2.47, 2.70]~MeV$ taken from \cite{whitepaper} is also checked. From both
+results of the Monte Carlo and reconstruction, after the 5.5-m FV cut, no events of $^{11}$C backgrounds in the ROI are
+expected; after the 3.5-m FV cut, the event rates of $^{10}$C and $^6$He are below 1 $kt^{-1}yr^{-1}$ in the ROI. Among these
+three backgrounds, the $^{10}$C has the highest event rates in the ROIs.
+The event rates for these three isotopes backgrounds with different FV cuts and different ROI windows are
+summarized in Table.~\ref{muon_eventrates}. The values obtained from the Monte Carlo simulations are listed in the ``MC" column and
+from the reconstruction are listed in the ``Recon" column.
+
+\begin{table}[ht]
+	\caption{Production rates for $^{11}$C, $^{10}$C and $^{6}$He backgrounds in SNO+ Te-loaded Phase.}\label{productionRates}
+				\centering	
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+			\toprule 
+			isotope & rates [$kt^{-1}\cdot yr^{-1}$]& rates [Hz]\\
+			\midrule
+		 $^{11}$C & 1063.34 & 0.00003372\\
+		 $^{10}$C & 21.20 & 0.0000006722\\
+		 $^{6}$He &43.09& 0.0000013663 \\
+			\bottomrule	
+	\end{tabular*}
+\end{table}
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muon_mcC11.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muon_reconC11.png}
+		\end{minipage}
+	}
+	\caption{Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
+	\label{muon_c11}
+\end{figure}
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{muon_mcC10.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{muon_reconC10.png}
+		\end{minipage}
+	}
+	\caption{Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
+	\label{muon_c10}
+\end{figure}
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{muon_mcHe6.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{muon_reconHe6.png}
+		\end{minipage}
+	}
+	\caption{Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
+	\label{muon_He6}
+\end{figure}
+
+\begin{table}[ht]
+	\caption{Event rates of cosmic muon induced $^{11}$C, $^{10}$C and $^{6}$He backgrounds in SNO+ Te-loaded Phase (unit: $kt^{-1}\cdot yr^{-1}$). 
+		Different fiducial volume (FV) cuts and ROI region cuts are applied. The ``MC" Column presents the values obtained from the Monte Carlo and the ``Recon." column presents the values obtained from the reconstructed energies.}
+	\centering
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+		\toprule
+		\multirow{2}{*}{FV cuts} & \multirow{2}{*}{ROI [MeV]} & \multicolumn{2}{c}{$^{11}$C} & \multicolumn{2}{c}{$^{10}$C} & \multicolumn{2}{c}{$^{6}$He}\\
+		\cline{3-4}  \cline{5-6} \cline{7-8}
+		&  & MC&Recon. &MC&Recon.& MC&Recon.\\
+		\midrule
+		No cuts & all regions& 1063.55& 989.17 &21.39 &20.06& 43.31& 40.07\\	
+		&[2.47, 2.70] &0 &1& 4.52& 4.31 &2.78& 2.88\\
+		&[2.492, 2.737] &0& 0& 4.44& 4.25& 2.67& 2.79\\
+		5.5-m & all regions & 807.06& 786.81& 16.24& 15.72& 32.92& 32.04\\
+		&[2.47, 2.70] &0 &0 &3.63 &3.45 &2.13 &2.25\\
+		&[2.487, 2.711] &0 &0 &3.28 &3.12 &1.90 &2.00\\
+		4.5-m & all regions & 442.00 &437.00 &8.87 &8.72 &18.04 &17.83\\
+		&[2.47, 2.70]& 0 &0& 2.00& 1.92& 1.16& 1.23\\
+		&[2.477, 2.692]& 0& 0& 1.64 &1.57& 0.95& 1.01\\
+		3.5-m & all regions & 207.84& 206.34& 4.20& 4.16& 8.47& 8.42\\
+		&[2.47, 2.70]& 0& 0& 0.95& 0.92& 0.54& 0.57\\
+		&[2.477, 2.688]& 0& 0& 0.78& 0.76& 0.44& 0.46\\
+		\bottomrule		
+	\end{tabular*}\label{muon_eventrates}
+\end{table}
+
+In addition, the muon-induced 11C, 10C and 6He backgrounds in the solar phase are also checked. Fig.~\ref{muonSolarC11} to Fig.~\ref{muonSolarHe6}
+show the scaled spectrum from 10000 simulations of these background events in the solar phase
+for 1 year duration. The total event rates are summarized in Table.~\ref{muon_eventrates2}.
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muonSolarMcC11.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muonSolarReconC11.png}
+		\end{minipage}
+	}
+	\caption{Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
+	\label{muonSolarC11}
+\end{figure}
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muonSolarMcC10.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muonSolarReconC10.png}
+		\end{minipage}
+	}
+	\caption{Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
+	\label{muonSolarC10}
+\end{figure}
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muonSolarMcHe6.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=7cm]{muonSolarReconHe6.png}
+		\end{minipage}
+	}
+	\caption{Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}
+	\label{muonSolarHe6}
+\end{figure}
+
+
+\begin{table}[ht]
+	\caption{Event rates of cosmic muon induced $^{11}$C, $^{10}$C and $^6$He backgrounds in SNO+ solar phase (unit: $kt^{-1}\cdot yr^{-1}$). FV Cuts ROI [MeV] $^{11}$C events $^{10}$C events $^{6}$He events}
+	\centering
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+		\toprule
+		\multirow{2}{*}{FV cuts} & \multirow{2}{*}{ROI [MeV]} & \multicolumn{2}{c}{$^{11}$C} & \multicolumn{2}{c}{$^{10}$C} & \multicolumn{2}{c}{$^{6}$He}\\
+		\cline{3-4}  \cline{5-6} \cline{7-8}
+		&  & MC & Recon.& MC& Recon.& MC& Recon.\\
+		\midrule
+		No cuts & all regions &  1136.32 & 1107.50 & 24.04& 23.07& 46.99& 45.30\\
+		5.5-m & all regions & 862.32& 855.56& 18.20& 17.64& 35.64& 35.25\\
+		4.5-m & all regions & 472.12&470.22& 9.92& 9.77& 19.44& 19.41\\
+		3.5-m & all regions & 222.05& 221.94& 4.63& 4.66& 9.17& 9.24\\
+		\bottomrule		
+	\end{tabular*}\label{muon_eventrates2}
+\end{table}
+
+\subsection{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
+
+As described in Chapter 3, the energies of charged particles are converted into photons by the scintillator medium. By measuring the amount of the light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible $0\nu\beta\beta$-decay signal.
+
+For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak is at $2.5~MeV$\cite{whitepaper}.  This peak is relatively small and can be immerged in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials [cite whitepaper]. Therefore, the 0νββ-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
+
+Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators \cite{biller2017new}.
+
+\subsection{Measurement Setup and Data Acquisition}
+
+We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, which can affect the light yield, for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples.  Te-butanediol samples from both of the DDA and SOP synthesis procedures are prepared and are referred as TeDDA and TeSOP samples respectively. These samples are further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. To avoid air bubbles created by squeezing the vial cap into the liquid, the liquid level for each sample is kept at 30 mm. The dimensions of the vial is shown in the left picture of Fig.~\ref{scintVial}.
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.38\textwidth}
+			\includegraphics[width=4cm]{scintVial.png}
+		\end{minipage}
+	}   
+		\subfigure{ 
+		\begin{minipage}[b]{0.35\textwidth}
+			\centering
+			\includegraphics[width=6cm]{plasticHolder.png}
+		\end{minipage}
+	}
+	\caption{Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}
+	\label{scintVial}
+\end{figure}
+
+Two Hamamatsu R580 PMTs [cite PMT] were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~12.  The plastic piece is in a cylindrical shape with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to go inside from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable PLA filament and was machined by 3D-printing facility. The pictures of the piece are shown in Fig.~ 13.
+
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{teLSsetup.png}
+	\caption{A diagram shows the light yield measurement setup. See the text for details.}
+	\label{teLSsetup}
+\end{figure}
+
+Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic piece held the radioactive source and the scintillation vial. It also aligned two PMTs to face to the scintillation vial from each side. The piece can shield lights from outside as well. These setups were placed in a dark box to prevent the lights from lab. Two RG59/U type high voltage (HV) cables connected the PMTs to an HV supply outside the dark box. The HV cables were connected to two signal/HV split boxes to separate the HV current and electrical signals. Due to the resistor of the split box, the HV supply was set to 2200 Volts (V) for the PMT operation while the operation voltage suggested by the Hamamatsu is 1800 V. 
+
+The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. This amplifier inverted the signals and amplified them by 26 dB. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
+
+To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel [cite CAEN].
+
+This module is controlled by the CoMPASS software, which is provided by CAEN. The software sets up the threshold and trigger parameters. For each triggered event which passes the threshold, the software records event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, it can also calculate the energy of a triggered event [cite compass].
+
+Each channel recorded the signals from each PMT individually. With the two-PMT setup, we applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels were set to 48 ns. For a certain event, the CoMPASS software compares the event time difference between two channels and only records it if the event time differences is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
+
+
+Fig.~12: Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: Two PMTs are aligned to face to the scintillation vial from each side.
+
+
+Fig.~ 13. The plastic piece holds the radiation source and the scintillation vial.  It also aligns the PMTs to face the vial from two sides.
+Fig.~ 14:  Diagram for the light yield measurement setup. See the text for details.
+
+Measurement
+
+The liquid scintillator samples we have measured are: LAB-PPO, TeDDA, TeSOP. The unloaded LAB-PPO sample served as a standard candle. 
+
+
+A Cesium-137 (\isotope[137]{Cs}) radioactive source was always placed at the bottom of the scintillation vials.
+The source was made by Radiochemical Centre Amersham. The radioactivity measured on 1st April 1974 was $11.09~microcurie(\mu Ci)$, with an accuracy of $3.7\%$. The activity was expected to be 
+in this thesis, considering a half-life of 30.08 years for the \isotope[137]{Cs}\cite{nndc}.
+
+
+
+has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
+
+For each sample, measurements were taken for one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$ rays interacted with the LAB-PPO sample. The p.e. signals triggered PMT pulses and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time tag. From this trigger time tag, in the following 80 ns window the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also from the trigger time tag, a pre-gate of 8 ns was set. The waveform was integrated in the time gate of  [trigger time - 8,  trigger time + 72] ns. This gives the integrated charge, which was calculated as a A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we simply used ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Time stamps were recorded as event time when the triggered event hapfpened. The waveform was recorded and the ADC channel number (energy) of this event was calculated.
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=8cm]{teLS_waveform.png}
+	\caption{A typical waveform triggered by scintillation photons from 137Cs $\gamma$-rays interaction with LAB-PPO sample.}
+	\label{teLSwaveform}
+\end{figure}
+
+In a coincidence time measurement, the event times of the events recorded by each of the two PMTs were compared. If the event time differences between two events from each PMTs were too long, these two events were considered as random noises rather than the physics events and were not recorded. We optimized a coincidence time cut as 40 ns and set that cut during the digitizer data-taking. 
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{TeLScoinCut.png}
+	\caption{Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0.  A threshold for counting is set by comparing the two spectrum.}
+	\label{teLScoinCut}
+\end{figure}
+
+Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there exists a zero peak, which is caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT [cite leo].  The peak on the right is the multiple p.e. peak, in our case is mainly caused by a number of scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peak is removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
+
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{TeLS_2Denergy.png}
+	\caption{ 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}
+	\label{teLSresults}
+\end{figure}
+
+Fig.~\ref{teLSresults} shows the result of one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~ 18 shows the results of the TeSOP and TeDDA samples.  Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
+
+In Fig.~ 18, the 2D plots in Fig.~\ref{teLSresults} are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
+
+From this plot, the single p.e. peaks for all the samples as well as the background match together. The multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can clearly see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP is slightly larger than the TeDDA. 
+
+To quantify the light yield differences between different samples, an analysis method of charge weighted photon number has been applied as the following:
+
+First, from the spectrum, fit the single p.e. peak with an asymmetric Gaussian function, as shown in Fig.~ 19. The mean value of the asymmetric Gaussian represents the ADC channel number corresponding to the single p.e. peak.
+
+$\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma}$,
+$f_{asym}=c\cdot e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\cdot Erfc(\xi)$
+
+$p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$ 
+
+Then for the multiple p.e. region, weighting (dividing) the counts of the event in each channel with the single p.e. ADC channel number to calculate the total number of the photons.
+
+
+Fig.~ 19. Fit the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
+
+To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
+
+Fig.~\ref{2dplot} 2D LABPPO spectrum with coincidence cut. A box cut is defined for multiple PE counting. 
+
+Once the total number of the photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
+
+\subsubsection{Results}
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{lightyield1} Number of photons calculated by Charge weighted photon number method.}
+				\centering	
+		\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			Sample & Number of photons ($\times 10^6$) & RLY\\
+			\midrule
+		LAB-PPO& 2.0811 & 1\\
+		TeDDA& 1.2652 & 	0.61 \\
+		TeSOP& 1.3976 & 0.67\\
+			\bottomrule	
+		\end{tabular*}
+\end{table}
+
+Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
+
+Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In [cite billerTe],  a relative light yield of ~0.65 was reported.
+
+
+%[markchen] Shimizu, Itaru, and Mark Chen. "Double beta decay experiments with loaded liquid scintillator." Frontiers in Physics 7 (2019): 33.
+%
+%[birks] Birks, John Betteley. The theory and practice of scintillation counting: International series of monographs in electronics and instrumentation. Vol. 27. Elsevier, 2013.
+%
+%[leo] Leo, William R. Techniques for nuclear and particle physics experiments: a how-to approach. Springer Science & Business Media, 2012.
+%
+%[knoll]Knoll, Glenn F. Radiation detection and measurement. John Wiley & Sons, 2010.
+%
+%[novikov] V. Novikov, Scintillator development for SNO+, SNO+ internal document (2009).
+%
+%[pmt] “Photomultiplier Tube R580.” Photomultiplier Tube R580 | Hamamatsu Photonics, www.hamamatsu.com/eu/en/product/type/R580/index.html. 
+%
+%
+%[ppo] Wunderly, Stephen W., and Joel M. Kauffman. "New quench-resistant fluors for liquid scintillation counting." International Journal of Radiation Applications and Instrumentation. Part A. Applied Radiation and Isotopes 41.9 (1990): 809-815.
+%
+%[whitepapter] Andringa, S., et al. "Current status and future prospects of the sno." Advances in High Energy Physics 2016 (2016).
+%
+%[dayabay] W. Beriguete. et al., Production of Gadolinium-loaded Liquid Scintillator for the Daya Bay Reactor Neutrino Experiment, arXiv:1402.6694 [physics.ins-det]
+%
+%[dayabayBench] Xing-Chen, Ye, et al. "Preliminary study of light yield dependence on LAB liquid scintillator composition." Chinese Physics C 39.9 (2015): 096003.
+%
+%[tanner] Kaptanoglu, Tanner, Meng Luo, and Josh Klein. "Cherenkov and scintillation light separation using wavelength in LAB based liquid scintillator." Journal of Instrumentation 14.05 (2019): T05001.
+%
+%[lightYield] S. Grullon. Light yield and scintillation decay time constants of Te-loaded liquid scintillator for the SNO+experiment. InProceedings ofthe 26th International Conference on Neutrino Physics and Astrophysics(Neutrino ’14), Boston, MA, June 2014. Boston University.
+%
+%[stevebiller] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
+%
+%[caen] “DT5751 - CAEN - Tools for Discovery.” CAEN, www.caen.it/products/dt5751/.
+%
+%[compass]  “CoMPASS Multiparametric DAQ Software for Physics Applications
+%”https://www.caen.it/products/compass/
+%
+%[nndc] Decay Radiation Results, Brookhaven National Laboratory, www.nndc.bnl.gov/nudat2/decaysearchdirect.jsp?nuc=137CS&unc=nds.
+%
+%[billerTe] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
