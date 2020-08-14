@@ -148,7 +148,37 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 
 
 \subsection{Angular Resolution}
+An angular resolution function was 
+
+It is defined as a combination of two exponential components:
+\begin{equation}
+P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
+\end{equation}
+where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or ``slopes'' of the two exponential components; the $\alpha_M$ is the fraction between two exponential components.
+events following the exponential with slope βm. 
+
+
+The angle θ is the displacement between the ‘truth’ and
+reconstructed directions.
+
 Direction resolutions, with a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$:
+
+The fitted results are shown in Table.~\ref{angularResolValues}.
+\begin{table}[ht]
+	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+		\toprule
+		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+		\hline
+		Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
+		Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
+		\hline
+		MPW data & 3.79$\pm$0.12 & 18.58$\pm$0.95 & 0.53$\pm$0.02 & 154.6/143 & 0.982 & 0.743 & 0.379\\
+		MPW MC &4.01$\pm$0.19 & 18.41$\pm$1.06 & 0.48$\pm$0.03 & 128.4/127 & 1 & 0.779 & 0.433  \\
+		\bottomrule
+	\end{tabular}
+	\label{angularResolValues}
+\end{table}
+
 
 Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ cuts.
 \begin{figure}
@@ -158,33 +188,13 @@ Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\
 	\label{angularResolMPW}
 \end{figure}
 
-To describe the $\cos\theta_e$ distribution, if integrating from a $\cos\theta_e$ value to $+1$ contains 50\% of the reconstructed events, then this $\cos\theta_e$ is defined as $\cos\theta_{0.5}$. Similarly, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ are defined for 80\% and 90\% cases respectively. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
+To describe the $\cos\theta_e$ distribution, the angles that contain 50\%, 80\%and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ can also be used. Their values are solved numerically by the equation \ref{eq:cosTheta_e} below (take $\cos\theta_{0.5}$ as an example):
 
-
-The angular resolution function is defined as:
-\begin{equation}
-P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)}
+\begin{equation}\label{eq:cosTheta_e}
+\frac{\int_{\cos\theta_{0.5}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) d\cos\theta_e} = 50\%,
 \end{equation}
 
-
-The fitted results are shown in Table.~\ref{angularResolValues}.
-\begin{table}[ht]
-\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
-	\toprule
-	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
-	\hline
-	Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
-	Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
-	\hline
-	MPW data & 3.79$\pm$0.12 & 18.58$\pm$0.95 & 0.53$\pm$0.02 & 154.6/143 & 0.982 & 0.743 & 0.379\\
-	MPW MC &4.01$\pm$0.19 & 18.41$\pm$1.06 & 0.48$\pm$0.03 & 128.4/127 & 1 & 0.779 & 0.433  \\
-	\bottomrule
-\end{tabular}
-\label{angularResolValues}
-\end{table}
-
-
-
+where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
 
 
 \section{Extracting \texorpdfstring{$\gamma$}{Lg}-rays from Neutron Capture}
