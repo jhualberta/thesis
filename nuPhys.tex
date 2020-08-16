@@ -402,9 +402,9 @@ The isodoublet $\Psi_L = \begin{pmatrix}\psi_{\nu_f}\\ \psi_f\\ \end{pmatrix}_L$
 According to the Gell-Mann-Nishijima formula $Q=I_3+\frac{1}{2}Y$, where Q is the particle electric charge and Y is the hypercharge. For $\Psi_L$, $\hat Y\Psi_L = -\Psi_L$; while $\hat Y\Psi_R=-2\Psi_R$. The leptons acquire their masses by coupling to the Higgs fields. To realize this, the Higgs scalar fields also form an isodoublet $\Phi = \begin{pmatrix}\phi^+\\ \phi^0\\ \end{pmatrix}$ with weak isospin $I=\frac{1}{2}$, where $\psi^+$ is a positive charged complex scalar field with $I_3=\frac{1}{2}$ and $\psi^0$ is a neutrally charged complex scalar field with $I_3=-\frac{1}{2}$. Such a coupling of fermions to the scalar field is a typical Yukawa coupling. The Lagrangian of the Yukawa coupling in the lepton sector is\cite{funchal2013physics}:
 
 \begin{equation}\label{yukawa}
-\mathcal L_{Yukawa}(\Phi,\Psi) = -\sum_{ff'} \mathcal Y^{lepton}_{ff'} \overline{\Psi}_{fL}\Phi\Psi_{f'R} + h.c.,
+\mathcal L_{Yukawa}(\Phi,\Psi) = -\sum_{f,f'=e,\mu,\tau} y^{lep}_{ff'} \overline{\Psi}_{fL}\Phi\Psi_{f'R} + h.c.,
 \end{equation}
-where $f,f'=e,\mu,\tau$ and $\mathcal Y^{lep}_{ff'}$ are Yukawa coupling constants of leptons. The $h.c.$ means hermitian conjugate.
+where $f,f'=e,\mu,\tau$ and $y^{lep}_{ff'}$ are matrices for Yukawa coupling constants of leptons. The $h.c.$ means hermitian conjugate.
 
 Since no $\nu_R$ presents in the Standard Model, the lack of $\Psi_{\nu_f R}$ term makes neutrino massless. The simplest extension to the Standard Model to create neutrino masses is to introduce the SU(2) singlet states, or the right-handed neutrino fields $\nu_R$. This kind of isosinglet does not participate in the electroweak interactions and are thus called sterile neutrinos. 
 
@@ -412,8 +412,9 @@ If neutrinos are Dirac particles, the mass term in \ref{diracLagrange} becomes $
 
 the Dirac mass term becomes:
 \begin{equation}
--\mathcal L^D_{mass} =\sum_{f=e,\mu,\tau}\frac{v}{\sqrt{2}}\mathcal{y}_f^{lep}\bar{\psi}_{fL}\psi_{fR}+\sum_{i=1,2,3}\frac{v}{\sqrt{2}}\mathcal \mathcal {y_i}^\nu\bar\nu_{iL}\nu_{iR}+h.c.,
+-\mathcal L^D_{mass} =\sum_{f=e,\mu,\tau}\frac{v}{\sqrt{2}}y_f^{lep}\bar{\psi}_{fL}\psi_{fR}+\sum_{i=1,2,3}\frac{v}{\sqrt{2}}y_{i}^\nu\bar\nu_{iL}\nu_{iR}+h.c.,
 \end{equation}
+where $m_k=y_k^\nu \nu/\sqrt 2$   
 
 
 
