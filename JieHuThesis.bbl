@@ -267,6 +267,11 @@ A.~Zee, {\em Quantum field theory in a nutshell, 2nd edn.}, vol.~7.
 E.~Majorana and L.~Maiani, {\em A symmetric theory of electrons and positrons}.
 \newblock Springer, 2006.
 
+\bibitem{wu1957experimental}
+C.-S. Wu, E.~Ambler, R.~Hayward, D.~Hoppes, and R.~P. Hudson, ``Experimental
+  test of parity conservation in beta decay,'' {\em Physical review}, vol.~105,
+  no.~4, p.~1413, 1957.
+
 \bibitem{goldhaber1958helicity}
 M.~Goldhaber, L.~Grodzins, and A.~Sunyar, ``Helicity of neutrinos,'' {\em
   Physical Review}, vol.~109, no.~3, p.~1015, 1958.
@@ -707,6 +712,11 @@ P.~B. Denton, S.~J. Parke, and X.~Zhang, ``Eigenvalues: The rosetta stone for
 \bibitem{perkins2009particle}
 D.~H. Perkins, {\em Particle astrophysics}.
 \newblock No.~10, Oxford University Press, 2009.
+
+\bibitem{bilenky2018introduction}
+S.~Bilenky, {\em Introduction to the physics of massive and mixed neutrinos},
+  vol.~947.
+\newblock Springer, 2018.
 
 \bibitem{kane2017modern}
 G.~Kane, {\em Modern elementary particle physics: explaining and extending the
