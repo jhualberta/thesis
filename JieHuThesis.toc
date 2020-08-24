@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {2.3.3}Status of the Neutrino Flavor Transformation Experiments}{15}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Majorana Neutrino and Neutrino Mass}{16}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Neutrino Mass Terms}{16}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Neutrino Mass in Beta Decay}{23}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Neutrino Mass in Beta Decay}{24}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}Double Beta Decay}{24}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Status of Double Beta Decay Experiments}{27}{subsection.2.5.1}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{30}{chapter.3}
