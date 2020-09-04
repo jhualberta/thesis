@@ -373,9 +373,9 @@ I & 0
 \end{equation}
 where $\sigma^i~(i=1,2,3)$ are $2\times 2$ Pauli matrices and $I$ is a $2\times 2$ identity matrix.
 
-The Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$, where $\bar{\psi}\equiv \psi^{\dag}\gamma^0$ is a adjoint field. The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. Then the Dirac Lagrangian density which satisfies the Lorentz invariance and is hermitian can be written as\cite{zee2010quantum}:
+The Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$, where $\bar{\psi}\equiv \psi^{\dag}\gamma^0$ is a adjoint field. The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. With $\overline{\psi_L}\psi_L=\overline{\psi_R}\psi_R=0$ the Dirac Lagrangian density which satisfies the Lorentz invariance and is hermitian can be written as\cite{zee2010quantum}:
 \begin{equation}\label{diracLagrange}
-\mathcal{L}^D = (\bar{\psi}_L i\gamma^\mu\partial_\mu\psi_L+\bar{\psi}_R i\gamma^\mu\partial_\mu\psi_R)-m(\bar{\psi}_R\psi_L+\bar{\psi}_L\psi_R),
+\mathcal{L}^D = (\overline{\psi_L} i\gamma^\mu\partial_\mu\psi_L+\overline{{\psi}_R} i\gamma^\mu\partial_\mu\psi_R)-m(\overline{{\psi}_R}\psi_L+\overline{{\psi}_L}\psi_R),
 \end{equation} 
 where the first two terms on the right hand side are kinetic energy terms with separated chiral components; the last two terms are the Dirac mass term $\mathcal{L}^{D}_{mass}$ with coupled chiral components. For the massive Dirac fields, the left-handed component $\psi_L$ is completely independent of the right-handed $\psi_R$. 
 
@@ -407,7 +407,7 @@ where $y^{lep'}_{\alpha\beta}$ are complex Yukawa coupling matrices of charged l
 
 The lack of the isosinglet term $\nu_R$ in the Standard Model makes neutrino massless. The simplest extension to the Standard Model to create neutrino masses is to introduce the SU(2) singlet states, or the right-handed neutrino fields $\nu_R$. This kind of isosinglet does not participate in the electroweak interactions and are thus called sterile neutrinos. By introducing the $\nu_R$, the Standard Model is minimally extended and neutrinos can be massive\cite{giunti2007fundamentals}.
 
-Since the hypercharge of $\overline{\Psi}_{\alpha L}$ is $Y=+1$ and $\nu_R$ is $Y=0$, the product $\overline{\Psi}_{\alpha L}\nu_{\beta R}$ is $Y=1$. In order to form the $SU(2)_L\times U(1)_Y$ invariant term, a conjugated Higgs doublet with hypercharge $Y=-1$ is built as $\widetilde{\Phi}=i\sigma_2\Phi^*$, where $\sigma_2$ is a Pauli matrix\cite{giunti2007fundamentals}.
+Since the hypercharge of $\overline{\Psi_{\alpha L}}$ is $Y=+1$ and $\nu_R$ is $Y=0$, the product $\overline{\Psi_{\alpha L}}\nu_{\beta R}$ is $Y=1$. In order to form the $SU(2)_L\times U(1)_Y$ invariant term, a conjugated Higgs doublet with hypercharge $Y=-1$ is built as $\widetilde{\Phi}=i\sigma_2\Phi^*$, where $\sigma_2$ is a Pauli matrix\cite{giunti2007fundamentals}.
 
 Then with right-handed singlets $\nu_R$, \ref{yukawa} turns to be\cite{giunti2007fundamentals,funchal2013physics}:
 \begin{equation}\label{yukawa2}
@@ -434,43 +434,32 @@ So the charged lepton masses are given by: $m_{\ell_\alpha}=\frac{y_\alpha^{lep}
 In this Dirac mass case, the masses of charged leptons and neutrinos are both proportional to the Higgs VEV. However, the experimental measurements already show the masses of neutrinos are $\mathcal O(eV)$ 
 while charged leptons are $\mathcal O(MeV)$. The smallness of neutrino masses should be obtained by the tuning of the Yukawa couplings $y_k^\nu$, which does not have solid physics meanings or explanations.
 
-If neutrinos are Majorana fermions, we can take the neutrino field as $\nu=\nu_L+\nu_L^c$ without introducing extra $\nu_R$. Then the Majorana mass term is:  
+If neutrinos are Majorana fermions, since $\nu=\nu^c$ and $\nu_L^c=\nu_R$, we can take the neutrino field as $\nu=\nu_L+\nu_L^c$ without introducing the extra $\nu_R$. For simplicity, only considering one flavor generation (such as $\nu_e$), then the Majorana mass term is:  
 \begin{equation}\label{major_mass}
-\mathcal{L}^{M~L}_{\nu~mass} = -m_L\bar{\nu}\nu=-\frac{1}{2}m_L\overline{\nu_L^c}\nu_L+h.c.,
+\mathcal{L}^{M,L}_{\nu~mass} = -m_L\bar{\nu}\nu=-\frac{1}{2}m_L\overline{\nu_L^c}\nu_L+h.c.,
 \end{equation}
-where the $1/2$ factor is to avoid double counting of $\nu_L^c$ and $\overline{\nu_L}$ since $\nu_L^c=\mathcal{C}\overline{\nu_L}^T$\cite{giunti2007fundamentals}. For this Majorana mass term, If considering the $U(1)$ group transformations: $\psi\to e^{i\alpha}\psi$ and $\bar \psi \to \bar\psi e^{-i\alpha}$, where $\alpha$ is an arbitrary phase parameter, we find that the mass term in the form of $\psi\bar\psi$ is invariant in the Dirac case while it is not in the Majorana case. This means that the Majorana fields break all $U(1)$ charge, such as the electric charge and lepton number. Since the electric charge is always conserved, the particle with a Majorana mass must be electrically neutral\cite{akhmedov2014majorana}. This indicates that the lepton number for the Majorana fermion is not conserved, which is not described in the Standard Model. The neutrinoless double beta decay process discussed in the following section will come back to this point.
+where the $1/2$ factor is to avoid double counting of $\nu_L^c$ and $\overline{\nu_L}$ since $\nu_L^c=\mathcal{C}\overline{\nu_L}^T$\cite{giunti2007fundamentals}. For this Majorana mass term, if considering the $U(1)$ group transformations: $\psi\to e^{i\alpha}\psi$ and $\bar \psi \to \bar\psi e^{-i\alpha}$, where $\alpha$ is an arbitrary phase parameter, we find that the mass term in the form of $\psi\bar\psi$ is invariant under $U(1)$ in the Dirac case while it is not in the Majorana case. This means that the Majorana fields break all $U(1)$ charges, such as the electric charge and lepton number\cite{akhmedov2014majorana}. Since the law of electric charge conservation is solid in our universe, the particle with a Majorana mass must be electrically neutral while on the other hand, the lepton number for the Majorana fermion is not conserved, which is not described in the Standard Model. The neutrinoless double beta decay process discussed in the next section will come back to this point.
 
-Also, since the term $\overline{\nu_L^c}\nu_L$ has the weak isospin $I_3=1$ and then $Y=-2$, it indicates a Higgs triplet with $Y=2$ is required, which is not included in the Standard Model. Therefore, new physics beyond the Standard Model is required for describing the Majorana mass term.
+Also, since the terms $\overline{\nu_L^c}\nu_L+h.c.$ are with the weak isospin $I_3=1$ and then $Y=-2$, it requires a Higgs triplet with $Y=2$, which is not included in the Standard Model\cite{funchal2013physics}. Therefore, new physics beyond the Standard Model is required for describing the Majorana mass term.
 
-For a more general case: a hybrid mass term of Dirac and Majorana, we can write the Dirac mass term in \ref{diracLagrange} as the same form of the Majorana mass term: $\mathcal{L}_{\nu~mass}^D = -\frac{1}{2}m_D(\overline{\nu_L}\nu_R+\overline{\nu^c_R}\nu^c_L)+h.c.$. Likewise, introduce the right-handed neutrino fields to the Majorana case and then we have a Majorana mass term with right-handed component: $\mathcal{L}^{M,R}_{\nu~mass} = -m\bar{\nu}\nu=-\frac{1}{2}m_R\overline{\nu_R^c}\nu_R+h.c.$. Therefore, the hybrid mass term combining the Majorana fields (with $m_L$ for the left-handed neutrino field and $m_R$ for the right-handed field) and Dirac is\cite{akhmedov2014majorana,zuber1998physics}:
-\begin{equation} 
-\mathcal{L}^{D+M}_{\nu~mass} = -\frac{1}{2}\begin{pmatrix} \bar{\nu}_L & \overline{(N_R)^c}\end{pmatrix}
-\mathcal{M}\begin{pmatrix} \nu^c_L \\ N_R\end{pmatrix}+h.c.,
-\end{equation} 
-where the mass matrix \footnote{Here only considering one neutrino generation ($\nu_e$) for simplicity. In the general case $\mathcal M$ is a $(n_a+n_s)\times(n_a+n_s)$ matrix, for $n_a$ active neutrinos and $n_s$ sterile neutrinos\cite{zuber1998physics,akhmedov2014majorana}.}  
-
-\begin{equation}
-\nu_L=
-\begin{pmatrix}
-\nu_L\\
-(\nu_R)^c\\
-\end{pmatrix},\\
-\nu_R=
-\begin{pmatrix}
-\nu_L\\
-(\nu_R)^c\\
-\end{pmatrix},
+For a more general case: a hybrid mass term of Dirac and Majorana, if only considering one neutrino generation for simplicity, we can write the Dirac mass term in \ref{diracLagrange} as the same form of the Majorana mass term: $\mathcal{L}_{\nu~mass}^D = -\frac{1}{2}m_D(\overline{\nu_L}\nu_R+\overline{\nu^c_R}\nu^c_L)+h.c.$. Likewise, introduce the $\nu_R$ to the Majorana case and then we have a Majorana mass term with right-handed component: $\mathcal{L}^{M,R}_{\nu~mass} = -m\bar{\nu}\nu=-\frac{1}{2}m_R\overline{\nu_R^c}\nu_R+h.c.$. Therefore, the hybrid mass term combining the Majorana and Dirac fields is\cite{akhmedov2014majorana,zuber1998physics}:
+\begin{equation}\label{hybridmass}
+-\mathcal{L}^{D+M}_{\nu~mass} = -(\mathcal{L}^{D}_{\nu~mass}+\mathcal{L}^{M,L}_{\nu~mass}+\mathcal{L}^{M,R}_{\nu~mass})=\frac{1}{2}N^T_L\mathcal{C}^\dagger
+\mathcal{M}N_L+h.c.,
 \end{equation}
-
+where $N_L$ is defined as 
+$\begin{pmatrix}\nu_L & \nu^c_R\end{pmatrix}^T$, 
+and with $m_L$ for the left-handed neutrino field and $m_R$ for the right-handed field, the mass matrix is written as
+\footnote{Here only considering one neutrino generation. In the general case $\mathcal M$ is a $(n_a+n_s)\times(n_a+n_s)$ matrix, for $n_a$ active neutrinos and $n_s$ sterile neutrinos\cite{zuber1998physics,akhmedov2014majorana}.}:
 \begin{equation}
 \mathcal M=
 \begin{pmatrix}
 	m_L^M &  m^D\\
 	m^D &  m_R^M\\
-\end{pmatrix},
+\end{pmatrix}.
 \end{equation}
 
-Using a unitary matrix $U$ to diagonalize the $\mathcal M$ so that ${U}^T\mathcal{M} U =\mathcal {M}_d = diag(m_1, m_2)$, where $m_{1,2}\geq 0$ are the mass eigenstates of the eigenstates $\chi_{1,2}$ and 
+Using a unitary matrix $U$ to diagonalize the $\mathcal M$ so that ${U}^T\mathcal{M} U =\mathcal {M}_d = diag(m_1, m_2)$; $m_{1,2}\geq 0$ are the mass eigenstates of the eigenstates $\chi_{1,2}$ and 
 \begin{equation}\label{eq:massTransform}
 U=\mathcal{O}\rho=\begin{pmatrix}
 \cos\theta & \sin\theta\\
@@ -480,18 +469,25 @@ U=\mathcal{O}\rho=\begin{pmatrix}
 0 & \rho_2\\
 \end{pmatrix},
 \end{equation}
-where $\mathcal O$ is a real orthodox matrix and $\rho$ is a phase matrix with $(\rho_{1,2})^2=\pm1$, which guarantees $m_{1,2}\geq 0$.
-From the transformation, the off-diagonal elements give a relation of $\theta$: $\tan 2\theta = \frac{2m_D}{m^M_R-m^M_L}$, which indicates a mixing of the normal active Dirac neutrino with a pair of the sterile Majorana neutrinos.
-
+where $\mathcal O$ is a real orthodox matrix and $\rho$ is a phase matrix with $(\rho_{1,2})^2=\pm1$ to guarantee that $m_{1,2}\geq 0$.
+From the transformation, the off-diagonal elements give a relation of $\theta$: $\tan 2\theta = \frac{2m_D}{m^M_R-m^M_L}$, which indicates a mixing of the normal active Dirac neutrino with a pair of the sterile Majorana neutrinos. For the left-handed neutrino mass eigenstates $\chi_{1L}$ and $\chi_{2L}$, there is\cite{akhmedov2014majorana}:
 \begin{equation}\label{eq:majorana_fields}
-n_L=U
+n_L=\begin{pmatrix}
+\nu_{L}\\
+\nu^c_{L}\\
+\end{pmatrix}=U
 \begin{pmatrix}
 \chi_{1L}\\
 \chi_{2L}\\
 \end{pmatrix},
 \end{equation}
+Define
+$\chi_{i}=\chi_{iL}+(\chi_{iL})^c~(i = 1,2)$, the Lagrangian \ref{hybridmass} now can be written as\cite{akhmedov2014majorana,giunti2007fundamentals}:
+\begin{equation}
+-\mathcal L=\frac{1}{2}n_L^T\mathcal{C}^{-1}\mathcal M n_L+h.c.=\frac{1}{2}\chi_L^T\mathcal{C}^{-1}\mathcal M_{diag} \chi_L+h.c.=\frac{1}{2}(|m_1|\bar\chi_1\chi_1+|m_2|\bar\chi_2\chi_2)
+\end{equation}
 
-The mass eigenvalues are solved as:
+On the other hand, the mass eigenvalues are solved as:
 \begin{equation}
 m_{1,2}\equiv m_{\mp} = \frac{1}{2}[~(m_L^M+m_R^M)\mp\sqrt{(m_L^M-m_R^M)^2+4(m^D)^2}~]\label{eq:majorana_massEigen},
 \end{equation}
@@ -509,41 +505,44 @@ m_1=m_-&=\frac{1}{2}\frac{(m^M_L+m^M_R)^2-(m^M_L-m^M_R)^2-4(m^D)^2}{m^M_L+m^M_R+
 &=|m^M_L-\frac{(m^D)^2}{m^M_R}|,
 \end{aligned}
 \end{equation}\footnote{Here the absolute value is taken because we can find proper $\rho_{1,2}$ values to ensure $m_1\geq 0$.}
-and
+and:
 \begin{equation}
 m_2=m_+=\frac{1}{2}[m^M_R+m^M_R(1+\frac{1}{2}(\frac{2m^D}{m^M_R})^2)]=m^M_R[1+(\frac{m^D}{m^M_R})^2]\simeq m^M_R.
 \end{equation}
 
-In the case of (4), a heavy, sterile right-handed neutrino $\nu_2$ causes the normal, active neutrino $\nu_1$ being light.
-Since $\tan 2\theta\ll 1$, the mixing angle is very small.
- 
-This is called the Seesaw mechanism\footnote{There are mainly three types of Seesaw mechanism, depending on the new particles added into the Standard Model. Here adding heavy right-handed neutrinos is the type-I, or conventional seesaw\cite{xing2011neutrinos}.}. It has the potential to explain why the neutrino mass is so small ($m~\mathcal{O}~(eV)$) compared to the other fermions ($m~\mathcal{O}~(GeV)$).
+In the case of (4), a heavy, sterile right-handed neutrino $\nu_2$ causes the normal, active neutrino $\nu_1$ being light. Since $\tan 2\theta\ll 1$, the mixing angle is very small. Such a process is called the Seesaw mechanism. There are mainly three types of Seesaw mechanism, depending on the new particles added into the Standard Model. Here adding heavy right-handed neutrinos is the type-I, or the conventional seesaw\cite{xing2011neutrinos}. Fig.~\ref{seesaw} shows the tree-level Feynman diagrams for the different types of the Seesaw mechanism. New physics mechanisms are introduced into the Standard Model.
 
-For $\mathcal{O}(1~TeV)$, the $\nu$ mass is $0.1~eV$
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[height=3cm]{seesaw_feynman}
+%	\begin{minipage}[t]{0.45\textwidth}
+%		\includegraphics[height=2.2cm]{typeIseesaw.eps}
+%	\end{minipage}
+%	\begin{minipage}[t]{0.45\textwidth}
+%		\includegraphics[height=2.5cm]{typeIIseesaw.eps}
+%	\end{minipage}
+	\caption{ Feynman diagrams for Seesaw mechanisms, modified from \cite{valle2015neutrinos}. Left: type-I; right: type-II.}
+	\label{seesaw}
+\end{figure}
 
-$\mathcal L=\frac{1}{2}(|m_1|\bar\chi_1\chi_1+|m_2|\bar\chi_2\chi_2)$
-a simple extension of the Standard Model with
+It has the potential to explain why the neutrino mass is so small ($m\sim\mathcal{O}~(eV)$) compared to the other fermions ($m\sim\mathcal{O}~(GeV)$).
 
+For $\mathcal{O}(1~TeV)$, then the $\nu$ mass is $0.1~eV$
 
-Majorana neutrinos could also explain a matter dominated universe.
-In the theory of leptogenesis, if the Sakharov conditions2 are met, heavy neutrinos in the
-early universe could decay to left-handed and right-handed neutrinos as well as Higgs
-decaying to quarks. Majorana neutrinos violate lepton number so more left-handed
-neutrinos could be created than right-handed neutrinos. The quantum number, B-L,
-is thought to be conserved, so if L is violated B is correspondingly violated resulting
-in more left-handed quarks. Missing antimatter could therefore be explained from CP
-violation in the neutrino sector.
-Extending the one-generational case given above to three generations results in a
-modification to the PMNS matrix. The matrix given in Equation 1.43 transforms to,
-U ! UD(α1; α2); (1.82)
-
-
+%Majorana neutrinos could also explain a matter dominated universe.
+%In the theory of leptogenesis, if the Sakharov conditions2 are met, heavy neutrinos in the
+%early universe could decay to left-handed and right-handed neutrinos as well as Higgs
+%decaying to quarks. Majorana neutrinos violate lepton number so more left-handed
+%neutrinos could be created than right-handed neutrinos. The quantum number, B-L,
+%is thought to be conserved, so if L is violated B is correspondingly violated resulting
+%in more left-handed quarks. Missing antimatter could therefore be explained from CP
+%violation in the neutrino sector.
+%Extending the one-generational case given above to three generations results in a
+%modification to the PMNS matrix. The matrix given in Equation 1.43 transforms to,
+%%U ! UD(α1; α2); (1.82)
 
 upper bound for the $\nu_e$ mass
 the KATRIN experiment started commission in June 2018\cite{aker2019improved}.
-
-
-
 
 The $U_{PMNS}$ (\ref{eq:uPMNS}) in section.~\ref{sectVacuumOsci} only takes the Dirac case, or it should be written as $U^D$. 
 Take the Majorana case into account, 
@@ -551,12 +550,19 @@ Take the Majorana case into account,
 $D^M$ is a diagonal unitary matrix and $D^M=diag(1,e^{i\phi_1},e^{i\phi_2})$, where $\phi_1$ and $\phi_2$ are are the Majorana-type CP-violation phases. Thu $U_{PMNS}=U^DD^M$.
 
 
-A Dirac neutrino can be conceived of as a pair of
-mass-degenerate Majorana neutrinos with opposite CP
-assignments. As pointed out by L. Wolfenstein
-[Carnegie-Mellon Report No. COO-3066-180 (unpublished)], their contributions to the $0\nu\beta\beta$ rate cancel due to their relative CP phase. With several Majorana neutrinos with different CP eigenvalues the neutrinoless diagrams discussed here may not be entirely negligible.
+%A Dirac neutrino can be conceived of as a pair of
+%mass-degenerate Majorana neutrinos with opposite CP
+%assignments. As pointed out by L. Wolfenstein
+%[Carnegie-Mellon Report No. COO-3066-180 (unpublished)], their contributions to the $0\nu\beta\beta$ rate cancel due to their relative CP phase. With several Majorana neutrinos with different CP eigenvalues the neutrinoless diagrams discussed here may not be entirely negligible.
+
+
+
+
+
+
 
 \subsection{Neutrino Mass in Beta Decay}
+
 
 \begin{equation}
 \sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathcal{M}|^2F(Z,E_e)E_e p_e}}
@@ -622,8 +628,6 @@ the standard left-handed interaction
 duerr2011quantitative  
 
 
-
-
 A diagram can be drawn as Fig.~\ref{blackbox} for the $0\nu\beta\beta$ process.
 In the diagram, two d-quarks are converted into two u-quarks and electrons without emitting neutrinos via some underlying mechanism. Then from crossing symmetry, \cite{akhmedov2014majorana}.
 
@@ -664,16 +668,6 @@ the $\nu_e$ in the $0\nu\beta\beta$ process has a non-zero effective Majorana ma
 underlying mechanisms 
 
 
-
-
-
-
-
-
-
-
-
-
 \subsection{Status of Double Beta Decay Experiments}
 
 There are 35 isotopes can undergo the double beta decay process, but only a few of them are suitable for the application in direct $0\nu\beta\beta$ search experiments\cite{giunti2007fundamentals}. From the experimental view, the candidate isotopes are expected to have relatively high natural abundances, high Q-values, be deployed in a large amount with low costs, and are not toxic to the environment as well. However, in realistic situation there is no isotope fulfills all these properties and the current experiments making trade-offs\cite{dolinski2019neutrinoless}.
@@ -682,8 +676,6 @@ The experiments searching for direct signals of $0\nu\beta\beta$ mainly measure 
 
 inhomogeneous experiments use external $\beta\beta$ source
 while homogeneous experiments use $\beta\beta$ source as the detection medium, which are mainly referred as calorimeter experiments\cite{cremonesi2014challenges,shimizu2019double}.
-
-
 
 
 $^{136}$Xe, $^{48}$Ca, $^{76}$Ge, $^{130}$Te

@@ -4,9 +4,10 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces All reactions in the CNO bicycle. The reactions producing neutrinos are labeled in the solid frames. Modified from \cite {oberauer2020solar}.}}{7}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Solar neutrino energy spectrum ($E_\nu $ vs. flux) for the solar model BS05(OP). Figure is from \cite {bahcall2005new}.}}{8}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Feynman diagrams (at tree level) for different channels of the elastic scattering interaction. (a) and (b): charged current for s and t channels, respectively; (c): neutral current.}}{9}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Feynman diagrams for $2\nu \beta \beta $ (left) and $0\nu \beta \beta $ (right).}}{25}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay. The SNO+ simulation package (RAT) was used to produce the plot.}}{25}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces The Black Box diagram, modified from \cite {schechter1982neutrinoless}.}}{26}{figure.2.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Feynman diagrams for Seesaw mechanisms, modified from \cite {valle2015neutrinos}. Left: type-I; right: type-II.}}{24}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Feynman diagrams for $2\nu \beta \beta $ (left) and $0\nu \beta \beta $ (right).}}{25}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay. The SNO+ simulation package (RAT) was used to produce the plot.}}{25}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces The Black Box diagram, modified from \cite {schechter1982neutrinoless}.}}{26}{figure.2.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The SNO+ detector labelled with main structures, figure modified from \cite {jones2011background}.}}{32}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces A Jablonski diagram for the organic scintillator, modified from \cite {birks1965theory, knoll2010radiation}.}}{36}{figure.3.2}
@@ -52,13 +53,14 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}}{86}{figure.5.4}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{87}{figure.5.5}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Angular resolutions, compared the data (red solid line) and MC (black dashed line).}}{89}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{91}{figure.5.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{91}{figure.5.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{91}{figure.5.7}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{91}{figure.5.7}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{91}{figure.5.7}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{91}{figure.5.7}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{91}{figure.5.7}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces (dashed black) central run-107055.}}{89}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{91}{figure.5.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{91}{figure.5.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{91}{figure.5.8}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{91}{figure.5.8}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{91}{figure.5.8}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{91}{figure.5.8}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{91}{figure.5.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{94}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{95}{figure.6.2}
