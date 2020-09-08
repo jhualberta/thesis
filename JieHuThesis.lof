@@ -57,60 +57,65 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Reconstructed energy spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}}{90}{figure.5.8}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Distributions of $\beta _{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter processed results and black for the Rat results.}}{90}{figure.5.9}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Comparisons of the $\beta _{14}$ for the data and the MC. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller mean value (0.4157) than the MC (0.4388).}}{91}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{92}{figure.5.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{92}{figure.5.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{92}{figure.5.11}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{92}{figure.5.11}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{92}{figure.5.11}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{92}{figure.5.11}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{92}{figure.5.11}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Energy vs $\beta _{14}$ for the data and MC. Both the Rat and the MPW results are shown.}}{91}{figure.5.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MPW data}}}{91}{figure.5.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MPW MC}}}{91}{figure.5.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Rat data}}}{91}{figure.5.11}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Rat MC}}}{91}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{93}{figure.5.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{93}{figure.5.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{93}{figure.5.12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{93}{figure.5.12}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{93}{figure.5.12}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{93}{figure.5.12}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{93}{figure.5.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{95}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{96}{figure.6.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{96}{figure.6.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{96}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces MC positions vs. skyShine values for simulated $^{208}$Tl events.}}{97}{figure.6.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{mc}$ vs. $skyShine$.}}}{97}{figure.6.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{mc}$ vs. $skyShine$.}}}{97}{figure.6.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{mc}$ vs. $skyShine$.}}}{97}{figure.6.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$r_{mc}$ vs. $skyShine$.}}}{97}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{97}{figure.6.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{97}{figure.6.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{97}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{98}{figure.6.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{98}{figure.6.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{98}{figure.6.5}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{98}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{99}{figure.6.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{99}{figure.6.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{99}{figure.6.6}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{99}{figure.6.6}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{99}{figure.6.6}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{99}{figure.6.6}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{99}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Radial resolutions with different skyShine cuts.}}{99}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}}{101}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces A flow chart for Bi-Po tagging.}}{103}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{104}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{105}{figure.6.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{105}{figure.6.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{105}{figure.6.11}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{105}{figure.6.11}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{105}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{106}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Simulated main track of 7.1 MeV $\gamma $ for one event from $\isotope [16]{N}$ source in the external water during the partial-fill phase.}}{106}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{108}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{108}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{108}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{110}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{110}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{110}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{112}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{113}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{116}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{116}{figure.6.23}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{117}{figure.6.24}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{96}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{97}{figure.6.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{97}{figure.6.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{97}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces MC positions vs. skyShine values for simulated $^{208}$Tl events.}}{98}{figure.6.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{mc}$ vs. $skyShine$.}}}{98}{figure.6.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{mc}$ vs. $skyShine$.}}}{98}{figure.6.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{mc}$ vs. $skyShine$.}}}{98}{figure.6.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$r_{mc}$ vs. $skyShine$.}}}{98}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{98}{figure.6.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{98}{figure.6.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{98}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{99}{figure.6.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{99}{figure.6.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{99}{figure.6.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{99}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{100}{figure.6.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{100}{figure.6.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{100}{figure.6.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{100}{figure.6.6}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{100}{figure.6.6}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{100}{figure.6.6}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{100}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Radial resolutions with different skyShine cuts.}}{100}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}}{102}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces A flow chart for Bi-Po tagging.}}{104}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{105}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{106}{figure.6.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{106}{figure.6.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{106}{figure.6.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{106}{figure.6.11}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{106}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{107}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Simulated main track of 7.1 MeV $\gamma $ for one event from $\isotope [16]{N}$ source in the external water during the partial-fill phase.}}{107}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{109}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{109}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{109}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{111}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{111}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{111}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs are aligned to face to the scintillation vial from each side.}}{113}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces A diagram shows the light yield measurement setup. See the text for details.}}{114}{figure.6.21}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces A typical waveform triggered by scintillation photons from 137Cs $\gamma $-rays interaction with LAB-PPO sample.}}{117}{figure.6.22}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0. A threshold for counting is set by comparing the two spectrum.}}{117}{figure.6.23}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}}{118}{figure.6.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{125}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{126}{figure.A.2}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{126}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{127}{figure.A.2}

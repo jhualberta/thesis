@@ -63,26 +63,26 @@
 \contentsline {subsection}{\numberline {5.2.1}Angular Resolution}{88}{subsection.5.2.1}
 \contentsline {section}{\numberline {5.3}Energy}{89}{section.5.3}
 \contentsline {section}{\numberline {5.4}Extracting $\gamma $-rays from Neutron Capture}{89}{section.5.4}
-\contentsline {section}{\numberline {5.5}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{91}{section.5.5}
-\contentsline {subsubsection}{Open Dataset Analysis}{91}{section*.14}
-\contentsline {chapter}{\numberline {6}Towards the SNO+ Future Phases}{94}{chapter.6}
-\contentsline {section}{\numberline {6.1}Partial-fill Phase Analysis}{94}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}High Level Cuts: Sky-shine Classifier}{94}{subsection.6.1.1}
-\contentsline {subsubsection}{Performance of the Sky-shine Classifier}{95}{section*.15}
-\contentsline {subsubsection}{Optimize the Sky-shine Cuts}{96}{section*.16}
-\contentsline {subsection}{\numberline {6.1.2}Different PPO Concentrations during the Filling}{98}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Bi-Po Analysis}{101}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}$^{16}$N Calibration Calibration in the Partial-fill Phase}{101}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Extracting the Cherenkov Signals in Partial-fill Phase}{102}{subsection.6.1.5}
-\contentsline {subsubsection}{$AmBe$ Source Analysis}{104}{section*.17}
-\contentsline {section}{\numberline {6.2}Towards the Te-loaded Phase}{104}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Muon Induced Backgrounds in the Te-loaded Phase}{104}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{109}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Measurement Setup and Data Acquisition}{111}{subsection.6.2.3}
-\contentsline {subsubsection}{Results}{119}{section*.18}
-\contentsline {chapter}{\numberline {7}Conclusions}{120}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{121}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{121}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{121}{section.A.2}
-\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{124}{section.A.3}
-\contentsline {chapter}{References}{127}{appendix*.19}
+\contentsline {section}{\numberline {5.5}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{92}{section.5.5}
+\contentsline {subsubsection}{Open Dataset Analysis}{92}{section*.14}
+\contentsline {chapter}{\numberline {6}Towards the SNO+ Future Phases}{95}{chapter.6}
+\contentsline {section}{\numberline {6.1}Partial-fill Phase Analysis}{95}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}High Level Cuts: Sky-shine Classifier}{95}{subsection.6.1.1}
+\contentsline {subsubsection}{Performance of the Sky-shine Classifier}{96}{section*.15}
+\contentsline {subsubsection}{Optimize the Sky-shine Cuts}{97}{section*.16}
+\contentsline {subsection}{\numberline {6.1.2}Different PPO Concentrations during the Filling}{99}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Bi-Po Analysis}{102}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}$^{16}$N Calibration Calibration in the Partial-fill Phase}{102}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Extracting the Cherenkov Signals in Partial-fill Phase}{103}{subsection.6.1.5}
+\contentsline {subsubsection}{$AmBe$ Source Analysis}{105}{section*.17}
+\contentsline {section}{\numberline {6.2}Towards the Te-loaded Phase}{105}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Muon Induced Backgrounds in the Te-loaded Phase}{105}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{110}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Measurement Setup and Data Acquisition}{112}{subsection.6.2.3}
+\contentsline {subsubsection}{Results}{120}{section*.18}
+\contentsline {chapter}{\numberline {7}Conclusions}{121}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{122}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{122}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{122}{section.A.2}
+\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{125}{section.A.3}
+\contentsline {chapter}{References}{128}{appendix*.19}
