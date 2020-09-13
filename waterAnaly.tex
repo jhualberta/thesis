@@ -261,10 +261,11 @@ The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy
 	\caption{Energy vs $\beta_{14}$ for the data and MC. Both the Rat and the MPW results are shown.}
 	\label{EvsBeta14}
 \end{figure}
+$\sigma = b\sqrt {T_{eff}}$
 
-
-
-
+\begin{equation}
+P(T_{eff})=N\int P_{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma}\exp [-\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma^2}]
+\end{equation}
 
 \section{Extracting \texorpdfstring{$\gamma$}{Lg}-rays from Neutron Capture}
 The AmBe calibration source is used for the calibrations of the SNO+ neutron capture process.
@@ -319,21 +320,6 @@ solar neutrino candidate events in the open dataset.
 \end{figure}
 
 
-
-
-
-
-
-
-
-
-
-The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite}
-
-TMVA 
-
-
-other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
 
 \subsubsection{Open Dataset Analysis}
 
@@ -400,6 +386,30 @@ $\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, wh
 
 
 
+
+TMVA analysis
+
+The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite}
+
+
+MC simulations 
+
+solar $\nu_e$ 
+and $^{214}$Bi　backgrounds
+
+The distribution of $\cos\theta_{sun}$
+
+
+
+
+
+
+
+
+
+
+
+other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
 
 
 

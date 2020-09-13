@@ -15,6 +15,11 @@ J.~N. Bahcall, A.~M. Serenelli, and S.~Basu, ``New solar opacities, abundances,
   helioseismology, and neutrino fluxes,'' {\em The Astrophysical Journal
   Letters}, vol.~621, no.~1, p.~L85, 2005.
 
+\bibitem{valle2015neutrinos}
+J.~W.~F. Valle and J.~Romao, {\em Neutrinos in high energy and astroparticle
+  physics}.
+\newblock John Wiley \& Sons, 2015.
+
 \bibitem{schechter1982neutrinoless}
 J.~Schechter and J.~W. Valle, ``Neutrinoless double-$\beta$ decay in su
   (2)$\times$ u (1) theories,'' {\em Physical Review D}, vol.~25, no.~11,
@@ -244,11 +249,6 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
   preprint arXiv:1804.03575}, 2018.
 
-\bibitem{valle2015neutrinos}
-J.~W.~F. Valle and J.~Romao, {\em Neutrinos in high energy and astroparticle
-  physics}.
-\newblock John Wiley \& Sons, 2015.
-
 \bibitem{ade2016planck}
 P.~A. Ade, N.~Aghanim, M.~Arnaud, M.~Ashdown, J.~Aumont, C.~Baccigalupi,
   A.~Banday, R.~Barreiro, J.~Bartlett, N.~Bartolo, {\em et~al.}, ``Planck 2015
@@ -292,6 +292,10 @@ J.~Lesgourgues, G.~Mangano, G.~Miele, and S.~Pastor, {\em Neutrino cosmology}.
 \bibitem{zuber1998physics}
 K.~Zuber, ``On the physics of massive neutrinos,'' {\em Physics Reports},
   vol.~305, no.~6, pp.~295--364, 1998.
+
+\bibitem{barger2012physics}
+V.~Barger, D.~Marfatia, and K.~Whisnant, {\em The physics of neutrinos}.
+\newblock Princeton University Press, 2012.
 
 \bibitem{aker2019improved}
 M.~Aker, K.~Altenm{\"u}ller, M.~Arenz, M.~Babutzka, J.~Barrett, S.~Bauer,
