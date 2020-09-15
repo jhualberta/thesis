@@ -673,6 +673,11 @@ J.~Klein, ``Leta high level cuts (including qpdt and itr),'' {\em SNO+ Internal
 {\em TMVA}, 2020 (accessed Mar 30, 2020).
 \newblock \url{https://root.cern.ch/tmva}.
 
+\bibitem{albertsson2007tmva}
+K.~Albertsson, S.~Gleyzer, A.~Hoecker, L.~Moneta, P.~Speckmayer, J.~Stelzer,
+  J.~Therhaag, E.~von Toerne, H.~Voss, and S.~Wunsch, ``Tmva 4,'' {\em arXiv
+  preprint physics/0703039}, 2007.
+
 \bibitem{sprWebsite}
 {\em StatPatternRecognition and Machine Learning in HEP}, 2020 (accessed Mar
   30, 2020).

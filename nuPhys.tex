@@ -447,10 +447,9 @@ For a more general case: a hybrid mass term of Dirac and Majorana, if only consi
 -\mathcal{L}^{D+M}_{\nu~mass} = -(\mathcal{L}^{D}_{\nu~mass}+\mathcal{L}^{M,L}_{\nu~mass}+\mathcal{L}^{M,R}_{\nu~mass})=\frac{1}{2}N^T_L\mathcal{C}^\dagger
 \mathcal{M}N_L+h.c.,
 \end{equation}
-where $N_L$ is defined as 
-$\begin{pmatrix}\nu_L & \nu^c_R\end{pmatrix}^T$, 
-and with $m_L$ for the left-handed neutrino field and $m_R$ for the right-handed field, the mass matrix is written as
-\footnote{Here only considering one neutrino generation. In the general case $\mathcal M$ is a $(n_a+n_s)\times(n_a+n_s)$ matrix, for $n_a$ active neutrinos and $n_s$ sterile neutrinos\cite{zuber1998physics,akhmedov2014majorana}.}:
+where $N_L=(\nu_L,\nu^c_R)^T=(\nu_L,\mathcal{C}\overline{\nu_R}^T)$, 
+and $m_L$ ($m_R$) is the mass for the left-handed (right-handed) neutrino field. The mass matrix is written as:
+\footnote{Here only considering one neutrino generation. In the general case $\mathcal M$ is a $(n_a+n_s)\times(n_a+n_s)$ matrix, for $n_a$ active neutrinos and $n_s$ sterile neutrinos\cite{akhmedov2014majorana,zuber1998physics}.}:
 \begin{equation}
 \mathcal M=
 \begin{pmatrix}
@@ -472,7 +471,7 @@ U=\mathcal{O}\rho=\begin{pmatrix}
 where $\mathcal O$ is a real orthodox matrix and $\rho$ is a phase matrix with $(\rho_{1,2})^2=\pm1$ to guarantee that $m_{1,2}\geq 0$.
 From the transformation, the off-diagonal elements give a relation of $\theta$: $\tan 2\theta = \frac{2m_D}{m^M_R-m^M_L}$, which indicates a mixing of the normal active Dirac neutrino with a pair of the sterile Majorana neutrinos. For the left-handed neutrino mass eigenstates $\chi_{1L}$ and $\chi_{2L}$, there is\cite{akhmedov2014majorana}:
 \begin{equation}\label{eq:majorana_fields}
-n_L=\begin{pmatrix}
+N_L=\begin{pmatrix}
 \nu_{L}\\
 \nu^c_{L}\\
 \end{pmatrix}=U
@@ -484,7 +483,7 @@ n_L=\begin{pmatrix}
 Define
 $\chi_{i}=\chi_{iL}+(\chi_{iL})^c~(i = 1,2)$, the Lagrangian \ref{hybridmass} now can be written as\cite{akhmedov2014majorana,giunti2007fundamentals}:
 \begin{equation}
--\mathcal L=\frac{1}{2}n_L^T\mathcal{C}^{-1}\mathcal M n_L+h.c.=\frac{1}{2}\chi_L^T\mathcal{C}^{-1}\mathcal M_{diag} \chi_L+h.c.=\frac{1}{2}(|m_1|\bar\chi_1\chi_1+|m_2|\bar\chi_2\chi_2)
+-\mathcal L=\frac{1}{2}N_L^T\mathcal{C}^{\dagger}\mathcal M N_L+h.c.=\frac{1}{2}\chi_L^T\mathcal{C}^{-1}\mathcal M_{diag} \chi_L+h.c.=\frac{1}{2}(|m_1|\bar\chi_1\chi_1+|m_2|\bar\chi_2\chi_2)
 \end{equation}
 
 On the other hand, the mass eigenvalues are solved as:
@@ -494,7 +493,7 @@ m_{1,2}\equiv m_{\mp} = \frac{1}{2}[~(m_L^M+m_R^M)\mp\sqrt{(m_L^M-m_R^M)^2+4(m^D
 
 From (\ref{eq:majorana_massEigen}), there are 4 cases to discuss:\\
 (1) If $m_L^M=m_R^M=0$ (called ``Dirac limit''), then $m_{1,2}=m^D$ and neutrinos are pure Dirac particles.\\
-(2) If $m^D\gg m^M_{L,R}$, then $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino which is called a Pseudo-(or quasi-)Dirac Neutrino.
+(2) If $m^D\gg m^M_{L,R}$, then $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino, which is called a Pseudo-(or quasi-)Dirac Neutrino.
 \\
 (3) If $m^D=0$, $m_1=m^M_L, m_2=m^M_R$, neutrinos are pure Majorana particles.\\
 (4) If $m_R^M\gg m^D, m_L^M$, then $\theta\simeq(\frac{m^D}{m_R^M})\ll 1$ and $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\to 0$, we get:
@@ -510,7 +509,7 @@ and:
 m_2=m_+=\frac{1}{2}[m^M_R+m^M_R(1+\frac{1}{2}(\frac{2m^D}{m^M_R})^2)]=m^M_R[1+(\frac{m^D}{m^M_R})^2]\simeq m^M_R.
 \end{equation}
 
-In the case of (4), the neutrino $\chi_2$ with a mass $m^M_R$ is right-handed and of Majorana nature. This neutrino does not take part in the Standard Model interactions and thus is sterile. If this sterile neutrino is heavy, the active neutrino $\chi_1$ will be light. Such a process is called the Seesaw Mechanism. For this mechanism, new neutral force carriers or messenger particles are added into the Standard Model by considering a dimension-5 operator $\mathcal{O}_5=\frac{\kappa}{M_X}\Psi_{iL}\Psi_{jL}\Phi\Phi$, where $\kappa$ is an unknown dimensionless coupling constant, $M_x$ is a large mass scale, $\Psi_{iL}$ is the $SU(2)_L$ lepton doublet with a specific generation $i$: $(\nu_{iL}, \ell_{iL})^T$ and　$\Phi$ is the Higgs doublet $\Phi=(\phi^+,\phi^0)^T$\cite{barger2012physics}. Via symmetry breaking at the electroweak scale ($v_0=246~GeV$), the neutrino mass can be obtained as 
+In the case of (4), the neutrino field $\chi_2$ with the mass $m^M_R$ is right-handed and of Majorana nature. This neutrino does not take part in the Standard Model interactions and thus is sterile. If this sterile neutrino is heavy, the active neutrino $\chi_1$ will be light. Such a process is called the Seesaw Mechanism. For this mechanism, new neutral force carriers or messenger particles are added into the Standard Model by considering a dimension-5 operator $\mathcal{O}_5=\frac{\kappa}{M_X}\Psi_{iL}\Psi_{jL}\Phi\Phi$, where $\kappa$ is an unknown dimensionless coupling constant, $M_x$ is a large mass scale, $\Psi_{iL}$ is the $SU(2)_L$ lepton doublet with a specific generation $i$: $(\nu_{iL}, \ell_{iL})^T$ and the Higgs doublet $\Phi=(\phi^+,\phi^0)^T$\cite{barger2012physics}. Via symmetry breaking at the electroweak scale ($v_0=246~GeV$), the neutrino mass can be obtained as 
 $m_\nu=\kappa v_0^2/M_X$. Back to the case of (4), from \ref{eq:diracMass}, we know the Dirac mass $m^D= y_\nu v_0$, where $y_\nu$ is the Yukawa coupling relating to the Dirac mass. Then $m_1=y^2_\nu v_0^2/m^M_R$. 
 
 
@@ -528,7 +527,14 @@ There are mainly three types of Seesaw mechanism, depending on what new particle
 
 Fig.~\ref{seesaw} shows the tree-level Feynman diagrams for the different types of the Seesaw Mechanism. 
 
-Here adding neutral heavy right-handed neutrinos is the type-I, or the conventional seesaw\cite{xing2011neutrinos}. 
+Here adding neutral heavy right-handed neutrinos is the type-I, or the conventional seesaw
+
+a new term:
+$\frac{1}{2}\nu_R^T\mathcal{C}^\dagger m_R\nu_R+h.c$ is added into the Lagrangian mass term,
+
+
+
+\cite{xing2011neutrinos}. 
 
 
 
