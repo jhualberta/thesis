@@ -48,12 +48,21 @@ During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deploye
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the RAT water fitter and the MPW. The vertex shifts as well as the uncertainties are evaluated. 
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{N16centralDiagram.png}
+	\caption{A cartoon shows the $^{16}$N source.}
+	\label{N16centralDiagram}
+\end{figure}
+
+
+
 The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=9cm]{sx.pdf}
-	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}N$ source.}
+	\includegraphics[width=12cm]{sx.pdf}
+	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
 	\label{hsx}
 \end{figure}
 
@@ -195,22 +204,34 @@ and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$
 
 where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
 
+
+
+
 \section{Energy}
 
 The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=8cm]{N16_nhits_107055.png}
+	\includegraphics[width=10cm]{N16_nhits_107055.png}
 	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
+	\label{N16nhits}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
+	\caption{Energy spectrum, extracted from $10^5$ MC simulation events.}
 	\label{N16nhits}
 \end{figure}
 
 
 
+
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=8cm]{N16_reconE_107055.png}
-	\caption{Reconstructed energy spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
+	\includegraphics[width=10cm]{N16_reconE_107055.png}
+	\caption{Reconstructed energy spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and +solid lines for data; red for the MPW fitter results and black for the Rat results.}
 	\label{N16energy}
 \end{figure}
 
@@ -228,6 +249,18 @@ The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy
 	\caption{Comparisons of the $\beta_{14}$ for the data and the MC. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller mean value (0.4157) than the MC (0.4388).}
 	\label{N16beta14MPW}
 \end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=8cm]{2dmap_EvsNphoton.png}
+	\caption{Electron energy vs number of Cherenkov photons.}
+	\label{N16energyMap}
+\end{figure}
+
+
+
+
+
 
 
 \begin{figure}[htbp]
@@ -264,6 +297,10 @@ $\sigma = b\sqrt {T_{eff}}$
 \begin{equation}
 P(T_{eff})=N\int P_{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma}\exp [-\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma^2}]
 \end{equation}
+
+
+
+
 
 
 
@@ -399,6 +436,12 @@ $\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, wh
 TMVA analysis
 
 The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,albertsson2007tmva}
+
+
+
+
+
+
 
 Boosted Decision Tree (BDT) method is used for the multiple variable analysis (MVA).
 

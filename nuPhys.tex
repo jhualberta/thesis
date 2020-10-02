@@ -434,11 +434,11 @@ So the charged lepton masses are given by: $m_{\ell_\alpha}=\frac{y_\alpha^{lep}
 In this Dirac mass case, the masses of charged leptons and neutrinos are both proportional to the Higgs VEV. However, the experimental measurements already show the masses of neutrinos are $\mathcal O(eV)$ 
 while charged leptons are $\mathcal O(MeV)$. The smallness of neutrino masses should be obtained by the tuning of the Yukawa couplings $y_k^\nu$, which does not have solid physics meanings or explanations.
 
-If neutrinos are Majorana fermions, since $\nu=\nu^c$ and $\nu_L^c=\nu_R$, we can take the neutrino field as $\nu=\nu_L+\nu_L^c$ without introducing the extra $\nu_R$. For simplicity, only considering one flavor generation (such as $\nu_e$), then the Majorana mass term is:  
+If neutrinos are Majorana fermions, since $\nu_L^c=(\nu^c)_R=(\nu)_R$, we can take the neutrino field as $\nu=\nu_L+\nu_L^c$ without introducing the extra $\nu_R$. For simplicity, only considering one flavor generation (such as $\nu_e$), then the Majorana mass term is:  
 \begin{equation}\label{major_mass}
 \mathcal{L}^{M,L}_{\nu~mass} = -m_L\bar{\nu}\nu=-\frac{1}{2}m_L\overline{\nu_L^c}\nu_L+h.c.,
 \end{equation}
-where the $1/2$ factor is to avoid double counting of $\nu_L^c$ and $\overline{\nu_L}$ since $\nu_L^c=\mathcal{C}\overline{\nu_L}^T$\cite{giunti2007fundamentals}. For this Majorana mass term, if considering the $U(1)$ group transformations: $\psi\to e^{i\alpha}\psi$ and $\bar \psi \to \bar\psi e^{-i\alpha}$, where $\alpha$ is an arbitrary phase parameter, we find that the mass term in the form of $\psi\bar\psi$ is invariant under $U(1)$ in the Dirac case while it is not in the Majorana case. This means that the Majorana fields break all $U(1)$ charges, such as the electric charge and lepton number\cite{akhmedov2014majorana}. Since the law of electric charge conservation is solid in our universe, the particle with a Majorana mass must be electrically neutral while on the other hand, the lepton number for the Majorana fermion is not conserved, which is not described in the Standard Model. The neutrinoless double beta decay process discussed in the next section will come back to this point.
+where the $1/2$ factor is to avoid double counting of $\nu_L^c$ and $\overline{\nu_L}$ since $\nu_L^c=\mathcal{C}\overline{\nu_L}^T$\cite{giunti2007fundamentals}. For this Majorana mass term, if considering the $U(1)$ group transformations: $\psi\to e^{i\alpha}\psi$ and $\bar \psi \to \bar\psi e^{-i\alpha}$, where $\alpha$ is an arbitrary phase parameter. We find that in the Dirac case, the mass term in the form of $\psi\bar\psi$ is invariant under $U(1)$ transformations while in the Majorana case it is not. This means that the Majorana fields break the conservation of all the $U(1)$ charges, such as the electric charge and lepton number\cite{akhmedov2014majorana}. Since the law of electric charge conservation is solid in our universe, the particle with a Majorana mass must be electrically neutral while on the other hand, the lepton number for the Majorana fermion is not conserved, which is not described in the Standard Model. The neutrinoless double beta decay process discussed in the next section will come back to this point.
 
 Also, since the terms $\overline{\nu_L^c}\nu_L+h.c.$ are with the weak isospin $I_3=1$ and then $Y=-2$, it requires a Higgs triplet with $Y=2$, which is not included in the Standard Model\cite{funchal2013physics}. Therefore, new physics beyond the Standard Model is required for describing the Majorana mass term.
 
@@ -447,8 +447,7 @@ For a more general case: a hybrid mass term of Dirac and Majorana, if only consi
 -\mathcal{L}^{D+M}_{\nu~mass} = -(\mathcal{L}^{D}_{\nu~mass}+\mathcal{L}^{M,L}_{\nu~mass}+\mathcal{L}^{M,R}_{\nu~mass})=\frac{1}{2}N^T_L\mathcal{C}^\dagger
 \mathcal{M}N_L+h.c.,
 \end{equation}
-where $N_L=(\nu_L,(\nu_R)^c)^T=(\nu_L,\mathcal{C}\overline{\nu_R}^T)$, 
-and $m_L$ ($m_R$) is the mass for the left-handed (right-handed) neutrino field. The mass matrix is written as:
+where $N_L\equiv(\nu_L,(\nu_R)^c)^T=(\nu_L,\mathcal{C}\overline{\nu_R}^T)$; with $m_L$ ($m_R$) for the mass of the left-handed (right-handed) neutrino field, the mass matrix is written as:
 \footnote{Here only considering one neutrino generation. In the general case $\mathcal M$ is a $(n_a+n_s)\times(n_a+n_s)$ matrix, for $n_a$ active neutrinos and $n_s$ sterile neutrinos\cite{akhmedov2014majorana,zuber1998physics}.}:
 \begin{equation}
 \mathcal M=
@@ -458,7 +457,7 @@ and $m_L$ ($m_R$) is the mass for the left-handed (right-handed) neutrino field.
 \end{pmatrix}.
 \end{equation}
 
-Using a unitary matrix $U$ to diagonalize the $\mathcal M$ so that ${U}^T\mathcal{M} U =\mathcal {M}_d = \mathrm{diag}(m_1, m_2)$; $m_{1,2}\geq 0$ are the mass eigenstates of the eigenstates $\chi_{1,2}$ and 
+Using a unitary matrix $U$ to diagonalize the $\mathcal M$ so that ${U}^T\mathcal{M} U =\mathcal {M}_d = \mathrm{diag}(m_1, m_2)$; $m_{1,2}\geq 0$ are the mass eigenvalues of the eigenstates $\nu_{1,2}$ and 
 \begin{equation}\label{eq:massTransform}
 U=\mathcal{O}\rho=\begin{pmatrix}
 \cos\theta & \sin\theta\\
@@ -493,10 +492,10 @@ m_{1,2}\equiv m_{\mp} = \frac{1}{2}[~(m_L^M+m_R^M)\mp\sqrt{(m_L^M-m_R^M)^2+4(m^D
 
 From (\ref{eq:majorana_massEigen}), there are 4 cases to discuss:\\
 (1) If $m_L^M=m_R^M=0$ (called ``Dirac limit''), then $m_{1,2}=m^D$ and neutrinos are pure Dirac particles.\\
-(2) If $m^D\gg m^M_{L,R}$, then $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, $\frac{m_{L,R}^M}{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino, which is called a Pseudo-(or quasi-)Dirac Neutrino.
+(2) If $m^D\gg m^M_{L,R}$, then $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\gg 1$ and $\theta\simeq \pi/4$, ${m_{L,R}^M}/{m^D}\to 0$, $m_{1,2}=\frac{1}{2}m^D[~\frac{(m_L^M+m_R^M)}{m^D}+\sqrt{(\frac{m^M_L-m^M_R}{m^D})^2+4}~]\simeq\frac{1}{2}m^D(0+\sqrt{0+4})= m^D$, the pair of Majorana neutrinos behaves like one Dirac neutrino, which is called a Pseudo-(or quasi-)Dirac Neutrino.
 \\
 (3) If $m^D=0$, $m_1=m^M_L, m_2=m^M_R$, neutrinos are pure Majorana particles.\\
-(4) If $m_R^M\gg m^D, m_L^M$, then $\theta\simeq(\frac{m^D}{m_R^M})\ll 1$ and $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\to 0$, we get:
+(4) If $m_R^M\gg m^D, m_L^M$, then $\theta\simeq({m^D}/{m_R^M})\ll 1$ and $\tan 2\theta=\frac{2m^D}{m^M_R-m^M_L}\to 0$, we get:
 \begin{equation}
 \begin{aligned}
 m_1=m_-&=\frac{1}{2}\frac{(m^M_L+m^M_R)^2-(m^M_L-m^M_R)^2-4(m^D)^2}{m^M_L+m^M_R+|m^M_L-m^M_R|\sqrt{1+(\frac{2m^D}{m^M_L-m^M_R})^2}}\simeq 
@@ -518,7 +517,7 @@ Since we know the Dirac mass $m^D=y_\nu v_0$ (from \ref{eq:diracMass}), $m_1=y^2
 	\centering	
 	%	\includegraphics[height=3cm]{seesaw_feynman}
 	\begin{minipage}[t]{0.6\textwidth}
-		\includegraphics[height=2.8cm]{typeIseesaw.eps}
+		\includegraphics[width=8cm]{typeI_seesaw.eps}
 	\end{minipage}
 	\begin{minipage}[t]{0.3\textwidth}
 		\includegraphics[height=3.0cm]{typeIIseesaw.eps}
@@ -529,17 +528,38 @@ Since we know the Dirac mass $m^D=y_\nu v_0$ (from \ref{eq:diracMass}), $m_1=y^2
 
 As a summary, to explain how the neutrinos acquire their masses, new physics theories are required to extend the Standard Model. If neutrinos are Majorana particles, the induced Seesaw Mechanism can explain the tiny mass of the active neutrinos naturally. As a bonus, the mass scale required by the Seesaw Mechanism implies the new physics in GUT.
 
-\subsection{Neutrino Mass in Beta Decay}
+\subsection{Measure the Absolute Neutrino Mass from Beta Decay}
+To measure the absolute mass of neutrinos, the classical experiments in history were designed to measure the kinetic energy of the emitted electron from the $\beta$-decay: $(Z,A)\to (Z+1,A)+e^-+\overline{\nu_e}$, where A is the mass of the parent nucleus and Z is the atomic or proton number. Since the presence of the neutrinos taking away a few energies, the energies of the emitted electrons range from 0 to the endpoint energy, $E_0$. The kinetic energy of the emitted electron is $T=E_e-m_e$ (taking $\hbar=c=1$), where $m_e$ is the rest mass of the electron. If consider the parent and the daughter nuclei are at rest, the Q-value of the $\beta$-decay is the difference between the initial/parent nuclei mass ($M_i$) and the final/daughter nuclei mass ($M_f$) plus the electron mass: $Q_\beta=M_i-(M_f+m_e)$. 
 
 
-\begin{equation}
-\sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathcal{M}|^2F(Z,E_e)E_e p_e}}
+
+For very small neutrino mass $m_{\nu_e}\to 0$, $Q_\beta \sim E_0$. The kinetic spectrum of the emitted electron is given by\cite{giunti2007fundamentals}:
+\begin{equation}\label{eq:beta-decay}
+\frac{dN}{dT} = \frac{G_F^2 m_e^5}{2\pi^2}\cos^2\theta_C|\mathcal{M}_{nucl}|^2 F(Z,E)E_e p_e(Q_\beta-T)\sqrt{(Q_\beta-T)^2-m_\nu^2},
 \end{equation}
+where $\cos\theta_C$ is the Cabibbo angle, $\mathcal{M}_{nucl}$ is the nuclear matrix element, $F(Z,E)$ is the Fermi function describing the electromagnetic interaction between the emitted electron and the final-state nucleus.
 
 A Kurie function is defined for estimating the $\nu_e$ mass \cite{giunti2007fundamentals}:
 \begin{equation}
 K(T) =\left[(Q-E_k)\sqrt{(Q-E_k)^2-m^2_{\bar{\nu}_e}}\right]^{1/2}
 \end{equation}
+
+$Q_\beta$ 
+then the neutrino energy is $E_\nu=E_0-T$.
+
+ 
+
+
+Only considering one generation,
+
+Among these experiments, the tritium $\beta$-decay process: $^3$H$\to^3$He$^+$+$e^-+\overline{\nu_e}$ has a low endpoint energy $E_0=18.57~keV$ and favorable half-life $T_{1/2}=12.32$ years\cite{aker2019improved} and it has been largely investigated since 1947\cite{fukugita2013physics}.
+
+\begin{equation}
+\sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathcal{M}_{nucl}|^2F(Z,E_e)E_e p_e}}
+\end{equation}
+
+Near the Q-value of the decay.
+
 
 The $\beta$-decay in Tritium: $^3H\to^3He+e^-+\bar{\nu}_e$
 
@@ -549,7 +569,23 @@ m_{\bar{\nu}_e} = \sqrt{\sum_i |U_{ei}|^2 m_i^2}.
 \end{equation}
 
 
-\section{Double Beta Decay}
+
+
+the KATRIN (KArlsruhe TRItium Neutrino) experiment
+the $\beta$-decay of tritium:
+the kinematic endpoint at 18.57 keV
+In 2019, the experiment reported 
+for the absolute neutrino mass scale,
+an upper limit of 1.1 eV with 90\% C.L. was derived.
+
+
+spectrometer to measure the electron energy.
+
+After 5 years of measurement, the experiment is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L..
+
+\cite{aker2019improved}
+
+\section{Measure the Absolute Neutrino Mass from Double Beta Decay}
 
 For heavy radioactive isotopes (mass $A>70$) with nuclei of even neutron number ($N$) and even proton number ($Z$) (called even-even nucleus), beta decay will lead to an odd-odd nucleus which is less stable. For some such isotopes the beta decay is energetically forbidden. In 1935, Maria Goeppert-Mayer pointed out that they can still decay through a double beta decay process: $(Z,A) \to (Z+2,A)+2e^{-}+2\bar{\nu_e}+Q_{\beta\beta}$, where the $Q_{\beta\beta}$ is the released energy. This is called ordinary double beta decay or $2\nu\beta\beta$, which is allowed by the Standard Model and with a typical half-life $T_{1/2}>10^{19}$ years\cite{povh2008particles,martin2019nuclear}.
 
