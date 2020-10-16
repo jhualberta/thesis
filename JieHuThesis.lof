@@ -4,7 +4,7 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces All reactions in the CNO bicycle. The reactions producing neutrinos are labeled in the solid frames. Modified from \cite {oberauer2020solar}.}}{7}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Solar neutrino energy spectrum ($E_\nu $ vs. flux) for the solar model BS05(OP). Figure is from \cite {bahcall2005new}.}}{8}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Feynman diagrams (at tree level) for different channels of the elastic scattering interaction. (a) and (b): charged current for s and t channels, respectively; (c): neutral current.}}{9}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Tree-level Feynman diagrams for the Seesaw Mechanisms, modified from \cite {valle2015neutrinos}. Left: type-I; right: type-II. The type-III scheme shares the same diagram to the type-I, but with the $\nu _R$ replaced by $T^0$.}}{24}{figure.2.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tree-level Feynman diagrams for the Seesaw Mechanisms, modified from \cite {valle2015neutrinos}. Left: type-I; right: type-II. The type-III scheme shares the same diagram to the type-I, but with the $\nu _R$ replaced by $T^0$.}}{23}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Feynman diagrams for $2\nu \beta \beta $ (left) and $0\nu \beta \beta $ (right).}}{26}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay. The SNO+ simulation package (RAT) was used to produce the plot.}}{27}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces The Black Box diagram, modified from \cite {schechter1982neutrinoless}.}}{28}{figure.2.8}
@@ -125,3 +125,4 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{132}{figure.A.1}
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{133}{figure.A.2}
+\addvspace {10\p@ }

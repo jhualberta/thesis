@@ -249,12 +249,6 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
   preprint arXiv:1804.03575}, 2018.
 
-\bibitem{ade2016planck}
-P.~A. Ade, N.~Aghanim, M.~Arnaud, M.~Ashdown, J.~Aumont, C.~Baccigalupi,
-  A.~Banday, R.~Barreiro, J.~Bartlett, N.~Bartolo, {\em et~al.}, ``Planck 2015
-  results-xiii. cosmological parameters,'' {\em Astronomy \& Astrophysics},
-  vol.~594, p.~A13, 2016.
-
 \bibitem{akhmedov2014majorana}
 E.~Akhmedov, ``Majorana neutrinos and other majorana particles: Theory and
   experiment,'' {\em arXiv preprint arXiv:1412.3320}, 2014.
@@ -296,6 +290,27 @@ K.~Zuber, ``On the physics of massive neutrinos,'' {\em Physics Reports},
 \bibitem{barger2012physics}
 V.~Barger, D.~Marfatia, and K.~Whisnant, {\em The physics of neutrinos}.
 \newblock Princeton University Press, 2012.
+
+\bibitem{dvorkin2019neutrino}
+C.~Dvorkin, M.~Gerbino, D.~Alonso, N.~Battaglia, S.~Bird, A.~D. Rivero,
+  A.~Font-Ribera, G.~Fuller, M.~Lattanzi, M.~Loverde, {\em et~al.}, ``Neutrino
+  mass from cosmology: Probing physics beyond the standard model,'' {\em arXiv
+  preprint arXiv:1903.03689}, 2019.
+
+\bibitem{gerbino2018status}
+M.~Gerbino and M.~Lattanzi, ``Status of neutrino properties and future
+  prospects—cosmological and astrophysical constraints,'' {\em Frontiers in
+  Physics}, vol.~5, p.~70, 2018.
+
+\bibitem{aghanim2020planck}
+N.~Aghanim, Y.~Akrami, M.~Ashdown, J.~Aumont, C.~Baccigalupi, M.~Ballardini,
+  A.~Banday, R.~Barreiro, N.~Bartolo, S.~Basak, {\em et~al.}, ``Planck 2018
+  results-vi. cosmological parameters,'' {\em Astronomy \& Astrophysics},
+  vol.~641, p.~A6, 2020.
+
+\bibitem{rottele2019tritium}
+C.~R{\"o}ttele, ``Tritium suppression factor of the katrin transport section,''
+  2019.
 
 \bibitem{aker2019improved}
 M.~Aker, K.~Altenm{\"u}ller, M.~Arenz, M.~Babutzka, J.~Barrett, S.~Bauer,

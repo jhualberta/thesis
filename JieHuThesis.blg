@@ -16,6 +16,7 @@ Warning--empty year in kalpanaWLS
 Warning--empty year in kalpanaWLS2
 Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
+Warning--empty journal in rottele2019tritium
 Warning--empty journal in piperno2015dark
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
@@ -50,45 +51,45 @@ Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 168 entries,
+You've used 171 entries,
             1876 wiz_defined-function locations,
-            1287 strings with 29821 characters,
-and the built_in function-call counts, 36438 in all, are:
-= -- 3243
-> -- 2015
+            1298 strings with 30416 characters,
+and the built_in function-call counts, 37021 in all, are:
+= -- 3282
+> -- 2062
 < -- 0
-+ -- 757
-- -- 589
-* -- 2551
-:= -- 5603
-add.period$ -- 219
-call.type$ -- 168
-change.case$ -- 119
++ -- 774
+- -- 603
+* -- 2598
+:= -- 5706
+add.period$ -- 222
+call.type$ -- 171
+change.case$ -- 122
 chr.to.int$ -- 0
-cite$ -- 215
-duplicate$ -- 1972
-empty$ -- 3303
-format.name$ -- 589
-if$ -- 8652
+cite$ -- 219
+duplicate$ -- 2001
+empty$ -- 3356
+format.name$ -- 603
+if$ -- 8782
 int.to.chr$ -- 0
-int.to.str$ -- 168
-missing$ -- 165
-newline$ -- 559
-num.names$ -- 160
-pop$ -- 584
+int.to.str$ -- 171
+missing$ -- 168
+newline$ -- 568
+num.names$ -- 163
+pop$ -- 597
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1060
+skip$ -- 1067
 stack$ -- 0
-substring$ -- 1018
-swap$ -- 695
+substring$ -- 1020
+swap$ -- 699
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 47
-while$ -- 263
-width$ -- 171
-write$ -- 1552
-(There were 47 warnings)
+warning$ -- 48
+while$ -- 267
+width$ -- 174
+write$ -- 1577
+(There were 48 warnings)

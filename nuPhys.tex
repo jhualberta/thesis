@@ -343,13 +343,7 @@ large active mass of 20 kton
 the energy resolution (3\% at 1 MeV) 
 \cite{giaz2018status}
 
-
-\section{Majorana Neutrino and Neutrino Mass}\label{sectMajorana}
-The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) direct measurements for the $\beta$-decay spectrum; (2) a search for the $0\nu\beta\beta$ process and (3) cosmological measurements\cite{valle2015neutrinos}. 
-
-The following sections focus on the $\beta$-decay and $0\nu\beta\beta$ approaches. In the cosmological case, the $Planck$ space observatory reported a constraint on the sum of the masses of the three active types of neutrinos to be $\sum m_\nu<0.23~eV$, mainly based on its measurements of the Cosmic Microwave Background (CMB) (data up until 2015) and the combining with the other astrophysical or cosmological data, such as the Baryon Acoustic Oscillations (BAO)\cite{ade2016planck}. 
-
-\subsection{Neutrino Mass Terms}
+\section{Neutrino Mass}\label{sectMajorana}
 A free spin-1/2 fermion field with a mass $m$ follows the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, where $\partial_\mu\equiv \partial/\partial x^\mu$, $\psi$ is a four-component spinor (Dirac spinor) field, and $\gamma^\mu~(\mu=0,1,2,3)$ is a set of $4\times 4$ matrices forming a Clifford algebra, i.e, satisfying the following relations\cite{akhmedov2014majorana,zee2010quantum}:
 \begin{equation}\label{eq:clifford}
 \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}, 
@@ -528,64 +522,31 @@ Since we know the Dirac mass $m^D=y_\nu v_0$ (from \ref{eq:diracMass}), $m_1=y^2
 
 As a summary, to explain how the neutrinos acquire their masses, new physics theories are required to extend the Standard Model. If neutrinos are Majorana particles, the induced Seesaw Mechanism can explain the tiny mass of the active neutrinos naturally. As a bonus, the mass scale required by the Seesaw Mechanism implies the new physics in GUT.
 
-\subsection{Measure the Absolute Neutrino Mass from Beta Decay}
-To measure the absolute mass of neutrinos, the classical experiments in history were designed to measure the kinetic energy of the emitted electron from the $\beta$-decay: $(Z,A)\to (Z+1,A)+e^-+\overline{\nu_e}$, where A is the mass of the parent nucleus and Z is the atomic or proton number. Since the presence of the neutrinos taking away a few energies, the energies of the emitted electrons range from 0 to the endpoint energy, $E_0$. The kinetic energy of the emitted electron is $T=E_e-m_e$ (taking $\hbar=c=1$), where $m_e$ is the rest mass of the electron. If consider the parent and the daughter nuclei are at rest, the Q-value of the $\beta$-decay is the difference between the initial/parent nuclei mass ($M_i$) and the final/daughter nuclei mass ($M_f$) plus the electron mass: $Q_\beta=M_i-(M_f+m_e)$. 
+\section{Measure the Absolute Neutrino Mass}
 
+The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) cosmological measurements; (2) direct measurements for the $\beta$-decay spectrum; (3) a search for the $0\nu\beta\beta$ process\cite{valle2015neutrinos}. 
 
+\subsection{Cosmological Approach}
+Neutrinos play an important role in the formation and evolution of the universe. From the hot big bang model, there exists a relic sea of neutrinos forming a Cosmic Neutrino Background (CNB)\cite{lesgourgues2013neutrino}. Though the CNB has not been detected, the massive neutrinos can leave imprints on cosmological observables, such as the anisotropies of the Cosmic Microwave Background (CMB) temperature spectra, the matter power spectrum from the large-scale structure and the Baryon Acoustic Oscillations (BAO)\cite{dvorkin2019neutrino,gerbino2018status}.
 
-For very small neutrino mass $m_{\nu_e}\to 0$, $Q_\beta \sim E_0$. The kinetic spectrum of the emitted electron is given by\cite{giunti2007fundamentals}:
+Combining the CMB data from the Planck space observatory (updated to 2018 results) with the BAO measurements, a tight 95\% constraint on the sum of the masses of the three active types of neutrinos is obtained as: $\sum m_\nu<0.12~eV$\cite{aghanim2020planck}. Currently the cosmological approaches provide the strongest upper limit of the sum of neutrino masses\cite{dvorkin2019neutrino}. On the other hand, these measurements are strongly model dependent. For example, the measurements based on CMB mainly depend on the Lambda Cold Dark Matter ($\Lambda CDM$) model, which is a standard model of Big Bang cosmology.
+
+\subsection{Direct Kinetic Measurements from Beta Decay}
+The classical experiments in history were designed to measure the kinetic energy of the emitted electron from the $\beta^-$-decay: $(Z,A)\to (Z+1,A)+e^-+\overline{\nu_e}$, where A is the mass of the parent nucleus and Z is the atomic or proton number. The energy difference between the initial and final state nuclei is the sum of the emitted electrons $e^-$ (called the $\beta$-electron ) energy $E_e$, the antineutrino $\bar{nu}_e$ energy $E_\nu$ and the nuclear recoil energy $E_R$: $Q=E_e+E_\nu+E_R$. If considering the initial and final nuclei are at rest and $E_R$ is negligible, due to the presence of $E_\nu$, $E_e$ can range from 0 to the maximal energy $E_0=Q$ (called the end-point energy). For the $\beta$-electron with a rest mass $m_e$, the kinetic energy $T_e=E_e-m_e$ (taking the natural unit $\hbar=c=1$) and the momentum $p_e=\sqrt{E^2+2Em_e}$. Then by using the Fermi's Golden Rule, the differential $\beta^-$-decay spectrum of $T_e$ is given by\cite{rottele2019tritium}:
 \begin{equation}\label{eq:beta-decay}
-\frac{dN}{dT} = \frac{G_F^2 m_e^5}{2\pi^2}\cos^2\theta_C|\mathcal{M}_{nucl}|^2 F(Z,E)E_e p_e(Q_\beta-T)\sqrt{(Q_\beta-T)^2-m_\nu^2},
+\begin{aligned}
+\frac{d^2N}{dtdT_e} = \frac{G_F^2\cos^2\theta_C|\mathcal{M}_{nucl}|^2}{2\pi^3} &\cdot F(Z+1,T_e)\cdot(T_e+m_e)\cdot p_e\cdot (E_0-T_e)\\
+&
+\cdot \sqrt{(E_0-T_e)^2-m^2_{\bar{\nu}_e}}\Theta(E_0-T_e-m_{\bar{\nu}_e}),
+\end{aligned}
 \end{equation}
-where $G_F$ is the Fermi constant, $\cos\theta_C$ is the Cabibbo angle, $\mathcal{M}_{nucl}$ is the nuclear matrix element, $F(Z,E)$ is the Fermi function describing the electromagnetic interaction between the emitted electron and the final-state nucleus.
+where $G_F$ is the Fermi constant; $\theta_C$ is the Cabibbo angle; $\mathcal{M}_{nucl}$ is the nuclear matrix element; $F(Z,E)$ is the Fermi function describing the electromagnetic interaction between the $\beta$-electron and the final-state nucleus; and the Heaviside step function $\Theta$ ensures that a neutrino can only be emitted if enough energy is left for its mass.
 
-A Kurie function is defined for estimating the $\nu_e$ mass \cite{giunti2007fundamentals}:
-\begin{equation}
-K(T) =\left[(Q-E_k)\sqrt{(Q-E_k)^2-m^2_{\bar{\nu}_e}}\right]^{1/2}
-\end{equation}
+In this spectrum, the square of the rest mass $m^2_{\bar{\nu}_e}=\sum_i |U_{ei}|^2 m_i^2$ is the measurement observable. It can be evaluated by measuring the $\beta$-decay event rate and at the endpoint energy the event rate is proportional to $E_0^{}-3$\cite{rottele2019tritium}.
 
-$Q_\beta$ 
-then the neutrino energy is $E_\nu=E_0-T$.
+From the view of experimentalists, the tritium $\beta$-decay process: $^3$H$\to^3$He$^+$+$e^-+\bar{\nu}_e$ has a low endpoint energy $E_0=18.57$ keV, a favorable half-life $T_{1/2}=12.32$ years and simple atomic structure. With these experimental advantages, it has been largely investigated since 1947 and has been used as a standard technology for the kinetic measurement\cite{fukugita2013physics}. Among the tritium experiments, the　KATRIN (KArlsruhe TRItium Neutrino) experiment is the state-of-the-art one which uses a high energy resolution spectrometer to measure the tritium $\beta$-decay.　In 2019, the experiment reported an upper limit of $m_\nu<1.1$ eV with 90\% C.L.. After 5 years of measurement, the experiment is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L.\cite{aker2019improved}.
 
- 
-
-
-Only considering one generation,
-
-Among these experiments, the tritium $\beta$-decay process: $^3$H$\to^3$He$^+$+$e^-+\overline{\nu_e}$ has a low endpoint energy $E_0=18.57~keV$ and favorable half-life $T_{1/2}=12.32$ years\cite{aker2019improved} and it has been largely investigated since 1947\cite{fukugita2013physics}.
-
-\begin{equation}
-\sqrt{\frac{dN/dE_e}{\frac{G^2_F m_e^5}{2\pi^3}\cos^2\theta_C|\mathcal{M}_{nucl}|^2F(Z,E_e)E_e p_e}}
-\end{equation}
-
-Near the Q-value of the decay.
-
-
-The $\beta$-decay in Tritium: $^3H\to^3He+e^-+\bar{\nu}_e$
-
-The effective $\nu_e$ mass in $\beta$-decay:
-\begin{equation}
-m_{\bar{\nu}_e} = \sqrt{\sum_i |U_{ei}|^2 m_i^2}.
-\end{equation}
-
-
-
-
-the KATRIN (KArlsruhe TRItium Neutrino) experiment
-the $\beta$-decay of tritium:
-the kinematic endpoint at 18.57 keV
-In 2019, the experiment reported 
-for the absolute neutrino mass scale,
-an upper limit of 1.1 eV with 90\% C.L. was derived.
-
-
-spectrometer to measure the electron energy.
-
-After 5 years of measurement, the experiment is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L..
-
-\cite{aker2019improved}
-
-\section{Measure the Absolute Neutrino Mass from Double Beta Decay}
+\subsection{Double Beta Decay}
 
 For heavy radioactive isotopes (mass $A>70$) with nuclei of even neutron number ($N$) and even proton number ($Z$) (called even-even nucleus), beta decay will lead to an odd-odd nucleus which is less stable. For some such isotopes the beta decay is energetically forbidden. In 1935, Maria Goeppert-Mayer pointed out that they can still decay through a double beta decay process: $(Z,A) \to (Z+2,A)+2e^{-}+2\bar{\nu_e}+Q_{\beta\beta}$, where the $Q_{\beta\beta}$ is the released energy. This is called ordinary double beta decay or $2\nu\beta\beta$, which is allowed by the Standard Model and with a typical half-life $T_{1/2}>10^{19}$ years\cite{povh2008particles,martin2019nuclear}.
 
