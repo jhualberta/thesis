@@ -326,9 +326,10 @@ B.~Povh, K.~Rith, and F.~Zetsche, {\em Particles and nuclei}, vol.~1.
 B.~R. Martin and G.~Shaw, {\em Nuclear and particle physics: an introduction}.
 \newblock John Wiley \& Sons, 2019.
 
-\bibitem{zuber2011neutrino}
-K.~Zuber, {\em Neutrino physics}.
-\newblock CRC press, 2011.
+\bibitem{dolinski2019neutrinoless}
+M.~J. Dolinski, A.~W. Poon, and W.~Rodejohann, ``Neutrinoless double-beta
+  decay: status and prospects,'' {\em Annual Review of Nuclear and Particle
+  Science}, vol.~69, pp.~219--251, 2019.
 
 \bibitem{takasugi1984can}
 E.~Takasugi, ``Can the neutrinoless double beta decay take place in the case of
@@ -340,10 +341,9 @@ M.~Duerr, M.~Lindner, and A.~Merle, ``On the quantitative impact of the
   schechter-valle theorem,'' {\em Journal of High Energy Physics}, vol.~2011,
   no.~6, p.~91, 2011.
 
-\bibitem{dolinski2019neutrinoless}
-M.~J. Dolinski, A.~W. Poon, and W.~Rodejohann, ``Neutrinoless double-beta
-  decay: status and prospects,'' {\em Annual Review of Nuclear and Particle
-  Science}, vol.~69, pp.~219--251, 2019.
+\bibitem{zuber2011neutrino}
+K.~Zuber, {\em Neutrino physics}.
+\newblock CRC press, 2011.
 
 \bibitem{cremonesi2014challenges}
 O.~Cremonesi and M.~Pavan, ``Challenges in double beta decay,'' {\em Advances
