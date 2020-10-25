@@ -341,9 +341,9 @@ M.~Duerr, M.~Lindner, and A.~Merle, ``On the quantitative impact of the
   schechter-valle theorem,'' {\em Journal of High Energy Physics}, vol.~2011,
   no.~6, p.~91, 2011.
 
-\bibitem{zuber2011neutrino}
+\bibitem{zuber2020neutrino}
 K.~Zuber, {\em Neutrino physics}.
-\newblock CRC press, 2011.
+\newblock CRC press, 2020.
 
 \bibitem{cremonesi2014challenges}
 O.~Cremonesi and M.~Pavan, ``Challenges in double beta decay,'' {\em Advances
@@ -392,6 +392,11 @@ C.~Alduino, F.~Alessandria, K.~Alfonso, E.~Andreotti, C.~Arnaboldi,
 
 \bibitem{piperno2015dark}
 G.~Piperno, ``Dark matter search with the cuore-0 experiment,'' 2015.
+
+\bibitem{agostini2017discovery}
+M.~Agostini, G.~Benato, and J.~A. Detwiler, ``Discovery probability of
+  next-generation neutrinoless double-$\beta$ decay experiments,'' {\em
+  Physical Review D}, vol.~96, no.~5, p.~053001, 2017.
 
 \bibitem{muonflux}
 ``Muons,'' 2001.
@@ -737,6 +742,12 @@ P.~B. Denton, S.~J. Parke, and X.~Zhang, ``Eigenvalues: The rosetta stone for
   neutrino oscillations in matter,'' {\em arXiv preprint arXiv:1907.02534},
   2019.
 
+\bibitem{agostini2017background}
+M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
+  C.~Bauer, E.~Bellotti, S.~Belogurov, S.~Belyaev, {\em et~al.},
+  ``Background-free search for neutrinoless double-$\beta$ decay of 76 ge with
+  gerda,'' {\em Nature}, vol.~544, no.~7648, pp.~47--52, 2017.
+
 \bibitem{perkins2009particle}
 D.~H. Perkins, {\em Particle astrophysics}.
 \newblock No.~10, Oxford University Press, 2009.
@@ -750,18 +761,6 @@ S.~Bilenky, {\em Introduction to the physics of massive and mixed neutrinos},
 G.~Kane, {\em Modern elementary particle physics: explaining and extending the
   standard model}.
 \newblock Cambridge University Press, 2017.
-
-\bibitem{agostini2017background}
-M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
-  C.~Bauer, E.~Bellotti, S.~Belogurov, S.~Belyaev, {\em et~al.},
-  ``Background-free search for neutrinoless double-$\beta$ decay of 76 ge with
-  gerda,'' {\em Nature}, vol.~544, no.~7648, pp.~47--52, 2017.
-
-\bibitem{agostini2018improved}
-M.~Agostini, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis, C.~Bauer,
-  E.~Bellotti, S.~Belogurov, A.~Bettini, L.~Bezrukov, {\em et~al.}, ``Improved
-  limit on neutrinoless double-$\beta$ decay of ge 76 from gerda phase ii,''
-  {\em Physical review letters}, vol.~120, no.~13, p.~132503, 2018.
 
 \bibitem{esteban2019global}
 I.~Esteban, M.~Gonzalez-Garcia, A.~Hernandez-Cabezudo, M.~Maltoni, and

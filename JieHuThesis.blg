@@ -3,7 +3,6 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "gerda2018"
 Warning--empty year in matt_deployedsource
 Warning--empty year in n16geom_zach
 Warning--empty year in n16pic
@@ -54,15 +53,15 @@ Warning--empty year in neuronetwork
 Warning--empty year in brunroot
 You've used 171 entries,
             1876 wiz_defined-function locations,
-            1299 strings with 30425 characters,
-and the built_in function-call counts, 37021 in all, are:
+            1299 strings with 30482 characters,
+and the built_in function-call counts, 36918 in all, are:
 = -- 3282
-> -- 2062
+> -- 2038
 < -- 0
-+ -- 774
-- -- 603
-* -- 2598
-:= -- 5706
++ -- 766
+- -- 595
+* -- 2583
+:= -- 5682
 add.period$ -- 222
 call.type$ -- 171
 change.case$ -- 122
@@ -70,8 +69,8 @@ chr.to.int$ -- 0
 cite$ -- 219
 duplicate$ -- 2001
 empty$ -- 3356
-format.name$ -- 603
-if$ -- 8782
+format.name$ -- 595
+if$ -- 8766
 int.to.chr$ -- 0
 int.to.str$ -- 171
 missing$ -- 168
@@ -93,4 +92,4 @@ warning$ -- 48
 while$ -- 267
 width$ -- 174
 write$ -- 1577
-(There were 49 warnings)
+(There were 48 warnings)
