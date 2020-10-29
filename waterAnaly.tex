@@ -122,6 +122,13 @@ Table~\ref{table_posresol} summarizes the values of position resolution paramete
 \end{table}
 \vspace{1mm}
 
+
+
+
+% & 0.5141$\pm$0.02612 & 176.7$\pm$3.341 & 306$\pm$8.012 & -6.516$\pm$0.9188 & 68.26/70
+% & 0.5677$\pm$0.03019 & 171.4$\pm$3.968 & 288$\pm$7.559 & 5.235$\pm$0.9145 & 69.1/70
+
+
 Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clean global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
 
 \begin{figure}
@@ -153,6 +160,27 @@ Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-10093
 
 emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{MPW_N16_xscanResol_itrCut.pdf}
+	\caption{X scan.}
+	\label{MPWscanXResol}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{MPW_N16_yscanResol_itrCut.pdf}
+	\caption{Y scan.}
+\label{MPWscanYResol}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{MPW_N16_zscanResol_itrCut.pdf}
+	\caption{Z scan.}
+\label{MPWscanZResol}
+\end{figure}
 
 \subsection{Angular Resolution}
 An angular resolution function was 
@@ -168,9 +196,9 @@ events following the exponential with slope βm.
 The angle θ is the displacement between the ‘truth’ and
 reconstructed directions.
 
-Direction resolutions, with a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$:
+To extract the direction resolutions, a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ is applied.
 
-The fitted results are shown in Table.~\ref{angularResolValues}.
+The resolution results are shown in Table.~\ref{angularResolValues}.
 \begin{table}[ht]
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
