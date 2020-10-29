@@ -162,7 +162,7 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm]{MPW_N16_xscanResol_itrCut.pdf}
+	\includegraphics[width=15cm]{MPW_N16_xscanResol_itrCut.pdf}
 	\caption{X scan.}
 	\label{MPWscanXResol}
 \end{figure}
@@ -170,19 +170,23 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm]{MPW_N16_yscanResol_itrCut.pdf}
+	\includegraphics[width=15cm]{MPW_N16_yscanResol_itrCut.pdf}
 	\caption{Y scan.}
 \label{MPWscanYResol}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=12cm]{MPW_N16_zscanResol_itrCut.pdf}
+	\includegraphics[width=15cm]{MPW_N16_zscanResol_itrCut.pdf}
 	\caption{Z scan.}
 \label{MPWscanZResol}
 \end{figure}
 
 \subsection{Angular Resolution}
+
+
+Here the 'true' direction is defined as the direction pointing from the source positions to the fitted position: $\vec{u}_{true} = \vec{X}_{fit}-\vec{X}_{source}$. The angle $\theta$ is the displacement between the 'true' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
+
 An angular resolution function was 
 
 It is defined as a combination of two exponential components:
@@ -190,11 +194,7 @@ It is defined as a combination of two exponential components:
 P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
 \end{equation}
 where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or ``slopes'' of the two exponential components; the $\alpha_M$ is the fraction between two exponential components.
-events following the exponential with slope βm. 
-
-
-The angle θ is the displacement between the ‘truth’ and
-reconstructed directions.
+events following the exponential with slope $\beta_M$. 
 
 To extract the direction resolutions, a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ is applied.
 
