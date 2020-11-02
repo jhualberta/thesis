@@ -230,12 +230,31 @@ The resolution results are shown in Table.~\ref{angularResolValues}.
 	\label{angularResolValues}
 \end{table}
 
+new MC
+\begin{table}[ht]
+	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+		\toprule
+		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+		\hline
+		Rat data & 3.44$\pm$0.25 & 17.18$\pm$0.93 & 0.51$\pm$0.03 & 93.75/66 & 0.99 & 0.73 & 0.33\\
+		Rat MC & 4.15$\pm$0.23 & 21.53$\pm$1.20 & 0.547$\pm$0.025 & 92.19/66 & 0.977 & 0.757 & 0.424 \\	
+		\hline
+		MPW data  3.91$\pm$0.25 & 18$\pm$1.102 & 0.55$\pm$0.03 & 80.46/66 & 0.974 & 0.741 & 0.387\\
+		MPW MC & 4.53$\pm$0.22 & 22.38$\pm$1.43 & 0.59$\pm$0.03 & 73.2/66 & 0.96 & 0.76 & 0.454\\
+		\bottomrule
+	\end{tabular}
+	\label{angularResolValuesUpdated}
+\end{table}
+
+
+
+
 
 Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ cuts.
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm]{angularResol_107055_mpw.pdf}
-	\caption{Angular distributions fitted with angular resolution functions, compared the data (red solid line) with the MC (black dashed line).}
+	\includegraphics[width=10cm]{16NangularResol.pdf}
+	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the MPW fitter. These distributions are fitted with the angular resolution functions.}
 	\label{angularResolMPW}
 \end{figure}
 
