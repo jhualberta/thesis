@@ -7,18 +7,19 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Discovery of Neutrino}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Neutrino Flavor Transformation}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Vacuum Oscillation}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Matter Effect}{10}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Status of the Neutrino Flavor Transformation Experiments}{12}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Atmospheric Neutrino}{12}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Solar Neutrino}{14}{section.2.3}
-\contentsline {section}{\numberline {2.4}Neutrino Mass}{17}{section.2.4}
-\contentsline {section}{\numberline {2.5}Measure the Absolute Neutrino Mass}{25}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Cosmological Approach}{25}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Direct Kinetic Measurements from Beta Decay}{25}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Double Beta Decay}{26}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Status of Double Beta Decay Experiments}{30}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.2}Basic Properties}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Neutrino Flavor Transformation}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Vacuum Oscillation}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Matter Effect}{11}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Status of the Neutrino Flavor Transformation Experiments}{13}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Atmospheric Neutrino}{13}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Solar Neutrino}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Neutrino Mass}{17}{section.2.5}
+\contentsline {section}{\numberline {2.6}Measure the Absolute Neutrino Mass}{25}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Cosmological Approach}{25}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Direct Kinetic Measurements from Beta Decay}{26}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Double Beta Decay}{27}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Status of Double Beta Decay Experiments}{30}{subsection.2.6.4}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{34}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{34}{section.3.1}
 \contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{35}{section.3.2}
@@ -67,7 +68,7 @@
 \contentsline {subsection}{\numberline {5.2.1}Angular Resolution}{90}{subsection.5.2.1}
 \contentsline {section}{\numberline {5.3}Energy}{96}{section.5.3}
 \contentsline {section}{\numberline {5.4}Extracting $\gamma $-rays from Neutron Capture}{96}{section.5.4}
-\contentsline {section}{\numberline {5.5}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{96}{section.5.5}
+\contentsline {section}{\numberline {5.5}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{101}{section.5.5}
 \contentsline {subsubsection}{Open Dataset Analysis}{101}{section*.14}
 \contentsline {chapter}{\numberline {6}Towards the SNO+ Future Phases}{105}{chapter.6}
 \contentsline {section}{\numberline {6.1}Partial-fill Phase Analysis}{105}{section.6.1}

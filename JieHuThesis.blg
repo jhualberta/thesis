@@ -51,45 +51,45 @@ Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 172 entries,
+You've used 173 entries,
             1876 wiz_defined-function locations,
-            1303 strings with 30588 characters,
-and the built_in function-call counts, 37069 in all, are:
-= -- 3297
-> -- 2042
+            1306 strings with 30683 characters,
+and the built_in function-call counts, 37246 in all, are:
+= -- 3312
+> -- 2053
 < -- 0
-+ -- 768
-- -- 596
-* -- 2590
-:= -- 5704
-add.period$ -- 224
-call.type$ -- 172
++ -- 772
+- -- 599
+* -- 2600
+:= -- 5731
+add.period$ -- 226
+call.type$ -- 173
 change.case$ -- 122
 chr.to.int$ -- 0
-cite$ -- 220
-duplicate$ -- 2009
-empty$ -- 3376
-format.name$ -- 596
-if$ -- 8805
+cite$ -- 221
+duplicate$ -- 2018
+empty$ -- 3396
+format.name$ -- 599
+if$ -- 8849
 int.to.chr$ -- 0
-int.to.str$ -- 172
-missing$ -- 170
-newline$ -- 572
-num.names$ -- 164
-pop$ -- 602
+int.to.str$ -- 173
+missing$ -- 172
+newline$ -- 576
+num.names$ -- 165
+pop$ -- 608
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1069
+skip$ -- 1070
 stack$ -- 0
 substring$ -- 1020
-swap$ -- 700
+swap$ -- 701
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 48
-while$ -- 268
-width$ -- 175
-write$ -- 1587
+while$ -- 269
+width$ -- 176
+write$ -- 1596
 (There were 48 warnings)

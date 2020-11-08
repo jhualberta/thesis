@@ -194,7 +194,7 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 \begin{figure}
 	\centering
 	\includegraphics[width=15cm]{MPW_N16_zscanResol_itrCut.pdf}
-	\caption{Z scan.}
+	\caption{Z scan. The data (black boxes) is compared with MC (red circles).}
 \label{MPWscanZResol}
 \end{figure}
 
@@ -212,9 +212,14 @@ P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_
 where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or ``slopes'' of the two exponential components; the $\alpha_M$ is the fraction between two exponential components.
 events following the exponential with slope $\beta_M$. 
 
-To extract the direction resolutions, a cut of $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ is applied.
+To extract the direction resolutions, a distance cut $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ is applied.
 
-The resolution results are shown in Table.~\ref{angularResolValues}.
+To avoid the effects from the tails, [0.3,1]
+$itr>0.55$ and $-0.12<\beta_{14}<0.95$
+radius cut for the FV: $r<5500$ mm.
+
+
+The resolution results are shown in Table.~\ref{angularResolValuesUpdated}.
 \begin{table}[ht]
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
@@ -223,38 +228,33 @@ The resolution results are shown in Table.~\ref{angularResolValues}.
 		Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
 		Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
 		\hline
-		MPW data & 3.79$\pm$0.12 & 18.58$\pm$0.95 & 0.53$\pm$0.02 & 154.6/143 & 0.982 & 0.743 & 0.379\\
-		MPW MC &4.01$\pm$0.19 & 18.41$\pm$1.06 & 0.48$\pm$0.03 & 128.4/127 & 1 & 0.779 & 0.433  \\
+107055 & 3.888$\pm$0.246 & 17.96$\pm$1.10 & 0.550$\pm$0.030 & 80.69/66 & 0.974 & 0.740 & 0.384\\
+107055 & 4.487$\pm$0.223 & 22.23$\pm$1.41 & 0.590$\pm$0.027 & 74.01/66 & 0.962 & 0.759 & 0.450\\		
 		\bottomrule
 	\end{tabular}
 	\label{angularResolValues}
 \end{table}
 
-new MC
 \begin{table}[ht]
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
-		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
-		\hline
-		Rat data & 3.44$\pm$0.25 & 17.18$\pm$0.93 & 0.51$\pm$0.03 & 93.75/66 & 0.99 & 0.73 & 0.33\\
-		Rat MC & 4.15$\pm$0.23 & 21.53$\pm$1.20 & 0.547$\pm$0.025 & 92.19/66 & 0.977 & 0.757 & 0.424 \\	
-		\hline
-		MPW data  3.91$\pm$0.25 & 18$\pm$1.102 & 0.55$\pm$0.03 & 80.46/66 & 0.974 & 0.741 & 0.387\\
-		MPW MC & 4.53$\pm$0.22 & 22.38$\pm$1.43 & 0.59$\pm$0.03 & 73.2/66 & 0.96 & 0.76 & 0.454\\
+	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+	\hline
+	MPW data & 4.15$\pm$0.18 & 19.08$\pm$0.94 & 0.58$\pm$0.02 & 77.1/66 & 0.964 & 0.744 & 0.410 \\
+	MPW MC & 4.42$\pm$0.19 & 20.41$\pm$1.01 & 0.56$\pm$0.02 & 83.8/66 & 0.974 & 0.768 & 0.454	 \\	
+\hline
+	Rat data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
+	Rat MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
 		\bottomrule
 	\end{tabular}
 	\label{angularResolValuesUpdated}
 \end{table}
 
-
-
-
-
-Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ cuts.
+Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after the distance cuts.
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{16NangularResol.pdf}
-	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the MPW fitter. These distributions are fitted with the angular resolution functions.}
+	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the MPW fitter. These distributions are fitted with the angular resolution functions ranging from 0.3 to 1.}
 	\label{angularResolMPW}
 \end{figure}
 
@@ -266,6 +266,14 @@ and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$
 \end{equation}
 
 where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
+
+$\beta_{14}$ systematic
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=15cm]{beta14_allScans.pdf}
+	\caption{$\beta_{14}$ systematic for various $^{16}$N scans.}
+	\label{beta14_scans}
+\end{figure}
 
 
 

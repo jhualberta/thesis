@@ -119,54 +119,6 @@ F.~Reines, C.~Cowan~Jr, F.~Harrison, A.~McGuire, and H.~Kruse, ``Detection of
   the free antineutrino,'' {\em Physical Review}, vol.~117, no.~1, p.~159,
   1960.
 
-\bibitem{bethe1939energy}
-H.~A. Bethe, ``Energy production in stars,'' {\em Physical Review}, vol.~55,
-  no.~5, p.~434, 1939.
-
-\bibitem{antonio2018state}
-E.~Antonio, {\em State Of The Art Of Neutrino Physics, The: A Tutorial For
-  Graduate Students And Young Researchers}, vol.~28.
-\newblock World Scientific, 2018.
-
-\bibitem{suekane2015neutrino}
-F.~Suekane, {\em Neutrino oscillations: a practical guide to basics and
-  applications}, vol.~898.
-\newblock Springer, 2015.
-
-\bibitem{giunti2007fundamentals}
-C.~Giunti and C.~W. Kim, {\em Fundamentals of neutrino physics and
-  astrophysics}.
-\newblock Oxford university press, 2007.
-
-\bibitem{haxton2013solar}
-W.~C. Haxton, R.~Hamish~Robertson, and A.~M. Serenelli, ``Solar neutrinos:
-  status and prospects,'' {\em Annual Review of Astronomy and Astrophysics},
-  vol.~51, pp.~21--61, 2013.
-
-\bibitem{bahcall1964solar}
-J.~N. Bahcall, ``Solar neutrinos. i. theoretical,'' {\em Physical Review
-  Letters}, vol.~12, no.~11, p.~300, 1964.
-
-\bibitem{davis1964solar}
-R.~Davis~Jr, ``Solar neutrinos. ii. experimental,'' {\em Physical Review
-  Letters}, vol.~12, no.~11, p.~303, 1964.
-
-\bibitem{becker1992electron}
-R.~Becker-Szendy, C.~Bratton, D.~Casper, S.~Dye, W.~Gajewski, M.~Goldhaber,
-  T.~Haines, P.~Halverson, D.~Kielczewska, W.~Kropp, {\em et~al.},
-  ``Electron-and muon-neutrino content of the atmospheric flux,'' {\em Physical
-  Review D}, vol.~46, no.~9, p.~3720, 1992.
-
-\bibitem{allison1997measurement}
-W.~Allison, G.~Alner, D.~Ayres, W.~Barrett, C.~Bode, P.~Border, C.~Brooks,
-  J.~Cobb, D.~Cockerill, R.~Cotton, {\em et~al.}, ``Measurement of the
-  atmospheric neutrino flavour composition in soudan 2,'' {\em Physics Letters
-  B}, vol.~391, no.~3-4, pp.~491--500, 1997.
-
-\bibitem{kajita2012atmospheric}
-T.~Kajita, ``Atmospheric neutrinos,'' {\em Advances in High Energy Physics},
-  vol.~2012, 2012.
-
 \bibitem{akhmedov2019quantum}
 E.~Akhmedov, ``Quantum mechanics aspects and subtleties of neutrino
   oscillations,'' {\em arXiv preprint arXiv:1901.05232}, 2019.
@@ -214,6 +166,11 @@ F.~P. An, A.~Balantekin, H.~Band, M.~Bishai, S.~Blyth, D.~Cao, G.~Cao, J.~Cao,
 X.~Qian and J.-C. Peng, ``Physics with reactor neutrinos,'' {\em Reports on
   Progress in Physics}, vol.~82, no.~3, p.~036201, 2019.
 
+\bibitem{antonio2018state}
+E.~Antonio, {\em State Of The Art Of Neutrino Physics, The: A Tutorial For
+  Graduate Students And Young Researchers}, vol.~28.
+\newblock World Scientific, 2018.
+
 \bibitem{xing2011neutrinos}
 Z.~Xing and S.~Zhou, {\em Neutrinos in particle physics, astronomy and
   cosmology}.
@@ -250,9 +207,52 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
   cp violation for neutrino oscillations in matter,'' {\em Physics Letters B},
   vol.~537, no.~1-2, pp.~86--94, 2002.
 
+\bibitem{bahcall1964solar}
+J.~N. Bahcall, ``Solar neutrinos. i. theoretical,'' {\em Physical Review
+  Letters}, vol.~12, no.~11, p.~300, 1964.
+
+\bibitem{davis1964solar}
+R.~Davis~Jr, ``Solar neutrinos. ii. experimental,'' {\em Physical Review
+  Letters}, vol.~12, no.~11, p.~303, 1964.
+
+\bibitem{becker1992electron}
+R.~Becker-Szendy, C.~Bratton, D.~Casper, S.~Dye, W.~Gajewski, M.~Goldhaber,
+  T.~Haines, P.~Halverson, D.~Kielczewska, W.~Kropp, {\em et~al.},
+  ``Electron-and muon-neutrino content of the atmospheric flux,'' {\em Physical
+  Review D}, vol.~46, no.~9, p.~3720, 1992.
+
+\bibitem{allison1997measurement}
+W.~Allison, G.~Alner, D.~Ayres, W.~Barrett, C.~Bode, P.~Border, C.~Brooks,
+  J.~Cobb, D.~Cockerill, R.~Cotton, {\em et~al.}, ``Measurement of the
+  atmospheric neutrino flavour composition in soudan 2,'' {\em Physics Letters
+  B}, vol.~391, no.~3-4, pp.~491--500, 1997.
+
+\bibitem{kajita2012atmospheric}
+T.~Kajita, ``Atmospheric neutrinos,'' {\em Advances in High Energy Physics},
+  vol.~2012, 2012.
+
 \bibitem{giaz2018status}
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
   preprint arXiv:1804.03575}, 2018.
+
+\bibitem{bethe1939energy}
+H.~A. Bethe, ``Energy production in stars,'' {\em Physical Review}, vol.~55,
+  no.~5, p.~434, 1939.
+
+\bibitem{suekane2015neutrino}
+F.~Suekane, {\em Neutrino oscillations: a practical guide to basics and
+  applications}, vol.~898.
+\newblock Springer, 2015.
+
+\bibitem{giunti2007fundamentals}
+C.~Giunti and C.~W. Kim, {\em Fundamentals of neutrino physics and
+  astrophysics}.
+\newblock Oxford university press, 2007.
+
+\bibitem{haxton2013solar}
+W.~C. Haxton, R.~Hamish~Robertson, and A.~M. Serenelli, ``Solar neutrinos:
+  status and prospects,'' {\em Annual Review of Astronomy and Astrophysics},
+  vol.~51, pp.~21--61, 2013.
 
 \bibitem{akhmedov2014majorana}
 E.~Akhmedov, ``Majorana neutrinos and other majorana particles: Theory and
@@ -752,6 +752,10 @@ M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
   C.~Bauer, E.~Bellotti, S.~Belogurov, S.~Belyaev, {\em et~al.},
   ``Background-free search for neutrinoless double-$\beta$ decay of 76 ge with
   gerda,'' {\em Nature}, vol.~544, no.~7648, pp.~47--52, 2017.
+
+\bibitem{spurio2018probes}
+M.~Spurio, Spurio, and Bellantone, {\em Probes of Multimessenger Astrophysics}.
+\newblock Springer, 2018.
 
 \bibitem{perkins2009particle}
 D.~H. Perkins, {\em Particle astrophysics}.
