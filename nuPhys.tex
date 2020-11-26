@@ -429,9 +429,9 @@ where $\mathcal C$ is the charge conjugation matrix and satisfies the following 
 
 In the Weyl representation, $\mathcal{C}=i\gamma^2\gamma^0$, then $\mathcal {C}^2=1$, $(\psi^c)^c=\psi$, $(\psi_L)^c=P_R\psi^c=(\psi^c)_R$ and $(\psi_R)^c=P_L\psi^c=(\psi^c)_L$. Therefore the particle-antiparticle operation $\hat C$ converts a left-handed antiparticle to a right-handed particle and vice versa (both the charge and chirality are changed).
 
-In the SM, neutrinos are fermions without carrying electrical charges and they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why they are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
+In the SM, neutrinos are fermions without carrying electrical charges and they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why neutrinos are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
 
-By mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Then the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion\cite{zee2010quantum}. 
+From a viewpoint of mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Then the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion\cite{zee2010quantum}. 
 
 Unlike the Dirac case, for a Majorana field $\psi^M$, the $\psi^M_L$ and $\psi^M_R$ are not independent. The right-handed component can be the charge conjugate of the left-handed component (or vice versa): $\psi_R=(\psi_L)^c$\cite{akhmedov2014majorana}. Therefore Majorana field can be written as: $\psi^M=\psi_L^M+\psi_R^M=\psi^M_L+(\psi^M_L)^c=\psi^M_L+((\psi^M)^c)_R$, which immediately gives $(\psi^M)^c=\psi^M$. This equation is called the Majorana condition. The result implies that the particles associated with the Majorana fields, or the Majorana fermions, are their own antiparticles and ``truly neutral''\cite{akhmedov2014majorana}. Also, the Majorana equation preserves the handedness\cite{zee2010quantum}. Since the $\psi^M_L$ and $\psi^M_R$ are not independent and can be constructed by each other, the Majorana spinor $\psi^M$ only has two degrees of freedom compared to the Dirac spinor which has four degrees of freedom. These facts indicate that the Majorana fermion theory is more economical than the Dirac one and it is also tailored for describing neutrinos. It is natural that neutrinos are of Majorana nature.
 
@@ -555,13 +555,13 @@ Since we know the Dirac mass $m^D=y_\nu v_0$ (from \ref{eq:diracMass}), $m_1=y^2
 \begin{figure}[htbp]
 	\centering	
 	%	\includegraphics[height=3cm]{seesaw_feynman}
-	\begin{minipage}[t]{0.6\textwidth}
+	\begin{minipage}[t]{0.6\textwidth}%{(a)}
 		\includegraphics[width=8cm]{typeI_seesaw.eps}
 	\end{minipage}
-	\begin{minipage}[t]{0.3\textwidth}
+	\begin{minipage}[t]{0.3\textwidth}%{(b)}
 		\includegraphics[height=3.0cm]{typeIIseesaw.eps}
 	\end{minipage}
-	\caption{ Tree-level Feynman diagrams for the Seesaw Mechanisms, modified from \cite{valle2015neutrinos}. Left: type-I; right: type-II. The type-III scheme shares the same diagram to the type-I, but with the $\nu_R$ replaced by $T^0$.}
+	\caption{ Tree-level Feynman diagrams for the Seesaw Mechanisms, modified from \cite{valle2015neutrinos}: type-I (left) and type-II (right). The type-III scheme shares the same diagram to the type-I, but with the $\nu_R$ replaced by $T^0$.}
 	\label{seesaw}
 \end{figure}
 
@@ -598,7 +598,7 @@ m_3^2+c^2_{13}|\Delta m^2_{31}|+c^2_{13}s^2_{12}\Delta m^2_{21}~(\mathrm{for~IH}
 \end{cases}
 \end{equation}
 where $s^2_{13}, c^2_{13}, \Delta m^2_{31}$ and $\Delta m^2_{21}$ are the flavor transformation parameters and they are determined by flavor transformation experiments. If taking the currently best global-fit values with $3\sigma$ (the values in brackets are for IH and the others are for NH): $\Delta m^2_{21}= 7.37 \times 10^{-5}~eV^2,~|\Delta m^2_{31}|= 2.56~(2.54)\times 10^{-3}~eV^2 ,s^2_{12}= 0.297, s^2_{13}= 0.0215~(0.0216)$\cite{pdg2018}, then  for NH, $\langle m^2_{\nu_e}\rangle \simeq m_1^2+(8.74~meV)^2$ and for IH, $\langle m^2_{\nu_e}\rangle \simeq m_3^2+(50.3~meV)^2$.
-Fig.\ref{lightestM} plots the $\sqrt{\langle m^2_{\nu_e}\rangle}$ as a function of the lightest mass eigenvalue.
+Fig.~\ref{lightestM} plots the $\sqrt{\langle m^2_{\nu_e}\rangle}$ as a function of the lightest mass eigenvalue.
 \begin{figure}[htbp]\label{lightestM}
 	\centering	
 	\includegraphics[width=10cm]{nu_massHierarchy.pdf}
@@ -613,61 +613,36 @@ Among the $\beta$-decay processes, the tritium process: $^3$H$\to^3$He$^+$+$e^-+
 
 For heavy radioactive isotopes ($A>70$) with nuclei of even neutron number and even proton number (called even-even nucleus), beta decay will lead to an odd-odd nucleus which is less stable. Thus for such isotopes the $\beta$-decay is energetically forbidden. In 1935, Maria Goeppert-Mayer pointed out that these isotopes can still decay through a double beta decay process: $(Z,A) \to (Z+2,A)+2e^{-}+2\bar{\nu}_e+Q_{\beta\beta}$, where $Q_{\beta\beta}$ is the released energy. This is called ordinary double beta decay or $2\nu\beta\beta$, which is allowed by the Standard Model and with a typical half-life $T_{1/2}>10^{19}$ years (yr)\cite{povh2008particles,martin2019nuclear}.
 
-If neutrinos are Majorana particles, a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected: $(Z,A) \to (Z+2,A)+2e^{-}+Q_{\beta\beta}$. In this process, the lepton number is violated by 2, which is not allowed in the SM. As mentioned in \ref{section:Majorana}, New Physics interpretation for the process is required. One of the simple interpretations is the exchanging of virtual light Majorana neutrinos between the nucleus. 
+If neutrinos are Majorana particles, a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected: $(Z,A) \to (Z+2,A)+2e^{-}+Q_{\beta\beta}$. In this process, the lepton number is violated by 2, which is not allowed in the SM. As mentioned in \ref{section:Majorana}, New Physics interpretations for the process are required. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Fig.~\ref{feynman1}.
+\begin{figure}[htbp]
+	\centering
+	{	
+	\begin{minipage}[t]{0.45\textwidth}{(a)}
+		\includegraphics[width=5cm]{doubleBeta2nu_feynman.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.45\textwidth}{(b)}
+		\includegraphics[width=5cm]{doubleBeta_feynman.png}
+	\end{minipage}
+	\caption{ Feynman diagrams for $2\nu\beta\beta$ (a) and $0\nu\beta\beta$ (b).}
+	\label{feynman1}
+}
+\end{figure}
+
+One of the simple interpretations is the exchanging of virtual light Majorana neutrinos between the nucleus, as shown in Fig.~\ref{feynman1} (b). Under the SM weak interactions, the amplitude of the lepton processes in the $0\nu\beta\beta$ is a product of two weak charged current interactions happening at the vertices $x$ (creating a $\nu_{eL}$ and an $e^-$) and $y$ (absorbing a $\nu_{eL}$ and creating an $e^-$) \cite{antonio2018state}:
+\begin{equation}
+\mathcal{A}=\bar{e}(x)\gamma^\mu\nu_{eL}\nu^T_{eL}(y)\gamma_\mu^T\bar{e}^T(y),
+\end{equation}
+
+Taking account of the three-neutrino mixing as well as the Majorana condition: $\nu_i^c=\mathcal{C}\bar{\nu}_i^T=\nu_i$, the amplitude becomes\cite{antonio2018state}:
+\begin{equation}
+\mathcal{A}=-\sum^3_{i=1}U^2_{ei}m_i\frac{1}{p^2-m_i^2}\frac{1-\gamma_5}{2}\mathcal{C}.
+\end{equation}
+
+where a virtual fermion with a mass $m_i$ is propagated between vertices. 
 
 \cite{dolinski2019neutrinoless}.
 
-
-The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Fig.~\ref{feynman1}.
-
-\begin{figure}[htbp]
-	\centering	
-	\begin{minipage}[t]{0.45\textwidth}
-		\includegraphics[width=5cm]{doubleBeta2nu_feynman.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.45\textwidth}
-		\includegraphics[width=5cm]{doubleBeta_feynman.png}
-	\end{minipage}
-	\caption{ Feynman diagrams for $2\nu\beta\beta$ (left) and $0\nu\beta\beta$ (right).}
-	\label{feynman1}
-\end{figure}
-
-
-
-
-
-
 From \cite{pdg2018},
-
-the Schechter-Valle Theorem, or the Black Box theorem.
-
-the standard left-handed interaction
-
-duerr2011quantitative  
-
-
-
-
-\begin{figure}[htbp]
-	\centering	
-	\includegraphics[width=8cm]{blackbox.png}
-	\caption{ The Black Box diagram, modified from \cite{schechter1982neutrinoless}.}
-	\label{blackbox}
-\end{figure}
-
-A diagram can be drawn as Fig.~\ref{blackbox} for the $0\nu\beta\beta$ process.
-In the diagram, two d-quarks are converted into two u-quarks and electrons without emitting neutrinos via some underlying mechanism. Then from crossing symmetry, \cite{akhmedov2014majorana}.
-
-the Black Box theorem relates the effective Majorana neutrino mass with the $0\nu\beta\beta$ amplitude $\langle m_\nu\rangle$, or the Majorana property of the $\nu_e$ with the existence of the $0\nu\beta\beta$ process. 
-
-The Black Box theorem guarantees that if the $0\nu\beta\beta$ process is observed, neutrinos are Majorana particles. An elegant proof was demonstrated by \cite{takasugi1984can} and refined in \cite{duerr2011quantitative,giunti2007fundamentals}. 
-
-\ref{major_mass}.
-
-
-violate lepton number by two units and shows that the lepton number is not conserved.
-
-the $\nu_e$ in the $0\nu\beta\beta$ process has a non-zero effective Majorana mass
 
 
 transition between $\bar{\nu}_{eR}$ and $\nu_{eL}$.
@@ -676,21 +651,20 @@ underlying mechanisms
 $|\bar{\nu}_{eR} (t=\delta t)\rangle  =|\bar{\nu}_{eR}\rangle-i\sum^3_{i=1}m_i U_{ei}|\nu_{iL} \rangle\delta t$
 
 amplitude $\langle \nu_{eL}|\bar{\nu}_{eR}\rangle=-i\sum^3_{i=1}m_iU^2_{ei}\delta t$
+
+
 Integrating the $\delta t$ with a weight of the nuclear matrix element, the decay width and the half-life are obtained as\cite{suekane2015neutrino,zuber2020neutrino}:
 \begin{equation}
 \Gamma=(T^{0\nu\beta\beta}_{1/2})^{-1} = G_{PS}(Q,Z)|M_{Nuclear}|^2\langle m_{ee}\rangle^2, 
 \end{equation}
-where $G_{PS}$ is a phase space corresponding to  effective coupling constant; $|M_{Nuclear}|$ is the nuclear matrix element describing the nuclear transition and it 
-
-such as the nuclear shell model, quasi-random phase approximation (QRPA) and 
-the interacting boson model.
+where $G_{PS}(Q,Z)$ is a phase space corresponding to effective coupling constant, which depends on the endpoint energy $Q$ and the atomic number $Z$; $|M_{Nuclear}|$ is the nuclear matrix element describing the nuclear transition and it can only be calculated theoretically from specific nuclear models, such as the Nuclear Shell Model (NSM) and the Quasiparticle-Random Phase Approximation (QRPA).
 
 In this case the effective Majorana mass 
 \begin{equation}
 \langle m_{ee}\rangle = |\sum_{i=1}^3 U^2_{ei}m_i|= |c^2_{13}c^2_{12}m_1+c^2_{13}s^2_{12}e^{i\alpha_1}m_2+s^2_{13}e^{i\alpha_2}m_3|,
 \end{equation}
 where $U_{ei}$ are the elements of the neutrino mixing matrix for the flavor state $\nu_e$, and $m_i$ are the mass eigenvalues of the mass eigenstates (\ref{eq:mixingmatrix}));
-$\alpha_1,\alpha_2$ are phase factors and $\alpha_2$ can also be taken as $\alpha_2-\delta_{CP}$.
+$\alpha_1,\alpha_2$ are Majorana CP-violation phase factors and $\alpha_2$ can also be taken as $\alpha_2-\delta_{CP}$.
 
 For NH, $m_{lightest}=m_1$,
 $m_2=\sqrt{m_1^2+\Delta m^2_{21}}, m_3 = \sqrt{m_1^2+|\Delta m^2_{31}|}$;
@@ -713,10 +687,6 @@ the mass regions are bounded by lines taking different values of $(\alpha_1,\alp
 	\caption{Effective Majorana mass as a function of the lightest mass eigenvalue. Solid lines are for NH cases and dashed lines are for IH. Different colors stand for taking different values of $(\alpha_1,\alpha_2)$.}
 	\label{effectiveMass}
 \end{figure}
-
-
-
-
 
 Similar to the $\beta$-decay case, the $2\nu\beta\beta$ process will cause a continuous spectrum in the detector while the $0\nu\beta\beta$ process only has two electrons in the final state. These electrons take away the entire energy and their energy spectrum sum up to give a distinct energy peak at the Q-value. 
 Taking the isotope $^{130}$Te as an example, Fig.~\ref{te130energy} illustrates the shapes of the energy spectrum from the $2\nu\beta\beta$ and the $0\nu\beta\beta$ decay processes.
