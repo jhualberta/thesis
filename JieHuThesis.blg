@@ -3,6 +3,7 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
+Warning--empty year in snop_nim
 Warning--empty year in matt_deployedsource
 Warning--empty year in n16geom_zach
 Warning--empty year in n16pic
@@ -27,7 +28,6 @@ Warning--empty year in markchen_bkg
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--empty journal in hamamatsu2018photomultiplier
-Warning--empty year in snop_nim
 Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty author in operator
@@ -51,45 +51,45 @@ Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 173 entries,
+You've used 174 entries,
             1876 wiz_defined-function locations,
-            1306 strings with 30683 characters,
-and the built_in function-call counts, 37246 in all, are:
-= -- 3312
-> -- 2053
+            1311 strings with 30929 characters,
+and the built_in function-call counts, 37655 in all, are:
+= -- 3345
+> -- 2088
 < -- 0
-+ -- 772
-- -- 599
-* -- 2600
-:= -- 5731
-add.period$ -- 226
-call.type$ -- 173
-change.case$ -- 122
++ -- 784
+- -- 610
+* -- 2633
+:= -- 5794
+add.period$ -- 227
+call.type$ -- 174
+change.case$ -- 123
 chr.to.int$ -- 0
-cite$ -- 221
-duplicate$ -- 2018
-empty$ -- 3396
-format.name$ -- 599
-if$ -- 8849
+cite$ -- 222
+duplicate$ -- 2039
+empty$ -- 3420
+format.name$ -- 610
+if$ -- 8945
 int.to.chr$ -- 0
-int.to.str$ -- 173
-missing$ -- 172
-newline$ -- 576
-num.names$ -- 165
-pop$ -- 608
+int.to.str$ -- 174
+missing$ -- 173
+newline$ -- 579
+num.names$ -- 166
+pop$ -- 610
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1070
+skip$ -- 1089
 stack$ -- 0
-substring$ -- 1020
-swap$ -- 701
+substring$ -- 1032
+swap$ -- 714
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 48
-while$ -- 269
-width$ -- 176
-write$ -- 1596
+while$ -- 271
+width$ -- 177
+write$ -- 1607
 (There were 48 warnings)

@@ -3,7 +3,7 @@
 %\epigraph{In all experimental science the techniques for obtaining measurements are almost as important as the measurements themselves.}{--- \textup{J. D. Bernal}, \textit{The Social Function of Science}}
 
 \section{Overview}\label{sect:overview}
-The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$l\cite{muonflux}. Cosmic muons with high energies ($\mathcal{O}(GeV)$) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
+The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$l\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$\cite{snop_nim}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
 
 The SNO+ detector is a refurbishment of the SNO detector. The SNO+ collaboration makes use of the SNO infrastructure and upgraded it to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a
 height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide both buoyancy for the vessel and radiation shielding of the surrounding backgrounds, such as the cosmic rays and isotope decays from the rock. 
@@ -11,7 +11,7 @@ height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) t
 The detector consists of an acrylic vessel (AV) sphere of 12.01 m in diameter and 5.5 cm in thickness. The AV contains detection medium and is held in place by a rope net system including hold-up and hold-down Tensylon ropes. This spheric structure is simple in geometry and reduces the complexities for simulation and event reconstruction. Furthermore, this geometry allows for spherical fiducial volume cuts from the center of the AV to further get rid of external backgrounds, which makes the SNO+ as a graded-shield type detector\cite{waterfield2017optical}.
 On the top of the AV sphere, there is an acrylic neck cylinder with 6.8 m high and 1.46 m inner diameter. The neck connects the AV sphere to the facilities on the deck above the detector. Through the neck, pipes can fill detection medium into the AV and recirculate as well. Calibration sources for internal scans can also be lowered down into the AV through the neck.
 
-The AV sphere is concentric within a stainless steel photomultiplier(PMT) support structure (PSUP), which is a geodesic dome with an average radius of 8.4 m. Hamamatsu 8-inch R1408 PMTs were mounted on the PSUP and 9394 PMTs are looking inward to the AV. A 27 cm diameter concentrator consisting pedals coated with aluminum was mounted on each PMTs to increase their light collection efficiency as well as the photocathode coverage of the detector, which reaches about 54\% effective coverage. Besides the inward-looking PMTs, 90 PMTs are looking outward, serving as muon vetos.  Four Hamamatsu R5912 High Quantum Efficiency (HQE) PMTs were also installed for testing the performance of potential SNO+ phases-II\cite{stringer2019sensitivity}. 
+The AV sphere is concentric within a stainless steel photomultiplier (PMT) support structure (PSUP), which is a geodesic dome with an average radius of 8.4 m. Hamamatsu 8-inch R1408 PMTs were mounted on the PSUP and 9394 PMTs are looking inward to the AV. A 27 cm diameter concentrator consisting pedals coated with aluminum was mounted on each PMTs to increase their light collection efficiency as well as the photocathode coverage of the detector, which reaches about 54\% effective coverage. Besides the inward-looking PMTs, 90 PMTs are looking outward, serving as muon vetos.  Four Hamamatsu R5912 High Quantum Efficiency (HQE) PMTs were also installed for testing the performance of potential SNO+ phases-II\cite{stringer2019sensitivity}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -21,17 +21,36 @@ The AV sphere is concentric within a stainless steel photomultiplier(PMT) suppor
 \end{figure}
 
 \section{SNO+ Physics Phases}
-The SNO+ experiment is designed for multi-purpose measurements of neutrino physics. The detector has been running since December 2016. There are three physics phases of the experiment\cite{whitepaper}: 
+The SNO+ experiment is designed for multi-purpose measurements of neutrino physics. The detector has been running since December 2016. There are three physics phases of the experiment, with different detection medium inside the AV\cite{whitepaper}: 
 
 \subsubsection{Water Phase} 
 
-The AV was filled with about 905 tonnes of ultra pure water (UPW). The detector collected water physics data from May 2017 to July 2019.
+In this initial phase, the AV was filled with about 905 tonnes of ultra pure water (UPW). The detector collected water physics data from May 2017 to July 2019.
 
-The main physics goal in this phase is to search for the invisible nucleon decay, which violates baryon number and is a prediction of Grand Unified Theory (GUT). In the invisible decay mode, a proton or a bound neutron decays away without releasing charged particles, compared to the ``visible'' decay channels of $p\to e\pi$ and $p\to\nu K$ which has been searched and set limits by the SuperK experiment. In the SNO+ water detector, $^{16}$O may decay into $^{15}$O$^*$ (bound neutron invisible decay) or $ ^{15}$N$^*$ (proton invisible decay) excited state. The $^{15}$O$^*$ has 44\% chance to deexcite to produce 6.18 MeV $\gamma$ ray and 2\% chance to produce 7.03 MeV $\gamma$; while $^{15}$N$^*$ has 41\% to release 6.32 MeV $\gamma$ and 7.01, 7.03 and 9.93 MeV $\gamma$ with chances of 2\%, 2\% and 3\% respectively. The experiment has searched for these $\gamma$ signals and sets world-leading limits of $\mathcal{O}(10^{29})$ years for both the proton and neutron invisible decay lifetime at 90\% Bayesian credibility level\cite{anderson2019search}. Meanwhile, the solar neutrinos were measured with very low backgrounds compared to the other water Cherenkov detectors.
+The main physics goal in this phase is to search for the invisible nucleon decay, which violates baryon number and is a prediction of Grand Unified Theory (GUT). In the invisible decay mode, a proton or a bound neutron decays away without releasing charged particles, compared to the ``visible'' decay channels of $p\to e\pi$ and $p\to\nu K$ which has been searched and set limits by the SuperK experiment. In the SNO+ water detector, $^{16}$O may decay into $^{15}$O$^*$ (bound neutron invisible decay) or $ ^{15}$N$^*$ (proton invisible decay) excited state. The $^{15}$O$^*$ has 44\% chance to deexcite to produce 6.18 MeV $\gamma$ ray and 2\% chance to produce 7.03 MeV $\gamma$; while $^{15}$N$^*$ has 41\% to release 6.32 MeV $\gamma$ and 7.01, 7.03 and 9.93 MeV $\gamma$ with chances of 2\%, 2\% and 3\% respectively. The experiment has searched for these $\gamma$ signals and sets world-leading limits of $\mathcal{O}(10^{29})$ years for both the proton and neutron invisible decay lifetime at 90\% Bayesian credibility level\cite{anderson2019search}. 
 
- and neutron captures in water are also studied.
+During the data-taking, different types of calibration runs have been taken. The detector timing and energy response, systematics and backgrounds are studied. Multiple physics analyses of solar neutrinos, reactor antineutrinos and nucleon decay are going on. The external backgrounds are also measured, which will be the same as the following two phases. 
 
-During the water phase, different types of calibration runs have been taken. The detector timing and energy response, systematics and backgrounds are studied. Multiple physics analyses of solar neutrinos, reactor antineutrinos and nucleon decay are going on. The external backgrounds are also measured, which will be the same as the following two phases. 
+Besides the invisible nucleon decay, the physics data are also used to study the solar neutrinos and reactor antineutrinos.
+
+The $^8$B solar neutrinos were measured with a 69.2 kilo-tonnes$\cdot$day dataset. By analyzing the solar neutrino elastic scattering events based on the dataset (the method will be discussed in Chapter 5 with more details), the number of the solar neutrino events were counted in different energy regions. By fitting to the non-oscillation solar neutrino model, an observed flux was obtained from the dataset to be $2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6$ cm$^{-2}$s$^{-1}$ for the $^8$B solar neutrinos with energies larger than 5 MeV. In the energy region larger than 6 MeV, the dataset has a background rate of $0.25^{+0.09}_{-0.07}$ events/kilo-tonne$\cdot$day, which is extremely pure with solar neutrinos. Currently, this background rate is the lowest one compared to the other water Cherenkov detectors\cite{anderson2019measurement}. 
+
+To evaluate the sensitivity of the reactor antineutrinos, 
+
+which are crucial for tagging the reactor antineutrinos.
+
+the delayed coincidence between the 4.4-MeV $\gamma$ and 2.2-MeV $\gamma$
+a detection efficiency of 50\%,  
+the 
+
+a thermal capture cross section 
+
+$336.3^{+1.2}_{-1.5}$ milli-barn (mb).
+
+
+ and neutron-proton captures in water are also studied\cite{anderson2020measurement}.
+
+
 
 \subsubsection{Scintillator Phase}
 
@@ -50,7 +69,7 @@ A six-month period of scintillator filling and six to twelve months of data-taki
 
 
 
-In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilotonnes of $^{130}$Te) will be loaded into the scintillator, which is referred to as the ``Te-loaded'' scintillator. Higher loading concentrations would be possible for a further loading plan\cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
+In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilo-tonnes of $^{130}$Te) will be loaded into the scintillator, which is referred to as the ``Te-loaded'' scintillator. Higher loading concentrations would be possible for a further loading plan\cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
 
 \section{Detection Medium}
 In the SNO+ detector, charged particles are expected to interact with the detection medium and create Cherenkov lights and scintillation lights. 

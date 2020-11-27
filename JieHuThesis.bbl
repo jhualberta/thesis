@@ -20,10 +20,8 @@ J.~W.~F. Valle and J.~Romao, {\em Neutrinos in high energy and astroparticle
   physics}.
 \newblock John Wiley \& Sons, 2015.
 
-\bibitem{schechter1982neutrinoless}
-J.~Schechter and J.~W. Valle, ``Neutrinoless double-$\beta$ decay in su
-  (2)$\times$ u (1) theories,'' {\em Physical Review D}, vol.~25, no.~11,
-  p.~2951, 1982.
+\bibitem{snop_nim}
+the {SNO+}~collaboration, ``{T}he {SNO+} experiment,'' {\em To be published}.
 
 \bibitem{jones2011background}
 P.~G. Jones, {\em Background rejection for the neutrinoless double beta decay
@@ -118,6 +116,10 @@ H.~Bethe and R.~Peierls, ``The ``neutrino'','' {\em Nature}, vol.~133,
 F.~Reines, C.~Cowan~Jr, F.~Harrison, A.~McGuire, and H.~Kruse, ``Detection of
   the free antineutrino,'' {\em Physical Review}, vol.~117, no.~1, p.~159,
   1960.
+
+\bibitem{goldhaber1958helicity}
+M.~Goldhaber, L.~Grodzins, and A.~Sunyar, ``Helicity of neutrinos,'' {\em
+  Physical Review}, vol.~109, no.~3, p.~1015, 1958.
 
 \bibitem{akhmedov2019quantum}
 E.~Akhmedov, ``Quantum mechanics aspects and subtleties of neutrino
@@ -244,11 +246,6 @@ F.~Suekane, {\em Neutrino oscillations: a practical guide to basics and
   applications}, vol.~898.
 \newblock Springer, 2015.
 
-\bibitem{giunti2007fundamentals}
-C.~Giunti and C.~W. Kim, {\em Fundamentals of neutrino physics and
-  astrophysics}.
-\newblock Oxford university press, 2007.
-
 \bibitem{haxton2013solar}
 W.~C. Haxton, R.~Hamish~Robertson, and A.~M. Serenelli, ``Solar neutrinos:
   status and prospects,'' {\em Annual Review of Astronomy and Astrophysics},
@@ -271,10 +268,6 @@ C.-S. Wu, E.~Ambler, R.~Hayward, D.~Hoppes, and R.~P. Hudson, ``Experimental
   test of parity conservation in beta decay,'' {\em Physical review}, vol.~105,
   no.~4, p.~1413, 1957.
 
-\bibitem{goldhaber1958helicity}
-M.~Goldhaber, L.~Grodzins, and A.~Sunyar, ``Helicity of neutrinos,'' {\em
-  Physical Review}, vol.~109, no.~3, p.~1015, 1958.
-
 \bibitem{greiner2012theoretical}
 W.~Greiner and B.~M{\"u}ller, {\em Theoretical Physics Text and Exercise Books:
   Volume 5: Gauge Theory of Weak Interactions}.
@@ -283,6 +276,11 @@ W.~Greiner and B.~M{\"u}ller, {\em Theoretical Physics Text and Exercise Books:
 \bibitem{funchal2013physics}
 R.~Z. Funchal, B.~Schmauch, and G.~Giesen, ``The physics of neutrinos,'' {\em
   arXiv preprint arXiv:1308.1029}, 2013.
+
+\bibitem{giunti2007fundamentals}
+C.~Giunti and C.~W. Kim, {\em Fundamentals of neutrino physics and
+  astrophysics}.
+\newblock Oxford university press, 2007.
 
 \bibitem{lesgourgues2013neutrino}
 J.~Lesgourgues, G.~Mangano, G.~Miele, and S.~Pastor, {\em Neutrino cosmology}.
@@ -331,20 +329,15 @@ B.~Povh, K.~Rith, and F.~Zetsche, {\em Particles and nuclei}, vol.~1.
 B.~R. Martin and G.~Shaw, {\em Nuclear and particle physics: an introduction}.
 \newblock John Wiley \& Sons, 2019.
 
+\bibitem{bilenky2018introduction}
+S.~Bilenky, {\em Introduction to the physics of massive and mixed neutrinos},
+  vol.~947.
+\newblock Springer, 2018.
+
 \bibitem{dolinski2019neutrinoless}
 M.~J. Dolinski, A.~W. Poon, and W.~Rodejohann, ``Neutrinoless double-beta
   decay: status and prospects,'' {\em Annual Review of Nuclear and Particle
   Science}, vol.~69, pp.~219--251, 2019.
-
-\bibitem{takasugi1984can}
-E.~Takasugi, ``Can the neutrinoless double beta decay take place in the case of
-  dirac neutrinos?,'' {\em Physics Letters B}, vol.~149, no.~4-5, pp.~372--376,
-  1984.
-
-\bibitem{duerr2011quantitative}
-M.~Duerr, M.~Lindner, and A.~Merle, ``On the quantitative impact of the
-  schechter-valle theorem,'' {\em Journal of High Energy Physics}, vol.~2011,
-  no.~6, p.~91, 2011.
 
 \bibitem{zuber2020neutrino}
 K.~Zuber, {\em Neutrino physics}.
@@ -433,6 +426,18 @@ M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
   Z.~Barnard, N.~Barros, D.~Bartlett, {\em et~al.}, ``Search for invisible
   modes of nucleon decay in water with the {SNO+} detector,'' {\em Physical
   Review D}, vol.~99, no.~3, p.~032008, 2019.
+
+\bibitem{anderson2019measurement}
+M.~Anderson, S.~Andringa, S.~Asahi, M.~Askins, D.~Auty, N.~Barros, D.~Bartlett,
+  F.~Bar{\~a}o, R.~Bayes, E.~Beier, {\em et~al.}, ``Measurement of the
+  {$^8$}{B} solar neutrino flux in {SNO+} with very low backgrounds,'' {\em
+  Physical Review D}, vol.~99, no.~1, p.~012012, 2019.
+
+\bibitem{anderson2020measurement}
+M.~Anderson, S.~Andringa, M.~Askins, D.~Auty, N.~Barros, F.~Bar{\~a}o,
+  R.~Bayes, E.~Beier, A.~Bialek, S.~Biller, {\em et~al.}, ``Measurement of
+  neutron-proton capture in the sno+ water phase,'' {\em Physical Review C},
+  vol.~102, no.~1, p.~014002, 2020.
 
 \bibitem{davini2016cno}
 S.~Davini, M.~Agostini, S.~Appel, G.~Bellini, J.~Benziger, D.~Bick, G.~Bonfini,
@@ -532,9 +537,6 @@ J.~Boger, R.~Hahn, J.~Rowley, A.~Carter, B.~Hollebone, D.~Kessler, I.~Blevis,
 \bibitem{hamamatsu2018photomultiplier}
 K.~Hamamatsu~Photonics, ``Photomultiplier tubes: Basics and applications,
   2007,'' 2018.
-
-\bibitem{snop_nim}
-the {SNO+}~collaboration, ``{T}he {SNO+} experiment,'' {\em To be published}.
 
 \bibitem{bonventre2014neutron}
 R.~Bonventre, {\em Neutron multiplicity in atmospheric neutrino events at the
@@ -747,6 +749,21 @@ P.~B. Denton, S.~J. Parke, and X.~Zhang, ``Eigenvalues: The rosetta stone for
   neutrino oscillations in matter,'' {\em arXiv preprint arXiv:1907.02534},
   2019.
 
+\bibitem{schechter1982neutrinoless}
+J.~Schechter and J.~W. Valle, ``Neutrinoless double-$\beta$ decay in su
+  (2)$\times$ u (1) theories,'' {\em Physical Review D}, vol.~25, no.~11,
+  p.~2951, 1982.
+
+\bibitem{duerr2011quantitative}
+M.~Duerr, M.~Lindner, and A.~Merle, ``On the quantitative impact of the
+  schechter-valle theorem,'' {\em Journal of High Energy Physics}, vol.~2011,
+  no.~6, p.~91, 2011.
+
+\bibitem{takasugi1984can}
+E.~Takasugi, ``Can the neutrinoless double beta decay take place in the case of
+  dirac neutrinos?,'' {\em Physics Letters B}, vol.~149, no.~4-5, pp.~372--376,
+  1984.
+
 \bibitem{agostini2017background}
 M.~Agostini, M.~Allardt, A.~Bakalyarov, M.~Balata, I.~Barabanov, L.~Baudis,
   C.~Bauer, E.~Bellotti, S.~Belogurov, S.~Belyaev, {\em et~al.},
@@ -760,11 +777,6 @@ M.~Spurio, Spurio, and Bellantone, {\em Probes of Multimessenger Astrophysics}.
 \bibitem{perkins2009particle}
 D.~H. Perkins, {\em Particle astrophysics}.
 \newblock No.~10, Oxford University Press, 2009.
-
-\bibitem{bilenky2018introduction}
-S.~Bilenky, {\em Introduction to the physics of massive and mixed neutrinos},
-  vol.~947.
-\newblock Springer, 2018.
 
 \bibitem{kane2017modern}
 G.~Kane, {\em Modern elementary particle physics: explaining and extending the
@@ -803,12 +815,6 @@ T.~Kaptanoglu, ``Characterization of the hamamatsu 8” r5912-mod
 \bibitem{neuronetwork}
 M.~Anderson, ``Neural network fitter updates,'' {\em SNO+ Internal Document,
   docDB-6298-v1.}
-
-\bibitem{anderson2019measurement}
-M.~Anderson, S.~Andringa, S.~Asahi, M.~Askins, D.~Auty, N.~Barros, D.~Bartlett,
-  F.~Bar{\~a}o, R.~Bayes, E.~Beier, {\em et~al.}, ``Measurement of the
-  {$^8$}{B} solar neutrino flux in {SNO+} with very low backgrounds,'' {\em
-  Physical Review D}, vol.~99, no.~1, p.~012012, 2019.
 
 \bibitem{brunroot}
 R.~Brun, F.~Rademakers, P.~Canal, {\em et~al.}, ``Root: An object oriented data
