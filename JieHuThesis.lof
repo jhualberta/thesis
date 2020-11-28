@@ -7,14 +7,14 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Tree-level Feynman diagrams for the Seesaw Mechanisms, modified from \cite {valle2015neutrinos}: type-I (left) and type-II (right). The type-III scheme shares the same diagram to the type-I, but with the $\nu _R$ replaced by $T^0$.}}{25}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces $\sqrt {\delimiter "426830A m^2_{\nu _e}\delimiter "526930B }$ as a function of the lightest mass ($m_1$ for NH or $m_3$ for IH).}}{27}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Feynman diagrams for $2\nu \beta \beta $ (a) and $0\nu \beta \beta $ (b).}}{28}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Effective Majorana mass as a function of the lightest mass eigenvalue. Solid lines are for NH cases and dashed lines are for IH. Different colors stand for taking different values of $(\alpha _1,\alpha _2)$.}}{30}{figure.2.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Effective Majorana mass as a function of the lightest mass eigenvalue. Solid lines are for NH cases and dashed lines are for IH. Different colors stand for taking different values of $(\alpha _1,\alpha _2)$.}}{31}{figure.2.8}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay. The SNO+ simulation package (RAT) was used to produce the plot.}}{31}{figure.2.9}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Natural abundance vs. Q-values for different $2\nu \beta \beta $ isotopes\cite {snop_nim}.}}{34}{figure.2.10}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The SNO+ detector labelled with main structures, figure modified from \cite {jones2011background}.}}{38}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A Jablonski diagram for the organic scintillator, modified from \cite {birks1965theory, knoll2010radiation}.}}{42}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A Jablonski diagram for the organic scintillator, modified from \cite {birks1965theory, knoll2010radiation}.}}{43}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Absorption length of SNO+ optical components. ;the internal (solid blue line) and external water (dashed blue line) absorption curves are based on the measurements of the laserball scans in July 2018 during the SNO+ water phase. The horizontal lines are due to absence of the measurements and they are conservative assumptions.}}{46}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces $^{16}$N main decay scheme, modified from \cite {dragowsky200216n}.}}{52}{figure.3.4}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces $^{16}$N main decay scheme, modified from \cite {dragowsky200216n}.}}{53}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces $^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite {maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite {n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite {n16pic}.}}{53}{figure.3.5}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}}{60}{figure.4.1}

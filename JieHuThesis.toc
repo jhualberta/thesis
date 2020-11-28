@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {2.6.1}Cosmological Approach}{25}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Direct Kinetic Measurements from Beta Decay}{26}{subsection.2.6.2}
 \contentsline {subsection}{\numberline {2.6.3}Double Beta Decay}{28}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Status of Double Beta Decay Experiments}{31}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.4}Status of Double Beta Decay Experiments}{30}{subsection.2.6.4}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{36}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{36}{section.3.1}
 \contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{37}{section.3.2}
@@ -29,17 +29,17 @@
 \contentsline {section}{\numberline {3.3}Detection Medium}{40}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Cherenkov Radiation}{40}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Scintillation from Organic Scintillator}{42}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{44}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{45}{subsection.3.3.3}
 \contentsline {subsubsection}{Unloaded Liquid Scintillator}{45}{section*.9}
 \contentsline {subsubsection}{Tellurium-loaded liquid scintillator (TeLS)}{46}{section*.10}
 \contentsline {section}{\numberline {3.4}Optics}{47}{section.3.4}
 \contentsline {section}{\numberline {3.5}Electronics}{47}{section.3.5}
 \contentsline {section}{\numberline {3.6}Calibration}{51}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}The $^{16}$N Calibration Source}{52}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}The Americium Beryllium (AmBe) Calibration Source}{53}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}The Americium Beryllium (AmBe) Calibration Source}{54}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}The Laserball}{54}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Detector Backgrounds}{54}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Physics Backgrounds}{54}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.7}Detector Backgrounds}{55}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Physics Backgrounds}{55}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Instrumental Backgrounds}{55}{subsection.3.7.2}
 \contentsline {section}{\numberline {3.8}Monte Carlo Simulation and the RAT Software}{55}{section.3.8}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{57}{chapter.4}
