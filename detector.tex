@@ -51,7 +51,8 @@ The main physics goal of the scintillator phase is to measure low energy solar n
 
 The solar metallicity is the abundance of elements heavier than $^4$He (called ``metal'' elements in the context of astronomy). It is poorly constrained and the predictions from different solar models disagree with each other. A measurement of the CNO neutrinos can give the abundance of $^{12}$C, $^{13}$N and $^{15}$O and can thus resolve the metallicity problem\cite{cerdeno2018cno}.
 
-Three kinds of antineutrinos will also be measured: reactor antineutrinos as mentioned before; geoneutrinos from natural radioactivity in the Earth; and the supernova neutrinos. SNO+ is planned to join the SuperNova Early Warning System (SNEWS), which is an internationalnetwork of experiments with abilities of providing an early warning of a galactic supernova\cite{snop_nim}.
+Three kinds of antineutrinos will also be measured: reactor antineutrinos as mentioned before; geoneutrinos from natural radioactivity in the Earth; and the supernova neutrinos. SNO+ is planned to join the SuperNova Early Warning System (SNEWS), which is an international
+network of experiments with abilities of providing an early warning of a galactic supernova\cite{snop_nim}.
 
 \subsubsection{Tellurium-loading Phase}
 In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilo-tonnes of $^{130}$Te) will be loaded into the scintillator, which is referred to as the ``Te-loaded'' scintillator. Higher loading concentrations would be possible for a further loading plan\cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
@@ -84,7 +85,7 @@ For optical photons with wavelengths ranging from $350$ to $550~nm$ (typical PMT
 \frac{dN}{dx}=476(ze)^2\sin^2\theta_c~photons/cm.
 \]
 
-For the Cherenkov radiation caused by $e^-$ in a water detector, $dN/dx \simeq 207~photons/cm$; while in the LAB-PPO case: $dN/dx \simeq 264~photons/cm$. In a realistic measurement, the detection efficiency and the coverage of photon sensors are also required to be taken into account.
+For the Cherenkov radiation caused by $e^-$ in a water detector, $dN/dx \simeq 207~photons/cm$; while in the LAB-PPO case, $dN/dx \simeq 264~photons/cm$. In a realistic measurement, the detection efficiency and the coverage of photon sensors are also required to be taken into account.
 
 \subsection{Scintillation from Organic Scintillator}
 
@@ -122,8 +123,16 @@ An empirical formula, called follows Birk's law\cite{birks1951scintillations, bi
 where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
 
 \subsection{Liquid Scintillator for SNO+}
-As mentioned in \ref{sect:overview}, organic scintillators can release large amount of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. 
-In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium, thorium and potassium in the organic liquid scintillators .
+As mentioned in \ref{sect:overview}, organic scintillators can release a large amount of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. 
+In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium, thorium and potassium in the organic liquid scintillators.
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{lab-ppo-molecule.png}
+	\caption{Structural formulae of LAB (left) and PPO (right).}
+	\label{labppo-molecule}
+\end{figure}
 
 
 Among the organic scintillators, liquid aromatic solvents have been extensively developed as detection mediums for large particle detectors, especially for the neutrino experiments, such as KAMLAND, Borexino and Daya Bay. 
@@ -165,6 +174,35 @@ Fig.~\ref{absLength} shows absorption lengths.
 	\caption{Absorption length of SNO+ optical components. ;the internal (solid blue line) and external water (dashed blue line) absorption curves are based on the measurements of the laserball scans in July 2018 during the SNO+ water phase. The horizontal lines are due to absence of the measurements and they are conservative assumptions.}
 	\label{absLength}
 \end{figure}
+
+
+
+the transfer efficiencies
+
+
+
+non-radiative transfer from LAB (solvent) to PPO (fluor)
+
+
+the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
+
+
+This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table.\ref{transfer_efficiency}\cite{scintillatorPaper}. 
+\begin{table}[ht]
+\centering
+	\begin{tabular}{cc}
+		\toprule
+concentration (g/L) & $\mathcal{\epsilon}_{transfer}$(\%)	\\
+\midrule
+4   & $86.0\pm 0.8$\\
+2  & $78.2\pm 1.5$\\
+1  & $67.7\pm 2.3$\\
+0.5 & $59.3\pm 3.2$\\
+0.25 & $48.7\pm 5.0$\\
+		\bottomrule
+	\end{tabular}
+	\label{transfer_efficiency}
+\end{table}
 
 
 

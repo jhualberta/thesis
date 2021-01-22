@@ -30,18 +30,18 @@
 \contentsline {subsection}{\numberline {3.3.1}Cherenkov Radiation}{41}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Scintillation from Organic Scintillator}{42}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{45}{subsection.3.3.3}
-\contentsline {subsubsection}{Unloaded Liquid Scintillator}{45}{section*.9}
-\contentsline {subsubsection}{Tellurium-loaded Liquid Scintillator}{46}{section*.10}
-\contentsline {section}{\numberline {3.4}Optics}{47}{section.3.4}
+\contentsline {subsubsection}{Unloaded Liquid Scintillator}{46}{section*.9}
+\contentsline {subsubsection}{Tellurium-loaded Liquid Scintillator}{47}{section*.10}
+\contentsline {section}{\numberline {3.4}Optics}{48}{section.3.4}
 \contentsline {section}{\numberline {3.5}Electronics}{48}{section.3.5}
 \contentsline {section}{\numberline {3.6}Calibration}{52}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}The $^{16}$N Calibration Source}{53}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}The Americium Beryllium (AmBe) Calibration Source}{54}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}The Americium Beryllium (AmBe) Calibration Source}{55}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}The Laserball}{55}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Detector Backgrounds}{55}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Physics Backgrounds}{55}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Instrumental Backgrounds}{55}{subsection.3.7.2}
-\contentsline {section}{\numberline {3.8}Monte Carlo Simulation and the RAT Software}{55}{section.3.8}
+\contentsline {section}{\numberline {3.7}Detector Backgrounds}{56}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Physics Backgrounds}{56}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Instrumental Backgrounds}{56}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.8}Monte Carlo Simulation and the RAT Software}{56}{section.3.8}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{58}{chapter.4}
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{58}{section.4.1}
 \contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{59}{section.4.2}
