@@ -25,12 +25,12 @@
 \contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{37}{section.3.2}
 \contentsline {subsubsection}{Water Phase}{38}{section*.6}
 \contentsline {subsubsection}{Scintillator Phase}{40}{section*.7}
-\contentsline {subsubsection}{Tellurium-loading Phase}{40}{section*.8}
+\contentsline {subsubsection}{Tellurium Phase}{40}{section*.8}
 \contentsline {section}{\numberline {3.3}Detection Medium}{41}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Cherenkov Radiation}{41}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Scintillation from Organic Scintillator}{42}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{45}{subsection.3.3.3}
-\contentsline {subsubsection}{Unloaded Liquid Scintillator}{46}{section*.9}
+\contentsline {subsubsection}{Unloaded Liquid Scintillator}{45}{section*.9}
 \contentsline {subsubsection}{Tellurium-loaded Liquid Scintillator}{47}{section*.10}
 \contentsline {section}{\numberline {3.4}Optics}{48}{section.3.4}
 \contentsline {section}{\numberline {3.5}Electronics}{48}{section.3.5}
