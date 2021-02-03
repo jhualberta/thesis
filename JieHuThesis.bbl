@@ -137,7 +137,7 @@ M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
   particle physics,'' {\em Physical Review D}, vol.~98, no.~3, p.~030001, 2018.
 
 \bibitem{wiki_cp}
-wikipedia, {\em CP violation}, 2020 (accessed Mar 15, 2020).
+Wikipedia, {\em CP violation}, 2020 (accessed Mar 15, 2020).
 \newblock \url{https://en.wikipedia.org/wiki/CP_violation}.
 
 \bibitem{aitchison2012gauge}
@@ -397,8 +397,8 @@ M.~Agostini, G.~Benato, and J.~A. Detwiler, ``Discovery probability of
   Physical Review D}, vol.~96, no.~5, p.~053001, 2017.
 
 \bibitem{muonflux}
-``Muons,'' 2001.
-\newblock [Online; accessed 19-July-2019].
+``Muons,'' 2001 (accessed 19-July-2019).
+\newblock \url{https://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm}.
 
 \bibitem{beacom2017physics}
 J.~F. Beacom, S.~Chen, J.~Cheng, S.~N. Doustimotlagh, Y.~Gao, G.~Gong, H.~Gong,
@@ -503,6 +503,16 @@ J.~B. Birks, ``Scintillations from organic crystals: specific fluorescence and
   relative response to different radiations,'' {\em Proceedings of the Physical
   Society. Section A}, vol.~64, no.~10, p.~874, 1951.
 
+\bibitem{PerkinElmer}
+PerkinElmer, ``Liquid scintillation cocktails,'' 1998-2021 (accessed
+  20-Dec-2019).
+\newblock
+  \url{https://www.perkinelmer.com/en-ca/lab-products-and-services/application-support-knowledgebase/radiometric/liquid-scintillation-cocktails.html}.
+
+\bibitem{wiki_LAB}
+Wikipedia, ``Linear alkylbenzene,'' 2020 (accessed 1-Jan-2020).
+\newblock \url{https://en.wikipedia.org/wiki/Linear_alkylbenzene}.
+
 \bibitem{markchen_bkg}
 M.~C. Helen~O'Keeffe, Valentina~Lozza, ``Lab backgrounds expected numbers,''
   {\em SNO+ Internal Document, docDB-507-v42.}
@@ -577,8 +587,8 @@ A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
 \newblock \url{https://rat.readthedocs.io/en/latest/overview.html}.
 
 \bibitem{ratManual}
-``Overview - rat 1.0 documentation,'' 2014.
-\newblock [Online; accessed 20-Dec-2019].
+``Overview - rat 1.0 documentation,'' 2014 (accessed 20-Dec-2019).
+\newblock \url{https://rat.readthedocs.io/en/latest/overview.html#goals}.
 
 \bibitem{markNeuralNetwork}
 M.~Anderson, ``Status and updates on neural network fitter,'' {\em SNO+
@@ -604,7 +614,7 @@ I.~T. Coulter, {\em Modelling and Reconstruction of Events in SNO+ related to
 \newblock PhD thesis, University of Oxford, 2013.
 
 \bibitem{JSONwiki}
-wikipedia, {\em JSON}, 2020 (accessed Mar 15, 2020).
+Wikipedia, {\em JSON}, 2020 (accessed Mar 15, 2020).
 \newblock \url{https://en.wikipedia.org/wiki/JSON}.
 
 \bibitem{TDecompQRH}
@@ -679,7 +689,7 @@ E.~Davies, ``Machine vision: Theory, algorithms, practicalities. academic
   press., 2-nd edition,'' 1997.
 
 \bibitem{houghwiki}
-wikipedia, {\em Hough Transform}, 2019 (accessed Nov 3, 2019).
+Wikipedia, {\em Hough Transform}, 2019 (accessed Nov 3, 2019).
 \newblock \url{https://en.wikipedia.org/wiki/Hough_transform}.
 
 \bibitem{shiozawa1999reconstruction}

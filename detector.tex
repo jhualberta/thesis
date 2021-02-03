@@ -89,7 +89,7 @@ For the Cherenkov radiation caused by $e^-$ in a water detector, $dN/dx \simeq 2
 
 \subsection{Scintillation from Organic Scintillator}
 
-Besides the Cherenkov photons described in the last section, the majority lights emitted from organic scintillator are scintillation photons.
+Besides the Cherenkov photons described in the previous section, the majority lights emitted from organic scintillator are scintillation photons.
 
 The organic liquid scintillator can convert the kinetic energy of charged particles into scintillation photons with wavelengths in the sensitive detection region of PMTs. They are aromatic hydrocarbon compounds with benzene-ring structures. When ionizing radiation happens in the scintillator, the free valence electrons of the molecules are excited and transit to occupy the $\pi$-molecular orbitals with the benzene rings. These highly delocalized electrons are called $\pi$-electrons, which can occupy a series of energy levels. A Jablonski diagram, invented by Polish physicist Aleksander Jab\l o\'{n}ski, is generally used to describe molecular absorbance and emission of light. In Fig.~\ref{jablonski}, the Jablonski diagram illustrates the $\pi$-electronic energy levels of an organic scintillator molecule\cite{knoll2010radiation,leo2012techniques}. 
 \begin{figure}[!htb]
@@ -123,14 +123,36 @@ An empirical formula, called follows Birk's law\cite{birks1951scintillations, bi
 where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
 
 \subsection{Liquid Scintillator for SNO+}
-As mentioned in \ref{sect:overview}, organic scintillators can release a large amount of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. 
-In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium, thorium and potassium in the organic liquid scintillators.
+Organic scintillators can release a large amount of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium (U), thorium (Th) and potassium (K) in the organic liquid scintillators. Among the organic scintillators, aromatic organic liquid scintillators have high electron densities which cam provide sufficient target for particle interactions\cite{PerkinElmer}. Due to these advantages, aromatic organic liquid scintillators have been extensively developed as detection media for large particle detectors, especially for neutrino experiments, such as KamLAND, Borexino, Day Bay and JUNO\cite{scintillatorPaper}.
 
-Among the organic scintillators, liquid aromatic solvents have been extensively developed as detection mediums for large particle detectors, especially for the neutrino experiments, such as KAMLAND, Borexino and Daya Bay. 
-
-SNO+ has developed liquid scintillators that are compatible with the detector components, especially with the acrylic materials, such as the AV. Two kinds of SNO+ liquid scintillators are discussed in the following sub-sections: the unloaded liquid scintillator for the scintillator phase and the Tellurium-loaded liquid scintillator (TeLS) for the tellurium phase.
+SNO+ has developed such kind of liquid scintillators that are compatible with the detector components, especially with the acrylic materials, such as the AV sphere. Two kinds of SNO+ liquid scintillators are discussed in the following sub-sections: the unloaded liquid scintillator for the scintillator phase and the Tellurium-loaded liquid scintillator (TeLS) for the tellurium phase.
 
 \subsubsection{Unloaded Liquid Scintillator}
+SNO+ adopts a scintillator cocktail contains two primary components: linear alkylbenzene (LAB) as solvent and 2,5-diphenyloxazole (PPO) as solute. For per liter LAB, 2 grams of PPO is dissolved. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{scintillatorPaper}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{lab-ppo-molecule.png}
+	\caption{Structural formulae of LAB (left) and PPO (right).}
+	\label{labppo-molecule}
+\end{figure}
+
+LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, scintillatorPaper}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and very low risks for the environment or human health\cite{wiki_LAB}.
+
+
+
+
+
+LAB is an effective energy absorber.
+
+ good optical transparency 
+
+
+
+ flash point at 140 $\circ C$
+
+%Kosswig, Kurt (2005). "Surfactants". Ullmann's Encyclopedia of Industrial Chemistry. Wiley-VCH. doi:10.1002/14356007.a25_747. ISBN 3527306730.
+
+
 
 The LAB is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
 
@@ -148,16 +170,21 @@ The advantages of LAB are:
 	\item[$\bullet$] Low cost.
 \end{itemize}
 
-An additional wavelength shifter, 2,5-diphenyloxazole (PPO) is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor and it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino] as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
+As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor
+
+energies are transferred from LAB to PPO via 
 
 
-Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO.
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{lab-ppo-molecule.png}
-	\caption{Structural formulae of LAB (left) and PPO (right).}
-	\label{labppo-molecule}
-\end{figure}
+ non-radiative F{\"o}rster resonant energy transfer
+
+
+
+it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the 
+
+sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino] as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
+
+
+
 
 
 
@@ -172,7 +199,7 @@ Fig.~\ref{absLength} shows absorption lengths.
 
 
 
-the transfer efficiencies
+
 
 
 
@@ -181,8 +208,13 @@ non-radiative transfer from LAB (solvent) to PPO (fluor)
 
 the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
 
+the transfer efficiencies
 
-This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table.\ref{transfer_efficiency}\cite{scintillatorPaper}. 
+
+This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau
+\cite{scintillatorPaper}.
+
+\ref{transfer_efficiency}\cite{scintillatorPaper}. 
 \begin{table}[ht]
 \centering
 	\begin{tabular}{cc}
@@ -198,6 +230,13 @@ concentration (g/L) & $\mathcal{\epsilon}_{transfer}$(\%)	\\
 	\end{tabular}
 	\label{transfer_efficiency}
 \end{table}
+
+
+
+
+
+
+
 
 
 
