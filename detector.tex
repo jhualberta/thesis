@@ -7,7 +7,7 @@ The SNO+ experiment is located at SNOLAB. This deep underground facility sits at
 
 The SNO+ detector is a refurbishment of the SNO detector. The SNO+ collaboration makes use of the SNO infrastructure and upgraded it to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide buoyancy for the vessel and also to shield radiation backgrounds from the environment, such as the cosmic rays and isotope decays from the rock. 
 
-The detector consists of an acrylic vessel (AV) sphere of 12.01 m in diameter and 5.5 cm in thickness. The AV contains detection media and is held in place by a rope net system including hold-up and hold-down Tensylon ropes. This spheric structure is simple in geometry and reduces the complexities of simulation and event reconstruction. Furthermore, this geometry allows for spherical fiducial volume cuts from the center of the AV to further get rid of external backgrounds, which makes the SNO+ as a graded-shield type detector\cite{waterfield2017optical}.
+The detector consists of an acrylic vessel (AV) sphere of 12.01 m in diameter and 5.5 cm in thickness. The AV contains detection media (or called target materials) and is held in place by a rope net system including hold-up and hold-down Tensylon ropes. This spheric structure is simple in geometry and reduces the complexities of simulation and event reconstruction. Furthermore, this geometry allows for spherical fiducial volume cuts from the center of the AV to further get rid of external backgrounds, which makes the SNO+ as a graded-shield type detector\cite{waterfield2017optical}.
 On the top of the AV sphere, there is an acrylic neck cylinder with 6.8 m high and 1.46 m inner diameter. The neck connects the AV sphere to the facilities on the deck above the detector. Through the neck, pipes can fill the detection medium into the AV and recirculate as well. Calibration sources for internal scans can also be lowered down into the AV through the neck.
 
 The AV sphere is concentric within a stainless steel photomultiplier (PMT) support structure (PSUP), which is a geodesic dome with an average radius of 8.4 m. Hamamatsu 8-inch R1408 PMTs were mounted on the PSUP and 9394 PMTs are looking inward to the AV. A 27 cm diameter concentrator consisting of pedals coated with aluminum was mounted on each PMTs to increase their light collection efficiency as well as the photocathode coverage of the detector, which reaches about 54\% effective coverage. Besides the inward-looking PMTs, 90 PMTs are looking outward, serving as muon vetos.  Four Hamamatsu R5912 High Quantum Efficiency (HQE) PMTs were also installed for testing the performance of potential SNO+ phases-II\cite{stringer2019sensitivity}. 
@@ -58,7 +58,7 @@ In this final phase, 0.5\% natural Tellurium (Te) by mass (with 1.3 kilo-tonnes 
 In the SNO+ detector, charged particles are expected to interact with the detection medium and create Cherenkov lights and scintillation lights. 
 
 \subsection{Cherenkov Radiation}
-For any charged particle traveling in a transparent medium at an ultrarelativistic speed (a speed greater than the local phase speed of light in the medium),  a kind of electromagnetic radiation, called Cherenkov radiation, can be emitted from the coherent response of the medium under the action of the field of the moving particle\cite{jackson2007classical,landau2013electrodynamics}.
+For any charged particle traveling in a transparent medium at an ultra-relativistic speed (a speed greater than the local phase speed of light in the medium),  a kind of electromagnetic radiation, called Cherenkov radiation, can be emitted from the coherent response of the medium under the action of the field of the moving particle\cite{jackson2007classical,landau2013electrodynamics}.
 
 Suppose a charged particle moves in a transparent, isotropic, and non-magnetic medium and creates an electromagnetic wave. The electromagnetic wave propagates with a wavenumber $k=n\cdot\omega/c$, where $c$ is the speed of light in vacuum, $n$ is the real-valued refractive index and $\omega$ is the frequency. If the particle travels uniformly along x-axis with a velocity of $v$, the x-component of the wave vector is $k_x=\omega/v$. For a freely propagating wave, $k>k_x$, therefore $v>v_p=c/n(\omega)$, where $v_p$ is the phase velocity in the medium. Under this condition that the speed of the charged particle is greater than the $v_p$, the Cherenkov radiation is emitted with a frequency of $\omega$\cite{landau2013electrodynamics}.   
 
@@ -120,12 +120,12 @@ An empirical formula, called follows Birk's law\cite{birks1951scintillations, bi
 where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
 
 \subsection{Liquid Scintillator for SNO+}
-Organic scintillators can release a large number of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium (U), thorium (Th), and potassium (K) in the organic liquid scintillators. Among the organic scintillators, aromatic organic liquid scintillators have high electron densities which can provide sufficient targets for particle interactions\cite{PerkinElmer}. Due to these advantages, aromatic organic liquid scintillators have been extensively developed as detection media for large particle detectors, especially for neutrino experiments, such as KamLAND, Borexino, Day Bay, and JUNO\cite{scintillatorPaper}.
+Organic scintillators can release a large number of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium (U), thorium (Th), and potassium (K) in the organic liquid scintillators. Among the organic scintillators, aromatic organic liquid scintillators have high electron densities and thus they can provide sufficient targets for particle interactions\cite{PerkinElmer}. Due to these advantages, aromatic organic liquid scintillators have been extensively developed as detection media for large particle detectors, especially for neutrino experiments, such as KamLAND, Borexino, Day Bay, and JUNO\cite{scintillatorPaper}.
 
-SNO+ has developed such kind of liquid scintillators that are compatible with the detector components, especially with the acrylic materials, such as the AV sphere. Two kinds of SNO+ liquid scintillators are discussed in the following sub-sections: the unloaded liquid scintillator for the scintillator phase and the Tellurium-loaded liquid scintillator (TeLS) for the tellurium phase.
+SNO+ has developed such kind of liquid scintillators that are compatible with the detector components, especially with the acrylic materials, like the AV sphere. Two kinds of SNO+ liquid scintillators are discussed in the following sub-sections: the unloaded liquid scintillator for the scintillator phase and the Tellurium-loaded liquid scintillator (TeLS) for the tellurium phase.
 
 \subsubsection{Unloaded Liquid Scintillator}
-SNO+ adopts a scintillator cocktail contains two primary components: linear alkylbenzene (LAB) as solvent and 2,5-diphenyloxazole (PPO) as solute. For per liter LAB, 2 grams of PPO is dissolved. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{scintillatorPaper}.
+SNO+ adopts a scintillator cocktail contains two primary components: linear alkylbenzene (LAB) as solvent and 2,5-diphenyloxazole (PPO) as solute. LAB is doped with PPO to a concentration of 2 g/L. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{scintillatorPaper}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{lab-ppo-molecule.png}
@@ -133,39 +133,48 @@ SNO+ adopts a scintillator cocktail contains two primary components: linear alky
 	\label{labppo-molecule}
 \end{figure}
 
-LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, scintillatorPaper}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and very low risks for the environment or human health\cite{wiki_LAB}.
+LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, scintillatorPaper}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and very low risks for the environment or human health\cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber.
+close to linear response to energy
+
+
+Good stability and chemically compatible
 
 
 
 
-
-LAB is an effective energy absorber.
-
- good optical transparency 
+High light yield and attenuation length.
 
 
+attenuation length
+good optical transparency 
 
  flash point at 140 $\circ C$
+
+ It has very low levels of natural radioactive contaminants such as U, Th and K.
+The target background levels for the SNO+ LAB are expected to be $\mathcal O(10^{-17})$ gram of $^{238}$U in per gram LAB (g$^{238}$U/gLAB), which is equal to be thousands of events per year;
+The $^{232}$Th and $^{40}$K levels are $\mathcal O(10^{-17})$ g/gLAB, which is equal to be hundreds of events per year\cite{markchen_bkg}.
+
+
+
+
+It has fast timing response different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha/\beta$ discrimination. 
+High flash point and low toxicity for lab safety.
+ appropriate density for mechanical stability
+ Low cost.
+
+
+
+
+
+
+The LAB used by SNO+ is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
+
+
 
 %Kosswig, Kurt (2005). "Surfactants". Ullmann's Encyclopedia of Industrial Chemistry. Wiley-VCH. doi:10.1002/14356007.a25_747. ISBN 3527306730.
 
 
 
-The LAB is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
-
-The advantages of LAB are:
-\begin{itemize}
-	\item[$\bullet$] It has very low levels of natural radioactive contaminants such as U, Th and K.
-	The target background levels for the SNO+ LAB are expected to be $\mathcal O(10^{-17})$ gram of $^{238}$U in per gram LAB (g$^{238}$U/gLAB), which is equal to be thousands of events per year;
-	The $^{232}$Th and $^{40}$K levels are $\mathcal O(10^{-17})$ g/gLAB, which is equal to be hundreds of events per year\cite{markchen_bkg}.
-	
-	\item[$\bullet$] High light yield and attenuation length.
-	\item[$\bullet$] It has fast timing response different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha/\beta$ discrimination. 
-	\item[$\bullet$] High flash point and low toxicity for lab safety.
-	\item[$\bullet$] appropriate density for mechanical stability
-	\item[$\bullet$] Good stability and chemically compatible with detector materials, mainly the AV.
-	\item[$\bullet$] Low cost.
-\end{itemize}
 
 As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor
 
@@ -175,13 +184,14 @@ energies are transferred from LAB to PPO via
  non-radiative F{\"o}rster resonant energy transfer
 
 
-
 it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the 
 
-sensitive range of the PMT detection.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino], as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of the LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield].
+sensitive range of the PMT detection and 
+
+can also reduce the probability of being the self-absorption of LAB.
 
 
-
+.  A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino], as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of the LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield]. And this light yield is expected to be increased by over 15\% after extensive purification process\cite{snop_nim}. 
 
 
 

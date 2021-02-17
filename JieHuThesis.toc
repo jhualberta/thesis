@@ -32,7 +32,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{45}{subsection.3.3.3}
 \contentsline {subsubsection}{Unloaded Liquid Scintillator}{45}{section*.9}
 \contentsline {subsubsection}{Tellurium-loaded Liquid Scintillator}{48}{section*.10}
-\contentsline {section}{\numberline {3.4}Optics}{49}{section.3.4}
+\contentsline {section}{\numberline {3.4}Optics}{48}{section.3.4}
 \contentsline {section}{\numberline {3.5}Electronics}{49}{section.3.5}
 \contentsline {section}{\numberline {3.6}Calibration}{53}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}The $^{16}$N Calibration Source}{54}{subsection.3.6.1}
@@ -40,8 +40,8 @@
 \contentsline {subsection}{\numberline {3.6.3}The Laserball}{56}{subsection.3.6.3}
 \contentsline {section}{\numberline {3.7}Detector Backgrounds}{56}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}Physics Backgrounds}{56}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Instrumental Backgrounds}{57}{subsection.3.7.2}
-\contentsline {section}{\numberline {3.8}Monte Carlo Simulation and the RAT Software}{57}{section.3.8}
+\contentsline {subsection}{\numberline {3.7.2}Instrumental Backgrounds}{56}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.8}Monte Carlo Simulation and the RAT Software}{56}{section.3.8}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{59}{chapter.4}
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{59}{section.4.1}
 \contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{60}{section.4.2}
