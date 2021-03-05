@@ -40,7 +40,7 @@
 \node (dec1) [decision,below of=pro1, aspect=2.5, text width=6cm, yshift = -2cm ] {FV cut~\&~$Nhit_i\in(175,1700)$};
 \node (loop2) [startstop, below of=dec1, yshift = -2cm ]{Loop for the events (loop 2, from i+1 to last)};
 \node (pro2) [process, below of=loop2] {Event \#j};
-\node (dec2) [decision, right of=pro2, text width=2.5cm, xshift =3cm] {$\Delta t=t_j -t_i>2000~\mu s$};
+\node (dec2) [decision, right of=pro2, text width=2.5cm, xshift =3cm] {$\Delta t=t_j -t_i<2000~\mu s$};
 \node (pro3) [process, right of=loop2, text width=3cm, xshift =6.5cm] {break loop 2};
 \node (dec3) [decision, aspect=2, below of=pro2, text width=5cm, yshift=-2.5cm] {FV cut \& $Nhit_j\in(175,320)$ \& $\Delta t\in(3.69,1000)~\mu s$ \& $|\vec{X}_i-\vec{X}_j|<0.5~m$};
 

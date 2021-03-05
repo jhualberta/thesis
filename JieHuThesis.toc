@@ -79,12 +79,12 @@
 \contentsline {subsection}{\numberline {6.1.3}Bi-Po Analysis}{119}{subsection.6.1.3}
 \contentsline {subsection}{\numberline {6.1.4}$^{16}$N Calibration Calibration in the Partial-fill Phase}{119}{subsection.6.1.4}
 \contentsline {subsection}{\numberline {6.1.5}Extracting the Cherenkov Signals in Partial-fill Phase}{120}{subsection.6.1.5}
-\contentsline {subsubsection}{$AmBe$ Source Analysis}{122}{section*.17}
-\contentsline {section}{\numberline {6.2}Towards the Te-loaded Phase}{122}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Muon Induced Backgrounds in the Te-loaded Phase}{122}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{127}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Measurement Setup and Data Acquisition}{129}{subsection.6.2.3}
-\contentsline {subsubsection}{Results}{137}{section*.18}
+\contentsline {subsubsection}{$AmBe$ Source Analysis}{121}{section*.17}
+\contentsline {section}{\numberline {6.2}Towards the Te-loaded Phase}{121}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Muon Induced Backgrounds in the Te-loaded Phase}{121}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{123}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Measurement Setup and Data Acquisition}{124}{subsection.6.2.3}
+\contentsline {subsubsection}{Results}{130}{section*.18}
 \contentsline {chapter}{\numberline {7}Conclusions}{138}{chapter.7}
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{139}{appendix.A}
 \contentsline {section}{\numberline {A.1}Create a Random Vertex}{139}{section.A.1}
