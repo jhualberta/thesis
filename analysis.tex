@@ -764,7 +764,7 @@ Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and witho
 
 Fig.~\ref{teLSresults} shows the result of one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~ 18 shows the results of the TeSOP and TeDDA samples.  Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
 
-In Fig.~ 18, the 2D plots in Fig.~\ref{teLSresults} are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
+The 2D plots in Fig.~\ref{teLSresults} are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
 
 From this plot, the single p.e. peaks for all the samples as well as the background match together. The multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can clearly see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP is slightly larger than the TeDDA. 
 
@@ -779,8 +779,7 @@ $p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$
 
 Then for the multiple p.e. region, weighting (dividing) the counts of the event in each channel with the single p.e. ADC channel number to calculate the total number of the photons.
 
-
-Fig.~ 19. Fit the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
+Fig.~ 19. fits the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
 
 To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
 

@@ -43,7 +43,7 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 \end{itemize}
 
 
-\section{\isotope[16]{N} Calibration Scans in the Water Phase}
+\section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
 During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deployed for internal detector calibration scans in June and November, 2017 and external detector scans in March, 2018.
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the RAT water fitter and the MPW. The vertex shifts as well as the uncertainties are evaluated. 
@@ -54,7 +54,6 @@ The $^{16}$N calibration runs provide an ideal test of fitter performance. From 
 	\caption{A cartoon shows the $^{16}$N source.}
 	\label{N16centralDiagram}
 \end{figure}
-
 
 
 The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
@@ -373,17 +372,6 @@ $\Delta(\beta_S)_{relative}\equiv (\beta_{S,data}-\beta_{S,MC})/\beta_{M,MC}$ 	&
 	\label{angularSystem}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
-
 $\beta_{14}$ systematic
 \begin{figure}[htbp]
 	\centering
@@ -398,7 +386,6 @@ $\beta_{14}$ systematic
 	\caption{$\Delta\beta_{M}$ (top) and $\Delta\beta_{S}$ (bottom) systematic for various $^{16}$N scans along three axes.}
 	\label{xyzScans}
 \end{figure}
-
 
 \section{Energy}
 
@@ -455,12 +442,6 @@ The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy
 	\label{N16energyMap}
 \end{figure}
 
-
-
-
-
-
-
 \begin{figure}[htbp]
 	\centering
 	\subfigure[MPW data]{ 
@@ -497,11 +478,6 @@ P(T_{eff})=N\int P_{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma}\exp [-\frac{[(1+\del
 \end{equation}
 
 
-
-
-
-
-
 %% external scan
 \begin{figure}[!htb]
 	\centering
@@ -516,7 +492,6 @@ The AmBe calibration source is used for the calibrations of the SNO+ neutron cap
 
 
 \section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
-
 
 solar neutrino candidate events in the open dataset.
 
@@ -572,10 +547,6 @@ MPW fit results
 fiducial volume cut
 
 
-
-
-
-
 \begin{table}[ht]
 	\centering
 	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
@@ -597,10 +568,6 @@ fiducial volume cut
 		\bottomrule
 	\end{tabular*}
 \end{table}
-
-
-
-
 
 \begin{table}[ht]
 	\centering
@@ -632,17 +599,9 @@ A ``solar angle'', $\theta_{sun}$ is the direction of the event relative to the 
 $\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, where $\vec{X}_{event}-\vec{X}_{sun}$ can be replaced by the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun.
 
 
-
-
-TMVA analysis
+\subsection{TMVA Analysis}
 
 The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,albertsson2007tmva}
-
-
-
-
-
-
 
 Boosted Decision Tree (BDT) method is used for the multiple variable analysis (MVA).
 
@@ -655,14 +614,13 @@ the simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$
 
 with discrimination threshold values. 
 
-Area Under Curve (AUC) 0.92
-energy cuts combining with NHit cuts
+Area Under Curve (AUC)% 0.92
+%energy cuts combining with NHit cuts
 
 
-6 variables used as inputs
+%6 variables used as inputs
 
-itr, $\theta_{ij}$, $\beta_{14}$, $NHits$, energy and $\hat u \cdot \hat R$.
-
+%itr, $\theta_{ij}$, $\beta_{14}$, $NHits$, energy and $\hat u \cdot \hat R$.
 
 MC simulations 
 
@@ -671,9 +629,6 @@ and $^{214}$Bi　backgrounds
 
 The distribution of $\cos\theta_{sun}$
 
-
-
-
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{ITR_MPW_solarNuVsExSolar.png}
@@ -681,14 +636,7 @@ The distribution of $\cos\theta_{sun}$
 	\label{itrCmp}
 \end{figure}
 
+Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
 
 
-
-
-
-other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
-
-
-
-
-
+\subsection{Likelihood Fits for Solar Neutrino Candidate Events}

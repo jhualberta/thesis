@@ -529,74 +529,9 @@ For the events in water, the fit bias and resolution is comparable to the water 
 
 Fig.~\ref{partial_fit_rz} shows the fitted $\sqrt{x^2+y^2}$ vs. fitted $z$ positions. It shows that the fitter can distinguish different events in the water or scintillator region. The fitter gives reasonable results of the three different MC simulations. 
 
+pdfs for all timing \ref{sect:LS_SNO+}.
 
 
-the optical response of the liquid scintillator
-
-empirical model. This model consists $n$ ($n=3~or~4$) exponential decays  with a common rise time \cite{biller2020slow}.
-
-timing profile 
-
-
-
-
-scintillator timing
-
-\[\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}
-\]
-
-
-\[
-\{\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}\otimes f_{PMT}(t-t')\}\otimes Gaus(t,0)
-\]
-
-from bench-top measurement, 
-while the rise time, $t_{rise} = 0.8~ns$ the timing parameters $t_i$,
-amplitude $a_i$ are determined by the bench-top measurements \cite{chicagoTiming}.
-
-
-
-%T. Kaptanoglu. Measurements of light yield and timing of 0.5 g/L LAB+PPO. SNO+ Internal Document (docDB-5997-v1).
-%T. Kaptanoglu. Timing and light yield measurement of Te+DDA LAB+PPO. SNO+ Internal Document (docDB-4813-v4).
-%T. Kaptanoglu. Penn Light Yield Measurements of Te+DDA samples. SNO+ Internal Document (docDB-5124-v2).
-
-\begin{table}[ht]
-	\caption[]{scintillator $\alpha/\beta$ timing parameters\cite{tanner0p5,joshW1,chicagoTiming}.}	\label{scint_timing} 
-				\centering
-		\begin{tabular*}{165mm}{c@{\extracolsep{\fill}}*9c}
-			\toprule 
-			\multicolumn{1}{c}{scintillator} & \multicolumn{4}{c}{timing [ns]} & \multicolumn{4}{c}{amplitudes}\\
-			\cline{0-1}\cline{2-5} \cline{6-9}		
-			 particles      & $t_1$ & $t_2$ & $t_3$ & $t_4$ & $a_1$ &$a_2$ &$a_3$&$a_4$\\
-			\midrule
-			\multicolumn{9}{l}{LAB + 2g/L PPO (default scintillator)}\\
-			$e^-$ & 4.88 & 15.4 & 66.0 & 400 & 0.665 & 0.218 & 0.083& 0.0346\\	
-		    $\alpha$ & 4.79 & 18.4 & 92.0 & 900 & 0.427 & 0.313 & 0.157 & 0.1027\\
-		    \hline
-		    \multicolumn{9}{l}{LAB + 0.5g/L PPO (partial-fill phase)} \\
-			$e^-$& 7.19 & 24.81 & 269.87 & -- &0.553 &0.331 &0.116 & --\\
-			$\alpha$& 6.56 &23.82 &224.19&--& 0.574&0.311& 0.115&--\\
-			\hline
-			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations DDA} \\
-			$e^-$ & 5.0& 12.1& 33.3& 499.0& 0.68& 0.21& 0.07& 0.04\\
-			$\alpha$ &3.8 &11.3& 65.3& 758.0& 0.48& 0.32& 0.14& 0.06 \\
-			\hline
-			\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations Te+0.5\% molar DDA}\\
-			$e^-$ & 3.7 & 10.0 & 52.0  & 500.0 & 0.72 & 0.23 & 0.02 &0.03\\
-			$\alpha$ & 3.69 & 15.5 & 79.3  & 489.0 & 0.63 & 0.23 & 0.07 &0.07\\	
-			\bottomrule	
-		\end{tabular*}
-\end{table}
-
-
-pdfs for all timing
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{plotAllTiming.pdf}
-	\caption{Timing profiles for liquid scintillators in different SNO+ phases.}
-	\label{allTiming}
-\end{figure}
 
 Radial bias is defined as the difference between the fitted and true position, projected along the radial component (unit vector) of the true position \cite{coulter2013modelling}.
 \[
