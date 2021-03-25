@@ -171,23 +171,9 @@ The LAB used by SNO+ is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
 %Kosswig, Kurt (2005). "Surfactants". Ullmann's Encyclopedia of Industrial Chemistry. Wiley-VCH. doi:10.1002/14356007.a25_747. ISBN 3527306730.
 
 
-As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor
-
-energies are transferred from LAB to PPO via 
-
-
- non-radiative F{\"o}rster resonant energy transfer
-
-
-it can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is the 
-
-sensitive range of the PMT detection and 
-
-can also reduce the probability of being the self-absorption of LAB.
-
+As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor. Energies are transferred from LAB to PPO via non-radiative F{\"o}rster resonant energy transfer. It can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is in the sensitive range of the PMT detection and can also reduce the probability of being the self-absorption of LAB.
 
 A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino], as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of the LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield]. And this light yield is expected to be increased by over 15\% after extensive purification process\cite{snop_nim}. 
-
 
 
 Fig.~\ref{absLength} shows absorption lengths.
@@ -199,27 +185,20 @@ Fig.~\ref{absLength} shows absorption lengths.
 	\label{absLength}
 \end{figure}
 
-
-
-
-non-radiative transfer from LAB (solvent) to PPO (fluor)
-
-
-the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
-
-the transfer efficiencies
-
+%non-radiative transfer from LAB (solvent) to PPO (fluor)
+%the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
+%the transfer efficiencies
 
 This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau
 \cite{scintillatorPaper}.
 
 
-The optical response of the liquid scintillator
+The optical response of the liquid scintillator.
 
 The time profiles of scintillator were obtained from bench-top measurement. 
 An empirical model consists $n$ ($n=3~or~4$) exponential decays  with a common rise time is used to describe the time profiles\cite{biller2020slow}.
 
-Default 
+Default timing fitting functions:
 \[\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}
 \]
 
@@ -227,7 +206,7 @@ while the rise time, $t_{rise} = 0.8~ns$ the timing parameters $t_i$,
 amplitude $a_i$ are determined by the bench-top measurements \cite{chicagoTiming}.
 
 
-From Oxford: 
+From Oxford timing fitting functions: 
 \[
 \{\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}\otimes f_{PMT}(t-t')\}\otimes Gaus(t,0)
 \]
@@ -327,25 +306,185 @@ for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a l
 
 To meet the low background requirement of the $0\nu\beta\beta$ analysis, the purity of the TeLS cocktail is aimed to $\mathcal{O}(10^{-15})$ g/g level for U and Th. 
 
+\subsection{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
+
+As described in Chapter 3, the energies of charged particles are converted into photons by the scintillator medium. By measuring the amount of the light, the energy of the particle from a certain process can be inferred. To measure the summed energy spectrum of the two electrons is the major task for a particle physics experiment searching for the possible $0\nu\beta\beta$-decay signal.
+
+For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak is at $2.5~MeV$\cite{whitepaper}.  This peak is relatively small and can be immerged in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials [cite whitepaper]. Therefore, the 0νββ-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
+
+Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators \cite{biller2017new}.
+
+\subsubsection{Measurement Setup and Data Acquisition}
+
+We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, which can affect the light yield, for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples.  Te-butanediol samples from both of the DDA and SOP synthesis procedures are prepared and are referred as TeDDA and TeSOP samples respectively. These samples are further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. To avoid air bubbles created by squeezing the vial cap into the liquid, the liquid level for each sample is kept at 30 mm. The dimensions of the vial is shown in the left picture of Fig.~\ref{scintVial}.
+
+\begin{figure}[htbp]
+	\subfigure{
+		\begin{minipage}[t]{0.38\textwidth}
+			\includegraphics[width=4cm]{scintVial.png}
+		\end{minipage}
+	}   
+	\subfigure{ 
+		\begin{minipage}[b]{0.35\textwidth}
+			\centering
+			\includegraphics[width=6cm]{plasticHolder.png}
+		\end{minipage}
+	}
+	\caption{Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs were aligned to face to the scintillation vial from each side.}
+	\label{scintVial}
+\end{figure}
+
+Two Hamamatsu R580 PMTs [cite PMT] were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~12.  The plastic piece is in a cylindrical shape with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to go inside from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable polylactide (PLA) filament and was machined by 3D-printing facility. The pictures of the pieces are shown in Fig.~\ref{scintVial}.
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{teLSsetup.png}
+	\caption{A diagram shows the light yield measurement setup. See the text for details.}
+	\label{teLSsetup}
+\end{figure}
+
+Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic piece held the radioactive source and the scintillation vial. It also aligned two PMTs to face to the scintillation vial from each side. The piece can shield lights from outside as well. These setups were placed in a dark box to prevent the lights from lab. Two RG59/U type high voltage (HV) cables connected the PMTs to an HV supply outside the dark box. The HV cables were connected to two signal/HV split boxes to separate the HV current and electrical signals. Due to the resistor of the split box, the HV supply was set to 2200 Volts (V) for the PMT operation while the operation voltage suggested by the Hamamatsu is 1800 V. 
+
+The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. This amplifier inverted the signals and amplified them by 26 dB. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
+
+To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel [cite CAEN].
+
+This module was controlled by the CoMPASS software provided by CAEN. The software set up the threshold and trigger parameters. For each triggered event which passed the threshold, the software recorded event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated [cite compass].
+
+Each channel recorded the signals from each PMT individually. With the two-PMT setup, we applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels were set to 48 ns. For a certain event, the CoMPASS software compares the event time difference between two channels and only records it if the event time differences is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
+
+\subsubsection{Measurement}
+
+The liquid scintillator samples we have measured are: LAB-PPO, TeDDA, TeSOP. The unloaded LAB-PPO sample served as a standard candle. 
+
+A Cesium-137 (\isotope[137]{Cs}) radioactive source was always placed at the bottom of the scintillation vials.
+The source was made by Radiochemical Centre Amersham. The radioactivity measured on 1st April 1974 was $11.09~microcurie(\mu Ci)$, with an accuracy of $3.7\%$. The activity was expected to be 
+
+in this thesis, considering a half-life of 30.08 years for the \isotope[137]{Cs}\cite{nndc}.
+
+has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
+
+For each sample, measurements were taken for one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$ rays interacted with the LAB-PPO sample. The p.e. signals triggered PMT pulses and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time tag. From this trigger time tag, in the following 80 ns window the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also from the trigger time tag, a pre-gate of 8 ns was set. The waveform was integrated in the time gate of  [trigger time - 8,  trigger time + 72] ns. This gives the integrated charge, which was calculated as a A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we simply used ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Time stamps were recorded as event time when the triggered event hapfpened. The waveform was recorded and the ADC channel number (energy) of this event was calculated.
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=8cm]{teLS_waveform.png}
+	\caption{A typical waveform triggered by scintillation photons from 137Cs $\gamma$-rays interaction with LAB-PPO sample.}
+	\label{teLSwaveform}
+\end{figure}
+
+In a coincidence time measurement, the event times of the events recorded by each of the two PMTs were compared. If the event time differences between two events from each PMTs were too long, these two events were considered as random noises rather than the physics events and were not recorded. We optimized a coincidence time cut as 40 ns and set that cut during the digitizer data-taking. 
+
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{TeLScoinCut.png}
+	\caption{Measured LAB-PPO energy spectrum with and without coincidence cut on the ADC channel 0.  A threshold for counting is set by comparing the two spectrum.}
+	\label{teLScoinCut}
+\end{figure}
+
+Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there exists a zero peak, which is caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT [cite leo].  The peak on the right is the multiple p.e. peak, in our case is mainly caused by a number of scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peak is removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
 
 
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=10cm]{TeLS_2Denergy.png}
+	\caption{ 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}
+	\label{teLSresults}
+\end{figure}
+
+Fig.~\ref{teLSresults} shows the result of one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~ 18 shows the results of the TeSOP and TeDDA samples.  Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
+
+The 2D plots in Fig.~\ref{teLSresults} are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
+
+From this plot, the single p.e. peaks for all the samples as well as the background match together. The multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can clearly see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP is slightly larger than the TeDDA. 
+
+To quantify the light yield differences between different samples, an analysis method of charge weighted photon number has been applied as the following:
+
+First, from the spectrum, fit the single p.e. peak with an asymmetric Gaussian function, as shown in Fig.~ 19. The mean value of the asymmetric Gaussian represents the ADC channel number corresponding to the single p.e. peak.
+
+$\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma}$,
+$f_{asym}=c\cdot e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\cdot Erfc(\xi)$
+
+$p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$ 
+
+Then for the multiple p.e. region, weighting (dividing) the counts of the event in each channel with the single p.e. ADC channel number to calculate the total number of the photons.
+
+Fig.~ 19. fits the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
+
+To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
+
+Fig.~\ref{2dplot} 2D LABPPO spectrum with coincidence cut. A box cut is defined for multiple PE counting. 
+
+Once the total number of the photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
+
+\subsubsection{Results}
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{lightyield1} Number of photons calculated by Charge weighted photon number method.}
+	\centering	
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
+		\toprule 
+		Sample & Number of photons ($\times 10^6$) & RLY\\
+		\midrule
+		LAB-PPO& 2.0811 & 1\\
+		TeDDA& 1.2652 & 	0.61 \\
+		TeSOP& 1.3976 & 0.67\\
+		\bottomrule	
+	\end{tabular*}
+\end{table}
+
+Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
+
+Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In [cite billerTe],  a relative light yield of ~0.65 was reported.
 
 
-\section{Optics}
+%[markchen] Shimizu, Itaru, and Mark Chen. "Double beta decay experiments with loaded liquid scintillator." Frontiers in Physics 7 (2019): 33.
+%
+%[birks] Birks, John Betteley. The theory and practice of scintillation counting: International series of monographs in electronics and instrumentation. Vol. 27. Elsevier, 2013.
+%
+%[leo] Leo, William R. Techniques for nuclear and particle physics experiments: a how-to approach. Springer Science & Business Media, 2012.
+%
+%[knoll]Knoll, Glenn F. Radiation detection and measurement. John Wiley & Sons, 2010.
+%
+%[novikov] V. Novikov, Scintillator development for SNO+, SNO+ internal document (2009).
+%
+%[pmt] “Photomultiplier Tube R580.” Photomultiplier Tube R580 | Hamamatsu Photonics, www.hamamatsu.com/eu/en/product/type/R580/index.html. 
+%
+%
+%[ppo] Wunderly, Stephen W., and Joel M. Kauffman. "New quench-resistant fluors for liquid scintillation counting." International Journal of Radiation Applications and Instrumentation. Part A. Applied Radiation and Isotopes 41.9 (1990): 809-815.
+%
+%[whitepapter] Andringa, S., et al. "Current status and future prospects of the sno." Advances in High Energy Physics 2016 (2016).
+%
+%[dayabay] W. Beriguete. et al., Production of Gadolinium-loaded Liquid Scintillator for the Daya Bay Reactor Neutrino Experiment, arXiv:1402.6694 [physics.ins-det]
+%
+%[dayabayBench] Xing-Chen, Ye, et al. "Preliminary study of light yield dependence on LAB liquid scintillator composition." Chinese Physics C 39.9 (2015): 096003.
+%
+%[tanner] Kaptanoglu, Tanner, Meng Luo, and Josh Klein. "Cherenkov and scintillation light separation using wavelength in LAB based liquid scintillator." Journal of Instrumentation 14.05 (2019): T05001.
+%
+%[lightYield] S. Grullon. Light yield and scintillation decay time constants of Te-loaded liquid scintillator for the SNO+experiment. InProceedings ofthe 26th International Conference on Neutrino Physics and Astrophysics(Neutrino ’14), Boston, MA, June 2014. Boston University.
+%
+%[stevebiller] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
+%
+%[caen] “DT5751 - CAEN - Tools for Discovery.” CAEN, www.caen.it/products/dt5751/.
+%
+%[compass]  “CoMPASS Multiparametric DAQ Software for Physics Applications
+%”https://www.caen.it/products/compass/
+%
+%[nndc] Decay Radiation Results, Brookhaven National Laboratory, www.nndc.bnl.gov/nudat2/decaysearchdirect.jsp?nuc=137CS&unc=nds.
+%
+%[billerTe] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
+
+\section{Optics}\label{optics}
 
 Optical parameters
 
 Winston cone
 
-
-
 timing
 
-
 attenuation
-
 scattering
-
 
 laser pulse diffuser, it can run with different wavelengths: 337, 365, 385, 420, 450, and 500 nm.
 The laserball 
@@ -363,13 +502,13 @@ To tackle more than 9000 PMTs in the SNO+ detector, the coaxial cables connected
 \begin{equation}
 lcn = 512 \times crate + 32 \times FEC + channel
 \end{equation}
- %9605 are actually used
- 
+%9605 are actually used
+
 To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to implement three functions\cite{boger2000sudbury,bonventre2014neutron,snop_nim}:
 \begin{itemize} 
-\item[$\bullet$] Two four-channel discriminators (SNOD) chips set thresholds for PMT signals.
-\item[$\bullet$] Eight single-channel CMOS chips record the time when the PMT pulse crosses the discriminator thresholds.
-\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulses over a time interval to obtain PMT charge information. There are three different time windows for the integral, resulting in three types of charge values: QHS　(Charge High gain Short integration time), by integrating the pulse over 60 ns; QHL (Charge High gain Long integration time), by integrating the pulse over 400 ns; and the QLX (Charge Low gain), by integrating the low gain PMTs over either 60 or 400 ns.
+	\item[$\bullet$] Two four-channel discriminators (SNOD) chips set thresholds for PMT signals.
+	\item[$\bullet$] Eight single-channel CMOS chips record the time when the PMT pulse crosses the discriminator thresholds.
+	\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulses over a time interval to obtain PMT charge information. There are three different time windows for the integral, resulting in three types of charge values: QHS　(Charge High gain Short integration time), by integrating the pulse over 60 ns; QHL (Charge High gain Long integration time), by integrating the pulse over 400 ns; and the QLX (Charge Low gain), by integrating the low gain PMTs over either 60 or 400 ns.
 \end{itemize}
 
 First, the discriminator checks the input pulses from a PMT channel with the predefined threshold voltages. If the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20)\cite{joshTrigger}. These time widths are optimized for the timing of the photon propagation in the detector and later to determine the number of hit PMTs in a specific time window. Besides these two, there are also two triggers that copies the analog pulses of high and low gain of each hit PMTs, known as ESUMHi(gh) and ESUMLo(w). These triggers mainly measure the stability of the detector, in case that there would be large signals in the PMTs while the number of the hit PMTs are small due to one or a few PMTs being exposed to a high amount of light or experiencing break downs\cite{operator}. At the same time, CMOS chips produce a time-to-amplitude (TAC) voltage and the TAC starts to ramp. The SNOINT starts to integrate all pulses from the PMT channel from 10 ns before the threshold crossing time to 390 ns or 50 ns to get QHL, QHS, or QLX values mentioned before\cite{boger2000sudbury,stringer2019sensitivity}. 
@@ -385,44 +524,37 @@ The recorded hit information of the triggered event, including the values of the
 As a summary, the SNO+ electronic system can measure signals with a nanosecond-level timing resolution and a single-photon level charge resolution. It can handle an event rate of several kHz and even much higher rates for cases such as the burst events from a galactic supernova\cite{snop_nim}.
 
 \section{Calibration}\label{sect:calibr}
-Calibration sources with known physics parameters: help to understand the detector response to the events and to make accurate measurements.
+Calibration sources with known physics parameters help to understand the detector response to the events and to make accurate measurements.
 
-Two kinds of calibration sources are used by SNO+: optical sources to calibrate the detector optical properties and radioactive sources to calibrate the detector energy response. 
+Two kinds of calibration sources are used by SNO+: (1) optical sources to measure the detector optical properties and to calibrate the PMTs; and (2) radioactive sources to calibrate the detector energy responses. Different types of radioactive sources are also used to test the performance and systematic uncertainties of event position, direction and energy reconstruction algorithms, as well as the analysis tools for particle identifications.
 
-The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded LED/Laser Light Injection Entity (ELLIE).
+The deployment of the calibration sources at different positions can help to understand the asymmetries in the detector responses. In geometry, the detector is not perfect symmetric due to the presence of the AV neck, ropes, gaps between the PMTs in the PSUP and differences    
 
 
-: energy scale, resolution, systematic uncertainties
 
-reconstruction performances and uncertainties.
+
+
+source manipulator system.
+
+
+reduce the radio contamination in the detector
+
+
+
+
+
+
+\subsection{Optical Calibration Sources}
+The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded Light-emitting diode (LED)/Laser Light Injection Entity (ELLIE).
+
 particle identifications
-
-the SNO+ Source Manipulator System (SMS) is inherited from the SNO.
-
-An Umbilical Retrieval Mechanism (URM) is used to send the source down to the inner vessel.
-
-The sources are connected to the umbilical.
-
-An umbilical encloses electrical cables, optical fibers, and gas lines connected to the source.
-
-A Universal Interface (UI) connecting the URM and the detector, 
-Therefore, a sealed environment, which 
-ensures radon gas not leaking into the detector when deploying the source.
-
-The source manipulator system (see Section 6.3) allows the insertion of various types of calibration
-devices inside the acrylic vessel. 
 
 
 Six underwater cameras were installed on the PSUP 
 
 
-\subsection{Optical Calibration Sources}
 \subsubsection{Laserball}
-
-
 optical source, named as laserball, is a light diffusing sphere, which nitrogen dye laser glass bubbles.
-
-
 
 fast pulsing LED or lasers
 measures optical properties, such as scattering, attenuation of the detector materials, the response of PMTs, 
@@ -431,67 +563,33 @@ wavelength dependent absorption and the optical degradation
 
 Optical calibration {\emph {in-situ}} 
 
-
-
 various dyes provide different peak wavelengths of the laser light, mainly at 365, 385, 420, 450 and 500 nm.
 
-
-
-
-
-
-
-
 \subsubsection{ELLIE}
-Due to the requirements of very low radioactive background levels for the SNO+, frequent deployments of calibration source inside the AV are needed to be avoided. To conduct weekly calibrations of PMTs, the ELLIE system was developed by SNO+. It uses light injection devices which are outside the AV and mounted on the PSUP at fixed positions.
+Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which 
 
-The ELLIE system consists of three modules, which are: 
-\begin{itemize}  
-	\item[$\bullet$] Timing module (TELLIE)
-	
-	light-emitting diode (LED)
-	
-	
-	time calibration, time response
-	calibrates the gain and charge response of the PMTs, which is important to estimate the event energy.
-	
-	a precision of $\mathcal{O} (1~ns)$
-	
-	Blinky fiber optics nailed to the PSUP to calibrate stuff.
-	
-	\item[$\bullet$] Attenuation module (AMELLIE)
-	optical attenuation in the detector over time
-	
-	\item[$\bullet$]   scattering of the detector media 	(SMELLIE) 
-\end{itemize}
+is used to monitor the relative changes in attenuation lengths of detection media.
 
+of the liquid scintillator
+
+\cite{jones2011background,walker2016study,dunger2018topological,snop_nim}.
 
 \subsection{Radioactive Calibration Sources}
 
 
+\subsubsection{The $^{16}$N Calibration Source}
 
-
-
-
-\subsection{The $^{16}$N Calibration Source}
-
-
- is one of the radioactive sources
-
-This source is inherit from the SNO experiment\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}, 
+The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}, 
 
 A deuterium-tritium (DT) generator in SNOLAB can produce neutrons through: $D+T\to n+^{4}$He, 
 flow $CO_2$ gas stream through pipe lines
 the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$,
 
-
 The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$.
 It has a 66.2\% chance to emit an electron with end-point energy of 4.29 MeV and a 22.8\% chance to 
-10.42 MeV
+10.42 MeV\cite{nndc}.
 
-\cite{nndc}
-
-a simplified decay scheme is shown in Fig.~\ref{n16decay}.
+A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
 6.13 MeV $\gamma$ rays.
 \begin{figure}[!htb]
@@ -502,22 +600,20 @@ a simplified decay scheme is shown in Fig.~\ref{n16decay}.
 \end{figure}
 
 
-Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside; 
+Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside\cite{dragowsky1999sudbury}.
+
+[needs to fill in details]
+%to ensure a high fraction of the $\gamma$-rays 
 
 
-to ensure a high fraction of the $\gamma$-rays 
+%lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
 
 
-lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
+%tagged by a small PMT inside
 
+%A polyethelene bumper cone is at the bottom of the source.
 
-tagged by a small PMT inside
-
-A polyethelene bumper cone is at the bottom of the source.
-
-gas capillary tube 
-
-\cite{dragowsky1999sudbury}.
+%gas capillary tube 
 
 
 \begin{figure}[!htb]
@@ -527,37 +623,15 @@ gas capillary tube
 	\label{n16pic}
 \end{figure}
 
-The $^{16}$N source
-$^{3}$H$(p,\gamma)^{4}$He reaction.
+%The $^{16}$N source $^{3}$H$(p,\gamma)^{4}$He reaction.
 
 A detailed study of using the $^{16}$N source for reconstruction will be shown in \ref{sect:n16_water}.
 
 
 \subsection{The Americium Beryllium (AmBe) Calibration Source}
-s
 In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co will be implemented.
 
 $^{46}$Sc source
-
-\section{Detector Backgrounds}
-
-\subsection{Physics Backgrounds}
-
-Radioactive Isotopes
-
-assays
-
-
-in-situ
-ex-situ
-
-the instrumental backgrounds can be removed by the data-cleaning approaches.
-
-
-
-\subsection{Instrumental Backgrounds}
-
-
 
 
 \section{Monte Carlo Simulation and the RAT Software}
@@ -589,5 +663,3 @@ the detailed processes of data acquisition and trigger systems are \cite{whitepa
 The SNO+ version of RAT is being developed by the whole collaboration and evolves with the experiment progress.
 Besides more functions are added into the RAT, it is also tuned and optimized with the updated parameters from more precise descriptions of the physics processes or the detector responses to the calibration sources. Therefore, different versions of RAT may give different results. For the work in this thesis, multiple RAT versions are used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the RAT version when I discuss a certain analysis.
 \cite{ratManual}
-
-

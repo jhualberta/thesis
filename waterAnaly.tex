@@ -3,8 +3,31 @@
 
 The SNO+ water data taking from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the liquid mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top, the data taken during this period is considered as low background data.
 
+%The open dataset 100000 to 100399, from 4 to 14 May 2017.
 
-The open dataset 100000 to 100399, from 4 to 14 May 2017.
+
+\section{Detector Backgrounds}
+
+\subsection{Physics Backgrounds}
+
+Radioactive Isotopes
+
+assays
+
+
+in-situ
+ex-situ
+
+the instrumental backgrounds can be removed by the data-cleaning approaches.
+
+
+
+\subsection{Instrumental Backgrounds}
+
+
+
+
+
 
 
 \section{High Level Cuts: Classifiers}
@@ -544,8 +567,7 @@ solar neutrino candidate events in the open dataset.
 
 MPW fit results
 
-fiducial volume cut
-
+fiducial volume cut effects
 
 \begin{table}[ht]
 	\centering
@@ -588,12 +610,11 @@ fiducial volume cut
 \end{tabular*}
 \end{table}
 
-elastic scattering $\nu_e+e^-\to \nu_e+e^-$
-the maximum kinetic energy of the recoil electron is
+In SNO+ water phase, solar $\nu_e$s are basically measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$. The maximum kinetic energy of the recoil electron is
 $T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$
 the cross section is $\sigma(\nu_e+e^-\to \nu_e+e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
 the expected solar neutrino rate is 
-$R=A\int_{T_{thresh}}^{T_{max}}$
+$R=A\int_{T_{thresh}}^{T_{max}}\frac{d\sigma}{dE}\frac{dN}{dE_\nu}dE_\nu$.
 
 A ``solar angle'', $\theta_{sun}$ is the direction of the event relative to the Sun's location,
 $\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, where $\vec{X}_{event}-\vec{X}_{sun}$ can be replaced by the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun.
@@ -636,7 +657,12 @@ The distribution of $\cos\theta_{sun}$
 	\label{itrCmp}
 \end{figure}
 
+
+
+
 Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
 
 
 \subsection{Likelihood Fits for Solar Neutrino Candidate Events}
+
+

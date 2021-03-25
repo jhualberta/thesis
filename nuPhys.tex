@@ -1,15 +1,63 @@
 %\epigraph{Yesterday's rose stands only in name, we hold only empty names.}{--- \textup{Umberto Eco}, \textit{The Name of Rose}}
 
-In this chapter, I will give an overview of the neutrino and its properties. After an introduction to the history studies, two important properties: neutrino flavor transformations and neutrino mass are discussed.
+In this chapter, I will give an overview of neutrinos and their properties. I focus on two important properties: neutrino mass and neutrino flavor transformations.  
 
-\section{Discovery of Neutrino}
-The existence of neutrinos was first put forward by Wolfgang Pauli in the 1930s to solve the contradictions observed in beta decay experiments. It was shown definitively by James Chadwick in 1914 that the electrons emitted in beta decay did not have a discrete set of energies but instead had a continuous spectrum\cite{leite1996weak}. This means that the energy, momentum, and angular momentum (spin) were not conserved between the nucleus and electron. To solve this problem, Wolfgang Pauli introduced a charge-neutral, spin-1/2, and nearly massless new particle. The sum of the energies of the new particle, the nucleus, and electron is constant, which solved the problem. 
+\section{Neutrino Mass: Direct Kinetic Measurements from Beta Decay}\label{section:directMeasure}
+The existence of neutrinos was first put forward by Wolfgang Pauli in the 1930s to solve the contradictions observed in $\beta$-decay experiments. 
+
+
+The classical experiments in history were designed to measure the kinetic energy of the emitted electron from the $\beta^-$-decay: $(Z,A)\to (Z+1,A)+e^-+\bar{\nu}_e$, where A is the nucleon number and Z is the atomic or proton number. The energy difference between the initial and final state nuclei is the sum of the emitted electrons $e^-$ (called the $\beta$-electron ) energy $E_e$, the antineutrino $\bar{\nu}_e$ energy $E_\nu$ and the nuclear recoil energy $E_R$: $Q=E_e+E_\nu+E_R$. If considering the initial and final nuclei are at rest and $E_R$ is negligible, due to the presence of $E_\nu$, $E_e$ can range from 0 to the maximal energy $E_0=Q$ (called the end-point energy). For the $\beta$-electron with a rest mass $m_e$, the kinetic energy $T_e=E_e-m_e$ (taking the natural unit $\hbar=c=1$) and the momentum $p_e=\sqrt{E^2+2Em_e}$. Then by using the Fermi's Golden Rule, the differential $\beta^-$-decay spectrum of $T_e$ is given by\cite{rottele2019tritium}:
+\begin{equation}\label{eq:beta-decay}
+\begin{aligned}
+\frac{d^2N}{dtdT_e} = \frac{G_F^2\cos^2\theta_C|\mathcal{M}_{nucl}|^2}{2\pi^3} &\cdot F(Z+1,T_e)\cdot(T_e+m_e)\cdot p_e\cdot (E_0-T_e)\\
+&
+\cdot \sqrt{(E_0-T_e)^2-m^2_{\bar{\nu}_e}}\Theta(E_0-T_e-m_{\bar{\nu}_e}),
+\end{aligned}
+\end{equation}
+where $G_F$ is the Fermi constant; $\theta_C$ is the Cabibbo angle; $\mathcal{M}_{nucl}$ is the nuclear matrix element (NME); $F(Z,E)$ is the Fermi function describing the electromagnetic interaction between the $\beta$-electron and the final-state nucleus; and the Heaviside step function $\Theta$ ensures that a neutrino can only be emitted if enough energy is left for its mass.
+
+In this spectrum, $m^2_{\bar{\nu}_e}$, the square of the $\bar{\nu}_e$ rest mass is the measurement observable. It can be evaluated by measuring the $\beta$-decay event rate\cite{rottele2019tritium}.
+
+If considering $m_{\nu_e}=m_{\bar{\nu}_e}$ and the CPT is conserved, $\langle m^2_{\bar{\nu}_e}\rangle=\langle m^2_{{\nu}_e}\rangle=\sum_i |U_{ei}|^2 m_i^2=\sum_i |U_{ei}|^2 m_i^2$. Taking out the lightest mass eigenvalue: $m_1$ for normal hierarchy and $m_3$ for inverted hierarchy, the $\langle m^2_{\nu_e}\rangle$ can be expressed as\cite{suekane2015neutrino}:
+\begin{equation}\label{nuMassSquare}
+\langle m^2_{\nu_e}\rangle = 
+\begin{cases}
+m_1^2+s^2_{13}|\Delta m^2_{31}|+c^2_{13}s^2_{12}\Delta m^2_{21}~(\mathrm{for~NH})\\
+m_3^2+c^2_{13}|\Delta m^2_{31}|+c^2_{13}s^2_{12}\Delta m^2_{21}~(\mathrm{for~IH}),
+\end{cases}
+\end{equation}
+where $s^2_{13}, c^2_{13}, \Delta m^2_{31}$ and $\Delta m^2_{21}$ are the flavor transformation parameters and they are determined by flavor transformation experiments. If taking the currently best global-fit values with $3\sigma$ (the values in brackets are for IH and the others are for NH): $\Delta m^2_{21}= 7.37 \times 10^{-5}~eV^2,~|\Delta m^2_{31}|= 2.56~(2.54)\times 10^{-3}~eV^2 ,s^2_{12}= 0.297, s^2_{13}= 0.0215~(0.0216)$\cite{pdg2018}, then  for NH, $\langle m^2_{\nu_e}\rangle \simeq m_1^2+(8.74~meV)^2$ and for IH, $\langle m^2_{\nu_e}\rangle \simeq m_3^2+(50.3~meV)^2$.
+Fig.~\ref{lightestM} plots the $\sqrt{\langle m^2_{\nu_e}\rangle}$ as a function of the lightest mass eigenvalue.
+\begin{figure}[htbp]\label{lightestM}
+	\centering	
+	\includegraphics[width=10cm]{nu_massHierarchy.pdf}
+	\caption{$\sqrt{\langle m^2_{\nu_e}\rangle}$ as a function of the lightest mass ($m_1$ for NH or $m_3$ for IH).}
+	\label{nuMass}
+\end{figure}
+Therefore, once the $m^2_{\bar{\nu}_e}$ is measured, the mass hierarchy as well as the mass eigenvalues $m_i$ can be determined.
+
+Among the $\beta$-decay processes, the tritium process: $^3$H$\to^3$He$^+$+$e^-+\bar{\nu}_e$ has a low endpoint energy $E_0=18.57$ keV, a favorable half-life $T_{1/2}=12.32$ years and simple atomic structure for calculation. With these experimental advantages, it has been largely investigated since 1947 and is used as a standard technology for the kinetic measurement\cite{fukugita2013physics}. The KArlsruhe TRItium Neutrino (KATRIN) experiment is one of the state-of-the-art tritium experiments which uses a large magnetic spectrometer with high energy resolution for precise measurement.　In 2019, the experiment reported an upper limit of $m_\nu<1.1$ eV with 90\% C.L.. After 5 years of measurement, the experiment is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L.\cite{aker2019improved}.
+
+
+It was shown definitively by James Chadwick in 1914 that the electrons emitted in $\beta$-decay (called the ``$\beta$-electrons'') have a continuous energy spectrum\cite{leite1996weak}. However, since nuclei have discrete energy levels, the energy spectrum of $\beta$-electrons should be discrete and equal to the difference between final and initial states of nuclei. This indicated that the energy, momentum, and 
+
+
+angular momentum (spin) were not conserved between the nucleus and $\beta$-electrons. To solve this problem, Pauli introduced a charge-neutral, spin-1/2, and nearly massless new particle, later called ``neutrino'' by Enrico Fermi. Then the sum of the energies of the new particle, the nucleus, and electron in $\beta$-decay becomes constant, which solved the problem. 
+
+
+
+
 
 In 1934, Bethe and Peierls suggested direct neutrino detection via a neutrino-induced interaction, called the inverse beta decay (IBD): $\bar{\nu}_e+p\to e^+ + n$. Their calculation showed that the IBD cross- section was of the order of $10^{-44}$ cm$^2$. Such a small cross- section indicates that the neutrino is difficult to detect\cite{bethe1934neutrino}.
 
 In 1956, Fred Reines and Clyde Cowan made the first discovery of the neutrino (specifically, it was electron antineutrinos $\bar{\nu}_e$) by using a nuclear reactor as an intense neutrino source with neutrino fluxes on the order of $10^{12}-10^{13}~\bar{\nu}_e$ s/second/cm$^2$. The active volume of their detector was two tanks filled with water in which cadmium chloride (CdCl$_2$) was dissolved. The water tanks were surrounded by liquid scintillator layers coupled with photomultiplier tubes (PMT) to detect emitted photons. The incoming antineutrinos interacted with the water via IBD. The produced positrons quickly annihilated with $e^-$ and gave $\gamma$ signals while the produced neutrons went through the neutron capture process: $n+^{108}$Cd$\to^{109}$Cd$^*\to^{109}$Cd$+\gamma$ and gave delayed $\gamma$ signals. A coincidence of these two characteristic signals provided a distinctive signature for the neutrino reaction. They measured the cross-section as $6.3\times10^{-44}$ cm$^2$, which was consistent with Bethe's calculation\cite{reines1960detection}.
 
-\section{Basic Properties}
+
+
+
+
+
+
 
 Neutrinos have three flavors.
 
@@ -386,17 +434,6 @@ The electron neutrinos produced in the solar nuclear reactions are named solar n
 solar neutrinos are also major backgrounds to the $0\nu\beta\beta$ search
 
 
-
-
-
-
-
-
-
-
-
-
-
 \section{Neutrino Mass}\label{section:Majorana}
 A free neutrino with a mass $m$ can be described by a four-component Dirac spinor field following the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, where $\partial_\mu\equiv \partial/\partial x^\mu$, and $\gamma^\mu~(\mu=0,1,2,3)$ is a set of $4\times 4$ matrices forming a Clifford algebra which satisfies the following relations\cite{akhmedov2014majorana,zee2010quantum}:
 \begin{equation}\label{eq:clifford}
@@ -585,38 +622,7 @@ Neutrinos play an important role in the formation and evolution of the universe.
 
 Combining the CMB data from the Planck space observatory (updated to 2018 results) with the BAO measurements, a tight 95\% constraint on the sum of the masses of the three active types of neutrinos is obtained as: $\sum m_\nu<0.12~eV$\cite{aghanim2020planck}. Currently, the cosmological approaches provide the strongest upper limit of the sum of neutrino masses\cite{dvorkin2019neutrino}. On the other hand, these measurements are strongly model-dependent. For example, the measurements based on CMB mainly depend on the Lambda Cold Dark Matter ($\Lambda CDM$) model, which is a standard model of Big Bang cosmology.
 
-\subsection{Direct Kinetic Measurements from Beta Decay}\label{section:directMeasure}
-The classical experiments in history were designed to measure the kinetic energy of the emitted electron from the $\beta^-$-decay: $(Z,A)\to (Z+1,A)+e^-+\bar{\nu}_e$, where A is the nucleon number and Z is the atomic or proton number. The energy difference between the initial and final state nuclei is the sum of the emitted electrons $e^-$ (called the $\beta$-electron ) energy $E_e$, the antineutrino $\bar{\nu}_e$ energy $E_\nu$ and the nuclear recoil energy $E_R$: $Q=E_e+E_\nu+E_R$. If considering the initial and final nuclei are at rest and $E_R$ is negligible, due to the presence of $E_\nu$, $E_e$ can range from 0 to the maximal energy $E_0=Q$ (called the end-point energy). For the $\beta$-electron with a rest mass $m_e$, the kinetic energy $T_e=E_e-m_e$ (taking the natural unit $\hbar=c=1$) and the momentum $p_e=\sqrt{E^2+2Em_e}$. Then by using the Fermi's Golden Rule, the differential $\beta^-$-decay spectrum of $T_e$ is given by\cite{rottele2019tritium}:
-\begin{equation}\label{eq:beta-decay}
-\begin{aligned}
-\frac{d^2N}{dtdT_e} = \frac{G_F^2\cos^2\theta_C|\mathcal{M}_{nucl}|^2}{2\pi^3} &\cdot F(Z+1,T_e)\cdot(T_e+m_e)\cdot p_e\cdot (E_0-T_e)\\
-&
-\cdot \sqrt{(E_0-T_e)^2-m^2_{\bar{\nu}_e}}\Theta(E_0-T_e-m_{\bar{\nu}_e}),
-\end{aligned}
-\end{equation}
-where $G_F$ is the Fermi constant; $\theta_C$ is the Cabibbo angle; $\mathcal{M}_{nucl}$ is the nuclear matrix element (NME); $F(Z,E)$ is the Fermi function describing the electromagnetic interaction between the $\beta$-electron and the final-state nucleus; and the Heaviside step function $\Theta$ ensures that a neutrino can only be emitted if enough energy is left for its mass.
 
-In this spectrum, $m^2_{\bar{\nu}_e}$, the square of the $\bar{\nu}_e$ rest mass is the measurement observable. It can be evaluated by measuring the $\beta$-decay event rate\cite{rottele2019tritium}.
-
-If considering $m_{\nu_e}=m_{\bar{\nu}_e}$ and the CPT is conserved, $\langle m^2_{\bar{\nu}_e}\rangle=\langle m^2_{{\nu}_e}\rangle=\sum_i |U_{ei}|^2 m_i^2=\sum_i |U_{ei}|^2 m_i^2$. Taking out the lightest mass eigenvalue: $m_1$ for normal hierarchy and $m_3$ for inverted hierarchy, the $\langle m^2_{\nu_e}\rangle$ can be expressed as\cite{suekane2015neutrino}:
-\begin{equation}\label{nuMassSquare}
-\langle m^2_{\nu_e}\rangle = 
-\begin{cases}
-m_1^2+s^2_{13}|\Delta m^2_{31}|+c^2_{13}s^2_{12}\Delta m^2_{21}~(\mathrm{for~NH})\\
-m_3^2+c^2_{13}|\Delta m^2_{31}|+c^2_{13}s^2_{12}\Delta m^2_{21}~(\mathrm{for~IH}),
-\end{cases}
-\end{equation}
-where $s^2_{13}, c^2_{13}, \Delta m^2_{31}$ and $\Delta m^2_{21}$ are the flavor transformation parameters and they are determined by flavor transformation experiments. If taking the currently best global-fit values with $3\sigma$ (the values in brackets are for IH and the others are for NH): $\Delta m^2_{21}= 7.37 \times 10^{-5}~eV^2,~|\Delta m^2_{31}|= 2.56~(2.54)\times 10^{-3}~eV^2 ,s^2_{12}= 0.297, s^2_{13}= 0.0215~(0.0216)$\cite{pdg2018}, then  for NH, $\langle m^2_{\nu_e}\rangle \simeq m_1^2+(8.74~meV)^2$ and for IH, $\langle m^2_{\nu_e}\rangle \simeq m_3^2+(50.3~meV)^2$.
-Fig.~\ref{lightestM} plots the $\sqrt{\langle m^2_{\nu_e}\rangle}$ as a function of the lightest mass eigenvalue.
-\begin{figure}[htbp]\label{lightestM}
-	\centering	
-	\includegraphics[width=10cm]{nu_massHierarchy.pdf}
-	\caption{$\sqrt{\langle m^2_{\nu_e}\rangle}$ as a function of the lightest mass ($m_1$ for NH or $m_3$ for IH).}
-	\label{nuMass}
-\end{figure}
-Therefore, once the $m^2_{\bar{\nu}_e}$ is measured, the mass hierarchy as well as the mass eigenvalues $m_i$ can be determined.
-
-Among the $\beta$-decay processes, the tritium process: $^3$H$\to^3$He$^+$+$e^-+\bar{\nu}_e$ has a low endpoint energy $E_0=18.57$ keV, a favorable half-life $T_{1/2}=12.32$ years and simple atomic structure for calculation. With these experimental advantages, it has been largely investigated since 1947 and is used as a standard technology for the kinetic measurement\cite{fukugita2013physics}. The KArlsruhe TRItium Neutrino (KATRIN) experiment is one of the state-of-the-art tritium experiments which uses a large magnetic spectrometer with high energy resolution for precise measurement.　In 2019, the experiment reported an upper limit of $m_\nu<1.1$ eV with 90\% C.L.. After 5 years of measurement, the experiment is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L.\cite{aker2019improved}.
 
 \subsection{Double Beta Decay}
 
@@ -693,8 +699,6 @@ where $G_{PS}(Q,Z)$ is a phase space corresponding to the effective coupling con
  the Quasiparticle-Random Phase Approximation (QRPA), 
 
 Interacting Boson Model (IBM), Energy Density Functional Method (EDF), and Projected Hartree-Fock-Bogoliubov Method (PHFB).
-
-
 
 In this case the effective Majorana mass 
 \begin{equation}
