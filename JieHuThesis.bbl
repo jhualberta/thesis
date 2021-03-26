@@ -20,9 +20,6 @@ J.~W.~F. Valle and J.~Romao, {\em Neutrinos in high energy and astroparticle
   physics}.
 \newblock John Wiley \& Sons, 2015.
 
-\bibitem{snop_nim}
-the {SNO+}~collaboration, ``{T}he {SNO+} experiment,'' {\em To be published}.
-
 \bibitem{jones2011background}
 P.~G. Jones, {\em Background rejection for the neutrinoless double beta decay
   experiment SNO+}.
@@ -35,6 +32,9 @@ J.~Birks and F.~Firk, ``The theory and practice of scintillation counting,''
 \bibitem{knoll2010radiation}
 G.~F. Knoll, {\em Radiation Detection and Measurement}.
 \newblock John Wiley \& Sons, 2010.
+
+\bibitem{snop_jinst}
+the {SNO+}~collaboration, ``{T}he {SNO+} experiment,'' {\em To be published}.
 
 \bibitem{dragowsky200216n}
 M.~Dragowsky, A.~Hamer, Y.~Chan, R.~Deal, E.~Earle, W.~Frati, E.~Gaudette,
@@ -80,6 +80,10 @@ J.~Tseng, ``Skyshine classifier,'' {\em SNO+ Internal Document, docDB-5341-v1.}
 E.~Leming, ``{O}xford {LAB} + {PPO} timing and light yield measurements,'' {\em
   SNO+ Internal Document, docDB-6179-v1.}
 
+\bibitem{nndc}
+{\em National Nuclear Data Center}, 2019 (accessed Oct 30, 2019).
+\newblock \url{https://www.nndc.bnl.gov/}.
+
 \bibitem{partialWater}
 A.~Hallin, ``Fitting partial fill data from december 2014,'' {\em SNO+ Internal
   Document, docDB-2888-v3.}
@@ -103,6 +107,31 @@ K.~Singh, ``Multipath fitter processor,'' {\em SNO+ Internal Document,
 \bibitem{jieMPW}
 J.~Hu and J.~Tseng, ``Updates on the multipath water fitter 2018,'' {\em SNO+
   Internal Document, docDB-4936-v2.}
+
+\bibitem{rottele2019tritium}
+C.~R{\"o}ttele, ``Tritium suppression factor of the katrin transport section,''
+  2019.
+
+\bibitem{suekane2015neutrino}
+F.~Suekane, {\em Neutrino oscillations: a practical guide to basics and
+  applications}, vol.~898.
+\newblock Springer, 2015.
+
+\bibitem{pdg2018}
+M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
+  J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, {\em et~al.}, ``Review of
+  particle physics,'' {\em Physical Review D}, vol.~98, no.~3, p.~030001, 2018.
+
+\bibitem{fukugita2013physics}
+M.~Fukugita and T.~Yanagida, {\em Physics of Neutrinos: and Application to
+  Astrophysics}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{aker2019improved}
+M.~Aker, K.~Altenm{\"u}ller, M.~Arenz, M.~Babutzka, J.~Barrett, S.~Bauer,
+  M.~Beck, A.~Beglarian, J.~Behrens, T.~Bergmann, {\em et~al.}, ``Improved
+  upper limit on the neutrino mass from a direct kinematic method by katrin,''
+  {\em Physical review letters}, vol.~123, no.~22, p.~221802, 2019.
 
 \bibitem{leite1996weak}
 J.~Leite-Lopes, ``Weak interaction physics: from its origin to the electroweak
@@ -130,11 +159,6 @@ Y.~Fukuda, T.~Hayakawa, E.~Ichihara, K.~Inoue, K.~Ishihara, H.~Ishino, Y.~Itow,
   T.~Kajita, J.~Kameda, S.~Kasuga, {\em et~al.}, ``Evidence for oscillation of
   atmospheric neutrinos,'' {\em Physical Review Letters}, vol.~81, no.~8,
   p.~1562, 1998.
-
-\bibitem{pdg2018}
-M.~Tanabashi, K.~Hagiwara, K.~Hikasa, K.~Nakamura, Y.~Sumino, F.~Takahashi,
-  J.~Tanaka, K.~Agashe, G.~Aielli, C.~Amsler, {\em et~al.}, ``Review of
-  particle physics,'' {\em Physical Review D}, vol.~98, no.~3, p.~030001, 2018.
 
 \bibitem{wiki_cp}
 Wikipedia, {\em CP violation}, 2020 (accessed Mar 15, 2020).
@@ -199,11 +223,6 @@ A.~Y. Smirnov, ``Solar neutrinos: Oscillations or no-oscillations?,'' {\em
 A.~Y. Smirnov, ``The msw effect and matter effects in neutrino oscillations,''
   {\em Physica Scripta}, vol.~2005, no.~T121, p.~57, 2005.
 
-\bibitem{fukugita2013physics}
-M.~Fukugita and T.~Yanagida, {\em Physics of Neutrinos: and Application to
-  Astrophysics}.
-\newblock Springer Science \& Business Media, 2013.
-
 \bibitem{kimura2002exact}
 K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
   cp violation for neutrino oscillations in matter,'' {\em Physics Letters B},
@@ -240,11 +259,6 @@ A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
 \bibitem{bethe1939energy}
 H.~A. Bethe, ``Energy production in stars,'' {\em Physical Review}, vol.~55,
   no.~5, p.~434, 1939.
-
-\bibitem{suekane2015neutrino}
-F.~Suekane, {\em Neutrino oscillations: a practical guide to basics and
-  applications}, vol.~898.
-\newblock Springer, 2015.
 
 \bibitem{haxton2013solar}
 W.~C. Haxton, R.~Hamish~Robertson, and A.~M. Serenelli, ``Solar neutrinos:
@@ -310,16 +324,6 @@ N.~Aghanim, Y.~Akrami, M.~Ashdown, J.~Aumont, C.~Baccigalupi, M.~Ballardini,
   A.~Banday, R.~Barreiro, N.~Bartolo, S.~Basak, {\em et~al.}, ``Planck 2018
   results-vi. cosmological parameters,'' {\em Astronomy \& Astrophysics},
   vol.~641, p.~A6, 2020.
-
-\bibitem{rottele2019tritium}
-C.~R{\"o}ttele, ``Tritium suppression factor of the katrin transport section,''
-  2019.
-
-\bibitem{aker2019improved}
-M.~Aker, K.~Altenm{\"u}ller, M.~Arenz, M.~Babutzka, J.~Barrett, S.~Bauer,
-  M.~Beck, A.~Beglarian, J.~Behrens, T.~Bergmann, {\em et~al.}, ``Improved
-  upper limit on the neutrino mass from a direct kinematic method by katrin,''
-  {\em Physical review letters}, vol.~123, no.~22, p.~221802, 2019.
 
 \bibitem{povh2008particles}
 B.~Povh, K.~Rith, and F.~Zetsche, {\em Particles and nuclei}, vol.~1.
@@ -411,15 +415,15 @@ J.~Waterfield, {\em Optical calibration system for SNO+ and sensitivity to
   neutrinoless double-beta decay}.
 \newblock PhD thesis, University of Sussex, 2017.
 
-\bibitem{stringer2019sensitivity}
-M.~Stringer, {\em Sensitivity of SNO+ to supernova neutrinos}.
-\newblock PhD thesis, University of Sussex, 2019.
-
 \bibitem{whitepaper}
 S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back, Z.~Barnard,
   N.~Barros, E.~Beier, A.~Bialek, {\em et~al.}, ``Current status and future
   prospects of the sno+,'' {\em Advances in High Energy Physics}, vol.~2016,
   2016.
+
+\bibitem{stringer2019sensitivity}
+M.~Stringer, {\em Sensitivity of SNO+ to supernova neutrinos}.
+\newblock PhD thesis, University of Sussex, 2019.
 
 \bibitem{anderson2019search}
 M.~Anderson, S.~Andringa, E.~Arushanova, S.~Asahi, M.~Askins, D.~Auty, A.~Back,
@@ -529,6 +533,15 @@ Y.~Xing-Chen, Y.~Bo-Xiang, Z.~Xiang, Z.~Li, D.~Ya-Yun, L.~Meng-Chao,
   of light yield dependence on lab liquid scintillator composition,'' {\em
   Chinese Physics C}, vol.~39, no.~9, p.~096003, 2015.
 
+\bibitem{biller2020slow}
+S.~D. Biller, E.~J. Leming, and J.~L. Paton, ``Slow fluors for highly effective
+  separation of cherenkov light in liquid scintillators,'' {\em arXiv preprint
+  arXiv:2001.10825}, 2020.
+
+\bibitem{chicagoTiming}
+A.~LaTorre, ``New measurements for the timing spectrum of electrons and alphas
+  in lab+ppo,'' {\em SNO+ Internal Document, docDB-4081-v1.}
+
 \bibitem{tanner0p5}
 T.~Kaptanoglu, ``Measurements of light yield and timing of 0.5 g/l lab+ppo,''
   {\em SNO+ Internal Document, docDB-5997-v1.}
@@ -536,6 +549,12 @@ T.~Kaptanoglu, ``Measurements of light yield and timing of 0.5 g/l lab+ppo,''
 \bibitem{joshW1}
 J.-S. Wang, ``Bipo analysis using partial fill data,'' {\em SNO+ Internal
   Document, docDB-5950-v3.}
+
+\bibitem{biller2017new}
+S.~Biller, S.~Manecki, S.~collaboration, {\em et~al.}, ``A new technique to
+  load 130te in liquid scintillator for neutrinoless double beta decay
+  experiments,'' in {\em Journal of Physics: Conference Series}, vol.~888,
+  p.~012084, IOP Publishing, 2017.
 
 \bibitem{boger2000sudbury}
 J.~Boger, R.~Hahn, J.~Rowley, A.~Carter, B.~Hollebone, D.~Kessler, I.~Blevis,
@@ -577,10 +596,6 @@ M.~R. Dragowsky, {\em Sudbury Neutrino Observatory energy calibration using
 A.~S. Hamer, {\em Energy calibration of SNO for measurement of the
   charged-current neutrino reaction.}
 \newblock PhD thesis, Queen's University, 2001.
-
-\bibitem{nndc}
-{\em National Nuclear Data Center}, 2019 (accessed Oct 30, 2019).
-\newblock \url{https://www.nndc.bnl.gov/}.
 
 \bibitem{rat}
 {\em RAT Overview}, 2020 (accessed Mar 15, 2020).
@@ -654,15 +669,6 @@ P.~Mekarski, {\em Electron Antineutrinos in the Water Phase of the SNO+
   Experiment}.
 \newblock PhD thesis, University of Alberta, 2018.
 
-\bibitem{biller2020slow}
-S.~D. Biller, E.~J. Leming, and J.~L. Paton, ``Slow fluors for highly effective
-  separation of cherenkov light in liquid scintillators,'' {\em arXiv preprint
-  arXiv:2001.10825}, 2020.
-
-\bibitem{chicagoTiming}
-A.~LaTorre, ``New measurements for the timing spectrum of electrons and alphas
-  in lab+ppo,'' {\em SNO+ Internal Document, docDB-4081-v1.}
-
 \bibitem{modeCut}
 L.~Lebanowski, ``Improved mode cut,'' {\em SNO+ Internal Document,
   docDB-5488-v1.}
@@ -719,12 +725,6 @@ K.~Albertsson, S.~Gleyzer, A.~Hoecker, L.~Moneta, P.~Speckmayer, J.~Stelzer,
 {\em StatPatternRecognition and Machine Learning in HEP}, 2020 (accessed Mar
   30, 2020).
 \newblock \url{http://www.hep.caltech.edu/~narsky/spr.html}.
-
-\bibitem{biller2017new}
-S.~Biller, S.~Manecki, S.~collaboration, {\em et~al.}, ``A new technique to
-  load 130te in liquid scintillator for neutrinoless double beta decay
-  experiments,'' in {\em Journal of Physics: Conference Series}, vol.~888,
-  p.~012084, IOP Publishing, 2017.
 
 \bibitem{bramante2019foraging}
 J.~Bramante, B.~Broerman, J.~Kumar, R.~F. Lang, M.~Pospelov, and N.~Raj,

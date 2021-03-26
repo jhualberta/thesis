@@ -3,8 +3,8 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "w"
-Warning--empty year in snop_nim
+Warning--I didn't find a database entry for "snop_nim"
+Warning--empty year in snop_jinst
 Warning--empty year in matt_deployedsource
 Warning--empty year in n16geom_zach
 Warning--empty year in n16pic
@@ -28,8 +28,10 @@ Warning--empty year in scintillatorPaper
 Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
 Warning--empty year in markchen_bkg
+Warning--empty year in chicagoTiming
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
+Warning--can't use both volume and number fields in biller2017new
 Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
@@ -42,7 +44,6 @@ Warning--empty year in markNeuralNetwork
 Warning--empty year in markNeuralTalk
 Warning--empty year in groupVmeasure
 Warning--empty year in waterunidoc
-Warning--empty year in chicagoTiming
 Warning--empty year in modeCut
 Warning--empty year in energyRSP
 Warning--empty year in partialEnergy
@@ -50,13 +51,12 @@ Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in highlevel
-Warning--can't use both volume and number fields in biller2017new
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
 You've used 176 entries,
             1876 wiz_defined-function locations,
-            1322 strings with 31271 characters,
+            1322 strings with 31280 characters,
 and the built_in function-call counts, 37937 in all, are:
 = -- 3371
 > -- 2096
