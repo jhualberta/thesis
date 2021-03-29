@@ -1,7 +1,7 @@
 %\setlength{\epigraphwidth}{0.5\textwidth}
 %\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 
-The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the data taken during this period is called ``low background dataset''. 
+The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the dataset taken during this period is called ``low background dataset''. 
 
 In this chapter, I applied the MPW reconstruction algorithm mentioned in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
 
@@ -24,8 +24,6 @@ the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 
 \subsection{Instrumental Backgrounds}
-
-
 
 \section{High Level Cuts: Classifiers}
 
@@ -61,482 +59,6 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 \cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
 \]
 \end{itemize}
-
-
-\section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
-During the water phase, an Nitrogen-16 ($^{16}$N) calibration source was deployed for internal detector calibration scans in June and November, 2017 and external detector scans in March, 2018.
-
-The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the RAT water fitter and the MPW. The vertex shifts as well as the uncertainties are evaluated. 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{N16centralDiagram.png}
-	\caption{A cartoon shows the $^{16}$N source.}
-	\label{N16centralDiagram}
-\end{figure}
-
-
-The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=12cm]{sx.pdf}
-	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
-	\label{hsx}
-\end{figure}
-
-A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
-\[
-R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
-\]
-where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
-the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift  (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
-
-For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay2004direct}:
-\[
-N_{R}(x)=\int^{+\infty}_{-\infty} S(x)R(x_{fit}-x)dx.
-\]
-
-Since the $S(x)$ and $N_{R}(x)$ are histograms obtained from the data and MC, we calculate by the bin value $x_i$: 
-\[N_R(x_i)=\sum_{x_i=-\infty}^{+\infty}S(x_i)R(x_{fit}^i-x_i).\].
-
-The $\chi^2$ is calculated by:
-\[
-\chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2,
-\]
-where $N_R^{fit}$ is a trial fit to the $N_R$ by tuning the $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and $\sigma_i$ is taken as the bin width of the histograms.
-
-By minimizing the $\chi^2$, the parameters of the resolution function, $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and a best $N_R^{fit}$ are obtained.
-
-Fig.~\ref{posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions are fitted with $N_R^{fit}$.
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=10cm]{posResol.pdf}
-%	\caption{Distributions of the reconstructed position projected on x axis, obtained from SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
-%	\label{posresol}
-%\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=140mm]{posResol.pdf}\label{posresol}
-	\caption{Position resolutions, compared the data (red) and MC (black). The resolution fit functions are overlaid with histograms.}
-\end{figure}
-
-Table~\ref{table_posresol} summarizes the values of position resolution parameters obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
-\vspace{1mm}
-\begin{table}[ht]
-	\centering
-	\caption{Position resolution parameters for the MP Water Fitter.}
-	\label{table_posresol}
-	\begin{tabular}{ccccc}
-		\toprule
-		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) &  $\tau_P$ (mm)& $\mu_P$ (mm)\\
-		\hline 
-		data& 0.58$\pm$0.04 & 175.8$\pm$3.8 & 288.0$\pm$5.7 & -28.8$\pm$1.0\\	
-		\hline 
-		MC & 0.51$\pm$0.05 & 195.2$\pm$3.3 & 298.4$\pm$6.1 & -10.9$\pm$1.0\\
-		\bottomrule
-	\end{tabular}
-\end{table}
-\vspace{1mm}
-
-%% itr>0.55
-%% data
-
-%% x, y, z
-%-6.604	0.9155	178.3	3.111	311.8	6.309	108.9/95	1.146
-
-%5.248	0.9124	176.9	3.381	305.3	6.577	108.5/95	1.142
-
-%1.024	0.8741	159.3	3.404	293.4	5.719	107.7/95	1.133
-
-\begin{figure}
-	\subfigure[MC.]{\label{fig:biasFom1}\includegraphics[width=8cm]{posBiasVsFOM_mc.png}}
-	\subfigure[Data.]{\label{fig:biasFom2}\includegraphics[width=8cm]{posBiasVsFOM_data.png}}
-	\caption{Fit position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs FOM (scaled LogL) for the $^{16}$N central run-107055.}
-	\label{posBiasVsFOM}
-\end{figure}
-
-
-\begin{figure}
-	\subfigure[$^{16}$N x-scan runs.]{\label{angular:xscan}\includegraphics[width=15cm]{angularResol_xscan.pdf}}
-	\subfigure[$^{16}$N y-scan runs.]{\label{angular:yscan}\includegraphics[width=15cm]{angularResol_yscan.pdf}}
-	\subfigure[$^{16}$N z-scan runs.]{\label{angular:zscan}\includegraphics[width=15cm]{angularResol_zscan.pdf}}
-	\caption{Fit direction resolutions ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs FOM (scaled LogL) for the $^{16}$N central run-107055.}
-	\label{angularResolScan}
-\end{figure}
-
-
-
-% & 0.5141$\pm$0.02612 & 176.7$\pm$3.341 & 306$\pm$8.012 & -6.516$\pm$0.9188 & 68.26/70
-% & 0.5677$\pm$0.03019 & 171.4$\pm$3.968 & 288$\pm$7.559 & 5.235$\pm$0.9145 & 69.1/70
-
-
-Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clean global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
-
-\begin{figure}
-	\centering
-	%\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=65mm]{likelihoodSurface_xy.pdf}}
-	%\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=65mm]{likelihoodSurface_yz.pdf}}
-	%\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=65mm]{likelihoodSurface_xz.pdf}}
-	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}}
-	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}}
-	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}}
-	\caption{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}
-	\label{likelihoodSurface}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=160mm]{logL_xyzt.pdf}
-	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}
-	\label{logLxyz}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
-	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
-	\label{derivative_logLxyz}
-\end{figure}
-
-emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=15cm]{MPW_N16_xscanResol_itrCut.pdf}
-	\caption{X scan.}
-	\label{MPWscanXResol}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=15cm]{MPW_N16_yscanResol_itrCut.pdf}
-	\caption{Y scan.}
-\label{MPWscanYResol}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=15cm]{MPW_N16_zscanResol_itrCut.pdf}
-	\caption{Z scan. The data (black boxes) is compared with MC (red circles).}
-\label{MPWscanZResol}
-\end{figure}
-
-
-%%%%%%%%%%%%% Vertex shift %%%%%%%
-\begin{table}[ht]
-	\centering
-	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
-	\vspace{3mm}
-	\label{vertex shifts}
-	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
-		\toprule
-		axis & linear fit (mm) &   scaling    \\
-		\hline 
-		x scaling & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
-		y scaling  & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
-		z scaling & -0.03\%    & $(1-0.03/100)\cdot z_{MC}$ \\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-
-%%%%%%%%%%%%% Vertex shift %%%%%%%
-\begin{table}[ht]
-	\centering
-	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
-	\vspace{3mm}
-	
-	\label{vertex shifts}
-	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
-		\toprule
-		 & Data &  MC    \\
-		\hline 
-		b (MPW) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
-		$\delta_E$ (MPW) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
-		\hline 
-			b (Rat6.5.5) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
-		$\delta_E$ (Rat6.5.5) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-
-%%%%%%%%%%%%% Vertex shift %%%%%%%
-\begin{table}[ht]
-	\centering
-	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
-	\vspace{3mm}
-	\label{vertex shifts}
-	\begin{tabular*}{50mm}{c@{\extracolsep{\fill}}cc}
-		\toprule
-		axis & Gaussian fit (mm) \\
-		\hline 
-		x shift &  0.42$\pm$4.13\\	
-		y shift  & -1.05$\pm$3.79\\
-		z shift & -0.43$\pm$2.88\\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-
-
-\subsection{Angular Resolution}
-
-
-Here the 'true' direction is defined as the direction pointing from the source positions to the fitted position: $\vec{u}_{true} = \vec{X}_{fit}-\vec{X}_{source}$. The angle $\theta$ is the displacement between the `true' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
-
-An angular resolution function was 
-
-It is defined as a combination of two exponential components:
-\begin{equation}
-P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
-\end{equation}
-where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or ``slopes'' of the two exponential components; the $\alpha_M$ is the fraction between two exponential components.
-events following the exponential with slope $\beta_M$. 
-
-To extract the direction resolutions, a distance cut $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ is applied.
-
-To avoid the effects from the tails, [0.3,1]
-$itr>0.55$ and $-0.12<\beta_{14}<0.95$
-radius cut for the FV: $r<5500$ mm.
-
-
-
-The resolution results are shown in Table.~\ref{angularResolValuesUpdated}.
-\begin{table}[ht]
-	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
-		\toprule
-		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
-		\hline
-		Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
-		Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
-		\hline
-107055 & 3.888$\pm$0.246 & 17.96$\pm$1.10 & 0.550$\pm$0.030 & 80.69/66 & 0.974 & 0.740 & 0.384\\
-107055 & 4.487$\pm$0.223 & 22.23$\pm$1.41 & 0.590$\pm$0.027 & 74.01/66 & 0.962 & 0.759 & 0.450\\		
-		\bottomrule
-	\end{tabular}
-	\label{angularResolValues}
-\end{table}
-
-\begin{table}[ht]
-	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
-		\toprule
-	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
-	\hline
-	MPW data & 4.15$\pm$0.18 & 19.08$\pm$0.94 & 0.58$\pm$0.02 & 77.1/66 & 0.964 & 0.744 & 0.410 \\
-	MPW MC & 4.42$\pm$0.19 & 20.41$\pm$1.01 & 0.56$\pm$0.02 & 83.8/66 & 0.974 & 0.768 & 0.454	 \\	
-\hline
-	Rat data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
-	Rat MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
-		\bottomrule
-	\end{tabular}
-	\label{angularResolValuesUpdated}
-\end{table}
-
-Fig.~\ref{angularResolMPW} shows the fits of the angular distributions after the distance cuts.
-\begin{figure}
-	\centering
-	\includegraphics[width=10cm]{16NangularResol.pdf}
-	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the MPW fitter. These distributions are fitted with the angular resolution functions ranging from 0.3 to 1.}
-	\label{angularResolMPW}
-\end{figure}
-
-To describe the $\cos\theta_e$ distribution, the angles that contain 50\%, 80\%
-and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ can also be used. Their values are solved numerically by the equation \ref{eq:cosTheta_e} below (take $\cos\theta_{0.5}$ as an example):
-
-\begin{equation}\label{eq:cosTheta_e}
-\frac{\int_{\cos\theta_{0.5}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) d\cos\theta_e} = 50\%,
-\end{equation}
-
-where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
-
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{ccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
-		\toprule
-		 parameter & $\mu$ (\%)& $\sigma$ (\%)\\
-		\hline
-	$\Delta(\alpha_M)_{relative}\equiv (\alpha_{M,data}-\alpha_{M,MC})/\alpha_{M,MC}$ & -5.7 &3.4\\
-$\Delta(\beta_M)_{relative}\equiv (\beta_{M,data}-\beta_{M,MC})/\beta_{M,MC}$ 	&-3.8 & 2.3\\
-$\Delta(\beta_S)_{relative}\equiv (\beta_{S,data}-\beta_{S,MC})/\beta_{M,MC}$ 	&-6.9 &3.5\\		
-		\bottomrule
-	\end{tabular}
-	\label{angularSystem}
-\end{table}
-
-$\beta_{14}$ systematic
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=15cm]{beta14_allScans.pdf}
-	\caption{$\beta_{14}$ systematic for various $^{16}$N scans.}
-	\label{beta14_scans}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=16cm]{angularResol_scanXYZ.pdf}
-	\caption{$\Delta\beta_{M}$ (top) and $\Delta\beta_{S}$ (bottom) systematic for various $^{16}$N scans along three axes.}
-	\label{xyzScans}
-\end{figure}
-
-\section{Energy}
-
-The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=10cm]{N16_nhits_107055.png}
-	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
-	\label{N16nhits}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
-	\caption{Energy spectrum, extracted from $10^5$ MC simulation events.}
-	\label{N16nhitsSimu}
-\end{figure}
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}
-	\caption{Reconstructed $^{16}$N energy spectrum for run-106925 ($\vec{X}_{source}=(-186.0,254.0,-4999.899)$ mm).}
-	\label{N16_106925}
-\end{figure}
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=10cm]{N16_reconE_107055.png}
-	\caption{Reconstructed energy spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and +solid lines for data; red for the MPW fitter results and black for the Rat results.}
-	\label{N16energy}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=8cm]{N16_beta14_107055.png}
-	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter processed results and black for the Rat results.}
-	\label{N16beta14}
-\end{figure}
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=8cm]{N16FitMPW_beta14_107055.png}
-	\caption{Comparisons of the $\beta_{14}$ for the data and the MC. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller mean value (0.4157) than the MC (0.4388).}
-	\label{N16beta14MPW}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=8cm]{2dmap_EvsNphoton.png}
-	\caption{Electron energy vs number of Cherenkov photons.}
-	\label{N16energyMap}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\subfigure[MPW data]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_MPW_data_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[MPW MC]{ 
-		\begin{minipage}[b]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[Rat data]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_rat_data_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[Rat MC]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
-		\end{minipage}
-	}
-	\caption{Energy vs $\beta_{14}$ for the data and MC. Both the Rat and the MPW results are shown.}
-	\label{EvsBeta14}
-\end{figure}
-$\sigma = b\sqrt {T_{eff}}$
-
-\begin{equation}
-P(T_{eff})=N\int P_{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma}\exp [-\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma^2}]
-\end{equation}
-
-
-%% external scan
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{N16_external_111230_rhoZ.png}
-	\caption{$^{16}$N external run-111230 with a nominal position at [-5861,-2524,4001] mm; MPW results.}
-	\label{16Nexternal}
-\end{figure}
-
-
-\section{Extracting \texorpdfstring{$\gamma$}{Lg}-rays from Neutron Capture}
-The AmBe calibration source is used for the calibrations of the SNO+ neutron capture process.
-
-
-\section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
-
-solar neutrino candidate events in the open dataset.
-
-\begin{figure}[htbp]
-	\centering
-	\subfigure[Run 100093, GTID 11108354]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{PMTmap_100093.pdf}
-		\end{minipage}
-	}
-	\subfigure[Run 100207, GTID 5079885]{ 
-		\begin{minipage}[b]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{PMTmap_100207.pdf}
-		\end{minipage}
-	}
-	\subfigure[Run 100632, GTID 7882360]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{PMTmap_100632.pdf}
-		\end{minipage}
-	}
-	\subfigure[Run 100663, GTID 15767175]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{PMTmap_100663.pdf}
-		\end{minipage}
-	}
-	\subfigure[Run 100915, GTID 169700]{ 
-	\begin{minipage}[t]{0.4\textwidth}
-		\centering
-		{\includegraphics[width=6cm]{PMTmap_100915.pdf}}
-	\end{minipage}
-    }
-	\subfigure[Legends]{ 
-	\begin{minipage}[b]{0.4\textwidth}
-		\centering
-		{\includegraphics[width=5cm]{solarLegends.png}}
-	\end{minipage}
-    }
-	\caption{Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for
-	the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}
-	\label{openDataSetCandidate}
-\end{figure}
-
-
 
 \subsubsection{Open Dataset Analysis}
 
@@ -601,12 +123,43 @@ The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,al
 
 Boosted Decision Tree (BDT) method is used for the multiple variable analysis (MVA).
 
-Receiver Operating Characteristic (ROC) curve describes
-the signal/background binary classifier system as 
+Receiver Operating Characteristic (ROC) curve describes the signal/background binary classifier system.
 
-from MC simulations for realistic runs
+The MC simulations of the realistic runs (200004 to 207718) were used.
+Different types of MC simulations were merged into a mixed dataset. Table.~\ref{table:mixed_MC} summarizes the types of simulations.
+
+\begin{table}[ht]
+	\centering
+	\caption{Datasets of MC simulations.}
+	\label{table:mixed_MC}
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+		\toprule
+		Simulations & Simulated positions in the detector\\
+		\hline 
+        $^{208}$Tl & inner AV (internal $^{208}$Tl)\\
+        -- & AV \\
+        -- & external water (external $^{208}$Tl)\\
+         $^{214}$Bi & inner AV (internal $^{214}$Bi)\\
+        -- & AV \\
+        -- & external water (external $^{214}$Bi)\\
+        Solar $\nu_e$ & inner AV (internal $\nu_e$)\\
+        -- & AV \\
+        -- & external water (external $\nu_e$)\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
 
 the simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi background events. The total dataset was divided into training and testing sets.
+ tested. 
+
+
+
+
+
+
+
+
 
 with discrimination threshold values. 
 

@@ -3,7 +3,7 @@
 %\epigraph{In all experimental science the techniques for obtaining measurements are almost as important as the measurements themselves.}{--- \textup{J. D. Bernal}, \textit{The Social Function of Science}}
 
 \section{Overview}\label{sect:overview}
-The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$l\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$\cite{snop_jinst}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
+The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$\cite{snop_jinst}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
 
 The SNO+ detector is a refurbishment of the SNO detector. The SNO+ collaboration makes use of the SNO infrastructure and upgraded it to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide buoyancy for the vessel and also to shield radiation backgrounds from the environment, such as the cosmic rays and isotope decays from the rock. 
 
@@ -399,12 +399,12 @@ From this plot, the single p.e. peaks for all the samples as well as the backgro
 
 To quantify the light yield differences between different samples, an analysis method of charge weighted photon number has been applied as the following:
 
-First, from the spectrum, fit the single p.e. peak with an asymmetric Gaussian function, as shown in Fig.~ 19. The mean value of the asymmetric Gaussian represents the ADC channel number corresponding to the single p.e. peak.
+First, from the energy spectrum, the single p.e. peak was fitted with an asymmetric Gaussian function (as $f_{asym}$ in \ref{eq:asyGaus}), as shown in Fig.~\ref{fitSinglePE}. The mean value of the asymmetric Gaussian ($p_0$) represents the ADC channel number corresponding to the single p.e. peak for the weighting. 
 
-$\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma}$,
-$f_{asym}=c\cdot e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\cdot Erfc(\xi)$
-
-$p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$ 
+\begin{equation}\label{eq:asyGaus}
+f_{asym}=c\cdot e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\cdot Erfc(\xi),
+\end{equation}
+where $\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma},p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$.
 
 Then for the multiple p.e. region, weighting (dividing) the counts of the event in each channel with the single p.e. ADC channel number to calculate the total number of the photons.
 
@@ -414,8 +414,6 @@ Then for the multiple p.e. region, weighting (dividing) the counts of the event 
 	\caption{Fit the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak..}
 	\label{fitSinglePE}
 \end{figure}
-
-Fig.~\ref{fitSinglePE} fits the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
 
 To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
 \begin{figure}[htbp]
