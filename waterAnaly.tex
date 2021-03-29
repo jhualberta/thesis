@@ -1,10 +1,11 @@
 %\setlength{\epigraphwidth}{0.5\textwidth}
 %\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 
-The SNO+ water data taking from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the liquid mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top, the data taken during this period is considered as low background data.
+The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the data taken during this period is called ``low background dataset''. 
 
-%The open dataset 100000 to 100399, from 4 to 14 May 2017.
+In this chapter, I applied the MPW reconstruction algorithm mentioned in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
 
+I mainly analyzed the low background dataset. 
 
 \section{Detector Backgrounds}
 
@@ -23,10 +24,6 @@ the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 
 \subsection{Instrumental Backgrounds}
-
-
-
-
 
 
 
@@ -230,16 +227,11 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 \end{figure}
 
 
-
-
-
-
 %%%%%%%%%%%%% Vertex shift %%%%%%%
 \begin{table}[ht]
 	\centering
 	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
 	\vspace{3mm}
-	
 	\label{vertex shifts}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
 		\toprule
@@ -269,15 +261,9 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 		\hline 
 			b (Rat6.5.5) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
 		$\delta_E$ (Rat6.5.5) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
-		
-	
 		\bottomrule
 	\end{tabular*}
 \end{table}
-
-
-
-
 
 
 %%%%%%%%%%%%% Vertex shift %%%%%%%
@@ -296,9 +282,6 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 		\bottomrule
 	\end{tabular*}
 \end{table}
-
-
-
 
 
 
@@ -321,14 +304,6 @@ To extract the direction resolutions, a distance cut $|\vec{X}_{fit}-\vec{X}_{sr
 To avoid the effects from the tails, [0.3,1]
 $itr>0.55$ and $-0.12<\beta_{14}<0.95$
 radius cut for the FV: $r<5500$ mm.
-
-
-
-
-
-
-
-
 
 
 

@@ -108,6 +108,19 @@ K.~Singh, ``Multipath fitter processor,'' {\em SNO+ Internal Document,
 J.~Hu and J.~Tseng, ``Updates on the multipath water fitter 2018,'' {\em SNO+
   Internal Document, docDB-4936-v2.}
 
+\bibitem{leite1996weak}
+J.~Leite-Lopes, ``Weak interaction physics: from its origin to the electroweak
+  model,'' tech. rep., SCAN-9607019, 1996.
+
+\bibitem{bethe1934neutrino}
+H.~Bethe and R.~Peierls, ``The ``neutrino'','' {\em Nature}, vol.~133,
+  no.~3362, pp.~532--532, 1934.
+
+\bibitem{reines1960detection}
+F.~Reines, C.~Cowan~Jr, F.~Harrison, A.~McGuire, and H.~Kruse, ``Detection of
+  the free antineutrino,'' {\em Physical Review}, vol.~117, no.~1, p.~159,
+  1960.
+
 \bibitem{rottele2019tritium}
 C.~R{\"o}ttele, ``Tritium suppression factor of the katrin transport section,''
   2019.
@@ -132,19 +145,6 @@ M.~Aker, K.~Altenm{\"u}ller, M.~Arenz, M.~Babutzka, J.~Barrett, S.~Bauer,
   M.~Beck, A.~Beglarian, J.~Behrens, T.~Bergmann, {\em et~al.}, ``Improved
   upper limit on the neutrino mass from a direct kinematic method by katrin,''
   {\em Physical review letters}, vol.~123, no.~22, p.~221802, 2019.
-
-\bibitem{leite1996weak}
-J.~Leite-Lopes, ``Weak interaction physics: from its origin to the electroweak
-  model,'' tech. rep., SCAN-9607019, 1996.
-
-\bibitem{bethe1934neutrino}
-H.~Bethe and R.~Peierls, ``The ``neutrino'','' {\em Nature}, vol.~133,
-  no.~3362, pp.~532--532, 1934.
-
-\bibitem{reines1960detection}
-F.~Reines, C.~Cowan~Jr, F.~Harrison, A.~McGuire, and H.~Kruse, ``Detection of
-  the free antineutrino,'' {\em Physical Review}, vol.~117, no.~1, p.~159,
-  1960.
 
 \bibitem{goldhaber1958helicity}
 M.~Goldhaber, L.~Grodzins, and A.~Sunyar, ``Helicity of neutrinos,'' {\em
@@ -228,6 +228,10 @@ K.~Kimura, A.~Takamura, and H.~Yokomakura, ``Exact formula of probability and
   cp violation for neutrino oscillations in matter,'' {\em Physics Letters B},
   vol.~537, no.~1-2, pp.~86--94, 2002.
 
+\bibitem{nagashima2014beyond}
+Y.~Nagashima, {\em Beyond the standard model of elementary particle physics}.
+\newblock John Wiley \& Sons, 2014.
+
 \bibitem{bahcall1964solar}
 J.~N. Bahcall, ``Solar neutrinos. i. theoretical,'' {\em Physical Review
   Letters}, vol.~12, no.~11, p.~300, 1964.
@@ -235,22 +239,6 @@ J.~N. Bahcall, ``Solar neutrinos. i. theoretical,'' {\em Physical Review
 \bibitem{davis1964solar}
 R.~Davis~Jr, ``Solar neutrinos. ii. experimental,'' {\em Physical Review
   Letters}, vol.~12, no.~11, p.~303, 1964.
-
-\bibitem{becker1992electron}
-R.~Becker-Szendy, C.~Bratton, D.~Casper, S.~Dye, W.~Gajewski, M.~Goldhaber,
-  T.~Haines, P.~Halverson, D.~Kielczewska, W.~Kropp, {\em et~al.},
-  ``Electron-and muon-neutrino content of the atmospheric flux,'' {\em Physical
-  Review D}, vol.~46, no.~9, p.~3720, 1992.
-
-\bibitem{allison1997measurement}
-W.~Allison, G.~Alner, D.~Ayres, W.~Barrett, C.~Bode, P.~Border, C.~Brooks,
-  J.~Cobb, D.~Cockerill, R.~Cotton, {\em et~al.}, ``Measurement of the
-  atmospheric neutrino flavour composition in soudan 2,'' {\em Physics Letters
-  B}, vol.~391, no.~3-4, pp.~491--500, 1997.
-
-\bibitem{kajita2012atmospheric}
-T.~Kajita, ``Atmospheric neutrinos,'' {\em Advances in High Energy Physics},
-  vol.~2012, 2012.
 
 \bibitem{giaz2018status}
 A.~Giaz, ``Status and perspectives of the {JUNO} experiment,'' {\em arXiv
@@ -587,6 +575,11 @@ G.~O. Gann, ``Dealing with time in rat,'' {\em SNO+ Internal Document,
 J.~M. Walker, {\em Study of Invisible Mode Nucleon Decay in the SNO+ Detector}.
 \newblock PhD thesis, University of Liverpool, 2016.
 
+\bibitem{singh2020underwater}
+K.~Singh, P.~Gorel, A.~Hallin, C.~Krauss, and Z.~Petriw, ``Underwater
+  photometry system of the sno+ experiment,'' in {\em Journal of Physics:
+  Conference Series}, vol.~1342, p.~012130, IOP Publishing, 2020.
+
 \bibitem{dragowsky1999sudbury}
 M.~R. Dragowsky, {\em Sudbury Neutrino Observatory energy calibration using
   gamma-ray sources}.
@@ -731,6 +724,22 @@ J.~Bramante, B.~Broerman, J.~Kumar, R.~F. Lang, M.~Pospelov, and N.~Raj,
   ``Foraging for dark matter in large volume liquid scintillator neutrino
   detectors with multiscatter events,'' {\em Physical Review D}, vol.~99,
   no.~8, p.~083010, 2019.
+
+\bibitem{becker1992electron}
+R.~Becker-Szendy, C.~Bratton, D.~Casper, S.~Dye, W.~Gajewski, M.~Goldhaber,
+  T.~Haines, P.~Halverson, D.~Kielczewska, W.~Kropp, {\em et~al.},
+  ``Electron-and muon-neutrino content of the atmospheric flux,'' {\em Physical
+  Review D}, vol.~46, no.~9, p.~3720, 1992.
+
+\bibitem{allison1997measurement}
+W.~Allison, G.~Alner, D.~Ayres, W.~Barrett, C.~Bode, P.~Border, C.~Brooks,
+  J.~Cobb, D.~Cockerill, R.~Cotton, {\em et~al.}, ``Measurement of the
+  atmospheric neutrino flavour composition in soudan 2,'' {\em Physics Letters
+  B}, vol.~391, no.~3-4, pp.~491--500, 1997.
+
+\bibitem{kajita2012atmospheric}
+T.~Kajita, ``Atmospheric neutrinos,'' {\em Advances in High Energy Physics},
+  vol.~2012, 2012.
 
 \bibitem{chen1985direct}
 H.~H. Chen, ``Direct approach to resolve the solar-neutrino problem,'' {\em

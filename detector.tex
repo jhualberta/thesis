@@ -408,16 +408,28 @@ $p_0=\mu,p_1=\sigma,p_2=\alpha, p_3=c$
 
 Then for the multiple p.e. region, weighting (dividing) the counts of the event in each channel with the single p.e. ADC channel number to calculate the total number of the photons.
 
-Fig.~ 19. fits the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=6cm]{fitSinglePE.png}
+	\caption{Fit the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak..}
+	\label{fitSinglePE}
+\end{figure}
+
+Fig.~\ref{fitSinglePE} fits the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.
 
 To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=6cm]{TeLS_2DboxCut.png}
+	\caption{Two dimensional spectrum of LABPPO sample with coincidence cut. A box cut is defined for multiple PE counting.}
+	\label{2DboxCut}
+\end{figure}
 
-Fig.~\ref{2dplot} 2D LABPPO spectrum with coincidence cut. A box cut is defined for multiple PE counting. 
+Fig.~\ref{2DboxCut} Two dimensional spectrum of LABPPO with coincidence cut. A box cut is defined for multiple PE counting. 
 
 Once the total number of the photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
 
 \subsubsection{Results}
-
 \begin{table}[ht]
 	\centering
 	\caption{\label{lightyield1} Number of photons calculated by Charge weighted photon number method.}
@@ -436,7 +448,6 @@ Once the total number of the photons for a certain sample is counted, we can cal
 Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
 
 Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In [cite billerTe],  a relative light yield of ~0.65 was reported.
-
 
 %[markchen] Shimizu, Itaru, and Mark Chen. "Double beta decay experiments with loaded liquid scintillator." Frontiers in Physics 7 (2019): 33.
 %
@@ -528,23 +539,21 @@ As a summary, the SNO+ electronic system can measure signals with a nanosecond-l
 \section{Calibration}\label{sect:calibr}
 Calibration sources with known physics parameters help to understand the detector response to the events and to make accurate measurements.
 
-Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the in-situ optical properties of the detector media and to calibrate the PMTs; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. Various types of radioactive sources producing different types of particles (($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
+Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMTs; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. Various types of radioactive sources producing different types of particles (($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
 
 All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
 
 The deployment of calibration sources at different positions can help to understand the asymmetries in the detector responses. In geometry, the detector is not perfect symmetric due to the presence of the AV neck, ropes, gaps between the PMTs in the PSUP and differences    
 
 through a source manipulator system (SMS)
-
 umbilical vertical and side ropes
-
 
 See Fig.~\ref{sms}.
 reduce the radio contamination in the detector
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{SMS.png}
+	\includegraphics[width=8cm]{SMS.png}
 	\caption{The SNO+ Source Manipulator System, taken from \cite{snop_jinst}.}
 	\label{sms}
 \end{figure}
@@ -552,10 +561,10 @@ reduce the radio contamination in the detector
 In addition, to measure the position of the calibration source deployed in the detector, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs and then triangulate the source location. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
 
 \subsection{Optical Calibration Sources}
-The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded Light-emitting diode (LED)/Laser Light Injection Entity (ELLIE).
+The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The optical sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded Light-emitting diode (LED)/Laser Light Injection Entity (ELLIE).
 
 \subsubsection{Laserball}
-optical source, named as laserball, is a light diffusing sphere, which nitrogen dye laser glass bubbles.
+The laserball injects lights from a nitrogen dye laser to a glass bubble.
 
 fast pulsing LED or lasers
 measures optical properties, such as scattering, attenuation of the detector materials, the response of PMTs, 
@@ -567,19 +576,10 @@ Optical calibration {\emph {in-situ}}
 various dyes provide different peak wavelengths of the laser light, mainly at 365, 385, 420, 450 and 500 nm.
 
 \subsubsection{ELLIE}
-Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which 
-
-is used to monitor the relative changes in attenuation lengths of detection media.
-
-of the liquid scintillator
-
-\cite{jones2011background,walker2016study,dunger2018topological,snop_jinst}.
+Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which is used to monitor the relative changes in attenuation lengths of detection media\cite{jones2011background,walker2016study,dunger2018topological,snop_jinst}.
 
 \subsection{Radioactive Calibration Sources}
-
-
-
-In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co will be implemented.
+In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co are planned to be implemented.
 
 $^{46}$Sc source
 
@@ -588,16 +588,14 @@ $^{46}$Sc source
 The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}, 
 
 A deuterium-tritium (DT) generator in SNOLAB can produce neutrons through: $D+T\to n+^{4}$He, 
-flow $CO_2$ gas stream through pipe lines
-the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$,
+flow $CO_2$ gas stream through pipe lines the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$. 
 
 The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$.
 It has a 66.2\% chance to emit an electron with end-point energy of 4.29 MeV and a 22.8\% chance to 
-10.42 MeV\cite{nndc}.
+10.42 MeV. 6.13 MeV $\gamma$-rays.\cite{nndc}.
 
 A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
-6.13 MeV $\gamma$ rays.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{n16_decay.png}
@@ -605,16 +603,12 @@ A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 	\label{n16decay}
 \end{figure}
 
-
 Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside\cite{dragowsky1999sudbury}.
 
 [needs to fill in details]
 %to ensure a high fraction of the $\gamma$-rays 
 
-
 %lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
-
-
 %tagged by a small PMT inside
 
 %A polyethelene bumper cone is at the bottom of the source.
@@ -634,12 +628,7 @@ Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber
 A detailed study of using the $^{16}$N source for reconstruction will be shown in \ref{sect:n16_water}.
 
 
-\subsection{The Americium Beryllium (AmBe) Calibration Source}
-
-
-
-
-
+%\subsection{The Americium Beryllium (AmBe) Calibration Source}
 
 \section{Monte Carlo Simulation and the RAT Software}
 The SNO+ collaboration has developed a software framework, called the Reactor Analysis

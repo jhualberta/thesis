@@ -38,6 +38,7 @@ Warning--empty year in joshTrigger
 Warning--empty author in operator
 Warning--empty year in operator
 Warning--empty year in rattime
+Warning--can't use both volume and number fields in singh2020underwater
 Warning--empty author in ratManual
 Warning--empty journal in ratManual
 Warning--empty year in markNeuralNetwork
@@ -54,45 +55,45 @@ Warning--empty year in highlevel
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 176 entries,
+You've used 178 entries,
             1876 wiz_defined-function locations,
-            1322 strings with 31280 characters,
-and the built_in function-call counts, 37937 in all, are:
-= -- 3371
-> -- 2096
+            1330 strings with 31544 characters,
+and the built_in function-call counts, 38443 in all, are:
+= -- 3418
+> -- 2117
 < -- 0
-+ -- 788
-- -- 612
-* -- 2647
-:= -- 5840
-add.period$ -- 231
-call.type$ -- 176
-change.case$ -- 125
++ -- 796
+- -- 618
+* -- 2677
+:= -- 5906
+add.period$ -- 234
+call.type$ -- 178
+change.case$ -- 126
 chr.to.int$ -- 0
-cite$ -- 226
-duplicate$ -- 2057
-empty$ -- 3454
-format.name$ -- 612
-if$ -- 9011
+cite$ -- 229
+duplicate$ -- 2090
+empty$ -- 3505
+format.name$ -- 618
+if$ -- 9140
 int.to.chr$ -- 0
-int.to.str$ -- 176
-missing$ -- 175
-newline$ -- 587
-num.names$ -- 168
-pop$ -- 620
+int.to.str$ -- 178
+missing$ -- 178
+newline$ -- 594
+num.names$ -- 170
+pop$ -- 631
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1091
+skip$ -- 1113
 stack$ -- 0
-substring$ -- 1032
-swap$ -- 714
+substring$ -- 1044
+swap$ -- 729
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 50
-while$ -- 273
-width$ -- 179
-write$ -- 1625
-(There were 51 warnings)
+warning$ -- 51
+while$ -- 276
+width$ -- 181
+write$ -- 1645
+(There were 52 warnings)
