@@ -3,9 +3,28 @@
 
 The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the dataset taken during this period is called ``low background dataset''. 
 
-In this chapter, I applied the MPW reconstruction algorithm mentioned in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
+In this chapter, I applied the MPW reconstruction algorithm mentioned in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run MC simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
 
 I mainly analyzed the low background dataset. 
+
+extract the $^8$B solar neutrino flux and interaction rate
+
+
+to search for these events
+then convert into the interaction rate as well as the $^8$B solar neutrino flux.
+
+
+
+
+Monte Carlo simulations were produced by the RAT software, which was described in \ref{sect:rat}.
+
+compare to SuperK results.
+
+
+data cleaning and analysis cuts 
+
+The analysis cuts depend on the reconstructed results.
+
 
 \section{Detector Backgrounds}
 
@@ -25,16 +44,26 @@ the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 \subsection{Instrumental Backgrounds}
 
+
+
+
+
 \section{High Level Cuts: Classifiers}
 
-A set of classifiers have been developed since the SNO analysis and been optimized for the SNO+ data \cite{highlevel}.
+A set of classifiers were developed by SNO analysis and been optimized for the SNO+ water analysis\cite{highlevel}.
 
+valid reconstruction
+
+
+These classifiers utilize the reconstructed quantities
 
 \begin{itemize}
 
 \item[$\bullet$] In time ratio (ITR) classifier
 
-This classifier calculates the ratio of the number of hits in an optimized prompt time window ([-2.5,5.0]~ns for the water phase) to the total number of hits.
+For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, it checked 
+
+[-2.5,5.0]~ns (for the water phase) to the total number of hits.
 
 
 \item[$\bullet$] $\beta_{14}$ isotropy classifier
@@ -44,6 +73,7 @@ This classifier uses Legendre polynomials to return the	first ($\beta_1$) and th
 \beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
 \]
 and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
+
 
 The	combination	of these two polynomials returned by the classifier	was	
 practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
@@ -59,6 +89,57 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 \cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
 \]
 \end{itemize}
+
+The output values were used for distinguishing the signal from backgrounds.
+
+
+\section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
+
+solar neutrino candidate events in the open dataset.
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Run 100093, GTID 11108354]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100093.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100207, GTID 5079885]{ 
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100207.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100632, GTID 7882360]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100632.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100663, GTID 15767175]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{PMTmap_100663.pdf}
+		\end{minipage}
+	}
+	\subfigure[Run 100915, GTID 169700]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			{\includegraphics[width=6cm]{PMTmap_100915.pdf}}
+		\end{minipage}
+	}
+	\subfigure[Legends]{ 
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			{\includegraphics[width=5cm]{solarLegends.png}}
+		\end{minipage}
+	}
+	\caption{Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for
+		the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}
+	\label{openDataSetCandidate}
+\end{figure}
+
 
 \subsubsection{Open Dataset Analysis}
 
@@ -126,22 +207,24 @@ Boosted Decision Tree (BDT) method is used for the multiple variable analysis (M
 Receiver Operating Characteristic (ROC) curve describes the signal/background binary classifier system.
 
 The MC simulations of the realistic runs (200004 to 207718) were used.
-Different types of MC simulations were merged into a mixed dataset. Table.~\ref{table:mixed_MC} summarizes the types of simulations.
-
+Different types of the simulations were merged into a mixed dataset. The simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi and $^{208}$Tl background events. The total dataset was divided into training and testing sets. Table.~\ref{table:mixed_MC} summarizes the types of simulations. 
+%with discrimination threshold values. 
 \begin{table}[ht]
 	\centering
 	\caption{Datasets of MC simulations.}
 	\label{table:mixed_MC}
-	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccccccc}
 		\toprule
 		Simulations & Simulated positions in the detector\\
 		\hline 
         $^{208}$Tl & inner AV (internal $^{208}$Tl)\\
         -- & AV \\
         -- & external water (external $^{208}$Tl)\\
+         \midrule
          $^{214}$Bi & inner AV (internal $^{214}$Bi)\\
         -- & AV \\
         -- & external water (external $^{214}$Bi)\\
+        \midrule
         Solar $\nu_e$ & inner AV (internal $\nu_e$)\\
         -- & AV \\
         -- & external water (external $\nu_e$)\\
@@ -149,34 +232,21 @@ Different types of MC simulations were merged into a mixed dataset. Table.~\ref{
 	\end{tabular*}
 \end{table}
 
-
-the simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi background events. The total dataset was divided into training and testing sets.
- tested. 
-
-
-
-
-
-
-
-
-
-with discrimination threshold values. 
+Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated interal events.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{TMVA_bkgs_1.png}
+	\caption{Energy spectrum of simulated events.}
+	\label{TMVA_bkgs_1}
+\end{figure}
 
 Area Under Curve (AUC)% 0.92
 %energy cuts combining with NHit cuts
 
-
 %6 variables used as inputs
-
 %itr, $\theta_{ij}$, $\beta_{14}$, $NHits$, energy and $\hat u \cdot \hat R$.
 
-MC simulations 
-
-solar $\nu_e$ 
-and $^{214}$Bi　backgrounds
-
-The distribution of $\cos\theta_{sun}$
+The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. 
 
 \begin{figure}[!htb]
 	\centering
@@ -185,12 +255,48 @@ The distribution of $\cos\theta_{sun}$
 	\label{itrCmp}
 \end{figure}
 
-
-
-
 Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
 
-
 \subsection{Likelihood Fits for Solar Neutrino Candidate Events}
+The optimized cuts obtained from the TMVA analysis from the previous section were applied on the dataset. 
 
+After the event selections, a distribution of $\cos\theta_{sun}$ extracted from the solar $\nu_e$ candidate events was obtained. 
+
+\subsubsection{Maximum Likelihood Fit}
+A maximum likelihood method was applied on the distribution to extract the number of the solar $\nu_e$ events ($N_{sig}$) as well as the number of the background events ($N_{bkg}$).
+
+The values of $\cos\theta_{sun}$ from the selected events were filled into a histogram divided into bins.
+For each bin, the observed event number ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The $n_{obs}$ in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg}\cdot P_{bkg}+N_{sig}\cdot P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distribution of backgrounds and solar $\nu_e$ events respectively.
+
+Uniform distributions for the backgrounds were assumed, i.e., the $\cos\theta_{sun}$ distributions of background events were flat. In the other hand, the $\cos\theta_{sun}$ distribution of solar $\nu_e$ was extracted from the realistic simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{solarPDF.png}
+	\caption{The $\cos\theta_{sun}$ distribution of solar $\nu_e$ extracted from the simulations, which was used as a pdf function.}
+	\label{solarPDF}
+\end{figure}
+
+Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as fit parameters, the maximum likelihood function was built as:
+\begin{equation}\label{eq:solar_poissonFit}
+-\ln\mathcal L(N_{signal},N_{bkg}|n_{obs})
+=-\sum_i\ln(Poisson(n^i_{obs}, N_{bkg}P^i_{bkg}+N_{sig}P^i_{ES}(E^i))),
+\end{equation}
+
+By fitting the \ref{eq:solar_poissonFit} to the data, $N_{bkg}$ and $N_{sig}$ were obtained.
+Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ events is $N_{sig} = 67.1\pm9.2$, which is equivalent to a rate of $1.04\pm 0.14~event/(day\cdot kiloton)$; while the fitted number of background events is $N_{sig} = 3.4\pm0.91$, which is equivalent to a rate of $0.05\pm 0.01 event/(day\cdot kiloton)$.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{solarFits1.png}
+	\caption{Fitted results for the $N_{bkg}$ and $N_{sig}$ via the maximum likelihood method.}
+	\label{solarFits1}
+\end{figure}
+
+2D fits
+
+
+
+\subsubsection{Systematics Evaluation}
+The systematics of position, direction and energy reconstruction were obtained from the Chapter 5.
 

@@ -3,7 +3,7 @@
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Contents}{v}{chapter*.2}
 \contentsline {chapter}{List of Figures}{ix}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xvii}{chapter*.4}
+\contentsline {chapter}{List of Tables}{xvi}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Basic properties of Neutrinos}{5}{section.2.1}
@@ -81,21 +81,20 @@
 \contentsline {subsection}{\numberline {5.5.4}$^{16}$N Calibration in the Partial-fill Phase}{121}{subsection.5.5.4}
 \contentsline {subsection}{\numberline {5.5.5}Extracting the Cherenkov Signals in Partial-fill Phase}{122}{subsection.5.5.5}
 \contentsline {chapter}{\numberline {6}SNO+ Water Phase Analysis}{126}{chapter.6}
-\contentsline {section}{\numberline {6.1}Detector Backgrounds}{126}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{126}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.1}Detector Backgrounds}{127}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{127}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Instrumental Backgrounds}{127}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}High Level Cuts: Classifiers}{127}{section.6.2}
 \contentsline {subsubsection}{Open Dataset Analysis}{128}{section*.22}
 \contentsline {subsection}{\numberline {6.2.1}TMVA Analysis}{129}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Likelihood Fits for Solar Neutrino Candidate Events}{129}{subsection.6.2.2}
-\contentsline {chapter}{\numberline {7}Towards the SNO+ Future Phases}{131}{chapter.7}
-\contentsline {section}{\numberline {7.1}Towards the Te-loaded Phase}{131}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Muon Induced Backgrounds in the Te-loaded Phase}{131}{subsection.7.1.1}
-\contentsline {chapter}{\numberline {8}Conclusions}{136}{chapter.8}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{137}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{137}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{137}{section.A.2}
-\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{140}{section.A.3}
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{143}{appendix.B}
-\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{143}{section.B.1}
-\contentsline {chapter}{References}{147}{appendix*.23}
+\contentsline {subsection}{\numberline {6.2.2}Likelihood Fits for Solar Neutrino Candidate Events}{130}{subsection.6.2.2}
+\contentsline {subsubsection}{Maximum Likelihood Fit}{130}{section*.23}
+\contentsline {subsubsection}{Systematics Evaluation}{132}{section*.24}
+\contentsline {chapter}{\numberline {7}Conclusions}{133}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{134}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{134}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{134}{section.A.2}
+\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{137}{section.A.3}
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{140}{appendix.B}
+\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{140}{section.B.1}
+\contentsline {chapter}{References}{144}{appendix*.25}

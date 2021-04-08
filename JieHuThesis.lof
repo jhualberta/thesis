@@ -132,16 +132,12 @@
 \contentsline {figure}{\numberline {5.36}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{125}{figure.5.36}
 \contentsline {figure}{\numberline {5.37}{\ignorespaces Simulated main track of 7.1 MeV $\gamma $ for one event from $\isotope [16]{N}$ source in the external water during the partial-fill phase.}}{125}{figure.5.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between solar $\nu _e$ and external solar $\nu _e$; MPW results.}}{130}{figure.6.1}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{133}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{133}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ Te-loaded phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{134}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Energy spectrum of cosmic muon induced $^{11}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{134}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Energy spectrum of cosmic muon induced $^{10}$C backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{134}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Energy spectrum of cosmic muon induced $^{6}$He backgrounds in SNO+ solar phase for one year duration. Left: Monte Carlo energy distributions. Right: Reconstructed energy distributions.}}{135}{figure.7.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Energy spectrum of simulated events.}}{130}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Comparison between solar $\nu _e$ and external solar $\nu _e$; MPW results.}}{131}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces The $\qopname \relax o{cos}\theta _{sun}$ distribution of solar $\nu _e$ extracted from the simulations, which was used as a pdf function.}}{132}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Fitted results for the $N_{bkg}$ and $N_{sig}$ via the maximum likelihood method.}}{132}{figure.6.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{141}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{142}{figure.A.2}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{138}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{139}{figure.A.2}
 \addvspace {10\p@ }
