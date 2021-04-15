@@ -612,10 +612,6 @@ detailed detector effects are taken into account.
 
 the asymmetric geometry of the detector, for example the neck cylinder on the top of the AV sphere; the actual number of online PMTs in a realistic physics run.
 
-
-
-
-
 \isotope[16]{N} calibration scans at certain detector points.
 
 Energy lookup table built from the simulation data set.
@@ -625,6 +621,39 @@ Energy lookup table built from the simulation data set.
 energy look up\cite{energyRSP}.
 
 (energyRSP)
+
+
+\subsection{Figure of Merit}\label{sect:energy_fom}
+Three figure of merit quantities for the energy fitter were developed by the SNO+ collaboration in order to identify the poor reconstructed results which have large biases to the true energy values, especially for the low energy regions around 2.2 MeV, which helps the analysis of neutron capture\cite{waterunidoc}.
+
+%Water Reconstruction Errors & FOMs 6190
+\begin{itemize}
+	
+	\item[$\bullet$]$U$-test ($U_{test}$):
+	A Mann-Whitney quantity uses the channel hit probabilities by EneryRSP which are ordered and ranked. The rank of the channels with hits are summed.%cite logan docDB 6190	
+		\begin{equation}
+		U_{test}\equiv \frac{S-N(N+1)/2}{N(N_{active}-N)},
+		\end{equation}
+	where $S\equiv \sum_{i}^N \mathrm{rank}_i$. 
+	
+	\item[$\bullet$] $G$-test ($G_{test}$):
+	A quantity uses the hit probabilities by EnergyRSP ($E_i$) which are normalized to the number of observed hits ($N$) %cite logan docDB 6190	
+	
+	\begin{equation}
+	G_{test}\equiv \frac{1}{N}\sum_{i=1}^N \log(\frac{1}{E_i}),
+	\end{equation}
+	
+	\item[$\bullet$] $Z$-factor ($Z_{factor}$):
+	A quantity uses the medians and median absolute deviations
+of hit probabilities by EnergyRSP
+	
+	\begin{equation}
+     Z'\equiv 1-\frac{3(\sigma_p+\sigma_n)}{\mu_p-\mu_n},
+    \end{equation}
+
+\end{itemize}
+
+
 \subsection{Energy Reconstruction in Partial-fill Phase}
 Up till this thesis writing, there is no proper energy fitter for the partial-fill phase works. I attempted two methods for the energy reconstruction in the partial-fill phase: the NHit scale method and the NHit ratio method. Both of them are based on the simulations. These two methods need more effects to be improved.
 \subsubsection{NHit Scale}

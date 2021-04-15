@@ -1,8 +1,8 @@
 %\setlength{\epigraphwidth}{0.5\textwidth}
 %\epigraph{There is an art in the contemplation of water. It is necessary to look at it as foaming in waves.}{--- \textup{Mencius}, \textit{\\translated by James Legge}}
 
-The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the dataset taken during this period is called ``low background dataset''. 
-
+The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the dataset taken during this period is called ``low background dataset''. In this study, 4838 runs of data were used, which summed up a total live time of 190.31 days after the data cleaning process.
+ 
 In this chapter, I applied the MPW reconstruction algorithm mentioned in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run MC simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
 
 I mainly analyzed the low background dataset. 
@@ -77,7 +77,7 @@ and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
 
 The	combination	of these two polynomials returned by the classifier	was	
 practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
-as	this gives	something that looks kinda gaussian-like	for	Cherenkov	events.	
+as this gives gaussian-like	distribution pattern for Cherenkov events.	
 Essentially	any	deviation from zero suggests some polarity (i.e. the event is not isotropic).	
 
 
@@ -88,7 +88,30 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 \[
 \cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
 \]
+
+
+\item[$\bullet$] Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
+\begin{equation}\label{kldiv}
+KLdiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
+\end{equation}
+
+where $p(x_i)$ is the histogramme distribution of $(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|\cdot\vec{u}_{fit}$ 
+
+
+
+with a time residual window cut $[-5,1]~ns$.
+
+
+
+
+
+
+
 \end{itemize}
+
+
+
+
 
 The output values were used for distinguishing the signal from backgrounds.
 
@@ -199,16 +222,9 @@ $\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, wh
 
 
 \subsection{TMVA Analysis}
+The MC simulations of the realistic runs (200004 to 203602) were used. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days. for testing and training the TMVA methods.
 
-The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,albertsson2007tmva}
-
-Boosted Decision Tree (BDT) method is used for the multiple variable analysis (MVA).
-
-Receiver Operating Characteristic (ROC) curve describes the signal/background binary classifier system.
-
-The MC simulations of the realistic runs (200004 to 207718) were used.
-Different types of the simulations were merged into a mixed dataset. The simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi and $^{208}$Tl background events. The total dataset was divided into training and testing sets. Table.~\ref{table:mixed_MC} summarizes the types of simulations. 
-%with discrimination threshold values. 
+Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
 	\centering
 	\caption{Datasets of MC simulations.}
@@ -217,34 +233,88 @@ Different types of the simulations were merged into a mixed dataset. The simulat
 		\toprule
 		Simulations & Simulated positions in the detector\\
 		\hline 
-        $^{208}$Tl & inner AV (internal $^{208}$Tl)\\
-        -- & AV \\
-        -- & external water (external $^{208}$Tl)\\
-         \midrule
-         $^{214}$Bi & inner AV (internal $^{214}$Bi)\\
-        -- & AV \\
-        -- & external water (external $^{214}$Bi)\\
-        \midrule
-        Solar $\nu_e$ & inner AV (internal $\nu_e$)\\
-        -- & AV \\
-        -- & external water (external $\nu_e$)\\
+		$^{208}$Tl & inner AV (internal $^{208}$Tl)\\
+		-- & AV \\
+		-- & external water (external $^{208}$Tl)\\
+		\midrule
+		$^{214}$Bi & inner AV (internal $^{214}$Bi)\\
+		-- & AV \\
+		-- & external water (external $^{214}$Bi)\\
+		\midrule
+		Solar $\nu_e$ & inner AV (internal $\nu_e$)\\
+		-- & AV \\
+		-- & external water (external $\nu_e$)\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated interal events.
+Different types of the simulations were merged into a mixed dataset. The simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi and $^{208}$Tl background events. The total dataset was divided into training and testing sets. 
+
+Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events with their fitted positions inside the 5.5-m fiducial volume, i.e., with a cut of $R'_{fit}<5.5~m$, where $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ in the AV coordinate, $R'_{fit}=\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}$. The 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. 
+
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{TMVA_bkgs_1.png}
-	\caption{Energy spectrum of simulated events.}
+	\caption{Energy spectrum of the simulated events for $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu_e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}
 	\label{TMVA_bkgs_1}
 \end{figure}
 
-Area Under Curve (AUC)% 0.92
-%energy cuts combining with NHit cuts
+The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,albertsson2007tmva}
+
+Cuts were applied: $NHits>20$, $4<E_{fit}<15~MeV$, $R_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$.
+
+
+
+In this sub-dataset, runs from 201700 to 202516 were taken as training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set. Once the weights of the parameters were tuned, they were put into the actual data.
+
+The Fisher discriminator (Fisher), the Likelihood, the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short) methods implemented in the TMVA package were used\cite{albertsson2007tmva}.
+
+
+The MLP method gave the best results, while it was the most CPU consuming one (about two times of the Fisher method).
+
+9 parameters were used as inputs: $ITR$, $\beta_{14}$, $NHits$, $E_{fit}$, $DL_{}$ and $\hat u \cdot \hat R$.
+
+
+
+ for the multiple variable analysis (MVA).
+
+A Receiver Operating Characteristic (ROC) curve is usually used to test the performance of machine learning classifier. Fig.~\ref{fisher_auc} shows the 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{fisher_auc.pdf}
+	\caption{ROC curve of Fisher discriminant.}
+	\label{fisher_auc}
+\end{figure}
+
+\begin{table}[ht]
+	\centering
+	\caption{Testing results from different TMVA methods.}
+	\label{table:tmvaMethod}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+		\toprule
+		Method & AUC &CPU time (sec) \\
+		\hline 
+		\multicolumn{3}{|l|}{Energy [4,15] MeV}
+		\midrule
+		Fisher &  & 0.2\\
+		Likelihood &   &0.2\\
+		BDT & & \\
+		BDT-B& & \\\
+		MLP & & 767 \\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+A quantity called Area Under the Curve (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}. 
+
+
+ROC curve 0.915
+
+
+%energy cuts, ts combining with NHit cuts
 
 %6 variables used as inputs
-%itr, $\theta_{ij}$, $\beta_{14}$, $NHits$, energy and $\hat u \cdot \hat R$.
+
 
 The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. 
 
@@ -268,7 +338,7 @@ A maximum likelihood method was applied on the distribution to extract the numbe
 The values of $\cos\theta_{sun}$ from the selected events were filled into a histogram divided into bins.
 For each bin, the observed event number ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The $n_{obs}$ in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg}\cdot P_{bkg}+N_{sig}\cdot P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distribution of backgrounds and solar $\nu_e$ events respectively.
 
-Uniform distributions for the backgrounds were assumed, i.e., the $\cos\theta_{sun}$ distributions of background events were flat. In the other hand, the $\cos\theta_{sun}$ distribution of solar $\nu_e$ was extracted from the realistic simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
+For the background events, a uniform distribution of $\cos\theta_{sun}$ was assumed. On the other hand, the $\cos\theta_{sun}$ distribution of solar $\nu_e$ was extracted from the realistic simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
 
 \begin{figure}[!htb]
 	\centering
