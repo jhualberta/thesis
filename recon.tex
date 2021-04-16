@@ -16,13 +16,7 @@ The energy of an event is mainly determined by the number of the triggered PMTs 
 
 Multi-site or multi-vertex reconstruction algorithm is being developed.
 
-In this chapter, we do not consider the case of multi-vertex.
-
-
-
-
-Muon tracking
-
+In this chapter, I do not consider the case of multi-vertex. Also, the Muon tracking 
 
 The huge amount of data provided by particle detectors make the field of experimental particle physics an ideal place for implementing machine learning. The machine learning algorithms, such as artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. This algorithm trains the neural network from calibration data to find the position of an event.
 
@@ -40,7 +34,7 @@ a radius.
 \section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
 A Multi-path (MP) reconstruction framework was developed by the University of Alberta group as an additional vertex reconstruction algorithm for SNO+.
 
-In this framework, the fitter is able to be adapted for various SNO+ physics phases, including the water phase, the conceptual wavelength shifter (WLS) phase, the partial-fill phase and the scintillator phase (with and without loading tellurium). In the SNO+ water phase, the cavity and the AV are both filled with ultra-pure water. This is a relatively simple geometry since everything inside the PSUP can be simplified as water. Therefore, we start with the MP water fitter (the MPW fitter) to explain the reconstruction concepts.
+In this framework, the fitter is able to be adapted for various SNO+ physics phases, including the water phase, the conceptual wavelength shifter (WLS) phase, the partial-fill phase and the scintillator phase (with and without loading tellurium). In the SNO+ water phase, the cavity and the AV are both filled with ultra-pure water. This is a relatively simple geometry since everything inside the PSUP can be simplified as water. Therefore, I started with the MP water fitter (the MPW fitter) to explain the reconstruction concepts.
 
 The MPW fitter fits for position, time and direction of a triggered event in SNO+ water phase. First, the fitter throws a random position built up by random variables which are uniformly distributed inside a sphere with a radius of $10~meters$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$). Meanwhile, a random event time is also generated, following a uniform distribution in a range of $100$ to $300~ns$. The Class Library for High Energy Physics (CLHEP) is used for creating pseudo-random numbers (see the Appendix A.1 for details). The random position and the random time are combined to form a random event vertex, which is set as the trial event vertex.
 
@@ -53,7 +47,7 @@ t_{res}=t_{PMT} - t_{transit} - t_{event},
 
 where $t_{PMT}$ is the PMT trigger time recorded by the detector, $t_{event}$ is the time when an event occurs (event time), and $t_{transit}$ is the total transit time (or time of flight, $TOF$) taken by a photon travelling from the event position ($\vec{x}_{event}$) to the triggered PMT ($\vec{x}_{PMT}$) and crossing different materials in the detector.
 
-To calculate the $t_{transit}$, the fitter uses photons from prompt time window (prompt light) and assumes that photons propagate in straight lines (straight light paths). The simple straight light path calculation gives $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. Detailed calculations, such as refraction and reflection when the lights cross different detector materials, absorption and scattering from the materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel, are neglected. We found that without these details, the fitter can still produce decent results that are consistent with the ones using detailed calculations. 
+To calculate the $t_{transit}$, the fitter uses photons from prompt time window (prompt light) and assumes that photons propagate in straight lines (straight light paths). The simple straight light path calculation gives $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. Detailed calculations, such as refraction and reflection when the lights cross different detector materials, absorption and scattering from the materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel, are neglected. It was found that without these details, the fitter can still produce decent results that are consistent with the ones using detailed calculations. 
 
 For a trial vertex $(\vec{x}_0,t_0)$, the fitter calculates a set of $t_{res}$ values with respect to all the triggered PMTs. These values are fed into a likelihood function: 
 \begin{equation}
@@ -67,7 +61,7 @@ $P(t^i_{res})$ is the probability returned from the PDF for the $i^{th}$ trigger
 
 The Levenberg-Marquardt method, which is commonly used for fitting the nonlinear model for multiple parameters, is used as an optimizer to find the best fit event parameters (position, time and direction). Appendix A.2 describes this method; A.3 describes the implementation of the method to the MultiPath fitter framework. Also see \cite{gregory2005bayesian, press2007numerical}.
 
-As we will see in the following sections, one of the main tasks for the fitter is to calculate the $t_{transit}$ by evaluating light paths. In the water phase, we consider photons created in an event travelling along straight line paths and the paths are always in water. In the other situations, for example, when the acrylic vessel is filled with the wavelength shifter or scintillator, the light path calculations will be modified.   
+As will be shown in the following sections, one of the main tasks for the fitter is to calculate the $t_{transit}$ by evaluating light paths. In the water phase, photons created in an event were considered as traveling along straight line paths and these paths are always in the water, i.e., the paths inside the AV or other detector components were not taken into account. In the other situations, for example, when the acrylic vessel is filled with the wavelength shifter or scintillator, the light path calculations will be modified.   
 
 Fig.~\ref{mpwdiagram} shows the reconstruction concepts for position and direction.
 \begin{figure}[htbp]
@@ -89,7 +83,7 @@ Fig.~\ref{mpwdiagram} shows the reconstruction concepts for position and directi
 \subsection{Vertex Reconstruction}
 For the position reconstruction of the MPW fitter, the likelihood function simply calculates the likelihood assuming straight line paths of prompt light from a position vertex $\vec{X_0}$ ($\mathrm{fVertex}$) and a starting time offset $t_0$ to each of the hit PMTs. 
 
-We define the position difference $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$, then the time of flight for prompt light is  $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
+The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$. Then the time of flight for prompt light is $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
 
 The derivatives of the likelihood function can be calculated from explicit mathematical forms as:
 \[
@@ -595,7 +589,7 @@ Several PMT selectors are used to select or remove PMTs from all the recorded PM
 	
 	For each panel, the selector first drops the PMTs triggered too early ($t_\mathrm{PMT}<100~ns$, where $100~ns$ is set as a default threshold). These PMTs could be triggered by noises, such as pre-pulsing. In the rest of the PMTs, the selector picks up one PMT with the earliest $t_\mathrm{PMT}$ in each panel. Thus the number of the PMTs is reduced to $n\times n$ for the fitter, i.e., $n_{select}=n\times n$. If $N\leq n_{select}$, the selector does nothing. 
 	
-	We can also use the other timing parameter, such as the $t_{mode}$ or the $t_{median}$ for selecting the PMT in each panel. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
+	The other timing parameters can also be used for selecting the PMT in each panel, such as the $t_{mode}$ or the $t_{median}$. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
 \end{itemize}
 
 \section{Energy Reconstruction}
