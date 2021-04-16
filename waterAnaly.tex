@@ -44,53 +44,7 @@ the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 \subsection{Instrumental Backgrounds}
 
-
-
-
-
-\section{High Level Cuts: Classifiers}
-
-A set of classifiers were developed by SNO analysis and been optimized for the SNO+ water analysis\cite{highlevel}.
-
-valid reconstruction
-
-
-These classifiers utilize the reconstructed quantities
-
-\begin{itemize}
-
-\item[$\bullet$] In time ratio (ITR) classifier
-
-For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, it checked 
-
-[-2.5,5.0]~ns (for the water phase) to the total number of hits.
-
-
-\item[$\bullet$] $\beta_{14}$ isotropy classifier
-
-This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical	harmonics of an event, where:
-\[
-\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
-\]
-and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
-
-
-The	combination	of these two polynomials returned by the classifier	was	
-practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
-as this gives gaussian-like	distribution pattern for Cherenkov events.	
-Essentially	any	deviation from zero suggests some polarity (i.e. the event is not isotropic).	
-
-
-\item[$\bullet$] $\theta_{ij}$ isotropy classifier 
-
-describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
-
-\[
-\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
-\]
-
-
-\item[$\bullet$] Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
+ Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
 \begin{equation}\label{kldiv}
 klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
 \end{equation}
@@ -100,15 +54,6 @@ where $p(x_i)$ is the histogramme distribution of $(\vec{X}_{PMT}-\vec{X}_{fit})
 
 
 with a time residual window cut $[-5,1]~ns$.
-
-
-
-
-
-
-
-\end{itemize}
-
 
 
 
@@ -250,7 +195,7 @@ Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in di
 
 Different types of the simulations were merged into a mixed dataset. The simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi and $^{208}$Tl background events. The total dataset was divided into training and testing sets. 
 
-Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events with their fitted positions inside the 5.5-m fiducial volume, i.e., with a cut of $R'_{fit}<5.5~m$, where $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ in the AV coordinate, $R'_{fit}=\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}$. The 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. 
+Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events with their fitted positions inside the 5.5-m fiducial volume, i.e., with a cut of $R'_{fit}<5.5~m$, where $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction: $R'_{fit}=\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}$. The 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. 
 
 \begin{figure}[!htb]
 	\centering
@@ -472,7 +417,38 @@ Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ 
 
 2D fits
 
+The main analysis is focused on the [5,15] MeV energy region.
 
+default cuts: $-11<Z_{factor}<1$, $scaleLogL>10$, $0<G_{test}t<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$.
+
+\begin{table}[ht]
+	\centering
+	\caption{Number of candidate events.}
+	\label{table:eventNumbers}
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccc}
+		\toprule
+		Method & events cut off & fitted signals & fitted backgrounds \\
+		\midrule
+		BDT &   &  1\\
+		MLP &   & \\
+		default cut & \\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+\subsubsection{Ensemble Test}
+To check the uncertainty of the Poisson fit, for the $FV<5500~mm$, 5000 fake datasets were generated.  
+
+
+
+
+\begin{equation}
+bias=\frac{N_{fit}-S_{MC}}{N_{fit}},
+\end{equation}
+
+\begin{equation}
+pull=\frac{N_{fit}-S_{MC}}{\sigma_{fit}},
+\end{equation}
 
 \subsubsection{Systematics Evaluation}
 The systematics of position, direction and energy reconstruction were obtained from the Chapter 5.
