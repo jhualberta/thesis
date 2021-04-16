@@ -92,7 +92,7 @@ describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
 
 \item[$\bullet$] Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
 \begin{equation}\label{kldiv}
-KLdiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
+klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
 \end{equation}
 
 where $p(x_i)$ is the histogramme distribution of $(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|\cdot\vec{u}_{fit}$ 
@@ -222,7 +222,7 @@ $\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, wh
 
 
 \subsection{TMVA Analysis}
-The MC simulations of the realistic runs (200004 to 203602) were used. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days. for testing and training the TMVA methods.
+The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days. for testing and training the TMVA methods.
 
 Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
@@ -261,60 +261,122 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 
 The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,albertsson2007tmva}
 
-Cuts were applied: $NHits>20$, $4<E_{fit}<15~MeV$, $R_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$.
+In this sub-dataset, runs from 201700 to 202516 were taken as the training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set. Once the weights of the parameters were tuned, they were put into the actual data.
+
+Default cuts were applied: $NHits>20$, $4<E_{fit}<15~MeV$, $R_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$.
+After applying these default cuts, the training dataset had 416780 events and the testing dataset had 184330 events.
+
+The Fisher discriminator (Fisher), the Likelihood (LD), the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short) methods implemented in the TMVA package were used\cite{albertsson2007tmva}.
 
 
+The MLP method gave the best results, while it was the most CPU-consuming method.
 
-In this sub-dataset, runs from 201700 to 202516 were taken as training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set. Once the weights of the parameters were tuned, they were put into the actual data.
+9 parameters (where the $ITR$, $E_{fit}$ and $\beta_{14}$ were after the cuts mentioned above) were used as inputs: $ITR$, $\beta_{14}$,$E_{fit}$,  $G_{test}$, $U_{test}$, $scaleLogL$, $u\dot R$ and $klDiv$. The $NHits$ and $\theta_{ij}$ were not used, since the $NHits$ is corresponded to the energy while $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
 
-The Fisher discriminator (Fisher), the Likelihood, the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short) methods implemented in the TMVA package were used\cite{albertsson2007tmva}.
+sigmoid function as activate function.
+4 hidden layers, 400 training cycles were used.
 
 
-The MLP method gave the best results, while it was the most CPU consuming one (about two times of the Fisher method).
-
-9 parameters were used as inputs: $ITR$, $\beta_{14}$, $NHits$, $E_{fit}$, $DL_{}$ and $\hat u \cdot \hat R$.
 
 
 
  for the multiple variable analysis (MVA).
 
-A Receiver Operating Characteristic (ROC) curve is usually used to test the performance of machine learning classifier. Fig.~\ref{fisher_auc} shows the 
+
+
+As one of the TMVA output, the background rejection versus signal efficiency curve is also called a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{fisher_auc.pdf}
-	\caption{ROC curve of Fisher discriminant.}
-	\label{fisher_auc}
+	\includegraphics[width=10cm]{ROC_allE.pdf}
+	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<15~MeV$.}
+	\label{allE_roc}
+\end{figure}
+where the LD and the Fisher methods are almost match with each other; the BDT and the MLP are close to each other while the MLP shows the largest AUC values.
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{ROC_E5to15.pdf}
+	\caption{ROC curves from TMVA output, for event with $5<E_{fit}<15~MeV$ (energy above 5 MeV).}
+	\label{E5to15_roc}
 \end{figure}
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{ROC_E4to5.pdf}
+	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<5~MeV$ (low energy region).}
+	\label{E4to5_roc}
+\end{figure}
+
+A typical CPU time for a certain method to train this dataset is listed in Table.~\ref{table:tmvaMethod_cpuTime}.
+
+
+$4<E_{fit}<15 MeV$
 \begin{table}[ht]
 	\centering
 	\caption{Testing results from different TMVA methods.}
-	\label{table:tmvaMethod}
+	\label{table:tmvaMethod_allE}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
-		Method & AUC &CPU time (sec) \\
-		\hline 
-		\multicolumn{3}{|l|}{Energy [4,15] MeV}
+		Method & AUC &CPU time (second/$10^6$ events) \\
 		\midrule
-		Fisher &  & 0.2\\
-		Likelihood &   &0.2\\
-		BDT & & \\
-		BDT-B& & \\\
-		MLP & & 767 \\
+		Fisher & 0.915 & 41678 0.338 sec\\
+		LD & 0.915&  \\
+		BDT &  0.940 & 104 \\
+		MLP & 0.944 & \\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-A quantity called Area Under the Curve (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}. 
+
+\begin{table}[ht]
+	\centering
+	\caption{Testing results of $5<E_{fit}<15 MeV$ (above 5 MeV) from different TMVA methods.}
+	\label{table:tmvaMethod_hiE}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+		\toprule
+		Method & AUC &CPU time (second/$10^6$ events)\\
+		\midrule
+		Fisher & & 0.93\\
+		LD & & 1.39\\
+		BDT & & 269.7\\
+		MLP &  & 1450.9\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\caption{Testing results of $4<E_{fit}<5 MeV$ (low energy region) from different TMVA methods.}
+	\label{table:tmvaMethod_lowE}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+		\toprule
+		Method & AUC &CPU time (second/$10^6$ events) \\
+		\midrule
+		Fisher & 0.782 & 0.84\\
+		LD & 0.782 &1.04\\
+		BDT & 0.816 & 280.1\\
+		MLP & 0.823 &1337.9\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
 
 
-ROC curve 0.915
+
+
+with lower energy, it is more difficult to separate the signals from the backgrounds.
+
+
+
+
+
+Therefore, the Fisher and LD methods have similar results and they both took little CPU time for training the dataset.
 
 
 %energy cuts, ts combining with NHit cuts
 
 %6 variables used as inputs
-
 
 The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. 
 
@@ -338,7 +400,7 @@ A maximum likelihood method was applied on the distribution to extract the numbe
 The values of $\cos\theta_{sun}$ from the selected events were filled into a histogram divided into bins.
 For each bin, the observed event number ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The $n_{obs}$ in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg}\cdot P_{bkg}+N_{sig}\cdot P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distribution of backgrounds and solar $\nu_e$ events respectively.
 
-For the background events, a uniform distribution of $\cos\theta_{sun}$ was assumed. On the other hand, the $\cos\theta_{sun}$ distribution of solar $\nu_e$ was extracted from the realistic simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
+For the background events, a uniform distribution of $\cos\theta_{sun}$ was assumed. On the other hand, the $\cos\theta_{sun}$ distribution of solar $\nu_e$ was extracted from the realistic run simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
 
 \begin{figure}[!htb]
 	\centering
@@ -369,4 +431,3 @@ Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ 
 
 \subsubsection{Systematics Evaluation}
 The systematics of position, direction and energy reconstruction were obtained from the Chapter 5.
-
