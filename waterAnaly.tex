@@ -282,9 +282,38 @@ sigmoid function as activate function.
 
  for the multiple variable analysis (MVA).
 
+The output signal/background distributions on the test sub dataset are shown in Fig.~\ref{output_separation_allE}.
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Fisher output.]{
+		\begin{minipage}[t]{0.4\textwidth}
+			\includegraphics[width=6cm]{output_allE_Fisher.pdf}
+		\end{minipage}
+	}   
+	\subfigure[Likelihood output.]{
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{output_allE_LD.pdf}
+		\end{minipage}
+	}
+	\subfigure[BDT output.]{
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{output_allE_BDT.pdf}
+		\end{minipage}
+	}
+	\subfigure[MLP output]{
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{output_allE_MLP.pdf}
+		\end{minipage}
+	}
+	\caption{TMVA outputs for signal/background separations by different methods.}
+	\label{output_separation_allE}
+\end{figure}
 
 
-As one of the TMVA output, the background rejection versus signal efficiency curve is also called a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
+As one of the essential TMVA output, the background rejection versus signal efficiency curve is also called a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ROC_allE.pdf}
@@ -294,41 +323,37 @@ As one of the TMVA output, the background rejection versus signal efficiency cur
 where the LD and the Fisher methods are almost match with each other; the BDT and the MLP are close to each other while the MLP shows the largest AUC values.
 
 
-
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{ROC_E5to15.pdf}
+	\includegraphics[width=10cm]{ROC_hiE.pdf}
 	\caption{ROC curves from TMVA output, for event with $5<E_{fit}<15~MeV$ (energy above 5 MeV).}
 	\label{E5to15_roc}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{ROC_E4to5.pdf}
+	\includegraphics[width=10cm]{ROC_lowE.pdf}
 	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<5~MeV$ (low energy region).}
 	\label{E4to5_roc}
 \end{figure}
 
-A typical CPU time for a certain method to train this dataset is listed in Table.~\ref{table:tmvaMethod_cpuTime}.
+A typical CPU time for a certain method to train the dataset is listed in Table.~\ref{table:tmvaMethod_allE}, \ref{table:tmvaMethod_hiE} and \ref{table:tmvaMethod_lowE}.
 
-
-$4<E_{fit}<15 MeV$
 \begin{table}[ht]
 	\centering
-	\caption{Testing results from different TMVA methods.}
+	\caption{Testing results of $4<E_{fit}<15 MeV$ from different TMVA methods.}
 	\label{table:tmvaMethod_allE}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		Method & AUC &CPU time (second/$10^6$ events) \\
 		\midrule
-		Fisher & 0.915 & 41678 0.338 sec\\
-		LD & 0.915&  \\
-		BDT &  0.940 & 104 \\
-		MLP & 0.944 & \\
+		Fisher & 0.915 & 0.81\\
+		LD & 0.915& 1.14 \\
+		BDT &  0.940 & 249.53 \\
+		MLP & 0.944 & 1370.02\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
-
 
 \begin{table}[ht]
 	\centering
@@ -338,10 +363,10 @@ $4<E_{fit}<15 MeV$
 		\toprule
 		Method & AUC &CPU time (second/$10^6$ events)\\
 		\midrule
-		Fisher & & 0.93\\
-		LD & & 1.39\\
-		BDT & & 269.7\\
-		MLP &  & 1450.9\\
+		Fisher & 0.915& 0.93\\
+		LD & 0.915 & 1.39\\
+		BDT & 0.950 & 269.71\\
+		MLP &  0.958 & 1450.90\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -350,9 +375,9 @@ $4<E_{fit}<15 MeV$
 	\centering
 	\caption{Testing results of $4<E_{fit}<5 MeV$ (low energy region) from different TMVA methods.}
 	\label{table:tmvaMethod_lowE}
-	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
-		Method & AUC &CPU time (second/$10^6$ events) \\
+		Method & AUC & signal $\epsilon$ & CPU time (second/$10^6$ events) \\
 		\midrule
 		Fisher & 0.782 & 0.84\\
 		LD & 0.782 &1.04\\
@@ -361,9 +386,6 @@ $4<E_{fit}<15 MeV$
 		\bottomrule
 	\end{tabular*}
 \end{table}
-
-
-
 
 with lower energy, it is more difficult to separate the signals from the backgrounds.
 
@@ -378,7 +400,26 @@ Therefore, the Fisher and LD methods have similar results and they both took lit
 
 %6 variables used as inputs
 
-The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. 
+The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MPL method on the test sub dataset 
+
+4<E<15 MeV
+BDT signal efficiency     = 0.828483
+BDT background efficiency = 0.0764527
+MLP signal efficiency        = 0.842493
+MLP background efficiency    = 0.0840084
+
+
+5<E<15 MeV
+BDT signal efficiency     = 0.868345
+BDT background efficiency = 0.103896
+MLP signal efficiency        = 0.887622
+MLP background efficiency    = 0.104416
+
+4<E<5 MeV
+BDT signal efficiency     = 0.72266
+BDT background efficiency = 0.245453
+MLP signal efficiency        = 0.723576
+MLP background efficiency    = 0.235984
 
 \begin{figure}[!htb]
 	\centering
@@ -387,7 +428,11 @@ The distributions of $\cos\theta_{sun}$ were used to show the performance of the
 	\label{itrCmp}
 \end{figure}
 
-Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can be considered as an alternative tool or as a reference for results comparisons. 
+For the real dataset from run-200004 to 207718, the trained weights and parameters from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
+
+
+
+Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can also be considered as an alternative tool or as a reference for results comparisons. 
 
 \subsection{Likelihood Fits for Solar Neutrino Candidate Events}
 The optimized cuts obtained from the TMVA analysis from the previous section were applied on the dataset. 
@@ -431,3 +476,13 @@ Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ 
 
 \subsubsection{Systematics Evaluation}
 The systematics of position, direction and energy reconstruction were obtained from the Chapter 5.
+
+
+
+\subsubsection{Limits of the Study}
+background types, fractions
+efficiency
+
+
+
+
