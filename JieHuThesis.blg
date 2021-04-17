@@ -1,0 +1,99 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: JieHuThesis.aux
+The style file: ieeetr.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "snop_nim"
+Warning--empty year in snop_jinst
+Warning--empty year in matt_deployedsource
+Warning--empty year in n16geom_zach
+Warning--empty year in n16pic
+Warning--empty year in laserball_groupVelocity
+Warning--empty year in driveCorPeter
+Warning--empty year in skyshine
+Warning--empty year in oxfordMeasurement
+Warning--empty year in partialWater
+Warning--empty year in davidPartialWater
+Warning--empty year in kalpanaWLS
+Warning--empty year in kalpanaWLS2
+Warning--empty year in kalpanaMPFitter
+Warning--empty year in jieMPW
+Warning--empty journal in rottele2019tritium
+Warning--empty journal in piperno2015dark
+Warning--empty author in muonflux
+Warning--empty journal in muonflux
+Warning--empty journal in davini2016cno
+Warning--empty journal in Paton:2019kgy
+Warning--empty year in scintillatorPaper
+Warning--empty journal in PerkinElmer
+Warning--empty journal in wiki_LAB
+Warning--empty year in markchen_bkg
+Warning--empty year in chicagoTiming
+Warning--empty year in tanner0p5
+Warning--empty year in joshW1
+Warning--can't use both volume and number fields in biller2017new
+Warning--empty journal in hamamatsu2018photomultiplier
+Warning--empty author in joshTrigger
+Warning--empty year in joshTrigger
+Warning--empty author in operator
+Warning--empty year in operator
+Warning--empty year in rattime
+Warning--can't use both volume and number fields in singh2020underwater
+Warning--empty author in ratManual
+Warning--empty journal in ratManual
+Warning--empty year in markNeuralNetwork
+Warning--empty year in markNeuralTalk
+Warning--empty year in groupVmeasure
+Warning--empty year in waterunidoc
+Warning--empty year in modeCut
+Warning--empty year in energyRSP
+Warning--empty year in partialEnergy
+Warning--empty year in partialEnergyYang
+Warning--empty journal in davies1997machine
+Warning--empty year in houghTransform
+Warning--empty year in highlevel
+Warning--there's a number but no series in perkins2009particle
+Warning--empty year in neuronetwork
+Warning--empty year in brunroot
+You've used 179 entries,
+            1876 wiz_defined-function locations,
+            1334 strings with 31630 characters,
+and the built_in function-call counts, 38589 in all, are:
+= -- 3432
+> -- 2121
+< -- 0
++ -- 798
+- -- 619
+* -- 2682
+:= -- 5927
+add.period$ -- 236
+call.type$ -- 179
+change.case$ -- 126
+chr.to.int$ -- 0
+cite$ -- 230
+duplicate$ -- 2099
+empty$ -- 3525
+format.name$ -- 619
+if$ -- 9178
+int.to.chr$ -- 0
+int.to.str$ -- 179
+missing$ -- 180
+newline$ -- 598
+num.names$ -- 171
+pop$ -- 637
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1114
+stack$ -- 0
+substring$ -- 1044
+swap$ -- 730
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 51
+while$ -- 277
+width$ -- 182
+write$ -- 1654
+(There were 52 warnings)

@@ -1,0 +1,958 @@
+A detailed description of the SNO+ detector has been implemented in the RAT software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. In order to make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source was used for the primary detector calibration. The $^{16}$N runs were mainly used for checking the performances of the reconstruction of the event position, direction and energy. 
+
+In this chapter, I applied the MultiPath reconstruction algorithm mentioned in Chapter 4 to the $^{16}$N calibration data and simulations.
+
+First, for the $^{16}$N calibration runs during the water phase, the MultiPath water (MPW) fitter was applied on both data and simulations. By comparing the differences between the data and MC, systematics of the position and direction reconstruction were extracted. Setting the MPW fitted event vertex and direction as seed, the event energy was reconstructed via the energy RSP fitter. Also based on the MPW fitted vertex and direction results, the other parameters, such as the in-time-ratio (ITR) and the isotropic parameter ($\beta_{14}$) were calculated. Their systematics were also evaluated. These systematic results were used in the solar neutrino analysis in Chapter 6.
+
+The MultiPath water (MPW) fitter was also applied on the simulations of the AmBe source calibration runs during the water phase. The performances of the MPW fitter reconstruction on low energy events, specially the 2.2 MeV $\gamma$ events were discussed.
+
+The last section of this chapter is to check the performance of the MultiPath partial fitter for the $^{16}$N calibration runs during the partial-fill phase. An attempt of extracting the Cherenkov signals from the events in the scintillator was made. This attempt will be useful for extracting the solar neutrino events and reconstructing their directions during the scintillator phase. 
+
+\section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
+During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was moved along x, y and z-axes inside the AV. It was also placed at the corner of the inner AV. For the external scans, the source was placed in the external water region but outside the AV and it was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal runs and 19 external runs were used. The details of these runs are shown in the tables in Appendix B.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=15cm]{N16_3Dscan.pdf}
+	\caption{The deployed source positions of the $^{16}$N scan runs used by this thesis. The black dots are internal runs while the red squares are external runs.}
+	\label{N16_3Dscan}
+\end{figure}
+
+The $^{16}$N calibration runs provide ideal tests for the fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the RAT water fitter and the MPW. The vertex shifts as well as the uncertainties were evaluated. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{N16centralDiagram.png}
+	\caption{A cartoon shows the $^{16}$N source.}
+	\label{N16centralDiagram}
+\end{figure}
+
+The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=12cm]{sx.pdf}
+	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from the RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
+	\label{hsx}
+\end{figure}
+
+A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
+\[
+R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
+\]
+where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
+the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift  (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
+
+For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay2004direct}:
+\[
+N_{R}(x)=\int^{+\infty}_{-\infty} S(x)R(x_{fit}-x)dx.
+\]
+
+Since the $S(x)$ and $N_{R}(x)$ are histograms obtained from the data and MC, we calculate by the bin value $x_i$: 
+\[N_R(x_i)=\sum_{x_i=-\infty}^{+\infty}S(x_i)R(x_{fit}^i-x_i).\].
+
+The $\chi^2$ is calculated by:
+\[
+\chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2,
+\]
+where $N_R^{fit}$ is a trial fit to the $N_R$ by tuning the $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and $\sigma_i$ is taken as the bin width of the histograms.
+
+By minimizing the $\chi^2$, the parameters of the resolution function, $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and a best $N_R^{fit}$ are obtained.
+
+Fig.~\ref{posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions are fitted with $N_R^{fit}$.
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=10cm]{posResol.pdf}
+%	\caption{Distributions of the reconstructed position projected on x axis, obtained from SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
+%	\label{posresol}
+%\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=140mm]{posResol.pdf}\label{posresol}
+	\caption{Position resolutions, compared the data (red) and MC (black). The resolution fit functions are overlaid with histograms.}
+\end{figure}
+
+Table~\ref{table_posresol} summarizes the values of position resolution parameters obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
+\vspace{1mm}
+\begin{table}[ht]
+	\centering
+	\caption{Position resolution parameters for the MP Water Fitter.}
+	\label{table_posresol}
+	\begin{tabular}{ccccc}
+		\toprule
+		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) &  $\tau_P$ (mm)& $\mu_P$ (mm)\\
+		\hline 
+		data& 0.58$\pm$0.04 & 175.8$\pm$3.8 & 288.0$\pm$5.7 & -28.8$\pm$1.0\\	
+		\hline 
+		MC & 0.51$\pm$0.05 & 195.2$\pm$3.3 & 298.4$\pm$6.1 & -10.9$\pm$1.0\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\vspace{1mm}
+
+%% itr>0.55
+%% data
+
+%% x, y, z
+%-6.604	0.9155	178.3	3.111	311.8	6.309	108.9/95	1.146
+
+%5.248	0.9124	176.9	3.381	305.3	6.577	108.5/95	1.142
+
+%1.024	0.8741	159.3	3.404	293.4	5.719	107.7/95	1.133
+
+\begin{figure}
+	\subfigure[MC.]{\label{fig:biasFom1}\includegraphics[width=8cm]{posBiasVsFOM_mc.png}}
+	\subfigure[Data.]{\label{fig:biasFom2}\includegraphics[width=8cm]{posBiasVsFOM_data.png}}
+	\caption{Fit position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs FOM (scaled LogL) for the $^{16}$N central run-107055.}
+	\label{posBiasVsFOM}
+\end{figure}
+
+
+\begin{figure}
+	\subfigure[$^{16}$N x-scan runs.]{\label{angular:xscan}\includegraphics[width=15cm]{angularResol_xscan.pdf}}
+	\subfigure[$^{16}$N y-scan runs.]{\label{angular:yscan}\includegraphics[width=15cm]{angularResol_yscan.pdf}}
+	\subfigure[$^{16}$N z-scan runs.]{\label{angular:zscan}\includegraphics[width=15cm]{angularResol_zscan.pdf}}
+	\caption{Fit direction resolutions ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs FOM (scaled LogL) for the $^{16}$N central run-107055.}
+	\label{angularResolScan}
+\end{figure}
+
+
+
+% & 0.5141$\pm$0.02612 & 176.7$\pm$3.341 & 306$\pm$8.012 & -6.516$\pm$0.9188 & 68.26/70
+% & 0.5677$\pm$0.03019 & 171.4$\pm$3.968 & 288$\pm$7.559 & 5.235$\pm$0.9145 & 69.1/70
+
+
+Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clean global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
+
+\begin{figure}
+	\centering
+	%\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=65mm]{likelihoodSurface_xy.pdf}}
+	%\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=65mm]{likelihoodSurface_yz.pdf}}
+	%\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=65mm]{likelihoodSurface_xz.pdf}}
+	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}}
+	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}}
+	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}
+	\label{likelihoodSurface}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{logL_xyzt.pdf}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}
+	\label{logLxyz}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
+	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
+	\label{derivative_logLxyz}
+\end{figure}
+
+emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=15cm]{MPW_N16_xscanResol_itrCut.pdf}
+	\caption{X scan.}
+	\label{MPWscanXResol}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=15cm]{MPW_N16_yscanResol_itrCut.pdf}
+	\caption{Y scan.}
+\label{MPWscanYResol}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=15cm]{MPW_N16_zscanResol_itrCut.pdf}
+	\caption{Z scan. The data (black boxes) is compared with MC (red circles).}
+\label{MPWscanZResol}
+\end{figure}
+
+
+%%%%%%%%%%%%% Vertex shift %%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
+	\vspace{3mm}
+	\label{vertex shifts}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
+		\toprule
+		axis & linear fit (mm) &   scaling    \\
+		\hline 
+		x scaling & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
+		y scaling  & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
+		z scaling & -0.03\%    & $(1-0.03/100)\cdot z_{MC}$ \\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+
+%%%%%%%%%%%%% Vertex shift %%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
+	\vspace{3mm}
+	
+	\label{vertex shifts}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
+		\toprule
+		 & Data &  MC    \\
+		\hline 
+		b (MPW) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
+		$\delta_E$ (MPW) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
+		\hline 
+			b (Rat6.5.5) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
+		$\delta_E$ (Rat6.5.5) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+
+%%%%%%%%%%%%% Vertex shift %%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
+	\vspace{3mm}
+	\label{vertex shifts}
+	\begin{tabular*}{50mm}{c@{\extracolsep{\fill}}cc}
+		\toprule
+		axis & Gaussian fit (mm) \\
+		\hline 
+		x shift &  0.42$\pm$4.13\\	
+		y shift  & -1.05$\pm$3.79\\
+		z shift & -0.43$\pm$2.88\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+
+
+\subsection{Angular Resolution}
+
+Here the 'true' direction is defined as the direction pointing from the source positions to the fitted position: $\vec{u}_{true} = \vec{X}_{fit}-\vec{X}_{source}$. The angle $\theta$ is the displacement between the `true' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
+
+To describe the biases between the fitted event direction and the true particle direction of the event, an angular resolution function was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components:
+\begin{equation}
+P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
+\end{equation}
+where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or ``slopes'' of the two exponential components; the $\alpha_M$ is the fraction between two exponential components.
+events following the exponential with slope $\beta_M$. 
+
+To extract the direction resolutions, a distance cut $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ was applied. To further suppress the effects from the tails, more cuts were applied: $itr>0.55$, $-0.12<\beta_{14}<0.95$ and radius cut $r<5500$ mm.
+
+% [0.3,1]
+The resolution results are shown in Table.~\ref{angularResolValuesUpdated}.
+\begin{table}[ht]
+	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+		\toprule
+		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+		\hline
+		Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
+		Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
+		\hline
+107055 & 3.888$\pm$0.246 & 17.96$\pm$1.10 & 0.550$\pm$0.030 & 80.69/66 & 0.974 & 0.740 & 0.384\\
+107055 & 4.487$\pm$0.223 & 22.23$\pm$1.41 & 0.590$\pm$0.027 & 74.01/66 & 0.962 & 0.759 & 0.450\\		
+		\bottomrule
+	\end{tabular}
+	\label{angularResolValues}
+\end{table}
+
+\begin{table}[ht]
+	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+		\toprule
+	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+	\hline
+	MPW data & 4.15$\pm$0.18 & 19.08$\pm$0.94 & 0.58$\pm$0.02 & 77.1/66 & 0.964 & 0.744 & 0.410 \\
+	MPW MC & 4.42$\pm$0.19 & 20.41$\pm$1.01 & 0.56$\pm$0.02 & 83.8/66 & 0.974 & 0.768 & 0.454	 \\	
+\hline
+	Rat data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
+	Rat MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
+		\bottomrule
+	\end{tabular}
+	\label{angularResolValuesUpdated}
+\end{table}
+
+Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions in a range of [0.3,1] after the cuts mentioned.
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{16NangularResol.pdf}
+	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the MPW fitter. These distributions are fitted with the angular resolution functions ranging from 0.3 to 1.}
+	\label{angularResolMPW}
+\end{figure}
+
+To describe the $\cos\theta_e$ distribution, the angles that contain 50\%, 80\%
+and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ can also be used. Their values are solved numerically by the equation \ref{eq:cosTheta_e} below (take $\cos\theta_{0.5}$ as an example):
+
+\begin{equation}\label{eq:cosTheta_e}
+\frac{\int_{\cos\theta_{0.5}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) d\cos\theta_e} = 50\%,
+\end{equation}
+
+where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+		\toprule
+		 parameter & $\mu$ (\%)& $\sigma$ (\%)\\
+		\hline
+	$\Delta(\alpha_M)_{relative}\equiv (\alpha_{M,data}-\alpha_{M,MC})/\alpha_{M,MC}$ & -5.7 &3.4\\
+$\Delta(\beta_M)_{relative}\equiv (\beta_{M,data}-\beta_{M,MC})/\beta_{M,MC}$ 	&-3.8 & 2.3\\
+$\Delta(\beta_S)_{relative}\equiv (\beta_{S,data}-\beta_{S,MC})/\beta_{M,MC}$ 	&-6.9 &3.5\\		
+		\bottomrule
+	\end{tabular}
+	\label{angularSystem}
+\end{table}
+
+$\beta_{14}$ systematic
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=15cm]{beta14_allScans.pdf}
+	\caption{$\beta_{14}$ systematic for various $^{16}$N scans.}
+	\label{beta14_scans}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=16cm]{angularResol_scanXYZ.pdf}
+	\caption{$\Delta\beta_{M}$ (top) and $\Delta\beta_{S}$ (bottom) systematic for various $^{16}$N scans along three axes.}
+	\label{xyzScans}
+\end{figure}
+
+%% external scan
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{N16_external_111230_rhoZ.png}
+	\caption{$^{16}$N external run-111230 with a nominal position at [-5861,-2524,4001] mm; MPW results.}
+	\label{16Nexternal}
+\end{figure}
+
+\section{High Level Cuts: Classifiers}
+
+A set of classifiers were developed by SNO analysis and been optimized for the SNO+ water analysis\cite{highlevel}.
+
+valid reconstruction
+
+
+These classifiers utilize the reconstructed quantities
+
+\begin{itemize}
+	
+	\item[$\bullet$] In time ratio (ITR) classifier
+	
+	For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, it checked 
+	
+	[-2.5,5.0]~ns (for the water phase) to the total number of hits.
+	
+	
+	\item[$\bullet$] $\beta_{14}$ isotropy classifier
+	
+	This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical	harmonics of an event, where:
+	\[
+	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
+	\]
+	and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
+	
+	
+	The	combination	of these two polynomials returned by the classifier	was	
+	practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
+	as this gives gaussian-like	distribution pattern for Cherenkov events.	
+	Essentially	any	deviation from zero suggests some polarity (i.e. the event is not isotropic).	
+	
+	
+	\item[$\bullet$] $\theta_{ij}$ isotropy classifier 
+	
+	describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
+	
+	\[
+	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
+	\]
+\end{itemize}
+
+\section{Energy}
+The RSP energy reconstruction algorithm mentioned in Chapter 4 was applied on $^{16}$N MC simulations and data.
+The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=10cm]{N16_nhits_107055.png}
+	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
+	\label{N16nhits}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
+	\caption{Energy spectrum, extracted from $10^5$ MC simulation events.}
+	\label{N16nhitsSimu}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}
+	\caption{Reconstructed $^{16}$N energy spectrum for run-106925 ($\vec{X}_{source}=(-186.0,254.0,-4999.899)$ mm).}
+	\label{N16_106925}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=10cm]{N16_reconE_107055.png}
+	\caption{Reconstructed energy spectrum from the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
+	\label{N16energy}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=8cm]{N16_beta14_107055.png}
+	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter processed results and black for the Rat results.}
+	\label{N16beta14}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=8cm]{N16FitMPW_beta14_107055.png}
+	\caption{Comparisons of the $\beta_{14}$ for the data and the MC. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller mean value (0.4157) than the MC (0.4388).}
+	\label{N16beta14MPW}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=8cm]{2dmap_EvsNphoton.png}
+	\caption{Electron energy vs number of Cherenkov photons.}
+	\label{N16energyMap}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[MPW data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_MPW_data_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[MPW MC]{ 
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[Rat data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_rat_data_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[Rat MC]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
+		\end{minipage}
+	}
+	\caption{Energy vs $\beta_{14}$ for the data and MC. Both the Rat and the MPW results are shown.}
+	\label{EvsBeta14}
+\end{figure}
+$\sigma = b\sqrt {T_{eff}}$
+
+\begin{equation}
+P(T_{eff})=N\int P_{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma}\exp [-\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma^2}]
+\end{equation}
+
+\subsection{Tests on Energy Figure of Merits}\label{sect:energy_fomTest}
+Three energy FOM quantities: $G_{test}$, $U_{test}$ and $Z_{factor}$ were introduced in \ref{sect:energy_fom}.
+Here I used the MC simulations as well as the data of the $^{16}$N central run-107055 to check the effects of the cuts on FOM quantities to　reduce the energy biases. The sacrifices of the events were calculated. 
+
+%Then the data of the same run were used to check the ratios of the number of the events which were cut off by the FOM quantities. 
+
+\begin{itemize}
+\item[$\bullet$]$U_{test}$:
+Fig.~\ref{energyFOM_Utest} shows $U_{test}$ vs. energy biases. A cut of $0.61<U_{test}<0.95$ was suggested by the collaboration, to remove the events were mostly caused by the source encapsulation. This cut removes 0.38\% of MC events and 0.34\% of data events.
+\begin{figure}[!htb]
+	\centering
+	%\includegraphics[width=8cm]{Utest_data_N16_107055.png}
+		\subfigure[MC]{ 
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{Utest_MC_N16_107055.png}
+		\end{minipage}
+	}
+	\subfigure[data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{Utest_data_N16_107055.png}
+		\end{minipage}
+	}
+	\caption{$^{16}$N central-run 107055, $U_{test}$ vs. $E_{fit}$/5.1 MeV.}
+	\label{energyFOM_Utest}
+\end{figure}
+
+	\item[$\bullet$] $G_{test}$: Fig.~\ref{energyFOM_Gtest} shows $G_{test}$ vs. energy biases. A cut of $0<G_{test}<1.9$ was suggested by the collaboration, which removes 0.01\% events for both MC and data.	
+	
+\begin{figure}[!htb]
+	\centering
+		\subfigure[MC]{ 
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=6.5cm]{Gtest_MC_N16_107055.png}
+	\end{minipage}
+}
+\subfigure[data]{ 
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[width=6.5cm]{Gtest_data_N16_107055.png}
+	\end{minipage}
+}
+	\caption{$^{16}$N central-run 107055, $G_{test}$ vs. $E_{fit}$/5.1 MeV.}
+	\label{energyFOM_Gtest}
+\end{figure}
+
+\item[$\bullet$]$Z_{factor}$:
+Fig.~\ref{energyFOM_Zfactor} shows $Z_{factor}$ vs. energy biases. A cut of $-11<Z_{factor}<1$ was suggested by the collaboration, which removes 0.13\% events for both MC and data.		
+\begin{figure}[!htb]
+	\centering
+	\subfigure[MC]{ 
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{Zfactor_MC_N16_107055.png}
+		\end{minipage}
+	}
+	\subfigure[data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{Zfactor_data_N16_107055.png}
+		\end{minipage}
+	}
+	\caption{$^{16}$N central-run 107055, $G_{test}$ vs. $E_{fit}$/5.1 MeV.}
+	\label{energyFOM_Zfactor}
+\end{figure}
+
+
+\end{itemize}
+
+All the cuts on the three energy FoM quantities removes 0.40\% events from MC and 0.37\% events from data.
+These cuts were used in the water phase analysis which was described in the next Chapter.
+
+\section{Energy Scale Uncertainties}
+
+the uncertainties of the reconstructed energy scale and resolution.
+
+Fig.~\ref{map_energyScale} and Fig.~\ref{map_energyResol} show the maps of the energy scale ($\Delta$) and the resolution parameter ($b$) respectively.
+
+$570~mm\times 2000~mm$ cells of $z_{fit}\times \rho_{fit}$.
+
+\begin{figure}[!htb]\label{map_energyScale}
+	\centering
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{A map of relative energy scale $\delta_E$ across the detector.}
+
+\end{figure}
+
+\begin{figure}[!htb]\label{map_energyResol}
+	\centering
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{A map of relative energy scale $\delta_E$ across the detector.}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+\section{Extracting \texorpdfstring{$\gamma$}{Lg}-rays from Neutron Capture}
+The AmBe calibration source is used for the calibrations of the SNO+ neutron capture process.
+
+
+\section{$^{16}$N Calibration in Partial-fill Phase}
+
+During the August to October 2019, the PPO is added into the LAB when the water level was at 5100 mm (in PSUP coordinate). This is one of the stages of the partial-fill phase.
+
+As mentioned in Chapter 3, the main purpose of the partial-fill phase is to identify the background level of the liquid scintillator. $^{16}$N and $AmBe$ calibration sources were also deployed in the external water to test the response of the detector. 
+
+During the filling, the LAB was first filled into the AV to replace the water. PPO was later mixed with LAB and added into the AV. At some stage, the PPO concentration was kept at 0.53 g/L, which was lower than the nominal 2 g/L. At the lower PPO concentration, the liquid scintillator has a slower timing profile. This also brings an opportunity to extract the Cherenkov signals from the liquid scintillator with low PPO concentration.
+
+\subsection{High Level Cuts: Sky-shine Classifier}
+During the partial-fill phase, a Sky-shine classifier was suggested by Mark Chen and developed by Jeff Tseng to discriminate the noise events coming from the top of the detector, the so-called ``sky shine'' events, from other backgrounds events in the AV detection region\cite{skyshine}. These sky shine events are mostly the backgrounds from radioactive decays happening in the neck region. 
+
+For an event happens in the neck region, it can trigger more PMTs in the bottom (or 
+the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illustrated in Fig.~\ref{skyshine}. The classifier counts the number of the triggered PMTs with $z_{PMT}<-1000~mm$ (in PSUP coordinate) as $nSignal$ and the number of the ones with $-1000<z_{PMT}<8000~mm$ as $nSide$. The ratio $skyShine=nSide/nSignal$ is the output value of the classifier. Meanwhile, the classifier also saves the counts of the triggered neck PMTs ($nNeck$) as well as the triggered outward looking (OWL) PMTs in high z positions with $z_{OWL}>8000~mm$ ($nOWL$).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{ An illustration for the Sky-shine classifier, modified from \cite{skyshine}.}
+	\label{skyshine}
+\end{figure}
+
+In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
+
+\subsubsection{Performance of the Sky-shine Classifier}
+The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. RAT version 6.16.9 was used. 
+
+Fig.~\ref{Tl208simu} shows the positions of the simulated events and the fitted events. In the MC simulations, events are distributed in the AV as well as the whole region of the neck. Recall that the neck of the detector is 8-m tall, the MC simulated neck events from $z_{neck_bottom}=6108~mm$ up to about $z_{neck_top}=13000~mm$ in the PSUP coordinate. The valid reconstruction region is inside the PSUP sphere, thus only a small fraction of the neck events in the volume of the neck cylinder inside the PSUP sphere can be fitted or even be triggered.
+
+\begin{figure}
+	\centering
+	\subfigure[MC positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_mc.png}}
+	\subfigure[Fitted positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_fit.png}}
+	\caption{MC (left) and fitted positions (right) of $^{208}$Tl simulations.}
+	\label{Tl208simu}
+\end{figure}
+
+The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
+\begin{figure}
+	\centering
+	\subfigure[$x_{mc}$ vs. $skyShine$.]{\label{fig2:1a}\includegraphics[width=60mm]{skyShineVsXmc.png}}
+	\subfigure[$y_{mc}$ vs. $skyShine$.]{\label{fig2:1b}\includegraphics[width=60mm]{skyShineVsYmc.png}}
+	\subfigure[$z_{mc}$ vs. $skyShine$.]{\label{fig2:1c}\includegraphics[width=60mm]{skyShineVsZmc.png}}
+	\subfigure[$r_{mc}$ vs. $skyShine$.]{\label{fig2:1d}\includegraphics[width=60mm]{skyShineVsRmc.png}}
+	\caption{MC positions vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsPos}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.7$.]{\label{fig2:2a}\includegraphics[width=60mm]{skyShineVsRho_mc.png}}
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.5$.]{\label{fig2:2b}\includegraphics[width=60mm]{skyShineVsRho_mc1p5.png}}
+	\caption{MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}\label{skySHineCutsVsMCpos}
+\end{figure}
+
+By checking the MC events positions (``true'' event positions),  for all the triggered events, 16.8\% of them are outside the AV. Apply skyShine>1.7 can remove 98.6\% of the events outside the AV (mostly in the neck) with a sacrifice of 0.2\% of the events inside the AV.
+
+\subsubsection{Optimize the Sky-shine Cuts}
+
+Since the Sky-shine classifier removes neck events (most of them are outside the PSUP) which are not properly fitted, a skyShine cut can reduce the fit biases and improve the fit resolution.
+
+skyShine vs. fit biases (208Tl)
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:3a}\includegraphics[width=50mm]{skyShineVsXbias.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:3b}\includegraphics[width=50mm]{skyShineVsYbias.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:3c}\includegraphics[width=50mm]{skyShineVsZbias.png}}
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitBias}
+\end{figure}
+
+An improvement of $\sim 18$ mm in z resolution.
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4a}\includegraphics[width=50mm]{fitBiasX_noCuts_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4b}\includegraphics[width=50mm]{fitBiasY_noCuts_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4c}\includegraphics[width=50mm]{fitBiasZ_noCuts_Tl208_partial.png}}
+	
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4d}\includegraphics[width=50mm]{fitBiasX_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4e}\includegraphics[width=50mm]{fitBiasY_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4f}\includegraphics[width=50mm]{fitBiasZ_skyShine1p7_Tl208_partial.png}}
+	
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitResol}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=60mm]{skyShineCuts.png}
+	\caption{ Radial resolutions with different skyShine cuts.}
+	\label{skySHineCutVsFitResol}.
+\end{figure}
+
+Apply different cuts of $skyShine$: $skyShine>1, 1.01, 2.0$, begins from 1.0 with a 0.01 step until 2.0.
+Plot the x bias $x_{fit}-x_{mc}$ versus the $skyShine$ cut values.
+
+Fit	a gaussian to $x_{fit} - x_{mc}$ and get $\sigma_x$,
+Do the same thing to the $y_{fit} - y_{mc}$, $z_{fit} - z_{mc}$ and	obtain	$\sigma_x, \sigma_y, \sigma_z$
+Fill a 1D histogram of Sky-shine cut and
+$\Delta R= \sqrt{\sigma^2_x+\sigma^2_y+\sigma^2_z}$
+
+Compare to the number of MC events inside the scintillator $\sqrt(x^2+y^2+(z-108)^2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events after cut:
+$skyShine>1.6$: 3149/3376
+$skyShine>1.7$: 3149/3351
+Can check with more productions/higher statistics.
+
+\subsection{Different PPO Concentrations during the Filling}
+
+Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
+
+The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
+
+The partial fitter is re-coordinated according to these measurements.
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure} time constants and amplitudes measured by Oxford group \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
+			\toprule 
+			PPO [g/L] & $\tau_{rise}$ [ns] & $\tau_1$ [ns] & $\tau_2$ [ns] & $\tau_3$ [ns] & $A_1$ [\%]  & $A_2$ [\%]   & $A_3$ [\%]  & $A'$ [\%] \\
+			\midrule
+			0.25 & 1.25 & 8.1 & 25.0 & 68.2 & 29.2 & 53.1 & 13.9 & 3.8\\
+			0.5  & 1.12 & 7.2 & 18.7 & 49.1 & 43.5 & 40.4 & 12.6 & 3.5 \\
+			1.0 & 1.18 & 5.5 & 13.3 & 40.9 &	45.6 & 37.5 & 13.3 & 3.6 \\
+			2.0 & 1.06 & 4.2 & 11.7 & 48.9 & 57.9 & 27.8 & 8.9 & 5.4	\\
+			6.0 & 0.94 & 2.5 & 9.3  & 46.0 & 63.7 & 17.0 & 8.6 & 10.7\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+\[
+\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}}
+\]
+
+based on these measured parameters, pdfs were built. 
+
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=6cm]{skyShine.png}
+%	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
+%	\label{oxford_pdf}
+%\end{figure}
+
+relative light yield (2g/L = 11900)
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
+			\toprule 
+			PPO [g/L] & RLY \\
+			\midrule
+			0.25 & 0.57\\
+			0.5 & 0.65\\
+			1.0 & 0.9\\
+			2.0 & 1.0\\
+			6.0 & 0.93\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{oxfordPdf_log.png}
+	\caption{Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}
+	\label{oxfordPdf}
+\end{figure}
+
+
+
+
+The partial fitter is robust with changes of time profile pdfs.
+
+
+radial biases
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_groupV}Tuned effective group velocities for different PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
+			\toprule 
+			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_{scint}$ & $V_{gr,water}$ [mm/ns]& $n_{water,tuned}$\\
+			\midrule
+			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
+			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\
+			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
+			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
+			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+Simulate 5000 events for 3 MeV $e^-$,  
+
+
+$\Delta x = x_{fit}-x_{mc}$
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{145         mm}{c@{\extracolsep{\fill}}cccccc}
+			\toprule 
+			PPO [g/L] & fit speed [s/event]& $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & $r_{bias}$ [mm] & \\
+			\midrule
+			0.25 & 0.190 &6.65 &2.64& -18.24& -7.22\\
+			0.5  & 0.144 &-0.73 &-1.69& -8.14& 3.30 \\
+			1.0 &0.190 & 1.42 &0.57 &-5.65& 10.67 \\
+			2.0 &0.194 & 0.34 &1.78& -4.01& 13.37	\\
+			6.0 &0.145 & -0.11& -0.12& -25.97& -10.97\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+%% fit resolutions
+$z_{fit}$ resolution [mm] 
+
+%& 120.6
+%& 90.02
+%& 67.39
+%& 55.81
+%& 58.62
+
+fit with wrong PPO concentrations:  
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias1} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccccccc}
+			\toprule 
+			PPO [g/L] & $\Delta x$ & $\Delta y$ & $\Delta z$  & $\sigma_z$ & $r_{bias}$  & $\sigma_r$ & ratio in FV (\%)&\\
+			\midrule
+			0.25 & 6.80& 2.90& -14.61& 121.6& -4.82& 120.3& 93.70\%\\
+			0.5  & 5.15& 2.82& -12.85 &120.2 &1.34 &123.0 &93.46\% \\
+			1.0 &2.32 &1.95 &-13.22& 120.3& 0.344& 121.9 &93.78\% \\
+			2.0 &5.76& 3.03& -9.61& 119.3& 7.264 &125.1& 93.26\% \\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+
+PPO in Fitter
+configuration
+
+
+\subsection{Bi-Po Analysis}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=15cm]{flowchart_latex.pdf}
+	\caption{A flow chart for Bi-Po tagging.}
+	\label{biPo_flowchart}
+\end{figure}
+
+
+
+
+\subsection{$^{16}$N Calibration in the Partial-fill Phase}
+
+water level was at 5100 mm from the center of the AV (in AV coordination).
+LAB with a PPO concentration of 0.53 g/L  
+
+Effect of the water level.
+
+The \isotope[16]{N} source was deployed in the external water region during the partial-fill phase.
+run 251748 2019/09/19 and 
+
+Source position was at $(-1120.8, 1041.4, 6172.5)~ mm$ for a 30-minute duration and at $(-1120.8. 1041.4, 6108.0)~mm$ for a 7-hour duration (separated into 7 runs).
+
+
+
+
+
+\subsection{Extracting the Cherenkov Signals in Partial-fill Phase}
+
+For an event happens in liquid scintillator, the number of Cherenkov photons it created is only $\sim 5\%$ 
+of the total photon numbers, which is a very small fraction compared to the number of scintillation photons. This causes the directional Cherenkov signals are submerged in the isotropic lights.
+
+Since the \isotope[16]{N} source provides high energy events around 6 MeV, 
+
+
+a time cut window on the time residual was optimized for the searching based on MC.
+
+simulations in pure scintillator phase.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cherenkov_scint_variousE.png}
+	\caption{Distributions of $\cos\theta_{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}
+	\label{cherenkov_variousE}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{%PMT pattern before transformation.]{
+		\begin{minipage}[t]{0.32\textwidth}
+			\includegraphics[width=5.5cm]{partial0p5_6MeV_noRotate.pdf}
+		\end{minipage}
+	}   
+	\subfigure[]{%PMT pattern before transformation, in sinusoidal map.]{ 
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_noRotate.pdf}
+		\end{minipage}
+	}
+	\subfigure[]{%PMT pattern after transformation.]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_6MeV_rotate.pdf}
+		\end{minipage}
+	}
+	\subfigure[]{%PMT pattern after transformation, in sinusoidal map.]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_rotate.pdf}
+		\end{minipage}
+	}
+	\caption{PMT hit patterns after the prompt time cut and NHit cut.}
+	\label{6MeVisoPattern}
+\end{figure}
+
+
+
+
+In the case that $e^-$ are generated uniformly and isotropically in the detector, to enhance the 
+Cherenkov ring pattern, a transformation is applied as following:
+
+$\phi=\arccos(\hat{\vec{u}}_e\cdot\hat{\vec{u}}_{assume})$
+
+$\vec{n}=\hat{\vec{u}}_e\times\hat{\vec{u}}_{assume}$
+\[
+R=\begin{bmatrix}
+n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
+n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
+n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
+\end{bmatrix}
+\]
+$\vec{u'}_e=R\vec{u}_e$
+
+$\vec{X'}_{evt}=R\vec{X}_{evt}$
+
+Move $\vec{X'}_{evt}$ to the origin,
+
+$\vec{X'}_{pmt}=R\vec{X}_{pmt}-\vec{X'}_{evt}$
+
+
+
+Turning off the Cherenkov process in the Monte Carlo simulations.
+
+
+
+
+
+
+Breit-Wigner function
+\[
+p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
+\]
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{partialN16.png}
+	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
+	\label{partialN16}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{track_partial_N16.png}
+	\caption{Simulated main track of 7.1 MeV $\gamma$ for one event from $\isotope[16]{N}$ source in the external water during the partial-fill phase.}	
+	\label{track_partial_N16}
+\end{figure}
