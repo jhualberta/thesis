@@ -3,6 +3,10 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
+Repeated entry---line 1647 of file thesis.bib
+ : @article{albertsson2007tmva
+ :                            ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "snop_nim"
 Warning--empty year in snop_jinst
 Warning--empty year in matt_deployedsource
@@ -52,48 +56,51 @@ Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in highlevel
+Warning--empty year in morganFOM
+Warning--empty year in leta
 Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
-You've used 179 entries,
+Warning--empty year in brianLowBG
+You've used 182 entries,
             1876 wiz_defined-function locations,
-            1334 strings with 31630 characters,
-and the built_in function-call counts, 38589 in all, are:
-= -- 3432
-> -- 2121
+            1348 strings with 31941 characters,
+and the built_in function-call counts, 38985 in all, are:
+= -- 3462
+> -- 2133
 < -- 0
-+ -- 798
-- -- 619
-* -- 2682
-:= -- 5927
-add.period$ -- 236
-call.type$ -- 179
-change.case$ -- 126
++ -- 804
+- -- 622
+* -- 2709
+:= -- 5990
+add.period$ -- 239
+call.type$ -- 182
+change.case$ -- 129
 chr.to.int$ -- 0
-cite$ -- 230
-duplicate$ -- 2099
-empty$ -- 3525
-format.name$ -- 619
-if$ -- 9178
+cite$ -- 236
+duplicate$ -- 2126
+empty$ -- 3576
+format.name$ -- 622
+if$ -- 9268
 int.to.chr$ -- 0
-int.to.str$ -- 179
-missing$ -- 180
-newline$ -- 598
-num.names$ -- 171
-pop$ -- 637
+int.to.str$ -- 182
+missing$ -- 183
+newline$ -- 607
+num.names$ -- 174
+pop$ -- 652
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1114
+skip$ -- 1117
 stack$ -- 0
 substring$ -- 1044
-swap$ -- 730
+swap$ -- 733
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 51
-while$ -- 277
-width$ -- 182
-write$ -- 1654
-(There were 52 warnings)
+warning$ -- 54
+while$ -- 280
+width$ -- 185
+write$ -- 1675
+(There was 1 error message)

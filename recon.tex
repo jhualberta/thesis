@@ -549,16 +549,161 @@ The value of the mean radial bias is taken by fitting the histogram of the distr
 \]
 
 
-Appendix: Levenberg-Marquardt method for fitter minimization
+%Appendix: Levenberg-Marquardt method for fitter minimization
 (ref: press2007numerical)
 
-for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
-
-
+%for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
 
 The pdf can be expanded and fit with Chebyshev polynomials to obtain an analytic approximation function\cite{press2007numerical}. This analytical function can give proper analytical derivatives
 
+\subsection{Complicated Situation in Partial-fill}
+\subsubsection{Different PPO Concentrations during the Filling}
+
+Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
+
+The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
+
+The partial fitter is re-coordinated according to these measurements.
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure} time constants and amplitudes measured by Oxford group \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
+			\toprule 
+			PPO [g/L] & $\tau_{rise}$ [ns] & $\tau_1$ [ns] & $\tau_2$ [ns] & $\tau_3$ [ns] & $A_1$ [\%]  & $A_2$ [\%]   & $A_3$ [\%]  & $A'$ [\%] \\
+			\midrule
+			0.25 & 1.25 & 8.1 & 25.0 & 68.2 & 29.2 & 53.1 & 13.9 & 3.8\\
+			0.5  & 1.12 & 7.2 & 18.7 & 49.1 & 43.5 & 40.4 & 12.6 & 3.5 \\
+			1.0 & 1.18 & 5.5 & 13.3 & 40.9 &	45.6 & 37.5 & 13.3 & 3.6 \\
+			2.0 & 1.06 & 4.2 & 11.7 & 48.9 & 57.9 & 27.8 & 8.9 & 5.4	\\
+			6.0 & 0.94 & 2.5 & 9.3  & 46.0 & 63.7 & 17.0 & 8.6 & 10.7\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+\[
+\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}}
+\]
+
+based on these measured parameters, pdfs were built. 
+
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=6cm]{skyShine.png}
+%	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
+%	\label{oxford_pdf}
+%\end{figure}
+
+relative light yield (2g/L = 11900)
+\begin{table}[ht]
+	\centering
+	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by \cite{oxfordMeasurement}.}	
+	{\centering
+		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
+			\toprule 
+			PPO [g/L] & RLY \\
+			\midrule
+			0.25 & 0.57\\
+			0.5 & 0.65\\
+			1.0 & 0.9\\
+			2.0 & 1.0\\
+			6.0 & 0.93\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{oxfordPdf_log.png}
+	\caption{Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}
+	\label{oxfordPdf}
+\end{figure}
 The partial fitter is invulnerable to the change of pdfs caused by different PPO concentrations.
+
+radial biases
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_groupV}Tuned effective group velocities for different PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
+			\toprule 
+			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_{scint}$ & $V_{gr,water}$ [mm/ns]& $n_{water,tuned}$\\
+			\midrule
+			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
+			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\
+			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
+			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
+			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+Simulate 5000 events for 3 MeV $e^-$,  
+
+
+$\Delta x = x_{fit}-x_{mc}$
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{145         mm}{c@{\extracolsep{\fill}}cccccc}
+			\toprule 
+			PPO [g/L] & fit speed [s/event]& $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & $r_{bias}$ [mm] & \\
+			\midrule
+			0.25 & 0.190 &6.65 &2.64& -18.24& -7.22\\
+			0.5  & 0.144 &-0.73 &-1.69& -8.14& 3.30 \\
+			1.0 &0.190 & 1.42 &0.57 &-5.65& 10.67 \\
+			2.0 &0.194 & 0.34 &1.78& -4.01& 13.37	\\
+			6.0 &0.145 & -0.11& -0.12& -25.97& -10.97\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+%% fit resolutions
+$z_{fit}$ resolution [mm] 
+
+%& 120.6
+%& 90.02
+%& 67.39
+%& 55.81
+%& 58.62
+
+PPO in Fitter configuration
+fit with wrong PPO concentrations:  
+\begin{table}[ht]
+	\centering
+	\caption{\label{partial_bias1} Fit speeds and biases for various PPO concentrations.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccccccc}
+			\toprule 
+			PPO [g/L] & $\Delta x$ & $\Delta y$ & $\Delta z$  & $\sigma_z$ & $r_{bias}$  & $\sigma_r$ & ratio in FV (\%)&\\
+			\midrule
+			0.25 & 6.80& 2.90& -14.61& 121.6& -4.82& 120.3& 93.70\%\\
+			0.5  & 5.15& 2.82& -12.85 &120.2 &1.34 &123.0 &93.46\% \\
+			1.0 &2.32 &1.95 &-13.22& 120.3& 0.344& 121.9 &93.78\% \\
+			2.0 &5.76& 3.03& -9.61& 119.3& 7.264 &125.1& 93.26\% \\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+
+\subsection{Bi-Po Analysis}
+The Bi-Po analysis was performed on simulations to check the fitter efficiency. This analysis suggests a model offset of the water level to include more fitted data.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=15cm]{flowchart_latex.pdf}
+	\caption{A flow chart for Bi-Po tagging.}
+	\label{biPo_flowchart}
+\end{figure}
 
 
 \section{PMT Selectors for the Reconstruction}\label{sect:PMTselector}

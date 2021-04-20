@@ -3,28 +3,18 @@
 
 The SNO+ water phase data were taken from May 2017 to September 2018. The period from May 2017 to October 2018 is the first stage of the water phase. During this stage, several calibration runs were taken, including the $^{16}$N calibration scans and the laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector and the LAB mostly occupied the neck volume, slightly below the neck bottom. With the nitrogen cover gas on the top of the AV, the dataset taken during this period is called ``low background dataset''. In this study, 4838 runs of data were used, which summed up a total live time of 190.31 days after the data cleaning process.
  
-In this chapter, I applied the MPW reconstruction algorithm mentioned in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run MC simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
+In this chapter, I applied the MPW reconstruction algorithm described in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run MC simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
 
-I mainly analyzed the low background dataset. 
+First, the open dataset taken in 2017 was used to test the MPW results, compared to the official RAT results. A quantity called ``Kullback–Leibler Divergence'' was developed to evaluate the Cherenkov signals. After that, I mainly analyzed the low background dataset. I used sub datasets of the run-by-run MC simulations to evaluate the ability of separating the solar $\nu_e$ signals from the backgrounds. The Toolkit for Multivariate Data Analysis with ROOT (TMVA) package \cite{tmvaWebsite,albertsson2007tmva} was used to train and test on the MC simulations to obtain optimized discriminants. These optimized discriminants were applied on the whole dataset to remove the backgrounds.
 
-extract the $^8$B solar neutrino flux and interaction rate
+The outputs from the data were fitted to obtain the number of signal events and the background events. Ensemble tests were performed on fake datasets to check the fit pull and bias. The systematics obtained from the $^{16}$N calibration in Chapter 5 were applied on the results. Finally, the solar $\nu_e$ interaction rates and the $^8$B solar neutrino flux were evaluated.
 
+%to search for these events then convert into the interaction rate as well as the $^8$B solar neutrino flux.
 
-to search for these events
-then convert into the interaction rate as well as the $^8$B solar neutrino flux.
-
-
-
-
-Monte Carlo simulations were produced by the RAT software, which was described in \ref{sect:rat}.
-
-compare to SuperK results.
-
-
-data cleaning and analysis cuts 
-
-The analysis cuts depend on the reconstructed results.
-
+%Monte Carlo simulations were produced by the RAT software, which was described in \ref{sect:rat}.
+%compare to SuperK results.
+%data cleaning and analysis cuts 
+%The analysis cuts depend on the reconstructed results.
 
 \section{Detector Backgrounds}
 
@@ -42,27 +32,72 @@ the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 
 
-\subsection{Instrumental Backgrounds}
+\section{Kullback–Leibler (KL) Divergence for High Level Cuts}
 
- Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
+Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
 \begin{equation}\label{kldiv}
 klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
 \end{equation}
 
-where $p(x_i)$ is the histogramme distribution of $(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|\cdot\vec{u}_{fit}$ 
-
-
-
-with a time residual window cut $[-5,1]~ns$.
-
-
-
-
-The output values were used for distinguishing the signal from backgrounds.
-
+where $p(x_i)$ is the distribution of $(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|\cdot\vec{u}_{fit}$ after a time residual window cut: $-5<t_{Res}<1~ns$ to extract prompt Cherenkov lights. The distribution was filled into a histogram with 40 bins ranging from [-1,1]. The output values were used for distinguishing the signal from backgrounds, which will be discussed.
 
 \section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
+\subsection{Open Dataset Analysis}
 
+This open dataset was used to compare the MPW and the RAT fitted results.
+
+In SNO+ water phase, solar $\nu_e$s are basically measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$. The maximum kinetic energy of the recoil electron is
+$T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$
+the cross section is $\sigma(\nu_e+e^-\to \nu_e+e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
+the expected solar neutrino rate is 
+$R=A\int_{T_{thresh}}^{T_{max}}\frac{d\sigma}{dE}\frac{dN}{dE_\nu}dE_\nu$.
+
+A ``solar angle'', $\theta_{sun}$ is the direction of the event relative to the Sun's location,
+$\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, where $\vec{X}_{event}-\vec{X}_{sun}$ can be replaced by the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun.
+
+
+High level cuts mentioned in \ref{sect:high_level_cuts} were applied.
+
+\begin{table}[ht]
+	\centering
+	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
+	\label{opendata}
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+		\toprule
+		Fitter &	Run &  GTID &  $z-0.108$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$ & SNO+ Day\\
+		\hline 
+		Rat & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954459 &2683.92 \\	
+		MPW &  --& --& 3.43 &	3.52 &	0.20	& -0.906388 & --\\
+		Rat &	100207 &5079885 &-2.61 &4.60 &0.45 &0.816215 &2687.04\\
+		MPW &	 --& --& -3.63 & \textbf{7.61} &	2.03 & \textbf{0.656374} & -- \\
+		Rat &100632 &7882360 &1.77 &3.19 &0.15 &0.937212 &2696.93\\
+		MPW &    --& --&  1.67 & 3.11 &	0.14 & 0.910527 & -- \\
+		Rat &100663 &15767175 &-4.33& 4.96 &0.56 &0.977517 &2698.18\\
+		MPW & --& -- &-4.45 &	5.07 &	0.60 &	0.979943 & -- \\
+		Rat &100915 &169700 &-1.00 &5.10 &0.61 &0.341287 &2701.23\\
+		MPW &	--& --& -1.08 &	5.08 &	0.61 &	0.336706 & -- \\	
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\caption{Candidate events in the open dataset, searched by the MPW fitter.}
+	\label{opendataMPW}
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
+		\toprule
+		Run & GTID & energy & $z-0.108$ & $R$ & $(R/R_{av})^3$ & $\cos\theta_{sun}$\\
+		\hline 
+		100093 &	11108354	&5.827 & 3.43 & 3.52 & 0.20 & -0.907005\\
+		100632&	7882360    &6.183& 1.67 &3.11 &0.14 &0.9146124\\
+		100663&	15767175   &	6.182 & -4.45 &5.07 &0.60&	0.9807349\\
+		100915&	169700   &	5.684 &	-1.07 &5.08 &0.61&0.3385341\\
+		100984&	8621621&	5.701 & 0.76 &4.75 &0.502&-0.647735\\
+		101075&	11673714&	5.667 &4.43 &5.18 &0.64& 0.5873025\\
+		
+		\bottomrule
+	\end{tabular*}
+\end{table}
 solar neutrino candidate events in the open dataset.
 
 \begin{figure}[htbp]
@@ -108,66 +143,14 @@ solar neutrino candidate events in the open dataset.
 	\label{openDataSetCandidate}
 \end{figure}
 
+Compare the $klDiv$ quantities for the MPW and RAT results. 
 
-\subsubsection{Open Dataset Analysis}
+A plot of refitting the RAT candidate solar events with the MPW on old dataset.
 
-MPW fit results
-
-fiducial volume cut effects
-
-\begin{table}[ht]
-	\centering
-	\caption{Candidate events in the open dataset. Compared the fitted results of the candidate events with different fitters.}
-	\label{opendata}
-	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
-		\toprule
-	 Fitter &	Run &  GTID &  $z-0.108$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$ & SNO+ Day\\
-		\hline 
-	Rat & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954459 &2683.92 \\	
-	MPW &  --& --& 3.43 &	3.52 &	0.20	& -0.906388 & --\\
-	Rat &	100207 &5079885 &-2.61 &4.60 &0.45 &0.816215 &2687.04\\
-	MPW &	 --& --& -3.63 & \textbf{7.61} &	2.03 & \textbf{0.656374} & -- \\
-	Rat &100632 &7882360 &1.77 &3.19 &0.15 &0.937212 &2696.93\\
-	 MPW &    --& --&  1.67 & 3.11 &	0.14 & 0.910527 & -- \\
-	Rat &100663 &15767175 &-4.33& 4.96 &0.56 &0.977517 &2698.18\\
-	MPW & --& -- &-4.45 &	5.07 &	0.60 &	0.979943 & -- \\
-	Rat &100915 &169700 &-1.00 &5.10 &0.61 &0.341287 &2701.23\\
-	MPW &	--& --& -1.08 &	5.08 &	0.61 &	0.336706 & -- \\	
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-\begin{table}[ht]
-	\centering
-	\caption{Candidate events in the open dataset, searched by the MPW fitter.}
-	\label{opendataMPW}
-	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
-		\toprule
-		Run & GTID & energy & $z-0.108$ & $R$ & $(R/R_{av})^3$ & $\cos\theta_{sun}$\\
-		\hline 
-100093 &	11108354	&5.827 & 3.43 & 3.52 & 0.20 & -0.907005\\
-100632&	7882360    &6.183& 1.67 &3.11 &0.14 &0.9146124\\
-100663&	15767175   &	6.182 & -4.45 &5.07 &0.60&	0.9807349\\
-100915&	169700   &	5.684 &	-1.07 &5.08 &0.61&0.3385341\\
-100984&	8621621&	5.701 & 0.76 &4.75 &0.502&-0.647735\\
-101075&	11673714&	5.667 &4.43 &5.18 &0.64& 0.5873025\\
-
-		\bottomrule
-\end{tabular*}
-\end{table}
-
-In SNO+ water phase, solar $\nu_e$s are basically measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$. The maximum kinetic energy of the recoil electron is
-$T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$
-the cross section is $\sigma(\nu_e+e^-\to \nu_e+e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
-the expected solar neutrino rate is 
-$R=A\int_{T_{thresh}}^{T_{max}}\frac{d\sigma}{dE}\frac{dN}{dE_\nu}dE_\nu$.
-
-A ``solar angle'', $\theta_{sun}$ is the direction of the event relative to the Sun's location,
-$\cos\theta_{sun}\equiv \vec u_{event}\cdot (\vec{X}_{event}-\vec{X}_{sun})$, where $\vec{X}_{event}-\vec{X}_{sun}$ can be replaced by the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun.
 
 
 \subsection{TMVA Analysis}
-The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days. for testing and training the TMVA methods.
+The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days for testing and training the TMVA methods.
 
 Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
@@ -195,7 +178,7 @@ Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in di
 
 Different types of the simulations were merged into a mixed dataset. The simulated solar $\nu_e$ events are tagged as signals and mixed with $^{214}$Bi and $^{208}$Tl background events. The total dataset was divided into training and testing sets. 
 
-Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events with their fitted positions inside the 5.5-m fiducial volume, i.e., with a cut of $R'_{fit}<5.5~m$, where $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction: $R'_{fit}=\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}$. The 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. 
+Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events with their fitted positions inside the 5.5-m fiducial volume, i.e., with a radial cut of $R'_{fit}<5.5~m$, where the $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction: $R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}$. The 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. 
 
 \begin{figure}[!htb]
 	\centering
@@ -204,41 +187,40 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 	\label{TMVA_bkgs_1}
 \end{figure}
 
-The Toolkit for Multivariate Data Analysis with ROOT (TMVA) \cite{tmvaWebsite,albertsson2007tmva}
-
 In this sub-dataset, runs from 201700 to 202516 were taken as the training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set. Once the weights of the parameters were tuned, they were put into the actual data.
 
-Default cuts were applied: $NHits>20$, $4<E_{fit}<15~MeV$, $R_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$.
-After applying these default cuts, the training dataset had 416780 events and the testing dataset had 184330 events.
+Before the analysis, a few ``beforehand cuts''were applied: $NHits>20$, $R'_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Here $NHits>20$ was applied as a reconstruction threshold. Only the events with $NHits>20$ were reconstructed by the MPW fitter for the solar neutrino analysis; a default fiducial volume of $5.5~m$ was set; the $ITR$ and $\beta_{14}$ cuts were suggested by the collaboration, which were mostly based on the experiences for removing the instrumental backgrounds\cite{waterunidoc}. 
 
-The Fisher discriminator (Fisher), the Likelihood (LD), the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short) methods implemented in the TMVA package were used\cite{albertsson2007tmva}.
+After applying these beforehand cuts, for $4<E_{fit}<15~MeV$, the training dataset had 416780 events and the testing dataset had 184330 events.
 
+Two other ranges of $E_{fit}$ were also tested: $4<E_{fit}<5$ (low energy region) and $5<E_{fit}<15$ ($E>5$ region). %$6<E_{fit}<15$ ($E>6$).
+
+After the training and testing datasets were ready, three classification methods implemented in the TMVA package were used: the Fisher discriminants/linear discriminant analysis (Fisher/LD), the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short)\cite{albertsson2007tmva}.
+
+The Fisher discriminant $y_{F_i}(i)$ for classifying event $i$ is defined by \cite{tmvaWebsite}:
+\begin{equation}
+y_{F_i}(i) = F_0+\sum_{k=1}^{n_{params}}F_k x_k(i),
+\end{equation}
+where $n_{params}$ is the number of input parameters; the Fisher coefficients, $F_k$ is given by:
+\begin{equation}
+F_k = \frac{\sqrt{N_SN_B}}{N_S+N_B}\sum_{l=1}^{n_{params}}1/W_{kl}(\bar{x}_{S,l}-\bar{x}_{B,l}),
+\end{equation} 
+where $N_{S(B)}$ are the number of signal (background) events in the training sample; $\bar{x_{S(B),l}}$ are the means of input parameters for siganl (background); $W_{kl}$ is the covariance matrix\cite{tmvaWebsite}.
+
+For the BDT method, the adaptive boosting (AdaBoost) algorithm was used; 400 trees were trained with a maximum depth of 3; gini index was used for the decision tree.
+
+For the MLP method, sigmoid function was set as the activate function; 4 hidden layers, 200 training cycles were used.
+
+I used 9 parameters as inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$. Among them, the input values of $ITR$ and $\beta_{14}$ were after the beforehand cuts mentioned above. The $NHits$ and $\theta_{ij}$ were not used, since the $NHits$ is correlated to the energy while the $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
 
 The MLP method gave the best results, while it was the most CPU-consuming method.
-
-9 parameters (where the $ITR$, $E_{fit}$ and $\beta_{14}$ were after the cuts mentioned above) were used as inputs: $ITR$, $\beta_{14}$,$E_{fit}$,  $G_{test}$, $U_{test}$, $scaleLogL$, $u\dot R$ and $klDiv$. The $NHits$ and $\theta_{ij}$ were not used, since the $NHits$ is corresponded to the energy while $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
-
-sigmoid function as activate function.
-4 hidden layers, 400 training cycles were used.
-
-
-
-
-
- for the multiple variable analysis (MVA).
 
 The output signal/background distributions on the test sub dataset are shown in Fig.~\ref{output_separation_allE}.
 \begin{figure}[htbp]
 	\centering
-	\subfigure[Fisher output.]{
+	\subfigure[Fisher/LD output.]{
 		\begin{minipage}[t]{0.4\textwidth}
 			\includegraphics[width=6cm]{output_allE_Fisher.pdf}
-		\end{minipage}
-	}   
-	\subfigure[Likelihood output.]{
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{output_allE_LD.pdf}
 		\end{minipage}
 	}
 	\subfigure[BDT output.]{
@@ -257,27 +239,25 @@ The output signal/background distributions on the test sub dataset are shown in 
 	\label{output_separation_allE}
 \end{figure}
 
-
 As one of the essential TMVA output, the background rejection versus signal efficiency curve is also called a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{ROC_allE.pdf}
+	\includegraphics[width=10cm]{ROC_E4to15.pdf}
 	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<15~MeV$.}
 	\label{allE_roc}
 \end{figure}
-where the LD and the Fisher methods are almost match with each other; the BDT and the MLP are close to each other while the MLP shows the largest AUC values.
-
+where the Fisher/LD is the worst case; the BDT and MLP outputs are close to each other while the MLP gives the largest AUC values.
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{ROC_hiE.pdf}
+	\includegraphics[width=10cm]{ROC_E5to15.pdf}
 	\caption{ROC curves from TMVA output, for event with $5<E_{fit}<15~MeV$ (energy above 5 MeV).}
 	\label{E5to15_roc}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{ROC_lowE.pdf}
+	\includegraphics[width=10cm]{ROC_E4to5.pdf}
 	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<5~MeV$ (low energy region).}
 	\label{E4to5_roc}
 \end{figure}
@@ -286,14 +266,13 @@ A typical CPU time for a certain method to train the dataset is listed in Table.
 
 \begin{table}[ht]
 	\centering
-	\caption{Testing results of $4<E_{fit}<15 MeV$ from different TMVA methods.}
+	\caption{Testing results of $4<E_{fit}<15~MeV$ from different TMVA methods.}
 	\label{table:tmvaMethod_allE}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		Method & AUC &CPU time (second/$10^6$ events) \\
 		\midrule
-		Fisher & 0.915 & 0.81\\
-		LD & 0.915& 1.14 \\
+		Fisher/LD & 0.915 & 0.81\\
 		BDT &  0.940 & 249.53 \\
 		MLP & 0.944 & 1370.02\\
 		\bottomrule
@@ -302,14 +281,13 @@ A typical CPU time for a certain method to train the dataset is listed in Table.
 
 \begin{table}[ht]
 	\centering
-	\caption{Testing results of $5<E_{fit}<15 MeV$ (above 5 MeV) from different TMVA methods.}
+	\caption{Testing results of $5<E_{fit}<15~MeV$ (above 5 MeV) from different TMVA methods.}
 	\label{table:tmvaMethod_hiE}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		Method & AUC &CPU time (second/$10^6$ events)\\
 		\midrule
-		Fisher & 0.915& 0.93\\
-		LD & 0.915 & 1.39\\
+		Fisher/LD & 0.915& 0.93\\
 		BDT & 0.950 & 269.71\\
 		MLP &  0.958 & 1450.90\\
 		\bottomrule
@@ -318,73 +296,127 @@ A typical CPU time for a certain method to train the dataset is listed in Table.
 
 \begin{table}[ht]
 	\centering
-	\caption{Testing results of $4<E_{fit}<5 MeV$ (low energy region) from different TMVA methods.}
+	\caption{Testing results of $4<E_{fit}<5~MeV$ (low energy region) from different TMVA methods.}
 	\label{table:tmvaMethod_lowE}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
-		Method & AUC & signal $\epsilon$ & CPU time (second/$10^6$ events) \\
+		Method & AUC & CPU time (second/$10^6$ events) \\
 		\midrule
-		Fisher & 0.782 & 0.84\\
-		LD & 0.782 &1.04\\
+		Fisher/LD & 0.782 & 0.84\\
 		BDT & 0.816 & 280.1\\
 		MLP & 0.823 &1337.9\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-with lower energy, it is more difficult to separate the signals from the backgrounds.
+It shows that, when the energy goes lower, it is more difficult to separate the signals from the backgrounds.
 
+The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. It is also used to extract the number of signal and background events, which will be discussed in the following sections. Here I applied the BDT and the MPL method on the test sub dataset. For the real dataset from run-200004 to 207718, the trained weights and parameters from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
+%The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
+%4<E<15 MeV
+%BDT signal efficiency     = 0.828483
+%BDT background efficiency = 0.0764527
+%MLP signal efficiency        = 0.842493
+%MLP background efficiency    = 0.0840084
+%5<E<15 MeV
+%BDT signal efficiency     = 0.868345w
+%BDT background efficiency = 0.103896
+%MLP signal efficiency        = 0.887622
+%MLP background efficiency    = 0.104416
+%
+%4<E<5 MeV
+%BDT signal efficiency     = 0.72266
+%BDT background efficiency = 0.245453
+%MLP signal efficiency        = 0.723576
+%MLP background efficiency    = 0.235984
 
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=8cm]{ITR_MPW_solarNuVsExSolar.png}
+%	\caption{Comparison between solar $\nu_e$ and external solar $\nu_e$; MPW results.}
+%	\label{itrCmp}
+%\end{figure}
+\subsubsection{TMVA Outputs for Data}
 
+Fig.~\ref{cosThetaToSun_4to15_BDT} and Fig.~\ref{cosThetaToSun_5to15_BDT} show the BDT selection outputs from the 190.36-day dataset. Fig.~\ref{cosThetaToSun_4to15_MLP} and Fig.~\ref{cosThetaToSun_5to15_MLP} show the MLP outputs. 
+Table.~\ref{table:eventNumbers} shows the number of the output events for different energy regions and from different methods.
 
+Cuts on the position and energy FOMs suggested by the collaboration\cite{morganFOM} are \footnote{There is also a suggested cut on the quantity of $position_error$ ($position_error<525~mm$). However, since this quantity was not calculated by the MPW fitter, it was not included here.}: $-11<Z_{factor}<1$, $scaleLogL>10.85$, $0<G_{test}t<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Combined with the ``beforehand cuts'', the whole set of cuts is considered as ``default cuts'' here and will be compared with the TMVA outputs.
 
-Therefore, the Fisher and LD methods have similar results and they both took little CPU time for training the dataset.
-
-
-%energy cuts, ts combining with NHit cuts
-
-%6 variables used as inputs
-
-The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MPL method on the test sub dataset 
-
-4<E<15 MeV
-BDT signal efficiency     = 0.828483
-BDT background efficiency = 0.0764527
-MLP signal efficiency        = 0.842493
-MLP background efficiency    = 0.0840084
-
-
-5<E<15 MeV
-BDT signal efficiency     = 0.868345
-BDT background efficiency = 0.103896
-MLP signal efficiency        = 0.887622
-MLP background efficiency    = 0.104416
-
-4<E<5 MeV
-BDT signal efficiency     = 0.72266
-BDT background efficiency = 0.245453
-MLP signal efficiency        = 0.723576
-MLP background efficiency    = 0.235984
+\begin{table}[ht]
+	\centering
+	\caption{Number of candidate events for different selection methods.}
+	\label{table:eventNumbers}
+	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccc}
+		\toprule
+		Method & selected signals ($S$) & backgrounds ($N$)& $S/N$ \\
+		\hline  %1472
+		$[4,15]~MeV$ & (total: 1922 events)& &\\
+		\hline
+		BDT & 367  & 1555 &0.236 \\
+		MLP & 484 & 1438 & 0.337\\
+		default cut &932   & 990& 0.941\\
+		\hline
+		$[5,15]~MeV$ & (total: 207 events)&  & \\
+		\hline
+		BDT & 156  & 51 & 3.06\\
+		MLP &  160 & 47 & 3.40 \\
+		default cut & 162 & 45 & 3.60\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{ITR_MPW_solarNuVsExSolar.png}
-	\caption{Comparison between solar $\nu_e$ and external solar $\nu_e$; MPW results.}
-	\label{itrCmp}
+	\includegraphics[width=8cm]{cosThetaToSun_4to15_BDT.pdf}
+	\caption{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\label{cosThetaToSun_4to15_BDT}
 \end{figure}
 
-For the real dataset from run-200004 to 207718, the trained weights and parameters from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cosThetaToSun_5to15_BDT.pdf}
+	\caption{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\label{cosThetaToSun_5to15_BDT}
+\end{figure}
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cosThetaToSun_4to15_MLP.pdf}
+	\caption{MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\label{cosThetaToSun_4to15_MLP}
+\end{figure}
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cosThetaToSun_5to15_MLP.pdf}
+	\caption{MLP output for $\cos\theta_{sun}$, with $5<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\label{cosThetaToSun_5to15_MLP}
+\end{figure}
+
+%6<E_{fit}<15~MeV$
+
+%Comparisons
+
+The main analysis is focused on the [5,15] MeV energy region. A comparison of the outputs of $5<E_{fit}<15~MeV$ from the BDT, MLP and the default cuts is shown in Fig.~\ref{compare_cosThetaToSun_5to15}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{Compare_cosThetaSun_5to15.pdf}
+	\caption{For the $5<E_{fit}<15~MeV$, comparing the outputs of the BDT, MLP and the default cuts. The solid blue line shows the BDT results; the red slashes show the MLP results and the dotted black line shows the default cut results.}
+	\label{compare_cosThetaToSun_5to15}
+\end{figure}
+
+\subsection{Discussion on the TMVA Results}
+A more stringent radial cut (or tighter FV) can be applied on lower energy region $4<E_{fit}<5~MeV$ to further remove the backgrounds which are dominant in lower energy region. However, this tighter cut can also reduce the number of signals.
 
 Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can also be considered as an alternative tool or as a reference for results comparisons. 
 
 \subsection{Likelihood Fits for Solar Neutrino Candidate Events}
-The optimized cuts obtained from the TMVA analysis from the previous section were applied on the dataset. 
+In the previous section, the optimized cuts obtained from the TMVA analysis were applied on the dataset. 
 
 After the event selections, a distribution of $\cos\theta_{sun}$ extracted from the solar $\nu_e$ candidate events was obtained. 
 
-\subsubsection{Maximum Likelihood Fit}
+\subsubsection{Maximum Likelihood Fit}\label{poisson_fit}
 A maximum likelihood method was applied on the distribution to extract the number of the solar $\nu_e$ events ($N_{sig}$) as well as the number of the background events ($N_{bkg}$).
 
 The values of $\cos\theta_{sun}$ from the selected events were filled into a histogram divided into bins.
@@ -405,43 +437,37 @@ Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as fit parameters, the
 =-\sum_i\ln(Poisson(n^i_{obs}, N_{bkg}P^i_{bkg}+N_{sig}P^i_{ES}(E^i))),
 \end{equation}
 
-By fitting the \ref{eq:solar_poissonFit} to the data, $N_{bkg}$ and $N_{sig}$ were obtained.
-Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ events is $N_{sig} = 67.1\pm9.2$, which is equivalent to a rate of $1.04\pm 0.14~event/(day\cdot kiloton)$; while the fitted number of background events is $N_{sig} = 3.4\pm0.91$, which is equivalent to a rate of $0.05\pm 0.01 event/(day\cdot kiloton)$.
+By fitting the \ref{eq:solar_poissonFit} to the data, $N_{bkg}$ and $N_{sig}$ were obtained. Based on fake dataset, an ensemble test was used for testing the fit, as shown in the next section.
+%Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ events is $N_{sig} = 67.1\pm9.2$, which is equivalent to a rate of $1.04\pm 0.14~event/(day\cdot kiloton)$; while the fitted number of background events is $N_{sig} = 3.4\pm0.91$, which is equivalent to a rate of $0.05\pm 0.01 event/(day\cdot kiloton)$.
+%
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=8cm]{solarFits1.png}
+%	\caption{Fitted results for the $N_{bkg}$ and $N_{sig}$ via the maximum likelihood method.}
+%	\label{solarFits1}
+%\end{figure}
+%
+%2D fits
+\subsubsection{Ensemble Test}
+To check the uncertainty of the Poisson fit, 5000 fake datasets were generated. Here I used the method similar to the \cite{leta}.
+The fake data were taken from the MC simulation dataset of run-200004 to 203602 after the default cuts (the same to the one used by the TMVA). In the MC dataset, for $E_{fit}>5~MeV$, there were 6359 backgrounds from different background events and 317205 signals of internal solar $\nu_e$ events (the event types were mentioned in Table.~\ref{table:mixed_MC}).
+The number of fake backgrounds, $N_{F,bkg}$, was assumed to be two times the event number in the $-1<\cos\theta_{sun}<0$ region while the number of fake signals $N_{F,sig}=N_{total}-N_{F,bkg}$. Reading from the sub dataset of run-200004 to 203602, the $N_{F,bkg}$ was set to 38 and then $N_{F,sig}=109-N_{F,bkg}=71$, as shown in Fig.~\ref{half_data}. For the ensemble test, it randomly picked up 71 events from the solar $\nu_e$ MC simulations and 39 events from merged backgrounds. Their values of $\cos\theta_{sun}$ and $E_{fit}$ were filled into histograms. Fig.~\ref{ensemble_test} shows an example of randomly generated dataset fitted with the maximum likelihood function mentioned in \ref{poisson_fit}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cosThetaToSun_halfData_5to15.pdf}
+	\caption{Data from run-200004 to 203602, after the default cuts. The number of counts in $-1<\cos\theta_{sun}<0$ is 19.}
+	\label{half_data}
+\end{figure}
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{solarFits1.png}
-	\caption{Fitted results for the $N_{bkg}$ and $N_{sig}$ via the maximum likelihood method.}
-	\label{solarFits1}
-\end{figure}
+	\includegraphics[width=8cm]{ensemble_fitExample.pdf}
+	\caption{An example of randomly generated $\cos\theta_{sun}$ for the maximum likelihood fit. The black dots are data points and the red line is the fitted results. 
+	$N_{sig} = 98.61\pm15.63$ and $N_{bkg} = 1.91 \pm 1.78$ were obtained with a $\chi^2/ndf = 10.7373/14 = 0.77$.}
+	\label{ensemble_test}
+\end{figure} 
 
-2D fits
-
-The main analysis is focused on the [5,15] MeV energy region.
-
-default cuts: $-11<Z_{factor}<1$, $scaleLogL>10$, $0<G_{test}t<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$.
-
-\begin{table}[ht]
-	\centering
-	\caption{Number of candidate events.}
-	\label{table:eventNumbers}
-	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccc}
-		\toprule
-		Method & events cut off & fitted signals & fitted backgrounds \\
-		\midrule
-		BDT &   &  1\\
-		MLP &   & \\
-		default cut & \\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-\subsubsection{Ensemble Test}
-To check the uncertainty of the Poisson fit, for the $FV<5500~mm$, 5000 fake datasets were generated.  
-
-
-
-
+The fit pull and the fit bias were defined by \cite{leta}:
 \begin{equation}
 bias=\frac{N_{fit}-S_{MC}}{N_{fit}},
 \end{equation}
@@ -449,16 +475,70 @@ bias=\frac{N_{fit}-S_{MC}}{N_{fit}},
 \begin{equation}
 pull=\frac{N_{fit}-S_{MC}}{\sigma_{fit}},
 \end{equation}
+where $N_{fit}$ is the fitted number of signal events, $\sigma_{fit}$ is the statistical uncertainty of $N_{fit}$; $S_{MC}(=71)$ is the true number of signal events in the fake dataset.
+
+Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and biases respectively.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{ensemble_fitPull.pdf}
+	\caption{Fit pulls for 2000 fake datasets.}
+	\label{poisson_fitPull}
+\end{figure} 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{ensemble_fitBias.pdf}
+	\caption{Fit biases for 2000 fake datasets.}
+	\label{poisson_fitBias}
+\end{figure} 
+
+\subsubsection{Fitting on the Whole Dataset (run-200004 to 207718)}
+For $5<E_{fit}<15~MeV$, the outputs from the BDT, MLP were fitted. Fig.~\ref{wholeDataset_poissonFit_bdt} and Fig.~\ref{wholeDataset_poissonFit_mlp} show their results respectively.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{wholedataFit_bdt.pdf}
+	\caption{Fitted results for the $5<E_{fit}<15~MeV$ BDT outputs. $N_{sig}=109.02\pm13.43$ and $N_{bkg}=3.68\pm0.87$ were obtained with $\chi^2/ndf=3.31$.}
+	\label{wholeDataset_poissonFit_bdt}
+\end{figure} 
+The fitted results of the BDT outputs give a signal rate of $0.824\pm0.102$ events/kt-day and background rate of $0.028\pm 0.007$ events/kt-day in the energy region $[5,15]~MeV$.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{wholedataFit_mlp.pdf}
+	\caption{Fitted results for the $5<E_{fit}<15~MeV$ MLP outputs. $N_{sig}=109.50\pm13.41$ and $N_{bkg}=3.54\pm0.86$ were obtained with $\chi^2/ndf=2.72$.}
+	\label{wholeDataset_poissonFit_mlp}
+\end{figure} 
+
+The fitted results of the MLP outputs gives a signal rate of $0.828\pm0.101$ events/kt-day and background rate of $0.027\pm 0.007$ events/kt-day in the energy region $[5,15]~MeV$.
+
+It can be concluded here that an extremely low background rate was achieved for the low background dataset.
 
 \subsubsection{Systematics Evaluation}
 The systematics of position, direction and energy reconstruction were obtained from the Chapter 5.
 
+Table.~ summarizes the systematic errors used for this analysis.
+
+
+A remapping of $\cos\theta_{sun}$ by using the equation \ref{remapTheta} was applied on the spectrum for 
+evaluating the systematics.
+
+
+
+
+
+
+
+
+\subsubsection{Extracting the Solar Neutrino Flux}
 
 
 \subsubsection{Limits of the Study}
-background types, fractions
-efficiency
+Here I used the background types descried in the Table.~\ref{table:mixed_MC}. However, there are a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmogenic ones mainly caused by the cosmic muons. A more comprehensive study requires to include all possible backgrounds.
+
+For the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic shape of the distribution can be investigated to describe the backgrounds more properly.  
 
 
-
-
+%fractions
+%efficiency

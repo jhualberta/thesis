@@ -27,7 +27,63 @@ The $^{16}$N calibration runs provide ideal tests for the fitter performance. Fr
 	\label{N16centralDiagram}
 \end{figure}
 
-The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. Figure~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering. 
+
+
+\section{High Level Cuts for the Water Phase}\label{sect:high_level_cuts}
+A set of classifiers were developed by SNO analysis and been optimized for the SNO+ water analysis\cite{highlevel}.
+valid reconstruction
+These classifiers utilize the reconstructed quantities
+
+\begin{itemize}
+	\item[$\bullet$] In time ratio (ITR) classifier
+	
+	For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, it checked 
+	
+	[-2.5,5.0]~ns (for the water phase) to the total number of hits.
+	
+	
+	\item[$\bullet$] $\beta_{14}$ isotropy classifier
+	
+	This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical	harmonics of an event, where:
+	\[
+	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
+	\]
+	and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
+	
+	
+	The	combination	of these two polynomials returned by the classifier	was	
+	practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
+	as this gives gaussian-like	distribution pattern for Cherenkov events.	
+	Essentially	any	deviation from zero suggests some polarity (i.e. the event is not isotropic).	
+	
+	
+	\item[$\bullet$] $\theta_{ij}$ isotropy classifier 
+	
+	This classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j, which is calculated as:
+	\begin{equation}
+	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}.
+	\end{equation}
+\end{itemize}
+
+$^{16}$N data/MC comparisons
+
+
+
+
+\section{Extracting Fitter Resolutions}
+For an event with the position, direction and energy successfully reconstructed (i.e., the event has valid position, direction and energy reconstructions), a set of high level cuts were applied: $ITR>0.55$, $-0.12<\beta_{14}<0.95$. 
+data clean masks were also applied on the $^{16}$N calibration data.
+
+\subsection{Position Resolution}
+A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
+\[
+R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
+\]
+where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
+the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
+
+Fig.~\ref{hsx} shows the spatial distributions of the first $\gamma$-ray interaction positions projected on the x axis (called spatial distribution $S(x)$) obtained from MC simulation. The $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
 \begin{figure}[!htb]
 	\centering
@@ -36,12 +92,7 @@ The $\gamma$-rays emitted from the $^{16}$N source interact with the water in th
 	\label{hsx}
 \end{figure}
 
-A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
-\[
-R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
-\]
-where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
-the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift  (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
+
 
 For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay2004direct}:
 \[
@@ -234,9 +285,7 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 	\end{tabular*}
 \end{table}
 
-
-
-\subsection{Angular Resolution}
+\subsection{Direction Resolution}
 
 Here the 'true' direction is defined as the direction pointing from the source positions to the fitted position: $\vec{u}_{true} = \vec{X}_{fit}-\vec{X}_{source}$. The angle $\theta$ is the displacement between the `true' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
 
@@ -335,49 +384,7 @@ $\beta_{14}$ systematic
 	\label{16Nexternal}
 \end{figure}
 
-\section{High Level Cuts: Classifiers}
-
-A set of classifiers were developed by SNO analysis and been optimized for the SNO+ water analysis\cite{highlevel}.
-
-valid reconstruction
-
-
-These classifiers utilize the reconstructed quantities
-
-\begin{itemize}
-	
-	\item[$\bullet$] In time ratio (ITR) classifier
-	
-	For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, it checked 
-	
-	[-2.5,5.0]~ns (for the water phase) to the total number of hits.
-	
-	
-	\item[$\bullet$] $\beta_{14}$ isotropy classifier
-	
-	This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical	harmonics of an event, where:
-	\[
-	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij})
-	\]
-	and $P_l(\cos\theta_{ij})$ are Legendre polynomials.
-	
-	
-	The	combination	of these two polynomials returned by the classifier	was	
-	practically	chosen by the SNO collaboration	to be: $\beta_{14}=\beta_1+4\beta_4$
-	as this gives gaussian-like	distribution pattern for Cherenkov events.	
-	Essentially	any	deviation from zero suggests some polarity (i.e. the event is not isotropic).	
-	
-	
-	\item[$\bullet$] $\theta_{ij}$ isotropy classifier 
-	
-	describes the angle subtended at an event vertex by PMT \#i and PMT \#j.
-	
-	\[
-	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}
-	\]
-\end{itemize}
-
-\section{Energy}
+\subsection{Energy Resolution}
 The RSP energy reconstruction algorithm mentioned in Chapter 4 was applied on $^{16}$N MC simulations and data.
 The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
 \begin{figure}[htbp]
@@ -493,7 +500,7 @@ Fig.~\ref{energyFOM_Utest} shows $U_{test}$ vs. energy biases. A cut of $0.61<U_
 	\label{energyFOM_Utest}
 \end{figure}
 
-	\item[$\bullet$] $G_{test}$: Fig.~\ref{energyFOM_Gtest} shows $G_{test}$ vs. energy biases. A cut of $0<G_{test}<1.9$ was suggested by the collaboration, which removes 0.01\% events for both MC and data.	
+\item[$\bullet$] $G_{test}$: Fig.~\ref{energyFOM_Gtest} shows $G_{test}$ vs. energy biases. A cut of $0<G_{test}<1.9$ was suggested by the collaboration, which removes 0.01\% events for both MC and data.	
 	
 \begin{figure}[!htb]
 	\centering
@@ -539,7 +546,77 @@ Fig.~\ref{energyFOM_Zfactor} shows $Z_{factor}$ vs. energy biases. A cut of $-11
 All the cuts on the three energy FoM quantities removes 0.40\% events from MC and 0.37\% events from data.
 These cuts were used in the water phase analysis which was described in the next Chapter.
 
-\section{Energy Scale Uncertainties}
+
+
+\section{Systematics for the Water Phase}
+
+\subsection{Position Scale Uncertainties}
+
+$\delta_r = \sqrt{\delta_x^2+\delta_y^2+\delta_z^2}$
+the scale uncertainty depends on the radius,
+$\delta_f =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2\delta^2_{x_i}}=\sqrt{\frac{x^2\delta^2_x+y^2\delta^2_y+z^2\delta^2_z}{r^2}}$
+
+$x^{data}_{fit}=\Delta+(1+\beta)\cdot x^{MC}_{fit}$
+$\alpha\equiv 1+\beta, R_{data}=\alpha R_{MC}$
+
+
+$\sqrt{\sum_i(\mu^{data}_{P,i})^2}-\sqrt{\sum_i(\mu^{MC}_{P,i})^2}~~(i=x,y,z)$
+
+$x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta+\beta\cdot x^{MC}_{fit}$
+
+\subsection{Direction Uncertainties}
+The relative difference between data and MC of a quantity $q$ is defined as:
+\begin{equation}
+\Delta (q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%.
+\end{equation}
+
+$\Delta (\beta_{M})_{rel}$ = (3.64-4.36)/4.36*100=-16.51 \%
+
+$\Delta \beta_{S}$  = (18.07-20.94)/20.94*100=-13.71\%
+
+$\sqrt{|\sum_i[(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2]|}~~(i=x,y,z)$
+
+\begin{figure}[!htb]\label{direction_scan}
+	\centering
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.}
+\end{figure}
+
+
+To be conservative, 
+full range of the uncertainty on the 
+
+The direction systematic $\delta_\theta$ was determined as .
+
+
+remapping
+\begin{equation}\label{remapTheta}
+\cos\theta'=1+(\cos\theta_{sun}-1)(1+\delta_{\theta}),
+\end{equation} 
+ 
+ 
+
+
+\subsection{Energy Scale Uncertainties}
+
+
+$\Delta^2_\delta\equiv (\delta_{E,data}-\delta_{E,MC})^2+Error^2_{\delta,data}+Error^2_{\delta,MC}$
+
+$\Delta^2_b\equiv (b_{E,data}-b_{E,MC})^2+Error^2_{b,data}+Error^2_{b,MC}$
+
+$\bar{\Delta}=\sum_i^{N_{cells}}f_i\Delta_i$, where $\sum_i^{N_{cells}}f_i=1$
+$f_i$: the fractional volume of cell $i$
+
+$f_i = S_{cell}/S_{total} = (857*1000)/(\pi\cdot6000^2)$
+
+
+
+$f_i = S_{cell}/S_{total} = (640*1000)/(12000 \cdot \sqrt{2*6000^2}$)
+
+
+$\overline{\Delta_{\delta_E}}$
+
+$\overline{\Delta_b}$
 
 the uncertainties of the reconstructed energy scale and resolution.
 
@@ -547,19 +624,18 @@ Fig.~\ref{map_energyScale} and Fig.~\ref{map_energyResol} show the maps of the e
 
 $570~mm\times 2000~mm$ cells of $z_{fit}\times \rho_{fit}$.
 
-\begin{figure}[!htb]\label{map_energyScale}
-	\centering
-	\includegraphics[width=5.5cm]{skyShine.png}
-	\caption{A map of relative energy scale $\delta_E$ across the detector.}
-
-\end{figure}
-
-\begin{figure}[!htb]\label{map_energyResol}
-	\centering
-	\includegraphics[width=5.5cm]{skyShine.png}
-	\caption{A map of relative energy scale $\delta_E$ across the detector.}
-\end{figure}
-
+%\begin{figure}[!htb]\label{map_energyScale}
+%	\centering
+%	\includegraphics[width=5.5cm]{skyShine.png}
+%	\caption{A map of relative energy scale $\delta_E$ across the detector.}
+%
+%\end{figure}
+%
+%\begin{figure}[!htb]\label{map_energyResol}
+%	\centering
+%	\includegraphics[width=5.5cm]{skyShine.png}
+%	\caption{A map of relative energy scale $\delta_E$ across the detector.}
+%\end{figure}
 
 
 
@@ -680,167 +756,6 @@ $skyShine>1.6$: 3149/3376
 $skyShine>1.7$: 3149/3351
 Can check with more productions/higher statistics.
 
-\subsection{Different PPO Concentrations during the Filling}
-
-Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
-
-The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
-
-The partial fitter is re-coordinated according to these measurements.
-
-\begin{table}[ht]
-	\centering
-	\caption{\label{oxfordMeasure} time constants and amplitudes measured by Oxford group \cite{oxfordMeasurement}.}	
-	{\centering
-		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
-			\toprule 
-			PPO [g/L] & $\tau_{rise}$ [ns] & $\tau_1$ [ns] & $\tau_2$ [ns] & $\tau_3$ [ns] & $A_1$ [\%]  & $A_2$ [\%]   & $A_3$ [\%]  & $A'$ [\%] \\
-			\midrule
-			0.25 & 1.25 & 8.1 & 25.0 & 68.2 & 29.2 & 53.1 & 13.9 & 3.8\\
-			0.5  & 1.12 & 7.2 & 18.7 & 49.1 & 43.5 & 40.4 & 12.6 & 3.5 \\
-			1.0 & 1.18 & 5.5 & 13.3 & 40.9 &	45.6 & 37.5 & 13.3 & 3.6 \\
-			2.0 & 1.06 & 4.2 & 11.7 & 48.9 & 57.9 & 27.8 & 8.9 & 5.4	\\
-			6.0 & 0.94 & 2.5 & 9.3  & 46.0 & 63.7 & 17.0 & 8.6 & 10.7\\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-
-
-\[
-\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}}
-\]
-
-based on these measured parameters, pdfs were built. 
-
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=6cm]{skyShine.png}
-%	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
-%	\label{oxford_pdf}
-%\end{figure}
-
-relative light yield (2g/L = 11900)
-\begin{table}[ht]
-	\centering
-	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by \cite{oxfordMeasurement}.}	
-	{\centering
-		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
-			\toprule 
-			PPO [g/L] & RLY \\
-			\midrule
-			0.25 & 0.57\\
-			0.5 & 0.65\\
-			1.0 & 0.9\\
-			2.0 & 1.0\\
-			6.0 & 0.93\\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{oxfordPdf_log.png}
-	\caption{Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}
-	\label{oxfordPdf}
-\end{figure}
-
-
-
-
-The partial fitter is robust with changes of time profile pdfs.
-
-
-radial biases
-\begin{table}[ht]
-	\centering
-	\caption{\label{partial_groupV}Tuned effective group velocities for different PPO concentrations.}	
-	{\centering
-		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
-			\toprule 
-			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_{scint}$ & $V_{gr,water}$ [mm/ns]& $n_{water,tuned}$\\
-			\midrule
-			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
-			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\
-			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
-			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
-			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-
-
-Simulate 5000 events for 3 MeV $e^-$,  
-
-
-$\Delta x = x_{fit}-x_{mc}$
-
-\begin{table}[ht]
-	\centering
-	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
-	{\centering
-		\begin{tabular*}{145         mm}{c@{\extracolsep{\fill}}cccccc}
-			\toprule 
-			PPO [g/L] & fit speed [s/event]& $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & $r_{bias}$ [mm] & \\
-			\midrule
-			0.25 & 0.190 &6.65 &2.64& -18.24& -7.22\\
-			0.5  & 0.144 &-0.73 &-1.69& -8.14& 3.30 \\
-			1.0 &0.190 & 1.42 &0.57 &-5.65& 10.67 \\
-			2.0 &0.194 & 0.34 &1.78& -4.01& 13.37	\\
-			6.0 &0.145 & -0.11& -0.12& -25.97& -10.97\\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-
-%% fit resolutions
-$z_{fit}$ resolution [mm] 
-
-%& 120.6
-%& 90.02
-%& 67.39
-%& 55.81
-%& 58.62
-
-fit with wrong PPO concentrations:  
-\begin{table}[ht]
-	\centering
-	\caption{\label{partial_bias1} Fit speeds and biases for various PPO concentrations.}	
-	{\centering
-		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccccccc}
-			\toprule 
-			PPO [g/L] & $\Delta x$ & $\Delta y$ & $\Delta z$  & $\sigma_z$ & $r_{bias}$  & $\sigma_r$ & ratio in FV (\%)&\\
-			\midrule
-			0.25 & 6.80& 2.90& -14.61& 121.6& -4.82& 120.3& 93.70\%\\
-			0.5  & 5.15& 2.82& -12.85 &120.2 &1.34 &123.0 &93.46\% \\
-			1.0 &2.32 &1.95 &-13.22& 120.3& 0.344& 121.9 &93.78\% \\
-			2.0 &5.76& 3.03& -9.61& 119.3& 7.264 &125.1& 93.26\% \\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-
-
-
-PPO in Fitter
-configuration
-
-
-\subsection{Bi-Po Analysis}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=15cm]{flowchart_latex.pdf}
-	\caption{A flow chart for Bi-Po tagging.}
-	\label{biPo_flowchart}
-\end{figure}
-
-
-
-
 \subsection{$^{16}$N Calibration in the Partial-fill Phase}
 
 water level was at 5100 mm from the center of the AV (in AV coordination).
@@ -852,9 +767,6 @@ The \isotope[16]{N} source was deployed in the external water region during the 
 run 251748 2019/09/19 and 
 
 Source position was at $(-1120.8, 1041.4, 6172.5)~ mm$ for a 30-minute duration and at $(-1120.8. 1041.4, 6108.0)~mm$ for a 7-hour duration (separated into 7 runs).
-
-
-
 
 
 \subsection{Extracting the Cherenkov Signals in Partial-fill Phase}
