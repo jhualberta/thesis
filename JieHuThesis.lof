@@ -102,23 +102,23 @@
 \contentsline {figure}{\numberline {5.27}{\ignorespaces $^{16}$N central-run 107055, $G_{test}$ vs. $E_{fit}$/5.1 MeV.}}{122}{figure.5.27}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC}}}{122}{figure.5.27}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {data}}}{122}{figure.5.27}
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Relative differences of $\beta _M$ and $\beta _S$ as a function of the $^{16}$N source position.}}{123}{figure.5.28}
-\contentsline {figure}{\numberline {5.29}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{125}{figure.5.29}
-\contentsline {figure}{\numberline {5.30}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{126}{figure.5.30}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{126}{figure.5.30}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{126}{figure.5.30}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Relative differences of $\beta _M$ and $\beta _S$ as a function of the $^{16}$N source position. For simplicity, the ``corner scan'' runs are not shown in this figure. The red squares show results from the x-scan runs; green circles show the y-scan runs and the blue triangles show the z-scan runs.}}{124}{figure.5.28}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{126}{figure.5.29}
+\contentsline {figure}{\numberline {5.30}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{127}{figure.5.30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{127}{figure.5.30}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{127}{figure.5.30}
 \contentsline {figure}{\numberline {5.31}{\ignorespaces MC positions vs. skyShine values for simulated $^{208}$Tl events.}}{127}{figure.5.31}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{mc}$ vs. $skyShine$.}}}{127}{figure.5.31}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{mc}$ vs. $skyShine$.}}}{127}{figure.5.31}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{mc}$ vs. $skyShine$.}}}{127}{figure.5.31}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$r_{mc}$ vs. $skyShine$.}}}{127}{figure.5.31}
-\contentsline {figure}{\numberline {5.32}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{127}{figure.5.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{127}{figure.5.32}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{127}{figure.5.32}
-\contentsline {figure}{\numberline {5.33}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{128}{figure.5.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{128}{figure.5.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{128}{figure.5.33}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{128}{figure.5.33}
+\contentsline {figure}{\numberline {5.32}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{128}{figure.5.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{128}{figure.5.32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{128}{figure.5.32}
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{129}{figure.5.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{129}{figure.5.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{129}{figure.5.33}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{129}{figure.5.33}
 \contentsline {figure}{\numberline {5.34}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{129}{figure.5.34}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{129}{figure.5.34}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{129}{figure.5.34}
@@ -126,14 +126,14 @@
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{129}{figure.5.34}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{129}{figure.5.34}
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{129}{figure.5.34}
-\contentsline {figure}{\numberline {5.35}{\ignorespaces Radial resolutions with different skyShine cuts.}}{129}{figure.5.35}
-\contentsline {figure}{\numberline {5.36}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{130}{figure.5.36}
-\contentsline {figure}{\numberline {5.37}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{131}{figure.5.37}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{131}{figure.5.37}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{131}{figure.5.37}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{131}{figure.5.37}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{131}{figure.5.37}
-\contentsline {figure}{\numberline {5.38}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{132}{figure.5.38}
+\contentsline {figure}{\numberline {5.35}{\ignorespaces Radial resolutions with different skyShine cuts.}}{130}{figure.5.35}
+\contentsline {figure}{\numberline {5.36}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{131}{figure.5.36}
+\contentsline {figure}{\numberline {5.37}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{132}{figure.5.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{132}{figure.5.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{132}{figure.5.37}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{132}{figure.5.37}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{132}{figure.5.37}
+\contentsline {figure}{\numberline {5.38}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{133}{figure.5.38}
 \contentsline {figure}{\numberline {5.39}{\ignorespaces Simulated main track of 7.1 MeV $\gamma $ for one event from $\isotope [16]{N}$ source in the external water during the partial-fill phase.}}{133}{figure.5.39}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{137}{figure.6.1}

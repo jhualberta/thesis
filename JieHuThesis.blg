@@ -62,45 +62,45 @@ Warning--there's a number but no series in perkins2009particle
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
 Warning--empty year in brianLowBG
-You've used 182 entries,
+You've used 183 entries,
             1876 wiz_defined-function locations,
-            1348 strings with 31941 characters,
-and the built_in function-call counts, 38985 in all, are:
-= -- 3462
-> -- 2133
+            1352 strings with 32097 characters,
+and the built_in function-call counts, 39109 in all, are:
+= -- 3477
+> -- 2137
 < -- 0
-+ -- 804
-- -- 622
-* -- 2709
-:= -- 5990
-add.period$ -- 239
-call.type$ -- 182
++ -- 806
+- -- 623
+* -- 2714
+:= -- 6013
+add.period$ -- 241
+call.type$ -- 183
 change.case$ -- 129
 chr.to.int$ -- 0
-cite$ -- 236
-duplicate$ -- 2126
-empty$ -- 3576
-format.name$ -- 622
-if$ -- 9268
+cite$ -- 237
+duplicate$ -- 2133
+empty$ -- 3587
+format.name$ -- 623
+if$ -- 9296
 int.to.chr$ -- 0
-int.to.str$ -- 182
+int.to.str$ -- 183
 missing$ -- 183
-newline$ -- 607
-num.names$ -- 174
-pop$ -- 652
+newline$ -- 611
+num.names$ -- 175
+pop$ -- 654
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1117
+skip$ -- 1119
 stack$ -- 0
 substring$ -- 1044
-swap$ -- 733
+swap$ -- 734
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 54
-while$ -- 280
-width$ -- 185
-write$ -- 1675
+while$ -- 281
+width$ -- 186
+write$ -- 1685
 (There was 1 error message)

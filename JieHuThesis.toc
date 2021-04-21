@@ -83,11 +83,11 @@
 \contentsline {subsection}{\numberline {5.4.2}Direction Uncertainties}{123}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Energy Scale Uncertainties}{123}{subsection.5.4.3}
 \contentsline {section}{\numberline {5.5}Extracting $\gamma $-rays from Neutron Capture}{124}{section.5.5}
-\contentsline {section}{\numberline {5.6}$^{16}$N Calibration in Partial-fill Phase}{124}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}High Level Cuts: Sky-shine Classifier}{124}{subsection.5.6.1}
-\contentsline {subsubsection}{Performance of the Sky-shine Classifier}{125}{section*.21}
-\contentsline {subsubsection}{Optimize the Sky-shine Cuts}{126}{section*.22}
-\contentsline {subsection}{\numberline {5.6.2}$^{16}$N Calibration in the Partial-fill Phase}{128}{subsection.5.6.2}
+\contentsline {section}{\numberline {5.6}$^{16}$N Calibration in Partial-fill Phase}{125}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}High Level Cuts: Sky-shine Classifier}{125}{subsection.5.6.1}
+\contentsline {subsubsection}{Performance of the Sky-shine Classifier}{126}{section*.21}
+\contentsline {subsubsection}{Optimize the Sky-shine Cuts}{128}{section*.22}
+\contentsline {subsection}{\numberline {5.6.2}$^{16}$N Calibration in the Partial-fill Phase}{130}{subsection.5.6.2}
 \contentsline {subsection}{\numberline {5.6.3}Extracting the Cherenkov Signals in Partial-fill Phase}{130}{subsection.5.6.3}
 \contentsline {chapter}{\numberline {6}SNO+ Water Phase Analysis}{134}{chapter.6}
 \contentsline {section}{\numberline {6.1}Detector Backgrounds}{135}{section.6.1}

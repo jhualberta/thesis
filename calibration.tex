@@ -565,10 +565,16 @@ $\sqrt{\sum_i(\mu^{data}_{P,i})^2}-\sqrt{\sum_i(\mu^{MC}_{P,i})^2}~~(i=x,y,z)$
 $x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta+\beta\cdot x^{MC}_{fit}$
 
 \subsection{Direction Uncertainties}
-The relative difference between data and MC of a quantity $q$ is defined as:
+The relative difference between data and MC of a fitted resolution quantity $q\pm \delta_q$ is defined as:
 \begin{equation}
-\Delta (q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%.
+(\Delta q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%.
 \end{equation}
+
+The error of the relative difference is defined as: 
+\begin{equation}
+\delta_{(\Delta q)_{rel}} = \sqrt{(\frac{\delta_{q_{data}}}{q_{data}})^2+(\frac{\delta_{q_{MC}}}{q_{MC}})^2}\times 100\%.
+\end{equation}
+
 
 $\Delta (\beta_{M})_{rel}$ = (3.64-4.36)/4.36*100=-16.51 \%
 
@@ -578,24 +584,31 @@ $\sqrt{|\sum_i[(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2]|}~~(i=x,y,z)$
 
 \begin{figure}[!htb]\label{direction_scan}
 	\centering
-	\includegraphics[width=5.5cm]{skyShine.png}
-	\caption{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.}
+	\includegraphics[width=18cm]{angularResol_scanXYZ.pdf}
+	\caption{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the ``corner scan'' runs are not shown in this figure. The red squares show results from the x-scan runs; green circles show the y-scan runs and the blue triangles show the z-scan runs.}
 \end{figure}
 
 
 To be conservative, 
 full range of the uncertainty on the 
 
+
+
 The direction systematic $\delta_\theta$ was determined as .
 
+For calibration scans inside the AV (internal scans), 
 
-remapping
+
+
+
+
+
+To propagate the uncertainties of $\beta$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
 \begin{equation}\label{remapTheta}
 \cos\theta'=1+(\cos\theta_{sun}-1)(1+\delta_{\theta}),
 \end{equation} 
  
- 
-
+This angular remapping function is used to smear the angular distributions for systematic studies. In the next chapter, it will be applied on the angular distribution of solar neutrino data.  
 
 \subsection{Energy Scale Uncertainties}
 
