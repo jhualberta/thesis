@@ -57,11 +57,11 @@
 \contentsline {subsection}{\numberline {4.3.5}Multi-path Fitter Structure}{78}{subsection.4.3.5}
 \contentsline {section}{\numberline {4.4}Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}{80}{section.4.4}
 \contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Partial-fill and Scintillator Phases}{84}{section.4.5}
-\contentsline {subsubsection}{Water Level}{90}{section*.17}
-\contentsline {subsection}{\numberline {4.5.1}Complicated Situation in Partial-fill}{90}{subsection.4.5.1}
-\contentsline {subsubsection}{Different PPO Concentrations during the Filling}{90}{section*.18}
+\contentsline {subsection}{\numberline {4.5.1}Complicated Situations in Partial-fill}{90}{subsection.4.5.1}
+\contentsline {subsubsection}{Different PPO Concentrations during the Filling}{90}{section*.17}
 \contentsline {subsection}{\numberline {4.5.2}Bi-Po Analysis}{92}{subsection.4.5.2}
 \contentsline {section}{\numberline {4.6}PMT Selectors for the Reconstruction}{92}{section.4.6}
+\contentsline {subsubsection}{Water Level}{94}{section*.18}
 \contentsline {section}{\numberline {4.7}Energy Reconstruction}{95}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Figure of Merit}{95}{subsection.4.7.1}
 \contentsline {subsection}{\numberline {4.7.2}Energy Reconstruction in Partial-fill Phase}{96}{subsection.4.7.2}
@@ -75,41 +75,43 @@
 \contentsline {section}{\numberline {5.2}High Level Cuts for the Water Phase}{103}{section.5.2}
 \contentsline {section}{\numberline {5.3}Extracting Fitter Resolutions}{104}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Position Resolution}{104}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Direction Resolution}{111}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Energy Resolution}{116}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Tests on Energy Figure of Merits}{121}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Systematics for the Water Phase}{122}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Position Scale Uncertainties}{122}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Direction Uncertainties}{123}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Energy Scale Uncertainties}{123}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Extracting $\gamma $-rays from Neutron Capture}{124}{section.5.5}
-\contentsline {section}{\numberline {5.6}$^{16}$N Calibration in Partial-fill Phase}{125}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}High Level Cuts: Sky-shine Classifier}{125}{subsection.5.6.1}
-\contentsline {subsubsection}{Performance of the Sky-shine Classifier}{126}{section*.21}
+\contentsline {subsection}{\numberline {5.3.2}Position Figure of Merit}{110}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Position Uncertainties}{110}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Direction Resolution and Systematics}{110}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Direction Uncertainties}{117}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Energy Resolution}{119}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Tests on Energy Figure of Merits}{119}{subsection.5.3.7}
+\contentsline {section}{\numberline {5.4}Systematics for the Water Phase}{125}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Position Scale Uncertainties}{125}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Energy Scale Uncertainties}{125}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Extracting $\gamma $-rays from Neutron Capture}{126}{section.5.5}
+\contentsline {section}{\numberline {5.6}$^{16}$N Calibration in Partial-fill Phase}{126}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}High Level Cuts: Sky-shine Classifier}{126}{subsection.5.6.1}
+\contentsline {subsubsection}{Performance of the Sky-shine Classifier}{127}{section*.21}
 \contentsline {subsubsection}{Optimize the Sky-shine Cuts}{128}{section*.22}
 \contentsline {subsection}{\numberline {5.6.2}$^{16}$N Calibration in the Partial-fill Phase}{130}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Extracting the Cherenkov Signals in Partial-fill Phase}{130}{subsection.5.6.3}
-\contentsline {chapter}{\numberline {6}SNO+ Water Phase Analysis}{134}{chapter.6}
-\contentsline {section}{\numberline {6.1}Detector Backgrounds}{135}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{135}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Kullback–Leibler (KL) Divergence for High Level Cuts}{135}{section.6.2}
-\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{136}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{136}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}TMVA Analysis}{138}{subsection.6.3.2}
-\contentsline {subsubsection}{TMVA Outputs for Data}{144}{section*.23}
-\contentsline {subsection}{\numberline {6.3.3}Discussion on the TMVA Results}{145}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{146}{subsection.6.3.4}
-\contentsline {subsubsection}{Maximum Likelihood Fit}{147}{section*.24}
-\contentsline {subsubsection}{Ensemble Test}{148}{section*.25}
-\contentsline {subsubsection}{Fitting on the Whole Dataset (run-200004 to 207718)}{150}{section*.26}
-\contentsline {subsubsection}{Systematics Evaluation}{151}{section*.27}
-\contentsline {subsubsection}{Extracting the Solar Neutrino Flux}{152}{section*.28}
-\contentsline {subsubsection}{Limits of the Study}{152}{section*.29}
-\contentsline {chapter}{\numberline {7}Conclusions}{153}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{154}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{154}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{154}{section.A.2}
-\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{157}{section.A.3}
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{160}{appendix.B}
-\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{160}{section.B.1}
-\contentsline {chapter}{References}{164}{appendix*.30}
+\contentsline {subsection}{\numberline {5.6.3}Extracting the Cherenkov Signals in Partial-fill Phase}{132}{subsection.5.6.3}
+\contentsline {chapter}{\numberline {6}SNO+ Water Phase Analysis}{136}{chapter.6}
+\contentsline {section}{\numberline {6.1}Detector Backgrounds}{137}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{137}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Kullback–Leibler (KL) Divergence for High Level Cuts}{137}{section.6.2}
+\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{138}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{138}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}TMVA Analysis}{140}{subsection.6.3.2}
+\contentsline {subsubsection}{TMVA Outputs for Data}{146}{section*.23}
+\contentsline {subsection}{\numberline {6.3.3}Discussion on the TMVA Results}{147}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{148}{subsection.6.3.4}
+\contentsline {subsubsection}{Maximum Likelihood Fit}{149}{section*.24}
+\contentsline {subsubsection}{Ensemble Test}{150}{section*.25}
+\contentsline {subsubsection}{Fitting on the Whole Dataset (run-200004 to 207718)}{152}{section*.26}
+\contentsline {subsubsection}{Systematics Evaluation}{153}{section*.27}
+\contentsline {subsubsection}{Extracting the Solar Neutrino Flux}{154}{section*.28}
+\contentsline {subsubsection}{Limits of the Study}{154}{section*.29}
+\contentsline {chapter}{\numberline {7}Conclusions}{155}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{156}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{156}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{156}{section.A.2}
+\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{159}{section.A.3}
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{162}{appendix.B}
+\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{162}{section.B.1}
+\contentsline {chapter}{References}{166}{appendix*.30}

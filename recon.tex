@@ -526,38 +526,16 @@ Fig.~\ref{partial_fit_rz} shows the fitted $\sqrt{x^2+y^2}$ vs. fitted $z$ posit
 pdfs for all timing \ref{sect:LS_SNO+}.
 
 
-
 Radial bias is defined as the difference between the fitted and true position, projected along the radial component (unit vector) of the true position \cite{coulter2013modelling}.
 \[
 (\vec{X}_{fit}-\vec{X}_{true})\cdot \hat{X}_{true}
 \]
 
-
 The value of the mean radial bias is taken by fitting the histogram of the distributions of radial biases with a Gaussian profile and then get the mean of the fitted Gaussian profile.
 
-
-
-\subsubsection{Water Level}
-
-\[
-\frac{\partial L}{\partial splitZ} = \frac{\partial L}{\partial tof}\cdot\frac{\partial tof}{\partial splitZ}=\frac{\partial L}{\partial tof}\cdot\frac{\partial a_3}{\partial splitZ}
-\]
-
-
-\[
-\frac{\partial L}{\partial splitZ} = 0
-\]
-
-
-%Appendix: Levenberg-Marquardt method for fitter minimization
-(ref: press2007numerical)
-
-%for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
-
-The pdf can be expanded and fit with Chebyshev polynomials to obtain an analytic approximation function\cite{press2007numerical}. This analytical function can give proper analytical derivatives
-
-\subsection{Complicated Situation in Partial-fill}
+\subsection{Complicated Situations in Partial-fill}
 \subsubsection{Different PPO Concentrations during the Filling}
+During the partial-fill phase, the water level and the concentration of PPO were changing.
 
 Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
 
@@ -644,10 +622,7 @@ radial biases
 \end{table}
 
 
-Simulate 5000 events for 3 MeV $e^-$,  
-
-
-$\Delta x = x_{fit}-x_{mc}$
+Simulate 5000 events for 3 MeV $e^-$,  $\Delta x = x_{fit}-x_{mc}$
 
 \begin{table}[ht]
 	\centering
@@ -736,6 +711,37 @@ Several PMT selectors are used to select or remove PMTs from all the recorded PM
 	
 	The other timing parameters can also be used for selecting the PMT in each panel, such as the $t_{mode}$ or the $t_{median}$. However, tests from the simulations for the scintillator phase show that using the earliest hit time gives less fit biases and better fit resolutions.
 \end{itemize}
+
+\subsubsection{Water Level}
+
+\[
+\frac{\partial L}{\partial splitZ} = \frac{\partial L}{\partial tof}\cdot\frac{\partial tof}{\partial splitZ}=\frac{\partial L}{\partial tof}\cdot\frac{\partial a_3}{\partial splitZ}
+\]
+
+
+\[
+\frac{\partial L}{\partial splitZ} = 0
+\]
+
+
+%Appendix: Levenberg-Marquardt method for fitter minimization
+(ref: press2007numerical)
+
+%for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
+
+The pdf can be expanded and fit with Chebyshev polynomials to obtain an analytic approximation function\cite{press2007numerical}. This analytical function can give proper analytical derivatives
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Energy Reconstruction}
  

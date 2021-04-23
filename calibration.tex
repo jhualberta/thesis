@@ -9,7 +9,9 @@ The MultiPath water (MPW) fitter was also applied on the simulations of the AmBe
 The last section of this chapter is to check the performance of the MultiPath partial fitter for the $^{16}$N calibration runs during the partial-fill phase. An attempt of extracting the Cherenkov signals from the events in the scintillator was made. This attempt will be useful for extracting the solar neutrino events and reconstructing their directions during the scintillator phase. 
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
-During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was moved along x, y and z-axes inside the AV. It was also placed at the corner of the inner AV. For the external scans, the source was placed in the external water region but outside the AV and it was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal runs and 19 external runs were used. The details of these runs are shown in the tables in Appendix B.
+During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was inside the AV, moving along x, y and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. 
+
+The details of these runs are shown in the tables in Appendix B. Run lists of x, y, z scans are listed in Table.~\ref{n16scanTable_xscan}, \ref{n16scanTable_yscan} and \ref{n16scanTable_zscan} respectively. 
 
 \begin{figure}[!htb]
 	\centering
@@ -68,12 +70,8 @@ These classifiers utilize the reconstructed quantities
 
 $^{16}$N data/MC comparisons
 
-
-
-
 \section{Extracting Fitter Resolutions}
-For an event with the position, direction and energy successfully reconstructed (i.e., the event has valid position, direction and energy reconstructions), a set of high level cuts were applied: $ITR>0.55$, $-0.12<\beta_{14}<0.95$. 
-data clean masks were also applied on the $^{16}$N calibration data.
+For an event with the position, direction and energy successfully reconstructed (i.e., the event has valid position, direction and energy reconstructions), a set of high level cuts were applied: $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Data clean masks were also applied on the $^{16}$N calibration data.
 
 \subsection{Position Resolution}
 A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
@@ -153,29 +151,7 @@ Table~\ref{table_posresol} summarizes the values of position resolution paramete
 
 %1.024	0.8741	159.3	3.404	293.4	5.719	107.7/95	1.133
 
-\begin{figure}
-	\subfigure[MC.]{\label{fig:biasFom1}\includegraphics[width=8cm]{posBiasVsFOM_mc.png}}
-	\subfigure[Data.]{\label{fig:biasFom2}\includegraphics[width=8cm]{posBiasVsFOM_data.png}}
-	\caption{Fit position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs FOM (scaled LogL) for the $^{16}$N central run-107055.}
-	\label{posBiasVsFOM}
-\end{figure}
-
-
-\begin{figure}
-	\subfigure[$^{16}$N x-scan runs.]{\label{angular:xscan}\includegraphics[width=15cm]{angularResol_xscan.pdf}}
-	\subfigure[$^{16}$N y-scan runs.]{\label{angular:yscan}\includegraphics[width=15cm]{angularResol_yscan.pdf}}
-	\subfigure[$^{16}$N z-scan runs.]{\label{angular:zscan}\includegraphics[width=15cm]{angularResol_zscan.pdf}}
-	\caption{Fit direction resolutions ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs FOM (scaled LogL) for the $^{16}$N central run-107055.}
-	\label{angularResolScan}
-\end{figure}
-
-
-
-% & 0.5141$\pm$0.02612 & 176.7$\pm$3.341 & 306$\pm$8.012 & -6.516$\pm$0.9188 & 68.26/70
-% & 0.5677$\pm$0.03019 & 171.4$\pm$3.968 & 288$\pm$7.559 & 5.235$\pm$0.9145 & 69.1/70
-
-
-Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clean global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
+Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-100934\_s000\_p001, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.03885 ns. This is shown in Fig.~\ref{likelihoodSurface}. 
 
 \begin{figure}
 	\centering
@@ -193,18 +169,50 @@ Vertex likelihood surface for an typical {$^{16}$}N event (calibration run-10093
 \begin{figure}
 	\centering
 	\includegraphics[width=160mm]{logL_xyzt.pdf}
-	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t axes.}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}
 	\label{logLxyz}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
-	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t axes. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
+	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
 	\label{derivative_logLxyz}
 \end{figure}
 
-emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
+\subsection{Position Figure of Merit}
+A quantity of scaled logL ($scaleLogL$) is used as the figure of merit for the position reconstruction ($posFoM$): $scaleLogL = logL/NHit{selected}$. This quantity utilizes the best log-likelihood returned by the MultiPath fitter for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' $NHit$, i.e., the number of the PMTs actually used by the fitter for reconstructing the event vertex, after the PMT selections mentioned in \ref{sect:PMTselector}. Fig.~\ref{posBiasVsFOM} shows the $scaleLogL$ and the biases between .
+
+
+\begin{figure}
+	\subfigure[MC.]{\label{fig:biasFom1}\includegraphics[width=9cm]{posBiasVsFOM_mc.png}}
+	\subfigure[Data.]{\label{fig:biasFom2}\includegraphics[width=9cm]{posBiasVsFOM_data.png}}
+	\caption{Fit position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run-107055. Left is MC and right is data.}
+	\label{posBiasVsFOM}
+\end{figure}
+
+\begin{figure}
+	\subfigure[$^{16}$N x-scan runs.]{\label{angular:xscan}\includegraphics[width=15cm]{angularResol_xscan.pdf}}
+	\subfigure[$^{16}$N y-scan runs.]{\label{angular:yscan}\includegraphics[width=15cm]{angularResol_yscan.pdf}}
+	\subfigure[$^{16}$N z-scan runs.]{\label{angular:zscan}\includegraphics[width=15cm]{angularResol_zscan.pdf}}
+	\caption{Fit direction resolutions ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run-107055.}
+	\label{angularResolScan}
+\end{figure}
+
+A $scaleLogL>10$ cut on the MC (data) removed
+() events 
+with large biases of $d(\vec{X}_{fit},\vec{X}_{src})>6000~mm$;
+
+
+.
+% & 0.5141$\pm$0.02612 & 176.7$\pm$3.341 & 306$\pm$8.012 & -6.516$\pm$0.9188 & 68.26/70
+% & 0.5677$\pm$0.03019 & 171.4$\pm$3.968 & 288$\pm$7.559 & 5.235$\pm$0.9145 & 69.1/70
+
+
+
+
+%emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and the electrons will emit Cherenkov light to be detected by the PMTs.
+\subsection{Position Uncertainties}
 
 \begin{figure}
 	\centering
@@ -285,31 +293,36 @@ emit $\gamma$-rays. These $\gamma$-rays will Compton scatter off electrons and t
 	\end{tabular*}
 \end{table}
 
-\subsection{Direction Resolution}
+\subsection{Direction Resolution and Systematics}
 
-Here the 'true' direction is defined as the direction pointing from the source positions to the fitted position: $\vec{u}_{true} = \vec{X}_{fit}-\vec{X}_{source}$. The angle $\theta$ is the displacement between the `true' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
+Here the ``true'' direction of an event is defined as the direction pointing from the source position to the reconstructed position: $\vec{u}_{true} = \vec{X}_{fit}-\vec{X}_{source}$. The angle $\theta$ is the displacement between the ``true'' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
 
-To describe the biases between the fitted event direction and the true particle direction of the event, an angular resolution function was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components:
+To describe the biases between the reconstructed direction and the true particle direction of the event, an angular resolution function was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components:
 \begin{equation}
 P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
 \end{equation}
 where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or ``slopes'' of the two exponential components; the $\alpha_M$ is the fraction between two exponential components.
 events following the exponential with slope $\beta_M$. 
 
-To extract the direction resolutions, a distance cut $|\vec{X}_{fit}-\vec{X}_{src,manip}|>1.5~m$ was applied. To further suppress the effects from the tails, more cuts were applied: $itr>0.55$, $-0.12<\beta_{14}<0.95$ and radius cut $r<5500$ mm.
+To extract the direction resolutions, a few cuts relating to the position and energy reconstruction were applied. These cuts were suggested by the SNO+ analysis to mainly remove the instrumental backgrounds ($ITR>0.55$, $-0.12<\beta_{14}<0.95$) and poor reconstructions for the events close to the source container\cite{waterunidoc}.
 
-% [0.3,1]
+A distance cut of $1000~mm<|\vec{X}_{fit}-\vec{X}_{src,manip}|<2300~m$ was applied. To further suppress the effects from the tails caused by mis-reconstructions, more cuts were applied: 
+
+For internal scans, a radius cut $R'<5850~mm$ was also applied. This radial cut was not applied on the external and neck scans.
+
+A fit range of [0.3,1] was used. For 
+
 The resolution results are shown in Table.~\ref{angularResolValuesUpdated}.
 \begin{table}[ht]
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
 		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
 		\hline
-		Rat data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
-		Rat MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
+		RAT data & 3.50$\pm$0.11 & 18.48$\pm$0.82 & 0.51$\pm$0.02 & 127.8/140 & 0.991 & 0.733 & 0.338\\
+		RAT MC  & 3.74$\pm$0.15 & 19.58$\pm$0.92 & 0.48$\pm$0.02 & 137.1/138 & 1 & 0.768 & 0.398\\	
 		\hline
-107055 & 3.888$\pm$0.246 & 17.96$\pm$1.10 & 0.550$\pm$0.030 & 80.69/66 & 0.974 & 0.740 & 0.384\\
-107055 & 4.487$\pm$0.223 & 22.23$\pm$1.41 & 0.590$\pm$0.027 & 74.01/66 & 0.962 & 0.759 & 0.450\\		
+MPW data & 3.888$\pm$0.246 & 17.96$\pm$1.10 & 0.550$\pm$0.030 & 80.69/66 & 0.974 & 0.740 & 0.384\\
+MPW MC & 4.487$\pm$0.223 & 22.23$\pm$1.41 & 0.590$\pm$0.027 & 74.01/66 & 0.962 & 0.759 & 0.450\\		
 		\bottomrule
 	\end{tabular}
 	\label{angularResolValues}
@@ -383,6 +396,67 @@ $\beta_{14}$ systematic
 	\caption{$^{16}$N external run-111230 with a nominal position at [-5861,-2524,4001] mm; MPW results.}
 	\label{16Nexternal}
 \end{figure}
+
+\subsection{Direction Uncertainties}
+To improve the fit performance, for all the internal scan data (MC simulations), the angular resolution function was first fitted with 3 free parameters: $\alpha_M$, $\beta_S$, $\beta_M$. An averaged value of the fitted $\alpha_M$ for all the data (simulations) was calculated as 0.6137 for data (0.5834 for MC).
+
+
+$R'<5850~mm$
+$E_{fit}>3.5~MeV$, the distance between the event reconstructed position to the source position $900~mm$ and less than $2300~mm$
+
+
+Fit range [0.3, 1]
+fit range started at 0.3, if the events were too few, the 
+range was enlarged by a 0.1 step to ensure more than 5000 events were fitted.
+-0.5
+
+and then was set as a fixed parameter. With the fixed value of $\alpha_M$, the angular resolution function
+was refit with $\beta_S$ and $\beta_M$.
+
+The relative difference between data and MC of a fitted resolution quantity $q\pm \delta_q$ is defined as:
+\begin{equation}
+(\Delta q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%.
+\end{equation}
+
+The error of the relative difference is defined as: 
+\begin{equation}
+\delta_{(\Delta q)_{rel}} = \sqrt{(\frac{\delta_{q_{data}}}{q_{data}})^2+(\frac{\delta_{q_{MC}}}{q_{MC}})^2}\times 100\%.
+\end{equation}
+
+
+$\Delta (\beta_{M})_{rel}$ = (3.64-4.36)/4.36*100=-16.51 \%
+
+$\Delta \beta_{S}$  = (18.07-20.94)/20.94*100=-13.71\%
+
+$\sqrt{|\sum_i[(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2]|}~~(i=x,y,z)$
+
+\begin{figure}[!htb]\label{direction_scan}
+	\centering
+	\includegraphics[width=18cm]{angularResol_scanXYZ.pdf}
+	\caption{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the ``corner scan'' runs are not shown in this figure. The red squares show results from the x-scan runs; green circles show the y-scan runs and the blue triangles show the z-scan runs.}
+\end{figure}
+
+
+To be conservative, 
+full range of the uncertainty on the 
+
+
+
+The direction systematic $\delta_\theta$ was determined as .
+
+For calibration scans inside the AV (internal scans), 
+
+
+
+
+
+
+To propagate the uncertainties of $\beta$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
+\begin{equation}\label{remapTheta}
+\cos\theta'=1+(\cos\theta_{sun}-1)(1+\delta_{\theta}),
+\end{equation} 
+
+This angular remapping function is used to smear the angular distributions for systematic studies. In the next chapter, it will be applied on the angular distribution of solar neutrino data.  
 
 \subsection{Energy Resolution}
 The RSP energy reconstruction algorithm mentioned in Chapter 4 was applied on $^{16}$N MC simulations and data.
@@ -546,6 +620,7 @@ Fig.~\ref{energyFOM_Zfactor} shows $Z_{factor}$ vs. energy biases. A cut of $-11
 All the cuts on the three energy FoM quantities removes 0.40\% events from MC and 0.37\% events from data.
 These cuts were used in the water phase analysis which was described in the next Chapter.
 
+The Cuts of $NHit>5$, $-0.12<\beta_{14}<0.95$, $R'<5850~mm$, $E_{fit}>3.5$, $scaleLogL>10$ were applied.
 
 
 \section{Systematics for the Water Phase}
@@ -564,51 +639,6 @@ $\sqrt{\sum_i(\mu^{data}_{P,i})^2}-\sqrt{\sum_i(\mu^{MC}_{P,i})^2}~~(i=x,y,z)$
 
 $x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta+\beta\cdot x^{MC}_{fit}$
 
-\subsection{Direction Uncertainties}
-The relative difference between data and MC of a fitted resolution quantity $q\pm \delta_q$ is defined as:
-\begin{equation}
-(\Delta q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%.
-\end{equation}
-
-The error of the relative difference is defined as: 
-\begin{equation}
-\delta_{(\Delta q)_{rel}} = \sqrt{(\frac{\delta_{q_{data}}}{q_{data}})^2+(\frac{\delta_{q_{MC}}}{q_{MC}})^2}\times 100\%.
-\end{equation}
-
-
-$\Delta (\beta_{M})_{rel}$ = (3.64-4.36)/4.36*100=-16.51 \%
-
-$\Delta \beta_{S}$  = (18.07-20.94)/20.94*100=-13.71\%
-
-$\sqrt{|\sum_i[(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2]|}~~(i=x,y,z)$
-
-\begin{figure}[!htb]\label{direction_scan}
-	\centering
-	\includegraphics[width=18cm]{angularResol_scanXYZ.pdf}
-	\caption{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the ``corner scan'' runs are not shown in this figure. The red squares show results from the x-scan runs; green circles show the y-scan runs and the blue triangles show the z-scan runs.}
-\end{figure}
-
-
-To be conservative, 
-full range of the uncertainty on the 
-
-
-
-The direction systematic $\delta_\theta$ was determined as .
-
-For calibration scans inside the AV (internal scans), 
-
-
-
-
-
-
-To propagate the uncertainties of $\beta$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
-\begin{equation}\label{remapTheta}
-\cos\theta'=1+(\cos\theta_{sun}-1)(1+\delta_{\theta}),
-\end{equation} 
- 
-This angular remapping function is used to smear the angular distributions for systematic studies. In the next chapter, it will be applied on the angular distribution of solar neutrino data.  
 
 \subsection{Energy Scale Uncertainties}
 

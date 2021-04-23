@@ -187,7 +187,7 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 	\label{TMVA_bkgs_1}
 \end{figure}
 
-In this sub-dataset, runs from 201700 to 202516 were taken as the training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set. Once the weights of the parameters were tuned, they were put into the actual data.
+In this sub-dataset, runs from 201700 to 202516 were taken as the training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set. Once the weights of the variables were tuned, they were put into the actual data.
 
 Before the analysis, a few ``beforehand cuts''were applied: $NHits>20$, $R'_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Here $NHits>20$ was applied as a reconstruction threshold. Only the events with $NHits>20$ were reconstructed by the MPW fitter for the solar neutrino analysis; a default fiducial volume of $5.5~m$ was set; the $ITR$ and $\beta_{14}$ cuts were suggested by the collaboration, which were mostly based on the experiences for removing the instrumental backgrounds\cite{waterunidoc}. 
 
@@ -201,17 +201,17 @@ The Fisher discriminant $y_{F_i}(i)$ for classifying event $i$ is defined by \ci
 \begin{equation}
 y_{F_i}(i) = F_0+\sum_{k=1}^{n_{params}}F_k x_k(i),
 \end{equation}
-where $n_{params}$ is the number of input parameters; the Fisher coefficients, $F_k$ is given by:
+where $n_{params}$ is the number of input variables; the Fisher coefficients, $F_k$ is given by:
 \begin{equation}
 F_k = \frac{\sqrt{N_SN_B}}{N_S+N_B}\sum_{l=1}^{n_{params}}1/W_{kl}(\bar{x}_{S,l}-\bar{x}_{B,l}),
 \end{equation} 
-where $N_{S(B)}$ are the number of signal (background) events in the training sample; $\bar{x_{S(B),l}}$ are the means of input parameters for siganl (background); $W_{kl}$ is the covariance matrix\cite{tmvaWebsite}.
+where $N_{S(B)}$ are the number of signal (background) events in the training sample; $\bar{x_{S(B),l}}$ are the means of input variables for siganl (background); $W_{kl}$ is the covariance matrix\cite{tmvaWebsite}.
 
 For the BDT method, the adaptive boosting (AdaBoost) algorithm was used; 400 trees were trained with a maximum depth of 3; gini index was used for the decision tree.
 
 For the MLP method, sigmoid function was set as the activate function; 4 hidden layers, 200 training cycles were used.
 
-I used 9 parameters as inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$. Among them, the input values of $ITR$ and $\beta_{14}$ were after the beforehand cuts mentioned above. The $NHits$ and $\theta_{ij}$ were not used, since the $NHits$ is correlated to the energy while the $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
+I used 9 variables as inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$. Among them, the input values of $ITR$ and $\beta_{14}$ were after the beforehand cuts mentioned above. The $NHits$ and $\theta_{ij}$ were not used, since the $NHits$ is correlated to the energy while the $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
 
 The MLP method gave the best results, while it was the most CPU-consuming method.
 
@@ -311,7 +311,7 @@ A typical CPU time for a certain method to train the dataset is listed in Table.
 
 It shows that, when the energy goes lower, it is more difficult to separate the signals from the backgrounds.
 
-The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. It is also used to extract the number of signal and background events, which will be discussed in the following sections. Here I applied the BDT and the MPL method on the test sub dataset. For the real dataset from run-200004 to 207718, the trained weights and parameters from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
+The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. It is also used to extract the number of signal and background events, which will be discussed in the following sections. Here I applied the BDT and the MPL method on the test sub dataset. For the real dataset from run-200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
 %The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
 %4<E<15 MeV
 %BDT signal efficiency     = 0.828483
