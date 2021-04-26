@@ -456,7 +456,7 @@ By fitting the \ref{eq:solar_poissonFit} to the data, $N_{bkg}$ and $N_{sig}$ we
 \subsubsection{Ensemble Test}
 To check the uncertainty of the Poisson fit, 5000 fake datasets were generated. Here I used the method similar to the \cite{leta}.
 The fake data were taken from the MC simulation dataset of run-200004 to 203602 after the default cuts (the same to the one used by the TMVA). In the MC dataset, for $E_{fit}>5~MeV$, there were 6359 backgrounds from different background events and 317205 signals of internal solar $\nu_e$ events (the event types were mentioned in Table.~\ref{table:mixed_MC}).
-The number of fake backgrounds, $N_{F,bkg}$, was assumed to be two times the event number in the $-1<\cos\theta_{sun}<0$ region while the number of fake signals $N_{F,sig}=N_{total}-N_{F,bkg}$. Reading from the sub dataset of run-200004 to 203602, the $N_{F,bkg}$ was set to 38 and then $N_{F,sig}=109-N_{F,bkg}=71$, as shown in Fig.~\ref{half_data}. For the ensemble test, it randomly picked up 71 events from the solar $\nu_e$ MC simulations and 39 events from merged backgrounds. Their values of $\cos\theta_{sun}$ and $E_{fit}$ were filled into histograms. Fig.~\ref{ensemble_test} shows an example of randomly generated dataset fitted with the maximum likelihood function mentioned in \ref{poisson_fit}.
+The number of fake backgrounds, $N_{F,bkg}$, was assumed to be two times the event number in the $-1<\cos\theta_{sun}<0$ region while the number of fake signals $N_{F,sig}=N_{total}-N_{F,bkg}$. Reading from the sub dataset of run-200004 to 203602, the $N_{F,bkg}$ was set to 38 and then $N_{F,sig}=109-N_{F,bkg}=71$, as shown in Fig.~\ref{half_data}. For the ensemble test, it randomly picked up 71 events from the solar $\nu_e$ MC simulations and 39 events from the merged backgrounds. For each randomly selected signal event, the values of $E_{fit}$ and $\cos\theta_{sun}$ were recorded; for the selected background event, the $E_{fit}$ was recorded while the $\cos\theta_{sun}$ was generated from uniform distribution. Each dataset was fitted with the maximum likelihood function mentioned in  \ref{poisson_fit}. Fig.~\ref{ensemble_test} shows an example of the fitted results.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{cosThetaToSun_halfData_5to15.pdf}
@@ -468,33 +468,33 @@ The number of fake backgrounds, $N_{F,bkg}$, was assumed to be two times the eve
 	\centering
 	\includegraphics[width=8cm]{ensemble_fitExample.pdf}
 	\caption{An example of randomly generated $\cos\theta_{sun}$ for the maximum likelihood fit. The black dots are data points and the red line is the fitted results. 
-	$N_{sig} = 98.61\pm15.63$ and $N_{bkg} = 1.91 \pm 1.78$ were obtained with a $\chi^2/ndf = 10.7373/14 = 0.77$.}
+	$N_{sig} = 64.71\pm9.36$ and $N_{bkg} = 40.00 \pm 6.12$ were obtained with a $\chi^2/ndf = 28.0/31 = 0.903$.}
 	\label{ensemble_test}
 \end{figure} 
 
 The fit pull and the fit bias were defined by \cite{leta}:
 \begin{equation}
-bias=\frac{N_{fit}-S_{MC}}{N_{fit}},
+bias=\frac{N_{fit}-N_{F,sig}}{N_{fit}},
 \end{equation}
 
 \begin{equation}
-pull=\frac{N_{fit}-S_{MC}}{\sigma_{fit}},
+pull=\frac{N_{fit}-N_{F,sig}}{\sigma_{fit}},
 \end{equation}
-where $N_{fit}$ is the fitted number of signal events, $\sigma_{fit}$ is the statistical uncertainty of $N_{fit}$; $S_{MC}(=71)$ is the true number of signal events in the fake dataset.
+where $N_{fit}$ is the fitted number of signal events, $\sigma_{fit}$ is the statistical uncertainty of $N_{fit}$; $N_{F,sig}=71$ is the true number of signal events in the fake dataset.
 
 Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and biases respectively.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{ensemble_fitPull.pdf}
-	\caption{Fit pulls for 2000 fake datasets.}
+	\caption{Fit pulls for 5000 fake datasets.}
 	\label{poisson_fitPull}
 \end{figure} 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{ensemble_fitBias.pdf}
-	\caption{Fit biases for 2000 fake datasets.}
+	\caption{Fit biases for 5000 fake datasets.}
 	\label{poisson_fitBias}
 \end{figure} 
 
@@ -504,21 +504,20 @@ For $5<E_{fit}<15~MeV$, the outputs from the BDT, MLP were fitted. Fig.~\ref{who
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{wholedataFit_bdt.pdf}
-	\caption{Fitted results for the $5<E_{fit}<15~MeV$ BDT outputs. $N_{sig}=109.02\pm13.43$ and $N_{bkg}=3.68\pm0.87$ were obtained with $\chi^2/ndf=3.31$.}
-	\label{wholeDataset_poissonFit_bdt}
+	\caption{Fitted results for the $5<E_{fit}<15~MeV$ BDT outputs. $N_{sig}=108.78\pm13.39$ and $N_{bkg}=73.75\pm 17.35$ were obtained with $\chi^2/ndf=3.49$.} \label{wholeDataset_poissonFit_bdt}
 \end{figure} 
-The fitted results of the BDT outputs give a signal rate of $0.824\pm0.102$ events/kt-day and background rate of $0.028\pm 0.007$ events/kt-day in the energy region $[5,15]~MeV$.
+The fitted results of the BDT outputs give a signal rate of $0.822\pm0.101$ events/kt-day and background rate of $0.56\pm 0.13$ events/kt-day in the energy region $[5,15]~MeV$.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{wholedataFit_mlp.pdf}
-	\caption{Fitted results for the $5<E_{fit}<15~MeV$ MLP outputs. $N_{sig}=109.50\pm13.41$ and $N_{bkg}=3.54\pm0.86$ were obtained with $\chi^2/ndf=2.72$.}
+	\caption{Fitted results for the $5<E_{fit}<15~MeV$ MLP outputs. $N_{sig}=109.24\pm13.38$ and $N_{bkg}=70.96\pm17.11$ were obtained with $\chi^2/ndf=2.98$.}
 	\label{wholeDataset_poissonFit_mlp}
 \end{figure} 
 
-The fitted results of the MLP outputs gives a signal rate of $0.828\pm0.101$ events/kt-day and background rate of $0.027\pm 0.007$ events/kt-day in the energy region $[5,15]~MeV$.
+The fitted results of the MLP outputs gives a signal rate of $0.83\pm0.10$ events/kt-day and background rate of $0.54\pm 0.13$ events/kt-day in the energy region $[5,15]~MeV$.
 
-It can be concluded here that an extremely low background rate was achieved for the low background dataset.
+It can be concluded here that in the $[5,15]~MeV$ energy region, the BDT results are consistent with the MLP results. The estimated background rate is lower than the signal rate, which indicates an extremely low background is achieved for the data.
 
 \subsubsection{Systematics Evaluation}
 The systematics of position, direction and energy reconstruction were obtained from the Chapter 5.
