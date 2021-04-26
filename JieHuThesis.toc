@@ -45,7 +45,7 @@
 \contentsline {subsubsection}{ELLIE}{62}{section*.15}
 \contentsline {subsection}{\numberline {3.6.2}Radioactive Calibration Sources}{62}{subsection.3.6.2}
 \contentsline {subsubsection}{The $^{16}$N Calibration Source}{62}{section*.16}
-\contentsline {section}{\numberline {3.7}Monte Carlo Simulation and RAT Software}{63}{section.3.7}
+\contentsline {section}{\numberline {3.7}Monte Carlo Simulation and RAT Software}{64}{section.3.7}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{66}{chapter.4}
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{66}{section.4.1}
 \contentsline {section}{\numberline {4.2}Multi-path Reconstruction Algorithm for SNO+}{67}{section.4.2}
@@ -72,15 +72,16 @@
 \contentsline {section}{\numberline {4.9}Conclusion}{97}{section.4.9}
 \contentsline {chapter}{\numberline {5}Calibration}{100}{chapter.5}
 \contentsline {section}{\numberline {5.1}\isotope [16]{N} Calibration Scans in the Water Phase}{101}{section.5.1}
-\contentsline {section}{\numberline {5.2}High Level Cuts for the Water Phase}{103}{section.5.2}
-\contentsline {section}{\numberline {5.3}Extracting Fitter Resolutions}{104}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Position Resolution}{104}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Position Figure of Merit}{110}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Position Uncertainties}{110}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Direction Resolution and Systematics}{110}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Direction Uncertainties}{117}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Energy Resolution}{119}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}Tests on Energy Figure of Merits}{119}{subsection.5.3.7}
+\contentsline {section}{\numberline {5.2}High Level Cuts for the Water Phase}{102}{section.5.2}
+\contentsline {section}{\numberline {5.3}Extracting Fitter Resolutions}{103}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Position Resolution}{103}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Position Figure of Merit}{107}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Position Uncertainties}{111}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Direction Resolution and Systematics}{111}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Direction Uncertainties}{115}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}$\beta _{14}$ and Systematic}{119}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Energy Resolution}{119}{subsection.5.3.7}
+\contentsline {subsection}{\numberline {5.3.8}Tests on Energy Figure of Merits}{119}{subsection.5.3.8}
 \contentsline {section}{\numberline {5.4}Systematics for the Water Phase}{125}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Position Scale Uncertainties}{125}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Energy Scale Uncertainties}{125}{subsection.5.4.2}

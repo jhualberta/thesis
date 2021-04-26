@@ -581,18 +581,13 @@ In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{
 
 $^{46}$Sc source
 
-\subsubsection{The $^{16}$N Calibration Source}
+\subsubsection{The $^{16}$N Calibration Source}\ref{n16_description}
+The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}.   
 
-The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}, 
+Since the $^{16}$N isotope has a short half-life of $7.13~s$, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the $CO_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the $CO_2$ gas tubing\cite{dragowsky200216n}.  
 
-A deuterium-tritium (DT) generator in SNOLAB can produce neutrons through: $D+T\to n+^{4}$He, 
-flow $CO_2$ gas stream through pipe lines the $^{16}$N isotopes are created by the process: $n+^{16}$O$\to^{16}$N$+p$. 
-
-The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$.
-It has a 66.2\% chance to emit an electron with end-point energy of 4.29 MeV and a 22.8\% chance to 
-10.42 MeV. 6.13 MeV $\gamma$-rays.\cite{nndc}.
-
-A simplified decay scheme is shown in Fig.~\ref{n16decay}.
+The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{endpoint}=4.29~MeV$ and a 22.8\% chance to an electron with $E_{endpoint}=10.42~MeV$; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$'s. There are mainly $6.13~MeV~\gamma$ with an intensity of 67.0\% and 
+$7.12~MeV~\gamma$ with an intensity of 4.9\%. The intensities of the $\gamma$'s with other energies are all below 1\%\cite{nndc}. A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
 \begin{figure}[!htb]
 	\centering
@@ -603,7 +598,6 @@ A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
 Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside\cite{dragowsky1999sudbury}.
 
-[needs to fill in details]
 %to ensure a high fraction of the $\gamma$-rays 
 
 %lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
@@ -630,7 +624,7 @@ A detailed study of using the $^{16}$N source for reconstruction will be shown i
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration has developed a software framework, called the Reactor Analysis
-Tool (RAT), which integrates a Monte Carlo simulation of the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiemnts, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
+Tool (RAT), which integrates a Monte Carlo simulation framework for the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiemnts, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
 
 Geant4 Toolkit and
 incorporates ROOT libraries for data handling and analysis.
