@@ -3,9 +3,17 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1647 of file thesis.bib
+Repeated entry---line 1157 of file thesis.bib
+ : @article{matt_deployedsource
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1690 of file thesis.bib
  : @article{albertsson2007tmva
  :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1723 of file thesis.bib
+ : @phdthesis{drouin2012three
+ :                           ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "snop_nim"
 Warning--empty year in snop_jinst
@@ -28,7 +36,6 @@ Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in davini2016cno
 Warning--empty journal in Paton:2019kgy
-Warning--empty year in scintillatorPaper
 Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
 Warning--empty year in markchen_bkg
@@ -37,10 +44,6 @@ Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--can't use both volume and number fields in biller2017new
 Warning--empty journal in hamamatsu2018photomultiplier
-Warning--empty author in joshTrigger
-Warning--empty year in joshTrigger
-Warning--empty author in operator
-Warning--empty year in operator
 Warning--empty year in rattime
 Warning--can't use both volume and number fields in singh2020underwater
 Warning--empty author in ratManual
@@ -56,51 +59,56 @@ Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in highlevel
-Warning--empty year in morganFOM
+Warning--empty year in beta14discrepancy
 Warning--empty year in leta
+Warning--empty year in morganFOM
 Warning--there's a number but no series in perkins2009particle
+Warning--empty author in operator
+Warning--empty year in operator
+Warning--empty author in joshTrigger
+Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
 Warning--empty year in brianLowBG
-You've used 183 entries,
+You've used 187 entries,
             1876 wiz_defined-function locations,
-            1352 strings with 32097 characters,
-and the built_in function-call counts, 39109 in all, are:
-= -- 3477
-> -- 2137
+            1368 strings with 33076 characters,
+and the built_in function-call counts, 40288 in all, are:
+= -- 3566
+> -- 2246
 < -- 0
-+ -- 806
-- -- 623
-* -- 2714
-:= -- 6013
-add.period$ -- 241
-call.type$ -- 183
-change.case$ -- 129
++ -- 844
+- -- 657
+* -- 2817
+:= -- 6216
+add.period$ -- 246
+call.type$ -- 187
+change.case$ -- 132
 chr.to.int$ -- 0
-cite$ -- 237
-duplicate$ -- 2133
-empty$ -- 3587
-format.name$ -- 623
-if$ -- 9296
+cite$ -- 241
+duplicate$ -- 2183
+empty$ -- 3664
+format.name$ -- 657
+if$ -- 9556
 int.to.chr$ -- 0
-int.to.str$ -- 183
-missing$ -- 183
-newline$ -- 611
-num.names$ -- 175
-pop$ -- 654
+int.to.str$ -- 187
+missing$ -- 186
+newline$ -- 624
+num.names$ -- 179
+pop$ -- 663
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1119
+skip$ -- 1149
 stack$ -- 0
-substring$ -- 1044
-swap$ -- 734
+substring$ -- 1075
+swap$ -- 754
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 54
-while$ -- 281
-width$ -- 186
-write$ -- 1685
-(There was 1 error message)
+while$ -- 289
+width$ -- 190
+write$ -- 1725
+(There were 3 error messages)

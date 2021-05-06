@@ -15,7 +15,7 @@ The AV sphere is concentric within a stainless steel geodesic dome with an avera
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{SNOPdetector.png}
-	\caption{The SNO+ detector labelled with main structures, figure modified from \cite{jones2011background}.}
+	\caption{The SNO+ detector labeled with main structures, figure modified from \cite{jones2011background}.}
 	\label{snopdetector}
 \end{figure}
 
@@ -67,7 +67,7 @@ Suppose a charged particle moves in a transparent, isotropic, and non-magnetic m
 
 The Cherenkov angle, $\theta_c$ is the angle between the direction of the particle and the direction of Cherenkov emission and it is well-defined by $\cos\theta_c(\omega) = \frac{c}{n(\omega)v}$. The radiation is distributed over a surface of a cone with the half-opening angle $\theta_c$. 
 
-Consider the condition $v>v_p=c/n(\omega)$, for the case of $e^-$ travelling in a water detector, if neglecting the dependency on $\omega$, $n_{water}\simeq 1.33$ \cite{pdg2018}, then $\theta_c\simeq 41.25^\circ$ and $v_p\simeq 2.254\times10^8~m/s$, which corresponds to a kinetic energy $E_k=(\gamma-1)mc^2=0.264~MeV$ for $e^-$, where $\gamma=1/\sqrt{1-v_p^2/c^2}$. This is the lowest kinetic energy to create Cherenkov radiation, which is referred to the Cherenkov threshold ($E_{thresh}$). In the case that the LAB-PPO liquid scintillator is the medium, $n\simeq 1.50$\cite{tseung2011ellipsometric}, $\theta_c\simeq 48.19^\circ$ and for $e^-$, $E_{thresh}\simeq 0.175~MeV$.   
+Consider the condition $v>v_p=c/n(\omega)$, for the case of $e^-$ travelling in a water detector, if neglecting the dependency on $\omega$, $n_{water}\simeq 1.33$ \cite{pdg2020}, then $\theta_c\simeq 41.25^\circ$ and $v_p\simeq 2.254\times10^8~m/s$, which corresponds to a kinetic energy $E_k=(\gamma-1)mc^2=0.264~MeV$ for $e^-$, where $\gamma=1/\sqrt{1-v_p^2/c^2}$. This is the lowest kinetic energy to create Cherenkov radiation, which is referred to the Cherenkov threshold ($E_{thresh}$). In the case that the LAB-PPO liquid scintillator is the medium, $n\simeq 1.50$\cite{tseung2011ellipsometric}, $\theta_c\simeq 48.19^\circ$ and for $e^-$, $E_{thresh}\simeq 0.175~MeV$.   
 
 For a particle with a charge of $ze$, the number of photons produced by Cherenkov radiation per unit path length and per unit frequency of the photons is given by\cite{leo2012techniques}:
 \[
@@ -75,7 +75,7 @@ For a particle with a charge of $ze$, the number of photons produced by Cherenko
 \]
 where $\alpha$ is the fine structure constant.
 
-Translate the frequency into the wavelength ($\lambda=2\pi\omega$) and integrate over the wavelength, we have the number of photons and $x$ is along the particle track\cite{leo2012techniques}:
+Transforming the frequency into the wavelength ($\lambda=2\pi\omega$) and integrating over the wavelength, the number of photons along the particle track projected on the x-axis is\cite{leo2012techniques}:
 \[
 \frac{dN}{dx}=2\pi (ze)^2\alpha\sin\theta_c\int_{\lambda_1}^{\lambda_2}\frac{d\lambda}{\lambda^2},
 \]
@@ -114,7 +114,7 @@ The $S^*$ will de-excite and emit delayed scintillation light. The process for e
 
 For a typical scintillator detector, the time scale of detector response is $\mathcal{O}(1-100~ns)$. In this time region, the emission of the scintillation light contains the primary fluorescence from the de-excitation of the singlet states (prompt component) and the delayed fluorescence from the de-excitation of the indirect triplet states (delayed component)\cite{dunger2018topological}. The time profile of the scintillation light emission is a mixture of prompt and delayed components. 
 
-Different charged particles can cause different ionization densities when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces a higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed components or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, scintillatorPaper}. 
+Different charged particles can cause different ionization densities when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces a higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed components or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, collaboration2020development}. 
 
 An empirical formula, called follows Birk's law\cite{birks1951scintillations, birks1965theory}, describes the photon yield along with unit distance by the incident particle:
 \[
@@ -123,12 +123,12 @@ An empirical formula, called follows Birk's law\cite{birks1951scintillations, bi
 where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
 
 \subsection{Liquid Scintillator for SNO+}
-Organic scintillators can release a large number of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium (U), thorium (Th), and potassium (K) in the organic liquid scintillators. Among the organic scintillators, aromatic organic liquid scintillators have high electron densities and thus they can provide sufficient targets for particle interactions\cite{PerkinElmer}. Due to these advantages, aromatic organic liquid scintillators have been extensively developed as detection media for large particle detectors, especially for neutrino experiments, such as KamLAND, Borexino, Day Bay, and JUNO\cite{scintillatorPaper}.
+Organic scintillators can release a large number of photons with wavelengths in the sensitive regions of the PMTs and have abilities for particle identification. In addition, since organic liquids are non-polar media, it is hard for ionic impurities to dissolve in. This leads to the lower contamination levels of uranium (U), thorium (Th), and potassium (K) in the organic liquid scintillators. Among the organic scintillators, aromatic organic liquid scintillators have high electron densities and thus they can provide sufficient targets for particle interactions\cite{PerkinElmer}. Due to these advantages, aromatic organic liquid scintillators have been extensively developed as detection media for large particle detectors, especially for neutrino experiments, such as KamLAND, Borexino, Day Bay, and JUNO\cite{collaboration2020development}.
 
 SNO+ has developed such kind of liquid scintillators that are compatible with the detector components, especially with the acrylic materials, like the AV sphere. Two kinds of SNO+ liquid scintillators are discussed in the following sub-sections: the unloaded liquid scintillator for the scintillator phase and the Tellurium-loaded liquid scintillator (TeLS) for the tellurium phase.
 
 \subsubsection{Unloaded Liquid Scintillator}\label{sect:LS_SNO+}
-SNO+ adopts a scintillator cocktail contains two primary components: LAB as solvent and PPO as solute. LAB is doped with PPO to a concentration of 2 g/L. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{scintillatorPaper}.
+SNO+ adopts a scintillator cocktail contains two primary components: LAB as solvent and PPO as solute. LAB is doped with PPO to a concentration of 2 g/L. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{collaboration2020development}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{lab-ppo-molecule.png}
@@ -136,7 +136,7 @@ SNO+ adopts a scintillator cocktail contains two primary components: LAB as solv
 	\label{labppo-molecule}
 \end{figure}
 
-LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, scintillatorPaper}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and very low risks for the environment or human health\cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber.
+LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, collaboration2020development}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and very low risks for the environment or human health\cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber.
 close to linear response to energy
 
 
@@ -190,7 +190,7 @@ Fig.~\ref{absLength} shows absorption lengths.
 %the transfer efficiencies
 
 This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau
-\cite{scintillatorPaper}.
+\cite{collaboration2020development}.
 
 
 The optical response of the liquid scintillator.
@@ -211,7 +211,7 @@ From Oxford timing fitting functions:
 \{\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}\otimes f_{PMT}(t-t')\}\otimes Gaus(t,0)
 \]
 
-\ref{transfer_efficiency}\cite{scintillatorPaper}. 
+\ref{transfer_efficiency}\cite{collaboration2020development}. 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{cc}
@@ -307,6 +307,7 @@ for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a l
 For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak is at $2.5~MeV$\cite{whitepaper}. This peak is relatively small and can be immersed in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials\cite{whitepaper}. Therefore, the $0\nu\beta\beta$-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
 
 To meet the low background requirement of the $0\nu\beta\beta$ analysis, the purity of the TeLS cocktail is aimed to $\mathcal{O}(10^{-15})$ g/g level for U and Th. 
+
 
 \subsection{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
 As mentioned in the previous section, the $0\nu\beta\beta$ analysis requires a high purity of the TeLS and proper light yield. %%% add more
@@ -483,54 +484,23 @@ Here we quantify the relative light yields of our samples. The light yield of th
 %
 %[billerTe] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
 
-\section{Optics}\label{optics}
-
-Optical parameters
-
-Winston cone
-
-timing
-
-attenuation
-scattering
-
-laser pulse diffuser, it can run with different wavelengths: 337, 365, 385, 420, 450, and 500 nm.
-The laserball 
-
-The acrylic of the AV is UV-transparent
-
 
 \section{Electronics}
 In this section, the SNO+ electronics system is introduced. The system includes the trigger and readout systems. As mentioned in \ref{sect:overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charges information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
 
-The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin cesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through a photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. The nine dynode strings are constructed in a Venetian blind configuration in R1408 PMT \cite{boger2000sudbury,leo2012techniques}. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by a custom-made operating circuit (PMT base) at the anode\cite{hamamatsu2018photomultiplier}.
+The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin cesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through a photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by a custom-made operating circuit (called ``PMT base'') at the anode\cite{hamamatsu2018photomultiplier}.
 
 The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. 
 
-To tackle more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle with 8 PMTs is connected to a Paddle Card. Four Paddle Cards are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives signals of up to 32 channels. Each channel for one PMT. 32 channels in PMTIC are plugged into a Front End Card (FEC) that processes, digitizes, and stores PMT signals. Each FEC has 4 Daughter Boards (DB) and each DB handles 8 channels. 16 PMTICs and FECs are inserted in one electronic crate and thus each crate processes 512 PMTs. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labeled as FEC Diagnose (FECD) channels. The triggered PMTs can be labeled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_jinst,stringer2019sensitivity}:
+To tackle with more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle is connected to a Paddle Card, which are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives signals from the PMTs. 32 channels (for 32 PMTs) in the PMTIC are plugged into a Front End Card (FEC) that processes, digitizes, and stores PMT signals. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labeled as FEC Diagnose (FECD) channels. These FECD channels are mainly used to tag calibration events. The triggered PMTs can be labeled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_jinst,stringer2019sensitivity}:
 \begin{equation}
 lcn = 512 \times crate + 32 \times FEC + channel
 \end{equation}
 %9605 are actually used
 
-To properly process and record information from PMTs, each DB tackling with 8 channels has three types of custom-made integrated circuits to implement three functions\cite{boger2000sudbury,bonventre2014neutron,snop_jinst}:
-\begin{itemize} 
-	\item[$\bullet$] Two four-channel discriminators (SNOD) chips set thresholds for PMT signals.
-	\item[$\bullet$] Eight single-channel CMOS chips record the time when the PMT pulse crosses the discriminator thresholds.
-	\item[$\bullet$] Two eight-channel charge integrator (SNOINT) chips integrate the PMT pulses over a time interval to obtain PMT charge information. There are three different time windows for the integral, resulting in three types of charge values: QHS　(Charge High gain Short integration time), by integrating the pulse over 60 ns; QHL (Charge High gain Long integration time), by integrating the pulse over 400 ns; and the QLX (Charge Low gain), by integrating the low gain PMTs over either 60 or 400 ns.
-\end{itemize}
-
-First, the discriminator checks the input pulses from a PMT channel with the predefined threshold voltages. If the PMT pulse crosses the channel threshold, a discrete square trigger pulse is generated. The trigger pulse has different time widths for different trigger types, including a 93 ns long square pulse (N100) and a 48 ns square pulse (N20)\cite{joshTrigger}. These time widths are optimized for the timing of the photon propagation in the detector and later to determine the number of hit PMTs in a specific time window. Besides these two, there are also two triggers that copies the analog pulses of high and low gain of each hit PMTs, known as ESUMHi(gh) and ESUMLo(w). These triggers mainly measure the stability of the detector, in case that there would be large signals in the PMTs while the number of the hit PMTs are small due to one or a few PMTs being exposed to a high amount of light or experiencing break downs\cite{operator}. At the same time, CMOS chips produce a time-to-amplitude (TAC) voltage and the TAC starts to ramp. The SNOINT starts to integrate all pulses from the PMT channel from 10 ns before the threshold crossing time to 390 ns or 50 ns to get QHL, QHS, or QLX values mentioned before\cite{boger2000sudbury,stringer2019sensitivity}. 
-
-The trigger pulses from all the channels in one crate with 16 FECs are sent to a Crate Trigger Card (CTC) and are summed up.
-
-For 19 crates, 19 CTCs are connected to 7 Master Trigger Cards/Analogue (MTC/A+) (``+'' refers to SNO+'s upgrading from the SNO), which are installed in an individual rack. It takes about 110 ns for the signals to travel to the MTC/A+. The MTC/A+ sums the trigger pulses from all crates and checks whether the sum is above the trigger threshold. Then the summed trigger pulse is sent to the digital master trigger system (MTC/D) which checks 7 MTC/A+ triggers. As mentioned in the previous paragraph, the summed triggers of N100 and N20 indicate the number of hit PMTs within the pulse time widths. In the MTC/A+ discriminators, there are three different threshold values of the number of the hit PMTs for the summed trigger pulses: Lo(w), Med(ium), and Hi(gh). During the water phase, N100Lo, N100Med, N100Hi are set based on the N100 pulses, where each has a different threshold value set. from lower value to higher value (for example, a setting of N100Lo=11, N100Med=16, N100Hi=21 was used in the water phase simulations). A lower threshold can increase the data-taking rates by including more signals as well as background noise. A high event rate can also make the detector unstable. On the other hand, a higher threshold removes more noises with a sacrifice of signals. The MTC/D checks the trigger type with the pre-defined trigger mask (a set of multiple trigger types with different trigger thresholds can be set), if it is satisfied, a Global Trigger (GT) is issued\cite{snop_jinst,stringer2019sensitivity,rattime}. 
-
-Once the GT is issued, an event is triggered and the MTCD sends the GT to the FEC which ramps the TAC within the next 20 ns (determined by a 50 MHz clock mentioned later). This takes another 110 ns. Thus there is a total delay of 220 ns after the FEC ramping the TAC. When the TAC ramps, a time gate of 400 ns is set for waiting the GT. If there is a GT in this 400 ns window, the TAC is stopped and the resultant voltage is digitized and recorded as the PMT hit time. If there is no GT, the TAC resets and the PMT hit is not recorded. Meanwhile, for the square trigger pulses from each PMT channel, if they are within the 400 ns gate and before the GT arrives, they will be recorded as the hits of an event. The recorded number of the hit PMTs for a given event is referred to as NHits. The charge information of the event is also recorded\cite{stringer2019sensitivity,rattime}.
-
 A 10 MHz and a 50 MHz clocks are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined $T_{zero}$, the midnight of January 1, 2010 (GMT) to the moment when the event happens. A 10 MHz clock used for counting the absolute time started at $T_{zero}$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays\cite{rattime,stringer2019sensitivity}. 
 
-The recorded hit information of the triggered event, including the values of the TAC, QHS, QHL, QLX (as the time and charge information of hit PMTs of the triggered event), and the trigger settings are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher data transfer rates compared to SNO, with a max rate of 14 MB/s, which is equivalent to approximately 2 million hits per second\cite{bonventre2014neutron}. They read out the recorded data and wrap them as ethernet packets and send them to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system writes information into event records based on their GT identification number (GTID) and saves them on storage disk\cite{snop_jinst}. These raw data are written in the ZEBRA data bank (ZDAB) format and they are further processed into ROOT format by high-performance computing clusters.
+The recorded hit information of the triggered event, including the time and charge information of hit PMTs and the trigger settings, are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher data transfer rates compared to SNO, with a max rate of 14 MB/s, which is equivalent to approximately 2 million hits per second\cite{bonventre2014neutron}. They read out the recorded data and wrap them as ethernet packets and send them to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system writes information into event records based on their GT identification number (GTID) and saves them on storage disk\cite{snop_jinst}. These raw data are written to the disc and are further processed into ROOT format by high-performance computing clusters.
 
 As a summary, the SNO+ electronic system can measure signals with a nanosecond-level timing resolution and a single-photon level charge resolution. It can handle an event rate of several kHz and even much higher rates for cases such as the burst events from a galactic supernova\cite{snop_jinst}.
 
@@ -577,11 +547,7 @@ various dyes provide different peak wavelengths of the laser light, mainly at 36
 Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which is used to monitor the relative changes in attenuation lengths of detection media\cite{jones2011background,walker2016study,dunger2018topological,snop_jinst}.
 
 \subsection{Radioactive Calibration Sources}
-In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co are planned to be implemented.
-
-$^{46}$Sc source
-
-\subsubsection{The $^{16}$N Calibration Source}\ref{n16_description}
+\subsubsection{The $^{16}$N Calibration Source}\label{n16_description}
 The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}.   
 
 Since the $^{16}$N isotope has a short half-life of $7.13~s$, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the $CO_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the $CO_2$ gas tubing\cite{dragowsky200216n}.  
@@ -618,25 +584,26 @@ Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber
 %The $^{16}$N source $^{3}$H$(p,\gamma)^{4}$He reaction.
 
 A detailed study of using the $^{16}$N source for reconstruction will be shown in \ref{sect:n16_water}.
+\subsubsection{The Americium Beryllium (AmBe) Calibration Source}
 
 
-%\subsection{The Americium Beryllium (AmBe) Calibration Source}
+\subsubsection{Other Calibration Sources}
+In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co are planned to be implemented.
+
+$^{46}$Sc source
+
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration has developed a software framework, called the Reactor Analysis
-Tool (RAT), which integrates a Monte Carlo simulation framework for the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiemnts, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
+Tool (RAT), which integrates a Monte Carlo simulation framework for the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiments, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
 
-Geant4 Toolkit and
-incorporates ROOT libraries for data handling and analysis.
+Geant4 Toolkit and incorporates ROOT libraries for data handling and analysis.
 
 The RAT Monte Carlo was originally developed for the Braidwood Collaboration
 utilizing software developed for a generic KamLAND-like detector, called Generic Liquid Scintillator GEANT4 simulation (GLG4). It was branched and
 developed into the specialist SNO+ version, starting in 2006/2007.
 
-GLG4sim
-
-
-Braidwood
+GLG4sim Braidwood
 
 combines both Monte Carlo simulation of the Braidwood detector with event-based analysis tasks, like reconstruction. The primary goals are:
 

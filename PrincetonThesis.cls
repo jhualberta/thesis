@@ -561,7 +561,8 @@
 	\cleardoublepage
 	\pagestyle{plain}
 	\pagenumbering{roman}
-	\setcounter{page}{3}
+	\setcounter{page}{3}%%default
+	\setcounter{secnumdepth}{3}%%Jay added
 }{
 	\pu@tocpage
 	\pu@lofpage
