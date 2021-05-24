@@ -48,17 +48,16 @@ charged-current, the charged vector bosons $W^+/W^-$
 neutral-current, the neutral vector boson $Z^0$
 
 
-
-
-
 neutrino-electron elastic scattering ($\nu-e$ ES)
-
-
+\begin{equation}
+\frac{d\sigma}{dT_e}=\frac{2G_F^2m_e}{\pi}[g_L^2+g_R^2(1-\frac{T_e}{E_\nu})^2-g_Lg_R(\frac{m_eT_e}{E_\nu^2})],
+\end{equation}
+where $g_L=(\sin^2\theta_W\pm\frac{1}{2})$, $g_R=\sin^2\theta_W$, $\sin^2\theta_W=0.23$
 
 %In the next two sections, I will show the two properties which are under the spotlight: neutrinos can change their flavors and they have masses.
 
 \section{Neutrino Flavor Transformation}
-Neutrino flavor transformation is a quantum mechanical interference phenomenon\cite{akhmedov2019quantum}. It was first discovered in 1998, based on the analysis of atmospheric neutrino fluxes measured by the Super-Kamiokande (SuperK) experiment to solve the ``atmospheric neutrino anomaly'' mentioned in the last section\cite{fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the SM is incomplete.
+Neutrino flavor transformation is a quantum mechanical interference phenomenon\cite{akhmedov2019quantum}. It was first discovered in 1998, based on the analysis of atmospheric neutrino fluxes measured by the Super-Kamiokande (Super-K) experiment to solve the ``atmospheric neutrino anomaly'' mentioned in the last section\cite{fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the SM is incomplete.
 
 \subsection{Vacuum Oscillation}\label{sectVacuumOsci}
 For neutrino flavor oscillation experiments, neutrinos are detected in certain flavor eigenstates via weak interaction. A neutrino flavor state vector can be taken as a linear superposition of the mass eigenstates. For three-flavor neutrino mixing, we have\cite{pdg2020}:
@@ -311,12 +310,11 @@ Since the Sun is an object provides ambient electrons and nucleons, neutrinos co
 
 In the 1930s, Hans Bethe et al. explained the origin of the Sun's energy as a series of nuclear reactions\cite{bethe1939energy}.
 
-Based on the available physics and experimental data, the Standard Solar Model (SSM) is a modern accepted theory for the evolution of the Sun. The energy in the Sun is mainly produced by two sets of reactions: the proton-proton (pp) chain, which contributes to $\sim 98.6\%$ of the energy release and the Carbon-Nitrogen-Oxygen (CNO) cycle, which contributes $\sim 1.4\%$. Fig.~\ref{ppChain} and Fig.~\ref{CNOcycle} show all the reactions in the two sets respectively. Via these two main sets of nuclear reactions, hydrogen is eventually fused into helium, and the net nuclear transformation is $4p+2e^-\to^{4}$He $+2\nu_e+Q$, where the released energy $Q=26.73$ MeV is mostly in the form of the kinetic energy of the photons, with a small fraction carried by neutrinos\cite{valle2015neutrinos,antonio2018state}. The average energy of solar $\nu_e$ is calculated by summing over the $E_{\nu_e}$ from the $i^{th}$ reaction chain with a flux of $\Phi_{\nu_e}^i$ and 
-divided by $\Phi^{tot}_{\nu_e}$
+Based on the available physics and experimental data, the Standard Solar Model (SSM) is a modern accepted theory for the evolution of the Sun. The energy in the Sun is mainly produced by two sets of reactions: the proton-proton (pp) chain, which contributes to $\sim 98.6\%$ of the energy release and the Carbon-Nitrogen-Oxygen (CNO) cycle, which contributes $\sim 1.4\%$. Fig.~\ref{ppChain} and Fig.~\ref{CNOcycle} show all the reactions in the two sets respectively. Via these two main sets of nuclear reactions, hydrogen is eventually fused into helium, and the net nuclear transformation is $4p+2e^-\to^{4}$He $+2\nu_e+Q$, where the released energy $Q=26.73$ MeV is mostly in the form of the kinetic energy of the photons, with a small fraction carried by neutrinos\cite{valle2015neutrinos,antonio2018state}. The average energy of solar $\nu_e$ is calculated by summing over the $E_{\nu_e}$ from the $i^{th}$ reaction chain with a flux of $\Phi_{\nu_e}^i$ and divided by $\Phi^{tot}_{\nu_e}$
 
-reaction chains. For 
-
-as\cite{antonio2018state}:
+%reaction chains. For 
+%
+%as\cite{antonio2018state}:
 \begin{equation}
 \langle E_{\nu_e}\rangle = \sum_i E_i \frac{\Phi^i_{\nu_e}}{\Phi^{tot}_{\nu_e}}\approx 0.265~MeV,
 \end{equation}
@@ -393,17 +391,14 @@ In 1964, John Bahcall and Raymond Davis proposed the first experiment to detect 
 
 Since neutrinos' extremely low interaction cross-sections, neutrinos produced in the Sun can reach the detectors on the Earth without being interrupted. This enables the solar neutrino to be a probe to stellar physics.
 
+A combined analysis of three phases of SNO data shows that 
 the measured total flux is $5.25\pm0.16^{+0.11}_{-0.13}~cm^{-2}s^{-1}$.
 
-
-
-
-
 \subsection{Super-Kamiokande}
-(Super-K) 
+Super-K
+15 $\nu$ events/day.
 
 For the $^8$B solar neutrino flux, Super-K reported a measurement of $(2.345\pm0.014\pm0.036)\times 10^6~cm^{-2}s^{-1}$.
-
 
 \subsection{Borexino}
 
@@ -412,10 +407,13 @@ For the $^8$B solar neutrino flux, Super-K reported a measurement of $(2.345\pm0
 
 \subsection{Future Experiments}
 \subsubsection{Hyper-Kamiokande}
-Hyper-Kamiokande (Hyper-K) is the successor of Kamiokande and Super-Kamiokande.
+Hyper-Kamiokande (Hyper-K) is the successor of Kamiokande and Super-Kamiokande. 
 
-fiducial volume of 187 kilotonne.
-hep solar neutrinos and precision measurements
+As a water Cherenkov detector with a fiducial mass of 187 kilotonne, Hyper-K
+expects to observe 130 $\nu-e$ elastic scattering events per day,
+is aimed for a detection of $hep$ solar neutrino flux, which has not been detected yet.
+
+ and precision measurements
 
 
 \subsubsection{JinPing}
@@ -455,40 +453,38 @@ From a viewpoint of mathematical aesthetics, Ettore Majorana found a representat
 
 %Unlike the Dirac case, for a Majorana field $\psi^M$, the $\psi^M_L$ and $\psi^M_R$ are not independent. The right-handed component can be the charge conjugate of the left-handed component (or vice versa): $\psi_R=(\psi_L)^c$\cite{akhmedov2014majorana}. Therefore Majorana field can be written as: $\psi^M=\psi_L^M+\psi_R^M=\psi^M_L+(\psi^M_L)^c=\psi^M_L+((\psi^M)^c)_R$, which immediately gives $(\psi^M)^c=\psi^M$. This equation is called the Majorana condition. The result implies that the particles associated with the Majorana fields, or the Majorana fermions, are their own antiparticles and ``truly neutral''\cite{akhmedov2014majorana}. Also, the Majorana equation preserves the handedness\cite{zee2010quantum}. Since the $\psi^M_L$ and $\psi^M_R$ are not independent and can be constructed by each other, the Majorana spinor $\psi^M$ only has two degrees of freedom compared to the Dirac spinor which has four degrees of freedom. These facts indicate that the Majorana fermion theory is more economical than the Dirac one and it is also tailored for describing neutrinos. More naturally, neutrinos are of Majorana nature.
 
-
-
-According to the Gell-Mann-Nishijima formula, $Q=I_3+\frac{1}{2}Y$, where Q is the electric charge and Y is the hypercharge. For $\Psi_L$, $Y=-1$ and for $\Psi_R$, $Y=-2$. The leptons acquire their masses by coupling to the Higgs fields. To realize this, the Higgs scalar fields also form an isodoublet $\Phi = (\phi^+,\phi^0)^T$ with weak isospin $I=\frac{1}{2}$, where $\phi^+$ is a positively charged complex scalar field with $I_3=\frac{1}{2}$ and $\phi^0$ is a neutrally charged complex scalar field with $I_3=-\frac{1}{2}$. Such a coupling of the fermions to the scalar fields is a typical Yukawa coupling. The Lagrangian of the Yukawa coupling in the lepton sector is\cite{funchal2013physics}:
-
-\begin{equation}\label{yukawa}
--\mathcal L_{Yukawa}(\Phi,\Psi) =\sum_{\alpha,\beta=e,\mu,\tau} y^{lep'}_{\alpha\beta} \overline{\Psi_{\alpha L}'}\Phi\ell_{\beta R}' + h.c.,
-\end{equation}
-where $y^{lep'}_{\alpha\beta}$ are complex Yukawa coupling matrices of charged leptons and the $h.c.$ means hermitian conjugate. The terms are invariant under the $SU(2)_L\times U(1)_Y$ group transformations required by the SM. The apostrophes indicate that these matrices are not diagonalized.
-
-Since the lack of the isosinglet term $\nu_R$, neutrinos are considered massless in the SM. The simplest extension to the SM to create neutrino masses is to introduce the $SU(2)$ singlet states, or the right-handed neutrino fields $\nu_R$. This kind of isosinglet does not participate in the electroweak interactions and are thus called sterile neutrinos. By introducing the $\nu_R$, the SM is minimally extended and neutrinos can be massive\cite{giunti2007fundamentals}.
-
-Since the hypercharge of $\overline{\Psi_{\alpha L}}$ is $Y=+1$ and $\nu_R$ is $Y=0$, the product $\overline{\Psi_{\alpha L}}\nu_{\beta R}$ is $Y=1$. In order to form the $SU(2)_L\times U(1)_Y$ invariant term, a conjugated Higgs doublet with hypercharge $Y=-1$ is built as $\widetilde{\Phi}=i\sigma_2\Phi^*$, where $\sigma_2$ is a Pauli matrix\cite{giunti2007fundamentals}.
-
-Then with right-handed singlets $\nu_R$, \ref{yukawa} turns to be\cite{giunti2007fundamentals,funchal2013physics}:
-\begin{equation}\label{yukawa2}
--\mathcal{L}_{Yukawa} =  \sum_{\alpha\beta} y^{lep'}_{\alpha\beta} \overline{\Psi_{\alpha L}'}\Phi\ell_{\beta R} + \sum_{\alpha\beta} y^{\nu'}_{\alpha\beta} \overline{\Psi_{\alpha L}'}\widetilde{\Phi}\nu_{\beta R}'+h.c..
-\end{equation}
-
-The Higgs field obtains a vacuum expectation value (VEV) $v_0=\langle\Phi\rangle$ via the electro-weak symmetry breaking process. Taking the unitary gauge, $\Phi=\frac{1}{\sqrt 2}\begin{pmatrix}0\\v_0+h \end{pmatrix}$, where $h$ is a real scalar Higgs field. 
-
-To diagonalize the Lagrangian \ref{yukawa2} to obtain definite masses of the fields, taking the unitary matrices: $V^{lep}_L, V^{lep}_R,V^\nu_L$ and $V^\nu_R$, the Yukawa coupling matrices can be diagonalized by biunitary transformations: $y^{lep}={V^{lep}_L}^\dagger y^{lep'}V^{lep}_R$, with $y^{lep}_{\alpha\beta}=y^{lep}_\alpha\delta_{\alpha\beta}$ for charged leptons; $y^{\nu}={V^{lep}_L}^\dagger y^{\nu'}V^{lep}$, with $y^{\nu}_{\alpha\beta}=y^{\nu}_\alpha\delta_{\alpha\beta}$ for neutrinos. The fields are transformed as: $\ell_{L,R}=({V^{lep}_{L,R}}^\dagger) \ell_{L,R}'$ and
-$\nu_{L,R}=({V^\nu_{L,R}}^\dagger)\nu'_{L,R}$, where $\ell_{L,R}'=(e',\mu',\tau')_{L,R}^T$ and ${\nu}_{L,R}'=(\nu_e',\nu_\mu',\nu_{\tau}')_{L,R}^T$ are in the flavor or generation space. The transformed fields $\ell_{L,R}$ and $\nu_{L,R}$ have definite masses. The product ${V_L^{lep}}^\dagger V_L^\nu\equiv U$ is actually the PMNS matrix which has the relation: $\nu_{fL} = \sum_{i=1,2,3}U_{fi}\nu_{iL}$\cite{funchal2013physics,lesgourgues2013neutrino}.
-
-Thus the diagonalized Lagrangian \ref{yukawa2} becomes\cite{funchal2013physics}:
-
-\begin{equation}\label{yukawa3}
--\mathcal{L}_{Yukawa} = (\frac{v_0+h}{\sqrt 2})\sum_{f=e,\mu,\tau}(y_f^{lep})\overline{\ell_{fL}} \ell_{fR}+\sum_{i=1,2,3}(y_i^{\nu})\overline{\nu_{iL}}\nu_{iR}+h.c.,
-\end{equation}
-
-In the Lagrangian \ref{yukawa3}, the terms proportional to the VEV of the Higgs doublet are mass terms while the terms proportional to the $h$ describe the couplings between leptons and Higgs boson\cite{giunti2007fundamentals}. If neutrinos are Dirac particles, the mass term in \ref{diracLagrange} is $-\mathcal L_{\nu~mass}^D = m_D\overline{\nu_L}\nu_R+h.c.$. In this case, the Dirac mass term becomes:
-\begin{equation}\label{eq:diracMass}
--\mathcal L^D_{mass} =\sum_{\alpha=e,\mu,\tau}\frac{v_0}{\sqrt{2}}(y_\alpha^{lep})\overline{\ell_{\alpha L}}\ell_{\alpha R}+\sum_{i=1,2,3}\frac{v_0}{\sqrt{2}}(y_{i}^\nu)\overline{\nu_{iL}}\nu_{iR}+h.c.,
-\end{equation}
-So the charged lepton masses are given by: $m_{\ell_\alpha}=\frac{y_\alpha^{lep} v_0}{\sqrt 2}~(\alpha=e,\mu,\tau)$ and the neutrino masses are: $m_i=\frac{y_k^\nu v_0}{\sqrt 2}~(i=1,2,3)$\cite{funchal2013physics}. 
+%According to the Gell-Mann-Nishijima formula, $Q=I_3+\frac{1}{2}Y$, where Q is the electric charge and Y is the hypercharge. For $\Psi_L$, $Y=-1$ and for $\Psi_R$, $Y=-2$. The leptons acquire their masses by coupling to the Higgs fields. To realize this, the Higgs scalar fields also form an isodoublet $\Phi = (\phi^+,\phi^0)^T$ with weak isospin $I=\frac{1}{2}$, where $\phi^+$ is a positively charged complex scalar field with $I_3=\frac{1}{2}$ and $\phi^0$ is a neutrally charged complex scalar field with $I_3=-\frac{1}{2}$. Such a coupling of the fermions to the scalar fields is a typical Yukawa coupling. The Lagrangian of the Yukawa coupling in the lepton sector is\cite{funchal2013physics}:
+%
+%\begin{equation}\label{yukawa}
+%-\mathcal L_{Yukawa}(\Phi,\Psi) =\sum_{\alpha,\beta=e,\mu,\tau} y^{lep'}_{\alpha\beta} \overline{\Psi_{\alpha L}'}\Phi\ell_{\beta R}' + h.c.,
+%\end{equation}
+%where $y^{lep'}_{\alpha\beta}$ are complex Yukawa coupling matrices of charged leptons and the $h.c.$ means hermitian conjugate. The terms are invariant under the $SU(2)_L\times U(1)_Y$ group transformations required by the SM. The apostrophes indicate that these matrices are not diagonalized.
+%
+%Since the lack of the isosinglet term $\nu_R$, neutrinos are considered massless in the SM. The simplest extension to the SM to create neutrino masses is to introduce the $SU(2)$ singlet states, or the right-handed neutrino fields $\nu_R$. This kind of isosinglet does not participate in the electroweak interactions and are thus called sterile neutrinos. By introducing the $\nu_R$, the SM is minimally extended and neutrinos can be massive\cite{giunti2007fundamentals}.
+%
+%Since the hypercharge of $\overline{\Psi_{\alpha L}}$ is $Y=+1$ and $\nu_R$ is $Y=0$, the product $\overline{\Psi_{\alpha L}}\nu_{\beta R}$ is $Y=1$. In order to form the $SU(2)_L\times U(1)_Y$ invariant term, a conjugated Higgs doublet with hypercharge $Y=-1$ is built as $\widetilde{\Phi}=i\sigma_2\Phi^*$, where $\sigma_2$ is a Pauli matrix\cite{giunti2007fundamentals}.
+%
+%Then with right-handed singlets $\nu_R$, \ref{yukawa} turns to be\cite{giunti2007fundamentals,funchal2013physics}:
+%\begin{equation}\label{yukawa2}
+%-\mathcal{L}_{Yukawa} =  \sum_{\alpha\beta} y^{lep'}_{\alpha\beta} \overline{\Psi_{\alpha L}'}\Phi\ell_{\beta R} + \sum_{\alpha\beta} y^{\nu'}_{\alpha\beta} \overline{\Psi_{\alpha L}'}\widetilde{\Phi}\nu_{\beta R}'+h.c..
+%\end{equation}
+%
+%The Higgs field obtains a vacuum expectation value (VEV) $v_0=\langle\Phi\rangle$ via the electro-weak symmetry breaking process. Taking the unitary gauge, $\Phi=\frac{1}{\sqrt 2}\begin{pmatrix}0\\v_0+h \end{pmatrix}$, where $h$ is a real scalar Higgs field. 
+%
+%To diagonalize the Lagrangian \ref{yukawa2} to obtain definite masses of the fields, taking the unitary matrices: $V^{lep}_L, V^{lep}_R,V^\nu_L$ and $V^\nu_R$, the Yukawa coupling matrices can be diagonalized by biunitary transformations: $y^{lep}={V^{lep}_L}^\dagger y^{lep'}V^{lep}_R$, with $y^{lep}_{\alpha\beta}=y^{lep}_\alpha\delta_{\alpha\beta}$ for charged leptons; $y^{\nu}={V^{lep}_L}^\dagger y^{\nu'}V^{lep}$, with $y^{\nu}_{\alpha\beta}=y^{\nu}_\alpha\delta_{\alpha\beta}$ for neutrinos. The fields are transformed as: $\ell_{L,R}=({V^{lep}_{L,R}}^\dagger) \ell_{L,R}'$ and
+%$\nu_{L,R}=({V^\nu_{L,R}}^\dagger)\nu'_{L,R}$, where $\ell_{L,R}'=(e',\mu',\tau')_{L,R}^T$ and ${\nu}_{L,R}'=(\nu_e',\nu_\mu',\nu_{\tau}')_{L,R}^T$ are in the flavor or generation space. The transformed fields $\ell_{L,R}$ and $\nu_{L,R}$ have definite masses. The product ${V_L^{lep}}^\dagger V_L^\nu\equiv U$ is actually the PMNS matrix which has the relation: $\nu_{fL} = \sum_{i=1,2,3}U_{fi}\nu_{iL}$\cite{funchal2013physics,lesgourgues2013neutrino}.
+%
+%Thus the diagonalized Lagrangian \ref{yukawa2} becomes\cite{funchal2013physics}:
+%
+%\begin{equation}\label{yukawa3}
+%-\mathcal{L}_{Yukawa} = (\frac{v_0+h}{\sqrt 2})\sum_{f=e,\mu,\tau}(y_f^{lep})\overline{\ell_{fL}} \ell_{fR}+\sum_{i=1,2,3}(y_i^{\nu})\overline{\nu_{iL}}\nu_{iR}+h.c.,
+%\end{equation}
+%
+%In the Lagrangian \ref{yukawa3}, the terms proportional to the VEV of the Higgs doublet are mass terms while the terms proportional to the $h$ describe the couplings between leptons and Higgs boson\cite{giunti2007fundamentals}. If neutrinos are Dirac particles, the mass term in \ref{diracLagrange} is $-\mathcal L_{\nu~mass}^D = m_D\overline{\nu_L}\nu_R+h.c.$. In this case, the Dirac mass term becomes:
+%\begin{equation}\label{eq:diracMass}
+%-\mathcal L^D_{mass} =\sum_{\alpha=e,\mu,\tau}\frac{v_0}{\sqrt{2}}(y_\alpha^{lep})\overline{\ell_{\alpha L}}\ell_{\alpha R}+\sum_{i=1,2,3}\frac{v_0}{\sqrt{2}}(y_{i}^\nu)\overline{\nu_{iL}}\nu_{iR}+h.c.,
+%\end{equation}
+%So the charged lepton masses are given by: $m_{\ell_\alpha}=\frac{y_\alpha^{lep} v_0}{\sqrt 2}~(\alpha=e,\mu,\tau)$ and the neutrino masses are: $m_i=\frac{y_k^\nu v_0}{\sqrt 2}~(i=1,2,3)$\cite{funchal2013physics}. 
 
 In this Dirac mass case, the masses of charged leptons and neutrinos are both proportional to the Higgs VEV. However, the experimental measurements already show the masses of neutrinos are $\mathcal O(eV)$ 
 while charged leptons are $\mathcal O(MeV)$. The smallness of neutrino masses should be obtained by the tuning of the Yukawa couplings $y_k^\nu$, which does not have solid physics meanings or explanations.

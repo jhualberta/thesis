@@ -79,6 +79,36 @@ accuracy or to the roundoff limit is not used, since $\chi^2$ is a statistical q
 
 Once the minimum is reached, set $\lambda=0$ and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
 
+Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.039 ns. 
+
+\begin{figure}
+	\centering
+	%\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=65mm]{likelihoodSurface_xy.pdf}}
+	%\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=65mm]{likelihoodSurface_yz.pdf}}
+	%\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=65mm]{likelihoodSurface_xz.pdf}}
+	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}}
+	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}}
+	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}
+	\label{likelihoodSurface}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{logL_xyzt.pdf}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}
+	\label{logLxyz}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
+	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
+	\label{derivative_logLxyz}
+\end{figure}
+
+
+
 \section{Detailed Light Path Calculations in the MultiPath Scint-water Fitter}\label{sect:lightpath}
 The following algorithm shows the detailed calculations for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by latin letters (a, b or c). 
 
