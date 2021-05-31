@@ -243,14 +243,25 @@ In Table.~\ref{vertexShifts}, the averages and the standard deviations were take
 		\toprule
 		axis & vertex shift  & systematic to be applied ($\delta$) &smearing\\
 		\hline 
-		x shift &  0.50$\pm$ 5.98 & 6.48/-5.98 & $x+\delta$\\	
-		y shift  & 2.16$\pm$4.06 & 6.22/-4.06 & $y+\delta$\\
-		z shift & 1.81$\pm$4.81 &6.62/-4.81 & $z+\delta$\\
+		x shift &  0.50$\pm$5.98 & +6.48/-5.98 & $x+\delta$\\	
+		y shift  & 2.16$\pm$4.06 & +6.22/-4.06 & $y+\delta$\\
+		z shift & 1.81$\pm$4.81 & +6.62/-4.81 & $z+\delta$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
+
+position resolutions
+
+
 \subsubsection{Position Scale Uncertainties}
+
+
+
+
+
+
+
 The position scale uncertainty $\delta_r$ is defined by\cite{waterunidoc}:
 \begin{equation}
 \delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2\delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}},
@@ -368,7 +379,7 @@ For the internal x, y, z scans (not using the neck scans) and corner scans (76 r
 \label{relative_biases_betaS}
 \end{figure}
 	
-Therefore, taking the Gaussian means and resolutions, $\Delta(\beta_M)_{rel}=-5.959\pm 3.707\%$ and $\Delta(\beta_S)_{rel}=-3.383\pm 3.840\%$. To be conservative, taking the largest and smallest values among $\Delta(\beta_M)_{rel}$ and $\Delta(\beta_S)_{rel}$, the negative and positive values of the direction systematic ($\delta_\theta$) are obtained as $\delta_\theta=-0.097/0.005$.
+Therefore, taking the Gaussian means and resolutions, $\Delta(\beta_M)_{rel}=(-5.998\pm 3.704)\%$ and $\Delta(\beta_S)_{rel}=(-3.07\pm 3.862)\%$. To be conservative, taking the largest and smallest values among $\Delta(\beta_M)_{rel}$ and $\Delta(\beta_S)_{rel}$, the negative and positive values of the direction systematic ($\delta_\theta$) are obtained as $\delta_\theta=-0.097/0.008$.
 
 To propagate the uncertainties of $\beta$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
 \begin{equation}\label{remapTheta}
@@ -380,38 +391,40 @@ This angular remapping function is used to smear the angular distributions for s
 \subsection{$\beta_{14}$ and Its Systematic}
 
 Fig.~\ref{N16beta14} shows the $\beta_{14}$ distributions for the central run-107055 data and MC, reconstructed by the MPW fitter and the official RAT fitter. The $\beta_{14}$ is calculated based on the reconstructed position, time and direction of an event while the $\beta_{14}$ distributions from the MPW and the RAT fitter results are consistent. However, both of the two fitters show a discrepancy between the data and the MC. This discrepancy can be caused by an inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}.
+Fig.~\ref{N16beta14_cmp} shows a comparison of the $\beta_{14}$ for the data and the MC in run-107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller mean value, $\mu_{data}=0.4157$ compared to the $\mu_{MC}=0.4388$.
+
+Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z axes.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16_beta14_107055.png}
 	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter processed results and black for the RAT results.}
-	\label{N16beta14}
+	\label{N16beta14_cmp}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16FitMPW_beta14_107055.png}
-	\caption{Comparisons of the $\beta_{14}$ for the data and the MC. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller mean value (0.4157) than the MC (0.4388).}
+	\caption{A comparison of the $\beta_{14}$ for the data and the MC in run-107055.}
 	\label{N16beta14MPW}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=15cm]{beta14_allScans.pdf}
-	\caption{$\beta_{14}$ systematic for various $^{16}$N scans.}
-	\label{beta14_scans}
+	\includegraphics[width=15cm]{beta14_XYZScans.pdf}
+	\caption{$\beta_{14}$ systematic along x, y, z scans.}
+	\label{beta14_XYZscans}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=16cm]{angularResol_scanXYZ.pdf}
-	\caption{$\Delta\beta_{M}$ (top) and $\Delta\beta_{S}$ (bottom) systematic for various $^{16}$N scans along three axes.}
-	\label{xyzScans}
-\end{figure}
+Fig.~\ref{all_beta14}
 
-Discussions for the external scan runs.
 
-For external scans, the radial cuts were not applied. 
+
+
+
+
+%Discussions for the external scan runs.
+%For external scans, the radial cuts were not applied. 
 
 %\begin{figure}[!htb]
 %	\centering
@@ -502,7 +515,7 @@ The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
 	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
 	\label{N16nhits}
-\end{figure}
+\end{figure}]
 
 \begin{figure}[htbp]
 	\centering
