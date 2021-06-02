@@ -599,24 +599,24 @@ $^{46}$Sc source
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration has developed a software framework, called the Reactor Analysis
-Tool (RAT), which integrates a Monte Carlo simulation framework for the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiments, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
+Tool (\texttt{RAT}), which integrates a Monte Carlo simulation framework for the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiments, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
 
-Geant4 Toolkit and incorporates ROOT libraries for data handling and analysis.
+\texttt{Geant4} Toolkit and incorporates ROOT libraries for data handling and analysis.
 
-The RAT Monte Carlo was originally developed for the Braidwood Collaboration
-utilizing software developed for a generic KamLAND-like detector, called Generic Liquid Scintillator GEANT4 simulation (GLG4). It was branched and
+The \texttt{RAT} Monte Carlo was originally developed for the Braidwood Collaboration
+utilizing software developed for a generic KamLAND-like detector, called Generic Liquid Scintillator \texttt{GEANT4} simulation (GLG4). It was branched and
 developed into the specialist SNO+ version, starting in 2006/2007.
 
-GLG4sim Braidwood
+\texttt{GLG4sim} Braidwood
 
 combines both Monte Carlo simulation of the Braidwood detector with event-based analysis tasks, like reconstruction. The primary goals are:
 
 Make it easy to analyze Monte Carlo-generated events as well as data from disk using the same software with only a few command changes. Even in the proposal R\&D phase, where there is no real data, this is still useful for dumping Monte Carlo events to disk to be analyzed by another job. When there is real data, being able to do the analysis with the same code path as was used on Monte Carlo is very reassuring.
 Allow for a modular, user-controlled analysis of events. This includes allowing the user to selected which analysis tasks to perform (different fitters, pruning unneeded data from the event data structure, etc.). It should also be relatively straightforward for users to introduce their own code into the analysis process.
 Separate analysis into small tasks that can be developed asynchronously by different people, yet integrated with minimal (or perhaps zero) pain.
-Integrate into existing GEANT4 and GLG4sim efforts with a minimum of code duplication. As much as possible, RAT should be designed to incorporate upgrades of these packages just by relinking. No cut and paste of code (mainly a question with GLG4sim).
+Integrate into existing \texttt{GEANT4} and \texttt{GLG4sim} efforts with a minimum of code duplication. As much as possible, \texttt{RAT} should be designed to incorporate upgrades of these packages just by relinking. No cut and paste of code (mainly a question with GLG4sim).
 Design the detailed processes of data acquisition and trigger systems are \cite{whitepaper}.
 
-The SNO+ version of RAT is being developed by the whole collaboration and evolves with the experiment progress.
-Besides more functions are added into the RAT, it is also tuned and optimized with the updated parameters from more precise descriptions of the physics processes or the detector responses to the calibration sources. Therefore, different versions of RAT may give different results. For the work in this thesis, multiple RAT versions are used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the RAT version when I discuss a certain analysis.
+The SNO+ version of \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment progress.
+Besides more functions are added into the \texttt{RAT}, it is also tuned and optimized with the updated parameters from more precise descriptions of the physics processes or the detector responses to the calibration sources. Therefore, different versions of \texttt{RAT} may give different results. For the work in this thesis, multiple \texttt{RAT} versions are used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a certain analysis.
 \cite{ratManual}
