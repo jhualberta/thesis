@@ -98,35 +98,28 @@
 \contentsline {subsubsection}{\numberline {5.3.4.2}Eenrgy Resolution and Systematics}{124}{subsubsection.5.3.4.2}
 \contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{126}{subsubsection.5.3.4.3}
 \contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{128}{subsubsection.5.3.4.4}
-\contentsline {section}{\numberline {5.4}Extracting $\gamma $-rays from Neutron Capture}{129}{section.5.4}
-\contentsline {section}{\numberline {5.5}$^{16}$N Calibration in Partial-fill Phase}{129}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}High Level Cuts: Sky-shine Classifier}{130}{subsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.1.1}Performance of the Sky-shine Classifier}{131}{subsubsection.5.5.1.1}
-\contentsline {subsubsection}{\numberline {5.5.1.2}Optimize the Sky-shine Cuts}{133}{subsubsection.5.5.1.2}
-\contentsline {subsection}{\numberline {5.5.2}$^{16}$N Calibration in the Partial-fill Phase}{135}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Extracting the Cherenkov Signals in Partial-fill Phase}{135}{subsection.5.5.3}
-\contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{139}{chapter.6}
-\contentsline {section}{\numberline {6.1}Detector Backgrounds}{140}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{140}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Kullback–Leibler (KL) Divergence for High Level Cuts}{140}{section.6.2}
-\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{141}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{141}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}TMVA Analysis}{143}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.2.1}TMVA Outputs for Data}{149}{subsubsection.6.3.2.1}
-\contentsline {subsection}{\numberline {6.3.3}Discussions on the TMVA Results}{150}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{151}{subsection.6.3.4}
-\contentsline {subsubsection}{\numberline {6.3.4.1}Maximum Likelihood Fit}{152}{subsubsection.6.3.4.1}
-\contentsline {subsubsection}{\numberline {6.3.4.2}Ensemble Test}{153}{subsubsection.6.3.4.2}
-\contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{155}{subsubsection.6.3.4.3}
-\contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{156}{subsubsection.6.3.4.4}
-\contentsline {subsubsection}{\numberline {6.3.4.5}Extracting the Solar Neutrino Flux}{158}{subsubsection.6.3.4.5}
-\contentsline {subsubsection}{\numberline {6.3.4.6}Limits of this Study}{159}{subsubsection.6.3.4.6}
-\contentsline {chapter}{\numberline {7}Conclusions}{161}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{162}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{162}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{162}{section.A.2}
-\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{165}{section.A.3}
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{170}{appendix.B}
-\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{170}{section.B.1}
-\contentsline {chapter}{\numberline {C}Run Lists Used for Water Analysis}{174}{appendix.C}
-\contentsline {chapter}{References}{175}{appendix*.6}
+\contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{130}{chapter.6}
+\contentsline {section}{\numberline {6.1}Detector Backgrounds}{131}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{131}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Kullback–Leibler (KL) Divergence for High Level Cuts}{131}{section.6.2}
+\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{133}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{133}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}TMVA Analysis}{135}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}TMVA Outputs for Data}{141}{subsubsection.6.3.2.1}
+\contentsline {subsection}{\numberline {6.3.3}Discussions on the TMVA Results}{141}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{142}{subsection.6.3.4}
+\contentsline {subsubsection}{\numberline {6.3.4.1}Maximum Likelihood Fit}{143}{subsubsection.6.3.4.1}
+\contentsline {subsubsection}{\numberline {6.3.4.2}Ensemble Test}{145}{subsubsection.6.3.4.2}
+\contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{148}{subsubsection.6.3.4.3}
+\contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{149}{subsubsection.6.3.4.4}
+\contentsline {subsubsection}{\numberline {6.3.4.5}Extracting the Solar Neutrino Flux}{150}{subsubsection.6.3.4.5}
+\contentsline {subsubsection}{\numberline {6.3.4.6}Limits of this Study}{152}{subsubsection.6.3.4.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{153}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{154}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{154}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt (MRQ) Method for Minimization\cite {press2007numerical}}{154}{section.A.2}
+\contentsline {section}{\numberline {A.3}Detailed Light Path Calculations in the MultiPath Scint-water Fitter}{158}{section.A.3}
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{163}{appendix.B}
+\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{163}{section.B.1}
+\contentsline {chapter}{\numberline {C}Run Lists Used for Water Analysis}{167}{appendix.C}
+\contentsline {chapter}{References}{168}{appendix*.6}

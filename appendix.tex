@@ -1,17 +1,16 @@
 \section{Create a Random Vertex}
 
-Four random seeds are generated from the uniform distribution function: $RandFlat$ in Class Library for High Energy Physics (CLHEP) library.
+Four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics (CLHEP) library.
 
 One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]~ns$, say, $t\sim U(100,300)$.
 
-Three random seeds are used for generating the position of the trial vertex: $ran0\sim U(0,1)$, $ran1\sim U(-1,1)$ and $ran2Pi\sim U(0,2\pi)$. 
+Three random seeds are used for generating the position of the trial vertex: $\texttt{ran0}\sim U(0,1)$, $\texttt{ran1}\sim U(-1,1)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. 
 
-Let $r=\sqrt[3]{ran0}*10000~mm$, $\phi=ran2Pi$, $\cos\theta=ran1$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
+Let $r=\sqrt[3]{\texttt{ran0}}*10000~mm$, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
 
 \section{Levenberg-Marquardt (MRQ) Method for Minimization\cite{press2007numerical}}
 
-Levenberg-Marquardt method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, 
-for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
+Levenberg-Marquardt method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
 
 A $\chi^2$ merit function with the unknown parameter vector $\bf a$ can be built and by minimizing the function, the best-fit $\bf a$ can be found.
 
@@ -74,12 +73,33 @@ From the definition of $\alpha'$, if $\lambda$ takes a large value, $\alpha'$ is
 The algorithm of Levenberg-Marquardt method requires a reasonable start value (first guess) of the fitting parameter $\bf a$ and a reasonable preset value of $\lambda$ (usually take $\lambda$ = 0.001). 
 The iteration loop of the algorithm is: calculate the value of $\chi^2({\bf a})$, solve for $\bf \delta a$ from \ref{eq:10} and then calculate $\chi^2({\bf a+\delta a})$. During this loop, the algorithm checks whether $\chi^2({\bf a+\delta a})\geq\chi^2({\bf a})$, if it is, $\lambda$ is increased by $\lambda=10\cdot\lambda$; if not, $\lambda$ is decreased by $\lambda=0.1\cdot\lambda$.  
 
-The iteration loop is terminated when the change amount of the $\chi^2$ is negligible: if the loop calculates several $\chi^2$ values which are close to each other (for example, $|\chi^2_{curren}-\chi^2_{previous}|<0.001$), the algorithm will consider the $\chi^2$ is minimized with a set of best-fit parameters. Here the termination condition of iterating the $\chi^2$ value to convergence to machine
+The iteration loop is terminated when the change amount of the $\chi^2$ is negligible: if the loop calculates several $\chi^2$ values which are close to each other, for example, $|\chi^2_{curren}-\chi^2_{previous}|<0.001$, where 0.001 is set as a tolerance value, the algorithm will consider the $\chi^2$ is minimized with a set of best-fit parameters. Here the termination condition of iterating the $\chi^2$ value to convergence to the machine
 accuracy or to the roundoff limit is not used, since $\chi^2$ is a statistical quantity rather than a solution of an equation. It is not statistical meaningful to vary the value of $\bf a$ to vary $\chi^2$ by a small amount $\ll 1$.
 
-Once the minimum is reached, set $\lambda=0$ and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
+Once the minimum is reached, $\lambda$ is set to 0 and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
 
-Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: the fitted position is at (-211.958, 503.399, 275.990) mm and the fitted time at 217.039 ns. 
+The MRQ method is the core algorithm in the MultiPath Fitter Framework for fitting the results. A few parameters can be optimized in practice. A trade-off between the precision and the CPU 
+
+After optimizations and tuning of the paramer 
+and the CPU time,
+
+
+, mainly: the fit tolerance (\texttt{fTolerance}), which is set for  $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$
+
+$|\chi^2_{curren}-\chi^2_{previous}|<0.001$
+
+
+
+the parameters used by the MultiPath Fitter for different phases are summarized in Table.~\ref{table:MRQ_params}. 
+
+
+fit tolerance 0.001
+the number of maximum iteration $iter_{max}$ 500, 100 
+the number of maximum good fits $nGood_{max}$ 6, 4
+
+
+
+Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the MultiPath Water Fitter, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
 
 \begin{figure}
 	\centering
@@ -103,11 +123,9 @@ Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces for an typical {$^
 \begin{figure}
 	\centering
 	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
-	\caption{Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}
+	\caption{Derivatives of $\ln L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}
 	\label{derivative_logLxyz}
 \end{figure}
-
-
 
 \section{Detailed Light Path Calculations in the MultiPath Scint-water Fitter}\label{sect:lightpath}
 The following algorithm shows the detailed calculations for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by latin letters (a, b or c). 

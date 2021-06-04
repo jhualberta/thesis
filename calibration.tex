@@ -617,30 +617,25 @@ Fig.~\ref{fittedEnergyResol} shows the reconstructed energy spectrum fitted with
 \subsubsection{Energy Uncertainties}
 The uncertainty of energy scale $\delta_E$ and resolution are calculated as\cite{waterunidoc}:
 \begin{equation}
-\Delta^2_\delta= (\delta_{E,data}-\delta_{E,MC})^2+Error^2_{\delta,data}+Error^2_{\delta,MC},
+\Delta^2_{\delta_E}= (\delta_{E,data}-\delta_{E,MC})^2+Error^2_{\delta,data}+Error^2_{\delta,MC},
 \end{equation}
+
 \begin{equation}
 \Delta^2_b= (b_{E,data}-b_{E,MC})^2+Error^2_{b,data}+Error^2_{b,MC}
 \end{equation}
-$\bar{\Delta}=\sum_i^{N_{cells}}f_i\Delta_i$, where $\sum_i^{N_{cells}}f_i=1$
-$f_i$: the fractional volume of cell $i$
 
-$f_i = S_{cell}/S_{total} = (857*1000)/(\pi\cdot6000^2)$
+For a fiducial volume $r<5.5~m$, I took the results from the $^{16}$N scans in this FV region and simply took the average of the results. This gives $\overline{\Delta^2_{\delta_E}}=1.12\%$. 
 
 
-
-$f_i = S_{cell}/S_{total} = (640*1000)/(12000 \cdot \sqrt{2*6000^2}$)
-
-
-$\overline{\Delta_{\delta_E}}$
-
-$\overline{\Delta_b}$
-
-the uncertainties of the reconstructed energy scale and resolution.
-
-Fig.~\ref{map_energyScale} and Fig.~\ref{map_energyResol} show the maps of the energy scale ($\Delta$) and the resolution parameter ($b$) respectively.
-
-$570~mm\times 2000~mm$ cells of $z_{fit}\times \rho_{fit}$.
+%$\bar{\Delta}=\sum_i^{N_{cells}}f_i\Delta_i$, where $\sum_i^{N_{cells}}f_i=1$
+%$f_i$: the fractional volume of cell $i$
+%$f_i = S_{cell}/S_{total} = (857*1000)/(\pi\cdot6000^2)$
+%$f_i = S_{cell}/S_{total} = (640*1000)/(12000 \cdot \sqrt{2*6000^2}$)
+%$\overline{\Delta_{\delta_E}}$
+%$\overline{\Delta_b}$
+%the uncertainties of the reconstructed energy scale and resolution.
+%Fig.~\ref{map_energyScale} and Fig.~\ref{map_energyResol} show the maps of the energy scale ($\Delta$) and the resolution parameter ($b$) respectively.
+%$570~mm\times 2000~mm$ cells of $z_{fit}\times \rho_{fit}$.
 
 \begin{table}[ht]
 	\centering

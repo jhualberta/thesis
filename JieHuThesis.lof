@@ -101,77 +101,46 @@
 \contentsline {figure}{\numberline {5.29}{\ignorespaces Fitted energy resolution function (red) with the reconstructed energy of $^{16}$N central run-107055 MC (a) and data (b).}}{128}{figure.5.29}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC}}}{128}{figure.5.29}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {data}}}{128}{figure.5.29}
-\contentsline {figure}{\numberline {5.30}{\ignorespaces An illustration for the Sky-shine classifier, modified from \cite {skyshine}.}}{130}{figure.5.30}
-\contentsline {figure}{\numberline {5.31}{\ignorespaces MC (left) and fitted positions (right) of $^{208}$Tl simulations.}}{131}{figure.5.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{131}{figure.5.31}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fitted positions ($z_{mc}$ vs. $\rho _{mc}$)}}}{131}{figure.5.31}
-\contentsline {figure}{\numberline {5.32}{\ignorespaces MC positions vs. skyShine values for simulated $^{208}$Tl events.}}{132}{figure.5.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{mc}$ vs. $skyShine$.}}}{132}{figure.5.32}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{mc}$ vs. $skyShine$.}}}{132}{figure.5.32}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{mc}$ vs. $skyShine$.}}}{132}{figure.5.32}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$r_{mc}$ vs. $skyShine$.}}}{132}{figure.5.32}
-\contentsline {figure}{\numberline {5.33}{\ignorespaces MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}}{132}{figure.5.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.7$.}}}{132}{figure.5.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{mc}$ vs. $\rho _{mc}$, with $skyShine<1.5$.}}}{132}{figure.5.33}
-\contentsline {figure}{\numberline {5.34}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{133}{figure.5.34}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{133}{figure.5.34}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{133}{figure.5.34}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{133}{figure.5.34}
-\contentsline {figure}{\numberline {5.35}{\ignorespaces Fit biases vs. skyShine values for simulated $^{208}$Tl events.}}{134}{figure.5.35}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{134}{figure.5.35}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{134}{figure.5.35}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{134}{figure.5.35}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$ vs. $skyShine$.}}}{134}{figure.5.35}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$ vs. $skyShine$.}}}{134}{figure.5.35}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $skyShine$.}}}{134}{figure.5.35}
-\contentsline {figure}{\numberline {5.36}{\ignorespaces Radial resolutions with different skyShine cuts.}}{134}{figure.5.36}
-\contentsline {figure}{\numberline {5.37}{\ignorespaces Distributions of $\qopname \relax o{cos}\theta _{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}}{136}{figure.5.37}
-\contentsline {figure}{\numberline {5.38}{\ignorespaces PMT hit patterns after the prompt time cut and NHit cut.}}{137}{figure.5.38}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{137}{figure.5.38}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{137}{figure.5.38}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{137}{figure.5.38}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{137}{figure.5.38}
-\contentsline {figure}{\numberline {5.39}{\ignorespaces $\isotope [16]{N}$ source calibration in external water during the partial-fill phase.}}{138}{figure.5.39}
-\contentsline {figure}{\numberline {5.40}{\ignorespaces Simulated main track of 7.1 MeV $\gamma $ for one event from $\isotope [16]{N}$ source in the external water during the partial-fill phase.}}{138}{figure.5.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{142}{figure.6.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{142}{figure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{142}{figure.6.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{142}{figure.6.1}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{142}{figure.6.1}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{142}{figure.6.1}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{142}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Energy spectrum of the simulated events for $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu _e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}}{145}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{146}{figure.6.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{146}{figure.6.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{146}{figure.6.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{146}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<15\nobreakspace {}MeV$.}}{147}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces ROC curves from TMVA output, for event with $5<E_{fit}<15\nobreakspace {}MeV$ (energy above 5 MeV).}}{148}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<5\nobreakspace {}MeV$ (low energy region).}}{148}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{150}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{150}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{151}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $5<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{151}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces For the $5<E_{fit}<15\nobreakspace {}MeV$, comparing the outputs of the BDT, MLP and the default cuts. The solid blue line shows the BDT results; the red slashes show the MLP results and the dotted black line shows the default cut results.}}{152}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces The $\qopname \relax o{cos}\theta _{sun}$ distribution of solar $\nu _e$ extracted from the simulations, which was used as a pdf function.}}{153}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Real data from run-200004 to 203602 (half dataset), after the default cuts. The number of counts in $-1<\qopname \relax o{cos}\theta _{sun}<0$ region is 19.}}{154}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces An example of the randomly generated $\qopname \relax o{cos}\theta _{sun}$ fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line is the fitted results. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fitted results give $N_{sig} = 73.42\pm 9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi ^2/ndf = 60.19/40 = 1.50$.}}{155}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets.}}{156}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets.}}{156}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces The $-2\qopname \relax o{ln}L$ of the best fitted results for 5000 fake datasets.}}{157}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from BDT outputs.}}{157}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from MLP outputs.}}{158}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces $^8B$ solar neutrino flux as a function of energies. The $P_{ee}$ curve obtained from the \texttt {RAT} is in red.}}{160}{figure.6.20}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Angular distributions of the MC events in run-by-run simulation 206391, with the same event GTID =7. The black line is the MC solar $\nu _e$ distribution, while the red line is the MC $^{214}$Bi distribution. The pdf is scaled to the number of the hits in solar $\nu _e$ event (black dashed line) and the $^{214}$Bi event (red dotted line) respectively.}}{132}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}}{134}{figure.6.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{134}{figure.6.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{134}{figure.6.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{134}{figure.6.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{134}{figure.6.2}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{134}{figure.6.2}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{134}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Energy spectrum of the simulated events for $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu _e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}}{136}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{138}{figure.6.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{138}{figure.6.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{138}{figure.6.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{138}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<15\nobreakspace {}MeV$.}}{139}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces ROC curves from TMVA output, for event with $5<E_{fit}<15\nobreakspace {}MeV$ (energy above 5 MeV).}}{139}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<5\nobreakspace {}MeV$ (low energy region).}}{140}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{142}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{142}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{143}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $5<E_{fit}<15\nobreakspace {}MeV$. The solid blue line shows the selected candidate solar $\nu _e$ events while the dotted red line shows the selected background events.}}{143}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces For the $5<E_{fit}<15\nobreakspace {}MeV$, comparing the outputs of the BDT, MLP and the default cuts. The solid blue line shows the BDT results; the red slashes show the MLP results and the dotted black line shows the default cut results.}}{144}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces The $\qopname \relax o{cos}\theta _{sun}$ distribution of solar $\nu _e$ extracted from the simulations, which was used as a pdf function.}}{145}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Real data from run-200004 to 203602 (half dataset), after the default cuts. The number of counts in $-1<\qopname \relax o{cos}\theta _{sun}<0$ region is 19.}}{146}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces An example of the randomly generated $\qopname \relax o{cos}\theta _{sun}$ fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line is the fitted results. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fitted results give $N_{sig} = 73.42\pm 9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi ^2/ndf = 60.19/40 = 1.50$.}}{146}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets.}}{147}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets.}}{148}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces The $-2\qopname \relax o{ln}L$ of the best fitted results for 5000 fake datasets.}}{148}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from BDT outputs.}}{149}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from MLP outputs.}}{149}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces $^8B$ solar neutrino flux as a function of energies. The $P_{ee}$ curve obtained from the \texttt {RAT} is in red.}}{151}{figure.6.21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{166}{figure.A.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{166}{figure.A.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{166}{figure.A.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{166}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{167}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of logLikelihood of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They are well-matched.}}{168}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{168}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{169}{figure.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{158}{figure.A.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{158}{figure.A.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{158}{figure.A.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{158}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{159}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{160}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{161}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{162}{figure.A.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

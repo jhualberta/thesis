@@ -33,16 +33,27 @@ the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 \section{Kullback–Leibler (KL) Divergence for High Level Cuts}
 
-Kullback–Leibler (KL) divergence for Cherenkov distribution. The KL divergence is also called ``relative entropy'' and it is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of a random event with the assumed Cherenkov distribution of solar $\nu_e$ events extracted from simulation to check the dissimilarity of the event compared to the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
-\begin{equation}\label{kldiv}
+The Kullback–Leibler (KL) divergence (also called ``relative entropy'') is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of an event, $\vec{u}_{fit}\cdot(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|$, with the angular distribution of solar $\nu_e$ events extracted from the MC (expected as a Cherenkov distribution) to check the dissimilarity of the event compared with the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
+\begin{equation}\label{eq:kldiv}
 klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
 \end{equation}
 
-where $p(x_i)$ is the distribution of $\vec{u}_{fit}\cdot(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|$ after a time residual window cut: $-5<t_{Res}<1~ns$ to extract prompt Cherenkov lights. The distribution was filled into a histogram with 40 bins ranging from [-1,1]. The output values were used for distinguishing the signal from backgrounds, which will be discussed.
+where $p(x_i)$ is the angular distribution after a time residual window cut: $-5<t_{Res}<1~ns$, to extract prompt Cherenkov lights. Both of the event and the MC distributions were filled into a histogram with 40 bins ranging from [-1,1] and the $klDiv$ values were calculated bin by bin except the empty bins (zero count). A small $klDiv$ value indicates a small dissimilarity.
 
-Symmetry KL-div:
+These values were used for distinguishing the signal from backgrounds, which will be discussed in the section \ref{sect:tmva}. Fig.~\ref{kLdiv_example} shows an example of the $klDiv$ calculation. Two events are compared here. One is a randomly selected event from the solar $\nu_e$ run-by-run MC ($E=4.78~MeV$), the other is from the $^{214}$Bi MC ($E=2.18~MeV$), with the same event GTID. It can be seen that the background event with lower energy is more dispersive while the signal event has a peak around the Cherenkov angle ($\sim 0.75$) and thus its shape is more close to the pdf. The calculation of \ref{eq:kldiv} gives $klDiv(solar~\nu_e)=11.78$ and $klDiv(^{214}Bi)=22.69$, which verifies the observation.
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{klDiv_example.png}
+	\caption{Angular distributions of the MC events in run-by-run simulation 206391, with the same event GTID =7. The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The pdf is scaled to the number of the hits in solar $\nu_e$ event (black dashed line) and the $^{214}$Bi event (red dotted line) respectively.}
+	\label{kLdiv_example}
+\end{figure}
 
+A symmetrical form of $klDiv$ can be taken as:
+\begin{equation}
+klDiv(p,q) \equiv \frac{1}{2}\sum_{i}^N (p\log{\frac{p}{q}}+q\log{\frac{q}{p}}),
+\end{equation}
+Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. The quantity is not used in the thesis, but can be considered in future.
 
 \section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
 \subsection{Open Dataset Analysis}
@@ -163,7 +174,7 @@ A plot of refitting the RAT candidate solar events with the MPW on old dataset.
 
 
 
-\subsection{TMVA Analysis}
+\subsection{TMVA Analysis}\ref{sect:tmva}
 The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days for testing and training the TMVA methods.
 
 Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
