@@ -8,9 +8,9 @@ Three random seeds are used for generating the position of the trial vertex: $\t
 
 Let $r=\sqrt[3]{\texttt{ran0}}*10000~mm$, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
 
-\section{Levenberg-Marquardt (MRQ) Method for Minimization\cite{press2007numerical}}
+\section{Levenberg-Marquardt Method for Minimization}\footnote{This section refers to \cite{press2007numerical}.}
 
-Levenberg-Marquardt method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
+Levenberg-Marquardt (MRQ) method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
 
 A $\chi^2$ merit function with the unknown parameter vector $\bf a$ can be built and by minimizing the function, the best-fit $\bf a$ can be found.
 
@@ -25,7 +25,10 @@ To find a ${\bf a}_{min}$ so that a $\min\chi^2({\bf a}_{min})$ is reached, in c
 where ${\bf a}_{cur}$ is the current trial value of $\bf a$ and we assume matrix $\bf D$ is invertible. The ${\bf a}_{cur}$ thus jumps onto ${\bf a}_{min}$. 
 
 According to the definition of a $\chi^2$ merit function, it can be written out explicitly as:
-$\chi^2({\bf a})=\sum_{i=0}^{N-1}[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}]^2$, with the same Taylor expansion, the quadratic form is written as:
+\begin{equation}
+\chi^2({\bf a})=\sum_{i=0}^{N-1}[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}]^2,
+\end{equation}
+and with the same Taylor expansion, the quadratic form is written as:
 \begin{equation}\label{eq:3}
 \chi^2({\bf a})\approx\chi^2({\bf a}_{cur})+\sum_k\frac{\partial \chi^2({\bf a}_{cur})}{\partial \alpha_k}\delta\alpha_k+\frac{1}{2}\sum_{kl}\frac{\partial^2\chi^2({\bf a}_{cur})}{\partial\alpha_k\partial\alpha_l}\delta\alpha_k\delta\alpha_l, 
 \end{equation}
@@ -73,30 +76,29 @@ From the definition of $\alpha'$, if $\lambda$ takes a large value, $\alpha'$ is
 The algorithm of Levenberg-Marquardt method requires a reasonable start value (first guess) of the fitting parameter $\bf a$ and a reasonable preset value of $\lambda$ (usually take $\lambda$ = 0.001). 
 The iteration loop of the algorithm is: calculate the value of $\chi^2({\bf a})$, solve for $\bf \delta a$ from \ref{eq:10} and then calculate $\chi^2({\bf a+\delta a})$. During this loop, the algorithm checks whether $\chi^2({\bf a+\delta a})\geq\chi^2({\bf a})$, if it is, $\lambda$ is increased by $\lambda=10\cdot\lambda$; if not, $\lambda$ is decreased by $\lambda=0.1\cdot\lambda$.  
 
-The iteration loop is terminated when the change amount of the $\chi^2$ is negligible: if the loop calculates several $\chi^2$ values which are close to each other, for example, $|\chi^2_{curren}-\chi^2_{previous}|<0.001$, where 0.001 is set as a tolerance value, the algorithm will consider the $\chi^2$ is minimized with a set of best-fit parameters. Here the termination condition of iterating the $\chi^2$ value to convergence to the machine
+The iteration loop is terminated when the change amount of the $\chi^2$ is negligible: if the loop calculates several $\chi^2$ values which are close to each other within a fit tolerance (\texttt{fTolerance}): $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$, the algorithm will consider the $\chi^2$ is minimized with a set of best-fit parameters. Here the termination condition of iterating the $\chi^2$ value to convergence to the machine
 accuracy or to the roundoff limit is not used, since $\chi^2$ is a statistical quantity rather than a solution of an equation. It is not statistical meaningful to vary the value of $\bf a$ to vary $\chi^2$ by a small amount $\ll 1$.
 
 Once the minimum is reached, $\lambda$ is set to 0 and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
 
-The MRQ method is the core algorithm in the MultiPath Fitter Framework for fitting the results. A few parameters can be optimized in practice. A trade-off between the precision and the CPU 
-
-After optimizations and tuning of the paramer 
-and the CPU time,
+The MRQ method is the core algorithm in the MultiPath Fitter Framework for fitting the results. A few parameters can be optimized in practice.
+The main parameters are:
 
 
-, mainly: the fit tolerance (\texttt{fTolerance}), which is set for  $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$
+ The trade-off between precision of the results and the CPU time is considered. 
+\texttt{fTolerance}=0.001;
 
-$|\chi^2_{curren}-\chi^2_{previous}|<0.001$
-
-
-
-the parameters used by the MultiPath Fitter for different phases are summarized in Table.~\ref{table:MRQ_params}. 
-
-
-fit tolerance 0.001
 the number of maximum iteration $iter_{max}$ 500, 100 
 the number of maximum good fits $nGood_{max}$ 6, 4
 
+\begin{itemize}
+	\item fit tolerance: \texttt{fTolerance}, which is set for $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$.
+	\item the number of good fits: \texttt{nGood}. 
+	\item the maximum iteration number 
+	
+\end{itemize}
+
+the parameters used by the MultiPath Fitter for different phases are summarized in Table.~\ref{table:MRQ_params}. 
 
 
 Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the MultiPath Water Fitter, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 

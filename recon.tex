@@ -6,30 +6,38 @@
 %\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
 %\epigraph{Everyone knows how useful it is to be useful. No one seems to know how useful it is to be useless.}{---\textup{  Chuang Tzu, The Useless Tree}}
 \section{An Overview of the Reconstruction Algorithms in SNO+}
-An event happens in the SNO+ detector can produce Cherenkov or scintillation photons. These photons propagate through the detector and finally are measured by the PMTs.
+A particle interaction happens in the SNO+ detector can produce Cherenkov or scintillation photons. 
 
-By utilizing the time and charge information recorded by the PMTs, reconstruction algorithms aim to determine the vertex (position and time), direction and energy of an event. Sets of algorithms have been or being developed for the SNO+ event reconstruction. These algorithms are based on different methods and are optimized for the different SNO+ physics phases. For a certain algorithm, its performances are basically tested by the Monte Carlo simulations as well as the calibration data. Once the algorithm shows proper results and approved by the collaboration, it is implemented into the SNO+ RAT software and process the SNO+ data and simulations.
+These photons propagate through the detector, and when they reach the PMTs, their time and charge information can get measured and recorded.
+
+By utilizing the time and charge information recorded by the PMTs, reconstruction algorithms attempt to determine the vertex (position and time), direction and energy of an event. A few sets of reconstruction algorithms have been or being developed for the SNO+ event reconstruction. These algorithms are based on different methods and are optimized or coordinated for different SNO+ physics phases. 
+
+
 
 The event vertex are evaluated by the timing parameter of the photon propagation. 
 
 The energy of an event is mainly determined by the number of the triggered PMTs ($NHits$). 
 
+
+the Muon tracking 
+
+At the time of this writing, 
+\texttt{Water Fitter} for the water phase and the \texttt{Scint Fitter} for the scintillator phase and the tellurium loading phase.
+
+
+
+
 Multi-site or multi-vertex reconstruction algorithm is being developed.
 
-In this chapter, I do not consider the case of multi-vertex. Also, the Muon tracking 
+For a specific algorithm, its performance is first tested on the Monte Carlo simulations of specific physics processes. Then it is tested on both the simulations and real data of the calibration runs. Once the algorithm gives proper results which are approved by the collaboration, it is implemented into the SNO+ RAT software to process the SNO+ simulations and data files.
+
 
 The huge amount of data provided by particle detectors make the field of experimental particle physics an ideal place for implementing machine learning. The machine learning algorithms, such as artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. This algorithm trains the neural network from calibration data to find the position of an event.
 
 Once a neural network is trained, Traditional approach can fail to converge
-
-
 \cite{markNeuralNetwork,markNeuralTalk}.
-
-
-using calibrated hit time
- and angle between PMTs and an estimated event orientation as inputs to find
+using calibrated hit time and angle between PMTs and an estimated event orientation as inputs to find
 a radius.
-
 
 \section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
 A Multi-path (MP) reconstruction framework was developed by the University of Alberta group as an additional vertex reconstruction algorithm for SNO+.

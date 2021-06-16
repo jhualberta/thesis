@@ -184,7 +184,7 @@ Fig.~\ref{MPWscanXYZResols} shows the fitted results of $\mu_P$ and $\sigma_P$ a
 \begin{figure}
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_muPandSigmaP_xyzScans.pdf}
-	\caption{The fitted values of $\mu_P$ (top three) and $\sigma_P$ (bottom three) along x (left), y (middle) and z (right) scans. The MC results (red circles) are compared with the data (black boxes).}
+	\caption{The fitted values of $\mu_P$ (top three) and $\sigma_P$ (bottom three) along x (left), y (middle) and z (right) scans. The source positions in each set of scans are projected onto x, y and z axes respectively. The MC results (red circles) are compared with the data (black boxes).}
 	\label{MPWscanXYZResols}
 \end{figure}
 
@@ -208,24 +208,24 @@ It goes worse when the source is close to the AV or at the edges of the axes. Wh
 
 The values of $\sigma_{p,\delta}$ were taken to represent the position resolution systematics.
 
-In Table.~\ref{vertexResolsSystem}, the averages and the standard deviations were taken as the resolution systematics for x, y and z-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The upper values $\delta$ were used to smear the positions.
+As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of the $\sigma_{p,\delta}$ were taken as the resolution systematics for x, y and z-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The upper values $\delta$ were used to smear the positions.
 \begin{table}[ht]
 	\centering
 	\caption{The MPW fitter position resolution systematic uncertainties in x, y and z axes. Unit: mm.}
 	\vspace{3mm}
-	\label{vertexResolsSystem}
+	\label{vertexResolsSys}
 	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		axis & systematic uncertainties & systematic to be applied ($\delta$) &smearing\\
 		\hline 
 		x  & $73.89\pm39.71$ & 113.6 & $x+\mathcal{N}(0,\delta)$\\
-		y  &  $53.82\pm33.40$ & 87.22 & $y+\mathcal{N}(0,\delta)$\\
-		z   & $76.45\pm65.54$ & 141.99 & $z+\mathcal{N}(0,\delta)$\\
+		y  &  $56.03\pm34.96$ & 90.99 & $y+\mathcal{N}(0,\delta)$\\
+		z   & $75.47\pm70.09$ & 145.56& $z+\mathcal{N}(0,\delta)$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-To quantify the vertex shifts between the MC and data, values of vertex shifts: $\mu_P(data)-\mu_P(MC)$ were calculated for the x, y and z scans respectively. Fig.~\ref{fig:verteshitfs} shows these results.
+To quantify the vertex shifts between the MC and data, values of vertex shifts: $\mu_{P,\delta}\equiv\mu_P(data)-\mu_P(MC)$ were calculated for the x, y and z scans respectively. Fig.~\ref{fig:verteshitfs} shows these results.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_vertexShift_xyzScans.pdf}
@@ -233,7 +233,7 @@ To quantify the vertex shifts between the MC and data, values of vertex shifts: 
 	\label{fig:verteshitfs}
 \end{figure}
 
-In Table.~\ref{vertexShifts}, the averages and the standard deviations were taken as the vertex shifts for x, y and z-axes respectively. To smear the position results, the positions were simply shifted by the upper values $\delta$ were used to smear the positions.
+In Table.~\ref{vertexShifts}, the averages and the standard deviations of the $\mu_{P,\delta}$ were taken as the vertex shifts for x, y and z-axes respectively. To smear the position results, the positions were simply shifted by the upper values $\delta$ were used to smear the positions.
 \begin{table}[ht]
 	\centering
 	\caption{Vertex shifts for the reconstructed positions in x, y and z axes. Unit: mm.}
@@ -244,8 +244,8 @@ In Table.~\ref{vertexShifts}, the averages and the standard deviations were take
 		axis & vertex shift  & systematic to be applied ($\delta$) &smearing\\
 		\hline 
 		x shift &  0.50$\pm$5.98 & +6.48/-5.98 & $x+\delta$\\	
-		y shift  & 2.16$\pm$4.06 & +6.22/-4.06 & $y+\delta$\\
-		z shift & 1.81$\pm$4.81 & +6.62/-4.81 & $z+\delta$\\
+		y shift  & 2.02$\pm$4.11 & +6.13/-4.11 & $y+\delta$\\
+		z shift & 1.89$\pm$4.82 & +6.71/-4.82 & $z+\delta$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -257,14 +257,16 @@ Since $x^{data}_{fit}=\Delta+(1+\beta)\cdot x^{MC}_{fit}$, if the vertex scale f
 
 To obtain the $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1\cdot x_{src}$ (where $x_{src}$ is the source position), as shown in \ref{fig:vertexScale}.
 
-\begin{figure}[!htb]
+\begin{figure}
 	\centering
-	\includegraphics[width=16cm]{vertexScaleSys.pdf}
+	\subfigure[$^{16}$N x-scan runs.]{\includegraphics[width=5cm]{vertexScaleSysX.pdf}}
+	\subfigure[$^{16}$N y-scan runs.]{\includegraphics[width=5cm]{vertexScaleSysY.pdf}}
+	\subfigure[$^{16}$N z-scan runs.]{\includegraphics[width=5cm]{vertexScaleSysZ.pdf}}
 	\caption{Vertex shifts along x, y, z axes and fitted with linear functions.}
 	\label{fig:vertexScale}
 \end{figure}
 
-From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{table:vertexScale}. Since the $\chi^2/ndf$ values here were large, according to \cite{waterunidoc} and \cite{pdg2020}, inflated errors were calculated as $S\cdot slope~errors$, where the error scale factor $S=\sqrt{\chi^2/(ndf-1)}$. The downward systematic was calculated as the slope minus the slop error as well as the inflated error, while the upward systematic was simply taken as the positive inflated error, as suggested by \cite{waterunidoc}. The downward systematic in z is calculated as +0.01, to cover 0, I took -0.01.
+From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{table:vertexScale}. Since the $\chi^2/ndf$ values here were large, according to \cite{waterunidoc} and \cite{pdg2020}, inflated errors were calculated as $S\cdot slope~errors$, where the error scale factor $S=\sqrt{\chi^2/(ndf-1)}$. The downward systematic was calculated as the slope minus the slop error as well as the inflated error, while the upward systematic was simply taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the z scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive due to the possible biases in simulation for the neck geometry effects and makes the slope be positive. So this point was not used in the linear fit.
 
 \begin{table}[ht]
 	\centering
@@ -275,9 +277,9 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 		\toprule
 		axis & fitted slope (\%)  & inflated error &systematic ($\delta^+/\delta^-$) (\%)\\
 		\hline 
-		x scale &  0.005$\pm$0.021 & 0.044 & +0.04/-0.06\\	
-		y scale  & -0.043$\pm$0.020 & 0.030&  +0.03/-0.09\\
-		z scale & 0.057$\pm$0.021 & 0.032&  +0.03/-0.01\\
+		x scale &  0.005$\pm$0.021 & 0.048 & +0.07/-0.06\\	
+		y scale  & -0.027$\pm$0.018 & 0.030&  +0.02/-0.07\\
+		z scale & 0.032$\pm$0.020 & 0.027&  +0.08/-0.01\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -377,25 +379,15 @@ Fig.~\ref{relative_biasesVsPositions} shows the relative differences for the int
 	\label{relative_biasesVsPositions}
 \end{figure}
 
-For the internal x, y, z scans (not using the neck scans) and corner scans (76 runs in total), Fig.~\ref{relative_biases_betaM} and Fig.~\ref{relative_biases_betaS} show the distributions of the $(\Delta \beta_M)_{rel}$ and $(\Delta \beta_S)_{rel}$.
-\begin{figure}
-	\centering
-     \includegraphics[width=8cm]{relativeBias_betaM.pdf}
-	\caption{Relative biases in $\beta_M$ ($\Delta(\beta_M)_{rel}$) for 76 internal scans.}
-	\label{relative_biases_betaM}
-\end{figure}
-\begin{figure}
-		\centering
-	\includegraphics[width=8cm]{relativeBias_betaS.pdf}
-\caption{Relative biases in $\beta_S$ ($\Delta(\beta_S)_{rel}$) for 76 internal scans.}
-\label{relative_biases_betaS}
-\end{figure}
-	
-Therefore, taking the Gaussian means and resolutions, $\Delta(\beta_M)_{rel}=(-5.998\pm 3.704)\%$ and $\Delta(\beta_S)_{rel}=(-3.07\pm 3.862)\%$. To be conservative, taking the largest and smallest values among $\Delta(\beta_M)_{rel}$ and $\Delta(\beta_S)_{rel}$, the negative and positive values of the direction systematic ($\delta_\theta$) are obtained as $\delta_\theta=-0.097/0.008$.
+Taking the internal scans except the neck scans (77 runs in total), the means and standard deviations of the relative differences are:
+
+$\Delta(\beta_M)_{rel}=(-6.09\pm4.01)\%$, and $\Delta(\beta_S)_{rel}=(-3.09\pm4.39)\%$.
+
+To be conservative, taking the largest and smallest values of the $\Delta(\beta_M)_{rel}$ and $\Delta(\beta_S)_{rel}$, the negative and positive values of the direction systematic ($\delta_\theta$) are obtained as $\delta_\theta=-0.101/+0.013$.
 
 To propagate the uncertainties of $\beta$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
 \begin{equation}\label{remapTheta}
-\cos\theta'=1+(\cos\theta_{sun}-1)(1+\delta_{\theta}).
+\cos\theta'=1+(\cos\theta-1)(1+\delta_{\theta}).
 \end{equation} 
 
 This angular remapping function is used to smear the angular distributions for systematic studies. In the next chapter, it will be applied on the angular distribution of solar neutrino data. 
@@ -423,12 +415,12 @@ Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=15cm]{beta14_XYZScans.pdf}
+	\includegraphics[width=15cm]{beta14_xyzScans.pdf}
 	\caption{$\beta_{14}$ systematic along x, y, z scans.}
 	\label{beta14_XYZscans}
 \end{figure}
 
-For all the 76 internal runs mentioned before, I calculated the $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$. The mean and standard deviation were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in \cite{waterunidoc}, an asymmetric uncertain was taken: the upward shift was taken as $+0.010$ while the downward was taken as $-0.026-0.01=-0.036$. Thus the shifts: $+0.010/-0.036$ was taken as the $\beta_{14}$ systematics. It will be applied on the solar neutrino analysis in the next chapter. 
+For all the 80 internal runs mentioned before, I calculated the $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$. The mean and standard deviation were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in \cite{waterunidoc}, an asymmetric uncertain was taken: the upward shift was taken as $+0.010$ while the downward was taken as $-0.026-0.01=-0.036$. Thus the shifts: $+0.010/-0.036$ was taken as the $\beta_{14}$ systematics. It will be applied on the solar neutrino analysis in the next chapter. 
 
 %Discussions for the external scan runs.
 %For external scans, the radial cuts were not applied. 
@@ -517,12 +509,13 @@ All the cuts on the three energy FoM quantities removes 0.40\% events from MC an
 \subsubsection{Eenrgy Resolution and Systematics}
 The RSP energy reconstruction algorithm mentioned in Chapter 4 was applied on $^{16}$N MC simulations and data. 
 The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
 	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
 	\label{N16nhits}
-\end{figure}]
+\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -621,21 +614,10 @@ The uncertainty of energy scale $\delta_E$ and resolution are calculated as\cite
 \end{equation}
 
 \begin{equation}
-\Delta^2_b= (b_{E,data}-b_{E,MC})^2+Error^2_{b,data}+Error^2_{b,MC}
+\Delta^2_b= (b_{data}-b_{MC})^2+Error^2_{b,data}+Error^2_{b,MC},
 \end{equation}
 
-For a fiducial volume $r<5.5~m$, I took the results from the $^{16}$N scans in this FV region and simply took the average of the results. This gives $\overline{\Delta^2_{\delta_E}}=1.12\%$. 
-
-
-%$\bar{\Delta}=\sum_i^{N_{cells}}f_i\Delta_i$, where $\sum_i^{N_{cells}}f_i=1$
-%$f_i$: the fractional volume of cell $i$
-%$f_i = S_{cell}/S_{total} = (857*1000)/(\pi\cdot6000^2)$
-%$f_i = S_{cell}/S_{total} = (640*1000)/(12000 \cdot \sqrt{2*6000^2}$)
-%$\overline{\Delta_{\delta_E}}$
-%$\overline{\Delta_b}$
-%the uncertainties of the reconstructed energy scale and resolution.
-%Fig.~\ref{map_energyScale} and Fig.~\ref{map_energyResol} show the maps of the energy scale ($\Delta$) and the resolution parameter ($b$) respectively.
-%$570~mm\times 2000~mm$ cells of $z_{fit}\times \rho_{fit}$.
+For a fiducial volume $r<5.5~m$, I took the results from the $^{16}$N scans in this FV region and simply took the average of the results. This gives $\overline{\Delta^2_{\delta_E}}=0.036~MeV$ and $\overline{\Delta^2_b}=0.011\sqrt{MeV}$.
 
 \begin{table}[ht]
 	\centering
@@ -648,9 +630,6 @@ For a fiducial volume $r<5.5~m$, I took the results from the $^{16}$N scans in t
 		\hline 
 		b (MPW) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
 		$\delta_E$ (MPW) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
-	%	\hline 
-	%	b (Rat6.5.5) & 0.006\%    &  $(1+0.006/100)\cdot x_{MC}$\\	
-	%	$\delta_E$ (Rat6.5.5) & -0.026 \%  & $(1-0.026/100)\cdot y_{MC}$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -672,222 +651,222 @@ For a fiducial volume $r<5.5~m$, I took the results from the $^{16}$N scans in t
 %The AmBe calibration source is used for the calibrations of the SNO+ neutron capture process.
 
 
-%\section{$^{16}$N Calibration in Partial-fill Phase}
-%
-%During the August to October 2019, the PPO is added into the LAB when the water level was at 5100 mm (in PSUP coordinate). This is one of the stages of the partial-fill phase.
-%
-%As mentioned in Chapter 3, the main purpose of the partial-fill phase is to identify the background level of the liquid scintillator. $^{16}$N and $AmBe$ calibration sources were also deployed in the external water to test the response of the detector. 
-%
-%During the filling, the LAB was first filled into the AV to replace the water. PPO was later mixed with LAB and added into the AV. At some stage, the PPO concentration was kept at 0.53 g/L, which was lower than the nominal 2 g/L. At the lower PPO concentration, the liquid scintillator has a slower timing profile. This also brings an opportunity to extract the Cherenkov signals from the liquid scintillator with low PPO concentration.
-%
-%\subsection{High Level Cuts: Sky-shine Classifier}
-%During the partial-fill phase, a Sky-shine classifier was suggested by Mark Chen and developed by Jeff Tseng to discriminate the noise events coming from the top of the detector, the so-called ``sky shine'' events, from other backgrounds events in the AV detection region\cite{skyshine}. These sky shine events are mostly the backgrounds from radioactive decays happening in the neck region. 
-%
-%For an event happens in the neck region, it can trigger more PMTs in the bottom (or 
-%the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illustrated in Fig.~\ref{skyshine}. The classifier counts the number of the triggered PMTs with $z_{PMT}<-1000~mm$ (in PSUP coordinate) as $nSignal$ and the number of the ones with $-1000<z_{PMT}<8000~mm$ as $nSide$. The ratio $skyShine=nSide/nSignal$ is the output value of the classifier. Meanwhile, the classifier also saves the counts of the triggered neck PMTs ($nNeck$) as well as the triggered outward looking (OWL) PMTs in high z positions with $z_{OWL}>8000~mm$ ($nOWL$).
-%
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=5.5cm]{skyShine.png}
-%	\caption{ An illustration for the Sky-shine classifier, modified from \cite{skyshine}.}
-%	\label{skyshine}
-%\end{figure}
-%
-%In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
-%
-%\subsubsection{Performance of the Sky-shine Classifier}
-%The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. RAT version 6.16.9 was used. 
-%
-%Fig.~\ref{Tl208simu} shows the positions of the simulated events and the fitted events. In the MC simulations, events are distributed in the AV as well as the whole region of the neck. Recall that the neck of the detector is 8-m tall, the MC simulated neck events from $z_{neck_bottom}=6108~mm$ up to about $z_{neck_top}=13000~mm$ in the PSUP coordinate. The valid reconstruction region is inside the PSUP sphere, thus only a small fraction of the neck events in the volume of the neck cylinder inside the PSUP sphere can be fitted or even be triggered.
-%
-%\begin{figure}
-%	\centering
-%	\subfigure[MC positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_mc.png}}
-%	\subfigure[Fitted positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_fit.png}}
-%	\caption{MC (left) and fitted positions (right) of $^{208}$Tl simulations.}
-%	\label{Tl208simu}
-%\end{figure}
-%
-%The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
-%\begin{figure}
-%	\centering
-%	\subfigure[$x_{mc}$ vs. $skyShine$.]{\label{fig2:1a}\includegraphics[width=60mm]{skyShineVsXmc.png}}
-%	\subfigure[$y_{mc}$ vs. $skyShine$.]{\label{fig2:1b}\includegraphics[width=60mm]{skyShineVsYmc.png}}
-%	\subfigure[$z_{mc}$ vs. $skyShine$.]{\label{fig2:1c}\includegraphics[width=60mm]{skyShineVsZmc.png}}
-%	\subfigure[$r_{mc}$ vs. $skyShine$.]{\label{fig2:1d}\includegraphics[width=60mm]{skyShineVsRmc.png}}
-%	\caption{MC positions vs. skyShine values for simulated $^{208}$Tl events.}
-%	\label{skyShineVsPos}
-%\end{figure}
-%
-%\begin{figure}
-%	\centering
-%	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.7$.]{\label{fig2:2a}\includegraphics[width=60mm]{skyShineVsRho_mc.png}}
-%	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.5$.]{\label{fig2:2b}\includegraphics[width=60mm]{skyShineVsRho_mc1p5.png}}
-%	\caption{MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}\label{skySHineCutsVsMCpos}
-%\end{figure}
-%
-%By checking the MC events positions (``true'' event positions),  for all the triggered events, 16.8\% of them are outside the AV. Apply skyShine>1.7 can remove 98.6\% of the events outside the AV (mostly in the neck) with a sacrifice of 0.2\% of the events inside the AV.
-%
-%\subsubsection{Optimize the Sky-shine Cuts}
-%
-%Since the Sky-shine classifier removes neck events (most of them are outside the PSUP) which are not properly fitted, a skyShine cut can reduce the fit biases and improve the fit resolution.
-%
-%skyShine vs. fit biases (208Tl)
-%
-%\begin{figure}
-%	\centering
-%	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:3a}\includegraphics[width=50mm]{skyShineVsXbias.png}}
-%	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:3b}\includegraphics[width=50mm]{skyShineVsYbias.png}}
-%	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:3c}\includegraphics[width=50mm]{skyShineVsZbias.png}}
-%	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
-%	\label{skyShineVsFitBias}
-%\end{figure}
-%
-%An improvement of $\sim 18$ mm in z resolution.
-%
-%\begin{figure}
-%	\centering
-%	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4a}\includegraphics[width=50mm]{fitBiasX_noCuts_Tl208_partial.png}}
-%	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4b}\includegraphics[width=50mm]{fitBiasY_noCuts_Tl208_partial.png}}
-%	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4c}\includegraphics[width=50mm]{fitBiasZ_noCuts_Tl208_partial.png}}
-%	
-%	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4d}\includegraphics[width=50mm]{fitBiasX_skyShine1p7_Tl208_partial.png}}
-%	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4e}\includegraphics[width=50mm]{fitBiasY_skyShine1p7_Tl208_partial.png}}
-%	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4f}\includegraphics[width=50mm]{fitBiasZ_skyShine1p7_Tl208_partial.png}}
-%	
-%	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
-%	\label{skyShineVsFitResol}
-%\end{figure}
-%
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=60mm]{skyShineCuts.png}
-%	\caption{ Radial resolutions with different skyShine cuts.}
-%	\label{skySHineCutVsFitResol}.
-%\end{figure}
-%
-%Apply different cuts of $skyShine$: $skyShine>1, 1.01, 2.0$, begins from 1.0 with a 0.01 step until 2.0.
-%Plot the x bias $x_{fit}-x_{mc}$ versus the $skyShine$ cut values.
-%
-%Fit	a gaussian to $x_{fit} - x_{mc}$ and get $\sigma_x$,
-%Do the same thing to the $y_{fit} - y_{mc}$, $z_{fit} - z_{mc}$ and	obtain	$\sigma_x, \sigma_y, \sigma_z$
-%Fill a 1D histogram of Sky-shine cut and
-%$\Delta R= \sqrt{\sigma^2_x+\sigma^2_y+\sigma^2_z}$
-%
-%Compare to the number of MC events inside the scintillator $\sqrt(x^2+y^2+(z-108)^2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events after cut:
-%$skyShine>1.6$: 3149/3376
-%$skyShine>1.7$: 3149/3351
-%Can check with more productions/higher statistics.
-%
-%\subsection{$^{16}$N Calibration in the Partial-fill Phase}
-%
-%water level was at 5100 mm from the center of the AV (in AV coordination).
-%LAB with a PPO concentration of 0.53 g/L  
-%
-%Effect of the water level.
-%
-%The \isotope[16]{N} source was deployed in the external water region during the partial-fill phase.
-%run 251748 2019/09/19 and 
-%
-%Source position was at $(-1120.8, 1041.4, 6172.5)~ mm$ for a 30-minute duration and at $(-1120.8. 1041.4, 6108.0)~mm$ for a 7-hour duration (separated into 7 runs).
-%
-%
-%\subsection{Extracting the Cherenkov Signals in Partial-fill Phase}
-%
-%For an event happens in liquid scintillator, the number of Cherenkov photons it created is only $\sim 5\%$ 
-%of the total photon numbers, which is a very small fraction compared to the number of scintillation photons. This causes the directional Cherenkov signals are submerged in the isotropic lights.
-%
-%Since the \isotope[16]{N} source provides high energy events around 6 MeV, 
-%
-%
-%a time cut window on the time residual was optimized for the searching based on MC.
-%
-%simulations in pure scintillator phase.
-%
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=8cm]{cherenkov_scint_variousE.png}
-%	\caption{Distributions of $\cos\theta_{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}
-%	\label{cherenkov_variousE}
-%\end{figure}
-%
-%\begin{figure}[htbp]
-%	\centering
-%	\subfigure[]{%PMT pattern before transformation.]{
-%		\begin{minipage}[t]{0.32\textwidth}
-%			\includegraphics[width=5.5cm]{partial0p5_6MeV_noRotate.pdf}
-%		\end{minipage}
-%	}   
-%	\subfigure[]{%PMT pattern before transformation, in sinusoidal map.]{ 
-%		\begin{minipage}[t]{0.32\textwidth}
-%			\centering
-%			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_noRotate.pdf}
-%		\end{minipage}
-%	}
-%	\subfigure[]{%PMT pattern after transformation.]{ 
-%		\begin{minipage}[b]{0.32\textwidth}
-%			\centering
-%			\includegraphics[width=5.5cm]{partial0p5_6MeV_rotate.pdf}
-%		\end{minipage}
-%	}
-%	\subfigure[]{%PMT pattern after transformation, in sinusoidal map.]{ 
-%		\begin{minipage}[b]{0.32\textwidth}
-%			\centering
-%			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_rotate.pdf}
-%		\end{minipage}
-%	}
-%	\caption{PMT hit patterns after the prompt time cut and NHit cut.}
-%	\label{6MeVisoPattern}
-%\end{figure}
-%
-%
-%
-%
-%In the case that $e^-$ are generated uniformly and isotropically in the detector, to enhance the 
-%Cherenkov ring pattern, a transformation is applied as following:
-%
-%$\phi=\arccos(\hat{\vec{u}}_e\cdot\hat{\vec{u}}_{assume})$
-%
-%$\vec{n}=\hat{\vec{u}}_e\times\hat{\vec{u}}_{assume}$
-%\[
-%R=\begin{bmatrix}
-%n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
-%n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
-%n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
-%\end{bmatrix}
-%\]
-%$\vec{u'}_e=R\vec{u}_e$
-%
-%$\vec{X'}_{evt}=R\vec{X}_{evt}$
-%
-%Move $\vec{X'}_{evt}$ to the origin,
-%
-%$\vec{X'}_{pmt}=R\vec{X}_{pmt}-\vec{X'}_{evt}$
-%
-%
-%
-%Turning off the Cherenkov process in the Monte Carlo simulations.
-%
-%
-%
-%
-%
-%
-%Breit-Wigner function
-%\[
-%p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
-%\]
-%
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=8cm]{partialN16.png}
-%	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
-%	\label{partialN16}
-%\end{figure}
-%
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=8cm]{track_partial_N16.png}
-%	\caption{Simulated main track of 7.1 MeV $\gamma$ for one event from $\isotope[16]{N}$ source in the external water during the partial-fill phase.}	
-%	\label{track_partial_N16}
-%\end{figure}
+\section{$^{16}$N Calibration in Partial-fill Phase}
+
+During the August to October 2019, the PPO is added into the LAB when the water level was at 5100 mm (in PSUP coordinate). This is one of the stages of the partial-fill phase.
+
+As mentioned in Chapter 3, the main purpose of the partial-fill phase is to identify the background level of the liquid scintillator. $^{16}$N and $AmBe$ calibration sources were also deployed in the external water to test the response of the detector. 
+
+During the filling, the LAB was first filled into the AV to replace the water. PPO was later mixed with LAB and added into the AV. At some stage, the PPO concentration was kept at 0.53 g/L, which was lower than the nominal 2 g/L. At the lower PPO concentration, the liquid scintillator has a slower timing profile. This also brings an opportunity to extract the Cherenkov signals from the liquid scintillator with low PPO concentration.
+
+\subsection{High Level Cuts: Sky-shine Classifier}
+During the partial-fill phase, a Sky-shine classifier was suggested by Mark Chen and developed by Jeff Tseng to discriminate the noise events coming from the top of the detector, the so-called ``sky shine'' events, from other backgrounds events in the AV detection region\cite{skyshine}. These sky shine events are mostly the backgrounds from radioactive decays happening in the neck region. 
+
+For an event happens in the neck region, it can trigger more PMTs in the bottom (or 
+the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illustrated in Fig.~\ref{skyshine}. The classifier counts the number of the triggered PMTs with $z_{PMT}<-1000~mm$ (in PSUP coordinate) as $nSignal$ and the number of the ones with $-1000<z_{PMT}<8000~mm$ as $nSide$. The ratio $skyShine=nSide/nSignal$ is the output value of the classifier. Meanwhile, the classifier also saves the counts of the triggered neck PMTs ($nNeck$) as well as the triggered outward looking (OWL) PMTs in high z positions with $z_{OWL}>8000~mm$ ($nOWL$).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5.5cm]{skyShine.png}
+	\caption{ An illustration for the Sky-shine classifier, modified from \cite{skyshine}.}
+	\label{skyshine}
+\end{figure}
+
+In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
+
+\subsubsection{Performance of the Sky-shine Classifier}
+The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. RAT version 6.16.9 was used. 
+
+Fig.~\ref{Tl208simu} shows the positions of the simulated events and the fitted events. In the MC simulations, events are distributed in the AV as well as the whole region of the neck. Recall that the neck of the detector is 8-m tall, the MC simulated neck events from $z_{neck_bottom}=6108~mm$ up to about $z_{neck_top}=13000~mm$ in the PSUP coordinate. The valid reconstruction region is inside the PSUP sphere, thus only a small fraction of the neck events in the volume of the neck cylinder inside the PSUP sphere can be fitted or even be triggered.
+
+\begin{figure}
+	\centering
+	\subfigure[MC positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_mc.png}}
+	\subfigure[Fitted positions ($z_{mc}$ vs. $\rho_{mc}$)]{\includegraphics[width=60mm]{Tl208_p3_6169_fit.png}}
+	\caption{MC (left) and fitted positions (right) of $^{208}$Tl simulations.}
+	\label{Tl208simu}
+\end{figure}
+
+The plots shows events with small values of Sky-shine calculations can be tagged as neck events.
+\begin{figure}
+	\centering
+	\subfigure[$x_{mc}$ vs. $skyShine$.]{\label{fig2:1a}\includegraphics[width=60mm]{skyShineVsXmc.png}}
+	\subfigure[$y_{mc}$ vs. $skyShine$.]{\label{fig2:1b}\includegraphics[width=60mm]{skyShineVsYmc.png}}
+	\subfigure[$z_{mc}$ vs. $skyShine$.]{\label{fig2:1c}\includegraphics[width=60mm]{skyShineVsZmc.png}}
+	\subfigure[$r_{mc}$ vs. $skyShine$.]{\label{fig2:1d}\includegraphics[width=60mm]{skyShineVsRmc.png}}
+	\caption{MC positions vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsPos}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.7$.]{\label{fig2:2a}\includegraphics[width=60mm]{skyShineVsRho_mc.png}}
+	\subfigure[$z_{mc}$ vs. $\rho_{mc}$, with $skyShine<1.5$.]{\label{fig2:2b}\includegraphics[width=60mm]{skyShineVsRho_mc1p5.png}}
+	\caption{MC positions after Sky-shine cuts ($skyShine<1.7$ and $skyShine<1.5$) for simulated $^{208}$Tl events. It shows that most of the events with small $skyShine$ values are located in the neck region while very few events in the FV region can be mis-tagged.}\label{skySHineCutsVsMCpos}
+\end{figure}
+
+By checking the MC events positions (``true'' event positions),  for all the triggered events, 16.8\% of them are outside the AV. Apply skyShine>1.7 can remove 98.6\% of the events outside the AV (mostly in the neck) with a sacrifice of 0.2\% of the events inside the AV.
+
+\subsubsection{Optimize the Sky-shine Cuts}
+
+Since the Sky-shine classifier removes neck events (most of them are outside the PSUP) which are not properly fitted, a skyShine cut can reduce the fit biases and improve the fit resolution.
+
+skyShine vs. fit biases (208Tl)
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:3a}\includegraphics[width=50mm]{skyShineVsXbias.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:3b}\includegraphics[width=50mm]{skyShineVsYbias.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:3c}\includegraphics[width=50mm]{skyShineVsZbias.png}}
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitBias}
+\end{figure}
+
+An improvement of $\sim 18$ mm in z resolution.
+
+\begin{figure}
+	\centering
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4a}\includegraphics[width=50mm]{fitBiasX_noCuts_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4b}\includegraphics[width=50mm]{fitBiasY_noCuts_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4c}\includegraphics[width=50mm]{fitBiasZ_noCuts_Tl208_partial.png}}
+	
+	\subfigure[$x_{fit}-x_{mc}$ vs. $skyShine$.]{\label{fig2:4d}\includegraphics[width=50mm]{fitBiasX_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$y_{fit}-y_{mc}$ vs. $skyShine$.]{\label{fig2:4e}\includegraphics[width=50mm]{fitBiasY_skyShine1p7_Tl208_partial.png}}
+	\subfigure[$z_{fit}-z_{mc}$ vs. $skyShine$.]{\label{fig2:4f}\includegraphics[width=50mm]{fitBiasZ_skyShine1p7_Tl208_partial.png}}
+	
+	\caption{Fit biases vs. skyShine values for simulated $^{208}$Tl events.}
+	\label{skyShineVsFitResol}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=60mm]{skyShineCuts.png}
+	\caption{ Radial resolutions with different skyShine cuts.}
+	\label{skySHineCutVsFitResol}.
+\end{figure}
+
+Apply different cuts of $skyShine$: $skyShine>1, 1.01, 2.0$, begins from 1.0 with a 0.01 step until 2.0.
+Plot the x bias $x_{fit}-x_{mc}$ versus the $skyShine$ cut values.
+
+Fit	a gaussian to $x_{fit} - x_{mc}$ and get $\sigma_x$,
+Do the same thing to the $y_{fit} - y_{mc}$, $z_{fit} - z_{mc}$ and	obtain	$\sigma_x, \sigma_y, \sigma_z$
+Fill a 1D histogram of Sky-shine cut and
+$\Delta R= \sqrt{\sigma^2_x+\sigma^2_y+\sigma^2_z}$
+
+Compare to the number of MC events inside the scintillator $\sqrt(x^2+y^2+(z-108)^2)<6005~mm \& z-108<6000~mm$, number of MC events/number fitted events after cut:
+$skyShine>1.6$: 3149/3376
+$skyShine>1.7$: 3149/3351
+Can check with more productions/higher statistics.
+
+\subsection{$^{16}$N Calibration in the Partial-fill Phase}
+
+water level was at 5100 mm from the center of the AV (in AV coordination).
+LAB with a PPO concentration of 0.53 g/L  
+
+Effect of the water level.
+
+The \isotope[16]{N} source was deployed in the external water region during the partial-fill phase.
+run 251748 2019/09/19 and 
+
+Source position was at $(-1120.8, 1041.4, 6172.5)~ mm$ for a 30-minute duration and at $(-1120.8. 1041.4, 6108.0)~mm$ for a 7-hour duration (separated into 7 runs).
+
+
+\subsection{Extracting the Cherenkov Signals in Partial-fill Phase}
+
+For an event happens in liquid scintillator, the number of Cherenkov photons it created is only $\sim 5\%$ 
+of the total photon numbers, which is a very small fraction compared to the number of scintillation photons. This causes the directional Cherenkov signals are submerged in the isotropic lights.
+
+Since the \isotope[16]{N} source provides high energy events around 6 MeV, 
+
+
+a time cut window on the time residual was optimized for the searching based on MC.
+
+simulations in pure scintillator phase.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cherenkov_scint_variousE.png}
+	\caption{Distributions of $\cos\theta_{PMT}$ after the prompt time cut for various $e^-$ energies simulations.}
+	\label{cherenkov_variousE}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{%PMT pattern before transformation.]{
+		\begin{minipage}[t]{0.32\textwidth}
+			\includegraphics[width=5.5cm]{partial0p5_6MeV_noRotate.pdf}
+		\end{minipage}
+	}   
+	\subfigure[]{%PMT pattern before transformation, in sinusoidal map.]{ 
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_noRotate.pdf}
+		\end{minipage}
+	}
+	\subfigure[]{%PMT pattern after transformation.]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_6MeV_rotate.pdf}
+		\end{minipage}
+	}
+	\subfigure[]{%PMT pattern after transformation, in sinusoidal map.]{ 
+		\begin{minipage}[b]{0.32\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{partial0p5_sinu_6MeV_rotate.pdf}
+		\end{minipage}
+	}
+	\caption{PMT hit patterns after the prompt time cut and NHit cut.}
+	\label{6MeVisoPattern}
+\end{figure}
+
+
+
+
+In the case that $e^-$ are generated uniformly and isotropically in the detector, to enhance the 
+Cherenkov ring pattern, a transformation is applied as following:
+
+$\phi=\arccos(\hat{\vec{u}}_e\cdot\hat{\vec{u}}_{assume})$
+
+$\vec{n}=\hat{\vec{u}}_e\times\hat{\vec{u}}_{assume}$
+\[
+R=\begin{bmatrix}
+n^2_x(1-\cos\phi)+\cos\phi       &n_xn_y(1-\cos\phi)-n_z\sin\phi & n_xn_z(1-\cos\phi)+n_y\sin\phi \\
+n_xn_y(1-\cos\phi)+n_z\sin\phi & n^2_y(1-\cos\phi)+\cos\phi & n_yn_z(1-\cos\phi)-n_x\sin\phi \\
+n_xn_z(1-\cos\phi)-n_y\sin\phi & n_yn_z(1-\cos\phi)+n_x\sin\phi & n^2_z(1-\cos\phi)+\cos\phi
+\end{bmatrix}
+\]
+$\vec{u'}_e=R\vec{u}_e$
+
+$\vec{X'}_{evt}=R\vec{X}_{evt}$
+
+Move $\vec{X'}_{evt}$ to the origin,
+
+$\vec{X'}_{pmt}=R\vec{X}_{pmt}-\vec{X'}_{evt}$
+
+
+
+Turning off the Cherenkov process in the Monte Carlo simulations.
+
+
+
+
+
+
+Breit-Wigner function
+\[
+p(x) = \frac{c_0}{\pi}\frac{\frac{1}{2} \Gamma}{(x-m)^2 + (\frac{1}{2} \Gamma)^2}+c_1
+\]
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{partialN16.png}
+	\caption{$\isotope[16]{N}$ source calibration in external water during the partial-fill phase.}
+	\label{partialN16}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{track_partial_N16.png}
+	\caption{Simulated main track of 7.1 MeV $\gamma$ for one event from $\isotope[16]{N}$ source in the external water during the partial-fill phase.}	
+	\label{track_partial_N16}
+\end{figure}
