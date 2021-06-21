@@ -60,45 +60,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brunroot
 Warning--empty year in brianLowBG
-You've used 189 entries,
+You've used 190 entries,
             1876 wiz_defined-function locations,
-            1375 strings with 33307 characters,
-and the built_in function-call counts, 40550 in all, are:
-= -- 3586
-> -- 2254
+            1381 strings with 33457 characters,
+and the built_in function-call counts, 40881 in all, are:
+= -- 3624
+> -- 2262
 < -- 0
-+ -- 848
-- -- 659
-* -- 2833
-:= -- 6258
-add.period$ -- 248
-call.type$ -- 189
-change.case$ -- 134
++ -- 851
+- -- 661
+* -- 2855
+:= -- 6301
+add.period$ -- 249
+call.type$ -- 190
+change.case$ -- 135
 chr.to.int$ -- 0
-cite$ -- 245
-duplicate$ -- 2201
-empty$ -- 3698
-format.name$ -- 659
-if$ -- 9616
+cite$ -- 246
+duplicate$ -- 2218
+empty$ -- 3728
+format.name$ -- 661
+if$ -- 9699
 int.to.chr$ -- 0
-int.to.str$ -- 189
-missing$ -- 188
-newline$ -- 630
-num.names$ -- 181
-pop$ -- 674
+int.to.str$ -- 190
+missing$ -- 189
+newline$ -- 633
+num.names$ -- 182
+pop$ -- 675
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1151
+skip$ -- 1166
 stack$ -- 0
-substring$ -- 1075
-swap$ -- 755
+substring$ -- 1107
+swap$ -- 764
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 56
-while$ -- 291
-width$ -- 192
-write$ -- 1739
+while$ -- 295
+width$ -- 193
+write$ -- 1750
 (There were 57 warnings)
