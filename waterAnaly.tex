@@ -608,10 +608,31 @@ For the energy scale, the reconstructed MC energies were scaled up and down the 
 
 %the energy resolution was determined to be $21.0^{+5.0}_{-9.2}\%$ at 5 MeV.
 
-A remapping of $\cos\theta_{sun}$ by using the equation \ref{remapTheta} was applied on the spectrum for evaluating the systematics. Its impact is $^{+0.3}_{-0.2}$ events.
+A remapping of $\cos\theta_{sun}$ by using the equation \ref{remapTheta} was applied on the spectrum for evaluating the systematics. a minus symbol should be applied, and it is found as:
+
+\begin{equation}\label{remapThetaSun}
+-\cos\theta_{sun}'=1+(-\cos\theta_{sun}-1)(1+\delta_{\theta}),
+\end{equation} 
+
+So the transformation then becomes: $\cos\theta_{sun}'=-1+(\cos\theta_{sun}+1)(1+\delta_{\theta})$.
+
+
+Its impact is $^{+0.3}_{-0.2}$ events.
+
+
+
 
 
 \subsubsection{Extracting the Solar Neutrino Flux}
+
+live time scale: $\frac{t_{data~live~time}}{t_{MC~run~time}}=0.96$.
+
+
+
+
+
+
+
 %Combine the $\nu_\mu$ MC spectrum with the $\nu_e$, as shown in Fig.~\ref{combine_numu_nue}.
 
 %\begin{figure}[!htb]
@@ -621,7 +642,17 @@ A remapping of $\cos\theta_{sun}$ by using the equation \ref{remapTheta} was app
 %	\label{combine_numu_nue}
 %\end{figure} 
 
-A software called \texttt{PSelmaa} (Physics interpretation Sun-Earth Large Mixing Angle AdiabaticApproximation) was implemented in \texttt{RAT}\cite{fady_pselmaa}.
+A software called \texttt{PSelmaa} (Physics interpretation Sun-Earth Large Mixing Angle Adiabatic
+Approximation) was implemented in \texttt{RAT}\cite{fady_pselmaa}.
+BS05(OP) model, normal mass hierarchy, the MSW effects from the Earth (regeneration of coherence in the Earth) are neglected. Fig.~\ref{fig:pselmaa_curves} shows the survival probability curve as a function of energies (in 0.1 MeV intervals).
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{PSelmaa_bs05op.pdf}
+	\caption{The MSW survival probability curves. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee}$ is in green dashed line.}
+	\label{fig:pselmaa_curves}
+\end{figure} 
+
+
 
 
 
