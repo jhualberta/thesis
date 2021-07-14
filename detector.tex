@@ -180,7 +180,7 @@ The LAB used by SNO+ is provided by CEPSA Qu\'{i}mica B\'ecancour Inc.
 
 As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor. Energies are transferred from LAB to PPO via non-radiative F{\"o}rster resonant energy transfer. It can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is in the sensitive range of the PMT detection and can also reduce the probability of being the self-absorption of LAB.
 
-A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino], as well as bench-top measurements \cite{xing2015preliminary}, novikov, tanner]. The absolute light yield of the LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV [cite lightyield]. And this light yield is expected to be increased by over 15\% after extensive purification process\cite{snop_jinst}. 
+A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino], as well as bench-top measurements \cite{xing2015preliminary,kaptanoglu2019cherenkov, novikov}. The absolute light yield of the LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV\cite{grullon2014light}. And this light yield is expected to be increased by over 15\% after extensive purification process\cite{snop_jinst}. 
 
 
 Fig.~\ref{absLength} shows absorption lengths.
@@ -219,6 +219,7 @@ From Oxford timing fitting functions:
 \]
 
 \ref{transfer_efficiency}\cite{collaboration2020development}. 
+
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{cc}
@@ -316,7 +317,7 @@ To meet the low background requirement of the $0\nu\beta\beta$ analysis, the pur
 \subsection{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
 As mentioned in the previous section, the $0\nu\beta\beta$ analysis requires a high purity of the TeLS and proper light yield. %%% add more
 
-Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators \cite{biller2017new}.
+Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (relative light yield, RLT). With tellurium loading into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors.  The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution. It is also crucial for the experiments that are aimed to develop high light yield Tellurium-loaded scintillators\cite{biller2017new}.
 
 \subsubsection{Measurement Setup and Data Acquisition}
 
@@ -338,7 +339,7 @@ We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO
 	\label{scintVial}
 \end{figure}
 
-Two Hamamatsu R580 PMTs [cite PMT] were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~12.  The plastic piece is in a cylindrical shape with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to go inside from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable polylactide (PLA) filament and was machined by 3D-printing facility. The pictures of the pieces are shown in Fig.~\ref{scintVial}.
+Two Hamamatsu R580 PMTs \cite{pmtR580} were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~12.  The plastic piece is in a cylindrical shape with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to go inside from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable polylactide (PLA) filament and was machined by 3D-printing facility. The pictures of the pieces are shown in Fig.~\ref{scintVial}.
 
 \begin{figure}[htbp]
 	\centering	
@@ -351,11 +352,11 @@ Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic
 
 The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. This amplifier inverted the signals and amplified them by 26 dB. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
 
-To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel \cite{caen}.
+To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel\cite{caen}.
 
-This module was controlled by the CoMPASS software provided by CAEN. The software set up the threshold and trigger parameters. For each triggered event which passed the threshold, the software recorded event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated\cite{compass}.
+This module was controlled by the \texttt{CoMPASS} software provided by CAEN. The software set up the threshold and trigger parameters. For each triggered event which passed the threshold, the software recorded event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated\cite{compass}.
 
-Each channel recorded the signals from each PMT individually. With the two-PMT setup, we applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels were set to 48 ns. For a certain event, the CoMPASS software compares the event time difference between two channels and only records it if the event time differences is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
+Each channel recorded the signals from each PMT individually. With the two-PMT setup, we applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels were set to 48 ns. For a certain event, the \texttt{CoMPASS} software compares the event time difference between two channels and only records it if the event time differences is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
 
 \subsubsection{Measurement}
 
@@ -363,17 +364,16 @@ The liquid scintillator samples we have measured are: LAB-PPO, TeDDA, TeSOP. The
 
 A Cesium-137 (\isotope[137]{Cs}) radioactive source was always placed at the bottom of the scintillation vials.
 The source was made by Radiochemical Centre Amersham. The radioactivity measured on 1st April 1974 was $11.09~microcurie(\mu Ci)$, with an accuracy of $3.7\%$. The activity was expected to be 
+$11.09\times ({\frac{1}{2}})^{\frac{46}{30.08}}=3.84~\mu Ci$ in 2020, considering a half-life of 30.08 years for the $^{137}$Cs\cite{nndc}.
 
-in this thesis, considering a half-life of 30.08 years for the \isotope[137]{Cs}\cite{nndc}.
-
-has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
+The $^{137}$Cs isotope has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
 
 For each sample, measurements were taken for one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$ rays interacted with the LAB-PPO sample. The p.e. signals triggered PMT pulses and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time tag. From this trigger time tag, in the following 80 ns window the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also from the trigger time tag, a pre-gate of 8 ns was set. The waveform was integrated in the time gate of  [trigger time - 8,  trigger time + 72] ns. This gives the integrated charge, which was calculated as a A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we simply used ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Time stamps were recorded as event time when the triggered event hapfpened. The waveform was recorded and the ADC channel number (energy) of this event was calculated.
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=8cm]{teLS_waveform.png}
-	\caption{A typical waveform triggered by scintillation photons from 137Cs $\gamma$-rays interaction with LAB-PPO sample.}
+	\caption{A typical waveform triggered by scintillation photons from $^{137}$Cs $\gamma$-rays interaction with LAB-PPO sample.}
 	\label{teLSwaveform}
 \end{figure}
 
@@ -386,7 +386,7 @@ In a coincidence time measurement, the event times of the events recorded by eac
 	\label{teLScoinCut}
 \end{figure}
 
-Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there exists a zero peak, which is caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT [cite leo].  The peak on the right is the multiple p.e. peak, in our case is mainly caused by a number of scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peak is removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
+Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there exists a zero peak, which is caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT\cite{leo2012techniques}.  The peak on the right is the multiple p.e. peak, in our case is mainly caused by a number of scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peak is removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
 
 
 \begin{figure}[htbp]
@@ -416,7 +416,7 @@ Then for the multiple p.e. region, weighting (dividing) the counts of the event 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=6cm]{fitSinglePE.png}
-	\caption{Fit the single p.e. peak with an asymmetric Gaussian function (fasym) to obtain the adc channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak..}
+	\caption{Fit the single p.e. peak with an asymmetric Gaussian function ($f_{asym}$) to obtain the ADC channel for weighting. The mean value of p0 is used as the adc channel relative to a single p.e. peak.}
 	\label{fitSinglePE}
 \end{figure}
 
@@ -451,36 +451,6 @@ Once the total number of the photons for a certain sample is counted, we can cal
 Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
 
 Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In \cite{biller2017new}, a relative light yield of $\sim 0.65$ was reported.
-
-%[markchen] Shimizu, Itaru, and Mark Chen. "Double beta decay experiments with loaded liquid scintillator." Frontiers in Physics 7 (2019): 33.
-%
-%[birks] Birks, John Betteley. The theory and practice of scintillation counting: International series of monographs in electronics and instrumentation. Vol. 27. Elsevier, 2013.
-%
-%[leo] Leo, William R. Techniques for nuclear and particle physics experiments: a how-to approach. Springer Science & Business Media, 2012.
-%
-%[knoll]Knoll, Glenn F. Radiation detection and measurement. John Wiley & Sons, 2010.
-%
-%[novikov] V. Novikov, Scintillator development for SNO+, SNO+ internal document (2009).
-%
-%[pmt] “Photomultiplier Tube R580.” Photomultiplier Tube R580 | Hamamatsu Photonics, www.hamamatsu.com/eu/en/product/type/R580/index.html. 
-%
-%
-%[ppo] Wunderly, Stephen W., and Joel M. Kauffman. "New quench-resistant fluors for liquid scintillation counting." International Journal of Radiation Applications and Instrumentation. Part A. Applied Radiation and Isotopes 41.9 (1990): 809-815.
-%
-%[whitepapter] Andringa, S., et al. "Current status and future prospects of the sno." Advances in High Energy Physics 2016 (2016).
-%
-%[dayabay] W. Beriguete. et al., Production of Gadolinium-loaded Liquid Scintillator for the Daya Bay Reactor Neutrino Experiment, arXiv:1402.6694 [physics.ins-det]
-%
-%[dayabayBench] Xing-Chen, Ye, et al. "Preliminary study of light yield dependence on LAB liquid scintillator composition." Chinese Physics C 39.9 (2015): 096003.
-%
-%[tanner] Kaptanoglu, Tanner, Meng Luo, and Josh Klein. "Cherenkov and scintillation light separation using wavelength in LAB based liquid scintillator." Journal of Instrumentation 14.05 (2019): T05001.
-%
-%[lightYield] S. Grullon. Light yield and scintillation decay time constants of Te-loaded liquid scintillator for the SNO+experiment. InProceedings ofthe 26th International Conference on Neutrino Physics and Astrophysics(Neutrino ’14), Boston, MA, June 2014. Boston University.
-%
-%[stevebiller] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
-%
-
-
 
 \section{Electronics}
 In this section, the SNO+ electronics system is introduced. The system includes the trigger and readout systems. As mentioned in \ref{sect:overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charges information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
@@ -586,9 +556,24 @@ A detailed study of using the $^{16}$N source for reconstruction will be shown i
 
 
 \subsubsection{Other Calibration Sources}
-In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co are planned to be implemented.
 
-$^{46}$Sc source
+	$^{46}$Sc  source 
+In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co are planned to be implemented. Table.~\ref{other_calibrationSource} shows their basic properties.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{cc}
+		\toprule
+		source isotope & $\mathcal{\epsilon}_{transfer}$(\%)\\
+		\midrule
+		$^{46}$Sc  \\
+		$^{48}$Sc  & $86.0\pm 0.8$\\
+		$^{137}$Cs  & $78.2\pm 1.5$\\
+		$^{57}$Co  & $67.7\pm 2.3$\\
+		\bottomrule
+	\end{tabular}
+	\label{other_calibrationSource}
+\end{table}
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.

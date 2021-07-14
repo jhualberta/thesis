@@ -3,7 +3,13 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1598 of file thesis.bib
+Warning--string name "hamamatsu" is undefined
+--line 1272 of file thesis.bib
+I was expecting a `,' or a `}'---line 1272 of file thesis.bib
+ :  author = hamamatsu 
+ :                     Photonics,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1656 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -32,10 +38,17 @@ Warning--empty journal in sorensen2016temperature
 Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
 Warning--empty year in markchen_bkg
+Warning--empty year in novikov
 Warning--empty year in chicagoTiming
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--can't use both volume and number fields in biller2017new
+Warning--empty author in pmtR580
+Warning--empty title in pmtR580
+Warning--empty journal in pmtR580
+Warning--empty year in pmtR580
+Warning--empty journal in caen
+Warning--empty journal in compass
 Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty year in rattime
 Warning--can't use both volume and number fields in singh2020underwater
@@ -64,45 +77,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 192 entries,
+You've used 198 entries,
             1876 wiz_defined-function locations,
-            1392 strings with 33881 characters,
-and the built_in function-call counts, 41390 in all, are:
-= -- 3653
-> -- 2302
+            1415 strings with 34609 characters,
+and the built_in function-call counts, 42370 in all, are:
+= -- 3736
+> -- 2330
 < -- 0
-+ -- 865
-- -- 673
-* -- 2897
-:= -- 6384
-add.period$ -- 249
-call.type$ -- 192
-change.case$ -- 138
++ -- 878
+- -- 680
+* -- 2958
+:= -- 6521
+add.period$ -- 256
+call.type$ -- 198
+change.case$ -- 143
 chr.to.int$ -- 0
-cite$ -- 248
-duplicate$ -- 2248
-empty$ -- 3779
-format.name$ -- 673
-if$ -- 9816
+cite$ -- 261
+duplicate$ -- 2318
+empty$ -- 3895
+format.name$ -- 680
+if$ -- 10052
 int.to.chr$ -- 0
-int.to.str$ -- 192
-missing$ -- 192
-newline$ -- 637
-num.names$ -- 185
-pop$ -- 688
+int.to.str$ -- 198
+missing$ -- 198
+newline$ -- 657
+num.names$ -- 190
+pop$ -- 722
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1178
+skip$ -- 1204
 stack$ -- 0
-substring$ -- 1113
-swap$ -- 772
+substring$ -- 1125
+swap$ -- 787
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 56
-while$ -- 299
-width$ -- 195
-write$ -- 1765
-(There was 1 error message)
+warning$ -- 63
+while$ -- 305
+width$ -- 201
+write$ -- 1813
+(There were 2 error messages)
