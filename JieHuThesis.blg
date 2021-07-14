@@ -3,6 +3,10 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
+Repeated entry---line 1598 of file thesis.bib
+ : @phdthesis{sorensen2016temperature
+ :                                   ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "snop_nim"
 Warning--empty year in snop_jinst
 Warning--empty year in matt_deployedsource
@@ -24,6 +28,7 @@ Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in davini2016cno
 Warning--empty journal in Paton:2019kgy
+Warning--empty journal in sorensen2016temperature
 Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
 Warning--empty year in markchen_bkg
@@ -34,10 +39,8 @@ Warning--can't use both volume and number fields in biller2017new
 Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty year in rattime
 Warning--can't use both volume and number fields in singh2020underwater
-Warning--empty author in ratManual
-Warning--empty journal in ratManual
-Warning--empty year in markNeuralNetwork
-Warning--empty year in markNeuralTalk
+Warning--empty year in brunroot
+Warning--empty year in muonTrackRecon
 Warning--empty year in groupVmeasure
 Warning--empty year in waterunidoc
 Warning--empty year in modeCut
@@ -46,6 +49,8 @@ Warning--empty year in partialEnergy
 Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
+Warning--empty year in markNeuralNetwork
+Warning--empty year in markNeuralTalk
 Warning--empty year in highlevel
 Warning--empty journal in marzec2019measurement
 Warning--empty year in beta14discrepancy
@@ -58,47 +63,46 @@ Warning--empty year in operator
 Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
-Warning--empty year in brunroot
 Warning--empty year in brianLowBG
 You've used 192 entries,
             1876 wiz_defined-function locations,
-            1392 strings with 33963 characters,
-and the built_in function-call counts, 41561 in all, are:
-= -- 3677
-> -- 2320
+            1392 strings with 33881 characters,
+and the built_in function-call counts, 41390 in all, are:
+= -- 3653
+> -- 2302
 < -- 0
-+ -- 871
-- -- 679
-* -- 2920
-:= -- 6414
-add.period$ -- 251
++ -- 865
+- -- 673
+* -- 2897
+:= -- 6384
+add.period$ -- 249
 call.type$ -- 192
-change.case$ -- 137
+change.case$ -- 138
 chr.to.int$ -- 0
 cite$ -- 248
-duplicate$ -- 2246
-empty$ -- 3774
-format.name$ -- 679
-if$ -- 9852
+duplicate$ -- 2248
+empty$ -- 3779
+format.name$ -- 673
+if$ -- 9816
 int.to.chr$ -- 0
 int.to.str$ -- 192
-missing$ -- 191
-newline$ -- 639
-num.names$ -- 184
-pop$ -- 678
+missing$ -- 192
+newline$ -- 637
+num.names$ -- 185
+pop$ -- 688
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1184
+skip$ -- 1178
 stack$ -- 0
-substring$ -- 1132
-swap$ -- 776
+substring$ -- 1113
+swap$ -- 772
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 56
-while$ -- 301
+while$ -- 299
 width$ -- 195
-write$ -- 1772
-(There were 57 warnings)
+write$ -- 1765
+(There was 1 error message)

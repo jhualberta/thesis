@@ -351,9 +351,9 @@ Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic
 
 The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. This amplifier inverted the signals and amplified them by 26 dB. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
 
-To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel [cite CAEN].
+To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel \cite{caen}.
 
-This module was controlled by the CoMPASS software provided by CAEN. The software set up the threshold and trigger parameters. For each triggered event which passed the threshold, the software recorded event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated [cite compass].
+This module was controlled by the CoMPASS software provided by CAEN. The software set up the threshold and trigger parameters. For each triggered event which passed the threshold, the software recorded event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated\cite{compass}.
 
 Each channel recorded the signals from each PMT individually. With the two-PMT setup, we applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels were set to 48 ns. For a certain event, the CoMPASS software compares the event time difference between two channels and only records it if the event time differences is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
 
@@ -450,15 +450,15 @@ Once the total number of the photons for a certain sample is counted, we can cal
 
 Table.~\ref{lightyield1} shows the number of photons calculated by Charge weighted photon number method.
 
-Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In [cite billerTe],  a relative light yield of ~0.65 was reported.
+Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In \cite{biller2017new}, a relative light yield of $\sim 0.65$ was reported.
 
 %[markchen] Shimizu, Itaru, and Mark Chen. "Double beta decay experiments with loaded liquid scintillator." Frontiers in Physics 7 (2019): 33.
 %
-%[birks] Birks, John Betteley. The theory and practice of scintillation counting: International series of monographs in electronics and instrumentation. Vol. 27. Elsevier, 2013.
+%[birks] Birks, John Betteley. The theory and practice of scintillation counting: International series of monographs in electronics and instrumentation. Vol. 27. Elsevier, 2013.
 %
-%[leo] Leo, William R. Techniques for nuclear and particle physics experiments: a how-to approach. Springer Science & Business Media, 2012.
+%[leo] Leo, William R. Techniques for nuclear and particle physics experiments: a how-to approach. Springer Science & Business Media, 2012.
 %
-%[knoll]Knoll, Glenn F. Radiation detection and measurement. John Wiley & Sons, 2010.
+%[knoll]Knoll, Glenn F. Radiation detection and measurement. John Wiley & Sons, 2010.
 %
 %[novikov] V. Novikov, Scintillator development for SNO+, SNO+ internal document (2009).
 %
@@ -471,22 +471,15 @@ Here we quantify the relative light yields of our samples. The light yield of th
 %
 %[dayabay] W. Beriguete. et al., Production of Gadolinium-loaded Liquid Scintillator for the Daya Bay Reactor Neutrino Experiment, arXiv:1402.6694 [physics.ins-det]
 %
-%[dayabayBench] Xing-Chen, Ye, et al. "Preliminary study of light yield dependence on LAB liquid scintillator composition." Chinese Physics C 39.9 (2015): 096003.
+%[dayabayBench] Xing-Chen, Ye, et al. "Preliminary study of light yield dependence on LAB liquid scintillator composition." Chinese Physics C 39.9 (2015): 096003.
 %
 %[tanner] Kaptanoglu, Tanner, Meng Luo, and Josh Klein. "Cherenkov and scintillation light separation using wavelength in LAB based liquid scintillator." Journal of Instrumentation 14.05 (2019): T05001.
 %
 %[lightYield] S. Grullon. Light yield and scintillation decay time constants of Te-loaded liquid scintillator for the SNO+experiment. InProceedings ofthe 26th International Conference on Neutrino Physics and Astrophysics(Neutrino ’14), Boston, MA, June 2014. Boston University.
 %
-%[stevebiller] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
+%[stevebiller] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
 %
-%[caen] “DT5751 - CAEN - Tools for Discovery.” CAEN, www.caen.it/products/dt5751/.
-%
-%[compass]  “CoMPASS Multiparametric DAQ Software for Physics Applications
-%”https://www.caen.it/products/compass/
-%
-%[nndc] Decay Radiation Results, Brookhaven National Laboratory, www.nndc.bnl.gov/nudat2/decaysearchdirect.jsp?nuc=137CS&unc=nds.
-%
-%[billerTe] Biller, Steven, Szymon Manecki, and SNO+ collaboration. "A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments." Journal of Physics: Conference Series. Vol. 888. No. 1. IOP Publishing, 2017.
+
 
 
 \section{Electronics}
@@ -597,27 +590,11 @@ In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{
 
 $^{46}$Sc source
 
-
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
-The SNO+ collaboration has developed a software framework, called the Reactor Analysis
-Tool (\texttt{RAT}), which integrates a Monte Carlo simulation framework for the SNO+ detector and event-based analysis tools (for online and offline event analysis) since the beginning of the program. This software was originally developed by Stan Seibert for Braidwood Collaboration for a generic KamLAND like detector. It is also used by the other astroparticle physics experiments, such as DEAP/CLEAN, CLEAR and potentially for Darkside-50\cite{rat}.
+The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.
 
-\texttt{Geant4} Toolkit and incorporates ROOT libraries for data handling and analysis.
+The software was originally developed by Stan Seibert from the Braidwood Collaboration to simulate a generic KamLAND-like detector\cite{ratManual}. A simulation package called Generic Liquid Scintillator GEANT4 simulation (\texttt{GLG4sim}) was developed and implemented in \texttt{RAT}\cite{horton2006introduction}. It simulates the scintillation physics processes, the generations of scintillation photons and also the propagation, reflections, refraction, scattering ans absorption of optical photons\cite{dunger2018topological}.  
 
-The \texttt{RAT} Monte Carlo was originally developed for the Braidwood Collaboration
-utilizing software developed for a generic KamLAND-like detector, called Generic Liquid Scintillator \texttt{GEANT4} simulation (GLG4). It was branched and
-developed into the specialist SNO+ version, starting in 2006/2007.
+The SNO+ version of \texttt{RAT} links the existing \texttt{ROOT}, \texttt{Geant4} and \texttt{GLG4sim} packages to minimize the code duplication. The SNO+ \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment progress to precisely simulate the SNO+ detector in different physics phases as well as applying multiple analysis tasks. The relative flexible code structure of \texttt{RAT} allows the user to introduce their own code into the simulation or analysis process\cite{ratManual}. It can be tuned and optimized with the updated parameters from detector calibration; it can be added with more precise descriptions of the physics processes in the detector; it can also be introduced with more advanced analysis tools. The users can apply different analysis tasks, such as different reconstruction algorithms on the events\cite{ratManual}. Therefore, different versions of \texttt{RAT} serving to different SNO+ physics phases may give different outputs. For the work in this thesis, multiple \texttt{RAT} versions were used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a specific analysis.
 
-\texttt{GLG4sim} Braidwood
-
-combines both Monte Carlo simulation of the Braidwood detector with event-based analysis tasks, like reconstruction. The primary goals are:
-
-Make it easy to analyze Monte Carlo-generated events as well as data from disk using the same software with only a few command changes. Even in the proposal R\&D phase, where there is no real data, this is still useful for dumping Monte Carlo events to disk to be analyzed by another job. When there is real data, being able to do the analysis with the same code path as was used on Monte Carlo is very reassuring.
-Allow for a modular, user-controlled analysis of events. This includes allowing the user to selected which analysis tasks to perform (different fitters, pruning unneeded data from the event data structure, etc.). It should also be relatively straightforward for users to introduce their own code into the analysis process.
-Separate analysis into small tasks that can be developed asynchronously by different people, yet integrated with minimal (or perhaps zero) pain.
-Integrate into existing \texttt{GEANT4} and \texttt{GLG4sim} efforts with a minimum of code duplication. As much as possible, \texttt{RAT} should be designed to incorporate upgrades of these packages just by relinking. No cut and paste of code (mainly a question with GLG4sim).
-Design the detailed processes of data acquisition and trigger systems are \cite{whitepaper}.
-
-The SNO+ version of \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment progress.
-Besides more functions are added into the \texttt{RAT}, it is also tuned and optimized with the updated parameters from more precise descriptions of the physics processes or the detector responses to the calibration sources. Therefore, different versions of \texttt{RAT} may give different results. For the work in this thesis, multiple \texttt{RAT} versions are used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a certain analysis.
-\cite{ratManual}
+\texttt{RAT} is also used by other astroparticle physics experiments, such as DEAP/CLEAN\cite{caldwell2014simulation}. 

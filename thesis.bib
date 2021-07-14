@@ -1,5 +1,5 @@
 
-%%%%%%%%%%%%%%%%%%% Theory %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% Chapter 1, Theory %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 @techreport{leite1996weak,
   title={Weak interaction physics: from its origin to the electroweak model},
@@ -943,7 +943,7 @@ journal={{SNO+} Internal Document, docDB-3849-v1.},
 }
 
 
-%%%%%%%%%%%%%%%%%%% Detector %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% chapter 3, Detector %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SNO NIM paper
 @article{boger2000sudbury,
   title={The Sudbury Neutrino Observatory},
@@ -1146,8 +1146,61 @@ journal={{SNO+} Internal Document, docDB-5950-v3.},
   year={2018},
   publisher={Elsevier}
 }
-%%%%%%%%%%%%%%%water analysis%%%%%%%%%%
+calibraion
+%%%%%%refractive index of LAB-PPO%%%%%
+@article{tseung2011ellipsometric,
+  title={Ellipsometric measurements of the refractive indices of linear alkylbenzene and EJ-301 scintillators from 210 to 1000 nm},
+  author={Tseung, H Wan Chan and Tolich, N},
+  journal={Physica Scripta},
+  volume={84},
+  number={3},
+  pages={035701},
+  year={2011},
+  publisher={IOP Publishing}
+}
+ 
+%%%%%%%birks classical book%%%%%%%%%%
+@article{birks1965theory,
+  title={The theory and practice of scintillation counting},
+  author={Birks, JB and Firk, FWK},
+  journal={Physics Today},
+  volume={18},
+  pages={60},
+  year={1965}
+}
 
+%%%%%%%knoll book%%%%%%%%%%
+@book{knoll2010radiation,
+  title={Radiation Detection and Measurement},
+  author={Knoll, Glenn F},
+  year={2010},
+  publisher={John Wiley \& Sons}
+}
+
+
+%%%%%%%physical chemistry %%%%%%%%%%
+@book{mcquarrie1997physical,
+  title={Physical chemistry: a molecular approach},
+  author={McQuarrie, Donald Allan and Simon, John Douglas},
+  volume={1},
+  year={1997},
+  publisher={University science books Sausalito, CA}
+}
+
+@manual{nndc,
+  title = {National Nuclear Data Center},
+  note  = {\url{https://www.nndc.bnl.gov/}},
+  year = {2019 (accessed Oct 30, 2019)}
+}
+
+@book{murphy2012machine,
+  title={Machine learning: a probabilistic perspective},
+  author={Murphy, Kevin P},
+  year={2012},
+  publisher={MIT press}
+}
+
+%%%%% section: calibration source %%%%%%%%%%%%%%%%%
 %n16 source
 
 @article{dragowsky200216n,
@@ -1180,50 +1233,7 @@ journal={{SNO+} Internal Document, docDB-5950-v3.},
 	journal={{SNO+} Internal Document, docDB-4482-v2.},
 }
 
-
-%%%%%%refractive index of LAB-PPO%%%%%
-@article{tseung2011ellipsometric,
-  title={Ellipsometric measurements of the refractive indices of linear alkylbenzene and EJ-301 scintillators from 210 to 1000 nm},
-  author={Tseung, H Wan Chan and Tolich, N},
-  journal={Physica Scripta},
-  volume={84},
-  number={3},
-  pages={035701},
-  year={2011},
-  publisher={IOP Publishing}
-}
-
-
-
-%%%%  
-%%%%%%%birks classical book%%%%%%%%%%
-@article{birks1965theory,
-  title={The theory and practice of scintillation counting},
-  author={Birks, JB and Firk, FWK},
-  journal={Physics Today},
-  volume={18},
-  pages={60},
-  year={1965}
-}
-
-%%%%%%%knoll book%%%%%%%%%%
-@book{knoll2010radiation,
-  title={Radiation Detection and Measurement},
-  author={Knoll, Glenn F},
-  year={2010},
-  publisher={John Wiley \& Sons}
-}
-
-
-%%%%%%%physical chemistry %%%%%%%%%%
-@book{mcquarrie1997physical,
-  title={Physical chemistry: a molecular approach},
-  author={McQuarrie, Donald Allan and Simon, John Douglas},
-  volume={1},
-  year={1997},
-  publisher={University science books Sausalito, CA}
-}
-
+%%%%% section: Te measurement %%%%%%%%%%%%%%%%%
 %%%%%%%PMT handbook %%%%%%%%%%
 @article{hamamatsu2018photomultiplier,
 title={Photomultiplier Tubes: Basics and Applications, 2007},
@@ -1232,27 +1242,92 @@ ournal={URL https://www. hamamatsu. com/resources/pdf/etd/PMT\_ handbook\_v3aE. 
 year={2018}
 }
 
-
-
-%%%%% Rat %%%%%%%%%%%%%%%%%
-@article{ratManual,
-	title = {Overview - RAT 1.0 documentation},
-	note = "\url{https://rat.readthedocs.io/en/latest/overview.html#goals}",
-	year = {2014 (accessed 20-Dec-2019)}
+@article{caen,
+ author = "CAEN",
+	title = {{DT}5751 - {CAEN} - Tools for Discovery.},
+	note = "\url{hwww.caen.it/products/dt5751}",
+	year = {2020 (accessed 1-Jan-2020)}, 
 }
 
-%%%%%%%%%%%%%%%%%%Reconstruction%%%%%%%%%%%%%%%%%%%%%%
+@article{compass,
+ author = "CAEN",
+	title = {{C}o{MPASS} Multiparametric {DAQ} Software for Physics Applications},
+	note = "\url{https://www.caen.it/products/compass/}",
+	year = {2020 (accessed 1-Jan-2020)}, 
+}
 
-%%%% muon track reconstruction
-@article{sorensen2018temperature,
-  title={Temperature quenching in LAB based liquid scintillator},
-  author={S{\"o}rensen, A and Hans, S and Junghans, AR and Krosigk, B v and K{\"o}gler, T and Lozza, V and Wagner, A and Yeh, M and Zuber, K},
-  journal={The European Physical Journal C},
-  volume={78},
+
+%% Te measure by Steve
+@inproceedings{biller2017new,
+  title={A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments},
+  author={Biller, Steven and Manecki, Szymon and {SNO+} collaboration and others},
+  booktitle={Journal of Physics: Conference Series},
+  volume={888},
   number={1},
-  pages={1--15},
-  year={2018},
-  publisher={Springer}
+  pages={012084},
+  year={2017},
+  organization={IOP Publishing}
+}
+
+
+%%%%% section: Rat and software %%%%%%%%%%%%%%%%%
+
+@manual{ratManual,
+  title = {RAT Overview},
+  note  = {\url{https://rat.readthedocs.io/en/latest/overview.html}},
+  year = {2020 (accessed Mar 15, 2020)}
+}
+
+@inproceedings{caldwell2014simulation,
+  title={Simulation of noble liquid detectors using rat},
+  author={Caldwell, T},
+  booktitle={AARM Meeting at Fermilab},
+  year={2014}
+}
+
+
+% geant4
+@article{agostinelli2003geant4,
+  title={GEANT4—a simulation toolkit},
+  author={Agostinelli, Sea and Allison, John and Amako, K al and Apostolakis, John and Araujo, H and Arce, P and Asai, M and Axen, D and Banerjee, S and Barrand, G 2 and others},
+  journal={Nuclear instruments and methods in physics research section A: Accelerators, Spectrometers, Detectors and Associated Equipment},
+  volume={506},
+  number={3},
+  pages={250--303},
+  year={2003},
+  publisher={Elsevier}
+}
+
+% ROOT
+@article{brunroot,
+  title={ROOT: An Object Oriented Data Analysis Framework, 2007},
+  author={Brun, R and Rademakers, Fons and Canal, Philippe and others},
+  journal={See Also http://root.cern.ch}
+}
+
+
+
+% GLGsim
+@misc{horton2006introduction,
+  title={Introduction to glg4sim},
+  author={Horton-Smith, G and others},
+  year={2006},
+  publisher={Online Presentation, May}
+}
+
+
+%%%%%%%%%%%%%%%%%%Chapter 5, Reconstruction%%%%%%%%%%%%%%%%%%%%%%
+%%%% muon track reconstruction
+@article{muonTrackRecon,
+	title={Topological Track Reconstruction with the SNO+ Experiment},
+author={Johann Dittmer and Mikko Meyer},
+journal={{SNO+} Internal Document, docDB-5749-v1.},
+}
+
+@article{sorensen2016temperature,
+  title={Temperature quenching in LAB based liquid scintillator and muon-induced backgrounds in the SNO+ experiment},
+  author={S{\"o}rensen, Arnd},
+  year={2016}
 }
 
 
@@ -1447,35 +1522,6 @@ journal={{SNO+} Internal Document, docDB-3503-v4.},
   year={2020}
 }
 
-%%%%%%%%%%%%%%%%%software %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ROOT
-@article{brunroot,
-  title={ROOT: An Object Oriented Data Analysis Framework, 2007},
-  author={Brun, R and Rademakers, Fons and Canal, Philippe and others},
-  journal={See Also http://root.cern.ch}
-}
-
-% geant4
-@article{agostinelli2003geant4,
-  title={GEANT4—a simulation toolkit},
-  author={Agostinelli, Sea and Allison, John and Amako, K al and Apostolakis, John and Araujo, H and Arce, P and Asai, M and Axen, D and Banerjee, S and Barrand, G 2 and others},
-  journal={Nuclear instruments and methods in physics research section A: Accelerators, Spectrometers, Detectors and Associated Equipment},
-  volume={506},
-  number={3},
-  pages={250--303},
-  year={2003},
-  publisher={Elsevier}
-}
-
-% GLGsim
-@misc{horton2006introduction,
-  title={Introduction to glg4sim},
-  author={Horton-Smith, G and others},
-  year={2006},
-  publisher={Online Presentation, May}
-}
-
-
 
 %%%%%%%%%%%%%%%%%%% thesis %%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1484,42 +1530,42 @@ journal={{SNO+} Internal Document, docDB-3503-v4.},
   author={Brice, Stephen J},
   year={1996},
   school={University of Oxford}
-}
+}%thesis
 
 @phdthesis{hamer2001energy,
   title={Energy calibration of SNO for measurement of the charged-current neutrino reaction.},
   author={Hamer, Andre St{\'e}phane},
   year={2001},
   school={Queen's University}
-}
+}%thesis
 
 @phdthesis{dragowsky1999sudbury,
   title={Sudbury Neutrino Observatory energy calibration using gamma-ray sources},
   author={Dragowsky, Michael Raymond},
   year={1999},
   school={Oregon State University}
-}
+} %thesis
 
 @phdthesis{dunford2006measurement,
   title={Measurement of the $^8${B} solar neutrino energy spectrum at the Sudbury Neutrino Observatory},
   author={Dunford, Monica},
   year={2006},
   school={University of Pennsylvania}
-}
+}%thesis
 
 @phdthesis{maclellan2009energy,
   title={The energy calibration for the solar neutrino analysis of all three phases of the Sudbury Neutrino Observatory},
   author={MacLellan, Ryan Francis},
   year={2009},
   school={Queen's University}
-}
+}%thesis
 
 @phdthesis{coulter2013modelling,
   title={Modelling and Reconstruction of Events in {SNO+} related to Future Searches for Lepton and Baryon Number Violation.},
   author={Coulter, Ian T},
   year={2013},
   school={University of Oxford}
-}
+}%thesis
 
 %%% PG jones
 @phdthesis{jones2011background,
@@ -1527,7 +1573,7 @@ journal={{SNO+} Internal Document, docDB-3503-v4.},
   author={Jones, Philip G},
   year={2011},
   school={University of Oxford}
-}
+}%thesis
 
 
 @phdthesis{boulay2004direct,
@@ -1535,43 +1581,43 @@ journal={{SNO+} Internal Document, docDB-3503-v4.},
   author={Boulay, Mark Guy},
   year={2004},
   school={Queen’s University}
-}
+}%thesis
 
 @phdthesis{moffat2001optical,
   title={The optical calibration of the Sudbury Neutrino Observatory},
   author={Moffat, Bryce Anton},
   year={2001},
   school={Queen’s University}
-}
+}%thesis
 
 @phdthesis{dunger2018topological,
   title={Topological and time based event classification for neutrinoless double beta decay in liquid scintillator},
   author={Dunger, Jack},
   year={2018},
   school={University of Oxford}
-}
+}%thesis
 
 @phdthesis{mekarski2018electron,
   title={Electron Antineutrinos in the Water Phase of the {SNO+} Experiment},
   author={Mekarski, Pawel},
   year={2018},
   school={University of Alberta}
-}
+}%pawel thesis
 
-% Rechie thesis
+
 @phdthesis{bonventre2014neutron,
   title={Neutron multiplicity in atmospheric neutrino events at the Sudbury Neutrino Observatory},
   author={Bonventre, Richard},
   year={2014},
   school={University of Pennsylvania}
-}
+}% Rechie thesis
 
 @phdthesis{von2015measurement,
   title={Measurement of Proton and $\alpha$ Particle Quenching in LAB Based Scintillators and Determination of Spectral Sensitivities to Supernova Neutrinos in the {SNO+} Detector},
   author={Von Krosigk, Belina},
   year={2015},
   school={Technische Universitaet Dresden}
-}
+}% Belina thesis
 
 
 @phdthesis{sorensen2016temperature,
@@ -1581,91 +1627,78 @@ journal={{SNO+} Internal Document, docDB-3503-v4.},
   school={Technische Universitaet Dresden}
 }
 
-%%% James waterfield
+
 @phdthesis{waterfield2017optical,
   title={Optical calibration system for {SNO+} and sensitivity to neutrinoless double-beta decay},
   author={Waterfield, James},
   year={2017},
   school={University of Sussex}
-}
+}%%% James waterfield thesis
 
-%john walker
+
 @phdthesis{walker2016study,
   title={Study of Invisible Mode Nucleon Decay in the {SNO+} Detector},
   author={Walker, John MG},
   year={2016},
   school={University of Liverpool}
-}
+}%john walker thesis
 
-%% Mark Stringer
+
 @phdthesis{stringer2019sensitivity,
   title={Sensitivity of {SNO+} to supernova neutrinos},
   author={Stringer, Mark},
   year={2019},
   school={University of Sussex}
-}
+}%% Mark Stringer thesis
 
 
 @article{marzec2019measurement,
   title={Measurement Of 8b Solar Neutrinos In The Sno+ Water Phase And A Model Of Vacuum-Enhanced Neutrino Mixing},
   author={Marzec, Eric},
   year={2019}
-}
-%%%%%%%%%%% website %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+} %Eric thesis
+
 @article{muonflux,
 	title = {Muons},
 	note = "\url{https://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm}",
 	year = {2001 (accessed 19-July-2019)}, 
-}
+}% muon website
 
 @manual{wiki_cp,
 title  = "CP violation",
 author = "Wikipedia",
 note    = "\url{https://en.wikipedia.org/wiki/CP_violation}",
 year   = "2020 (accessed Mar 15, 2020)"
-}
+}% wiki website
 
 @manual{JSONwiki,
 title  = "JSON",
 author = "Wikipedia",
 note    = "\url{https://en.wikipedia.org/wiki/JSON}",
 year   = "2020 (accessed Mar 15, 2020)"
-}
+} % wiki webiste
 
 @manual{TDecompQRH,
 title  = "TDecompQRH Class Reference",
 author = "ROOT",
 note    = "\url{https://root.cern.ch/doc/master/classTDecompQRH.html}",
 year   = "2020 (accessed Mar 15, 2020)"
-}
-
-@manual{rat,
-  title = {RAT Overview},
-  note  = {\url{https://rat.readthedocs.io/en/latest/overview.html}},
-  year = {2020 (accessed Mar 15, 2020)}
-}
-
-@manual{nndc,
-  title = {National Nuclear Data Center},
-  note  = {\url{https://www.nndc.bnl.gov/}},
-  year = {2019 (accessed Oct 30, 2019)}
-}
-
+}% root webiste
 
 
 @manual{sprWebsite,
   title = {StatPatternRecognition and Machine Learning in HEP},
   note  = {\url{http://www.hep.caltech.edu/~narsky/spr.html}},
   year = {2020 (accessed Mar 30, 2020)}
-}
-
+}% webiste
 
 @manual{houghwiki,
 title  = "Hough Transform",
 author = "Wikipedia",
 note    = "\url{https://en.wikipedia.org/wiki/Hough_transform}",
 year   = "2019 (accessed Nov 3, 2019)"
-}
+}% wiki webiste
+
 
 %%%%%%%%%%% calibration %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1676,29 +1709,7 @@ author={Jeff Tseng},
 journal={{SNO+} Internal Document, docDB-5341-v1.},
 }
 
-%% Te measure by Steve
-@inproceedings{biller2017new,
-  title={A new technique to load 130Te in liquid scintillator for neutrinoless double beta decay experiments},
-  author={Biller, Steven and Manecki, Szymon and {SNO+} collaboration and others},
-  booktitle={Journal of Physics: Conference Series},
-  volume={888},
-  number={1},
-  pages={012084},
-  year={2017},
-  organization={IOP Publishing}
-}
-
-
-@book{murphy2012machine,
-  title={Machine learning: a probabilistic perspective},
-  author={Murphy, Kevin P},
-  year={2012},
-  publisher={MIT press}
-}
-
-
-
-%%%%%%%%%%%%%%%%%%water analysis %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%Chapter 6, water analysis %%%%%%%%%%%%%%%%%%%%%%
 @article{highlevel,
 	title={LETA High Level Cuts (Including QPDT and ITR)},
 author={Josh Klein},
@@ -1745,7 +1756,7 @@ author={LETA Working Group},
 journal={{SNO+} Internal Document, docDB-4322-v1.},
 } 
 
-# Fady PSelmaa
+%%%% Fady PSelmaa
 @article{fady_pselmaa,
         title={{PS}elmaa a Solar Neutrino Tool},
 author={Fady Shaker},
@@ -1758,7 +1769,7 @@ journal={{SNO+} Internal Document, docDB-6013-v1.},
   author={Drouin, Pierre-Luc},
   year={2012},
   school={Carleton University}
-}
+} % drouin thesis
 
 
 @phdthesis{dunmore2004separation,
@@ -1766,7 +1777,7 @@ journal={{SNO+} Internal Document, docDB-6013-v1.},
   author={Dunmore, Jessica A},
   year={2004},
   school={University of Oxford}
-}
+} % Jessica thesis
 
 @article{beta14discrepancy,
 	title={Beta 14 Discrepancy in SNO+},

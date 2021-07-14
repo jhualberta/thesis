@@ -6,99 +6,58 @@
 %\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
 %\epigraph{Everyone knows how useful it is to be useful. No one seems to know how useful it is to be useless.}{---\textup{  Chuang Tzu, The Useless Tree}}
 \section{An Overview of the Reconstruction Algorithms in SNO+}
-A particle interaction happens in the SNO+ detector can produce Cherenkov or scintillation photons. These photons propagate through the detector, and they can trigger PMTs when they reach the PSUP. As described in the last chapter, if there are enough PMTs triggered within a defined time window, an event is defined by the trigger system and for the event, the time and charge information measured by the triggered PMTs are recorded.
+A particle interaction happens in the SNO+ detector can produce Cherenkov or scintillation photons. These photons propagate through the detector, and they can trigger PMTs when they reach the PSUP. As described in the last chapter, if there are enough PMTs triggered within a defined time window, an event is defined by the trigger system and for the event, the time and charge information measured by the hit PMTs are recorded.
 
-By utilizing the time and charge information, reconstruction algorithms attempt to calculate the vertex (position and time), direction and energy of the event. A few sets of reconstruction algorithms have been implemented in the SNO+ RAT software or being developed. These algorithms are based on different methods and they can be coordinated and optimized for the different detector situations or physics phases.
+By utilizing the recorded time and charge information, reconstruction algorithms attempt to calculate the physics quantities of an event, including its vertex (position and time), direction and energy. A few sets of reconstruction algorithms (called ``fitters'') have been implemented in the SNO+ RAT software or being developed. These fitters are based on different methods and they can be coordinated and optimized for the different detector situations or physics phases.
 
-For SNO+, event reconstruction algorithms can be generally classified as:
+According to the physics quantities, the SNO+ fitters can be generally classified as:
 \begin{itemize}
-	\item vertex reconstruction. The algorithms use the timing parameter of the photon propagation. 
+	\item Vertex fitter. A vertex fitter reconstructs the event position and time by utilizing the positions and timing information of the hit PMTs. Currently, vertex fitters have been used to process the data and simulations for the water and partial-fill phases. They are also ready for the scintillator and tellurium-loading phases.
 	
-	
-Multi-site or multi-vertex reconstruction algorithm is being developed.
-	
-	\item direction reconstruction: are evaluated by the timing parameter of the photon propagation. 
-	\item energy reconstruction: are evaluated by the timing parameter of the photon propagation. 
+    On the other hand, some particular events, such as radioactive background events emitting $\gamma$s, can create multiple vertices which are correlated. A multi-site or multi-vertex fitter will be useful for tagging and removing these events during the $0\nu\beta\beta$ search. This kind of fitter is being developed.
 
-	The energy of an event is mainly determined by the number of the triggered PMTs ($NHits$).  
-	\item track reconstruction.
-	 of the cosmic ray muons entering the detector can also be reconstructed\cite{sorensen2018temperature}. 
+	\item Direction fitter. A direction fitter reconstructs the event direction by using the directional information from the Cherenkov photons, which cause ring-like patterns formed by the hit PMT positions. The direction fitter has been used in the water phase analysis. For the scintillator and tellurium-loading phases, since the Cherenkov patterns will be submerged in the scintillation photons, it requires the other efforts for the direction reconstruction, which is being developed currently. 
 	
-	This reconstruction can help to understand muon-induced backgrounds in the scintillator and tellurium-loading phases.
+	\item Energy fitter. An energy fitter translates the number of photons created from an event to the kinetic energy. The optical response of each PMT, including the PMT detection efficiency, transmission probability, attenuation, and etc. Similar to the vertex fitters, the energy fitters currently have been used in the water and partial-fill phases, and they are ready for the scintillator and tellurium-loading phases.
+
+	\item Muon track fitter. This fitter is used to reconstruct the tracks of cosmic muons. It treats a muon track as a straight line and by dividing the SNO+ detector into several XY-slices along z, it reconstructs the intersection points for each slice by utilizing the positions and timing information of the hit PMTs\cite{muonTrackRecon}. It is currently being developed for the scintillator and tellurium-loading phases. It will help to tag and reduce the cosmogenic backgrounds, especially the $^{11}$C backgrounds induced by the muon spallation on the liquid scintillators\cite{sorensen2016temperature}.
 \end{itemize}
 
+For a fitter, its performance is first tested on the Monte Carlo simulations of specific physics processes. Then it is tested on both the simulations and real data of the calibration runs. Once the algorithm gives proper results which are approved by the collaboration, it is implemented into the SNO+ RAT software to process the SNO+ simulations and data files.
 
+For a specific SNO+ physics phase, the fitters for different physics quantities of an event are integrated together. Currently, there are three integrated fitters: the \texttt{Water Fitter} for the water phase, the \texttt{Partial Fitter} for the partial-fill phase and the \texttt{Scint Fitter} for the scintillator phase and the tellurium loading phase. The fitter parameters, such as the input optical parameters, fitter iterations, are coordinated and optimized based on simulations and calibration data from that specific physics phase. 
 
+PMT selectors and classifiers are also wrapped into the integrated fitters. The PMT selectors are used to remove the outliers of the hit PMTs for a specific fitter, such as the hit PMT probably triggered by the noises. These selectors can help to make the fitter more accurate or to boost up the algorithm speed of the fitter. The classifiers mainly use the reconstructed results to calculate some specific quantities which describe the probability of an event being a specific signal or background.
 
-The vast amount of data collected by the particle detectors make it feasible to implement machine learning algorithms for data analysis.
-The machine learning algorithms, such as 
+In this chapter, a Multi-path (MP) reconstruction framework is discussed. It was developed by the University of Alberta group as an additional fitter to provide event vertex and direction reconstructions. In this framework, the fitters are able to be adapted for all the SNO+ physics phases by switching light path calculations as well as the input optical parameters, that is the reason why it is called "multiple paths". It was applied in the water phase to provide alternative information of the event position and direction; it also works as the vertex reconstruction algorithm for the \texttt{Partial Fitter}. After re-coordination to the scintillator phase and tellurium loading phase, I also show the potentials of the vertex fitter being applied in these two future phases.
 
-artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. 
-
-This algorithm trains the neural network from calibration data to find the position of an event.
-                                                                                                                                                                                                                                                                   
-At the time of this writing, a few machine learning or deep learning algorithms are being developed. Based on the PMT hit patterns.
-
- Learning from the simulations as well as the calibration data, 
-
-and then predicts the event position and direction.
-
-utilize the computing power of the graphics processing unit (GPU). 
-Once a neural network is trained, 
-inference is very fast.
-
- Traditional approach can fail to converge
-parallelize
-
-the deep learning framework is being developed.
-and to aid data analysis
-100x - 1,000x quicker on CPU (Central Processing Unit)
-10,000 times quicker on GPU .
-\cite{markNeuralNetwork,markNeuralTalk}.
-
-
-
-
-
-
-\texttt{Water Fitter} for the water phase and the \texttt{Scint Fitter} for the scintillator phase and the tellurium loading phase.
-
-For a specific algorithm, its performance is first tested on the Monte Carlo simulations of specific physics processes. Then it is tested on both the simulations and real data of the calibration runs. Once the algorithm gives proper results which are approved by the collaboration, it is implemented into the SNO+ RAT software to process the SNO+ simulations and data files.
-
-
-
-
-
-using calibrated hit time and angle between PMTs and an estimated event orientation as inputs to find
-a radius.
-
+Besides, potentials of extracting the directional information from the scintillator phase is discussed.
 \section{Multi-path Reconstruction Algorithm for SNO+}\label{sect:mpw}
-A Multi-path (MP) reconstruction framework was developed by the University of Alberta group as an additional vertex reconstruction algorithm for SNO+.
 
-In this framework, the fitter is able to be adapted for various SNO+ physics phases, including the water phase, the conceptual wavelength shifter (WLS) phase, the partial-fill phase and the scintillator phase (with and without loading tellurium). In the SNO+ water phase, the cavity and the AV are both filled with ultra-pure water. This is a relatively simple geometry since everything inside the PSUP can be simplified as water. Therefore, I started with the MP water fitter (the MPW fitter) to explain the reconstruction concepts.
+In the SNO+ water phase, the cavity and the AV are both filled with ultra-pure water. This is a relatively simple geometry since everything inside the PSUP can be simplified as water. Therefore, I will start with the MP water fitter (the MPW fitter) to explain the reconstruction concepts.
 
-The MPW fitter fits for position, time and direction of a triggered event in SNO+ water phase. First, the fitter throws a random position built up by random variables which are uniformly distributed inside a sphere with a radius of $10~meters$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$). Meanwhile, a random event time is also generated, following a uniform distribution in a range of $100$ to $300~ns$. The Class Library for High Energy Physics (CLHEP) is used for creating pseudo-random numbers (see the Appendix A.1 for details). The random position and the random time are combined to form a random event vertex, which is set as the trial event vertex.
+The MPW fitter fits for position, time and direction of a triggered event in SNO+ water phase. First, the fitter throws a random position built up by random variables which are uniformly distributed inside a sphere with a radius of $10~meters$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$). Meanwhile, a random event time is also generated, following a uniform distribution in a range of $100$ to $300~ns$. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers (see the Appendix A.1 for details). The random position and the random time are combined to form a random event vertex, which is set as the trial event vertex.
 
-For a triggered event, photons are produced around the event position and propagate to the PMTs.
-In a simplified situation neglecting reflection and refraction, these photons propagate along straight line. Connecting the trial event vertex to the triggered PMTs, the fitter evaluates a timing parameter, called the time residual ($t_{res}$), which is defined as:
+For a triggered event, photons are created around the event position and propagate to the PMTs.
+In a simplified situation neglecting reflection and refraction, these photons propagate along straight line. Connecting the trial event vertex to the hit PMTs, the fitter evaluates a timing parameter, called the time residual ($t_{res}$), which is defined as:
 \begin{equation}
 \label{tres_define}
 t_{res}=t_{PMT} - t_{transit} - t_{event},
 \end{equation}
 
-where $t_{PMT}$ is the PMT trigger time recorded by the detector, $t_{event}$ is the time when an event occurs (event time), and $t_{transit}$ is the total transit time (or time of flight, $TOF$) taken by a photon travelling from the event position ($\vec{x}_{event}$) to the triggered PMT ($\vec{x}_{PMT}$) and crossing different materials in the detector.
+where $t_{PMT}$ is the PMT trigger time recorded by the detector, $t_{event}$ is the time when an event occurs (event time), and $t_{transit}$ is the total transit time (or time of flight, $TOF$) taken by a photon traveling from the event position ($\vec{x}_{event}$) to the hit PMT ($\vec{x}_{PMT}$) and crossing different materials in the detector.
 
 To calculate the $t_{transit}$, the fitter uses photons from prompt time window (prompt light) and assumes that photons propagate in straight lines (straight light paths). The simple straight light path calculation gives $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. Detailed calculations, such as refraction and reflection when the lights cross different detector materials, absorption and scattering from the materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel, are neglected. It was found that without these details, the fitter can still produce decent results that are consistent with the ones using detailed calculations. 
 
-For a trial vertex $(\vec{x}_0,t_0)$, the fitter calculates a set of $t_{res}$ values with respect to all the triggered PMTs. These values are fed into a likelihood function: 
+For a trial vertex $(\vec{x}_0,t_0)$, the fitter calculates a set of $t_{res}$ values with respect to all the hit PMTs. These values are fed into a likelihood function: 
 \begin{equation}
 \ln\mathcal{L}(\vec{x}_0,t_0)=\sum_{i=1}^{{\mathrm{Nhits}}}\ln P(t^i_{res}),
 \end{equation}
-where $t^i_{res}$ is the time residual calculated from the $i^{th}$ triggered PMT and $\mathrm{Nhits}$ here stands for the number of total triggered PMTs by an event.
+where $t^i_{res}$ is the time residual calculated from the $i^{th}$ hit PMT and $\mathrm{Nhits}$ here stands for the number of total hit PMTs by an event.
 
-A pre-set 1-dimensional (1D) probability density function (PDF) is used for fitting the model. The pdf was taken from the bench-top timing profile measurement as well as the measured detector response.
+A pre-set 1-dimensional (1D) probability density function is used for fitting the model. The $pdf$ was taken from the bench-top timing profile measurement as well as the measured detector response.
 
-$P(t^i_{res})$ is the probability returned from the PDF for the $i^{th}$ triggered PMT and a trial event vertex.
+$P(t^i_{res})$ is the probability returned from the $pdf$ for the $i^{th}$ hit PMT and a trial event vertex.
 
 The Levenberg-Marquardt method, which is commonly used for fitting the nonlinear model for multiple parameters, is used as an optimizer to find the best fit event parameters (position, time and direction). Appendix A.2 describes this method; A.3 describes the implementation of the method to the MultiPath fitter framework. Also see \cite{gregory2005bayesian, press2007numerical}.
 
@@ -143,7 +102,7 @@ The derivatives of the likelihood function can be calculated from explicit mathe
 \frac{\partial L}{\partial z}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Z_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g},
 \]
 
-where $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing pdf. 
+where $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing $pdf$. 
 
 In the WaterPosition class, it starts with a random ($\vec{x}_0,t_0$) as seed and calculates the likelihoods and their derivatives for various paths. These values are sent to the Multi-path Fitter, which is fitting 4 parameters: $x,y,z,t$ and to maximize the likelihood function through the MRQ method and to find the best-fit positions.
 
@@ -151,7 +110,7 @@ In the WaterPosition class, it starts with a random ($\vec{x}_0,t_0$) as seed an
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{MPW_timingPDF.pdf}
-	\caption{PMT response time as the timing pdf for vertex reconstruction.}
+	\caption{PMT response time as the timing $pdf$ for vertex reconstruction.}
 	\label{MPW_timingPDF}
 \end{figure}
 
@@ -160,7 +119,7 @@ In the WaterPosition class, it starts with a random ($\vec{x}_0,t_0$) as seed an
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{MPW_angularPDF.pdf}
-	\caption{PMT angular distribution as the angular response pdf for direction reconstruction.}
+	\caption{PMT angular distribution as the angular response $pdf$ for direction reconstruction.}
 	\label{MPW_angularPDF}
 \end{figure}
 
@@ -193,7 +152,7 @@ When photons travel through the detector, their group velocities change with dif
 	\label{nVsWavelength}
 \end{figure}
 
-A reasonable selection of this value is required, since the value can introduce biases in the fitted position. This kind of bias is mainly due to a ``complementary'' effect of the fitter. As mentioned in section \ref{sect:mpw}, the water vertex fitter calculates the $t_{transit}$ by evaluating the distances from the trial vertex to the triggered PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. If the value of the group velocity $v_{water}$ is set large (or fast speed), the value of $t_{transit}$ will decrease, and the corresponding value of $t_{res}$ will increase according to the definition of $t_{res}$(\ref{tres_define}). These calculated $t_{res}$ value is compared to the time pdf for the fitting. If $t_{res}$ is larger than the expected value, the fitter will place the trial vertex away from the 
+A reasonable selection of this value is required, since the value can introduce biases in the fitted position. This kind of bias is mainly due to a ``complementary'' effect of the fitter. As mentioned in section \ref{sect:mpw}, the water vertex fitter calculates the $t_{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{water}$. If the value of the group velocity $v_{water}$ is set large (or fast speed), the value of $t_{transit}$ will decrease, and the corresponding value of $t_{res}$ will increase according to the definition of $t_{res}$(\ref{tres_define}). These calculated $t_{res}$ value is compared to the time pdf for the fitting. If $t_{res}$ is larger than the expected value, the fitter will place the trial vertex away from the 
 hit PMTs to increase the $t_{transit}$ and then decrease the $t_{res}$, as illustrated in Fig.~\ref{effectiveVg}. On the other hand, if $v_{water}$ is set small (or slow speed), $t_{transit}$ increases and $t_{res}$ decreases, and the fitter will place the trial vertex closer towards the hit PMTs.
 Therefore, an overestimated group velocity (too fast) brings a positive radial bias to the true event position while an underestimated one (too slow) brings a negative radial bias.
 \begin{figure}[!htb]
@@ -237,7 +196,7 @@ For the scintillator and partial-fill phase vertex fitters, I adopt a linear int
 
 An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The distribution of $(\vec{x}_{fit}-\vec{x}_mc)/|\vec{x}_{fit}-\vec{x}_mc|\cdot \vec{u}$ shows a large peak at +1, which indicates that the fitted position $\vec{x}$ is prone to be pulled forward from the true position systematically along the event direction$\vec{u}$\cite{driveCorPeter,brice1996monte,coulter2013modelling}. 
 
-In the SNO+ water detection medium (or the SNO heavy water), Cherenkov photons created by an event trigger most of the PMT hits with early timing and these hits are located within the Cherenkov cone; for the same event, there are also a few triggered PMT hits with later timing. These PMT hits can be caused by the scattered or reflected photons and they are located throughout the detector. For a random PMT hit, it is more probable to be placed outside the Cherenkov cone due to the geometry: consider an event happens at the center of the PSUP, the Cherenkov cone it produced will intersect the PSUP by an area of $2\pi R^2_{PSUP}(1-\cos41^\circ)$, which occupies about 12\% of the total area of the PSUP sphere. Therefore, for a random PMT hit on the PSUP sphere, it has more than 88\% of chance to be placed outside the Cherenkov cone. 
+In the SNO+ water detection medium (or the SNO heavy water), Cherenkov photons created by an event trigger most of the PMT-hits with early timing and these hits are located within the Cherenkov cone; for the same event, there are also a few PMT-hits with later timing. These PMT hits can be caused by the scattered or reflected photons and they are located throughout the detector. For a random PMT hit, it is more probable to be placed outside the Cherenkov cone due to the geometry: consider an event happens at the center of the PSUP, the Cherenkov cone it produced will intersect the PSUP by an area of $2\pi R^2_{PSUP}(1-\cos41^\circ)$, which occupies about 12\% of the total area of the PSUP sphere. Therefore, for a random PMT-hit on the PSUP sphere, it has more than 88\% of chance to be placed outside the Cherenkov cone. 
 
 For these later timing PMT hits, a similar ``complementary'' effect mentioned in \ref{tuneGroupVelocity} can also happen. When the fitter fits with $t_{res}$, for the large $t_{res}$ values caused by the later timing hits, it pulls the trial position away from the later timing hits to increase $t_{transit}$ and decrease $t_{res}$, as illustrated in Fig.~\ref{fitterPull}. This effect was also explained as ``straighten out delayed photons'' by the timing fitter in \cite{driveCorPeter}. Furthermore, the major early hits can also cause small $t_{res}$ values and thus the fitter pulls the trial position closer towards the early hits to decrease $t_{transit}$ and increase $t_{res}$. Recall that the early hits are located on or around the Cherenkov cone, therefore an overall effect of this ``fitter pull'' is that the fitted position will be pulled along the axis of the Cherenkov cone and towards the PSUP sphere. This pull direction is coincident with the event direction.
 
@@ -342,7 +301,7 @@ Detailed descriptions are shown in section \ref{sect:PMTselector}.
 \section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}
 A reconstruction algorithm was developed to investigate the proposal for the water-based wavelength-shifter, as mentioned in \ref{sect:wbWLS}.
 
-Figure~\ref{pmt_wls} shows the position distributions of triggered PMTs for MC simulated 5 MeV electrons travelling along $+x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water plus 0.1 ppm PPO. For the same electrons, the number of triggered PMTs ($NHit$) in wbWLS is about 2.4 times greater than the pure water one. Although there is extra isotropic light emitted, the Cherenkov ring can still be seen clearly, allowing reconstruction of the directionality.  
+Figure~\ref{pmt_wls} shows the position distributions of hit PMTs for MC simulated 5 MeV electrons travelling along $+x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water plus 0.1 ppm PPO. For the same electrons, the number of hit PMTs ($NHit$) in wbWLS is about 2.4 times greater than the pure water one. Although there is extra isotropic light emitted, the Cherenkov ring can still be seen clearly, allowing reconstruction of the directionality.  
 
 \begin{figure}[htbp]
 	\centering
@@ -354,7 +313,7 @@ Figure~\ref{pmt_wls} shows the position distributions of triggered PMTs for MC s
 		\centering
 		\includegraphics[width=7cm]{PMT_5MeVElectron0p1ppmPPO.pdf}
 	\end{minipage}
-	\caption{Position distributions of triggered PMTs (in zenith and azimuth angles) for 5 MeV electrons travelling along $+x$ direction in the pure water (left) and the water plus 0.1 ppm PPO (right).}
+	\caption{Position distributions of hit PMTs (in zenith and azimuth angles) for 5 MeV electrons travelling along $+x$ direction in the pure water (left) and the water plus 0.1 ppm PPO (right).}
 	\label{pmt_wls}
 \end{figure}
 
@@ -434,7 +393,7 @@ In the partial fill geometry, photons will travel with different speeds as they 
 
 In the partial-fill phase, the SNO+ detector can be considered as a geometry composed of the neck (cylinder), AV sphere and water-scintillator interface (plane). A ray connecting a position inside the PSUP to the PMT can intersect with these three geometries. As illustrated in Fig.~\ref{scintpath}, a detailed calculation of $d_{sp}$ includes evaluations of (1) light path and neck (ray-cylinder) intersection; (2) light path and AV sphere (ray-sphere) intersection and (3) light path and water-scintillator interface (ray-plane) intersection. $d_{sp}$ is further separated into the path length in the neck ($d_{sp,neck}$) and in the AV ($d_{sp,AV}$). 
 
-For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a triggered PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$, define a light ray (rather than a line without direction) $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between vertex and intersection point and it is the parameter to be determined; $\vec u=\frac{\vec{X}_{\mathrm{pmt}}-\vec{X}_0}{|\vec{X}_{\mathrm{pmt}}-\vec{X}_0|}$ is the direction of the light ray. It is a unit vector pointing from the $\vec{X}_0$ to the $\vec{X}_{\mathrm{pmt}}$.
+For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a hit PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$, define a light ray (rather than a line without direction) $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between vertex and intersection point and it is the parameter to be determined; $\vec u=\frac{\vec{X}_{\mathrm{pmt}}-\vec{X}_0}{|\vec{X}_{\mathrm{pmt}}-\vec{X}_0|}$ is the direction of the light ray. It is a unit vector pointing from the $\vec{X}_0$ to the $\vec{X}_{\mathrm{pmt}}$.
 
 In the ray-sphere intersection case (light ray passes through the AV sphere), the intersection points on the $\vec{l}_0$ satisfy the sphere equation $(\vec{X}-\vec{O}_{av})^2= r^2_{av}$, where $\vec{O}_{av}$ is the origin of the AV sphere and $\vec{O}_{av} = (0,0,108)~mm$ in the PSUP coordinate. Thus the intersection equation is:
 $(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$.
@@ -556,7 +515,7 @@ Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the MP Partial Fitte
 		\bottomrule
 	\end{tabular*}
 \end{table}
-For the events in water, the fit bias and resolution is comparable to the water phase results in Table~\ref{table_posresol}. The events in the scintillator region have smaller fit bias and better resolution due to more triggered PMTs in the reconstruction.
+For the events in water, the fit bias and resolution is comparable to the water phase results in Table~\ref{table_posresol}. The events in the scintillator region have smaller fit bias and better resolution due to more hit PMTs in the reconstruction.
 
 Fig.~\ref{partial_fit_rz} shows the fitted $\sqrt{x^2+y^2}$ vs. fitted $z$ positions. It shows that the fitter can distinguish different events in the water or scintillator region. The fitter gives reasonable results of the three different MC simulations. 
 
@@ -724,19 +683,19 @@ Several PMT selectors are used to select or remove PMTs from all the recorded PM
 \begin{itemize}
 	\item[$\bullet$] Straight Light Path Time Residual Cut Selector
 	
-	This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time residual ($t_{res}$) is calculated for each triggered PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
+	This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time residual ($t_{res}$) is calculated for each hit PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
 	
 	\item[$\bullet$] Mode Cut Selector
 	
-	This selector was developed by the collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the triggered PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
+	This selector was developed by the collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the hit PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the MPW fitter, the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the MP scint-water fitter the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
 	
 	\item[$\bullet$] Uniform PMT Selector
 	
-	I designed this selector for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the triggered PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
+	I designed this selector for the partial-fill phase and the scintillator phase when a single event can trigger a large amount of PMTs. It reduces the number of the hit PMTs to a designated number ($n_{select}$) in order to boost up the fit speed. When an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks up one PMT by an interval of $\left \lceil{N/n_{select}}\right \rceil $. If $N\leq n_{select}$, the selector does nothing. By doing this, the selector uniformly reduces the number of the PMTs for the fitter without an obvious bias.
 	
 	\item[$\bullet$] Earliest Hit PMT Selector
 	
-	Similar to the uniform PMT selector, this selector reduces the number of the triggered PMTs to boost up the fit speed. It first groups the PMTs by their positions in the PMT support sphere. Take the centre of the sphere as coordinate origin, the sphere is divided by the azimuth angle $\phi$ (as longitude) and zenith angle $\theta$ (as latitude). In the sphere, the positions of the PMTs in $\phi$, ranging in $[-\pi,\pi]$, is uniformly divided into $n$ intervals while the positions of the PMTs in $\cos\theta$, ranging in $[-1, 1]$, is also divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels, see Fig.~\ref{GroupPMTs}. 
+	Similar to the uniform PMT selector, this selector reduces the number of the hit PMTs to boost up the fit speed. It first groups the PMTs by their positions in the PMT support sphere. Take the centre of the sphere as coordinate origin, the sphere is divided by the azimuth angle $\phi$ (as longitude) and zenith angle $\theta$ (as latitude). In the sphere, the positions of the PMTs in $\phi$, ranging in $[-\pi,\pi]$, is uniformly divided into $n$ intervals while the positions of the PMTs in $\cos\theta$, ranging in $[-1, 1]$, is also divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels, see Fig.~\ref{GroupPMTs}. 
 	\begin{figure}[!htb]
 		\centering
 		\includegraphics[width=5cm]{GroupPMTs.png}
@@ -792,6 +751,18 @@ Energy lookup table built from the simulation data set.
 energy look up\cite{energyRSP}.
 (energyRSP)
 
+%     A lookup table is used to
+%	// map from estimated Cerenkov photons to energy. 
+%	
+%	the PMT efficiency, and the position and angular dependence of the $NHits$ is also taken into account. 
+%	
+%	// This method calculates the optical response of each PMT (taking into
+%	// account PMT efficiency, solid angle, Cerenkov angular distribution,
+%	// etc.) to estimate the number
+%	// of Cerenkov photons from the prompt hits. This fitter is only
+%	// for a detector geometry with light water in the inner av.
+
+
 \subsection{Figure of Merit}\label{sect:energy_fom}
 Three figure of merit quantities for the energy fitter were developed by the SNO+ collaboration in order to identify the poor reconstructed results which have large biases to the true energy values, especially for the low energy regions around 2.2 MeV, which helps the analysis of neutron capture\cite{waterunidoc}.
 
@@ -829,7 +800,6 @@ to scale $NHits$ based on several sets of simulations.
 
 \subsubsection{NHit Ratio}
 
-
 The fitter follows the idea of the charge-ratio fitter for the partial energy reconstruction\cite{partialEnergyYang}.
 
 \begin{equation}
@@ -860,5 +830,32 @@ circular Hough transformation
 	\label{houghTrans}
 \end{figure}
 
+\subsection{Reconstructions Based on the Deep Learning}
+The vast amount of data collected by the particle detectors make it feasible to implement machine learning algorithms for data analysis.
+The machine learning algorithms, such as 
+
+artificial neural network (ANN), have been implemented into the data analysis as well as the event reconstruction in SNO+. In the RAT software, an ANN position reconstruction algorithm (position ANN) has been developed and will be implemented in future. 
+
+This algorithm trains the neural network from calibration data to find the position of an event.
+
+At the time of this writing, a few machine learning or deep learning algorithms are being developed. Based on the PMT hit patterns.
+
+Learning from the simulations as well as the calibration data, 
+
+and then predicts the event position and direction.
+
+utilize the computing power of the graphics processing unit (GPU). 
+Once a neural network is trained, 
+inference is very fast.
+
+Traditional approach can fail to converge
+parallelize
+
+the deep learning framework is being developed.
+and to aid data analysis
+100x - 1,000x quicker on CPU (Central Processing Unit)
+10,000 times quicker on GPU .
+\cite{markNeuralNetwork,markNeuralTalk}.
+
 \section{Conclusion}
-The Multi-path Fitter framework of event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the Multi-path Water Fitter works as an alternative fitter to provide additional reconstruction information for the water data and it gives proper position and direction resolutions for the water analysis. The Multi-path Scint-Water Fitter works as the prime fitter for the SNO+ partial-fill phase.
+The Multi-path Fitter framework of event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the \texttt{Multi-path Water Fitter} works as an alternative fitter to provide additional reconstruction information for the water data and it gives proper position and direction resolutions for the water analysis. The \texttt{Multi-path Scint-Water Fitter} works as the prime fitter for the SNO+ partial-fill phase.

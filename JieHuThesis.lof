@@ -27,31 +27,31 @@
 \contentsline {figure}{\numberline {3.14}{\ignorespaces $^{16}$N main decay scheme, modified from \cite {dragowsky200216n}.}}{61}{figure.3.14}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces $^{16}$N calibration source geometry. Left: a detailed diagram of $^{16}$N source geometry, modified from \cite {maclellan2009energy,matt_deployedsource}; middle: source geometry implemented in RAT, modified from \cite {n16geom_zach}; right: a picture of the $^{16}N$ source, taken from \cite {n16pic}.}}{62}{figure.3.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}}{68}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT response time as the timing pdf for vertex reconstruction.}}{69}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces PMT angular distribution as the angular response pdf for direction reconstruction.}}{70}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Refractive index vs wavelength. These values are based on the measurements from laserball calibration scans in the SNO+ water phase\cite {laserball_groupVelocity}.}}{71}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces A cartoon shows effects of tuning the effective group velocity. In this case, the effective group velocity is faster than expected, the fitted position is dragged back along the direction to increase the time of flight.}}{72}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}}{69}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces PMT response time as the timing $pdf$ for vertex reconstruction.}}{70}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PMT angular distribution as the angular response $pdf$ for direction reconstruction.}}{70}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Refractive index vs wavelength. These values are based on the measurements from laserball calibration scans in the SNO+ water phase\cite {laserball_groupVelocity}.}}{72}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces A cartoon shows effects of tuning the effective group velocity. In this case, the effective group velocity is faster than expected, the fitted position is dragged back along the direction to increase the time of flight.}}{73}{figure.4.5}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces $^{16}$N central run.}}{73}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces A cartoon shows fitter pull effect, modified from Fig.\nobreakspace {}C.2 in \cite {brice1996monte} and Fig.\nobreakspace {}2,3,4 in \cite {driveCorPeter}.}}{74}{figure.4.7}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces A cartoon shows fitter pull effect, modified from Fig.\nobreakspace {}C.2 in \cite {brice1996monte} and Fig.\nobreakspace {}2,3,4 in \cite {driveCorPeter}.}}{75}{figure.4.7}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces A diagram illustrates the drive correction.}}{75}{figure.4.8}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Drive correction parameter $p_0$, $p_1$ vs energy.}}{76}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Radial biases of simulated electron events before and after the drive correction, as a function of energy.}}{76}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Position distributions of triggered PMTs (in zenith and azimuth angles) for 5 MeV electrons travelling along $+x$ direction in the pure water (left) and the water plus 0.1 ppm PPO (right).}}{80}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces The energies of simulated electrons as a function of mean nhits. The values in the 0.1 ppm PPO (solid line with inverted triangle) are compared with the water (dashed line with star).}}{80}{figure.4.12}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Radial biases of simulated electron events before and after the drive correction, as a function of energy.}}{77}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Position distributions of hit PMTs (in zenith and azimuth angles) for 5 MeV electrons travelling along $+x$ direction in the pure water (left) and the water plus 0.1 ppm PPO (right).}}{80}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces The energies of simulated electrons as a function of mean nhits. The values in the 0.1 ppm PPO (solid line with inverted triangle) are compared with the water (dashed line with star).}}{81}{figure.4.12}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces The timing pdf for the wbWLS.}}{81}{figure.4.13}
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Fit position projected on x axis. The WLS fitter reconstructed $x$ positions of the 5 MeV electron events in the wbWLS (red) are compared to the ones in the water (blue). }}{82}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Light path calculation for the MP Partial Fitter. The light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, sp), $d_{sp}$ is evaluated by intersection calculations.}}{83}{figure.4.15}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Light path calculation for the MP Partial Fitter. The light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, sp), $d_{sp}$ is evaluated by intersection calculations.}}{84}{figure.4.15}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Line-sphere intersections. (a): the light ray intersects the sphere with 2 points; (b): the light ray intersects the sphere with 1 point; (c) and (d): the light ray never passes through the sphere.}}{85}{figure.4.16}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; red: the scintillator timing pdf.}}{86}{figure.4.17}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{87}{figure.4.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{87}{figure.4.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{87}{figure.4.18}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{87}{figure.4.18}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{87}{figure.4.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{87}{figure.4.19}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{87}{figure.4.19}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{87}{figure.4.19}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces The timing pdfs used by the MP Partial Fitter. Blue: the timing pdf used by the MP Water Fitter; red: the scintillator timing pdf.}}{87}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}}{88}{figure.4.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{88}{figure.4.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{88}{figure.4.18}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{88}{figure.4.18}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Fit results: $\rho _{fit}=\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}{88}{figure.4.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {scintillator region}}}{88}{figure.4.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {water region}}}{88}{figure.4.19}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {whole region}}}{88}{figure.4.19}
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}}{90}{figure.4.20}
 \contentsline {figure}{\numberline {4.21}{\ignorespaces A flow chart for Bi-Po tagging.}}{97}{figure.4.21}
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Group the PMTs by dividing the PMT sphere with latitudes and longitudes.}}{98}{figure.4.22}
@@ -165,7 +165,7 @@
 \contentsline {figure}{\numberline {6.19}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from BDT outputs.}}{158}{figure.6.19}
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from MLP outputs.}}{158}{figure.6.20}
 \contentsline {figure}{\numberline {6.21}{\ignorespaces The MSW survival probability curves. The $P_{ee}$ is in solid red line and $P_{e\alpha }(=1-P_{ee}$ is in green dashed line.}}{160}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces $^8B$ solar neutrino flux as a function of energies. The $P_{ee}$ curve obtained from the \texttt {RAT} is in red.}}{161}{figure.6.22}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{Sun}$ distributions used as pdfs for the flux calculations. The histogram in black is the $\nu _e$ flux without oscillation. This histogram is used for fitting the elastic scattering flux. The histogram in blue is the $\nu _e$ flux combined with the $\nu _\mu $ flux, both including the oscillations. This histogram is used for fitting the total flux. The dashed red histogram is the $\nu _e$ flux only, including the oscillation.}}{161}{figure.6.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}}{168}{figure.A.1}
