@@ -4,12 +4,16 @@ The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
 Warning--string name "hamamatsu" is undefined
---line 1272 of file thesis.bib
-I was expecting a `,' or a `}'---line 1272 of file thesis.bib
+--line 1290 of file thesis.bib
+I was expecting a `,' or a `}'---line 1290 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1656 of file thesis.bib
+Repeated entry---line 1511 of file thesis.bib
+ : @article{anderson2021optical
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1686 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -22,6 +26,7 @@ Warning--empty year in laserball_groupVelocity
 Warning--empty year in driveCorPeter
 Warning--empty year in skyshine
 Warning--empty year in oxfordMeasurement
+Warning--empty year in directorReview
 Warning--empty year in partialWater
 Warning--empty year in davidPartialWater
 Warning--empty year in kalpanaWLS
@@ -62,8 +67,9 @@ Warning--empty year in partialEnergy
 Warning--empty year in partialEnergyYang
 Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
-Warning--empty year in markNeuralNetwork
+Warning--empty year in markMachineLearning
 Warning--empty year in markNeuralTalk
+Warning--empty year in markNeuralNetwork
 Warning--empty year in highlevel
 Warning--empty journal in marzec2019measurement
 Warning--empty year in beta14discrepancy
@@ -77,45 +83,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 198 entries,
+You've used 201 entries,
             1876 wiz_defined-function locations,
-            1415 strings with 34609 characters,
-and the built_in function-call counts, 42370 in all, are:
-= -- 3736
-> -- 2330
+            1426 strings with 35062 characters,
+and the built_in function-call counts, 42899 in all, are:
+= -- 3768
+> -- 2373
 < -- 0
-+ -- 878
-- -- 680
-* -- 2958
-:= -- 6521
-add.period$ -- 256
-call.type$ -- 198
-change.case$ -- 143
++ -- 894
+- -- 693
+* -- 3003
+:= -- 6615
+add.period$ -- 259
+call.type$ -- 201
+change.case$ -- 146
 chr.to.int$ -- 0
-cite$ -- 261
-duplicate$ -- 2318
-empty$ -- 3895
-format.name$ -- 680
-if$ -- 10052
+cite$ -- 266
+duplicate$ -- 2345
+empty$ -- 3946
+format.name$ -- 693
+if$ -- 10165
 int.to.chr$ -- 0
-int.to.str$ -- 198
-missing$ -- 198
-newline$ -- 657
-num.names$ -- 190
-pop$ -- 722
+int.to.str$ -- 201
+missing$ -- 201
+newline$ -- 666
+num.names$ -- 193
+pop$ -- 736
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1204
+skip$ -- 1207
 stack$ -- 0
 substring$ -- 1125
-swap$ -- 787
+swap$ -- 790
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 63
-while$ -- 305
-width$ -- 201
-write$ -- 1813
-(There were 2 error messages)
+warning$ -- 65
+while$ -- 308
+width$ -- 204
+write$ -- 1835
+(There were 3 error messages)

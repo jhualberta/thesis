@@ -474,16 +474,24 @@ As a summary, the SNO+ electronic system can measure signals with a nanosecond-l
 \section{Calibration}\label{sect:calibr}
 Calibration sources with known physics parameters help to understand the detector response to the events and to make accurate measurements.
 
-Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMTs; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. Various types of radioactive sources producing different types of particles (($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
+Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMTs; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. Various types of radioactive sources producing different types of particles ($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
 
-All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
+The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. The detector geometry is not perfectly symmetric, due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. 
 
-The deployment of calibration sources at different positions can help to understand the asymmetries in the detector responses. In geometry, the detector is not perfect symmetric due to the presence of the AV neck, ropes, gaps between the PMTs in the PSUP and differences    
+The scan of the sources is realized through a source manipulator system (SMS)
 
-through a source manipulator system (SMS)
 umbilical vertical and side ropes
 
 See Fig.~\ref{sms}.
+
+ in the PSUP and differences    
+
+All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
+
+
+A Universal Interface (UI) connects the AV and the SMS. It is a sealed glovebox above the AV neck in a clean room set on the SNO+ deck.
+
+
 reduce the radio contamination in the detector
 
 \begin{figure}[!htb]
@@ -496,21 +504,19 @@ reduce the radio contamination in the detector
 In addition, to measure the position of the calibration source deployed in the detector, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs and then triangulate the source location. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
 
 \subsection{Optical Calibration Sources}
-The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The optical sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded Light-emitting diode (LED)/Laser Light Injection Entity (ELLIE).
+The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The optical sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded Light-emitting diode (LED)/Laser Light Injection Entity (ELLIE)\cite{snop_jinst}.
 
-\subsubsection{Laserball}
 The laserball injects lights from a nitrogen dye laser to a glass bubble.
-
+\cite{anderson2021optical}.
 fast pulsing LED or lasers
-measures optical properties, such as scattering, attenuation of the detector materials, the response of PMTs, 
-angular and wavelength dependent
-wavelength dependent absorption and the optical degradation
+measures optical properties and parameters of describing the detector optical model,
+
+, such as scattering, attenuation of the detector materials, the response of PMTs, angular and wavelength dependent wavelength dependent absorption and the optical degradation.
 
 Optical calibration {\emph {in-situ}} 
 
 various dyes provide different peak wavelengths of the laser light, mainly at 365, 385, 420, 450 and 500 nm.
 
-\subsubsection{ELLIE}
 Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which is used to monitor the relative changes in attenuation lengths of detection media\cite{jones2011background,walker2016study,dunger2018topological,snop_jinst}.
 
 \subsection{Radioactive Calibration Sources}
@@ -550,7 +556,7 @@ Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber
 
 %The $^{16}$N source $^{3}$H$(p,\gamma)^{4}$He reaction.
 
-A detailed study of using the $^{16}$N source for reconstruction will be shown in \ref{sect:n16_water}.
+A detailed study of using the $^{16}$N source for testing and estimating the reconstruction uncertainties will be shown in \ref{sect:n16_water}.
 
 \subsubsection{The Americium Beryllium (AmBe) Calibration Source}
 
@@ -582,4 +588,4 @@ The software was originally developed by Stan Seibert from the Braidwood Collabo
 
 The SNO+ version of \texttt{RAT} links the existing \texttt{ROOT}, \texttt{Geant4} and \texttt{GLG4sim} packages to minimize the code duplication. The SNO+ \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment progress to precisely simulate the SNO+ detector in different physics phases as well as applying multiple analysis tasks. The relative flexible code structure of \texttt{RAT} allows the user to introduce their own code into the simulation or analysis process\cite{ratManual}. It can be tuned and optimized with the updated parameters from detector calibration; it can be added with more precise descriptions of the physics processes in the detector; it can also be introduced with more advanced analysis tools. The users can apply different analysis tasks, such as different reconstruction algorithms on the events\cite{ratManual}. Therefore, different versions of \texttt{RAT} serving to different SNO+ physics phases may give different outputs. For the work in this thesis, multiple \texttt{RAT} versions were used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a specific analysis.
 
-\texttt{RAT} is also used by other astroparticle physics experiments, such as DEAP/CLEAN\cite{caldwell2014simulation}. 
+\texttt{RAT} is also used by other astroparticle physics experiments, such as the dark matter experiment DEAP/CLEAN\cite{caldwell2014simulation}. 
