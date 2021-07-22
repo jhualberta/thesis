@@ -1,15 +1,15 @@
-A detailed description of the SNO+ detector has been implemented in the RAT software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. In order to make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source was used for the primary detector calibration. The $^{16}$N runs were mainly used for checking the performances of the reconstruction of the event position, direction and energy. The source was described in \ref{n16_description}.
+A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. In order to make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source was used for the primary detector calibration. The $^{16}$N runs were mainly used for checking the performances of the reconstruction of the event position, direction and energy. The source was described in \ref{n16_description}.
 
-In this chapter, I applied the MultiPath reconstruction algorithm mentioned in Chapter 4 to the $^{16}$N calibration data and simulations.
+In this chapter, I applied the \texttt{Multi-path fitter} mentioned in Chapter 4 to the $^{16}$N calibration data and simulations.
 
-First, for the $^{16}$N calibration runs during the water phase, the MultiPath water (MPW) fitter was applied on both data and simulations. By comparing the differences between the data and MC, systematics of the position and direction reconstruction were extracted. Setting the MPW fitted event vertex and direction as seed, the event energy was reconstructed via the energy RSP fitter. Also based on the MPW fitted vertex and direction results, the other parameters, such as the in-time-ratio (ITR) and the isotropic parameter ($\beta_{14}$) were calculated. By comparing the $^{16}$N data and the MC simulations, the systematics were also evaluated. These systematic results were used in the solar neutrino analysis in Chapter 6.
+First, for the $^{16}$N calibration runs during the water phase, the \texttt{MP water fitter} (the \texttt{MPW fitter}) was applied on both data and simulations. By comparing the differences between the data and MC, systematics of the position and direction reconstruction were extracted. Setting the \texttt{MPW fitter} fitted event vertex and direction as seed, the event energy was reconstructed via the energy RSP fitter. Also based on the \texttt{MPW fitter} fitted vertex and direction results, the other parameters, such as the in-time-ratio (ITR) and the isotropic parameter ($\beta_{14}$) were calculated. By comparing the $^{16}$N data and the MC simulations, the systematics were also evaluated. These systematic results were used in the solar neutrino analysis in Chapter 6.
 
-The MultiPath water (MPW) fitter was also applied on the simulations of the AmBe source calibration runs during the water phase. The performances of the MPW fitter reconstruction on low energy events, specially the 2.2 MeV $\gamma$ events were discussed.
+The \texttt{MPW fitter} was also applied on the simulations of the AmBe source calibration runs during the water phase. The performances of the \texttt{MPW fitter} reconstruction on low energy events, specially the 2.2 MeV $\gamma$ events were discussed.
 
-The last section of this chapter is to check the performance of the MultiPath partial fitter for the $^{16}$N calibration runs during the partial-fill phase. An attempt of extracting the Cherenkov signals from the events in the scintillator was made. This attempt will be useful for extracting the solar neutrino events and reconstructing their directions during the scintillator phase. 
+The last section of this chapter is to check the performance of the \texttt{MP partial fitter} for the $^{16}$N calibration runs during the partial-fill phase. An attempt of extracting the Cherenkov signals from the events in the scintillator was made. This attempt will be useful for extracting the solar neutrino events and reconstructing their directions during the scintillator phase. 
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
-During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was inside the AV, moving along x, y and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. Details of the calibration runs are listed in the tables in Appendix B. 
+During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was inside the AV, moving along x, y and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. Details of the calibration runs are listed in the tables in \ref{appendix:calibration}. 
 
 \begin{figure}[!htb]
 	\centering
@@ -18,7 +18,7 @@ During the water phase, the $^{16}$N calibration source was deployed as internal
 	\label{N16_3Dscan}
 \end{figure}
 
-The $^{16}$N calibration runs provide ideal tests for the fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the RAT water fitter and the MPW. The vertex shifts as well as the uncertainties were evaluated. 
+The $^{16}$N calibration runs provide ideal tests for the fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of th \texttt{RAT water fitter} and the \texttt{MPW fitter}. The vertex shifts as well as the uncertainties were evaluated. 
 
 To tackle with the $^{16}$N calibration data and simulations, an FECD tag cut ($FECD==9188$) was applied during the data processing to only save the events when the source trigger fired. A reconstruction threshold on $NHit$: $NHit>=6$ was used in both the MC and data. Besides these cuts, high level cuts based on classifiers were used. 
 
@@ -28,7 +28,7 @@ A set of classifiers were developed by SNO analysis and been optimized for the S
 \begin{itemize}
 	\item[$\bullet$] In time ratio (ITR) classifier
 	
-	For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, the time window was [-2.5,5.0]~ns. If the ITR ratio is too low for an event, it indicates that most of the triggered PMTs are not caused by the prompt lights and thus the event probably does not originate from Cherenkov lights; it can be an instrumental nosse, or caused by a large amount of lights reflecting off the detector components (called ``late lights''). 
+	For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$ and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, the time window was [-2.5,5.0]~ns. If the ITR ratio is too low for an event, it indicates that most of the triggered PMTs are not caused by the prompt lights and thus the event probably does not originate from Cherenkov lights; it can be an instrumental noise, or caused by a large amount of lights reflecting off the detector components (called ``late lights''). 
 	
 	\item[$\bullet$] $\beta_{14}$ isotropy classifier
 	
@@ -74,7 +74,7 @@ To do these evaluations, a few cuts were applied on both the data and MC. Firstl
 
 \subsection{Position Reconstruction Evaluation}
 \subsubsection{Position Figure of Merit}
-A quantity called scaled logL ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/NHit_{selected}$. This quantity utilizes the best log-likelihood returned by the MultiPath fitter for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' $NHit$, i.e., the number of the PMTs actually used by the fitter for reconstructing the event vertex, after the PMT selections mentioned in \ref{sect:PMTselector}.
+A quantity called scaled logL ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/NHit_{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' $NHit$, i.e., the number of the PMTs actually used by the fitter for reconstructing the event vertex, after the PMT selections mentioned in \ref{sect:PMTselector}.
 
 Fig.~\ref{posBiasVsFOM} shows the $scaleLogL$ with the position biases for the reconstructed events in $^{16}$N central calibration run-107055. Both of the data and the MC simulations are shown. For the MC case, the position biases are between the reconstructed positions and the true positions generated by the MC: $|\vec{X}_{fit}-\vec{X}_{MC}|$; while for the data case, the biases are between the reconstructed positions and the source manipulation position: $|\vec{X}_{fit}-\vec{X}_{src}|$.
 
@@ -99,7 +99,7 @@ In the MC (data) case, there are about 13.04 \% (12.89\%) of the events with $E_
 	\label{energyVsFOM}
 \end{figure}
 
-As a summary, there are about 0.04\% of the reconstructed events which were poorly reconstructed (mis-reconstructed) by the MPW fitter with position biases over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
+As a summary, there are about 0.04\% of the reconstructed events which were poorly reconstructed (mis-reconstructed) by the \texttt{MPW fitter} with position biases over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
 
 \subsubsection{Position Resolution}
 A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
@@ -123,7 +123,7 @@ Fig.~\ref{hsx} shows the spatial distributions $S(x)$ of the first $\gamma$-ray 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{sx.pdf}
-	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from the RAT simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
+	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from the \texttt{RAT} simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
 	\label{hsx}
 \end{figure}
 
@@ -158,7 +158,7 @@ Table~\ref{table_posresol} summarizes the values of position resolution paramete
 \vspace{1mm}
 \begin{table}[ht]
 	\centering
-	\caption{Position resolution parameters for the MPW fitter (x-axis).}
+	\caption{Position resolution parameters for the \texttt{MPW fitter} (x-axis).}
 	\label{table_posresol}
 	\begin{tabular}{ccccc}
 		\toprule
@@ -211,7 +211,7 @@ The values of $\sigma_{p,\delta}$ were taken to represent the position resolutio
 As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of the $\sigma_{p,\delta}$ were taken as the resolution systematics for x, y and z-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The upper values $\delta$ were used to smear the positions.
 \begin{table}[ht]
 	\centering
-	\caption{The MPW fitter position resolution systematic uncertainties in x, y and z axes. Unit: mm.}
+	\caption{The \texttt{MPW fitter} position resolution systematic uncertainties in x, y and z axes. Unit: mm.}
 	\vspace{3mm}
 	\label{vertexResolsSys}
 	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccc}
@@ -317,7 +317,7 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{16NangularResol.pdf}
-	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the MPW fitter. These distributions are fitted with the angular resolution functions ranging from 0.3 to 1.}
+	\caption{Angular distributions extracted from the data (red solid line) and the MC (black dashed line); both are reconstructed by the \texttt{MPW fitter}. These distributions are fitted with the angular resolution functions ranging from 0.3 to 1.}
 	\label{angularResolMPW}
 \end{figure}
 
@@ -329,8 +329,8 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 	MPW data & 4.15$\pm$0.18 & 19.08$\pm$0.94 & 0.58$\pm$0.02 & 77.1/66 & 0.964 & 0.744 & 0.410 \\
 	MPW MC & 4.42$\pm$0.19 & 20.41$\pm$1.01 & 0.56$\pm$0.02 & 83.8/66 & 0.974 & 0.768 & 0.454	 \\	
 \hline
-	Rat data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
-	Rat MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
+	\texttt{RAT} data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
+	\texttt{RAT} MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
 		\bottomrule
 	\end{tabular}
 	\label{angularResolValuesUpdated}
@@ -345,7 +345,7 @@ and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$
 
 where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
 
-From the results above, the direction resolutions of the MC are always better than the data, due to the ideal situations in the simulations. The MPW and the RAT reconstructions are similar, while the $\beta_M$ values of the MPW are about 10\% higher than the RAT in both of the data and the MC. This indicates the direction resolution of the MPW is slightly better than the RAT.
+From the results above, the direction resolutions of the MC are always better than the data, due to the ideal situations in the simulations. The \texttt{MPW} and the \texttt{RAT} reconstructions are similar, while the $\beta_M$ values of the \texttt{MPW fitter} are about 10\% higher than the \texttt{RAT} in both of the data and the MC. This indicates the direction resolution of the \texttt{MPW fitter} is slightly better than the \texttt{RAT}.
 
 \subsubsection{Direction Systematics}
 For all the internal $^{16}$N scans, the cuts mentioned in the last section were applied on both the data and simulations. Similar to the evaluation of the position uncertainties, the angular resolution function was first fitted with 3 free parameters: $\alpha_M$, $\beta_S$, $\beta_M$. To simplify the calculation in propagating systematics, an average value of the fitted $\alpha_M$ was calculated from all the internal scans (except the three neck scans), as 0.613 for data and 0.585 for MC. With the fixed values of $\alpha_M$, both the data and the MC were refit with $\beta_S$ and $\beta_M$ only. The default fit range is [0.3,1], while for some scans close to the AV, the events can be few after the cuts. For these situations, in order to ensure more than 5000 events were fitted, the fit range was enlarged by moving a 0.1 step to the left until the left value reaches -0.5: $[0.3-0.1\cdot step,1]$.
@@ -394,7 +394,7 @@ This angular remapping function is used to smear the angular distributions for s
 
 \subsection{$\beta_{14}$ and Its Systematic}
 Since $\beta_{14}$ itself is used as the high-level cut, here only the cuts of $ITR>0.55$ and $NHits>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions.
-Fig.~\ref{N16beta14} shows the $\beta_{14}$ distributions of the central run-107055 data and MC, reconstructed by the MPW fitter and the official RAT fitter. The $\beta_{14}$ is calculated based on the reconstructed position, time and direction of an event while the $\beta_{14}$ distributions from the MPW and the RAT fitter results are consistent. However, both of the two fitters show a discrepancy between the data and the MC. This discrepancy can be caused by an inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}.
+Fig.~\ref{N16beta14} shows the $\beta_{14}$ distributions of the central run-107055 data and MC, reconstructed by the MPW fitter and the official \texttt{RAT} fitter. The $\beta_{14}$ is calculated based on the reconstructed position, time and direction of an event while the $\beta_{14}$ distributions from the MPW and the \texttt{RAT fitter} results are consistent. However, both of the two fitters show a discrepancy between the data and the MC. This discrepancy can be caused by an inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}.
 Fig.~\ref{N16beta14_cmp} shows a comparison of the $\beta_{14}$ for the data and the MC in run-107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to the $\mu_{MC}=0.4388$.
 
 Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z axes.
@@ -402,7 +402,7 @@ Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16_beta14_107055.png}
-	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter processed results and black for the RAT results.}
+	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} processed results and black for the \texttt{RAT} results.}
 	\label{N16beta14_cmp}
 \end{figure}
 
@@ -437,7 +437,7 @@ For all the 80 internal runs mentioned before, I calculated the $\Delta \beta_{1
 Three energy FoM quantities: $G_{test}$, $U_{test}$ and $Z_{factor}$ were introduced in \ref{sect:energy_fom}.
 Here I used the MC simulations as well as the data of the $^{16}$N central run-107055 to check the effects of the cuts on FOM quantities to　reduce the energy biases. The sacrifices of the events were calculated. 
 
-%Then the data of the same run were used to check the ratios of the number of the events which were cut off by the FOM quantities. 
+%Then the data of the same run were used to check the ratios off by the FOM quantities. 
 
 \begin{itemize}
 	\item[$\bullet$]$U_{test}$:
@@ -513,7 +513,7 @@ The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
-	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
+	\caption{NHit spectrum for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.}
 	\label{N16nhits}
 \end{figure}
 
@@ -548,7 +548,7 @@ A 2D map describes the relationship between the number of Cherenkov photons and 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_reconE_107055.png}
-	\caption{Reconstructed energy spectrum from the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the Rat results.}
+	\caption{Reconstructed energy spectrum from the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.}
 	\label{N16energy}
 \end{figure}
 
@@ -566,19 +566,19 @@ A 2D map describes the relationship between the number of Cherenkov photons and 
 			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
 		\end{minipage}
 	}
-	\subfigure[Rat data]{ 
+	\subfigure[\texttt{RAT} data]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
 			\includegraphics[width=6cm]{N16_rat_data_EvsBeta14.png}
 		\end{minipage}
 	}
-	\subfigure[Rat MC]{ 
+	\subfigure[\texttt{RAT} MC]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
 			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
 		\end{minipage}
 	}
-	\caption{Energy vs $\beta_{14}$ for the data and MC. Both the Rat and the MPW results are shown.}
+	\caption{Energy vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} and the \texttt{MPW} results are shown.}
 	\label{EvsBeta14}
 \end{figure}
 
@@ -675,7 +675,7 @@ the lower hemisphere) of the PSUP sphere than in the higher hemisphere, as illus
 In the following, I studied the performance of the Sky-shine classifier and attempted to obtain an optimized cut on the value of $skyShine$ based on the MC simulations.
 
 \subsubsection{Performance of the Sky-shine Classifier}
-The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. RAT version 6.16.9 was used. 
+The MC simulations of the $^{208}$Tl decay events were produced in a partial-fill geometry with the water level set at 4435~mm (in AV coordination) and 2 g/L PPO concentration. The $^{208}$Tl decay events were distributed uniformly in the scintillator region. 4067 events of $^{208}$Tl decays were simulated (about 16 times the expected number of events per year based on the SNO+ background evaluations\cite{markchen_bkg}) and 3784 events were triggered. \texttt{RAT} version 6.16.9 was used. 
 
 Fig.~\ref{Tl208simu} shows the positions of the simulated events and the fitted events. In the MC simulations, events are distributed in the AV as well as the whole region of the neck. Recall that the neck of the detector is 8-m tall, the MC simulated neck events from $z_{neck_bottom}=6108~mm$ up to about $z_{neck_top}=13000~mm$ in the PSUP coordinate. The valid reconstruction region is inside the PSUP sphere, thus only a small fraction of the neck events in the volume of the neck cylinder inside the PSUP sphere can be fitted or even be triggered.
 

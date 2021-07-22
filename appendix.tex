@@ -1,14 +1,18 @@
-\section{Create a Random Vertex}
+\section{Create a Random Vertex}\label{appendix:random_gen}
 
-Four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics (CLHEP) library.
+Four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
 
-One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300~ns]$, say, $t\sim U(100,300)$.
+One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]~ns$, say, $t\sim U(100,300)$.
 
 Three random seeds are used for generating the position of the trial vertex: $\texttt{ran0}\sim U(0,1)$, $\texttt{ran1}\sim U(-1,1)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. 
 
 Let $r=\sqrt[3]{\texttt{ran0}}*10000~mm$, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
 
-\section{Levenberg-Marquardt Method for Minimization}\footnote{This section refers to \cite{press2007numerical}.}
+For the trial direction, two random seeds are used. Each follows a uniform distribution: $\texttt{ranPi}\sim U(0,\pi)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. Then the trial direction is built as: $\vec{u}_{0}=(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta)$, with zenith angle $\theta=\texttt{ranPi}$ and azimuth angle $\phi=\texttt{ran2Pi}$.
+
+Note that here the $\texttt{ranPi}$ and $\texttt{ran2Pi}$ are generated independently for the trial direction and they are not related to the vertex case.
+
+\section{Levenberg-Marquardt Method for Minimization}\footnote{This section refers to \cite{press2007numerical}.}\label{appendix:MRQ}
 
 Levenberg-Marquardt (MRQ) method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
 
@@ -81,7 +85,7 @@ accuracy or to the roundoff limit is not used, since $\chi^2$ is a statistical q
 
 Once the minimum is reached, $\lambda$ is set to 0 and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
 
-The MRQ method is the core algorithm in the MultiPath Fitter Framework for fitting the results. A few parameters can be optimized in practice.
+The MRQ method is the core algorithm in the \texttt{MP fitter} framework for fitting the results. A few parameters can be optimized in practice.
 The main parameters are:
 
 
@@ -98,10 +102,35 @@ the number of maximum good fits $nGood_{max}$ 6, 4
 	
 \end{itemize}
 
-the parameters used by the MultiPath Fitter for different phases are summarized in Table.~\ref{table:MRQ_params}. 
+the parameters used by the \texttt{MP fitter} for different phases are summarized in Table.~\ref{table:MRQ_params}. 
 
+\section{Calculations of the Derivatives}
+The MRQ method requires the derivatives of the likelihood function. These derivatives can be calculated analytically in explicit mathematical forms.
 
-Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the MultiPath Water Fitter, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
+The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$. Then the $TOF$ for the prompt Cherenkov light is $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
+
+Then it comes out:
+\begin{equation}
+\frac{\partial L}{\partial t_0}=\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}},
+\end{equation}
+
+\begin{equation}
+\frac{\partial L}{\partial x}=\frac{\partial L_{\mathrm{Ch}}}{\partial t_{\mathrm{Ch}}}\frac{dt_{\mathrm{Ch}}}{\partial x}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{X_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g},
+\end{equation}
+
+\begin{equation}
+\frac{\partial L}{\partial y}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Y_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g},
+\end{equation}
+
+\begin{equation}
+\frac{\partial L}{\partial z}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Z_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g},
+\end{equation}
+
+where the derivative $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically on the binned timing $pdf$ histogram.
+
+\section{Likelihood Surfaces}
+
+Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the \texttt{MP water fitter}, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
 
 \begin{figure}
 	\centering
@@ -129,54 +158,7 @@ Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MR
 	\label{derivative_logLxyz}
 \end{figure}
 
-
-\subsection{Multi-path Fitter Structure}
-The Multi-path fitter has already been implemented into the RAT software and being used in data processing and analyzing.
-
-The MP fitter structure consists of: 
-\begin{itemize}
-	\item[$\bullet$] Fitter database
-	
-	This database provides parameters used by the fitter, including the physics constants, detector geometry parameters, fit parameters and pdfs. The database is in a JSON format\cite{JSONwiki} and contains multiple tables tagged by indices to indicate different detection media or physics phases. In each table, there are fit parameters and pdfs optimized for the specific scintillator. For example, for the partial-fill phase with a PPO concentration of 0.5 g/L, the fitter will look for the index of ``labppo\_0p5\_scintillator'' and extract the pdfs and fit parameters under that index.  
-	
-	The fit parameters includes the fitter tolerance and the maximum iterations which determine how the fitter converges, 
-	
-	Reflective index (water\_RI, or n$_{water}$), used for effective group velocity ($v_g$ =c/n$_{water}$) calculation. 
-	air refractive index (air\_RI), PSUP radius ($r_{PSUP}=8390~mm$). Offsets
-	boundary settings
-	
-	The \texttt{MPW fitter} currently uses one fixed number for n$_{water}$, rather than a function of wavelengths. The value of n$_{water}$ can be tuned to give the lowest biases of the fitted positions to the Monte Carlo and to give the lowest RMS of fitted results as well. But the effect of n$_{water}$ can also be corrected by the drive correction afterwards. Currently n$_{water}=1.38486$ is obtained by analyzing the time of flight from the \isotope[16]{N} central run-100934 data reconstructed by the \texttt{MPW fitter}. 
-	
-	time offset, position offset, radius cut x, fitting bin-width and steps.
-	
-	- PMT response time (timing) pdf for the position reconstruction, as shown in Fig.~\ref{MPW_timingPDF}. The pdf shown in red line is modified from the measured PMT response time distribution from SNO time and the late light response is forced to be de-weighted (black). The pdf is modified in [-100,-4] ns region to match the time residual spectrum obtained from \isotope[16]{N} central run-100934 (blue).
-	
-	- PMT angular response pdf for the direction reconstruction, as shown in Fig.~\ref{MPW_angularPDF}. It is taken from the Monte Carlo simulation of 5 MeV electrons traverse in the AV with one direction.
-	
-	
-	\item[$\bullet$]  Likelihood Calculation Classes, 
-	Constructs likelihood functions, calculates likelihoods and their derivatives. For the \texttt{MPW fitter}, there are two classes: \texttt{WaterPosition} for position reconstruction and \texttt{WaterDirection} for direction reconstruction. The \texttt{WaterPosition} class tackles with 4 parameters $(x,y,z,t)$ and the \texttt{WaterDirection} class tackles with 2 parameters $(\theta,\phi)$. 
-	
-	\item[$\bullet$] Multi-path Fitter
-	
-	Processes the \texttt{MPW fitter} and finds the best-fit of the likelihood function. It is a general processor and is shared with the fitters using the Multi-path Fitter, including the \texttt{MPW fitter}, \texttt{air-water (AW) fitter}, \texttt{wavelength-shifter (WLS) fitter} and \texttt{scint-water fitter}. It processes a certain fitter by being assigned the fitter name in macro. It processes the fitter event by event: for every triggered event, it first calls PMT selectors (\texttt{ModeCut} or \texttt{StraightTimeResidualCut}) and sends the information of the reduced PMTs to a certain Likelihood Calculation Class for likelihood calculations. The Likelihood Calculation Class sends back the values of likelihoods and their derivatives, so the Multi-path Fitter does not care about how the likelihood functions are constructed and how the likelihoods and derivatives are calculated. Using these values, it constructs an n$\times$n Hessian matrix (n is the number of fitting parameters defined in Likelihood Calculation Class) and uses the Levenberg-Marquardt (MRQ) method to maximize the likelihood and finds the best-fit values. For the MPW, if the likelihood maxima is found 5 times for any position and direction then values are returned as the fitted position and direction. For the MPW case, it calls the \texttt{ModeCut} and fits for the position and time; then it calls the \texttt{StraightTimeResidualCut} and fits for the directions.
-	
-	\item[$\bullet$] Dump Likelihood
-	
-	This is a function inside the Multi-path Fitter. It stores the likelihood surfaces and derivatives with respect to arrays of trial vertices of the interested events which are designated by event GTIDs in the database. From the likelihood surfaces and derivatives of an interested event, people can evaluate the fit performance of that event by checking whether the fitter finds global or local maximum. 
-	
-	\item[$\bullet$] \texttt{SDecompQRH}
-	
-	This s a fit method class modified from \texttt{ROOT TDecompQRH} class\cite{TDecompQRH}. It is used by the Multi-path fitter to invert the Hessian matrix through QR decomposition method\cite{press2007numerical}. Compared to ROOT, Solve() for Ax=b is modified to zero the component of x for which the diagonal element in R is small. This allows a Levenberg-Marquardt optimization to continue in many cases
-	when the matrix is singular. For the MPW case, it is used to invert a 4$\times$4 matrix of the \texttt{WaterPosition} Class while the inversion of $2\times2$ matrix of the \texttt{WaterDirection} is calculated directly\cite{waterunidoc}.
-	
-	\item[$\bullet$] PMT selectors
-	
-	Detailed descriptions are shown in section \ref{sect:PMTselector}.
-	
-\end{itemize}
-
-\section{Detailed Light Path Calculations in the MultiPath Scint-water Fitter}\label{sect:lightpath}
+\section{Detailed Light Path Calculations in the Multi-path Scint-water Fitter}\label{appendix:lightpath}
 The following algorithm shows the detailed calculations for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by Latin letters (a, b or c). 
 
 \begin{algorithm}

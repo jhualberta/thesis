@@ -3,17 +3,21 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
+Repeated entry---line 327 of file thesis.bib
+ : @article{aalbers2020solar
+ :                          ,
+I'm skipping whatever remains of this entry
 Warning--string name "hamamatsu" is undefined
---line 1290 of file thesis.bib
-I was expecting a `,' or a `}'---line 1290 of file thesis.bib
+--line 1314 of file thesis.bib
+I was expecting a `,' or a `}'---line 1314 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1511 of file thesis.bib
+Repeated entry---line 1566 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1686 of file thesis.bib
+Repeated entry---line 1728 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -83,45 +87,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 201 entries,
+You've used 203 entries,
             1876 wiz_defined-function locations,
-            1426 strings with 35062 characters,
-and the built_in function-call counts, 42899 in all, are:
-= -- 3768
-> -- 2373
+            1437 strings with 35534 characters,
+and the built_in function-call counts, 43594 in all, are:
+= -- 3830
+> -- 2419
 < -- 0
-+ -- 894
-- -- 693
-* -- 3003
-:= -- 6615
-add.period$ -- 259
-call.type$ -- 201
-change.case$ -- 146
++ -- 910
+- -- 707
+* -- 3063
+:= -- 6721
+add.period$ -- 261
+call.type$ -- 203
+change.case$ -- 148
 chr.to.int$ -- 0
-cite$ -- 266
-duplicate$ -- 2345
-empty$ -- 3946
-format.name$ -- 693
-if$ -- 10165
+cite$ -- 268
+duplicate$ -- 2377
+empty$ -- 3997
+format.name$ -- 707
+if$ -- 10328
 int.to.chr$ -- 0
-int.to.str$ -- 201
-missing$ -- 201
-newline$ -- 666
-num.names$ -- 193
-pop$ -- 736
+int.to.str$ -- 203
+missing$ -- 203
+newline$ -- 672
+num.names$ -- 195
+pop$ -- 739
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1207
+skip$ -- 1231
 stack$ -- 0
-substring$ -- 1125
-swap$ -- 790
+substring$ -- 1163
+swap$ -- 806
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 65
-while$ -- 308
-width$ -- 204
-write$ -- 1835
-(There were 3 error messages)
+while$ -- 314
+width$ -- 206
+write$ -- 1857
+(There were 4 error messages)
