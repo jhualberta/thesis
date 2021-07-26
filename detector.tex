@@ -489,7 +489,8 @@ See Fig.~\ref{sms}.
 All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
 
 
-A Universal Interface (UI) connects the AV and the SMS. It is a sealed glovebox above the AV neck in a clean room set on the SNO+ deck.
+A Universal Interface (UI) connects the AV and the SMS. It is a sealed glove
+box above the AV neck in a clean room set on the SNO+ deck.
 
 
 reduce the radio contamination in the detector
@@ -517,7 +518,7 @@ Optical calibration {\emph {in-situ}}
 
 various dyes provide different peak wavelengths of the laser light, mainly at 365, 385, 420, 450 and 500 nm.
 
-Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which is used to monitor the relative changes in attenuation lengths of detection media\cite{jones2011background,walker2016study,dunger2018topological,snop_jinst}.
+Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which is used to monitor the relative changes in attenuation lengths of detection media\cite{snop_jinst,jones2011background,walker2016study,dunger2018topological}.
 
 \subsection{Radioactive Calibration Sources}
 \subsubsection{The $^{16}$N Calibration Source}\label{n16_description}
@@ -525,7 +526,7 @@ The $^{16}$N calibration source is one of the radioactive sources. This source i
 
 Since the $^{16}$N isotope has a short half-life of $7.13~s$, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the $CO_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the $CO_2$ gas tubing\cite{dragowsky200216n}.  
 
-The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{endpoint}=4.29~MeV$ and a 22.8\% chance to an electron with $E_{endpoint}=10.42~MeV$; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$'s. There are mainly $6.13~MeV~\gamma$ with an intensity of 67.0\% and 
+The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{end~point}=4.29~MeV$ and a 22.8\% chance to an electron with $E_{end~point}=10.42~MeV$; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$'s. There are mainly $6.13~MeV~\gamma$ with an intensity of 67.0\% and 
 $7.12~MeV~\gamma$ with an intensity of 4.9\%. The intensities of the $\gamma$'s with other energies are all below 1\%\cite{nndc}. A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
 \begin{figure}[!htb]
@@ -563,29 +564,17 @@ A detailed study of using the $^{16}$N source for testing and estimating the rec
 
 \subsubsection{Other Calibration Sources}
 
-	$^{46}$Sc  source 
-In the scintillator and tellurium phases, three additional $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co are planned to be implemented. Table.~\ref{other_calibrationSource} shows their basic properties.
+To calibrate the energy region of interest (ROI) in the scintillator and tellurium-loading phases, especially for the $0\nu\beta\beta$ study, 
 
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{cc}
-		\toprule
-		source isotope & $\mathcal{\epsilon}_{transfer}$(\%)\\
-		\midrule
-		$^{46}$Sc  \\
-		$^{48}$Sc  & $86.0\pm 0.8$\\
-		$^{137}$Cs  & $78.2\pm 1.5$\\
-		$^{57}$Co  & $67.7\pm 2.3$\\
-		\bottomrule
-	\end{tabular}
-	\label{other_calibrationSource}
-\end{table}
+The $^{46}$Sc tagged source is \cite{snop_jinst}.
+	
+Besides the $^{46}$Sc source, three additional untagged $\gamma$ sources: $^{48}$Sc, $^{137}$Cs  and $^{57}$Co are planned to be implemented\cite{snop_jinst}. Among them, the isotopes of $^{48}$Sc ($T_{1/2}$=43.67 hours, 100\% $\beta^-$ decay) and $^{137}$Cs ($T_{1/2}$=30.1 years, 100\% $\beta^-$ decay) can provide both the $\beta^-$ and $\gamma$ particles while the $^{57}$Co  ($T_{1/2}$=271.74 days, 100\% electron capture) only emits $\gamma$s. They can provide $\gamma$s with energies ranging from 14 keV ($^{57}$Co) to 1310 keV ($^{48}$Sc) and $\beta^-$ particles with energies ranging from 480 keV ($^{48}$Sc) to 1176 keV ($^{137}$Cs)\cite{nndc}.
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.
 
-The software was originally developed by Stan Seibert from the Braidwood Collaboration to simulate a generic KamLAND-like detector\cite{ratManual}. A simulation package called Generic Liquid Scintillator GEANT4 simulation (\texttt{GLG4sim}) was developed and implemented in \texttt{RAT}\cite{horton2006introduction}. It simulates the scintillation physics processes, the generations of scintillation photons and also the propagation, reflections, refraction, scattering ans absorption of optical photons\cite{dunger2018topological}.  
+The software was originally developed by Stan Seibert from the Braidwood Collaboration to simulate a generic KamLAND-like detector\cite{ratManual}. A simulation package called Generic Liquid Scintillator \texttt{Geant4} simulation (\texttt{GLG4sim}) was developed and implemented in \texttt{RAT}\cite{horton2006introduction}. It simulates the scintillation physics processes, the generations of scintillation photons and also the propagation, reflections, refraction, scattering ans absorption of optical photons\cite{dunger2018topological}.
 
-The SNO+ version of \texttt{RAT} links the existing \texttt{ROOT}, \texttt{Geant4} and \texttt{GLG4sim} packages to minimize the code duplication. The SNO+ \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment progress to precisely simulate the SNO+ detector in different physics phases as well as applying multiple analysis tasks. The relative flexible code structure of \texttt{RAT} allows the user to introduce their own code into the simulation or analysis process\cite{ratManual}. It can be tuned and optimized with the updated parameters from detector calibration; it can be added with more precise descriptions of the physics processes in the detector; it can also be introduced with more advanced analysis tools. The users can apply different analysis tasks, such as different reconstruction algorithms on the events\cite{ratManual}. Therefore, different versions of \texttt{RAT} serving to different SNO+ physics phases may give different outputs. For the work in this thesis, multiple \texttt{RAT} versions were used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a specific analysis.
+The SNO+ version of \texttt{RAT} links the existing \texttt{ROOT}, \texttt{Geant4} and \texttt{GLG4sim} packages to minimize the code duplication. The SNO+ \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment progress to precisely simulate the SNO+ detector in different physics phases as well as applying multiple analysis tasks. The relative flexible code structure of \texttt{RAT} allows the user to introduce their own code into the simulation or analysis process\cite{ratManual}. It can be updated and optimized with the measured parameters from detector calibration; it can be added with more precise descriptions of the physics processes in the detector; it can also be introduced with more advanced analysis tools. The users can apply different analysis tasks, such as different reconstruction algorithms on the same events\cite{ratManual}. Therefore, different versions of \texttt{RAT} serving to different SNO+ physics phases may give different outputs. For the work in this thesis, multiple \texttt{RAT} versions were used, mainly the versions for the water phase and partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a specific analysis.
 
 \texttt{RAT} is also used by other astroparticle physics experiments, such as the dark matter experiment DEAP/CLEAN\cite{caldwell2014simulation}. 

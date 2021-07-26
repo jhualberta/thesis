@@ -13,11 +13,11 @@ I was expecting a `,' or a `}'---line 1314 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1566 of file thesis.bib
+Repeated entry---line 1577 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1728 of file thesis.bib
+Repeated entry---line 1739 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -64,8 +64,8 @@ Warning--can't use both volume and number fields in singh2020underwater
 Warning--empty year in brunroot
 Warning--empty year in muonTrackRecon
 Warning--empty year in groupVmeasure
-Warning--empty year in waterunidoc
 Warning--empty year in modeCut
+Warning--empty year in waterunidoc
 Warning--empty year in energyRSP
 Warning--empty year in partialEnergy
 Warning--empty year in partialEnergyYang
@@ -89,7 +89,7 @@ Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
 You've used 203 entries,
             1876 wiz_defined-function locations,
-            1437 strings with 35534 characters,
+            1437 strings with 35536 characters,
 and the built_in function-call counts, 43594 in all, are:
 = -- 3830
 > -- 2419

@@ -12,7 +12,7 @@ For the trial direction, two random seeds are used. Each follows a uniform distr
 
 Note that here the $\texttt{ranPi}$ and $\texttt{ran2Pi}$ are generated independently for the trial direction and they are not related to the vertex case.
 
-\section{Levenberg-Marquardt Method for Minimization}\footnote{This section refers to \cite{press2007numerical}.}\label{appendix:MRQ}
+\section{Levenberg-Marquardt Method}\footnote{This section refers to \cite{press2007numerical}.}\label{appendix:MRQ}
 
 Levenberg-Marquardt (MRQ) method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
 
@@ -60,7 +60,7 @@ If we consider the method of steepest descent: ${\bf a}_{next}={\bf a}_{cur}-\ma
 \end{equation}
 where no Hessian matrix is needed.
 
-In the Levenberg-Marquardt method, in order to solve for $\delta a_l$, the detailed calculation of ${\bf D}^{-1}$ in \ref{eq:2} and the simplified calculation of steepest descent in \ref{eq:7} are combined and a smooth transition between \ref{eq:2} and \ref{eq:7} is considered.
+In the MRQ method, in order to solve for $\delta a_l$, the detailed calculation of ${\bf D}^{-1}$ in \ref{eq:2} and the simplified calculation of steepest descent in \ref{eq:7} are combined and a smooth transition between \ref{eq:2} and \ref{eq:7} is considered.
 
 In \ref{eq:7}, the $\mathrm{const}$ describes the distance or magnitude of how far the parameter should go along the gradient $\beta_l$. From dimensional analysis, since $\beta_k\equiv-\frac{1}{2}\frac{\partial\chi^2}{\partial a_k}$ and $\chi^2$ is a non-dimensional number, $[\beta_l]=[1/a_l]$. Then from \ref{eq:7}, $[\mathrm{const}]=[a^2_l]$. The $\mathrm{const}$ has the same dimension to the term $1/\alpha_{ll}= 1/(\frac{1}{2}\frac{\partial^2\chi^2}{\partial a_l\partial a_l})$, i.e., the diagonal elements in the curvature matrix. A bridge between \ref{eq:2} and \ref{eq:7} is thus built. The diagonal elements in the curvature matrix can control the magnitude of the $\mathrm{const}$, tells how far the parameter should go along the gradient. 
 
@@ -77,7 +77,7 @@ Compare \ref{eq:6} and \ref{eq:8}, if define a new curvature matrix $\alpha'$ as
 
 From the definition of $\alpha'$, if $\lambda$ takes a large value, $\alpha'$ is dominated by diagonal elements, then \ref{eq:10} is close to \ref{eq:8}; while if $\lambda\to0$,  \ref{eq:10} is close to \ref{eq:6}.
 
-The algorithm of Levenberg-Marquardt method requires a reasonable start value (first guess) of the fitting parameter $\bf a$ and a reasonable preset value of $\lambda$ (usually take $\lambda$ = 0.001). 
+The algorithm of the MRQ method requires a reasonable start value (first guess) of the fitting parameter $\bf a$ and a reasonable preset value of $\lambda$ (usually take $\lambda$ = 0.001). 
 The iteration loop of the algorithm is: calculate the value of $\chi^2({\bf a})$, solve for $\bf \delta a$ from \ref{eq:10} and then calculate $\chi^2({\bf a+\delta a})$. During this loop, the algorithm checks whether $\chi^2({\bf a+\delta a})\geq\chi^2({\bf a})$, if it is, $\lambda$ is increased by $\lambda=10\cdot\lambda$; if not, $\lambda$ is decreased by $\lambda=0.1\cdot\lambda$.  
 
 The iteration loop is terminated when the change amount of the $\chi^2$ is negligible: if the loop calculates several $\chi^2$ values which are close to each other within a fit tolerance (\texttt{fTolerance}): $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$, the algorithm will consider the $\chi^2$ is minimized with a set of best-fit parameters. Here the termination condition of iterating the $\chi^2$ value to convergence to the machine
@@ -85,31 +85,40 @@ accuracy or to the roundoff limit is not used, since $\chi^2$ is a statistical q
 
 Once the minimum is reached, $\lambda$ is set to 0 and then the estimated covariance matrix of the standard errors in the fitted $\bf a$ can be calculated as: $C\equiv {\bf \alpha^{-1}}$.
 
-The MRQ method is the core algorithm in the \texttt{MP fitter} framework for fitting the results. A few parameters can be optimized in practice.
-The main parameters are:
-
-
- The trade-off between precision of the results and the CPU time is considered. 
-\texttt{fTolerance}=0.001;
-
-the number of maximum iteration $iter_{max}$ 500, 100 
-the number of maximum good fits $nGood_{max}$ 6, 4
-
+The MRQ method is the core algorithm in the \texttt{MP fitter} framework for likelihood fitting. A few fitter setting parameters relating to the method can be optimized in practice. These parameters are:
 \begin{itemize}
 	\item fit tolerance: \texttt{fTolerance}, which is set for $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$.
-	\item the number of good fits: \texttt{nGood}. 
-	\item the maximum iteration number 
-	
+	\item the number of good fits: \texttt{nGood}. The maximum number of the ``good fits'' required to be a valid result. This is to avoid the case when the MRQ minimizer finds a local minima instead of a global minima.
+	\item the maximum iteration: \texttt{fMaxIter}. The allowed maximum number for looping the MRQ minimizer.
+	\item the maximum number of start positions: \texttt{nStart}. If the start value does not give a valid result, the fitter will try another random start value. \texttt{nStart} is the maximum number of the start value the fitter is allowed to try.
 \end{itemize}
 
-the parameters used by the \texttt{MP fitter} for different phases are summarized in Table.~\ref{table:MRQ_params}. 
+Table.~\ref{table:MRQ_params} shows the optimized values of the fitter setting parameters for different phases. 
 
-\section{Calculations of the Derivatives}
+\begin{table}[ht]
+	\centering
+	\caption{\label{table:MRQ_params} Optimized fitter setting parameters for different physics phases.}	
+	{\centering
+		\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			SNO+ phase & \texttt{fTolerance} & \texttt{nGood} & \texttt{fMaxIter} & \texttt{nStart}\\
+			\midrule
+			water phase & 0.001 & 6 & 500 & 250\\
+			partial-fill phase & 0.001 & 4 & 100 & 250\\
+			scintillator phase & 0.001 & 4 & 100 & 250\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
+
+A trade-off between the accuracy \& precision of the reconstructed results and the CPU time is considered. If increasing the \texttt{fTolerance} while decreasing the number of \texttt{nGood}, \texttt{fMaxIter} and \texttt{nStart}, the CPU time will decrease at costs of the fitter accuracy \& precision, and vice versa.
+
+\section{Calculations of Derivatives of Likelihood Functions}
 The MRQ method requires the derivatives of the likelihood function. These derivatives can be calculated analytically in explicit mathematical forms.
 
 The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$. Then the $TOF$ for the prompt Cherenkov light is $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
 
-Then it comes out:
+Then it comes out for the water vertex case,
 \begin{equation}
 \frac{\partial L}{\partial t_0}=\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}},
 \end{equation}
@@ -126,11 +135,28 @@ Then it comes out:
 \frac{\partial L}{\partial z}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Z_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g},
 \end{equation}
 
-where the derivative $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically on the binned timing $pdf$ histogram.
+where the derivative $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing $pdf$ saved as a binned histogram.
+
+For the water direction case,
+\begin{equation}
+\frac{\partial L}{\partial\theta}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{\partial\theta}
+=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\theta}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|},
+\end{equation}
+
+where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$ and 
+
+\begin{equation}
+\frac{\partial　L}{\partial\phi}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{d\phi}
+=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\phi}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|},
+\end{equation} 
+where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. The derivative $\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}$ can be calculated numerically from the PMT angular response $pdf$ saved as a binned histogram.
+
+\section{Inversion of Hessian Matrix}
+Matrix inversion is a frequent calculation when applying the MRQ method. In the \texttt{MP fitter}, the inversion of a $2\times 2$ Hessian matrix (usually used for direction reconstruction with two parameters) is calculated directly. For the higher dimension matrix, usually the $4\times 4$ matrix for vertex reconstruction, a \texttt{SDecompQRH} class is called for calculating the inversion matrix by using QR decomposition method\cite{press2007numerical}. This class was introduced by Jeff Tseng and it was modified from the \texttt{ROOT TDecompQRH} class\cite{TDecompQRH}. Compared to the ROOT version, its \texttt{Solve()} function was slightly modified for solving the matrix equation $Ax=b$, where $A = QR$ is composed of an orthogonal matrix $Q$ and an upper triangular matrix $R$. If the diagonal element in R is too small, instead of returning failure, the modified algorithm simply sets the corresponding x component to be 0. This allows an optimization for the MRQ method to continue in frequent cases when the matrix is singular.
 
 \section{Likelihood Surfaces}
 
-Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the \texttt{MP water fitter}, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on X-Y, X-Z and Y-Z planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
+Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the \texttt{MP water fitter}, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on $X-Y$, $X-Z$ and $Y-Z$ planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
 
 \begin{figure}
 	\centering

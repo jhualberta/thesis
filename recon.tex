@@ -38,7 +38,7 @@ The \texttt{MPW fitter} fits for the vertex and direction of a triggered event i
 
 \subsection{Vertex Reconstruction}
 
-To fit for the vertex, first the fitter creates a random position inside a sphere with a radius of $10~m$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$). Meanwhile, a random event time is also generated from a uniform distribution in the range of $[100,300~ns]$. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $\vec{X}_0$. See the \ref{appendix:random_gen} for details.
+To fit for the vertex with 4 parameters: $x,y,z$ and $t$, first the fitter creates a random position inside a sphere with a radius of $10~m$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$). Meanwhile, a random event time is also generated from a uniform distribution in the range of $[100,300~ns]$. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $\vec{X}_0$. See the \ref{appendix:random_gen} for details.
 
 For a triggered event, photons are created around the event position and propagate to the hit PMTs. In a simplified detector geometry model which neglects the effects from scattering, reflection and refraction, these photons are considered as propagating along straight lines connecting the trial event vertex to the hit PMTs. Then the fitter evaluates a timing parameter, called the time residual ($t_{res}$), which is defined as:
 \begin{equation}
@@ -48,9 +48,15 @@ t_{res}=t_{PMT} - t_{transit} - t_{event},
 
 where $t_{PMT}$ is the PMT trigger time recorded by the detector, $t_{event}$ is the time when an event occurs (event time), and $t_{transit}$ is the total transit time (or time of flight, $TOF$) taken by a photon traveling from the event position ($\vec{X}_{event}$) to the hit PMT ($\vec{X}_{PMT}$) and crossing different materials in the detector.
 
-To calculate the $t_{transit}$, the fitter uses Cherenkov photons in a prompt time window (called ``prompt light''), set as $-10<t_{res}<10~ns$ for the \texttt{MPW fitter} and the photons are assumed to propagate in straight lines (straight light paths). By assuming straight light paths, complicated situations of the photon propagation are neglected, including the refraction and reflection when the lights cross boundaries between different detector materials, absorption and scattering from the materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel. In this case, the $TOF$ can be simply calculated as $t_{transit}=|\vec{X}_{event}-\vec{X}_{PMT}|/v_{water}$, where $v_{water}$ is an average photon group velocity and it is an effective value obtained by tuning on the Monte Carlo simulations. Section \ref{sect:tuneGroupVelocity} gives the details about the tuning. Based on the reconstruction experiences from the SNO experiment, it was found that without these details, the fitter can still produce decent results that are consistent with the case using detailed calculations\cite{boulay2004direct,jones2011background}.  
+To calculate the $t_{transit}$, the fitter uses Cherenkov photons in a prompt time window (called ``prompt light''), set as $-10<t_{res}<10~ns$ for the \texttt{MPW fitter} and the photons are assumed to propagate in straight lines (straight light paths). By assuming straight light paths, complicated situations of the photon propagation are neglected, including the refraction and reflection when the lights cross boundaries between different detector materials, absorption and scattering from the materials, as well as the lensing effects caused by the spherical structure of the acrylic vessel. In this case, the $TOF$ can be simply calculated as $t_{transit}=|\vec{X}_{event}-\vec{X}_{PMT}|/v_{water}$, where $v_{water}$ is an average photon group velocity and it is an effective value obtained by tuning on the Monte Carlo simulations. Section \ref{sect:tuneGroupVelocity} will show the details about the tuning. Based on the reconstruction experiences from the SNO experiment, it was found that without these details, the fitter can still produce decent results that are consistent with the case using detailed calculations\cite{boulay2004direct,jones2011background}. Fig.~\ref{mpwdiagram_position} shows the straight light paths from the event position to the hit PMT positions.
+\begin{figure}[htbp]
+	\centering
+   \includegraphics[width=6cm]{mpwDiagram.png}
+	\caption{A diagram of straight light path for event position reconstruction in the SNO+ water phase geometry.}
+	\label{mpwdiagram_position}
+\end{figure}
 
-An one-dimensional (1D) probability density function ($pdf$) is used for fitting the timing model, as shown in Fig.~\ref{fig:MPW_timingPDF}. This $pdf$ serves as the model of the triggered PMT timing response to an event for the fitting. It was taken from the bench-top measurement of the individual PMT timing profile from SNO\cite{jillings1996photomultiplier} and was further tuned according to the measured $in-situ$ SNO+ detector responses to the calibration sources\cite{anderson2021optical}.
+An one-dimensional (1D) probability density function ($pdf$) is used for fitting the timing model, as shown in Fig.~\ref{fig:MPW_timingPDF}. This $pdf$ serves as a model of the timing responses of the triggered PMTs to an event to be fit. It was taken from the bench-top measurement of the individual PMT timing profile from SNO\cite{jillings1996photomultiplier} and was further tuned according to the measured $in-situ$ SNO+ detector responses to the calibration sources\cite{anderson2021optical}.
 
 \begin{figure}[!htb]
 	\centering
@@ -65,60 +71,41 @@ For a trial vertex $(\vec{X}_0,t_0)$, the fitter calculates a $t_{res}$ value wi
 \end{equation}
 where $t^i_{res}$ is the time residual calculated from the $i^{th}$ hit PMT; $\mathrm{Nhits}$ is the total number of the hit PMTs triggered by an event and $P(t^i_{res})$ is the probability returned by reading the $pdf$ when given a $t^i_{res}$ for the $i^{th}$ hit PMT.
 
-Therefore, the likelihood function starts with a random ($\vec{X}_0,t_0$) as a seed and calculates the likelihoods and their derivatives for various paths assuming straight line paths of the prompt Cherenkov light from the trial vertex $(\vec{X}_0,t_0)$ to each of the hit PMTs. The trial vertex, containing four parameters $x,y,z,t$, is varied until the likelihood function is maximized and the best-fit vertex is found.
+Therefore, the likelihood function starts with a random ($\vec{X}_0,t_0$) as a seed and calculates the likelihoods and their derivatives for various paths assuming straight line paths of the prompt Cherenkov light from the trial vertex $(\vec{X}_0,t_0)$ to each of the hit PMTs. The trial vertex is varied until the likelihood function reaches the global maximum when the best-fit vertex is found.
 
-This fitting procedure is processed by the Levenberg-Marquardt method, which is commonly used for fitting the nonlinear model with multiple parameters. This method is described in details in \ref{appendix:MRQ} and its applications for the \texttt{MP fitter} framework is also described. Also see \cite{gregory2005bayesian, press2007numerical} for details.
+This fitting scheme is tackled by the Levenberg-Marquardt (MRQ) method, which is commonly used for fitting the nonlinear model with multiple parameters. This method is described in details in \ref{appendix:MRQ} and its applications for the \texttt{MP fitter} framework is also described. Also see \cite{gregory2005bayesian, press2007numerical} for details.
 
-As will be shown in the following sections, one of the main tasks for the fitter is to calculate the $t_{transit}$ by evaluating light paths. In the water phase, photons created in an event were considered as traveling along straight line paths and these paths are always in the water, i.e., the paths inside the AV or other detector components were not taken into account. In the other situations, for example, when the acrylic vessel is filled with the wavelength shifter or scintillator, the light path calculations will be modified.   
+As will be shown in the following sections, one of the main tasks for the fitter is to calculate the $t_{transit}$ by evaluating light paths. In the water phase, both of the AV and cavity were filled with the same ultra-pure water, which is the simplest situation. While in the other situations when the AV is filled with the wavelength shifter or scintillator, since they are different materials with the cavity water, the light path calculations will be complicated.
 
-Fig.~\ref{mpwdiagram} shows the reconstruction concepts for position and direction.
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[t]{0.45\textwidth}
-		\centering
-		\includegraphics[width=5cm]{mpwDiagram.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.4\textwidth}
-		\centering
-		\includegraphics[width=5cm]{mpwDiagram2.png}
-	\end{minipage}
-	\caption{Diagrams of position (left) and direction (right) reconstruction in SNO+ water phase.}
-	\label{mpwdiagram}
-\end{figure}
-
-\subsection{Direction Reconstruction}
+\subsection{Direction Reconstruction}\label{sect:waterDirection}
 A direction vector $\vec{u}$ can be determined by two parameters: the zenith angle $\theta$ and the azimuth angle $\phi$. Then in the Cartesian coordinate system, it can be written as: 
 \begin{equation}
 \vec{u}=(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta).
 \end{equation}
 
-Similar to the vertex reconstruction, a random trial direction $\vec{u}_0$ is generated by using \texttt{CLHEP}, see \ref{appendix:random_gen}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=6cm]{mpwDiagram2.png}
+	\caption{Diagrams of position in the SNO+ water phase geometry.}
+	\label{mpwdiagram_direction}
+\end{figure}
+To fit for the direction with 2 parameters: $\theta$ and $\phi$, similar to the vertex reconstruction, a random trial direction $\vec{u}_0(\phi_0,\theta_0)$ is generated by using \texttt{CLHEP}, see \ref{appendix:random_gen}. The direction fitter then evaluates an angular parameter, $\cos\theta_{\mathrm{Ch}}$, which is the angle between $\vec{u}_{0}$ and $\vec{X}_{{\mathrm{diff}}}\equiv \vec{X}_{event}-\vec{X}_{PMT}$. Therefore, the direction fitter requires an event position as the input and it goes after the vertex fitter\footnote{It has been discussed that, instead of going into two steps, the vertex and direction can be fit simultaneously by utilizing the MRQ algorithm for fitting 6 parameters ($x,y,z,t,\theta,\phi$). However, it shows that the results were worse by using this method.}.
+
+An 1D $pdf$ is used for fitting the angular model, as shown in Fig.~\ref{fig:MPW_angularPDF}. This $pdf$ serves as a model of the angular distributions of the triggered PMTs to an event to be fit. It was obtained from the simulations of 5 MeV $e^-$ events generated at the detector center, i.e., $\vec{X}_{mc}=(0,0,0)$ and traveling along the +x direction, i.e., $\vec{u}_{mc}=(1,0,0)$\footnote{Here 5 MeV is a typical energy for the SNO+ water phase analysis. It also shows that, using the $pdf$s generated by the similar setting but with different $e^-$ energies does minor effect on the reconstruction results.}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{MPW_angularPDF.pdf}
 	\caption{PMT angular distribution as the angular response $pdf$ for direction reconstruction.}
-	\label{MPW_angularPDF}
+	\label{fig:MPW_angularPDF}
 \end{figure}
 
-
-For the direction reconstruction, the quantity for fitting the $pdf$ is $\cos\theta_{\mathrm{Ch}}$, the angle between $\vec{u}_{0}$ and $\vec{X}_{{\mathrm{diffCh}}}$. For the $i^{th}$ hit PMT, $\cos\theta^i_{\mathrm{Ch}}=\vec{u}_0\cdot\frac{\vec{X}^i_{{\mathrm{diffCh}}}}{|\vec{X}^i_{{\mathrm{diffCh}}}|}$, then the likelihood function is built as:
+For the $i^{th}$ hit PMT, $\cos\theta^i_{\mathrm{Ch}}=\vec{u}_0\cdot\frac{\vec{X}^i_{{\mathrm{diff}}}}{|\vec{X}^i_{{\mathrm{diff}}}|}$, then the likelihood function is built as:
 \begin{equation}
-L(\vec{u}_0)=\sum_{i=1}^{{\mathrm{Nhits}}}L_i(\cos\theta_{\mathrm{Ch}}^i),
+\ln L(\vec{u}_0)=\sum_{i=1}^{{\mathrm{Nhits}}}L_i(\cos\theta_{\mathrm{Ch}}^i),
 \end{equation}
 
-The derivatives have explicit mathematical forms:
-\[
-\frac{\partial L}{\partial\theta}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{\partial\theta}
-=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\theta}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|},
-\]
-where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$ and 
-\[
-\frac{\partial　L}{\partial\phi}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{d\phi}
-=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\phi}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|},
-\] where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. $\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}$ can be calculated numerically from the PMT angular response pdf.
-
-In the FitterWaterDirection class, it starts with a random ($\theta_0,\phi_0$) as seed and calculates the likelihoods and their derivatives for various paths. These values are sent to the Multi-path Fitter, which is now fitting 2 parameters: ($\theta,\phi$) and to maximize the likelihood function through the MRQ method and to find the best-fit directions.
+Finally, the fitter fits for the angular $pdf$ by using the MRQ method to obtain the best-fit direction.
 
 \subsection{Effective Group Velocity}\label{sect:tuneGroupVelocity}
 When photons travel through the detector, their group velocities change with different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons as $v_g=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive indices as a function of wavelength, obtained from the measurements of laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. Furthermore, the group velocities can change when these photons are scattered, absorbed, refracted and reflected. To simplify these complicated situations for the reconstruction, an averaged value of the group velocity is used in the straight line light path calculation. This fixed group velocity is considered as an effective value.
@@ -170,7 +157,7 @@ For a more precise approach, a set of laserball calibration runs which  to measu
  
 For the scintillator and partial-fill phase vertex fitters, I adopt a linear interpolation method described in \cite{coulter2013modelling}, which will be discussed in section \ref{sect:scintFitter}.
 
-\subsection{Fitter Pull and Drive Correction}
+\subsection{Fitter Pull and Drive Correction}\label{sect:fitterPull}
 
 An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The distribution of $(\vec{x}_{fit}-\vec{x}_mc)/|\vec{x}_{fit}-\vec{x}_mc|\cdot \vec{u}$ shows a large peak at +1, which indicates that the fitted position $\vec{x}$ is prone to be pulled forward from the true position systematically along the event direction$\vec{u}$\cite{driveCorPeter,brice1996monte,coulter2013modelling}. 
 
@@ -224,10 +211,9 @@ Electron events with various energies were generated at the detector center and 
 	\label{drivecorVsEnergy}
 \end{figure}
 
-
 By fitting the simulations of 5 MeV electrons generated at the detector center and traveling along +x direction, the drive effct of the MPW fitter causes a $\sim$50 mm biases from the detector center along +x axis. The drive correction reduces this drive bias down to $\sim$0.2 mm. For the reconstruction of $^{16}$N data, the drive correction can reduce the fitted position RMS by $\sim$20 mm.
 
-\section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}
+\section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}\label{sect:WLSfitter}
 A reconstruction algorithm was developed to investigate the proposal for the water-based wavelength-shifter, as mentioned in \ref{sect:wbWLS}.
 
 Figure~\ref{pmt_wls} shows the position distributions of hit PMTs for MC simulated 5 MeV electrons traveling along $+x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water plus 0.1 ppm PPO. For the same electrons, the number of hit PMTs ($\mathrm{NHits}$) in wbWLS is about 2.4 times greater than the pure water one. Although there is extra isotropic light emitted, the Cherenkov ring can still be seen clearly, allowing reconstruction of the directionality.  
@@ -329,7 +315,7 @@ $(\vec{l}_0-\vec{O}_{av})^2 = r^2_{av}$.
 
 Let $\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av}$, if $\Delta>0$, solve the equation and get:
 \begin{equation}\label{eq:ray-sphere}
-a_{+,-} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if~\Delta>0.
+a_{\pm} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta},~if~\Delta>0.
 \end{equation}
 In this case, both $a_+$ and $a_-$ exist and have different values. If $a_+>a_->0$, the length of the path inside the sphere is $a_+-a_-$, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_{AV}$ is automatically met. If $a_+>0>a_-$, $a_-$ determines the intersection point along the opposite direction of the light ray. Thus the light ray actually does not pass that point (different to the line intersection with no direction). Thus the length of the path inside the sphere is $a_+$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0|<r_{AV}$ is automatically met. 
 
@@ -381,7 +367,7 @@ and thus the time residual, $t_{res}$ is calculated.
 	\label{partialpdf}
 \end{figure}
 
-If $d_{sp}=0$, the light path is always in the water. In this case, the fitter is the same as the MP Water Fitter. The fitter fits with the MP Water Fitter pdf. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing pdf, the PMT time response modified to photon propagation time in scintillator, as shown in Fig.~\ref{partialpdf}.
+If $d_{sp}=0$, the light path is always in the water. In this case, the fitter is same to the \texttt{MP water fitter}. The fitter fits with the \texttt{MP water fitter} $pdf$. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing pdf, the PMT time response modified to photon propagation time in scintillator, as shown in Fig.~\ref{partialpdf}.
 
 \begin{figure}[htbp]
 	\centering
@@ -622,51 +608,34 @@ water level
 
 The $pdf$ can be expanded and fit with Chebyshev polynomials to obtain an analytic approximation function\cite{press2007numerical}. This analytical function can give proper analytical derivatives.
 
-\subsection{Multi-path Fitter Structure}
-The Multi-path fitter has already been implemented into the RAT software and being used in data processing and analyzing.
+\section{Multi-path Fitter Structure for Multiple SNO+ Physics Phases}
+The \texttt{MP fitter} has already been implemented into the \texttt{RAT} software for data processing and analyzing. Following the \texttt{RAT} event reconstruction structure, the \texttt{MP fitter} is feasible to tackle with multiple SNO+ physics phases. 
 
-The MP fitter structure consists of: 
-\begin{itemize}
-	\item[$\bullet$] Fitter database
+The \texttt{MP fitter} first loads the fitter data base. The database contains the parameters used by the fitter, including the physics constants (e.g., speed of light), detector geometry parameters (e.g., $r_{PSUP}=8390~mm$), fitter setting parameters (e.g., the effective group velocity, fitter iteration number, etc.) and $pdf$s. It is included in the \texttt{RAT} database (ratdb) in a \texttt{JSON} format\cite{JSONwiki} and contains tables which are tagged by different indices to indicate specific physics phases or detection medium. For example, for the partial-fill phase with a PPO concentration of 0.5 g/L, the fitter extracts the $pdf$s and fitter setting parameters under the index of ``labppo\_0p5\_scintillator''. These fitter setting parameters and $pdf$s were optimized for the 0.5 g/L PPO partial-fill geometry.
+
+Then the \texttt{MP fitter} goes through the event-by-event reconstruction. For a triggered event, it calls PMT selectors and sends the information of the selected PMTs to a \texttt{Likelihood Calculation Class}. Section \ref{sect:PMTselector} will give the details about the PMT selectors. In the \texttt{Likelihood Calculation Class}, there are mainly 4 likelihood calculation functions\footnote{The \texttt{AirWaterVertex} for the early partial water fill test in 2014 and the \texttt{WavelengthShifterVertex} for the conceptual wavelength-shifter test, as mentioned in the previous sections, were not included in the current version of \texttt{RAT} since they are not used in actual physics phases.}: the \texttt{WaterVertex} and \texttt{WaterDirection} for the event vertex and direction reconstruction in the water phase; the \texttt{ScintWaterVertex} for the vertex reconstruction in the partial-fill phase; and the \texttt{ScintVertex} for the vertex reconstruction in scintillator and tellurium-loading phases.
+
+Reading the detector geometry settings as well as the assigned index of detection medium, the fitter selects proper likelihood functions to construct the likelihood functions and to calculate the likelihoods and their derivatives by evaluating fit parameters based on different light path calculations in different detector geometries. The calculated likelihoods and derivatives are sent to the MRQ method class to maximize the likelihood and finds the best-fit values. This method class does not care about how the likelihood functions are constructed and how the likelihoods and derivatives are calculated. 
+
+
+The Likelihood Calculation Class sends back the values of likelihoods and their derivatives, so the 
+
+by applying the MRQ method. 
+
+ to find 
+the best-fit of the likelihood function 
+
+
+
+
+
+
+PMT selectors. Before the reconstruction, a set of PMTs are selected to be used by the fitter based on specific criteria. Detailed descriptions are shown in section \ref{sect:PMTselector}.
 	
-	This database provides parameters used by the fitter, including the physics constants, detector geometry parameters, fit parameters and pdfs. The database is in a JSON format\cite{JSONwiki} and contains multiple tables tagged by indices to indicate different detection media or physics phases. In each table, there are fit parameters and pdfs optimized for the specific scintillator. For example, for the partial-fill phase with a PPO concentration of 0.5 g/L, the fitter will look for the index of ``labppo\_0p5\_scintillator'' and extract the pdfs and fit parameters under that index.  
+ Likelihood Calculation Class. By specifying the detector geometry, the fitter calls the corresponding Likelihood Calculation Class to construct likelihood functions, calculates likelihoods and their derivatives. For the \texttt{MPW fitter}, the fitter goes through two classes in steps: \texttt{WaterPosition} for the vertex reconstruction and \texttt{WaterDirection} for the direction reconstruction, as mentioned in \ref{sect:waterDirection}.
+ 	
+	It stores the likelihood surfaces and derivatives with respect to arrays of trial vertices of the interested events which are designated by event GTIDs in the database. From the likelihood surfaces and derivatives of an interested event, people can evaluate the fit performance of that event by checking whether the fitter finds global or local maximum. 
 	
-	The fit parameters includes the fitter tolerance and the maximum iterations which determine how the fitter converges, 
-	
-	Reflective index (water\_RI, or n$_{water}$), used for effective group velocity ($v_g$ =c/n$_{water}$) calculation. 
-	air refractive index (air\_RI), PSUP radius ($r_{PSUP}=8390~mm$). Offsets
-	boundary settings
-	
-	The \texttt{MPW fitter} currently uses one fixed number for n$_{water}$, rather than a function of wavelengths. The value of n$_{water}$ can be tuned to give the lowest biases of the fitted positions to the Monte Carlo and to give the lowest RMS of fitted results as well. But the effect of n$_{water}$ can also be corrected by the drive correction afterwards. Currently n$_{water}=1.38486$ is obtained by analyzing the time of flight from the \isotope[16]{N} central run-100934 data reconstructed by the \texttt{MPW fitter}. 
-	
-	time offset, position offset, radius cut x, fitting bin-width and steps.
-	
-	- PMT response time (timing) pdf for the position reconstruction, as shown in Fig.~\ref{MPW_timingPDF}. The pdf shown in red line is modified from the measured PMT response time distribution from SNO time and the late light response is forced to be de-weighted (black). The pdf is modified in [-100,-4] ns region to match the time residual spectrum obtained from \isotope[16]{N} central run-100934 (blue).
-	
-	- PMT angular response pdf for the direction reconstruction, as shown in Fig.~\ref{MPW_angularPDF}. It is taken from the Monte Carlo simulation of 5 MeV electrons traverse in the AV with one direction.
-	
-	
-	\item[$\bullet$]  Likelihood Calculation Classes, 
-	Constructs likelihood functions, calculates likelihoods and their derivatives. For the \texttt{MPW fitter}, there are two classes: \texttt{WaterPosition} for position reconstruction and \texttt{WaterDirection} for direction reconstruction. The \texttt{WaterPosition} class tackles with 4 parameters $(x,y,z,t)$ and the \texttt{WaterDirection} class tackles with 2 parameters $(\theta,\phi)$. 
-	
-	\item[$\bullet$] Multi-path Fitter
-	
-	Processes the \texttt{MPW fitter} and finds the best-fit of the likelihood function. It is a general processor and is shared with the fitters using the Multi-path Fitter, including the \texttt{MPW fitter}, \texttt{air-water (AW) fitter}, \texttt{wavelength-shifter (WLS) fitter} and \texttt{scint-water fitter}. It processes a certain fitter by being assigned the fitter name in macro. It processes the fitter event by event: for every triggered event, it first calls PMT selectors (\texttt{ModeCut} or \texttt{StraightTimeResidualCut}) and sends the information of the reduced PMTs to a certain Likelihood Calculation Class for likelihood calculations. The Likelihood Calculation Class sends back the values of likelihoods and their derivatives, so the Multi-path Fitter does not care about how the likelihood functions are constructed and how the likelihoods and derivatives are calculated. Using these values, it constructs an n$\times$n Hessian matrix (n is the number of fitting parameters defined in Likelihood Calculation Class) and uses the Levenberg-Marquardt (MRQ) method to maximize the likelihood and finds the best-fit values. For the MPW, if the likelihood maxima is found 5 times for any position and direction then values are returned as the fitted position and direction. For the MPW case, it calls the \texttt{ModeCut} and fits for the position and time; then it calls the \texttt{StraightTimeResidualCut} and fits for the directions.
-	
-	\item[$\bullet$] Dump Likelihood
-	
-	This is a function inside the Multi-path Fitter. It stores the likelihood surfaces and derivatives with respect to arrays of trial vertices of the interested events which are designated by event GTIDs in the database. From the likelihood surfaces and derivatives of an interested event, people can evaluate the fit performance of that event by checking whether the fitter finds global or local maximum. 
-	
-	\item[$\bullet$] \texttt{SDecompQRH}
-	
-	This s a fit method class modified from \texttt{ROOT TDecompQRH} class\cite{TDecompQRH}. It is used by the Multi-path fitter to invert the Hessian matrix through QR decomposition method\cite{press2007numerical}. Compared to ROOT, Solve() for Ax=b is modified to zero the component of x for which the diagonal element in R is small. This allows a Levenberg-Marquardt optimization to continue in many cases
-	when the matrix is singular. For the MPW case, it is used to invert a 4$\times$4 matrix of the \texttt{WaterPosition} Class while the inversion of $2\times2$ matrix of the \texttt{WaterDirection} is calculated directly\cite{waterunidoc}.
-	
-	\item[$\bullet$] PMT selectors
-	
-	Detailed descriptions are shown in section \ref{sect:PMTselector}.
-	
-\end{itemize}
 
 \section{PMT Selectors for the Reconstruction}\label{sect:PMTselector}
 Several PMT selectors are used to select or remove PMTs from all the recorded PMTs triggered by an event and send the proper PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
@@ -674,7 +643,7 @@ Several PMT selectors are used to select or remove PMTs from all the recorded PM
 \begin{itemize}
 	\item[$\bullet$] Straight Light Path Time Residual Cut Selector
 	
-	This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time residual ($t_{res}$) is calculated for each hit PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
+	This selector is used for the direction reconstruction for the SNO+ water phase. It is first developed by Singh for the MultiPath fitter. In the selector, the value of time resifal ($t_{res}$) is calculated for each hit PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using straight line light path, which is the same to the MultiPath water fitter. This can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light) and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
 	
 	\item[$\bullet$] Mode Cut Selector
 	

@@ -5,7 +5,7 @@ The SNO+ water phase data were taken from May 2017 to September 2018. The period
  
 In this chapter, I applied the MPW reconstruction algorithm described in Chapter 4 as a position and direction fitter to the raw dataset as well as the run-by-run MC simulations. The fitted event vertex was used by the energy fitter developed by the SNO+ collaboration.  
 
-First, the open dataset taken in 2017 was used to test the MPW results, compared to the official RAT results. A quantity called ``Kullback–Leibler Divergence'' was developed to evaluate the Cherenkov signals. After that, I mainly analyzed the low background dataset. I used sub datasets of the run-by-run MC simulations to evaluate the ability of separating the solar $\nu_e$ signals from the backgrounds. The Toolkit for Multivariate Data Analysis with ROOT (TMVA) package \cite{tmvaWebsite,albertsson2007tmva} was used to train and test on the MC simulations to obtain optimized discriminants. These optimized discriminants were applied on the whole dataset to remove the backgrounds.
+First, the open dataset taken in 2017 was used to test the \texttt{MPW} results, compared to the official RAT results. A quantity called ``Kullback–Leibler Divergence'' was developed to evaluate the Cherenkov signals. After that, I mainly analyzed the low background dataset. I used sub datasets of the run-by-run MC simulations to evaluate the ability of separating the solar $\nu_e$ signals from the backgrounds. The Toolkit for Multivariate Data Analysis with ROOT (\texttt{TMVA}) package \cite{tmvaWebsite,albertsson2007tmva} was used to train and test on the MC simulations to obtain optimized discriminants. These optimized discriminants were applied on the whole dataset to remove the backgrounds.
 
 The outputs from the data were fitted to obtain the number of signal events and the background events. Ensemble tests were performed on fake datasets to check the fit pull and bias. The systematics obtained from the $^{16}$N calibration in Chapter 5 were applied on the results. Finally, the solar $\nu_e$ interaction rates and the $^8$B solar neutrino flux were evaluated.
 
@@ -18,8 +18,7 @@ The outputs from the data were fitted to obtain the number of signal events and 
 \section{Detector Backgrounds}
 
 \subsection{Physics Backgrounds}
-As mentioned in Chapter 2, \ref{sect:overview}, since the depth of the SNO+, the cosmogenic backgrounds induced by the cosmic muons are very few.  
-Most backgrounds come from radioactive isotopes inside or around the detector, mostly from the $\beta$-decays of $^{214}$Bi and $^{208}$Tl. Table. is a summary of the $\beta$-decays from these two isotopes. 
+As mentioned in Chapter 2, \ref{sect:overview}, since the depth of the SNO+, the cosmogenic backgrounds induced by the cosmic muons are very few. Most backgrounds come from radioactive isotopes inside or around the detector, mostly from the $\beta$-decays of $^{214}$Bi and $^{208}$Tl. Table. is a summary of the $\beta$-decays from these two isotopes. 
 
 Data taken from \cite{nndc}.
 
@@ -718,7 +717,7 @@ To fit for the flux,
 %	\end{tabular*}
 %\end{table}
 
-For a nominal $^8B$ solar neutrino flux $\Phi_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the flux is estimated to be $\Phi_{ES}=\Phi_{MC}\cdot N_{fit,sig}=1.96\pm0.20\times 10^6~cm^{-2}s^{-1}$, compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-2}s^{-1}$ and the SNO+ 2018 published results: $\Phi_{ES}=2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6~cm^{-2}s^{-1}$.
+For a nominal $^8$B solar neutrino flux $\Phi_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the flux is estimated to be $\Phi_{ES}=\Phi_{MC}\cdot N_{fit,sig}=1.96\pm0.20\times 10^6~cm^{-2}s^{-1}$, compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-2}s^{-1}$ and the SNO+ 2018 published results: $\Phi_{ES}=2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6~cm^{-2}s^{-1}$.
 
 Fig.~\ref{fig:fluxVsE} shows the flux as a function of energies. A $P_{ee}$ curve obtained from the \texttt{RAT} was overlay with the spectrum.
 
