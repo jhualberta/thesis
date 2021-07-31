@@ -55,7 +55,13 @@ neutral-current, the neutral vector boson $Z^0$
 
 
 neutrino-electron elastic scattering ($\nu e^-$ ES)
-$\overline\nu_x + e^{-}\to\nu_x+e^-$
+\begin{equation}
+\nu_x + e^{-}\to\nu_x+e^-,
+\end{equation}
+is sensitive to all neutrino flavors, but $\nu_e$ has channels of (a) and (b)
+
+the cross-section is 6.5 times larger than the $\nu_{\mu,\tau}$.
+
 
 In a particle detector, the electron is usually from the atom of detection medium. 
 
@@ -72,11 +78,20 @@ T_e = \frac{2m_eE_\nu^2\cos^\theta}{(m_e+E_\nu)^2-E_\nu^2\cos^2\theta},
 \end{equation}
 where the scattering angle $\theta$ is between the incoming neutrino direction and the outgoing electron direction.
 
+conservation of momentum
+
+For the solar neutrinos, the momentum of the recoil electrons are strongly pointing away from the Sun.
+\begin{figure}[htbp]
+	\centering	
+	\includegraphics[width=6cm]{ElasticScatteringCartoon.png}
+	\caption{A diagram of the $\nu e^-$ elastic scattering in the lab frame.}
+	\label{fig:ESdiagram}
+\end{figure}
 
 %In the next two sections, I will show the two properties which are under the spotlight: neutrinos can change their flavors and they have masses.
 
 \section{Neutrino Flavor Transformation}
-Neutrino flavor transformation is a quantum mechanical interference phenomenon\cite{akhmedov2019quantum}. It was first discovered in 1998, based on the analysis of atmospheric neutrino fluxes measured by the Super-Kamiokande (Super-K) experiment to solve the ``atmospheric neutrino anomaly'' mentioned in the last section\cite{fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the SM is incomplete.
+Neutrino flavor transformation is a quantum mechanical interference phenomenon\cite{akhmedov2019quantum}. It was first discovered in 1998, based on the analysis of atmospheric neutrino fluxes measured by the Super-Kamiokande (Super-K) experiment to solve the ``atmospheric neutrino anomaly'' mentioned in the last section\cite{sect:fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the SM is incomplete.
 
 \subsection{Vacuum Oscillation}\label{sectVacuumOsci}
 For neutrino flavor oscillation experiments, neutrinos are detected in certain flavor eigenstates via weak interaction. A neutrino flavor state vector can be taken as a linear superposition of the mass eigenstates. For three-flavor neutrino mixing, we have\cite{pdg2020}:
@@ -485,7 +500,8 @@ $7.20\times 10^{-5}<\Delta m^2_{12}<7.51\times 10^{-5}$
 
 
 
-\section{Absolute Neutrino Mass}\label{section:directMeasure}
+\section{Neutrino Mass}\label{section:directMeasure}
+
 \subsection{Majorana Neutrinos}\label{section:Majorana}
 A free neutrino with a mass $m$ can be described by a four-component Dirac spinor field following the Dirac equation $(i\gamma^\mu\partial_\mu-m)\psi=0$, where $\partial_\mu\equiv \partial/\partial x^\mu$, and $\gamma^\mu~(\mu=0,1,2,3)$ is a set of $4\times 4$ matrices forming a Clifford algebra which satisfies the following relations\cite{akhmedov2014majorana,zee2010quantum}:
 \begin{equation}\label{eq:clifford}
@@ -493,9 +509,27 @@ A free neutrino with a mass $m$ can be described by a four-component Dirac spino
 \end{equation}
 where $\eta^{\mu\nu}=diag(1,-1,-1,-1)$ is the Minkowski metric. From \ref{eq:clifford} we can deduce $(\gamma^0)^2=+1$, $(\gamma^i)^2=-1~(i=1,2,3)$ and $\gamma^0\gamma^{\mu\dag}\gamma^0=\gamma^\mu$. The product of the four gamma matrices is defined as $\gamma_5\equiv i\gamma^0\gamma^1\gamma^2\gamma^3$, which satisfies $\{\gamma_5,\gamma^\mu\}=0$ and $(\gamma_5)^2=1$. From $\gamma_5$, we can define the left-handed and right-handed chirality projector operators: $P_L\equiv\frac{1}{2}(1-\gamma_5)$ and $P_R\equiv\frac{1}{2}(1+\gamma_5)$.
 
-In the SM, neutrinos are fermions without carrying electrical charges and they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why neutrinos are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
+In the SM, neutrinos are fermions without carrying electrical charges. A conjecture raised up is that they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why neutrinos are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
 
-From a viewpoint of mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Then the Dirac equation can be switched to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion\cite{zee2010quantum}. 
+Based on mathematical aesthetics, Ettore Majorana found a representation which makes all the $\gamma$ matrices be pure imaginary so that the Dirac equation gets rid of complex coefficients\cite{majorana2006symmetric}. Then the Dirac equation is transformed to the Majorana equation: $i\gamma^\mu\partial_\mu\psi-m\psi^c=0$, which also satisfies the Lorentz invariance\cite{zee2010quantum}. Since $\psi$ and $\psi^c$ have opposite charges, this equation should describe a neutral fermion\cite{zee2010quantum}. 
+
+The Lagrangian density constructed from the Dirac equation is $\mathcal{L}_D = \bar\psi(i\gamma^\mu\partial_\mu-m)\psi$, where $\bar{\psi}\equiv \psi^{\dag}\gamma^0$ is an adjoint field. The Dirac spinor field $\psi$ can be decomposed into left and right handed fields: $\psi=\psi_L+\psi_R\equiv P_L\psi+P_R\psi$. With $\overline{\psi_L}\psi_L=\overline{\psi_R}\psi_R=0$ the Dirac Lagrangian density which satisfies the Lorentz invariance and is hermitian can be written as\cite{zee2010quantum}:
+\begin{equation}\label{diracLagrange}
+\mathcal{L}_D = (\overline{\psi_L} i\gamma^\mu\partial_\mu\psi_L+\overline{{\psi}_R} i\gamma^\mu\partial_\mu\psi_R)-m(\overline{{\psi}_R}\psi_L+\overline{{\psi}_L}\psi_R),
+\end{equation} 
+where the first two terms on the right hand side are kinetic energy terms with separated chiral components; the last two terms are the Dirac mass term $\mathcal{L}^{D}_{mass}$ with coupled chiral components. For the massive Dirac fields, the left-handed component $\psi_L$ is completely independent of the right-handed $\psi_R$. 
+
+A particle-antiparticle conjugation operator $\hat C$ can associate the $\psi_L$ with the $\psi_R$. It is defined as\cite{akhmedov2014majorana}:
+\begin{equation}
+\hat C: \psi\to \psi^c=\mathcal{C}\bar\psi^T=\mathcal{C}\gamma^0\psi^*,
+\end{equation}
+where $\mathcal C$ is the charge conjugation matrix and satisfies the following relations:
+\begin{equation}
+\mathcal C^{-1}\gamma^\mu\mathcal C=-(\gamma^\mu)^T,~~\mathcal{C}^{-1}\gamma_5\mathcal{C}=(\gamma_5)^T,~~\mathcal{C}^\dagger = \mathcal{C}^{-1}=-\mathcal{C}^*
+\end{equation}
+
+In the Weyl representation, $\mathcal{C}=i\gamma^2\gamma^0$, then $\mathcal {C}^2=1$, $(\psi^c)^c=\psi$, $(\psi_L)^c=P_R\psi^c=(\psi^c)_R$ and $(\psi_R)^c=P_L\psi^c=(\psi^c)_L$. Therefore the particle-antiparticle operation $\hat C$ conver
+
 
 %Unlike the Dirac case, for a Majorana field $\psi^M$, the $\psi^M_L$ and $\psi^M_R$ are not independent. The right-handed component can be the charge conjugate of the left-handed component (or vice versa): $\psi_R=(\psi_L)^c$\cite{akhmedov2014majorana}. Therefore Majorana field can be written as: $\psi^M=\psi_L^M+\psi_R^M=\psi^M_L+(\psi^M_L)^c=\psi^M_L+((\psi^M)^c)_R$, which immediately gives $(\psi^M)^c=\psi^M$. This equation is called the Majorana condition. The result implies that the particles associated with the Majorana fields, or the Majorana fermions, are their own antiparticles and ``truly neutral''\cite{akhmedov2014majorana}. Also, the Majorana equation preserves the handedness\cite{zee2010quantum}. Since the $\psi^M_L$ and $\psi^M_R$ are not independent and can be constructed by each other, the Majorana spinor $\psi^M$ only has two degrees of freedom compared to the Dirac spinor which has four degrees of freedom. These facts indicate that the Majorana fermion theory is more economical than the Dirac one and it is also tailored for describing neutrinos. More naturally, neutrinos are of Majorana nature.
 
@@ -631,17 +665,10 @@ As a summary, to explain how the neutrinos acquire their masses, New Physics the
 
 
 
-The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses: (1) cosmological measurements; (2) direct measurements for the $\beta$-decay spectrum; (3) a search for the $0\nu\beta\beta$ process\cite{valle2015neutrinos}. 
-
-\subsection{Cosmological Approach}
-Neutrinos play an important role in the formation and evolution of the universe. The massive neutrinos can leave imprints on cosmological observables, such as the anisotropies of the Cosmic Microwave Background (CMB) temperature spectra, the matter power spectrum from the large-scale structure and the Baryon Acoustic Oscillations (BAO)\cite{dvorkin2019neutrino,gerbino2018status}. Combining the CMB data from the Planck space observatory (updated to 2018 results) with the BAO measurements, a tight 95\% constraint on the sum of the masses of the three active types of neutrinos is obtained as: $\sum m_\nu<0.12~eV$\cite{aghanim2020planck}. Currently, the cosmological approaches provide the strongest upper limit of the sum of neutrino masses\cite{dvorkin2019neutrino}.
+The results from the neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses\cite{valle2015neutrinos}: (1) cosmological measurements\cite{dvorkin2019neutrino,gerbino2018status,aghanim2020planck}; (2) direct measurements of the $\beta$-decay spectrum; (3) a search for the $0\nu\beta\beta$ process. 
 
 \subsection{Beta Decay}
-In a $\beta$-decay process: $(Z,A)\to (Z+1,A)+e^-+\bar{\nu}_e$, parent nuclei with the nucleon number A and the proton number Z decay into daughter nuclei and electrons. The energy difference between the initial and final state nuclei is 
-
-the sum of the emitted electrons $e^-$ (called the $\beta$-electron ) energy $E_e$, 
-
-the antineutrino $\bar{\nu}_e$ energy $E_\nu$ and the nuclear recoil energy $E_R$: $Q=E_e+E_\nu+E_R$. If considering the initial and final nuclei are at rest and $E_R$ is negligible, due to the presence of $E_\nu$, $E_e$ can range from 0 to the maximal energy $E_0=Q$ (called the end-point energy). For the $\beta$-electron with a rest mass $m_e$, the kinetic energy $T_e=E_e-m_e$ (taking the natural unit $\hbar=c=1$) and the momentum $p_e=\sqrt{E^2+2Em_e}$. Then by using the Fermi's Golden Rule, the differential $\beta^-$-decay spectrum of $T_e$ is given by\cite{rottele2019tritium}:
+In a $\beta$-decay process: $(Z,A)\to (Z+1,A)+e^-+\bar{\nu}_e$, parent nuclei with the nucleon number A and the proton number Z decay into daughter nuclei and electrons. By using the Fermi's Golden Rule, the differential $\beta^-$-decay spectrum of $T_e$ is given by\cite{rottele2019tritium}:
 \begin{equation}\label{eq:beta-decay}
 \begin{aligned}
 \frac{d^2N}{dtdT_e} = \frac{G_F^2\cos^2\theta_C|\mathcal{M}_{nucl}|^2}{2\pi^3} &\cdot F(Z+1,T_e)\cdot(T_e+m_e)\cdot p_e\cdot (E_0-T_e)\\
@@ -650,6 +677,13 @@ the antineutrino $\bar{\nu}_e$ energy $E_\nu$ and the nuclear recoil energy $E_R
 \end{aligned}
 \end{equation}
 where $G_F$ is the Fermi constant; $\theta_C$ is the Cabibbo angle; $\mathcal{M}_{nucl}$ is the nuclear matrix element (NME); $F(Z,E)$ is the Fermi function describing the electromagnetic interaction between the $\beta$-electron and the final-state nucleus; and the Heaviside step function $\Theta$ ensures that a neutrino can only be emitted if enough energy is left for its mass.
+
+The energy difference between the initial and final state nuclei is 
+
+the sum of the emitted electrons $e^-$ (called the $\beta$-electron ) energy $E_e$, 
+
+the antineutrino $\bar{\nu}_e$ energy $E_\nu$ and the nuclear recoil energy $E_R$: $Q=E_e+E_\nu+E_R$. If considering the initial and final nuclei are at rest and $E_R$ is negligible, due to the presence of $E_\nu$, $E_e$ can range from 0 to the maximal energy $E_0=Q$ (called the end-point energy). For the $\beta$-electron with a rest mass $m_e$, the kinetic energy $T_e=E_e-m_e$ (taking the natural unit $\hbar=c=1$) and the momentum $p_e=\sqrt{E^2+2Em_e}$. 
+
 
 In this spectrum, $m^2_{\bar{\nu}_e}$, the square of the $\bar{\nu}_e$ rest mass is the measurement observable. It can be evaluated by measuring the $\beta$-decay event rate\cite{rottele2019tritium}.
 
@@ -776,20 +810,6 @@ By measuring this distinct energy peak, a detector with high energy resolution c
 	\label{te130energy}
 \end{figure}
 
-\subsubsection{Status of Double Beta Decay Experiments}
-
-There are 35 isotopes can undergo the double beta decay process, but only a few of them are suitable for the application in direct $0\nu\beta\beta$ search experiments\cite{giunti2007fundamentals}. From the experimental view, the candidate isotopes are expected to have relatively high natural abundances, high Q-values, be deployed in a large amount with low costs, and are not toxic to the environment as well. However, in a realistic situation, no isotope fulfills all these properties, and the current experiments making trade-offs\cite{dolinski2019neutrinoless}.
-
-The experiments searching for direct signals of $0\nu\beta\beta$ mainly measure the physics properties of the two emitted electrons, such as their energies, momentum, and tracks. 
-
-Inhomogeneous experiments use external $\beta\beta$ source
-while homogeneous experiments use $\beta\beta$ source as the detection medium, which are mainly referred as calorimeter experiments\cite{cremonesi2014challenges,shimizu2019double}.
-
-
-Experiments mainly focus on the isotopes of $^{136}$Xe, $^{48}$Ca, $^{76}$Ge and $^{130}$Te.
-
-%At the time of writing, 
-
 The signal of $0\nu\beta\beta$ in the range of $10^{25}-10^{26}$ year,
 
 The observed number of event in expectation is: 
@@ -798,36 +818,56 @@ N_{event} = \ln 2 \frac{N_A}{M_A}\frac{\alpha\cdot\epsilon\cdot m\cdot t}{T^{0\n
 \]
 
 where $N_A$ is the Avogadro's number, $\alpha$ is the abundance of the isotope in the element, 
-$M$ is the molar mass of the isotope
-and $t$ is the measurement time of total exposure.
-
-The GERmanium Detector Array (GERDA) experiment searches for $0\nu\beta\beta$ of $^{76}$Ge. The experiment uses bare germanium crystals with enrichment of up to $\sim$87\% $^{76}$Ge operated in a radiopure cryogenic liquid argon (LAr)\cite{agostini2016search}. GERDA Phase I had an exposure of 21.6 kg$\cdot$yr and Phase-II started with 35.6kg from enriched material in December 2015. With combined data of Phase I and Phase II, a total exposure of 82.4 kg$\cdot$yr has been measured.
-
-In 2017, GERDA reported a 90\% confidence level (C.L.) lower limit for the half-life of $^{76}$Ge, $T^{0\nu}_{1/2}(^{76}$Ge$)>8.0\times 10^{25}$ years.
-
-GERDA reported in 2019 a lower limit half-life of $T^{0\nu}_{1/2}(^{76}$Ge$)>0.9\times 10^{26}$ years at 90\% C.L.\cite{agostini2019probing}. effective $m_{ee}$ is [104,228]~meV.
-
-A new experiment, the Large Enriched Germanium Experiment for Neutrinoless Double-Beta Decay (LEGEND) will 
+$M$ is the molar mass of the isotope and $t$ is the measurement time of total exposure.
 
 
 
-Building on the successes of the MAJORANA DEMONSTRATOR and GERDA,
+\subsubsection{Status of Double Beta Decay Experiments}
 
+There are 35 isotopes can undergo the double beta decay process, but only a few of them are suitable for the application in direct $0\nu\beta\beta$ search experiments\cite{giunti2007fundamentals}. From the experimental view, the candidate isotopes are expected to have relatively high natural abundances, high Q-values, be deployed in a large amount with low costs, not toxic to the environment, and etc. However, in a realistic situation, no isotope fulfills all these properties, and trade-offs have to be made for the current experiments\cite{dolinski2019neutrinoless}. The experiments discussed below are using the $^{76}$Ge, $^{136}$Xe and $^{130}$Te isotopes.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{Te_abundance.png}
+	\caption{Natural abundance vs. Q-values for different $2\nu\beta\beta$ isotopes\cite{snop_nim}.}
+	\label{te_abundance}
+\end{figure}
+
+searching for direct signals of $0\nu\beta\beta$ mainly measure the physics properties of the two emitted electrons, such as their energies, momentum, and tracks. 
+
+\begin{itemize}
+	\item  $^{76}$Ge
+
+The GERmanium Detector Array (GERDA) experiment is located at Gran Sasso National Laboratories (LNGS). It uses bare germanium crystals with enrichment of up to $\sim$87\% $^{76}$Ge operated in a radiopure cryogenic liquid argon (LAr)\cite{agostini2016search}. GERDA Phase I had an exposure of 21.6 kg$\cdot$yr and Phase-II started with 35.6kg from enriched material in December 2015. With combined data of Phase I and Phase II, a total exposure of 82.4 kg$\cdot$yr has been measured.
+
+In 2019, GERDA reported a lower limit half-life of $T^{0\nu}_{1/2}(^{76}$Ge$)>0.9\times 10^{26}$ years at 90\% C.L. with an effective $m_{ee}$ in [104,228]~meV\cite{agostini2019probing}.
+
+Based on the experiences from the GERDA and the MAJORANA DEMONSTRATOR experiment, a new experiment, the Large Enriched Germanium Experiment for Neutrinoless Double-Beta Decay (LEGEND) will pursue a tonne-scale by using the Inverted-Coaxial Point Contact (ICPC) detector. It has discovery potentials at a $T_{1/2}^{0\nu\beta\beta}>10^{28}$ years\cite{elliott2019legend}.
+
+\item $^{136}$Xe
+	
 The Enriched Xenon Observatory (EXO) experiment uses 200-kg liquid Xenon (LXe) time projection chamber (TPC) to search for $0\nu\beta\beta$ in $^{136}$Xe. In 2011 they observed the half life of double beta decay of $^{136}$Xe to be $2.11\times 10^{21}$ years and in 2014 they set a limit on $T^{0\nu}_{1/2}(^{136}$Xe$)>1.1\times 10^{25}$ yr\cite{albert2014search}. EXO is now upgrading to the next 5-tonne experiment (nEXO) and is expected to reach an exclusion sensitivity of $T^{0\nu}_{1/2}(^{136}$Xe) to about $10^{28}$ years at 90\% C.L.\cite{albert2018sensitivity}.
 
-Also looking into $^{136}$Xe, the KamLAND-Zen (ZEroNeutrino) experiment exploits the existing facilities of KamLAND by setting a 3.08-m-diameter spherical inner balloon filled with 13 tons of Xe-loaded liquid scintillator at the center of the KamLAND detector.
+The Particle and Astrophysical Xenon Experiment located at China Jinping Underground
+Laboratory also uses a high-pressure gas-phase time projection chamber (TPC) with Microbulk Micromegas, a fine pitch
+micro-pattern gas detector as charge readout to reconstruct $0\nu\beta\beta$ event tracks.
 
-It utilizes liquid scintillator cocktail of 82\% decane and 18\% pseudocumene by volume, 2.7 g/L PPO with a photocathode coverage of 34\%.
+. contain 200 kg, 90\% 136Xe enriched gas operated at 10 bar.
+ultimate sensitivity after 3 years would reach $10^{27}$ years.
+ $m_{0\nu\beta\beta}$ 20 to 50 meV 
+\cite{han2020pandax}.
 
-Their 2016 results from a 504 kg$\cdot$yr exposure obtained a lower limit for the $0\nu\beta\beta$ decay half-life of $T^{0\nu}_{1/2}(^{136}$Xe$)>1.07\times 10^{26}$ yr at 90\% C.L. and the corresponding upper limits on the effective Majorana neutrino mass are in the range $61-165$ meV\cite{gando2016search}.
+The KamLAND-Zen (ZEroNeutrino) experiment exploits the existing facilities of KamLAND by setting a 3.08-m-diameter spherical inner balloon filled with 13 tons of Xe-loaded liquid scintillator at the center of the KamLAND detector. The liquid scintillator is a cocktail of 82\% decane and 18\% pseudocumene by volume, 2.7 g/L PPO with a photocathode coverage of 34\%. Their 2016 results from a 504 kg$\cdot$yr exposure obtained a lower limit for the $0\nu\beta\beta$ decay half-life of $T^{0\nu}_{1/2}(^{136}$Xe$)>1.07\times 10^{26}$ yr at 90\% C.L. and the corresponding upper limits on the effective Majorana neutrino mass are in the range $61-165$ meV\cite{gando2016search}.
 
-The Particle and Astrophysical Xenon Experiment III (PandaX-III) uses a high-pressure gas-phase time projection chamber (TPC).
+\item $^{130}$Te
 
 The Cryogenic Underground Observatory for Rare Events (CUORE) experiment searches for $0\nu\beta\beta$ in $^{130}$Te. CUORE is a ton-scale cryogenic bolometer array that arranges 988 tellurium dioxide (TeO$_2$) crystals. CUORE reported its first results in 2017 after a total TeO$_2$ exposure of 86.3 kg$\cdot$yr. An effective energy resolution of ($7.7\pm 0.5$) keV FWHM and a background count of ($0.014\pm0.002$) $counts/(keV\cdot kg\cdot yr)$ in the ROI were achieved in that data exposure. Combined with the early data (the data from the two precursor experiments, Cuoricino and CUORE-0), they placed a lower limit of $T^{0\nu}_{1/2}(^{130}$Te$)>1.5\times 10^{25}$ yr at 90\% C.L. and $m_{\beta\beta}<(110-520)$ meV\cite{alduino2018first}. In 5 years live time, the experiment will give a projected sensitivity of $9.5\times 10^{25}$ yr at the 90\% C.L. and set an upper limit on the effective Majorana mass in the range $50-130$ meV\cite{piperno2015dark}.
 
-A more recent evaluations of the limits of $T^{0\nu}_{1/2}$ and $m_{\beta\beta}$ from the above mentioned
-current and future experiments are summarized in
+Instead of using Te crystal and cryogenic technology, the SNO+ experiment uses a novel technology by dissolving the Te isotope into liquid scintillator. Details will be discussed in Chapter.~3.
 
+\end{itemize}
+
+A more recent evaluations of the limits of $T^{0\nu}_{1/2}$ and $m_{\beta\beta}$ from the above mentioned current and future experiments are summarized in Table.~\ref{gerdatable}\cite{agostini2017discovery,agostini2019probing}. The values below the double-line are 3$\sigma$ $0\nu\beta\beta$ discovery sensitivities assuming 5 years of live time for planned future experiments.%SNO+ Phase-I and II 
 \begin{table}[ht]
 	\centering
 	\caption{\label{gerdatable} The limits of $T^{0\nu}_{1/2}$ and $m_{\beta\beta}$ at 90\% C.L.}	
@@ -839,30 +879,10 @@ current and future experiments are summarized in
 			GERDA       & $^{76}$Ge & $>$8.0 & $<$0.12-0.26  \\	
 			KamLAND-Zen & $^{136}$Xe & $>$10.7 & $<$0.05-0.16	\\
 			EXO         & $^{136}$Xe & $>$1.1 & $<$0.17-0.49  \\	
-			CUORE       & $^{130}$Te & $>$1.5 &  $<$0.11-0.50 \\	
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
-\vspace{1cm}
-
-Table~\ref{gerdatable}\cite{agostini2017discovery,agostini2019probing} shows 3$\sigma$ $0\nu\beta\beta$ discovery sensitivities assuming 5 years of live time for planned future experiments.%SNO+ Phase-I and II 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{Te_abundance.png}
-	\caption{Natural abundance vs. Q-values for different $2\nu\beta\beta$ isotopes\cite{snop_nim}.}
-	\label{te_abundance}
-\end{figure}
-
-\begin{table}[ht]
-	\caption{\label{newLimits} The limits of $T^{0\nu}_{1/2}$ and $m_{\beta\beta}$ at 90\% C.L.}	
-	{\centering
-		\begin{tabular*}{135mm}{c@{\extracolsep{\fill}}ccccc}
-			\toprule 
-			Experiment & Isotope & $m_{isotope}$ [kg] & $T^{0\nu}_{1/2}$ [$\times 10^{26}$ year] & $m_{\beta\beta}$ [meV]\\
-			\midrule
-			LEGEND 1k & $^{76}$Ge & & 8.4 & 0.04-0.073\\
+			CUORE       & $^{130}$Te & $>$1.5 &  $<$0.11-0.50 \\
+		   \hline		  
+		   \hline
+		    LEGEND-1k & $^{76}$Ge & 8.4 & 0.04-0.073\\
 			KamLAND2-Zen & $^{136}$Xe &8.0 & 10.7 & 0.05-0.16	\\
 			nEXO         & $^{136}$Xe &41.0 & 410 & 0.09-0.022  \\
 			NEXT 1.5k& $^{136}$Xe& 1367 &  7.9 & 21-49\\
@@ -875,3 +895,17 @@ Table~\ref{gerdatable}\cite{agostini2017discovery,agostini2019probing} shows 3$\
 	}
 \end{table}
 \vspace{1cm}
+
+%\begin{table}[ht]
+%	\caption{\label{newLimits} The limits of $T^{0\nu}_{1/2}$ and $m_{\beta\beta}$ at 90\% C.L.}	
+%	{\centering
+%		\begin{tabular*}{135mm}{c@{\extracolsep{\fill}}ccccc}
+%			\toprule 
+%			Experiment & Isotope & $m_{isotope}$ [kg] & $T^{0\nu}_{1/2}$ [$\times 10^{26}$ year] & $m_{\beta\beta}$ [meV]\\
+%			\midrule
+%
+%			\bottomrule	
+%		\end{tabular*}
+%	}
+%\end{table}
+%\vspace{1cm}

@@ -55,7 +55,8 @@ a varying amount added to the current value of parameter for the next iteration.
 
 The main task now is to calculate $\alpha_{kl}$ and $\beta_k$ and then solve for $\delta a_l$ in \ref{eq:6}. Once $\delta a_l$ is solved, we can vary the current trial or approximate values of ${\bf a}_{cur}$ and let it go close to or reach the ${\bf a}_{min}$.
 
-If we consider the method of steepest descent: ${\bf a}_{next}={\bf a}_{cur}-\mathrm{const}\cdot\nabla\chi^2({\bf a}_{cur})$, where $\mathrm{const}$ is a constant, then the $\delta a_l$ is solved by \begin{equation}\label{eq:7}
+If we consider the method of steepest descent: ${\bf a}_{next}={\bf a}_{cur}-\mathrm{const}\cdot\nabla\chi^2({\bf a}_{cur})$, where $\mathrm{const}$ is a constant, then the $\delta a_l$ is solved by: 
+\begin{equation}\label{eq:7}
 \delta a_l=\mathrm{const}\cdot \beta_l, 
 \end{equation}
 where no Hessian matrix is needed.
@@ -113,7 +114,7 @@ Table.~\ref{table:MRQ_params} shows the optimized values of the fitter setting p
 
 A trade-off between the accuracy \& precision of the reconstructed results and the CPU time is considered. If increasing the \texttt{fTolerance} while decreasing the number of \texttt{nGood}, \texttt{fMaxIter} and \texttt{nStart}, the CPU time will decrease at costs of the fitter accuracy \& precision, and vice versa.
 
-\section{Calculations of Derivatives of Likelihood Functions}
+\section{Calculations of Derivatives of Likelihood Functions}\label{appendix:likelihoodCalcu}
 The MRQ method requires the derivatives of the likelihood function. These derivatives can be calculated analytically in explicit mathematical forms.
 
 The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$. Then the $TOF$ for the prompt Cherenkov light is $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
@@ -154,7 +155,7 @@ where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. The deriv
 \section{Inversion of Hessian Matrix}
 Matrix inversion is a frequent calculation when applying the MRQ method. In the \texttt{MP fitter}, the inversion of a $2\times 2$ Hessian matrix (usually used for direction reconstruction with two parameters) is calculated directly. For the higher dimension matrix, usually the $4\times 4$ matrix for vertex reconstruction, a \texttt{SDecompQRH} class is called for calculating the inversion matrix by using QR decomposition method\cite{press2007numerical}. This class was introduced by Jeff Tseng and it was modified from the \texttt{ROOT TDecompQRH} class\cite{TDecompQRH}. Compared to the ROOT version, its \texttt{Solve()} function was slightly modified for solving the matrix equation $Ax=b$, where $A = QR$ is composed of an orthogonal matrix $Q$ and an upper triangular matrix $R$. If the diagonal element in R is too small, instead of returning failure, the modified algorithm simply sets the corresponding x component to be 0. This allows an optimization for the MRQ method to continue in frequent cases when the matrix is singular.
 
-\section{Likelihood Surfaces}
+\section{Likelihood Surfaces}\label{appendix:likelihoodSurface}
 
 Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the \texttt{MP water fitter}, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on $X-Y$, $X-Z$ and $Y-Z$ planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
 
@@ -188,7 +189,7 @@ Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MR
 The following algorithm shows the detailed calculations for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by Latin letters (a, b or c). 
 
 \begin{algorithm}
-	First check the ray-sphere intersection (equation.~\ref{eq:ray-cylinder}):\\
+	First check the ray-sphere intersection (Equation.~\ref{eq:ray-cylinder}):\\
 	If {$\Delta>0$}, 
 	
 	\hspace{2mm}(step. 1a) if $|\vec{x}_0|<r_{AV}$ (and $a_+>0>a_-$), check the ray-plane intersection:
@@ -224,7 +225,7 @@ The following algorithm shows the detailed calculations for evaluating the light
 
 \begin{algorithm}
 	
-	First check the ray-cylinder intersection (equation.~\ref{eq:ray-cylinder}):\\
+	First check the ray-cylinder intersection (Equation.~\ref{eq:ray-cylinder}):\\
 	If {$\Delta_{neck}>0$}, 
 	
 	\hspace{2mm}(step. 1a) if $a'_+a'_-<0$ (event position is inside the cylinder), check the z position of the intersection point on neck, $z_+ = z_0 + a'_+u_z$: 

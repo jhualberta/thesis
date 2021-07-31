@@ -10,7 +10,7 @@ The SNO+ detector is a refurbishment of the SNO detector. The SNO+ collaboration
 The detector consists of an acrylic vessel (AV) sphere of 12.01 m in diameter and 5.5 cm in thickness. The AV contains detection media (or called target materials) and is held in place by a rope net system including hold-up and hold-down Tensylon ropes. This spherical structure is simple in geometry and reduces the complexities of simulation and event reconstruction. Furthermore, this geometry allows for spherical fiducial volume cuts from the center of the AV to further get rid of external backgrounds, which makes the SNO+ as a graded-shield type detector\cite{waterfield2017optical}.
 On the top of the AV sphere, there is an acrylic neck cylinder with 6.8 m high and 1.46 m inner diameter. The neck connects the AV sphere to the facilities on the deck above the detector. Through the neck, pipes can fill the detection media into the AV and recirculate as well. Calibration sources for internal scans can also be lowered down into the AV through the neck.
 
-The AV sphere is concentric within a stainless steel geodesic dome with an average radius of 8.4 m, which is called the photomultiplier support structure (PSUP). 9394 Hamamatsu 8-inch R1408 photomultipliers (PMTs) were mounted on the PSUP, looking inward to the AV. In order to increase the light collection efficiency of these PMTs and thus to obtain a large photocathode coverage of the detector, each of these PMTs was fitted into a 27 cm diameter reflective bucket (called ``concentrator''), which consists reflective pedals coated with aluminum. The effective photocathode coverage of the detector reaches about 54\%\cite{whitepaper}. Besides the inward-looking PMTs, 90 PMTs look outward, serving as muon vetos. Furthermore, four Hamamatsu R5912 High Quantum Efficiency (HQE) PMTs were also installed for testing the performance of potential SNO+ phases-II\cite{stringer2019sensitivity}. 
+The AV sphere is concentric within a stainless steel geodesic dome with an average radius of 8.4 m, which is called the photomultiplier support structure (PSUP). 9394 Hamamatsu 8-inch R1408 photomultipliers (PMTs) were mounted on the PSUP, looking inward to the AV. In order to increase the light collection efficiency of these PMTs and thus to obtain a large photocathode coverage of the detector, each of these PMTs was fitted into a 27 cm diameter reflective bucket (called ``concentrator''), which consists reflective pedals coated with aluminum. The effective photocathode coverage of the detector reaches about 54\%\cite{whitepaper}. Besides the inward-looking PMTs, 90 PMTs look outward, serving as muon vetos. Furthermore, 4 Hamamatsu R5912 High Quantum Efficiency (HQE) PMTs were also installed for testing the performance of potential SNO+ phases-II\cite{stringer2019sensitivity}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -524,7 +524,7 @@ Due to the requirements of very low radioactive background levels for SNO+, freq
 \subsubsection{The $^{16}$N Calibration Source}\label{n16_description}
 The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}.   
 
-Since the $^{16}$N isotope has a short half-life of $7.13~s$, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the $CO_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the $CO_2$ gas tubing\cite{dragowsky200216n}.  
+Since the $^{16}$N isotope has a short half-life of $7.13~s$, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the $CO_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the CO$_2$ gas tubing\cite{dragowsky200216n}.  
 
 The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{end~point}=4.29~MeV$ and a 22.8\% chance to an electron with $E_{end~point}=10.42~MeV$; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$'s. There are mainly $6.13~MeV~\gamma$ with an intensity of 67.0\% and 
 $7.12~MeV~\gamma$ with an intensity of 4.9\%. The intensities of the $\gamma$'s with other energies are all below 1\%\cite{nndc}. A simplified decay scheme is shown in Fig.~\ref{n16decay}.
@@ -559,16 +559,35 @@ Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber
 
 A detailed study of using the $^{16}$N source for testing and estimating the reconstruction uncertainties will be shown in \ref{sect:n16_water}.
 
-\subsubsection{The Americium Beryllium (AmBe) Calibration Source}
+\subsubsection{The Americium Beryllium Calibration Source}
+Also being inherited from the SNO collaboration, the americium-beryllium (AmBe) source 
+is used to produce neutrons and a 4.4-MeV $\gamma$ with a of 59\%. The $\alpha$-emitter $^{241}$Am  
+
+
+  9Be target
+
+
+
+the neutrons are expected to be captured and it emits 2.2-MeV delayed $\gamma$s. 
+\begin{equation}
+\begin{split}
+\alpha + \isotope[9]{Be} \to \isotope[12]{C} + n (40.9\%),\\
+\alpha + \isotope[9]{Be} \to \isotope[12]{C}^* + n (59.1\%),\\
+\isotope[12]{C}^* \to \isotope[12]{C} + \gamma (4.4~MeV),\\
+\end{split}
+\end{equation}
+
+
+
+The 9Be nucleus then produces a 12C nucleus through neutron emission. If the 12C nucleus is produced
+in an excited state, it will de-excite by emitting at least one γ-ray. The γ radiation from this reaction is
+predominantly 4.4 MeV, and occurs whenever the 12C is not formed in the ground state. Depending on the
+form and setup of the source, these γ-rays accompany ($59.1\pm 1.5$)\% of all neutrons 
 
 
 \subsubsection{Other Calibration Sources}
 
-To calibrate the energy region of interest (ROI) in the scintillator and tellurium-loading phases, especially for the $0\nu\beta\beta$ study, 
-
-The $^{46}$Sc tagged source is \cite{snop_jinst}.
-	
-Besides the $^{46}$Sc source, three additional untagged $\gamma$ sources: $^{48}$Sc, $^{137}$Cs  and $^{57}$Co are planned to be implemented\cite{snop_jinst}. Among them, the isotopes of $^{48}$Sc ($T_{1/2}$=43.67 hours, 100\% $\beta^-$ decay) and $^{137}$Cs ($T_{1/2}$=30.1 years, 100\% $\beta^-$ decay) can provide both the $\beta^-$ and $\gamma$ particles while the $^{57}$Co  ($T_{1/2}$=271.74 days, 100\% electron capture) only emits $\gamma$s. They can provide $\gamma$s with energies ranging from 14 keV ($^{57}$Co) to 1310 keV ($^{48}$Sc) and $\beta^-$ particles with energies ranging from 480 keV ($^{48}$Sc) to 1176 keV ($^{137}$Cs)\cite{nndc}.
+New calibration sources are being developed to calibrate the energy scale in the scintillator and tellurium-loading phases, especially for the energy region of interest (ROI) in the $0\nu\beta\beta$ study. They are the $^{46}$Sc tagged source with a PMT and three additional untagged $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co\cite{snop_jinst}. Among them, the isotopes of $^{48}$Sc ($T_{1/2}$=43.67 hours, 100\% $\beta^-$ decay) and $^{137}$Cs ($T_{1/2}$=30.1 years, 100\% $\beta^-$ decay) can provide both the $\beta^-$ and $\gamma$ particles while the $^{57}$Co  ($T_{1/2}$=271.74 days, 100\% electron capture) only emits $\gamma$s. They can provide $\gamma$s with energies ranging from 14 keV ($^{57}$Co) to 1310 keV ($^{48}$Sc) and $\beta^-$ particles with energies ranging from 480 keV ($^{48}$Sc) to 1176 keV ($^{137}$Cs)\cite{nndc}.
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.

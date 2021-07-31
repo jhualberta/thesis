@@ -29,7 +29,6 @@ MC simulations were produced.
 the instrumental backgrounds can be removed by the data-cleaning approaches.
 
 
-
 \section{Kullback–Leibler (KL) Divergence for High Level Cuts}
 
 The Kullback–Leibler (KL) divergence (also called ``relative entropy'') is used to measure the dissimilarity of two probability distributions\cite{murphy2012machine}. I used this quantity to compare the reconstructed angular distribution of an event, $\vec{u}_{fit}\cdot(\vec{X}_{PMT}-\vec{X}_{fit})/|\vec{X}_{PMT}-\vec{X}_{fit}|$, with the angular distribution of solar $\nu_e$ events extracted from the MC (expected as a Cherenkov distribution) to check the dissimilarity of the event compared with the solar $\nu_e$ event. The quantity $D_{KL}(p||q)$ is calculated as: 
@@ -449,7 +448,7 @@ In the previous section, the optimized cuts obtained from the TMVA analysis were
 
 After the event selections, a distribution of $\cos\theta_{sun}$ extracted from the solar $\nu_e$ candidate events was obtained. 
 
-\subsubsection{Maximum Likelihood Fit}\label{poisson_fit}
+\subsubsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
 A maximum likelihood method was applied on the distribution to extract the number of the solar $\nu_e$ interaction events ($N_{sig}$) as well as the number of the background events ($N_{bkg}$).
 
 The values of $\cos\theta_{sun}$ from the selected events were filled into a histogram divided into bins.
@@ -603,7 +602,7 @@ The systematics of position, direction and energy reconstruction were obtained f
 	    $E_{resol}$ &  0.011\\
 	    $\beta_{14}$ shifts & +0.010/-0.036\\
 		\bottomrule
-	\end{tabular*}
+	\end{tabular*}\label{table:ReconSystematics}
 \end{table}
 
 %energy scale
@@ -611,7 +610,7 @@ For the energy scale, the reconstructed MC energies were scaled up and down the 
 
 %the energy resolution was determined to be $21.0^{+5.0}_{-9.2}\%$ at 5 MeV.
 
-A remapping of $\cos\theta_{sun}$ by using the equation \ref{remapTheta} was applied on the spectrum for evaluating the systematics. a minus symbol should be applied, and it is found as:
+A remapping of $\cos\theta_{sun}$ by using the Equation.~\ref{remapTheta} was applied on the spectrum for evaluating the systematics. a minus symbol should be applied, and it is found as:
 
 \begin{equation}\label{remapThetaSun}
 -\cos\theta_{sun}'=1+(-\cos\theta_{sun}-1)(1+\delta_{\theta}),
@@ -619,115 +618,63 @@ A remapping of $\cos\theta_{sun}$ by using the equation \ref{remapTheta} was app
 
 So the transformation then becomes: $\cos\theta_{sun}'=-1+(\cos\theta_{sun}+1)(1+\delta_{\theta})$.
 
-
 Its impact is $^{+0.3}_{-0.2}$ events.
 
 
-
-
-
-\subsubsection{Extracting the Solar Neutrino Flux}
-
-live time scale: $t_{frac}=\frac{t_{data~live~time}}{t_{MC~run~time}}=0.96$.
-
-
-%Combine the $\nu_\mu$ MC spectrum with the $\nu_e$, as shown in Fig.~\ref{combine_numu_nue}.
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=8cm]{combine_numu_nue.pdf}
-%	\caption{$\cos\theta_{sun}$ distributions from MC. The blue line is for $\nu_e$ and the black line combines solar $\nu_e$ with $\nu_\mu$.}
-%	\label{combine_numu_nue}
-%\end{figure} 
+\subsubsection{Evaluating $^8$B Solar Neutrino Flux}
 
 A software called \texttt{PSelmaa} (Physics interpretation Sun-Earth Large Mixing Angle Adiabatic
-Approximation) was implemented in \texttt{RAT}\cite{fady_pselmaa}.
-BS05(OP) model, normal mass hierarchy, the MSW effects from the Earth (regeneration of coherence in the Earth) are neglected. Fig.~\ref{fig:pselmaa_curves} shows the survival probability curve as a function of energies (in 0.1 MeV intervals).
+Approximation) was implemented in \texttt{RAT}\cite{fady_pselmaa}. The software uses the BS05(OP) SSM model. It assumes the normal mass hierarchy. It also applies the MSW effects from the Sun (see Chapter 2) but neglects the MSW effects from the Earth (i.e., the regeneration of coherence in the Earth). Fig.~\ref{fig:pselmaa_curves} shows the survival probability curve as a function of energies (in 0.1 MeV intervals) taken from the \texttt{PSelmaa}.
 
 Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, $P_{e\alpha}$ includes only the $\nu_\mu$ MC.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{PSelmaa_bs05op.pdf}
-	\caption{The MSW survival probability curves. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee}$ is in green dashed line.}
+	\caption{The MSW survival probability curves as functions of MC energies. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee})$ is in green dashed line.}
 	\label{fig:pselmaa_curves}
 \end{figure}
 
-To evaluate the $^8B$ solar neutrino flux, the fitted number of $\nu-e^-$ elastic scattering (ES) is divided by the expected number of ES and is then multiplied by the flux in the MC: 
-\begin{equation}
-\Phi_{^8B} = \Phi_{^8B,MC}\frac{N_{fit}}{N_{expected}},
-\end{equation}
+%To evaluate the $^8$B solar neutrino flux, the fitted number of $\nu e^-$ elastic scattering (ES) is divided by the expected number of ES and is then multiplied by the flux in the MC: 
+%\begin{equation}
+%\Phi_{^8B} = \Phi_{^8B,MC}\frac{N_{fit}}{N_{expected}},
+%\end{equation}
 
-In the RAT MC simulations, to gain more statistics, the solar $\nu_e$ events is generated by 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the solar $\nu_\mu$ events is generated by 9600 times the nominal ($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux.
+In the \texttt{RAT} MC simulations, to gain more statistics, the solar $\nu_e$ events is generated by 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the solar $\nu_\mu$ events is generated by 9600 times the nominal ($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, to compare the MC with the data, a live time scale was taken into accounts: $t_{frac}=\frac{t_{data~live~time}}{t_{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$.
 
-
-Therefore, the MC generated $\nu_e$ and $\nu_mc$ are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Combined together.
+Therefore, the MC generated $\nu_e$ and $\nu_\mu$ are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT cuts on the MC histograms, Fig.~\ref{fig:MCfluxPdfs} shows the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15~MeV$ with and without oscillations.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{MCfluxPdfs.png}
-	\caption{The MC $\cos\theta_{Sun}$ distributions used as pdfs for the flux calculations. The histogram in black is the $\nu_e$ flux without oscillation. This histogram is used for fitting the elastic scattering flux. The histogram in blue is the $\nu_e$ flux combined with the $\nu_\mu$ flux, both including the oscillations. This histogram is used for fitting the total flux. The dashed red histogram is the $\nu_e$ flux only, including the oscillation.}
+	\caption{The MC $\cos\theta_{sun}$ distributions used as $pdf$s for the flux calculations, for $5<E_{fit}<15~MeV$ after the BDT cuts. The histogram in black is the $\nu_e$ flux without oscillation, referring to $pdf(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The dashed red histogram is the $\nu_e$ flux and the dashed green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the blue histogram as the total flux including the oscillation, referring to $pdf(\nu_e+\nu_\mu,oscillated)$, which is used for fitting the total flux.}
 	\label{fig:MCfluxPdfs}
 \end{figure} 
 
+Reading from the above histograms, the expected event number for $\nu_e$ without the oscillation is $N_{\nu_e} = 322.69$ while including the oscillations, the expected event number for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 113.58$ and $N^{osci}_{\nu_\mu} = 32.64$ respectively, and the combined event number is $N^{osci}_{\nu_e+\nu_\mu}=146.22$.
 
-Table.~\ref{table:solarNuNumbers} shows the numbers of the MC generated $\nu_e$ and $\nu_\mu$ after scaling by 1700 or 9600 as well as the BDT selections.
-\begin{table}[ht]
-	\centering
-	\caption{Expected number of solar $\nu_e$, $\nu_\mu$ and the fitted number of signals in each energy bins.}
-	\vspace{3mm}
-	\label{table:solarNuNumbers}
-	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
-		\toprule
-		E (MeV)& $N^{expect}_{\nu_e}$ & $N^{osci.}_{\nu_e}$ & $N_{fit,sig}$\\
-		\hline 
-		$[5,6]$ & 68 & 26 & 26.07$\pm$5.72\\
-		$[6,7]$ & 91 & 32 & 36.52$\pm$6.70\\
-		$[7,8]$ & 68 & 23 & 20.87$\pm$4.95\\
-		$[8,9]$ & 47 & 15 & 16.24$\pm$4.30\\
-		$[9,10]$ & 30 & 10 & 11.50$\pm$3.56\\
-		$[10,15]$ & 32 & 10 & 9.09$\pm$3.06\\
-		$[5,15]$ & 336 & 116 & 119.40$\pm$11.84\\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-
-To fit for the flux, 
+Applying the same systematics in Table.~\ref{table:ReconSystematics},  
 
 
 
-%\begin{table}[ht]
-%	\centering
-%	\caption{Expected number of solar $\nu_e$, $\nu_\mu$ and the fitted number of signals in each energy bins.}
-%	\vspace{3mm}
-%	\label{table:solarNuNumbers}
-%	\begin{tabular*}{155mm}{c@{\extracolsep{\fill}}cccc}
-%		\toprule
-%		E (MeV)& $N^{expect}_{\nu_e}$ ($N^{osci.}_{\nu_e}$) &$N^{expect}_{\nu_\mu}$ ($N^{osci.}_{\nu_\mu}$) & $N_{fit,sig}$\\
-%		\hline 
-%		$[5,6]$ & 68 (26) & 11 & 26.07$\pm$5.72\\
-%		$[6,7]$ & 91 (32) & 14 & 36.52$\pm$6.70\\
-%		$[7,8]$ & 68 (23) & 11 & 20.87$\pm$4.95\\
-%		$[8,9]$ & 47 (15) & 7 & 16.24$\pm$4.30\\
-%		$[9,10]$ & 30 (10) & 5 & 11.50$\pm$3.56\\
-%		$[10,15]$ & 32 (10) & 5 & 9.09$\pm$3.06\\
-%		$[5,15]$ & 336 (116) & 53 & 119.40$\pm$11.84\\
-%		\bottomrule
-%	\end{tabular*}
-%\end{table}
+To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Section \ref{sect:poisson_fit}, and in the Equation.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux here is:
 
-For a nominal $^8$B solar neutrino flux $\Phi_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the flux is estimated to be $\Phi_{ES}=\Phi_{MC}\cdot N_{fit,sig}=1.96\pm0.20\times 10^6~cm^{-2}s^{-1}$, compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-2}s^{-1}$ and the SNO+ 2018 published results: $\Phi_{ES}=2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6~cm^{-2}s^{-1}$.
+\begin{equation}
+\Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.))\times 10^6~cm^{-2}s^{-1}.
+\end{equation}
 
-Fig.~\ref{fig:fluxVsE} shows the flux as a function of energies. A $P_{ee}$ curve obtained from the \texttt{RAT} was overlay with the spectrum.
+To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $pdf$ was changed to $pdf(\nu_e,without~oscillation)$. The fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
+
+Fig.~\ref{fig:ESfluxFit}. The gray histogram is the $pdf(\nu_e,without~oscillation)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.
+
+Thus, for the nominal $^8$B solar neutrino flux, the ES flux is evaluated as:
+\begin{equation}
+\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20\times 10^6~cm^{-2}s^{-1}.
+\end{equation}
 
 
+Compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-2}s^{-1}$ and the SNO+ 2018 published results: $\Phi_{ES}=2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6~cm^{-2}s^{-1}$.
 
-The fitted elastic scattering flux is $\Phi_{ES}(2.09\pm 0.20)\times10^6$.
-
-
-
- 
 %\begin{figure}[!htb]
 %	\centering
 %	\includegraphics[width=10cm]{fluxVsEnergy.pdf}
@@ -740,6 +687,8 @@ Taking the systematics into accounts,
 \begin{equation}
 \Phi_{^8B,sys} = \Phi_{^8B,MC}\frac{N_{fit}}{N_{expected}}\sqrt{(\frac{N_{expected,sys}}{N_{expected}})^2+(\frac{N_{fit,sys}}{N_{fit}})^2},
 \end{equation}
+
+
 
 \subsubsection{Limits of this Study}
 Here I used the background types descried in the Table.~\ref{table:mixed_MC}. However, there are a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmogenic ones mainly caused by the cosmic muons. A more comprehensive study requires to include all possible backgrounds.
