@@ -1,4 +1,4 @@
-A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. In order to make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source was used for the primary detector calibration. The $^{16}$N runs were mainly used for checking the performances of the reconstruction of the event position, direction and energy. The source was described in \ref{n16_description}.
+A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. In order to make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source was used for the primary detector calibration. The $^{16}$N runs were mainly used for checking the performances of the reconstruction of the event position, direction and energy. The source was described in Sect.~\ref{n16_description}.
 
 In this chapter, I applied the \texttt{Multi-path fitter} mentioned in Chapter 4 to the $^{16}$N calibration data and simulations.
 
@@ -9,7 +9,7 @@ The \texttt{MPW fitter} was also applied on the simulations of the AmBe source c
 The last section of this chapter is to check the performance of the \texttt{MP partial fitter} for the $^{16}$N calibration runs during the partial-fill phase. An attempt of extracting the Cherenkov signals from the events in the scintillator was made. This attempt will be useful for extracting the solar neutrino events and reconstructing their directions during the scintillator phase. 
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
-During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was inside the AV, moving along x, y and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. Details of the calibration runs are listed in the tables in \ref{appendix:calibration}. 
+During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November, 2017 and as external scans in March, 2018. For each calibration run, the source was placed at a fixed position and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). For the internal scans, the source was inside the AV, moving along x, y and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. Details of the calibration runs are listed in the tables in Appendix.~\ref{appendix:calibration}. 
 
 \begin{figure}[!htb]
 	\centering
@@ -74,7 +74,7 @@ To do these evaluations, a few cuts were applied on both the data and MC. Firstl
 
 \subsection{Position Reconstruction Evaluation}
 \subsubsection{Position Figure of Merit}
-A quantity called scaled logL ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/NHit_{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' $NHit$, i.e., the number of the PMTs actually used by the fitter for reconstructing the event vertex, after the PMT selections mentioned in \ref{sect:PMTselector}.
+A quantity called scaled logL ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/NHit_{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' $NHit$, i.e., the number of the PMTs actually used by the fitter for reconstructing the event vertex, after the PMT selections mentioned in Sect.~\ref{sect:PMTselector}.
 
 Fig.~\ref{posBiasVsFOM} shows the $scaleLogL$ with the position biases for the reconstructed events in $^{16}$N central calibration run-107055. Both of the data and the MC simulations are shown. For the MC case, the position biases are between the reconstructed positions and the true positions generated by the MC: $|\vec{X}_{fit}-\vec{X}_{MC}|$; while for the data case, the biases are between the reconstructed positions and the source manipulation position: $|\vec{X}_{fit}-\vec{X}_{src}|$.
 
@@ -255,7 +255,7 @@ In addition to the vertex shifts mentioned previously, the vertex scale is defin
 
 Since $x^{data}_{fit}=\Delta+(1+\beta)\cdot x^{MC}_{fit}$, if the vertex scale factor is defined as: $\alpha\equiv 1+\beta$, then $x_{data}=\alpha x_{MC}$.
 
-To obtain the $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1\cdot x_{src}$ (where $x_{src}$ is the source position), as shown in \ref{fig:vertexScale}.
+To obtain the $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1\cdot x_{src}$ (where $x_{src}$ is the source position), as shown in Fig.~\ref{fig:vertexScale}.
 
 \begin{figure}
 	\centering
@@ -305,11 +305,7 @@ Mentioned in Chapter 4, the direction reconstruction relies on the position. The
 
 For the reconstructed events in $^{16}$N calibration, the ``true'' direction of an event is defined as the direction pointing from the source manipulation position to the reconstructed position: $\vec{u}_{true} = (\vec{X}_{fit}-\vec{X}_{src})/d(\vec{X}_{fit},\vec{X}_{src})$, where $d(\vec{X}_{fit},\vec{X}_{src})=|\vec{X}_{fit}-\vec{X}_{src}|$ is the distance between the reconstructed event position to the source manipulation position. The angle $\theta$ is the displacement between the ``true'' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
 
-To describe the biases between the reconstructed direction and the true particle direction of the event, an empirical function for the angular resolution was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components:
-\begin{equation}
-P(\cos\theta)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
-\end{equation}
-where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or the ``slopes'' of the two exponential components; $\alpha_M$ is the fraction between two exponential components. The first component, the main peak is due to the single scattering of the electrons and is the true angular resolution of the detector, while the second component which has a broad tail is mainly due to the multiple scattering of electrons; there are also back scattering electrons on the detector components and the poorly reconstructed events in the tails\cite{boulay2004direct}.
+
 
 Before fitting the direction resolution function to the data or simulation results, a few cuts relating to the position and energy reconstruction were applied. These cuts were suggested by the SNO+ analysis to remove the instrumental backgrounds and poor reconstructions for the events close to the source container or far away from the source. To remove the instrumental backgrounds, the cuts of $E_{fit}>3.5~MeV$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut of $1000<d(\vec{X}_{fit},\vec{X}_{src})<2300~mm$ was applied. For the internal scans, a radius cut $R'<5850~mm$ was also applied. This radial cut was not applied on the external and neck scans\cite{waterunidoc}.
 
