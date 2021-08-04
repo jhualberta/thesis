@@ -17,11 +17,12 @@ Repeated entry---line 1572 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1734 of file thesis.bib
+Repeated entry---line 1737 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "snop_nim"
+Warning--I didn't find a database entry for "sect:fukuda1998evidence"
 Warning--I didn't find a database entry for "agostini2016search"
 Warning--I didn't find a database entry for "agostini2017discovery"
 Warning--empty year in snop_jinst
@@ -67,6 +68,7 @@ Warning--can't use both volume and number fields in singh2020underwater
 Warning--empty year in brunroot
 Warning--empty year in muonTrackRecon
 Warning--empty year in groupVmeasure
+Warning--empty year in mpFitWaterLevel
 Warning--empty year in modeCut
 Warning--empty year in energyRSP
 Warning--empty year in waterunidoc
@@ -90,45 +92,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 202 entries,
+You've used 203 entries,
             1876 wiz_defined-function locations,
-            1432 strings with 35160 characters,
-and the built_in function-call counts, 43081 in all, are:
-= -- 3792
-> -- 2357
+            1438 strings with 35298 characters,
+and the built_in function-call counts, 43213 in all, are:
+= -- 3802
+> -- 2361
 < -- 0
-+ -- 889
-- -- 687
-* -- 3007
-:= -- 6624
-add.period$ -- 260
-call.type$ -- 202
-change.case$ -- 147
++ -- 891
+- -- 688
+* -- 3016
+:= -- 6645
+add.period$ -- 261
+call.type$ -- 203
+change.case$ -- 148
 chr.to.int$ -- 0
-cite$ -- 268
-duplicate$ -- 2366
-empty$ -- 3981
-format.name$ -- 687
-if$ -- 10223
+cite$ -- 270
+duplicate$ -- 2375
+empty$ -- 3998
+format.name$ -- 688
+if$ -- 10253
 int.to.chr$ -- 0
-int.to.str$ -- 202
-missing$ -- 202
-newline$ -- 669
-num.names$ -- 194
-pop$ -- 745
+int.to.str$ -- 203
+missing$ -- 203
+newline$ -- 672
+num.names$ -- 195
+pop$ -- 750
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1222
+skip$ -- 1223
 stack$ -- 0
 substring$ -- 1131
-swap$ -- 798
+swap$ -- 799
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 66
-while$ -- 310
-width$ -- 205
-write$ -- 1846
+warning$ -- 67
+while$ -- 311
+width$ -- 206
+write$ -- 1853
 (There were 4 error messages)

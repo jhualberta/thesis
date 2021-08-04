@@ -647,7 +647,7 @@ Therefore, the MC generated $\nu_e$ and $\nu_\mu$ are scaled by the $t_{frac}$ a
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{MCfluxPdfs.png}
-	\caption{The MC $\cos\theta_{sun}$ distributions used as $pdf$s for the flux calculations, for $5<E_{fit}<15~MeV$ after the BDT cuts. The histogram in black is the $\nu_e$ flux without oscillation, referring to $pdf(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The dashed red histogram is the $\nu_e$ flux and the dashed green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the blue histogram as the total flux including the oscillation, referring to $pdf(\nu_e+\nu_\mu,oscillated)$, which is used for fitting the total flux.}
+	\caption{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15~MeV$ after the BDT cuts. The histogram in black is the $\nu_e$ flux without oscillation, referring to $pdf(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The dashed red histogram is the $\nu_e$ flux and the dashed green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the blue histogram as the total flux including the oscillation, referring to $pdf(\nu_e+\nu_\mu,oscillated)$, which is used for fitting the total flux.}
 	\label{fig:MCfluxPdfs}
 \end{figure} 
 
@@ -657,13 +657,15 @@ Applying the same systematics in Table.~\ref{table:ReconSystematics},
 
 
 
+
+
 To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Equation.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux here is:
 
 \begin{equation}
 \Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.))\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $pdf$ was changed to $pdf(\nu_e,without~oscillation)$. The fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
+To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. The fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
 
 Fig.~\ref{fig:ESfluxFit}. The gray histogram is the $pdf(\nu_e,without~oscillation)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.
 

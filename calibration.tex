@@ -301,13 +301,9 @@ $r^+=(1+\delta^+_r/100)\cdot r$ and $r^-=(1+\delta^-_r/100)\cdot r$.
 
 \subsection{Direction Reconstruction Evaluation}
 \subsubsection{Direction Resolution}
-Mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut: $scaleLogL>10$ was applied before evaluating the direction reconstruction. 
+For the reconstructed events in the $^{16}$N calibration, the ``true'' direction of an event is defined as the direction pointing from the source manipulation position to the reconstructed position: $\vec{u}_{true} = (\vec{X}_{fit}-\vec{X}_{src})/d(\vec{X}_{fit},\vec{X}_{src})$, where $d(\vec{X}_{fit},\vec{X}_{src})=|\vec{X}_{fit}-\vec{X}_{src}|$ is the distance between the reconstructed event position to the source manipulation position. The angle $\theta$ is the displacement between the ``true'' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
 
-For the reconstructed events in $^{16}$N calibration, the ``true'' direction of an event is defined as the direction pointing from the source manipulation position to the reconstructed position: $\vec{u}_{true} = (\vec{X}_{fit}-\vec{X}_{src})/d(\vec{X}_{fit},\vec{X}_{src})$, where $d(\vec{X}_{fit},\vec{X}_{src})=|\vec{X}_{fit}-\vec{X}_{src}|$ is the distance between the reconstructed event position to the source manipulation position. The angle $\theta$ is the displacement between the ``true'' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
-
-
-
-Before fitting the direction resolution function to the data or simulation results, a few cuts relating to the position and energy reconstruction were applied. These cuts were suggested by the SNO+ analysis to remove the instrumental backgrounds and poor reconstructions for the events close to the source container or far away from the source. To remove the instrumental backgrounds, the cuts of $E_{fit}>3.5~MeV$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut of $1000<d(\vec{X}_{fit},\vec{X}_{src})<2300~mm$ was applied. For the internal scans, a radius cut $R'<5850~mm$ was also applied. This radial cut was not applied on the external and neck scans\cite{waterunidoc}.
+The distribution of the $\cos\theta$ was fitted with the direction resolution function mentioned in Sect.~\ref{sect:directResol}, Eq.~\ref{eq:directResol}. Before the fitting, a few cuts relating to the position and energy reconstruction were applied on the data or simulation results. Mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut: $scaleLogL>10$ was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ analysis to remove the instrumental backgrounds and poor reconstructions for the events close to the source container or far away from the source. To remove the instrumental backgrounds, the cuts of $E_{fit}>3.5~MeV$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut of $1000<d(\vec{X}_{fit},\vec{X}_{src})<2300~mm$ was applied. For the internal scans, a radius cut $R'<5850~mm$ was also applied. This radial cut was not applied on the external and neck scans\cite{waterunidoc}.
 
 Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions in a fit range of [0.3,1] after the cuts mentioned. 
 \begin{figure}
@@ -390,24 +386,25 @@ This angular remapping function is used to smear the angular distributions for s
 
 \subsection{$\beta_{14}$ and Its Systematic}
 Since $\beta_{14}$ itself is used as the high-level cut, here only the cuts of $ITR>0.55$ and $NHits>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions.
-Fig.~\ref{N16beta14} shows the $\beta_{14}$ distributions of the central run-107055 data and MC, reconstructed by the MPW fitter and the official \texttt{RAT} fitter. The $\beta_{14}$ is calculated based on the reconstructed position, time and direction of an event while the $\beta_{14}$ distributions from the MPW and the \texttt{RAT fitter} results are consistent. However, both of the two fitters show a discrepancy between the data and the MC. This discrepancy can be caused by an inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}.
-Fig.~\ref{N16beta14_cmp} shows a comparison of the $\beta_{14}$ for the data and the MC in run-107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to the $\mu_{MC}=0.4388$.
+Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run-107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time and direction of an event while the $\beta_{14}$ distributions from the \texttt{MPW} and the \texttt{RAT} results are consistent. However, both of the two fitters show a discrepancy between the data and the MC. This discrepancy can be caused by an inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}.
+Fig.~\ref{fig:N16beta14MPW} shows a comparison of the $\beta_{14}$ for the data and the MC in run-107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions in a region of $[-0.5,1.5]$. The data shows a smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to the $\mu_{MC}=0.4388$.
 
-Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z axes.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16_beta14_107055.png}
 	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} processed results and black for the \texttt{RAT} results.}
-	\label{N16beta14_cmp}
+	\label{fig:N16beta14}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16FitMPW_beta14_107055.png}
 	\caption{A comparison of the $\beta_{14}$ for the data and the MC in run-107055.}
-	\label{N16beta14MPW}
+	\label{fig:N16beta14MPW}
 \end{figure}
+
+Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z axes. Taking all the 80 internal runs mentioned before, I calculated the $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$ for each run. The mean and standard deviation of these $\Delta \beta_{14}$ values were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in Ref.~\cite{waterunidoc}, an asymmetric uncertain was taken: the upward shift was taken as $+0.010$ while the downward was taken as $-0.026-0.01=-0.036$. Thus the shifts: $+0.010/-0.036$ was taken as the $\beta_{14}$ systematics. It will be applied on the solar neutrino analysis in the next chapter. 
 
 \begin{figure}[htbp]
 	\centering
@@ -415,9 +412,6 @@ Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z
 	\caption{$\beta_{14}$ systematic along x, y, z scans.}
 	\label{beta14_XYZscans}
 \end{figure}
-
-For all the 80 internal runs mentioned before, I calculated the $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$. The mean and standard deviation were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in \cite{waterunidoc}, an asymmetric uncertain was taken: the upward shift was taken as $+0.010$ while the downward was taken as $-0.026-0.01=-0.036$. Thus the shifts: $+0.010/-0.036$ was taken as the $\beta_{14}$ systematics. It will be applied on the solar neutrino analysis in the next chapter. 
-
 %Discussions for the external scan runs.
 %For external scans, the radial cuts were not applied. 
 
