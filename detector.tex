@@ -209,12 +209,7 @@ while the rise time, $t_{rise} = 0.8~ns$ the timing parameters $t_i$,
 amplitude $a_i$ are determined by the bench-top measurements \cite{chicagoTiming}.
 
 
-From Oxford timing fitting functions: 
-\[
-\{\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}\otimes f_{PMT}(t-t')\}\otimes Gaus(t,0)
-\]
 
-\ref{transfer_efficiency}\cite{collaboration2020development}. 
 
 \begin{table}[ht]
 	\centering
@@ -276,10 +271,30 @@ From Oxford timing fitting functions:
 To load the Te into the liquid scintillator, a compound is made by 
 condensation reactions between telluric acid (TeA) and 1,2-butanediol (BD), with N, N-dimethyldodecylamine (DDA) being used as a stabilization agent.
 
+diolization or condensation process
+
+Fig.~\ref{fig:paton_te} shows initial stages of the process\cite{Paton:2019kgy}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[height = 3cm]{TeBD_process.png}
+	\caption{Initial stages of the TeBD compound formation.}
+	\label{fig:paton_te}
+\end{figure}
+
 A tertiary amine (N, N-Dimethyldodecylamine, DDA) was added during the reaction to stabilize TeBD complexes and avoid any phase separation. 
 
 
+Two synthesis procedures, the DDA and SOP procedures, were developed by the SNO+ chemistry groups\cite{biller2017new,teDDA,DDAvsSOP}.
+
+
 Tellurium-loaded 65\% of the pure, unloaded scintillator
+
+In order to load the 130Te into the scintillator, an organo-metallic compound is formed
+from telluric acid and butanediol [4]. The initial stages of this process are depicted
+in Figure 2. This compound is then loaded into the scintillator. This method allows
+the optical transparency of the scintillator to be conserved. The total light yield of
+the full cocktail is expected to be 400 NHits/MeV 
+
 
 
 
@@ -317,7 +332,7 @@ Here we measured the light yield of $0.5\%$ Tellurium loaded LAB (TeLS) samples 
 
 \subsubsection{Measurement Setup and Data Acquisition}
 
-We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, which can affect the light yield, for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples.  Te-butanediol samples from both of the DDA and SOP synthesis procedures were prepared. They are referred as TeDDA and TeSOP samples respectively. These samples were further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. To avoid air bubbles created by squeezing the vial cap into the liquid, the liquid level for each sample was kept at 30 mm. The dimensions of the vial is shown in the left picture of Fig.~\ref{scintVial}.
+We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, which can affect the light yield, for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples. Te-butanediol samples from both of the DDA and SOP synthesis procedures were prepared. They are referred as TeDDA and TeSOP samples respectively. These samples were further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. To avoid air bubbles created by squeezing the vial cap into the liquid, the liquid level for each sample was kept at 30 mm. The dimensions of the vial is shown in the left picture of Fig.~\ref{scintVial}.
 
 \begin{figure}[htbp]
 	\subfigure{
@@ -325,13 +340,13 @@ We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO
 			\includegraphics[width=4cm]{scintVial.png}
 		\end{minipage}
 	}   
-	\subfigure{ 
+	\subfigure{
 		\begin{minipage}[b]{0.35\textwidth}
 			\centering
 			\includegraphics[width=6cm]{plasticHolder.png}
 		\end{minipage}
 	}
-	\caption{Test sample (left) and setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs were aligned to face to the scintillation vial from each side.}
+	\caption{A vial of the test sample (left) and the measurement setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs were aligned to face to the scintillation vial from each side.}
 	\label{scintVial}
 \end{figure}
 
@@ -348,7 +363,7 @@ Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic
 
 The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier. This amplifier inverted the signals and amplified them by 26 dB. The amplified signals were then input into a two-channel digitizer. The digitizer records the data and sent them to a desktop computer.
 
-To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari S.p.A (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel\cite{caen}.
+To obtain and analyze the data, we used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari (CAEN). Running at a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel\cite{caen}.
 
 This module was controlled by the \texttt{CoMPASS} software provided by CAEN. The software set up the threshold and trigger parameters. For each triggered event which passed the threshold, the software recorded event time, trigger flag and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated\cite{compass}.
 
@@ -387,14 +402,15 @@ Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and witho
 
 \begin{figure}[htbp]
 	\centering	
-	\includegraphics[width=10cm]{TeLS_2Denergy.png}
+	\includegraphics[width=14cm]{TeLS_2Denergy.png}
 	\caption{ 2D energy spectrum of the counting measurements of LAB-PPO (a), TeSOP (b), and TeDDA (c) samples, projected the 2D plots into one channel (d). The single photo-electron (p.e.) peak is mainly caused by backgrounds while the multiple p.e. peak is from scintillation photons.}
 	\label{teLSresults}
 \end{figure}
 
-Fig.~\ref{teLSresults} shows the result of one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~ 18 shows the results of the TeSOP and TeDDA samples.  Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
+Fig.~\ref{teLSresults} (a) shows the result of an one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e. and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~\ref{teLSresults} (b) and (c) show the results of the TeSOP and TeDDA samples respectively. Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields between the samples can be observed clearly.
 
-The 2D plots in Fig.~\ref{teLSresults} are projected onto a single channel. We used an empty vial and let γ-rays from 137Cs source pass through it for a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
+The 2D plots were projected onto a single channel, as shown in 
+Fig.~\ref{teLSresults} (d). We used an empty vial and let $\gamma$-rays from $^{137}$Cs source passed through it as a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
 
 From this plot, the single p.e. peaks for all the samples as well as the background match together. The multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can clearly see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP is slightly larger than the TeDDA. 
 
@@ -420,11 +436,11 @@ To define the multiple p.e. region for the counting, the spectrum projected on e
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=6cm]{TeLS_2DboxCut.png}
-	\caption{Two dimensional spectrum of LABPPO sample with coincidence cut. A box cut is defined for multiple PE counting.}
+	\caption{Two dimensional spectrum of LAB-PPO sample with coincidence cut. A box cut is defined for multiple PE counting.}
 	\label{2DboxCut}
 \end{figure}
 
-Fig.~\ref{2DboxCut} Two dimensional spectrum of LABPPO with coincidence cut. A box cut is defined for multiple PE counting. 
+Fig.~\ref{2DboxCut} Two dimensional spectrum of LAB-PPO with coincidence cut. A box cut is defined for multiple PE counting. 
 
 Once the total number of the photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
 

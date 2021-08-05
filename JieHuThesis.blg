@@ -13,11 +13,11 @@ I was expecting a `,' or a `}'---line 1309 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1572 of file thesis.bib
+Repeated entry---line 1588 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1737 of file thesis.bib
+Repeated entry---line 1753 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -56,6 +56,8 @@ Warning--empty year in chicagoTiming
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
 Warning--can't use both volume and number fields in biller2017new
+Warning--empty year in teDDA
+Warning--empty year in DDAvsSOP
 Warning--empty author in pmtR580
 Warning--empty title in pmtR580
 Warning--empty journal in pmtR580
@@ -92,45 +94,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 203 entries,
+You've used 205 entries,
             1876 wiz_defined-function locations,
-            1438 strings with 35298 characters,
-and the built_in function-call counts, 43213 in all, are:
-= -- 3802
-> -- 2361
+            1447 strings with 35452 characters,
+and the built_in function-call counts, 43477 in all, are:
+= -- 3822
+> -- 2369
 < -- 0
-+ -- 891
-- -- 688
-* -- 3016
-:= -- 6645
-add.period$ -- 261
-call.type$ -- 203
-change.case$ -- 148
++ -- 895
+- -- 690
+* -- 3034
+:= -- 6687
+add.period$ -- 263
+call.type$ -- 205
+change.case$ -- 150
 chr.to.int$ -- 0
-cite$ -- 270
-duplicate$ -- 2375
-empty$ -- 3998
-format.name$ -- 688
-if$ -- 10253
+cite$ -- 274
+duplicate$ -- 2393
+empty$ -- 4032
+format.name$ -- 690
+if$ -- 10313
 int.to.chr$ -- 0
-int.to.str$ -- 203
-missing$ -- 203
-newline$ -- 672
-num.names$ -- 195
-pop$ -- 750
+int.to.str$ -- 205
+missing$ -- 205
+newline$ -- 678
+num.names$ -- 197
+pop$ -- 760
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1223
+skip$ -- 1225
 stack$ -- 0
 substring$ -- 1131
-swap$ -- 799
+swap$ -- 801
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 67
-while$ -- 311
-width$ -- 206
-write$ -- 1853
+warning$ -- 69
+while$ -- 313
+width$ -- 208
+write$ -- 1867
 (There were 4 error messages)

@@ -36,7 +36,7 @@ In the SNO+ water phase, both of the cavity and the AV were filled with ultra-pu
 
 The \texttt{MPW fitter} fits for the vertex and direction of a triggered event in SNO+ water phase. It first fits for the event vertex, and then takes the results of the reconstructed position to fit for the event direction.
 
-\subsection{Vertex Reconstruction}
+\subsection{Vertex Reconstruction}\label{sect:waterVertex}
 
 To fit for the vertex with 4 parameters: $x,y,z$ and $t$, first the fitter creates a random position inside a sphere with a radius of $10~m$ (larger than the actual PSUP radius $r_{PSUP}=8.39~m$). Meanwhile, a random event time is also generated from a uniform distribution in the range of $[100,300~ns]$. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $\vec{X}_0$. See the Sect.~\ref{appendix:random_gen} for details.
 
@@ -61,7 +61,7 @@ An one-dimensional (1D) probability density function ($PDF$) is used for fitting
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{MPW_timingPDF.pdf}
-	\caption{PMT response time as the timing $PDF$ for the vertex reconstruction.}
+	\caption{The PMT response time profile as the timing $PDF$ for the vertex reconstruction.}
 	\label{fig:MPW_timingPDF}
 \end{figure}
 
@@ -523,15 +523,27 @@ The next section will discuss the timing $PDF$s used by the fitter.
 \subsubsection{Different PPO Concentrations during the Filling}
 During the partial-fill phase, the water level and the concentration of PPO were changing.
 
+The default concentration of the PPO is 2 g/L LAB.
+
 Oxford group in the SNO+ collaboration has done a few bench-top measurements for the time constants and relative light yields of LAB mixed with different concentrations of PPO\cite{oxfordMeasurement}.
 
-The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/l.
+The emission time profiles and relative light yields of PPO dissolved in LAB at the following concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/L. These time profiles were convolved with the PMT time response profile mentioned in Fig.~\ref{fig:MPW_timingPDF} in Sect.~\ref{sect:waterVertex}.  
+
+From Oxford timing fitting functions: 
+\begin{equation}
+\{\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}\otimes f_{PMT}(t-t')\}\otimes Gaus(t,0),
+\end{equation}
 
 The partial fitter is re-coordinated according to these measurements.
 
 \begin{equation}
-\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}}.
+\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}})+A'\frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}},
 \end{equation}
+
+
+
+
+\ref{transfer_efficiency}\cite{collaboration2020development}. 
 
 Based on these measured parameters, $PDF$s were built. 
 
