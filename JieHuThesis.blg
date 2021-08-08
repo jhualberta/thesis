@@ -8,16 +8,16 @@ Repeated entry---line 327 of file thesis.bib
  :                          ,
 I'm skipping whatever remains of this entry
 Warning--string name "hamamatsu" is undefined
---line 1309 of file thesis.bib
-I was expecting a `,' or a `}'---line 1309 of file thesis.bib
+--line 1333 of file thesis.bib
+I was expecting a `,' or a `}'---line 1333 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1588 of file thesis.bib
+Repeated entry---line 1595 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1753 of file thesis.bib
+Repeated entry---line 1763 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -25,6 +25,7 @@ Warning--I didn't find a database entry for "snop_nim"
 Warning--I didn't find a database entry for "sect:fukuda1998evidence"
 Warning--I didn't find a database entry for "agostini2016search"
 Warning--I didn't find a database entry for "agostini2017discovery"
+Warning--empty journal in Paton:2019kgy
 Warning--empty year in snop_jinst
 Warning--empty year in matt_deployedsource
 Warning--empty year in n16geom_zach
@@ -46,7 +47,6 @@ Warning--empty journal in piperno2015dark
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in davini2016cno
-Warning--empty journal in Paton:2019kgy
 Warning--empty journal in sorensen2016temperature
 Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
@@ -55,6 +55,7 @@ Warning--empty year in novikov
 Warning--empty year in chicagoTiming
 Warning--empty year in tanner0p5
 Warning--empty year in joshW1
+Warning--empty year in teLoadingPaper
 Warning--can't use both volume and number fields in biller2017new
 Warning--empty year in teDDA
 Warning--empty year in DDAvsSOP
@@ -73,6 +74,7 @@ Warning--empty year in groupVmeasure
 Warning--empty year in mpFitWaterLevel
 Warning--empty year in modeCut
 Warning--empty year in energyRSP
+Warning--empty year in waterFoM
 Warning--empty year in waterunidoc
 Warning--empty year in partialEnergy
 Warning--empty year in partialEnergyYang
@@ -94,45 +96,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 205 entries,
+You've used 207 entries,
             1876 wiz_defined-function locations,
-            1447 strings with 35452 characters,
-and the built_in function-call counts, 43477 in all, are:
-= -- 3822
-> -- 2369
+            1456 strings with 35669 characters,
+and the built_in function-call counts, 43741 in all, are:
+= -- 3842
+> -- 2377
 < -- 0
-+ -- 895
-- -- 690
-* -- 3034
-:= -- 6687
-add.period$ -- 263
-call.type$ -- 205
-change.case$ -- 150
++ -- 899
+- -- 692
+* -- 3052
+:= -- 6729
+add.period$ -- 265
+call.type$ -- 207
+change.case$ -- 152
 chr.to.int$ -- 0
-cite$ -- 274
-duplicate$ -- 2393
-empty$ -- 4032
-format.name$ -- 690
-if$ -- 10313
+cite$ -- 278
+duplicate$ -- 2411
+empty$ -- 4066
+format.name$ -- 692
+if$ -- 10373
 int.to.chr$ -- 0
-int.to.str$ -- 205
-missing$ -- 205
-newline$ -- 678
-num.names$ -- 197
-pop$ -- 760
+int.to.str$ -- 207
+missing$ -- 207
+newline$ -- 684
+num.names$ -- 199
+pop$ -- 770
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1225
+skip$ -- 1227
 stack$ -- 0
 substring$ -- 1131
-swap$ -- 801
+swap$ -- 803
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 69
-while$ -- 313
-width$ -- 208
-write$ -- 1867
+warning$ -- 71
+while$ -- 315
+width$ -- 210
+write$ -- 1881
 (There were 4 error messages)
