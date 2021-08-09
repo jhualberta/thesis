@@ -520,9 +520,9 @@ The next section will discuss the timing $PDF$s used by the fitter.
 \subsection{Making Timing $PDF$s}
 
 \subsubsection{Different PPO Concentrations during the Filling}
-During the partial-fill phase, the water level and the concentration of the PPO were changing. The PPO was gradually added into and mixed with the LAB, and for the relative stable partial-fill stages which were used for taking and analyzing data, the PPO concentrations were 0.25 (earlier stage from 2019 to 2020) or 0.5 g/L LAB (later stage from 2020 to 2021). The planned concentration of the PPO in scintillator phase is 2 g/L LAB.
+During the partial-fill phase, the water level and the concentration of the PPO were changing. The PPO was gradually added into and mixed with the LAB, and for the relative stable partial-fill stages which were used for taking and analyzing data, the PPO concentrations dissolved in the LAB were 0.25 g/L (earlier stage from 2019 to 2020) or 0.5 g/L (later stage from 2020 to 2021). The planned concentration of the PPO in the scintillator phase is 2 g/L.
 
-An understanding of the characteristic photon emission response is crucial for building the timing $PDF$ for the reconstruction. The Oxford group from the SNO+ collaboration did several bench-top measurements to obtain the time constants and relative light yields of the LAB sample dissolved with the following PPO concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/L LAB\cite{oxfordMeasurement0,oxfordMeasurement}.
+An understanding of the characteristic photon emission response is crucial for building the timing $PDF$ for the reconstruction. The Oxford group from the SNO+ collaboration did several bench-top measurements to obtain the time constants and relative light yields of the LAB sample dissolved with the following PPO concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/L\cite{oxfordMeasurement0,oxfordMeasurement}.
 
 The emission time profile model used by the Oxford group is\cite{oxfordMeasurement}: 
 \begin{equation}
@@ -530,10 +530,10 @@ f_{optics}(t)=\sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{ri
 \end{equation}
 where $A_i$ is the fraction of scintillation light emitted in the $i^{th}$ component, $\tau_i$ is the decay constant in the $i^{th}$ component, $\tau_{rise}$ is the rise time of scintillator.
 
-The measured parameters are listed in Table.~\ref{tab:measureAmplitude}.
+The measured parameters are listed in Table.~\ref{tab:measureAmplitude} and Table.~\ref{tab:measureLightYield}.
 \begin{table}[ht]
 	\centering\label{tab:measureAmplitude}
-	\caption{\label{oxfordMeasure} Time constants and amplitudes measured by Oxford group\cite{oxfordMeasurement}.}	
+	\caption{\label{oxfordMeasure} Time constants and amplitudes measured by Ref.~\cite{oxfordMeasurement}. Here the relative light yield is with respect to the LAB+2 g/L PPO case (11900 photons/MeV).}	
 	{\centering
 		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
 			\toprule 
@@ -548,32 +548,8 @@ The measured parameters are listed in Table.~\ref{tab:measureAmplitude}.
 		\end{tabular*}
 	}
 \end{table}
-
-These Oxford-measured  time profiles were convolved with the PMT time response profile mentioned in Sect.~\ref{sect:waterVertex}, Fig.~\ref{fig:MPW_timingPDF}, thus the timing pdf 
-\begin{equation}\label{eq:OxfordTimingPDF}
-PDF = f_{optics}(t)\otimes f_{PMT~response}(t-t'),
-\end{equation}
-
-I wrote a python tool to The partial fitter was re-coordinated according to these measurements.
-
-
-
-\ref{transfer_efficiency}\cite{collaboration2020development}. 
-
-Based on these measured parameters, $PDF$s were built. 
-
-
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=6cm]{skyShine.png}
-%	\caption{ Pdfs built for liquid scintillator with various PPO concentrations, based on the bench-top measurements.}
-%	\label{oxford_pdf}
-%\end{figure}
-
-relative light yield (2 g/L = 11900)
 \begin{table}[ht]
-	\centering
+	\centering\label{tab:measureLightYield}
 	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by Ref.~\cite{oxfordMeasurement}.}	
 	{\centering
 		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
@@ -590,13 +566,24 @@ relative light yield (2 g/L = 11900)
 	}
 \end{table}
 
+
+These Oxford-measured  time profiles were convolved with the PMT time response profile mentioned in Sect.~\ref{sect:waterVertex}, Fig.~\ref{fig:MPW_timingPDF}, to make the timing $PDF$ for the partial-fill vertex reconstruction. 
+\begin{equation}\label{eq:OxfordTimingPDF}
+f(t)_{PDF} = f_{optics}(t)\otimes f_{PMT~response}(t-t'),
+\end{equation}
+
+I wrote a python tool to create the timing $PDF$s to re-coordinate the partial fitter for the different PPO concentration cases\cite{partialFitterPDF}, as shown in Fig.~\ref{fig:oxfordPdf}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{oxfordPdf_log.png}
-	\caption{Timing spectrum for different PPO concentrations based on the Oxford bench-top measurements.}
-	\label{oxfordPdf}
+	\caption{Timing $PDF$s built for various PPO concentrations based on the Oxford bench-top measurements.}
+	\label{fig:oxfordPdf}
 \end{figure}
-The partial fitter is invulnerable to the changes caused by different PPO concentrations.
+
+% 2 g/L case: \ref{transfer_efficiency}\cite{collaboration2020development}. 
+%Based on these measured parameters, $PDF$s were built. 
+
+Interestingly, if using a timing $PDF$ with a wrong concentration to the actual data, the fit position biases are small. I simulated 3-MeV $e^-$ uniformly distributed in the LAB+0.25 g/L PPO scintillator with isotropic directions, and then reconstructed the simulated events by using the 0.5, 1 and 2 g/L PPO timing $PDF$s respectively. All these reconstructions gave the fitted positions closed to the correct reconstruction using the 0.25 g/L timing $PDF$, with differences in the Gaussian means around 5 mm in x, y and z axes, which were not significant biases. In the other cases, I simulated the same 3-MeV $e^-$ events in LAB+2 g/L PPO and reconstructed by using the timing $PDF$s with lower PPO concentrations (0.25, 0.5 and 1 g/L PPO respectively), differences in the Gaussian means were within 5 mm\cite{partialFitterPDFtestInvulnerable}. It shows that the \texttt{MP partial fitter} is invulnerable to the changes caused by different PPO concentrations.
 
 radial biases
 \begin{table}[ht]
@@ -617,32 +604,11 @@ radial biases
 	}
 \end{table}
 
-
-
 %& 120.6
 %& 90.02
 %& 67.39
 %& 55.81
 %& 58.62
-
-PPO in Fitter configuration
-fit with wrong PPO concentrations:  
-\begin{table}[ht]
-	\centering
-	\caption{\label{partial_bias1} Fit position biases for various PPO concentrations.}	
-	{\centering
-		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccccccc}
-			\toprule 
-			PPO [g/L] & $\Delta x$ & $\Delta y$ & $\Delta z$  & $\sigma_z$ & $r_{bias}$  & $\sigma_r$ & ratio in FV (\%)&\\
-			\midrule
-			0.25 & 6.80& 2.90& -14.61& 121.6& -4.82& 120.3& 93.70\%\\
-			0.5  & 5.15& 2.82& -12.85 &120.2 &1.34 &123.0 &93.46\% \\
-			1.0 &2.32 &1.95 &-13.22& 120.3& 0.344& 121.9 &93.78\% \\
-			2.0 &5.76& 3.03& -9.61& 119.3& 7.264 &125.1& 93.26\% \\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
 
 \subsection{Partial Fitter Performances}
 
