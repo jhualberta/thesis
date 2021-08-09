@@ -17,7 +17,7 @@ Repeated entry---line 1595 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1763 of file thesis.bib
+Repeated entry---line 1769 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -71,6 +71,7 @@ Warning--can't use both volume and number fields in singh2020underwater
 Warning--empty year in brunroot
 Warning--empty year in muonTrackRecon
 Warning--empty year in groupVmeasure
+Warning--empty year in oxfordMeasurement0
 Warning--empty year in mpFitWaterLevel
 Warning--empty year in modeCut
 Warning--empty year in energyRSP
@@ -96,45 +97,45 @@ Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in brianLowBG
-You've used 207 entries,
+You've used 208 entries,
             1876 wiz_defined-function locations,
-            1456 strings with 35669 characters,
-and the built_in function-call counts, 43741 in all, are:
-= -- 3842
-> -- 2377
+            1460 strings with 35788 characters,
+and the built_in function-call counts, 43873 in all, are:
+= -- 3852
+> -- 2381
 < -- 0
-+ -- 899
-- -- 692
-* -- 3052
-:= -- 6729
-add.period$ -- 265
-call.type$ -- 207
-change.case$ -- 152
++ -- 901
+- -- 693
+* -- 3061
+:= -- 6750
+add.period$ -- 266
+call.type$ -- 208
+change.case$ -- 153
 chr.to.int$ -- 0
-cite$ -- 278
-duplicate$ -- 2411
-empty$ -- 4066
-format.name$ -- 692
-if$ -- 10373
+cite$ -- 280
+duplicate$ -- 2420
+empty$ -- 4083
+format.name$ -- 693
+if$ -- 10403
 int.to.chr$ -- 0
-int.to.str$ -- 207
-missing$ -- 207
-newline$ -- 684
-num.names$ -- 199
-pop$ -- 770
+int.to.str$ -- 208
+missing$ -- 208
+newline$ -- 687
+num.names$ -- 200
+pop$ -- 775
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1227
+skip$ -- 1228
 stack$ -- 0
 substring$ -- 1131
-swap$ -- 803
+swap$ -- 804
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 71
-while$ -- 315
-width$ -- 210
-write$ -- 1881
+warning$ -- 72
+while$ -- 316
+width$ -- 211
+write$ -- 1888
 (There were 4 error messages)
