@@ -18,16 +18,14 @@ The outputs from the data were fitted to obtain the number of signal events and 
 \section{Detector Backgrounds}
 
 \subsection{Physics Backgrounds}
-As mentioned in Chapter 2, \ref{sect:overview}, since the depth of the SNO+, the cosmogenic backgrounds induced by the cosmic muons are very few. Most backgrounds come from radioactive isotopes inside or around the detector, mostly from the $\beta$-decays of $^{214}$Bi and $^{208}$Tl. Table. is a summary of the $\beta$-decays from these two isotopes. 
+As mentioned in Chapter 3, Sect.~\ref{sect:overview}, since the depth of the SNO+, the cosmogenic backgrounds induced by the cosmic muons are very few. Most backgrounds come from radioactive isotopes inside or around the detector, mostly from the $\beta$-decays of $^{214}$Bi and $^{208}$Tl. MC simulations were produced. 
 
-Data taken from \cite{nndc}.
+The instrumental backgrounds can be removed by the data-cleaning approaches. Here the data-cleaning masks were applied.
+%Table. is a summary of the $\beta$-decays from these two isotopes. 
 
-To investigate the background contamination, \emph{ex-situ} and \emph{in-situ} Radon assays.
-MC simulations were produced.
+%Data taken from \cite{nndc}.
 
-
-the instrumental backgrounds can be removed by the data-cleaning approaches.
-
+%To investigate the background contamination, \emph{ex-situ} and \emph{in-situ} Radon assays.
 
 \section{Kullback–Leibler (KL) Divergence for High Level Cuts}
 
@@ -55,33 +53,13 @@ Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. The quantity is not
 
 \section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
 \subsection{Open Dataset Analysis}
-
 This open dataset was used to compare the MPW and the RAT fitted results.
 
-The electron elastic scattering process was discussed in \ref{sect:weakInteraction}.
-
-In SNO+ water phase, solar $\nu_e$s are basically measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$. The maximum kinetic energy of the recoil electron is
-$T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$
-the cross-section is $\sigma(\nu_e+e^-\to \nu_e+e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
-the expected solar neutrino rate is 
-$R=A\int_{T_{thresh}}^{T_{max}}\frac{d\sigma}{dE}\frac{dN}{dE_\nu}dE_\nu$.
-
-The direction of the scattered electron is correlated with the direction of the incident neutrino.
-A ``solar angle'', $\theta_{sun}$ is the direction of the event relative to the Sun's location,
-
-
-$\nu-e^-$ elastic scattering: 
-\begin{equation}\label{eq:costhetaSun}
-\cos\theta_{sun}=\sqrt{\frac{T_e(m_e+E_\nu)^2}{2m_eE_\nu^2+T_eE_\nu^2}}
-\end{equation}
-
-For the data, the solar angle is defined as:
+In SNO+ water phase, solar $\nu_e$s are measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$, which was discussed in Sect.~\ref{sect:weakInteraction}. The observable quantity is the solar angle $\theta_{sun}$, the direction of the event relative to the Sun's location, which is defined as:
 \begin{equation}
-	\cos\theta_{sun}\equiv \vec u_{event}\cdot \frac{\vec{X}_{event}-\vec{X}_{sun}}{|\vec{X}_{event}-\vec{X}_{sun}|},
+\cos\theta_{sun}\equiv \vec u_{event}\cdot \frac{\vec{X}_{event}-\vec{X}_{sun}}{|\vec{X}_{event}-\vec{X}_{sun}|},
 \end{equation}
-where $\vec{X}_{sun}$ is taken as the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun.
-
-
+where $\vec{X}_{sun}$ is taken as the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun. 
 
 High level cuts mentioned in \ref{sect:high_level_cuts} were applied.
 
@@ -173,8 +151,6 @@ solar neutrino candidate events in the open dataset.
 Compare the $klDiv$ quantities for the MPW and RAT results. 
 
 A plot of refitting the RAT candidate solar events with the MPW on old dataset.
-
-
 
 \subsection{TMVA Analysis}\ref{sect:tmva}
 The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days for testing and training the TMVA methods.
@@ -370,9 +346,10 @@ The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show t
 \subsubsection{TMVA Outputs for Data}
 
 Fig.~\ref{cosThetaToSun_4to15_BDT} and Fig.~\ref{cosThetaToSun_5to15_BDT} show the BDT selection outputs from the 190.33-day dataset. Fig.~\ref{cosThetaToSun_4to15_MLP} and Fig.~\ref{cosThetaToSun_5to15_MLP} show the MLP outputs. 
+
 Table.~\ref{table:eventNumbers} shows the number of the output events for different energy regions and from different methods.
 
-Cuts on the position and energy FOMs suggested by the collaboration\cite{morganFOM} are \footnote{There is also a suggested cut on the quantity of $position_error$ ($position_error<525~mm$). However, since this quantity was not calculated by the MPW fitter, it was not included here.}: $-11<Z_{factor}<1$, $scaleLogL>10.85$, $0<G_{test}<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Combined with the ``beforehand cuts'', the whole set of cuts is considered as ``default cuts'' here and is compared with the TMVA outputs.
+Cuts on the position and energy FoMs suggested by the collaboration\cite{morganFOM} are \footnote{There is also a suggested cut on the quantity of $position_error$ ($position_error<525~mm$). However, since this quantity was not calculated by the MPW fitter, it was not included here.}: $-11<Z_{factor}<1$, $scaleLogL>10.85$, $0<G_{test}<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Combined with the ``beforehand cuts'', the whole set of cuts is considered as ``default cuts'' here and is compared with the TMVA outputs.
 
 %\begin{table}[ht]
 %	\centering
@@ -610,7 +587,7 @@ For the energy scale, the reconstructed MC energies were scaled up and down the 
 
 %the energy resolution was determined to be $21.0^{+5.0}_{-9.2}\%$ at 5 MeV.
 
-A remapping of $\cos\theta_{sun}$ by using the Equation.~\ref{remapTheta} was applied on the spectrum for evaluating the systematics. a minus symbol should be applied, and it is found as:
+A remapping of $\cos\theta_{sun}$ by using the Eq.~\ref{remapTheta} was applied on the spectrum for evaluating the systematics. a minus symbol should be applied, and it is found as:
 
 \begin{equation}\label{remapThetaSun}
 -\cos\theta_{sun}'=1+(-\cos\theta_{sun}-1)(1+\delta_{\theta}),
@@ -618,8 +595,9 @@ A remapping of $\cos\theta_{sun}$ by using the Equation.~\ref{remapTheta} was ap
 
 So the transformation then becomes: $\cos\theta_{sun}'=-1+(\cos\theta_{sun}+1)(1+\delta_{\theta})$.
 
-Its impact is $^{+0.3}_{-0.2}$ events.
-
+%Its impact is $^{+0.3}_{-0.2}$ events.
+%
+%The position shifts and position scales:
 
 \subsubsection{Evaluating $^8$B Solar Neutrino Flux}
 
@@ -653,27 +631,65 @@ Therefore, the MC generated $\nu_e$ and $\nu_\mu$ are scaled by the $t_{frac}$ a
 
 Reading from the above histograms, the expected event number for $\nu_e$ without the oscillation is $N_{\nu_e} = 322.69$ while including the oscillations, the expected event number for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 113.58$ and $N^{osci}_{\nu_\mu} = 32.64$ respectively, and the combined event number is $N^{osci}_{\nu_e+\nu_\mu}=146.22$.
 
-Applying the same systematics in Table.~\ref{table:ReconSystematics},  
+To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eq.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. The fit result is shown in Fig.~\ref{fig:TOTALfluxFit}.
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{TOTALfluxFit.png}
+	\caption{The gray histogram is the $pdf(\nu_e+\nu_\mu,with~oscillations)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\label{fig:TOTALfluxFit}
+\end{figure}
 
-
-
-
-To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Equation.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux here is:
+Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux here is:
 
 \begin{equation}
 \Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.))\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. The fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
 
-Fig.~\ref{fig:ESfluxFit}. The gray histogram is the $pdf(\nu_e,without~oscillation)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.
+Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC $PDF$, and then do the same flux fit to the data, it finds that the position shift smearing is negligible while the direction and energy smearing give the largest uncertainties. The other systematic results are listed in Table.~\ref{table:smearingResults}.
+
+\begin{table}[ht]
+	\centering
+	\caption{Systematics for the fitted flux scale $f_s$.}
+	\label{table:smearingResults}
+	\begin{tabular*}{80mm}{c@{\extracolsep{\fill}}cc}
+		\toprule
+		Systematics & systematics from fitting $f_s$\\
+		\hline
+		\\
+		x shift & ${f_s}^{+0.000003}_{-0.000045}$\\	
+		y shift & ${f_s}^{-0.00005}_{-0.0001386}$\\
+		z shift & ${f_s}^{+0.0001}_{-0.000138}$\\
+		position scale & ${f_s}^{+0.001324}_{-0.00115}$\\\	
+		$\delta_\theta$  &${f_s}^{+0.312188}_{-0.014131}$\\
+		$E_{scale}$ & ${f_s}^{+0.030241}_{-0.027303}$\\
+		$E_{resol}$ & ${f_s}^{+0.344158}_{-0.22234}$ \\
+		$\beta_{14}$ shifts & ${f_s}^{+0.000178}_{-0.000558}$\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+Using the quadrature calculations, the total systematics is expected to be: ${f_s}^{+0.47}_{-0.22}$. Adding this systematics, the total flux is:
+\begin{equation}
+\Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+2.54}_{-1.23}(syst.))\times 10^6~cm^{-2}s^{-1}.
+\end{equation}
+
+To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{ESfluxFit.png}
+	\caption{The gray histogram is the $pdf(\nu_e,without~oscillation)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\label{fig:ESfluxFit}
+\end{figure}
+
+By using the same procedure to evaluate the systematics, it gives ${f_s}^{+0.172}_{0.145}$.
 
 Thus, for the nominal $^8$B solar neutrino flux, the ES flux is evaluated as:
 \begin{equation}
-\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20\times 10^6~cm^{-2}s^{-1}.
+\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.94}_{-0.79} (syst.)\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
-
 
 Compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-2}s^{-1}$ and the SNO+ 2018 published results: $\Phi_{ES}=2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6~cm^{-2}s^{-1}$.
 
@@ -684,19 +700,17 @@ Compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-
 %	\label{fig:fluxVsE}
 %\end{figure}
 
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=8cm]{ESfluxFit.png}
+%	\caption{$^8B$ solar neutrino flux as a function of energies. The $P_{ee}$ curve obtained from the \texttt{RAT} is in red.}
+%	\label{fig:fluxVsE}
+%\end{figure}
 
-Taking the systematics into accounts,
-\begin{equation}
-\Phi_{^8B,sys} = \Phi_{^8B,MC}\frac{N_{fit}}{N_{expected}}\sqrt{(\frac{N_{expected,sys}}{N_{expected}})^2+(\frac{N_{fit,sys}}{N_{fit}})^2},
-\end{equation}
+\subsubsection{Limitations of this Study}
+Here I used the background types descried in the Table.~\ref{table:mixed_MC}, which were not complete. There were a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmogenic ones mainly caused by the cosmic muons. A more comprehensive study requires to include all possible backgrounds.
 
-
-
-\subsubsection{Limits of this Study}
-Here I used the background types descried in the Table.~\ref{table:mixed_MC}. However, there are a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmogenic ones mainly caused by the cosmic muons. A more comprehensive study requires to include all possible backgrounds.
-
-For the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic shape of the distribution can be investigated to describe the backgrounds more properly.  
-
+For the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic shape of the distribution can be investigated to describe the backgrounds more properly.
 
 %fractions
 %efficiency

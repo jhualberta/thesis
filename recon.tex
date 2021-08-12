@@ -72,7 +72,7 @@ where $t^i_{res}$ is the time residual calculated from the $i^{th}$ hit PMT; NHi
 
 Therefore, the likelihood function starts with a random ($\vec{X}_0,t_0$) as a seed and calculates the likelihoods and their derivatives for various paths assuming straight-line paths of the prompt Cherenkov light from the trial vertex $(\vec{X}_0,t_0)$ to each of the hit PMTs. The trial vertex is varied until the likelihood function reaches the global maximum when the best-fit vertex is found.
 
-This fitting scheme is tackled by the Levenberg-Marquardt (MRQ) method, which is commonly used for fitting the nonlinear model with multiple parameters. This method is described in detail in the Sect.~\ref{appendix:MRQ} and its applications for the \texttt{MP fitter} framework are also described. Also see Ref.~\cite{gregory2005bayesian, press2007numerical} for details.
+This fitting scheme is tackled by the Levenberg-Marquardt (MRQ) method, which is commonly used for fitting the nonlinear model with multiple parameters. This method is described in detail in the Sect.~\ref{appendix:MRQ} and its applications for the \texttt{MP fitter} framework are also described. Also see Refs.~\cite{gregory2005bayesian, press2007numerical} for details.
 
 As will be shown in the following sections, one of the main tasks for the fitter is to calculate the $t_{transit}$ by evaluating light paths.  As mentioned at the beginning, the water phase geometry is the simplest situation. While in the other situations, the AV is filled with the wavelength shifter or scintillator. They are different materials with cavity water, making the light path calculations complicated.
 
@@ -166,7 +166,7 @@ This analysis found the $v_{gr}=c/n_{water,eff}=216.478~mm/ns$, where $n_{water,
 
 The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs\cite{groupVmeasure,anderson2021optical}.
 
-For the scintillator and partial-fill phase vertex fitters, I adopt a linear interpolation method described in \cite{coulter2013modelling}, which will be discussed in section \ref{sect:scintFitter}.
+For the vertex fitters used in the partial-fill and scintillator phases, since no internal calibration was performed, I adopt a linear interpolation method described in Ref.~\cite{coulter2013modelling}. It will be discussed in Sect.~\ref{sect:scintFitter}.
 
 \subsection{Fitter Pull and Drive Correction}\label{sect:fitterPull}
 
@@ -263,7 +263,7 @@ The events with the same settings but different energies, from 2 MeV to 15 MeV b
 	\label{fig:MPWposResol}
 \end{figure}
 
-A more generic situation is that the events happens everywhere inside the AV. In this simulation, $e^-$ events were generated uniformly inside the AV volume. 
+A more generic situation is that the events happens everywhere inside the AV. In this simulation, $e^-$ events were generated uniformly inside the AV volume. The results are shown in Fig.~\ref{fig:MPWposResol_isoFill}.
 
 \begin{figure}[htbp]
 	\centering	
@@ -300,20 +300,20 @@ The $\gamma$ events with energies of 2.2 MeV and 4.4 MeV are crucial for analyzi
 \begin{figure}[htbp]
 	\centering
 	\subfigure[$x_{fit}-x_{mc}$]{
-		\begin{minipage}[t]{0.38\textwidth}
-			\includegraphics[width=6cm]{X_2p2MeVgamma.pdf}
+		\begin{minipage}[t]{0.5\textwidth}
+			\includegraphics[width=8cm]{X_2p2MeVgamma.pdf}
 		\end{minipage}
 	}   
 	\subfigure[$y_{fit}-y_{mc}$]{ 
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6cm]{Y_2p2MeVgamma.pdf}
+			\includegraphics[width=8cm]{Y_2p2MeVgamma.pdf}
 		\end{minipage}
 	}
 	\subfigure[$z_{fit}-z_{mc}$]{ 
 		\begin{minipage}[b]{0.32\textwidth}
 			\centering
-			\includegraphics[width=6cm]{Z_2p2MeVgamma.pdf}
+			\includegraphics[width=8cm]{Z_2p2MeVgamma.pdf}
 		\end{minipage}
 	}
 	\caption{Distributions of fit position bias projected on x axis ($\vec{X}_{fit}-\vec{X}_{MC}$) for $10^5$ MC simulations of 2.2 MeV $\gamma$ events.}
@@ -325,23 +325,23 @@ The $\gamma$ events with energies of 2.2 MeV and 4.4 MeV are crucial for analyzi
 \begin{figure}[htbp]
 	\centering
 	\subfigure[$x_{fit}-x_{mc}$]{
-		\begin{minipage}[t]{0.38\textwidth}
-			\includegraphics[width=6cm]{X_4p4MeVgamma.pdf}
+		\begin{minipage}[t]{0.5\textwidth}
+			\includegraphics[width=8cm]{X_4p4MeVgamma.pdf}
 		\end{minipage}
 	}   
 	\subfigure[$y_{fit}-y_{mc}$]{ 
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6cm]{Y_4p4MeVgamma.pdf}
+			\includegraphics[width=8cm]{Y_4p4MeVgamma.pdf}
 		\end{minipage}
 	}
 	\subfigure[$z_{fit}-z_{mc}$]{ 
 		\begin{minipage}[b]{0.32\textwidth}
 			\centering
-			\includegraphics[width=6cm]{Z_4p4MeVgamma.pdf}
+			\includegraphics[width=8cm]{Z_4p4MeVgamma.pdf}
 		\end{minipage}
 	}
-	\caption{Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$) for 10000 MC simulations of 4.4 MeV $\gamma$ events.}
+	\caption{Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$) for 10000 MC simulations of 4.4-MeV $\gamma$ events.}
 \end{figure}
 
 \subsubsection{Test on $^{16}$N Calibration Source Events}
@@ -391,7 +391,7 @@ In the wbWLS case, since the WLS absorbs and re-emits photons, the reconstructio
 
 To reconstruct the direction, besides the angular distribution of Cherenkov photons, $\cos\theta_{Ch}$, we also consider the fraction of the re-emitted and wavelength shifted photons that cause a flat angular distribution.
 
-To test the performance of the \texttt{MP WLS Fitter}, 5 MeV electrons were simulated at the center of the AV filled with wbWLS and traveling along +x direction. As a comparison, the same simulation was done for the AV filled with pure water and the simulated events were reconstructed by the water fitter.
+To test the performance of the \texttt{MP WLS Fitter}, 5 MeV $e^-$ were simulated at the center of the AV filled with wbWLS and traveling along +x direction. As a comparison, the same simulation was done for the AV filled with pure water and the simulated events were reconstructed by the water fitter.
 
 Fig.~\ref{WLSFitPos} shows the performance of the WLS fitter reconstructed positions of the MC simulations compared to the pure water case. For the fit position distribution of 5 MeV electrons in the wbWLS, we get a root mean square (RMS) of 201 mm and a bias to the center (the mean of histogram) of 29 mm. Compared to the pure water case, the fit bias is about 19 mm better and the RMS is 188 mm better.
 
@@ -585,7 +585,31 @@ I wrote a python tool to create the timing $PDF$s to re-coordinate the partial f
 
 Interestingly, if using a timing $PDF$ with a wrong concentration to the actual data, the fit position biases are small. I simulated 3-MeV $e^-$ uniformly distributed in the LAB+0.25 g/L PPO scintillator with isotropic directions, and then reconstructed the simulated events by using the 0.5, 1 and 2 g/L PPO timing $PDF$s respectively. All these reconstructions gave the fitted positions closed to the correct reconstruction using the 0.25 g/L timing $PDF$, with differences in the Gaussian means around 5 mm in x, y and z axes, which were not significant biases. In the other cases, I simulated the same 3-MeV $e^-$ events in LAB+2 g/L PPO and reconstructed by using the timing $PDF$s with lower PPO concentrations (0.25, 0.5 and 1 g/L PPO respectively), differences in the Gaussian means were within 5 mm\cite{partialFitterPDFtestInvulnerable}. It shows that the \texttt{MP partial fitter} is invulnerable to the changes caused by different PPO concentrations.
 
-radial biases
+As mentioned in Sect.~\ref{sect:tuneGroupVelocity}, 
+Tuning effective group velocity: 
+In the full-fill geometry (scintillator phase)
+ 
+5000 simulations of 3-MeV $e^-$ generated uniformly inside the AV with isotropic directions. filled with LAB+various concentrations of PPO. 
+
+
+Partial-fill: 5000 simulations of 3 MeV e- generated uniformly and isotropically in the scintillator region in partial-fill geometry with, with a water level setting at z = 3000 mm in the AV coordination. 
+Fig.~\ref{fig:scint_groupVelocity} shows the 0.5 g/L PPO case as an example. Table.~\ref{partial_groupV} lists the tuned effective group velocities.
+	
+\begin{figure}[htbp]\label{fig:scint_groupVelocity}
+	\subfigure[Tuning the $v_{gr,scint}$.]{
+		\begin{minipage}[t]{0.6\textwidth}
+		\centering
+			\includegraphics[width=8cm]{tune_groupVelocity_scint.png}
+		\end{minipage}
+	}   
+	\subfigure[Tuning the $v_{gr,water}$.]{ 
+		\begin{minipage}[t]{0.6\textwidth}
+			\centering
+			\includegraphics[width=8cm]{tune_groupVelocity_water.png}
+		\end{minipage}
+	}
+\end{figure}
+
 \begin{table}[ht]
 	\centering
 	\caption{\label{partial_groupV}Tuned effective group velocities for different PPO concentrations.}	
@@ -658,7 +682,7 @@ The performance of the fitter was studied with MC simulations. In a partial fill
 	\label{partial_fit_rz}
 \end{figure}
 
-Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the MP Partial Fitter reconstructed results for these simulations. Fig.~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
+Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the \texttt{MP partial fitter} reconstructed results for these simulations. Fig.~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
 
 \begin{table}[ht]
 	\caption{Reconstructed position biases and resolutions for simulated events in partial fill.}
@@ -852,8 +876,6 @@ $5\,MeV$
 
 estimated $N_\gamma$,
 
-
-
 energy look up\cite{energyRSP}.
 (\texttt{energyRSP})
 
@@ -868,12 +890,12 @@ energy look up\cite{energyRSP}.
 %	// of Cerenkov photons from the prompt hits. This fitter is only
 %	// for a detector geometry with light water in the inner av.
 
-In the next chapter, the resolutions and scales of the energy fitter in the water phase are derived from the $^{16}$N calibration scans at certain detector points.
+In the next chapter, the resolutions and scales of the energy fitter in the water phase were derived from the $^{16}$N calibration scans at certain detector points.
 
 Energy lookup table built from the simulation data set.
 
 \subsection{Energy Figure of Merit}\label{sect:energy_fom}
-The SNO+ Antineutrino working group developed three figure of merit (FOM) quantities for the energy fitter to identify the poor reconstructed results which have significant biases to the truth energy values, especially for the low energy regions around 2.2-MeV, which helps the analysis of neutron capture\cite{waterFoM,waterunidoc}. The following energy FOMs were applied to the energy reconstruction results during the water phase, discussed in the next chapter.
+The SNO+ Antineutrino working group developed three figure of merit (FoM) quantities for the energy fitter to identify the poor reconstructed results which have significant biases to the truth energy values, especially for the low energy regions around 2.2-MeV, which helps the analysis of neutron capture\cite{waterFoM,waterunidoc}. The following energy FoMs were applied to the energy reconstruction results during the water phase, discussed in the next chapter.
 
 \begin{itemize}
 	
@@ -917,27 +939,7 @@ E = p_0+p_1\cdot NHit+p_2\cdot NHit^2
 
 NHits ratio table based on position.
 
-
-\section{Other Reconstruction Algorithms}
-\subsection{Hough Transformation for Direction Reconstruction}
-
-Hough transformation is a pattern recognition algorithm used in image analysis and computer vision\cite{davies1997machine}. This algorithm was first implemented to extract patterns in bubble chamber\cite{houghwiki}, 
-
-is used by Super-K\cite{shiozawa1999reconstruction}.
-
-The Hough transformation algorithm was used in SNO data analysis for counting the numbers of the Cherenkov rings caused by multiple charged particles in a high energy event such as atmospheric neutrinos event\cite{bonventre2014neutron}. It is also suggested for the reconstruction of event direction in the SNO+ scintillator phase\cite{houghTransform}.
-
-As illustrated in Fig.~\ref{houghTrans}, 
-
-circular Hough transformation
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{houghTransform.png}
-	\caption{Hough transformation for catching the ring structure of Cherenkov signals and fitting the direction.}
-	\label{houghTrans}
-\end{figure}
-
-\subsection{Deep Learning}
+\section{Deep Learning}
 Nowadays, the vast amount of data available to particle experiments make it feasible to implement machine learning and deep learning methods for data analysis. At the time of this writing, a deep learning framework is being developed\cite{markMachineLearning,markNeuralTalk,markNeuralNetwork}. This method investigates the relation between the hit PMT distributions and the event reconstruction, currently for the position and direction. It trains neural networks based on the MC simulation datasets (with $\mathcal{O}(10^6)$ events) as well as the calibration datasets to predict the event position and direction\cite{markNeuralTalk}. A few physics-based loss functions, such as the loss function checking the $t_{res}$, can be further included to improve the reconstruction performance\cite{markNeuralTalk}. 
 
 Once the neural networks are trained, the reconstruction speed is expected to be 100 to 1000 times quicker than the traditional likelihood-fit method running on the CPU (Central Processing Unit). Since the deep learning method can also utilize the computing power of the GPU (Graphics Processing Unit), it is expected to be $10^4$ times quicker\cite{markNeuralTalk,markNeuralNetwork}. Such a fast speed reconstruction will be promising to be applied in the scintillator phase, where it is time-consuming for reconstructing the higher $\mathrm{NHits}$ events. The deep learning framework is also expected to aid the data analysis.
