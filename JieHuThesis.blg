@@ -17,14 +17,11 @@ Repeated entry---line 1595 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1782 of file thesis.bib
+Repeated entry---line 1777 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "snop_nim"
 Warning--I didn't find a database entry for "sect:fukuda1998evidence"
-Warning--I didn't find a database entry for "agostini2016search"
-Warning--I didn't find a database entry for "agostini2017discovery"
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in snop_jinst
 Warning--empty year in matt_deployedsource
@@ -32,7 +29,6 @@ Warning--empty year in n16geom_zach
 Warning--empty year in n16pic
 Warning--empty year in laserball_groupVelocity
 Warning--empty year in driveCorPeter
-Warning--empty year in skyshine
 Warning--empty year in oxfordMeasurement
 Warning--empty year in directorReview
 Warning--empty year in partialWater
@@ -41,9 +37,6 @@ Warning--empty year in kalpanaWLS
 Warning--empty year in kalpanaWLS2
 Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
-Warning--empty journal in rottele2019tritium
-Warning--can't use both volume and number fields in han2020pandax
-Warning--empty journal in piperno2015dark
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in davini2016cno
@@ -81,8 +74,6 @@ Warning--empty year in waterFoM
 Warning--empty year in waterunidoc
 Warning--empty year in partialEnergy
 Warning--empty year in partialEnergyYang
-Warning--empty journal in davies1997machine
-Warning--empty year in houghTransform
 Warning--empty year in markMachineLearning
 Warning--empty year in markNeuralTalk
 Warning--empty year in markNeuralNetwork
@@ -92,16 +83,22 @@ Warning--empty year in beta14discrepancy
 Warning--empty year in leta
 Warning--empty year in morganFOM
 Warning--empty year in fady_pselmaa
+Warning--empty journal in rottele2019tritium
+Warning--empty journal in piperno2015dark
+Warning--can't use both volume and number fields in han2020pandax
 Warning--there's a number but no series in perkins2009particle
 Warning--empty author in operator
 Warning--empty year in operator
 Warning--empty author in joshTrigger
 Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
+Warning--empty journal in davies1997machine
+Warning--empty year in houghTransform
+Warning--empty year in skyshine
 Warning--empty year in brianLowBG
 You've used 210 entries,
             1876 wiz_defined-function locations,
-            1468 strings with 36131 characters,
+            1465 strings with 36084 characters,
 and the built_in function-call counts, 44137 in all, are:
 = -- 3872
 > -- 2389

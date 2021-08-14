@@ -582,22 +582,37 @@ The systematics of position, direction and energy reconstruction were obtained f
 	\end{tabular*}\label{table:ReconSystematics}
 \end{table}
 
-%energy scale
-For the energy scale, the reconstructed MC energies were scaled up and down the expected number of signal events, the uncertainty on the expected number of events was obtained to be $^{+0.05}_{-0.06}$.
+These systematics are considered as uncorrelated and were applied on the ES $PDF$ independently.
+
+\begin{itemize}
+\item Energy scale and resolution
+For the energy scale, the reconstructed MC energies
+$T'_e = (1\pm\delta_E)T_e$.
+
+ were scaled up and down the expected number of signal events, the uncertainty on the expected number of events was obtained to be $^{+0.05}_{-0.06}$.
+
+energy resolution, smear the reconstructed MC energies by a normalized Gaussian distribution:
+$E'_{fit}=Gaus(energy,\sigma)$, 
+$\sigma^2 = \sigma^2_E[(1+\delta_\sigma)^2]-1$, and $\sigma_E=\sqrt{E_{fit}}$
+
+
 
 %the energy resolution was determined to be $21.0^{+5.0}_{-9.2}\%$ at 5 MeV.
+\item Direction
 
-A remapping of $\cos\theta_{sun}$ by using the Eq.~\ref{remapTheta} was applied on the spectrum for evaluating the systematics. a minus symbol should be applied, and it is found as:
-
+To apply systematics in direction, a remapping equation of $\cos\theta_{sun}$ was derived by the SNO collaboration Ref.~\cite{drouin2012three}:
 \begin{equation}\label{remapThetaSun}
--\cos\theta_{sun}'=1+(-\cos\theta_{sun}-1)(1+\delta_{\theta}),
+\cos\theta_{sun}'=1+\frac{\cos\theta_{sun}-1}{1+\delta_\theta},
 \end{equation} 
 
-So the transformation then becomes: $\cos\theta_{sun}'=-1+(\cos\theta_{sun}+1)(1+\delta_{\theta})$.
+By applying the Eqn.~\ref{remapTheta} on the MC $PDF$, 
+
+For the rare case when $\cos\theta_{sun}'<-1$ happened, which is unphysical and is considered as an effect introduced from mis-reconstruction, a random value was picked uniformly in [-1,1] for the $\cos\theta_{sun}'$; while for $\cos\theta_{sun}>+1$, 0.99 was assigned.
 
 %Its impact is $^{+0.3}_{-0.2}$ events.
 %
 %The position shifts and position scales:
+\end{itemize}
 
 \subsubsection{Evaluating $^8$B Solar Neutrino Flux}
 
@@ -631,7 +646,7 @@ Therefore, the MC generated $\nu_e$ and $\nu_\mu$ are scaled by the $t_{frac}$ a
 
 Reading from the above histograms, the expected event number for $\nu_e$ without the oscillation is $N_{\nu_e} = 322.69$ while including the oscillations, the expected event number for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 113.58$ and $N^{osci}_{\nu_\mu} = 32.64$ respectively, and the combined event number is $N^{osci}_{\nu_e+\nu_\mu}=146.22$.
 
-To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eq.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. The fit result is shown in Fig.~\ref{fig:TOTALfluxFit}.
+To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eqn.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. The fit result is shown in Fig.~\ref{fig:TOTALfluxFit}.
 
 \begin{figure}[!htb]
 	\centering
@@ -647,7 +662,7 @@ Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 1
 \end{equation}
 
 
-Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC $PDF$, and then do the same flux fit to the data, it finds that the position shift smearing is negligible while the direction and energy smearing give the largest uncertainties. The other systematic results are listed in Table.~\ref{table:smearingResults}.
+Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC ES $PDF$, and then do the same flux fit to the data, it finds that the position shift smearing is negligible while the direction and energy smearing give the largest uncertainties. The other systematic results are listed in Table.~\ref{table:smearingResults}.
 
 \begin{table}[ht]
 	\centering
@@ -664,7 +679,7 @@ Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC $
 		position scale & ${f_s}^{+0.001324}_{-0.00115}$\\\	
 		$\delta_\theta$  &${f_s}^{+0.312188}_{-0.014131}$\\
 		$E_{scale}$ & ${f_s}^{+0.030241}_{-0.027303}$\\
-		$E_{resol}$ & ${f_s}^{+0.344158}_{-0.22234}$ \\
+		$E_{resol}$ & ${f_s}^{+0.00026}_{-0.00026}$ \\
 		$\beta_{14}$ shifts & ${f_s}^{+0.000178}_{-0.000558}$\\
 		\bottomrule
 	\end{tabular*}

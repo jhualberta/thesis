@@ -146,13 +146,13 @@ Then the probability of $\nu_\alpha$ at time $t_0=0$ transforms into a $\nu_\bet
 \end{equation}
 where $(i\leftrightarrow j)$ stands for the second term exchanging the $i,j$ indices.
 
-For the second term in Eq.~\ref{oscillationEq1}, in the ultra-relativistic case, $p_i\simeq p_j\equiv p\simeq E\gg m$, where $E$ is the average energy. Then $E_i=\sqrt{p^2_i+m^2_i}\simeq p+\frac{m_i^2}{2E}$ and thus $E_i-E_j\simeq \frac{m^2_i-m^2_j}{2E}\equiv \frac{\Delta m^2_{ij}}{2E}$\cite{pdg2020,aitchison2012gauge}. Here $\Delta m^2_{ij}$ is a set of parameters called mass square difference, popping out in the flavor transition probability. Along with $L\simeq ct=t~(c\equiv 1)$, we have $\exp\{-i(E_i-E_j)t+i(p_i-p_j)L\}\simeq \exp\{-i\frac{\Delta m^2_{ij}}{2E}\}$. In addition, $U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}=|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\exp\{i\phi_{\alpha\beta;ij}\}$, where $\phi_{\alpha\beta;ij}=\mathrm{Arg}(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})$ and $\phi_{\alpha\beta;ij}=-\phi_{\alpha\beta;ji}$. Then combine the second term and the $(i\leftrightarrow j)$ term, \ref{oscillationEq1} can be written as\cite{aitchison2012gauge}:
+For the second term in Eqn.~\ref{oscillationEq1}, in the ultra-relativistic case, $p_i\simeq p_j\equiv p\simeq E\gg m$, where $E$ is the average energy. Then $E_i=\sqrt{p^2_i+m^2_i}\simeq p+\frac{m_i^2}{2E}$ and thus $E_i-E_j\simeq \frac{m^2_i-m^2_j}{2E}\equiv \frac{\Delta m^2_{ij}}{2E}$\cite{pdg2020,aitchison2012gauge}. Here $\Delta m^2_{ij}$ is a set of parameters called mass square difference, popping out in the flavor transition probability. Along with $L\simeq ct=t~(c\equiv 1)$, we have $\exp\{-i(E_i-E_j)t+i(p_i-p_j)L\}\simeq \exp\{-i\frac{\Delta m^2_{ij}}{2E}\}$. In addition, $U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}=|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\exp\{i\phi_{\alpha\beta;ij}\}$, where $\phi_{\alpha\beta;ij}=\mathrm{Arg}(U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j})$ and $\phi_{\alpha\beta;ij}=-\phi_{\alpha\beta;ji}$. Then combine the second term and the $(i\leftrightarrow j)$ term, \ref{oscillationEq1} can be written as\cite{aitchison2012gauge}:
 \begin{equation}\label{oscillationEq2}
 P_{\nu_\alpha\to\nu_\beta}(L,E)=
 \sum_i |U_{\alpha i}|^2|U_{\beta i}|^2 + 2\sum_{i>j}|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\cos(\frac{\Delta m^2_{ij}}{2E}L-\phi_{\alpha\beta;ij}).
 \end{equation}
 
-Further expand the second term in Eq.~\ref{oscillationEq2}:
+Further expand the second term in Eqn.~\ref{oscillationEq2}:
 \begin{equation}
  \begin{split}
 &|U^*_{\alpha i}U_{\beta i}U_{\alpha j}U^*_{\beta j}|\{\cos(\phi_{\alpha\beta;ij})\cos(\frac{\Delta m^2_{ij}}{2E}L)+\sin(\phi_{\alpha\beta;ij})\sin(\frac{\Delta m^2_{ij}}{2E}L)\}=\\
@@ -511,8 +511,10 @@ $7.20\times 10^{-5}<\Delta m^2_{12}<7.51\times 10^{-5}$
 \section{Neutrino Mass}\label{section:directMeasure}
 The neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses\cite{valle2015neutrinos}:
 \begin{itemize}
-	\item Cosmological measurements. \cite{dvorkin2019neutrino,gerbino2018status,aghanim2020planck}
-	\item Direct measurements of the $\beta$-decay spectrum;
+	\item Cosmological measurements. The massive neutrinos can leave imprints on cosmological observables and play an important role in the formation and evolution of the universe. Combining the cosmological data, such as the Cosmic Microwave Background (CMB) data from the Planck space observatory (updated to 2018 results), the Baryon Acoustic Oscillations (BAO) and etc., a tight 95\% constraint on the sum of the masses of the three active types of neutrinos is obtained as: $\sum m_\nu<0.12~eV$\cite{aghanim2020planck}. Currently, the cosmological approaches provide the strongest upper limit of the sum of neutrino masses\cite{dvorkin2019neutrino}. On the other hand, these measurements are strongly model-dependent\cite{lesgourgues2013neutrino}.
+	\item Direct measurements of the $\beta$-decay spectrum.
+	 The KArlsruhe TRItium Neutrino (KATRIN) experiment measures the $\beta$-decay from tritium ($^3$H$\to^3$He$^+$+$e^-+\bar{\nu}_e$). In 2019, the experiment reported an upper limit of $m_\nu<1.1$ eV with 90\% C.L.. After 5 years of measurement, it is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L.\cite{aker2019improved}.
+	 
 	\item A search for the neutrinoless double beta decay ($0\nu\beta\beta$) process. This is the main physics target of the SNO+ experiment and it will be discussed in the following sections.
 \end{itemize}
 
@@ -523,7 +525,7 @@ Based on mathematical aesthetics, Ettore Majorana found a representation which m
 \subsection{Neutrinoless Double Beta Decay}
 For heavy radioactive isotopes ($A>70$) with nuclei of even neutron number and even proton number (called the even-even nucleus), beta decay will lead to an odd-odd nucleus which is less stable. Thus for such isotopes, the $\beta$-decay is energetically forbidden. In 1935, Maria Goeppert-Mayer pointed out that these isotopes can still decay through a double beta decay process: $(Z,A) \to (Z+2,A)+2e^{-}+2\bar{\nu}_e+Q_{\beta\beta}$, where $Q_{\beta\beta}$ is the released energy. This is called ordinary double beta decay or $2\nu\beta\beta$, which is allowed by the Standard Model and with a typical half-life $T_{1/2}>10^{19}$ years (yr)\cite{povh2008particles,martin2019nuclear}.
 
-If neutrinos are Majorana particles, a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected: $(Z,A) \to (Z+2,A)+2e^{-}+Q_{\beta\beta}$. In this process, the lepton number is violated by 2, which is not allowed in the SM. As mentioned in \ref{section:Majorana}, New Physics interpretations for the process are required. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Fig.~\ref{feynman1}.
+If neutrinos are Majorana particles, a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected: $(Z,A) \to (Z+2,A)+2e^{-}+Q_{\beta\beta}$. In this process, the lepton number is violated by 2, which is not allowed in the SM. As mentioned in Sect.~ \ref{section:Majorana}, New Physics interpretations for the process are required. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Fig.~\ref{feynman1}.
 \begin{figure}[htbp]
 	\centering
 	{	
@@ -538,5 +540,9 @@ If neutrinos are Majorana particles, a process called neutrinoless double beta d
 	}
 \end{figure}
 
-
+Integrating the $\delta t$ with a weight of the nuclear matrix element, the decay width and the half-life are obtained as\cite{suekane2015neutrino,zuber2020neutrino}:
+\begin{equation}
+\Gamma=(T^{0\nu\beta\beta}_{1/2})^{-1} = G_{PS}(Q,Z)|M_{Nuclear}|^2\langle m_{ee}\rangle^2, 
+\end{equation}
+where $G_{PS}(Q,Z)$ is a phase space corresponding to the effective coupling constant, which depends on the endpoint energy $Q$ and the atomic number $Z$; $|M_{Nuclear}|$ is the nuclear matrix element describing the nuclear transition and it can only be calculated theoretically from approximate methods based on many-body nuclear models, such as the Nuclear Shell Model (NSM),
 
