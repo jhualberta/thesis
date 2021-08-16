@@ -2,8 +2,8 @@
 \contentsline {section}{\numberline {0.1}Abstract}{iii}{section.0.1}
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Contents}{v}{chapter*.2}
-\contentsline {chapter}{List of Figures}{x}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xix}{chapter*.4}
+\contentsline {chapter}{List of Figures}{vi}{chapter*.3}
+\contentsline {chapter}{List of Tables}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Basic properties of Neutrinos}{5}{section.2.1}
@@ -84,21 +84,21 @@
 \contentsline {section}{\numberline {5.1}\isotope [16]{N} Calibration Scans in the Water Phase}{98}{section.5.1}
 \contentsline {section}{\numberline {5.2}High Level Cuts for the Water Phase}{99}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Effects of the High-level Cuts}{100}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}Reconstruction Evaluations from $^{16}$N Calibration Scans in the Water Phase}{102}{section.5.3}
+\contentsline {section}{\numberline {5.3}Reconstruction Evaluations from $^{16}$N Calibration Scans in the Water Phase}{101}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Position Reconstruction Evaluation}{102}{subsection.5.3.1}
 \contentsline {subsubsection}{\numberline {5.3.1.1}Position Figure of Merit}{102}{subsubsection.5.3.1.1}
 \contentsline {subsubsection}{\numberline {5.3.1.2}Position Resolution}{104}{subsubsection.5.3.1.2}
-\contentsline {subsubsection}{\numberline {5.3.1.3}Position Systematics}{106}{subsubsection.5.3.1.3}
-\contentsline {subsubsection}{\numberline {5.3.1.4}Vertex Scale Uncertainties}{112}{subsubsection.5.3.1.4}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Position Systematics}{107}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}Vertex Scale Uncertainties}{110}{subsubsection.5.3.1.4}
 \contentsline {subsection}{\numberline {5.3.2}Direction Reconstruction Evaluation}{113}{subsection.5.3.2}
 \contentsline {subsubsection}{\numberline {5.3.2.1}Direction Resolution}{113}{subsubsection.5.3.2.1}
-\contentsline {subsubsection}{\numberline {5.3.2.2}Direction Systematics}{115}{subsubsection.5.3.2.2}
-\contentsline {subsection}{\numberline {5.3.3}$\beta _{14}$ and Its Systematic}{116}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{120}{subsection.5.3.4}
-\contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{120}{subsubsection.5.3.4.1}
-\contentsline {subsubsection}{\numberline {5.3.4.2}Eenrgy Resolution and Systematics}{122}{subsubsection.5.3.4.2}
-\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{124}{subsubsection.5.3.4.3}
-\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{126}{subsubsection.5.3.4.4}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Direction Systematics}{114}{subsubsection.5.3.2.2}
+\contentsline {subsection}{\numberline {5.3.3}$\beta _{14}$ and Its Systematic}{117}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{119}{subsection.5.3.4}
+\contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{119}{subsubsection.5.3.4.1}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Eenrgy Resolution and Systematics}{121}{subsubsection.5.3.4.2}
+\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{123}{subsubsection.5.3.4.3}
+\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{125}{subsubsection.5.3.4.4}
 \contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{128}{chapter.6}
 \contentsline {section}{\numberline {6.1}Detector Backgrounds}{129}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{129}{subsection.6.1.1}
@@ -112,9 +112,9 @@
 \contentsline {subsubsection}{\numberline {6.3.4.1}Maximum Likelihood Fit}{142}{subsubsection.6.3.4.1}
 \contentsline {subsubsection}{\numberline {6.3.4.2}Ensemble Test}{143}{subsubsection.6.3.4.2}
 \contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{145}{subsubsection.6.3.4.3}
-\contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{147}{subsubsection.6.3.4.4}
+\contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{146}{subsubsection.6.3.4.4}
 \contentsline {subsubsection}{\numberline {6.3.4.5}Evaluating $^8$B Solar Neutrino Flux}{149}{subsubsection.6.3.4.5}
-\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{153}{subsubsection.6.3.4.6}
+\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{152}{subsubsection.6.3.4.6}
 \contentsline {chapter}{\numberline {7}Conclusions}{154}{chapter.7}
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{155}{appendix.A}
 \contentsline {section}{\numberline {A.1}Create a Random Vertex}{155}{section.A.1}
