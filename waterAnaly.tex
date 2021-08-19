@@ -41,7 +41,7 @@ These values were used for distinguishing the signal from backgrounds, which wil
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{klDiv_example.png}
-	\caption{Angular distributions of the MC events in run-by-run simulation 206391, with the same event GTID =7. The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The pdf is scaled to the number of the hits in solar $\nu_e$ event (black dashed line) and the $^{214}$Bi event (red dotted line) respectively.}
+	\caption[Angular distributions of the MC events in run-by-run simulations.]{Angular distributions of the MC events in run-by-run simulations of run-206391, with the same event GTID =7. The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The $PDF$ is scaled to the number of the hits in solar $\nu_e$ event (black dashed line) and the $^{214}$Bi event (red dotted line) respectively.}
 	\label{kLdiv_example}
 \end{figure}
 
@@ -143,7 +143,7 @@ solar neutrino candidate events in the open dataset.
 			{\includegraphics[width=5cm]{solarLegends.png}}
 		\end{minipage}
 	}
-	\caption{Fit results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for
+	\caption[Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.]{Reconstruction results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for
 		the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}
 	\label{openDataSetCandidate}
 \end{figure}
@@ -186,7 +186,7 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{TMVA_bkgs_1.png}
-	\caption{Energy spectrum of the simulated events for $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu_e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}
+	\caption[Energy spectrum of events from different simulations.]{Energy spectrum of events from different simulations: $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu_e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}
 	\label{TMVA_bkgs_1}
 \end{figure}
 
@@ -258,14 +258,14 @@ where the Fisher/LD is the worst case; the BDT and MLP outputs are close to each
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ROC_E5to15.pdf}
-	\caption{ROC curves from TMVA output, for event with $5<E_{fit}<15~MeV$ (energy above 5 MeV).}
+	\caption{ROC curves from TMVA output, for event with $5<E_{fit}<15$ MeV (energy above 5 MeV).}
 	\label{E5to15_roc}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ROC_E4to5.pdf}
-	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<5~MeV$ (low energy region).}
+	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<5$ MeV (low energy region).}
 	\label{E4to5_roc}
 \end{figure}
 
@@ -378,7 +378,7 @@ Cuts on the position and energy FoMs suggested by the collaboration\cite{morganF
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{cosThetaToSun_4to15_BDT.pdf}
-	\caption{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\caption[BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV.]{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
 	\label{cosThetaToSun_4to15_BDT}
 \end{figure}
 
@@ -392,14 +392,14 @@ Cuts on the position and energy FoMs suggested by the collaboration\cite{morganF
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{cosThetaToSun_5to15_BDT.pdf}
-	\caption{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\caption[BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV.]{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
 	\label{cosThetaToSun_5to15_BDT}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{cosThetaToSun_5to15_MLP.pdf}
-	\caption{MLP output for $\cos\theta_{sun}$, with $5<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\caption[MLP output for $\cos\theta_{sun}$, with $5<E_{fit}<15$ MeV.]{MLP output for $\cos\theta_{sun}$, with $5<E_{fit}<15$ MeV. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
 	\label{cosThetaToSun_5to15_MLP}
 \end{figure}
 
@@ -411,7 +411,7 @@ The main analysis is focused on the [5,15] MeV energy region. A comparison of th
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{Compare_cosThetaSun_5to15.pdf}
-	\caption{For the $5<E_{fit}<15~MeV$, comparing the outputs of the BDT, MLP and the default cuts. The solid blue line shows the BDT results; the red slashes show the MLP results and the dotted black line shows the default cut results.}
+	\caption[A comparison of the outputs of the BDT, MLP and the default cuts for the $5<E_{fit}<15$ MeV.]{A comparison of the outputs of the BDT, MLP and the default cuts for the $5<E_{fit}<15$ MeV. The solid blue line shows the BDT results; the red slashes show the MLP results and the dotted black line shows the default cut results.}
 	\label{compare_cosThetaToSun_5to15}
 \end{figure}
 
@@ -436,7 +436,7 @@ For the background events, a uniform distribution of $\cos\theta_{sun}$ was assu
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{solarPDF.png}
-	\caption{The $\cos\theta_{sun}$ distribution of solar $\nu_e$ extracted from the simulations, which was used as a pdf function.}
+	\caption{The $\cos\theta_{sun}$ distribution of solar $\nu_e$ extracted from the simulations, which was used as a $PDF$ function.}
 	\label{solarPDF}
 \end{figure}
 
@@ -472,7 +472,7 @@ The number of backgrounds in a fake dataset, $N^f_{bkg}$, was assumed to be two 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{cosThetaToSun_halfData_5to15.pdf}
-	\caption{Real data from run-200004 to 203602 (half dataset), after the default cuts. The number of counts in $-1<\cos\theta_{sun}<0$ region is 19.}
+	\caption[Real data from run-200004 to 203602 (half dataset), after the default cuts.]{Real data from run-200004 to 203602 (half dataset), after the default cuts. The number of counts in $-1<\cos\theta_{sun}<0$ region is 19.}
 	\label{half_data}
 \end{figure}
 
@@ -481,7 +481,7 @@ To create the fake datasets, $N^r_{sig}$ ($N^r_{bkg}$) events after the cuts wer
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ensemble_fitExample.pdf}
-	\caption{An example of the randomly generated $\cos\theta_{sun}$ fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line is the fitted results. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fitted results give $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.}
+	\caption[An example of the randomly generated $\cos\theta_{sun}$ fitted with $(N_{sig},N_{bkg})$.]{An example of the randomly generated $\cos\theta_{sun}$ fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line is the fitted results. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fitted results give $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.}
 	\label{ensemble_test}
 \end{figure} 
 
@@ -575,8 +575,8 @@ The systematics of position, direction and energy reconstruction were obtained f
 		y scale & +0.02\%/-0.07\%\\
 		z scale & +0.08\%/-0.01\%\\
 	    $\delta_\theta$  & +0.013/-0.101\\
-	    $E_{scale}$ &  1.13\% \\
-	    $E_{resol}$ &  0.011\\
+	    $E_{scale}~(\Delta_{\delta_E})$ &  1.0\% \\
+	    $E_{resol}~(\Delta_b)$ &  0.037\\
 	    $\beta_{14}$ shifts & +0.010/-0.036\\
 		\bottomrule
 	\end{tabular*}\label{table:ReconSystematics}
@@ -586,16 +586,9 @@ These systematics are considered as uncorrelated and were applied on the ES $PDF
 
 \begin{itemize}
 \item Energy scale and resolution
-For the energy scale, the reconstructed MC energies
-$T'_e = (1\pm\delta_E)T_e$.
+As mentioned in Sect.~\ref{sect:eneryUncertianties}, for the energy scale $\delta_E$, the reconstructed MC energies was scaled up and down by: $E'_{fit} = (1\pm 0.01)E_{fit}$. Applying this transformation to the MC to obtain a smeared $PDF$, the flux spectrum of the data was re-fit and the values of systematics were evaluated.
 
- were scaled up and down the expected number of signal events, the uncertainty on the expected number of events was obtained to be $^{+0.05}_{-0.06}$.
-
-energy resolution, smear the reconstructed MC energies by a normalized Gaussian distribution:
-$E'_{fit}=Gaus(energy,\sigma)$, 
-$\sigma^2 = \sigma^2_E[(1+\delta_\sigma)^2]-1$, and $\sigma_E=\sqrt{E_{fit}}$
-
-
+For the energy resolution $b$, the $E_{fit}$ was randomly resampled from a Gaussian with a mean at $E_{fit}$ and with a resolution of $\sigma_E=\sqrt{0.255E_{fit}}$.
 
 %the energy resolution was determined to be $21.0^{+5.0}_{-9.2}\%$ at 5 MeV.
 \item Direction
@@ -624,7 +617,7 @@ Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, $P_{e\alpha}$ includes
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{PSelmaa_bs05op.pdf}
-	\caption{The MSW survival probability curves as functions of MC energies. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee})$ is in green dashed line.}
+	\caption[The MSW survival probability curves as functions of MC energies.]{The MSW survival probability curves as functions of MC energies. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee})$ is in green dashed line.}
 	\label{fig:pselmaa_curves}
 \end{figure}
 
@@ -640,7 +633,7 @@ Therefore, the MC generated $\nu_e$ and $\nu_\mu$ are scaled by the $t_{frac}$ a
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{MCfluxPdfs.png}
-	\caption{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15~MeV$ after the BDT cuts. The histogram in black is the $\nu_e$ flux without oscillation, referring to $pdf(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The dashed red histogram is the $\nu_e$ flux and the dashed green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the blue histogram as the total flux including the oscillation, referring to $pdf(\nu_e+\nu_\mu,oscillated)$, which is used for fitting the total flux.}
+	\caption{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15~MeV$ after the BDT cuts. The histogram in black is the $\nu_e$ flux without oscillation, denoted by $PDF(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The dashed red histogram is the $\nu_e$ flux and the dashed green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the blue histogram as the total flux including the oscillation, denoted by $PDF(\nu_e+\nu_\mu,oscillated)$, which is used for fitting the total flux.}
 	\label{fig:MCfluxPdfs}
 \end{figure} 
 
@@ -651,7 +644,7 @@ To fit for the total $^8$B neutrino flux, the fit parameter used here is the flu
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{TOTALfluxFit.png}
-	\caption{The gray histogram is the $pdf(\nu_e+\nu_\mu,with~oscillations)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\caption{A fit on the total flux. The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
 	\label{fig:TOTALfluxFit}
 \end{figure}
 
@@ -661,8 +654,7 @@ Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 1
 \Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.))\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-
-Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC ES $PDF$, and then do the same flux fit to the data, it finds that the position shift smearing is negligible while the direction and energy smearing give the largest uncertainties. The other systematic results are listed in Table.~\ref{table:smearingResults}.
+Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC ES $PDF$, and then refit the data with the smeared $PDF$, new values of the flux ratio based on the smeared $PDF$ ($f'_s$) were found. These values were compared to the unmeasured one by $\Delta f_s =f'_s-f_s$ to obtain the systematics of the $f_s$. It finds that the position and $\beta_{14}$ smearing are negligible while the direction and energy smearing give more obvious uncertainties. These results are listed in Table.~\ref{table:smearingResults}. Fig.~\ref{smearESpdfs} shows the effects of smearing the energy scale, energy resolution and direction on the MC $PDF$. The original $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms. 
 
 \begin{table}[ht]
 	\centering
@@ -670,24 +662,50 @@ Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC E
 	\label{table:smearingResults}
 	\begin{tabular*}{80mm}{c@{\extracolsep{\fill}}cc}
 		\toprule
-		Systematics & systematics from fitting $f_s$\\
+		Systematics & $\Delta f_s$ (+/-)\\
 		\hline
 		\\
-		x shift & ${f_s}^{+0.000003}_{-0.000045}$\\	
-		y shift & ${f_s}^{-0.00005}_{-0.0001386}$\\
-		z shift & ${f_s}^{+0.0001}_{-0.000138}$\\
-		position scale & ${f_s}^{+0.001324}_{-0.00115}$\\\	
-		$\delta_\theta$  &${f_s}^{+0.312188}_{-0.014131}$\\
-		$E_{scale}$ & ${f_s}^{+0.030241}_{-0.027303}$\\
-		$E_{resol}$ & ${f_s}^{+0.00026}_{-0.00026}$ \\
-		$\beta_{14}$ shifts & ${f_s}^{+0.000178}_{-0.000558}$\\
+		x shift & $+0.000003/-0.000045$\\	
+		y shift & $-0.00005/-0.0001386$\\
+		z shift & $+0.0001/-0.000138$\\
+		position scale & $+0.00132/-0.00115$\\\	
+		$\delta_\theta$  &$+0.01888/-0.00210$\\
+		$E_{scale}~(\Delta_{\delta_E})$ & $+0.01466/-0.01395$\\
+		$E_{resol}~(\Delta_b)$ & $+0.00143/-0.00143$ \\
+		$\beta_{14}$ shifts & $+0.000178/-0.000558$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-Using the quadrature calculations, the total systematics is expected to be: ${f_s}^{+0.47}_{-0.22}$. Adding this systematics, the total flux is:
+\begin{figure}[htbp]
+	\centering
+	\subfigure[Smearing direction. Blue dotted for smearing down and red dashed for smearing up.]{ 
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=8cm]{smearCosSunPDF_Dir.pdf}
+		\end{minipage}
+	}
+	\subfigure[Smearing energy resolution. Red dashed line for smearing.]{ 
+		\begin{minipage}[b]{0.5\textwidth}
+			\centering
+			\includegraphics[width=8cm]{smearCosSunPDF_Eresol.pdf}
+		\end{minipage}
+	}
+	\subfigure[Smearing energy scale. Blue dotted for smearing down and red dashed for smearing up.]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=8cm]{smearCosSunPDF_Escale.pdf}
+		\end{minipage}
+	}
+	\caption{Energy vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} and the \texttt{MPW} results are shown.}
+	\label{smearESpdfs}
+\end{figure}   
+
+
+
+Using the quadrature calculations, the total systematics is expected to be: ${f_s}^{+0.024}_{-0.014}$. Adding this systematics, the total flux is:
 \begin{equation}
-\Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+2.54}_{-1.23}(syst.))\times 10^6~cm^{-2}s^{-1}.
+\Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.08}(syst.))\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
 To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
@@ -695,18 +713,18 @@ To fit for the $^8$B flux corresponding to an observed flux of ES interactions, 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{ESfluxFit.png}
-	\caption{The gray histogram is the $pdf(\nu_e,without~oscillation)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\caption{The gray histogram is the $PDF(\nu_e,without~oscillation)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
 	\label{fig:ESfluxFit}
 \end{figure}
 
-By using the same procedure to evaluate the systematics, it gives ${f_s}^{+0.172}_{0.145}$.
+By using the same procedure to evaluate the systematics of the elastic scattering, it gives ${f_s}^{+0.011}_{-0.006}$.
 
 Thus, for the nominal $^8$B solar neutrino flux, the ES flux is evaluated as:
 \begin{equation}
-\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.94}_{-0.79} (syst.)\times 10^6~cm^{-2}s^{-1}.
+\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.06}_{-0.03} (syst.)\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-Compared to the Super-K measurement: $\Phi_{ES}=(2.345\pm0.039)\times 10^6~cm^{-2}s^{-1}$ and the SNO+ 2018 published results: $\Phi_{ES}=2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.)\times 10^6~cm^{-2}s^{-1}$.
+Compared to the Super-K measurement: $\Phi_{ES}=(2.308\pm0.020(stat.)^{+0.039}_{-0.040}(syst.))\times 10^6~cm^{-2}s^{-1}$\cite{abe2016solar} and the SNO+ 2018 published results: $\Phi_{ES}=(2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.))\times 10^6~cm^{-2}s^{-1}$\cite{anderson2019measurement}.
 
 %\begin{figure}[!htb]
 %	\centering
