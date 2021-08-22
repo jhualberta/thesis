@@ -7,28 +7,27 @@ Repeated entry---line 327 of file thesis.bib
  : @article{aalbers2020solar
  :                          ,
 I'm skipping whatever remains of this entry
-Warning--string name "hamamatsu" is undefined
---line 1333 of file thesis.bib
-I was expecting a `,' or a `}'---line 1333 of file thesis.bib
- :  author = hamamatsu 
- :                     Photonics,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1595 of file thesis.bib
+Repeated entry---line 1240 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1777 of file thesis.bib
+Warning--string name "hamamatsu" is undefined
+--line 1339 of file thesis.bib
+I was expecting a `,' or a `}'---line 1339 of file thesis.bib
+ :  author = hamamatsu 
+ :                     Photonics,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1601 of file thesis.bib
+ : @article{anderson2021optical
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1783 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "sect:fukuda1998evidence"
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in snop_jinst
-Warning--empty year in matt_deployedsource
-Warning--empty year in n16geom_zach
-Warning--empty year in n16pic
-Warning--empty year in laserball_groupVelocity
-Warning--empty year in driveCorPeter
 Warning--empty year in oxfordMeasurement
 Warning--empty year in directorReview
 Warning--empty year in partialWater
@@ -61,9 +60,14 @@ Warning--empty journal in compass
 Warning--empty journal in hamamatsu2018photomultiplier
 Warning--empty year in rattime
 Warning--can't use both volume and number fields in singh2020underwater
+Warning--empty year in matt_deployedsource
+Warning--empty year in n16geom_zach
+Warning--empty year in n16pic
 Warning--empty year in brunroot
 Warning--empty year in muonTrackRecon
+Warning--empty year in laserball_groupVelocity
 Warning--empty year in groupVmeasure
+Warning--empty year in driveCorPeter
 Warning--empty year in oxfordMeasurement0
 Warning--empty year in partialFitterPDF
 Warning--empty year in partialFitterPDFtestInvulnerable
@@ -98,7 +102,7 @@ Warning--empty year in skyshine
 Warning--empty year in brianLowBG
 You've used 210 entries,
             1876 wiz_defined-function locations,
-            1465 strings with 36086 characters,
+            1465 strings with 36088 characters,
 and the built_in function-call counts, 44137 in all, are:
 = -- 3872
 > -- 2389
@@ -137,4 +141,4 @@ warning$ -- 74
 while$ -- 318
 width$ -- 213
 write$ -- 1902
-(There were 4 error messages)
+(There were 5 error messages)
