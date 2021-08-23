@@ -142,31 +142,25 @@ As shown in Fig.~\ref{plotGroupV}, $n_{eff}=1.40$ gives the smallest radial bias
 
 Later I turned to a more data-driven approach rather than tuning from the simulations. This approach is to extract an average group velocity by analyzing the $^{16}$N calibration source data. As shown in Fig.~\ref{n16_groupVeloctiy}, for the $^{16}$N central run-100934 and run-107055, the source was deployed almost at the PSUP center where the optical photons were created and propagated to reach the PMTs on the PSUP. 
 
-For each event, suppose triggered PMTs were found within a solid angle $\Omega$ , 
-
-since the diameter of the PMT concentrator is 27 cm, a line segment $L = 50~cm$ was chose to let the $\Omega$ to include roughly 2 PMTs on the PSUP.
-extends with $\theta=\arcsin(L/r_{PSUP})\approx 3.42^\circ$.
-
-the arrival time $T_1$
-$\Omega'$, which is the solid angle directly opposed to the $\Omega$, the arrival time $T_2$.
-
-Then the average group velocity was calculated as:
-\begin{equation}
-v_{gr}=\frac{2 r_{PSUP}}{(T_1+T_2)}.
-\end{equation}
-
-This analysis found the $v_{gr}=c/n_{water,eff}=216.478~mm/ns$, where $n_{water,eff}=1.38486$.
+For each event, it supposes that the triggered PMTs were found within a solid angle $\Omega=\pi(L/2)^2/r^2_{PSUP}$, where $L$ is the line segment and $r_{PSUP}=8390$ mm is the radius of the PSUP, as shown in Fig.~\ref{fig:n16_groupVeloctiy}. Since the diameter of the PMT concentrator is 27 cm, the line segment is chosen as $L = 50$ cm ($\theta=\arcsin(\frac{1}{2}L/r_{PSUP})\approx 0.17^\circ$) to let roughly 2 PMTs be within the $\Omega$. Then the arrival time $T_1$ was found by calculating $|\vec{X}_{source}-\vec{X}_{PMTin\Omega}|/v_{water}$, where $v_{water}=217.554$ mm/ns is an effective velocity obtained by the SNO+ for light water\cite{coulter2013modelling}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{n16_groupVelocity.png}
 	\caption{$^{16}$N central run for evaluating the average group velocity.}
-	\label{n16_groupVeloctiy}
+	\label{fig:n16_groupVeloctiy}
 \end{figure}
 
-The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs\cite{groupVmeasure,anderson2021optical}.
+On the other hand, a solid angle $\Omega'$ is calculated as opposed to the $\Omega$ from the source position. Similarly, the triggered PMTs within the $\Omega'$ were found and then the arrival time $T_2$ is calculated. Thus the average group velocity was calculated as:
+\begin{equation}
+v_{gr}=\frac{2 r_{PSUP}}{(T_1+T_2)}.
+\end{equation}
 
-For the vertex fitters used in the partial-fill and scintillator phases, since no internal calibration was performed, I adopt a linear interpolation method described in Ref.~\cite{coulter2013modelling}. It will be discussed in Sect.~\ref{sect:scintFitter}.
+The final number of the $v_{gr}$ was calculated by averaging the $v_{gr}$ obtained from all the events and triggered PMTs in both the run-100934 and 107055. It finds the $v_{gr}=c/n_{water,eff}=216.478$ mm/ns, where $n_{water,eff}=1.38486$.
+
+The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs\cite{groupVmeasure,anderson2021optical}. This analysis can give a more accurate $v_{gr}$, while it was not applied here.
+
+For the vertex fitters used in the partial-fill and scintillator phases which will be discussed in the following sections, since no internal calibration was performed, I adopt a linear interpolation method described in Ref.~\cite{coulter2013modelling}. It will be discussed in Sect.~\ref{sect:scintFitter}.
 
 \subsection{Fitter Pull and Drive Correction}\label{sect:fitterPull}
 
@@ -206,8 +200,7 @@ Finally we take the average values from the 5 to 10 MeV electrons simulations an
 \vec{X}_{\mathrm{corrected}} = 0.9868\vec{X}_{fit}+(-78.417)\vec{u}_{fit}.
 \end{equation}
 
-It is important to note that since the drive correction parameters are obtained from the reconstructions of MC simualtions, it depends on the Monte Carlo and the reconstruction results. Therefore, the n$_{water}$, mode cut and time residual cut affecting the fitted results will also affect the drive correction parameters, but not significantly.
-
+It is important to note that since the drive correction parameters were obtained from the reconstructions of MC simulations, it depends on the MC and the reconstruction results. Therefore, the n$_{water}$, mode cut and time residual cut affecting the fitted results will also affect the drive correction parameters, but not significantly.
 
 \begin{figure}[!htb]
 	\centering
@@ -221,7 +214,7 @@ Electron events with various energies were generated at the detector center, and
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{pullEffectVsEnergy.pdf}
-	\caption{Radial biases of simulated electron events before and after the drive correction, as a function of energy.}
+	\caption[Radial biases of the simulated $e^-$ events as a function of energy.]{Radial biases of the simulated $e^-$ events before and after the drive correction, as a function of energy.}
 	\label{drivecorVsEnergy}
 \end{figure}
 
@@ -229,9 +222,9 @@ By fitting the simulations of 5-MeV $e^-$ generated at the detector center and t
 
 \subsection{Water Fitter Performances}\label{sect:waterFitter}
 
-By using the \texttt{RAT} (version 6.5.5) package, 10000 $e^-$ events were generated at the detector center (in the PSUP coordination) with isotropic momentum directions, i.e., the momentum directions were generated randomly and uniformly over all directions. Default detector trigger settings in the SNO+ water phase were used (\texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0). With these settings, some events may fail to trigger the detector, especially those with lower energies ($E<3$ MeV), and thus the number of the reconstructed events can be lower than the simulated events.
+By using the \texttt{RAT} (version 6.5.5) package, simulations of 10000 $e^-$ events were generated at the detector center (in the PSUP coordination) with isotropic momentum directions, i.e., the momentum directions were generated randomly and uniformly over all directions. Default detector trigger settings in the SNO+ water phase were used (\texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0). With these settings, some events may fail to trigger the detector, especially those with lower energies ($E<3$ MeV), and thus the number of the reconstructed events can be lower than the simulated events.
 
-Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performances for the 5-MeV $e^-$ events. The biases between the fitted and MC positions ($\Delta_{fitPos}\equiv\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$) were projected on the x, y, and z axes respectively and were filled into 1D histograms, which were further fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is used as the fit bias while the Gaussian sigma ($\sigma$) is used as the fit resolution.
+Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performances for the 5-MeV $e^-$ events. The biases between the fitted and MC positions ($\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$) were projected on the x, y, and z axes respectively and were filled into 1D histograms, which were further fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the Gaussian sigma ($\sigma$) is taken as the fit position resolution.
 \begin{figure}[htbp]
 	\centering \label{fig:5MeVbeta_center_water}
 	\subfigure[$x_{fit}-x_{mc}$]{
@@ -251,25 +244,27 @@ Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results a
 			\includegraphics[width=8cm]{5MeVbetaZ.pdf}
 		\end{minipage}
 	}
-	\caption[The fit position biases projected on the x, y and z axes.]{The fit position biases projected on the x, y and z axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.}
+	\caption[The position biases projected on the x, y and z axes.]{The position biases projected on the x, y and z axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.}
 \end{figure}
 
-A more generic situation is that the events happen everywhere inside the AV. In this simulation, $e^-$ events were uniformly distributed inside the AV volume. Various $e^-$ energies were also simulated, from 2 to 15 MeV by a 1 MeV step. Fig.~\ref{fig:MPWposBias_isoFill} and Fig.~\ref{fig:MPWposResol_isoFill} show the fit position biases ($\Delta_{fitPos}$) and resolutions respectively. 
+A more generic situation is that the events happen everywhere inside the AV. In this simulation, $e^-$ events were generated at random positions uniformly distributed inside the AV volume and with isotropic directions. Various $e^-$ energies were also simulated, from 2 to 15 MeV by a 1 MeV step. Fig.~\ref{fig:MPWposBias_isoFill} and Fig.~\ref{fig:MPWposResol_isoFill} show the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$) respectively. 
 
-These results show that the fit position biases in three axes are stable across different energies and for $E\leq 5$ MeV, the biases are within 10 mm.
-The resolution values decrease from about 350 mm to 120 mm in three axes, with an average about 180 mm. The fit resolution improves with the energy increases, since more photons are produced by the $e^-$ events with higher energy and thus triggers more PMTs. With a larger NHits value, more information is provided for the fitter, and it can return better position resolutions. As I will show in the following section, the position resolution can also be improved by using a decent detection medium that can produce more photons for the same event. 
+These results show that the fit position biases $\mu_{x,y,z}$ are stable across different energies and for $E\leq 5$ MeV, the biases are within 10 mm.
+The resolutions $\sigma_{x,y,z}$ decrease from about 350 mm to 120 mm and the average is 180 mm. More photons are produced by the $e^-$ events with higher energy, thus triggering more PMTs. With a larger NHits value, more information is provided for the fitter, and it can return better position resolutions. As I will show in the following section, the position resolution can also be improved by using a decent detection medium that can produce more photons for the same event.. 
+
+With a larger NHits value, more information is provided for the fitter, and it can return better position resolutions. As I will show in the following section, the position resolution can also be improved by using a decent detection medium that can produce more photons for the same event. 
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posBiasVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position biases in x, y, z axes as a function of energy.]{The \texttt{MPW fitter} fit position biases in x(red circle), y (green square), and z (black triangle) axes as a function of energy.}
+	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position biases in x(red circle), y (green square), and z (black triangle) axes as a function of energy.}
 	\label{fig:MPWposBias_isoFill}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posResolVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position resolutions in x, y, z axes as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in x (red circle), y (green square), and z (black triangle) axes as a function of energy.}
+	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in x (red circle), y (green square), and z (black triangle) axes as a function of energy.}
 	\label{fig:MPWposResol_isoFill}
 \end{figure}
 
@@ -278,14 +273,14 @@ To check the radial dependence of the reconstruction performance, simulations of
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{shellTest_RvsBias.pdf}
-	\caption[The \texttt{MPW fitter} position resolutions of x, y, z axes as a function of energies.]{The \texttt{MPW fitter} position resolutions of x (red circle), y (green square), and z (black triangle) axes as a function of radius.}
+	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energies.]{The \texttt{MPW fitter} fit position biases of x (red circle), y (green square), and z (black triangle) axes as a function of radius.}
 	\label{fig:FitBiasVsShell}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{shellTest_RvsResol.pdf}
-	\caption[The \texttt{MPW fitter} position resolutions of x, y, z axes as a function of energies.]{The \texttt{MPW fitter} position resolutions of x (red circle), y (green square), and z (black triangle) axes as a function of radius.}
+	\caption[The \texttt{MPW fitter} position resolutions ($\sigma_{x,y,z}$) as a function of energies.]{The \texttt{MPW fitter} position resolutions of x (red circle), y (green square), and z (black triangle) axes as a function of radius.}
 	\label{fig:FitResolVsShell}
 \end{figure}
  
@@ -311,21 +306,19 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \end{equation}
 where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1 and a better direction reconstruction.
 
-2,3,4,5,6,7,8,9,10,11,12,13,14,15
-
-range1 -1,3.628,0.1787,22.55,3.598,0.7614,0.03438,114/134,0.851
-range1 -1,3.836,0.09566,19.79,1.227,0.671,0.01924,183/163,1.123
-range1 -1,3.864,0.09978,19.4,0.8015,0.5462,0.01707,200.8/167,1.202
-range1 -1,4.543,0.1134,24.03,0.9498,0.5412,0.01582,221.5/159,1.393
--1,5.131,0.145,25.29,0.9413,0.4913,0.01711,252.7/157,1.609
-range1 -1,5.961,0.1637,29.13,1.141,0.5076,0.01735,277.3/159,1.744
-range1 -1,6.354,0.1884,30.36,1.115,0.4726,0.01765,259.1/153,1.693
-range1 -1,7.811,0.2088,39.27,1.584,0.5289,0.01715,245.7/149,1.649
--1,9.095,0.2423,43.59,1.876,0.5449,0.01827,273.2/141,1.938
--1,8.593,0.2714,37.83,1.386,0.4428,0.01928,246/138,1.783
--1,10.97,0.3012,47.45,2.103,0.5293,0.02043,268.3/134,2.002
-
-
+%2,3,4,5,6,7,8,9,10,11,12,13,14,15
+%
+%range1 -1,3.628,0.1787,22.55,3.598,0.7614,0.03438,114/134,0.851
+%range1 -1,3.836,0.09566,19.79,1.227,0.671,0.01924,183/163,1.123
+%range1 -1,3.864,0.09978,19.4,0.8015,0.5462,0.01707,200.8/167,1.202
+%range1 -1,4.543,0.1134,24.03,0.9498,0.5412,0.01582,221.5/159,1.393
+%-1,5.131,0.145,25.29,0.9413,0.4913,0.01711,252.7/157,1.609
+%range1 -1,5.961,0.1637,29.13,1.141,0.5076,0.01735,277.3/159,1.744
+%range1 -1,6.354,0.1884,30.36,1.115,0.4726,0.01765,259.1/153,1.693
+%range1 -1,7.811,0.2088,39.27,1.584,0.5289,0.01715,245.7/149,1.649
+%-1,9.095,0.2423,43.59,1.876,0.5449,0.01827,273.2/141,1.938
+%-1,8.593,0.2714,37.83,1.386,0.4428,0.01928,246/138,1.783
+%-1,10.97,0.3012,47.45,2.103,0.5293,0.02043,268.3/134,2.002
 
 \subsection{Test on Gamma Events}
 
@@ -349,11 +342,10 @@ Table.~\ref{tab:bias_water_gamma} and Table.~ show their reconstruction performa
 \end{table}
 
 
-2.2
-range1 -1,2.323,0.06903,8.719,0.7959,0.7346,0.03049,168.5/191,0.8822
-4.4
-range1 -1,3.203,0.1215,10.43,0.6085,0.54,0.03515,159.1/170,0.9358
-
+%2.2
+%range1 -1,2.323,0.06903,8.719,0.7959,0.7346,0.03049,168.5/191,0.8822
+%4.4
+%range1 -1,3.203,0.1215,10.43,0.6085,0.54,0.03515,159.1/170,0.9358
 
 %\begin{figure}[htbp]
 %	\centering
@@ -630,27 +622,26 @@ I wrote a python tool to create the timing $PDF$s to re-coordinate the partial f
 % 2 g/L case: \ref{transfer_efficiency}\cite{collaboration2020development}. 
 %Based on these measured parameters, $PDF$s were built. 
 
-Interestingly, if using a timing $PDF$ with a wrong concentration to the actual data, the fit position biases are small. I simulated 3MeV $e^-$ uniformly distributed in the LAB+0.25 g/L PPO scintillator with isotropic directions, and then reconstructed the simulated events by using the 0.5, 1 and 2 g/L PPO timing $PDF$s respectively. All these reconstructions gave the fitted positions closed to the correct reconstruction using the 0.25 g/L timing $PDF$, with differences in the Gaussian means around 5 mm in x, y and z axes, which were not significant biases. In the other cases, I simulated the same 3MeV $e^-$ events in LAB+2 g/L PPO and reconstructed by using the timing $PDF$s with lower PPO concentrations (0.25, 0.5 and 1 g/L PPO respectively), differences in the Gaussian means were within 5 mm\cite{partialFitterPDFtestInvulnerable}. It shows that the \texttt{MP partial fitter} is invulnerable to the changes caused by different PPO concentrations.
+$PDF$s for all timing Sect.~\ref{sect:LS_SNO+}.
+
+
 
 As mentioned in Sect.~\ref{sect:tuneGroupVelocity}, 
 Tuning effective group velocity: 
 In the full-fill geometry (scintillator phase)
- 
-5000 simulations of 3MeV $e^-$ generated uniformly inside the AV with isotropic directions. filled with LAB+various concentrations of PPO. 
 
-
-Partial-fill: 5000 simulations of 3 MeV e- generated uniformly and isotropically in the scintillator region in partial-fill geometry with, with a water level setting at z = 3000 mm in the AV coordination. 
+Simulations of 5000 3-MeV e- generated uniformly and with isotropic directions in the scintillator region in partial-fill geometry with the water level set at z = 3000 mm in the AV coordination. 
 Fig.~\ref{fig:scint_groupVelocity} shows the 0.5 g/L PPO case as an example. Table.~\ref{partial_groupV} lists the tuned effective group velocities.
 	
 \begin{figure}[htbp]\label{fig:scint_groupVelocity}
 	\subfigure[Tuning the $v_{gr,scint}$.]{
-		\begin{minipage}[t]{0.6\textwidth}
+		\begin{minipage}[t]{0.4\textwidth}
 		\centering
 			\includegraphics[width=6cm]{tune_groupVelocity_scint.png}
 		\end{minipage}
 	}   
 	\subfigure[Tuning the $v_{gr,water}$.]{ 
-		\begin{minipage}[t]{0.6\textwidth}
+		\begin{minipage}[t]{0.4\textwidth}
 			\centering
 			\includegraphics[width=6cm]{tune_groupVelocity_water.png}
 		\end{minipage}
@@ -675,61 +666,72 @@ Fig.~\ref{fig:scint_groupVelocity} shows the 0.5 g/L PPO case as an example. Tab
 	}
 \end{table}
 
-%& 120.6
-%& 90.02
-%& 67.39
-%& 55.81
-%& 58.62
-
 \subsection{Partial Fitter Performances}
+The performance of the \texttt{MP partial fitter} was studied with MC simulations. During the partial-fill phase, the filling and mixing of the liquid scintillator was stable at several water levels for data taking and data analysis. A typical water level is at 3 m in the AV coordination and a typical PPO concentration is 0.5 g/L. With these two settings in the partial-fill geometry, 5000 3-MeV $e^-$ were simulated inside the scintillator region and the water region respectively to test the partial fitter performances.
 
-The performance of the fitter was studied with MC simulations. In a partial fill geometry with water level at 4.435 m, 2.5 MeV electrons are simulated inside the AV in the scintillator region only, the water region only and the whole AV region.
+Fig.~\ref{fig:partial_scint} and Fig.~\ref{fig:partial_water} show the results of the \texttt{MP partial fitter} reconstructed positions in the scintillator and water regions respectively. The subfigure (a) is the reconstructed positions projected on $\rho=\sqrt{x^2_{fit}+y^2_{fit}}$ and $z$ while the subfigures (b), (c) and (d) are the position biases between the reconstruction and MC. The distributions of position biases are fit with Gaussian functions and the values of Gaussian mean and sigma quantify the fit biases and resolutions. 
 
+It shows that, for the events in the scintillator region, 
 
-\begin{figure}[htbp]
+For the events in the water region, the fit position biases in x and y are comparable to the results of the \texttt{MPW fitter} shown in Sect.~\ref{sect:waterFitter}, while the biases in z is about 50 mm worse and the resolutions are about 100 mm worse. This is due to the effects from the water-scintillator interface and boundaries, which makes to fitter to push the events to the boundaries and thus causes the mis-reconstructions of the fitter. These boundary effects can be seen in the $\rho$ vs. $z$ plot in the subfigure (d). However, the interested events for the partial-fill analysis are always the events in the scintillator and cuts on NHits are applied on the partial-fill data to remove the water events. 
+
+\begin{figure}[htbp]\label{fig:partial_scint}
 	\centering
-	\subfigure[scintillator region]{
+	\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.]{ 
+		\begin{minipage}[b]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{partial_bot_3MeV_rhoVsZ.pdf}
+		\end{minipage}
+	}
+	\subfigure[$x_{fit}-x_{mc}$.]{
 		\begin{minipage}[t]{0.38\textwidth}
-			\includegraphics[width=6cm]{partial_top_x.pdf}
+			\includegraphics[width=6.5cm]{partial_top_3MeV_xbias.pdf}
 		\end{minipage}
 	}   
-	\subfigure[water region]{ 
+	\subfigure[$y_{fit}-y_{mc}$.]{ 
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6cm]{partial_bot_x.pdf}
+			\includegraphics[width=6.5cm]{partial_top_3MeV_ybias.pdf}
 		\end{minipage}
 	}
-	\subfigure[whole region]{ 
-		\begin{minipage}[b]{0.32\textwidth}
+	\subfigure[$z_{fit}-z_{mc}$.]{ 
+		\begin{minipage}[b]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6cm]{partial_full_x.pdf}
+			\includegraphics[width=6.5cm]{partial_top_3MeV_zbias.pdf}
 		\end{minipage}
 	}
-	\caption{Distributions of fit position bias projected on x axis ($x_{fit}-x_{MC}$).}
-	\label{partial_fit_x}
-	\subfigure[scintillator region]{ 
-		\begin{minipage}[t]{0.38\textwidth}
-			\centering
-			\includegraphics[width=5.8cm]{partial_top_r.pdf}
-		\end{minipage}
-	}
-	\subfigure[water region]{ 
-		\begin{minipage}[t]{0.38\textwidth}
-			\centering
-			\includegraphics[width=5.8cm]{partial_bot_r.pdf}
-		\end{minipage}
-	}
-	\subfigure[whole region]{ 
-		\begin{minipage}[b]{0.35\textwidth}
-			\centering
-			\includegraphics[width=5.8cm]{partial_full_r.pdf}
-		\end{minipage}
-	}
-	\caption{Fit results: $\rho_{fit}=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}
-	\label{partial_fit_rz}
+	\caption{Reconstructed positions of the 3-MeV $e^-$ events in the scintillator region.}
 \end{figure}
 
-Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the \texttt{MP partial fitter} reconstructed results for these simulations. Fig.~\ref{partial_fit_x} shows the biases between the fit positions and MC positions, projected on the x axis. The distributions of position biases are fit with Gaussian functions. The values of Gaussian mean and sigma quantify the fit biases and resolutions. Table~\ref{partiaResol} lists these values.
+\begin{figure}[htbp]\label{fig:partial_water}
+	\centering
+		\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.]{ 
+		\begin{minipage}[b]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{partial_bot_3MeV_rhoVsZ.pdf}
+		\end{minipage}
+	}
+	\subfigure[$x_{fit}-x_{mc}$.]{
+		\begin{minipage}[t]{0.38\textwidth}
+			\includegraphics[width=6.5cm]{partial_bot_3MeV_xbias.pdf}
+		\end{minipage}
+	}   
+	\subfigure[$y_{fit}-y_{mc}$.]{ 
+		\begin{minipage}[t]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{partial_bot_3MeV_ybias.pdf}
+		\end{minipage}
+	}
+	\subfigure[$z_{fit}-z_{mc}$.]{ 
+		\begin{minipage}[b]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{partial_bot_3MeV_zbias.pdf}
+		\end{minipage}
+	}
+
+	\caption{Reconstructed positions of the 3-MeV $e^-$ events in the water region.}
+\end{figure}
+
 
 \begin{table}[ht]
 	\caption{Reconstructed position biases and resolutions for simulated events in partial-fill.}
@@ -737,7 +739,7 @@ Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the \texttt{MP parti
 	\centering
 	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
-		regions of simulated events& bias (mm) &  resolution (mm) \\
+		regions of simulated events& bias ($\mu$) (mm) &  resolution ($\sigma$) (mm) \\
 		\hline
 		scintillator region & -1.0  & 73.9\\
 		water region & -10.7 & 385.1\\
@@ -747,69 +749,48 @@ Fig.~\ref{partial_fit_x} and Fig.~\ref{partial_fit_rz} show the \texttt{MP parti
 \end{table}
 For the events in water, the fit bias and resolution is comparable to the water phase results in Table~\ref{table_posresol}. The events in the scintillator region have smaller fit bias and better resolution due to more hit PMTs in the reconstruction.
 
-Fig.~\ref{partial_fit_rz} shows the fitted $\sqrt{x^2+y^2}$ vs. fitted $z$ positions. It shows that the fitter can distinguish different events in the water or scintillator region. The fitter gives reasonable results of the three different MC simulations. 
-
-$PDF$s for all timing \ref{sect:LS_SNO+}.
 
 
-Radial bias is defined as the difference between the fitted and true position, projected along the radial component (unit vector) of the true position \cite{coulter2013modelling}.
-\[
-(\vec{X}_{fit}-\vec{X}_{true})\cdot \hat{X}_{true}
-\]
-
-The value of the mean radial bias is taken by fitting the histogram of the distributions of radial biases with a Gaussian profile and then get the mean of the fitted Gaussian profile.
-
+%
+%Radial bias is defined as the difference between the fitted and true position, projected along the radial component (unit vector) of the true position \cite{coulter2013modelling}.
+%\[
+%(\vec{X}_{fit}-\vec{X}_{true})\cdot \hat{X}_{true}
+%\]
+%
+%The value of the mean radial bias is taken by fitting the histogram of the distributions of radial biases with a Gaussian profile and then get the mean of the fitted Gaussian profile.
 
 \subsubsection{Test on Different PPO Concentrations}
-Simulate 5000 events for 3-MeV $e^-$,  $\Delta x = x_{fit}-x_{mc}$
+To study the effects of different PPO concentrations, in the partial-fill geometry, the water level was set at 3 m, and the PPO concentrations were set to 0.25, 0.5, 1, 2, and 6 g/L respectively. Simulations of 5000 3-MeV $e^-$ were generated in the scintillator region with uniformly distributed positions and isotropic directions. The \texttt{MP partial fitter} uses the effective velocities and $PDF$s re-coordinated to the simulation geometries with corresponding PPO concentrations. The distributions of the position biases between the reconstruction and MC in x, y, and z axes were fitted with Gaussians to obtain the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$).
 
-\begin{table}[ht]
+Fig.~\ref{fig:partialBiasVsPPO} and Fig.~\ref{fig:partialResolVsPPO} show the $\mu_{x,y,z}$ and $\sigma_{x,y,z}$ as a function of PPO concentration. It shows that the values of $\mu_{x,y,z}$ are stable in the [-15,15] mm region, while the values of $\sigma_{x,y,z}$ decrease from about 150 mm to about 60 mm as the concentration increases. The light yield of the liquid scintillator goes up as the PPO concentration increases, which gives larger NHits and more PMT information for the fitter. However, the differences between the 2 g/L and 6 g/L cases are small, which indicates a saturation effect for the PPO concentration above 2 g/L.
+
+\begin{figure}[!htb]
 	\centering
-	\caption{\label{partial_bias} Fit speeds and biases for various PPO concentrations.}	
-	{\centering
-		\begin{tabular*}{145         mm}{c@{\extracolsep{\fill}}cccccc}
-			\toprule 
-			PPO [g/L] & fit speed [s/event]& $\Delta x$ [mm]& $\Delta y$ [mm]& $\Delta z$ [mm] & $r_{bias}$ [mm] & \\
-			\midrule
-			0.25 & 0.190 &6.65 &2.64& -18.24& -7.22\\
-			0.5  & 0.144 &-0.73 &-1.69& -8.14& 3.30 \\
-			1.0 &0.190 & 1.42 &0.57 &-5.65& 10.67 \\
-			2.0 &0.194 & 0.34 &1.78& -4.01& 13.37	\\
-			6.0 &0.145 & -0.11& -0.12& -25.97& -10.97\\
-			\bottomrule	
-		\end{tabular*}
-	}
-\end{table}
+	\includegraphics[width=10cm]{partialBiasVsPPO.pdf}
+	\caption{Fit position biases as a function of PPO concentration.}
+	\label{fig:partialBiasVsPPO}
+\end{figure}
 
-%% fit resolutions
-$z_{fit}$ resolution [mm] 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{partialResolVsPPO.pdf}
+	\caption{Fit position resolutions as a function of PPO concentration.}
+	\label{fig:partialResolVsPPO}
+\end{figure}
 
-\subsection{Test on Background Simulations}
+Interestingly, if using a timing $PDF$ with a wrong concentration to the actual data, the fit position biases are small. I simulated 3-MeV $e^-$ uniformly distributed in the LAB+0.25 g/L PPO scintillator with isotropic directions, and then reconstructed the simulated events by using the 0.5, 1 and 2 g/L PPO timing $PDF$s respectively. All these reconstructions gave the fitted positions closed to the correct reconstruction using the 0.25 g/L timing $PDF$, with differences in the Gaussian means around 5 mm in x, y and z axes, which were not significant biases. In the other cases, I simulated the same 3MeV $e^-$ events in LAB+2 g/L PPO and reconstructed by using the timing $PDF$s with lower PPO concentrations (0.25, 0.5 and 1 g/L PPO respectively), differences in the Gaussian means were within 5 mm\cite{partialFitterPDFtestInvulnerable}. It shows that the \texttt{MP partial fitter} is invulnerable to the changes caused by different PPO concentrations.
 
-\subsection{Bi-Po Simulations}
+\subsection{Test on Bi-Po Simulations}
 The Bi-Po analysis was performed on simulations to check the fitter efficiency. This analysis suggests a model offset of the water level to include more fitted data. A flowchart of the algorithm for picking up the Bi-Po event pairs is shown in Appendix.~\ref{appendix:bipo}, Fig.~\ref{biPo_flowchart}.
 
-
-
 \subsection{Discussions for the Partial Fitter}
-An attempt to use the \texttt{MP partial fitter} to fit the water level was discussed \cite{mpFitWaterLevel}.
-\begin{equation}\label{eq:splitZ}
-\frac{\partial L}{\partial Z_{water}} = \frac{\partial L}{\partial tof}\cdot\frac{\partial tof}{\partial Z_{water}}=\frac{\partial L}{\partial tof}\cdot\frac{\partial a_3}{\partial Z_{water}}
-\end{equation}
+An attempt to use the \texttt{MP partial fitter} to fit the water level was discussed \cite{mpFitWaterLevel}. In this case, the water level ($Z_{water}$) is considered as a fit parameter and the \texttt{MP fitter} fits for 5 parameters: $(x,y,z,t,Z_{water})$. However, the results gives a Gaussian resolution of $293.9$ mm, which is much larger than the position resolution and is not good enough for the analysis.
 
-\[
-\frac{\partial L}{\partial splitZ} = 0
-\]
-
-%Appendix: Levenberg-Marquardt method for fitter minimization
-(ref: press2007numerical)
-
-The fit results gave a Gaussian resolution of $293.9$ mm, which is much larger than the position resolution and is not good enough for the analysis.
-
-%for M unknown parameters: $a_0, a_1, ... , a_{M-1}$ (for example, the 4 parameters of an event vertex: $(x,y,z,t)$)
-
-The $PDF$ can be expanded and fit with Chebyshev polynomials to obtain an analytic approximation function\cite{press2007numerical}. This analytical function can give proper analytical derivatives.
-
+To improve the performance of the \texttt{MP partial fitter}, two points have been suggested by the SNO+ collaboration, but they are not applied and tested in this thesis:
+\begin{itemize}
+	\item The timing $PDF$s used by the \texttt{MP partial fitter} is obtained from the bench-top measurement and is always calculated numerically. However, the $PDF$s can be expanded and fitted with Chebyshev polynomials to obtain an analytic approximation function to describe the $PDF$\cite{press2007numerical}. Then the analytical function can give proper and smooth analytical derivatives, which may reduce the time cost of calculating the likelihoods using the numerical methods.	
+	\item To implement the refraction and reflection calculations. To simplify the calculations, the \texttt{MP partial fitter} assumes straight light paths from the event position to the hit PMTs and neglects all the possibilities of the refraction and reflection light paths. It is more realistic to count for these light paths since the interface between the two different optical media: the water and the liquid scintillator can cause the reflection and refraction. The Fresnel equations can be used for calculating the possibilities of these light paths\cite{partialWater}, while the calculations are complicated. Also, the 5-cm thick AV was totally omitted. To take this into account, the calculations of the refraction and reflection light paths will become more complicated. A trade-off between the accuracy \& precision of the reconstruction and the CPU time complexity may be considered. This implementation can also help for the \texttt{MP scint fitter} discussed in the next section.
+\end{itemize}
 
 \section{Vertex Reconstruction for the Scintillator Phase}\label{sect:scintFitter}
 As mentioned in the previous section, the vertex reconstruction for the scintillator phase is similar to the partial-fill case, while no water-scintillator interface is considered here since the AV is fully filled with liquid scintillator. Only the ray-sphere and ray-cylinder intersections are calculated and thus the major code of the \texttt{MP scint fitter} was modified directly from the \texttt{MP partial fitter} by removing the ray-plane intersection calculations.
@@ -924,17 +905,13 @@ Several PMT selectors are used to selecting or removing PMTs from all the record
 	
 	The other timing parameters can also be used for selecting the PMT in each panel, such as the $t_{mode}$ or the $t_{median}$. However, tests on the simulations for the scintillator phase show that using the earliest hit time $t_\mathrm{PMT}$ gives fewer fit biases and better fit resolutions.
 	
-	Tests on the 10 MeV $e^-$ simulations show that applying this selector with $n_{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
-
+	Tests on the 10 MeV $e^-$ simulations in the scintillator phase show that applying this selector with $n_{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
 
 \section{Energy Reconstruction}
-The SNO+ energy fitter mainly uses a lookup table to convert the NHits of a triggered event into reconstructed energy.
-
-It uses the fitted position and direction of an event as inputs and then calculates an effective 
+The SNO+ energy fitter mainly uses a lookup table to convert the NHits of a triggered event into reconstructed energy. It uses the fitted position and direction of an event as inputs and then calculates an effective 
 
 The optical response of each PMT, including the PMT detection efficiency, transmission probability, attenuation, and etc. 
-
 
 detailed detector effects are also taken into account, such as the asymmetric geometry of the detector, including the neck cylinder on the top of the AV sphere; the actual number of online PMTs in a realistic physics run.
 
@@ -942,7 +919,7 @@ For the energy reconstruction in the water phase,
 
 energy response processor, or the \texttt{energy RSP fitter} (\texttt{energyRSP}), is derived from SNO \cite{boulay2004direct,moffat2001optical}.
 
-$5\,MeV$
+$5~MeV$
 
 estimated $N_\gamma$,
 
