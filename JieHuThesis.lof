@@ -54,12 +54,12 @@
 \contentsline {figure}{\numberline {4.25}{\ignorespaces Timing $PDF$s built for various PPO concentrations based on the Oxford bench-top measurements.}}{85}{figure.4.25}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tuning the $v_{gr,scint}$.}}}{85}{subfigure.4.26.2}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Tuning the $v_{gr,water}$.}}}{85}{subfigure.4.26.2}
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Reconstructed positions of the 3-MeV $e^-$ events in the scintillator region.}}{87}{figure.4.26}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Reconstructed positions and fit biases of the 3-MeV $e^-$ events in the scintillator region.}}{87}{figure.4.26}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\rho =\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}}{87}{figure.4.26}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$x_{fit}-x_{mc}$.}}}{87}{figure.4.26}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$y_{fit}-y_{mc}$.}}}{87}{figure.4.26}
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$z_{fit}-z_{mc}$.}}}{87}{figure.4.26}
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Reconstructed positions of the 3-MeV $e^-$ events in the water region.}}{88}{figure.4.27}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Reconstructed positions and fit biases of the 3-MeV $e^-$ events in the water region.}}{88}{figure.4.27}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\rho =\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}}{88}{figure.4.27}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$x_{fit}-x_{mc}$.}}}{88}{figure.4.27}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$y_{fit}-y_{mc}$.}}}{88}{figure.4.27}

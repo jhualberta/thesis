@@ -222,9 +222,9 @@ By fitting the simulations of 5-MeV $e^-$ generated at the detector center and t
 
 \subsection{Water Fitter Performances}\label{sect:waterFitter}
 
-By using the \texttt{RAT} (version 6.5.5) package, simulations of 10000 $e^-$ events were generated at the detector center (in the PSUP coordination) with isotropic momentum directions, i.e., the momentum directions were generated randomly and uniformly over all directions. Default detector trigger settings in the SNO+ water phase were used (\texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0). With these settings, some events may fail to trigger the detector, especially those with lower energies ($E<3$ MeV), and thus the number of the reconstructed events can be lower than the simulated events.
+By using the \texttt{RAT} (version 6.17.6) package, simulations of 10000 $e^-$ events were generated at the detector center (in the PSUP coordination) with isotropic directions, i.e., the event momentum directions were generated randomly and uniformly over all directions. Default detector trigger settings in the SNO+ water phase were used (\texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0). With these settings, some events may fail to trigger the detector, especially those with lower energies ($E<3$ MeV), and thus the number of the reconstructed events can be lower than the simulated events.
 
-Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performances for the 5-MeV $e^-$ events. The biases between the fitted and MC positions ($\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$) were projected on the x, y, and z axes respectively and were filled into 1D histograms, which were further fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the Gaussian sigma ($\sigma$) is taken as the fit position resolution.
+The average speed of the event vertex reconstruction of the 5-MeV $e^-$ events is 0.005 s/event and the direction reconstruction is 0.002 s/event, which are very fast and acceptable for the data processing in the water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performances for the 5-MeV $e^-$ events. The biases between the fitted and MC positions ($\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$) were projected on the x, y, and z axes respectively and were filled into 1D histograms, which were further fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the Gaussian sigma ($\sigma$) is taken as the fit position resolution.
 \begin{figure}[htbp]
 	\centering \label{fig:5MeVbeta_center_water}
 	\subfigure[$x_{fit}-x_{mc}$]{
@@ -669,7 +669,7 @@ Fig.~\ref{fig:scint_groupVelocity} shows the 0.5 g/L PPO case as an example. Tab
 \subsection{Partial Fitter Performances}
 The performance of the \texttt{MP partial fitter} was studied with MC simulations. During the partial-fill phase, the filling and mixing of the liquid scintillator was stable at several water levels for data taking and data analysis. A typical water level is at 3 m in the AV coordination and a typical PPO concentration is 0.5 g/L. With these two settings in the partial-fill geometry, 5000 3-MeV $e^-$ were simulated inside the scintillator region and the water region respectively to test the partial fitter performances.
 
-Fig.~\ref{fig:partial_scint} and Fig.~\ref{fig:partial_water} show the results of the \texttt{MP partial fitter} reconstructed positions in the scintillator and water regions respectively. The subfigure (a) is the reconstructed positions projected on $\rho=\sqrt{x^2_{fit}+y^2_{fit}}$ and $z$ while the subfigures (b), (c) and (d) are the position biases between the reconstruction and MC. The distributions of position biases are fit with Gaussian functions and the values of Gaussian mean and sigma quantify the fit biases and resolutions. 
+The average fit speed of reconstructing the events in the scintillator region is 0.2 s/event, which is acceptable for the data processing during the partial-fill phase. For the events in the water region, the fit speed is 0.05 s/event, which is comparable to the \texttt{MPW fitter}. Fig.~\ref{fig:partial_scint} and Fig.~\ref{fig:partial_water} show the results of the \texttt{MP partial fitter} reconstructed positions in the scintillator and water regions respectively. The subfigure (a) is the reconstructed positions projected on $\rho=\sqrt{x^2_{fit}+y^2_{fit}}$ and $z$ while the subfigures (b), (c) and (d) are the position biases between the reconstruction and MC. The distributions of position biases are fit with Gaussian functions and the values of Gaussian mean and sigma quantify the fit biases and resolutions. 
 
 It shows that, for the events in the scintillator region, 
 
@@ -680,7 +680,7 @@ For the events in the water region, the fit position biases in x and y are compa
 	\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.]{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6.5cm]{partial_bot_3MeV_rhoVsZ.pdf}
+			\includegraphics[width=6.5cm]{partial_top_3MeV_rhoVsZ.pdf}
 		\end{minipage}
 	}
 	\subfigure[$x_{fit}-x_{mc}$.]{
@@ -700,7 +700,7 @@ For the events in the water region, the fit position biases in x and y are compa
 			\includegraphics[width=6.5cm]{partial_top_3MeV_zbias.pdf}
 		\end{minipage}
 	}
-	\caption{Reconstructed positions of the 3-MeV $e^-$ events in the scintillator region.}
+	\caption{Reconstructed positions and fit biases of the 3-MeV $e^-$ events in the scintillator region.}
 \end{figure}
 
 \begin{figure}[htbp]\label{fig:partial_water}
@@ -729,7 +729,7 @@ For the events in the water region, the fit position biases in x and y are compa
 		\end{minipage}
 	}
 
-	\caption{Reconstructed positions of the 3-MeV $e^-$ events in the water region.}
+	\caption{Reconstructed positions and fit biases of the 3-MeV $e^-$ events in the water region.}
 \end{figure}
 
 
