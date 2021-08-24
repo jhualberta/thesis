@@ -3,25 +3,29 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 327 of file thesis.bib
+Repeated entry---line 371 of file thesis.bib
  : @article{aalbers2020solar
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1240 of file thesis.bib
+Repeated entry---line 1243 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--string name "hamamatsu" is undefined
---line 1339 of file thesis.bib
-I was expecting a `,' or a `}'---line 1339 of file thesis.bib
+--line 1342 of file thesis.bib
+I was expecting a `,' or a `}'---line 1342 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1601 of file thesis.bib
+Repeated entry---line 1604 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1783 of file thesis.bib
+Repeated entry---line 1656 of file thesis.bib
+ : @article{partialFillTres
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1803 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -72,6 +76,8 @@ Warning--empty year in oxfordMeasurement0
 Warning--empty year in partialFitterPDF
 Warning--empty year in partialFitterPDFtestInvulnerable
 Warning--empty year in mpFitWaterLevel
+Warning--empty year in partialFillTres
+Warning--empty year in partialFillBiPo214
 Warning--empty year in modeCut
 Warning--empty year in energyRSP
 Warning--empty year in waterFoM
@@ -100,45 +106,45 @@ Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 210 entries,
+You've used 212 entries,
             1876 wiz_defined-function locations,
-            1465 strings with 36088 characters,
-and the built_in function-call counts, 44137 in all, are:
-= -- 3872
-> -- 2389
+            1475 strings with 36375 characters,
+and the built_in function-call counts, 44419 in all, are:
+= -- 3893
+> -- 2401
 < -- 0
-+ -- 905
-- -- 695
-* -- 3079
-:= -- 6792
-add.period$ -- 268
-call.type$ -- 210
-change.case$ -- 155
++ -- 910
+- -- 698
+* -- 3099
+:= -- 6837
+add.period$ -- 270
+call.type$ -- 212
+change.case$ -- 157
 chr.to.int$ -- 0
-cite$ -- 284
-duplicate$ -- 2438
-empty$ -- 4117
-format.name$ -- 695
-if$ -- 10463
+cite$ -- 288
+duplicate$ -- 2456
+empty$ -- 4151
+format.name$ -- 698
+if$ -- 10527
 int.to.chr$ -- 0
-int.to.str$ -- 210
-missing$ -- 210
-newline$ -- 693
-num.names$ -- 202
-pop$ -- 785
+int.to.str$ -- 212
+missing$ -- 212
+newline$ -- 699
+num.names$ -- 204
+pop$ -- 795
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1230
+skip$ -- 1233
 stack$ -- 0
 substring$ -- 1131
-swap$ -- 806
+swap$ -- 808
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 74
-while$ -- 318
-width$ -- 213
-write$ -- 1902
-(There were 5 error messages)
+warning$ -- 76
+while$ -- 320
+width$ -- 215
+write$ -- 1916
+(There were 6 error messages)

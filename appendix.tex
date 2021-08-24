@@ -164,9 +164,9 @@ Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MR
 	%\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=65mm]{likelihoodSurface_xy.pdf}}
 	%\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=65mm]{likelihoodSurface_yz.pdf}}
 	%\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=65mm]{likelihoodSurface_xz.pdf}}
-	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}}
-	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}}
-	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}}
+	\subfigure[X-Y plane.]{\label{fig:1a}\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}\label{likelihoodSurface:a}}
+	\subfigure[Y-Z plane.]{\label{fig:1b}\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}\label{likelihoodSurface:b}}
+	\subfigure[X-Z plane.]{\label{fig:1c}\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}\label{likelihoodSurface:c}}
 	\caption{Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes. A clear global maxima is reached for the fitted vertex.}
 	\label{likelihoodSurface}
 \end{figure}
@@ -189,7 +189,7 @@ Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MR
 The following algorithm shows the detailed calculations for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by Latin letters (a, b or c). 
 
 \begin{algorithm}
-	First check the ray-sphere intersection (Equation.~\ref{eq:ray-cylinder}):\\
+	First check the ray-sphere intersection (Eqn.~\ref{eq:ray-cylinder}):\\
 	If {$\Delta>0$}, 
 	
 	\hspace{2mm}(step. 1a) if $|\vec{x}_0|<r_{AV}$ (and $a_+>0>a_-$), check the ray-plane intersection:
@@ -225,7 +225,7 @@ The following algorithm shows the detailed calculations for evaluating the light
 
 \begin{algorithm}
 	
-	First check the ray-cylinder intersection (Equation.~\ref{eq:ray-cylinder}):\\
+	First check the ray-cylinder intersection (Eqn.~\ref{eq:ray-cylinder}):\\
 	If {$\Delta_{neck}>0$}, 
 	
 	\hspace{2mm}(step. 1a) if $a'_+a'_-<0$ (event position is inside the cylinder), check the z position of the intersection point on neck, $z_+ = z_0 + a'_+u_z$: 
