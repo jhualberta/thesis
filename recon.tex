@@ -199,7 +199,7 @@ Finally we take the average values from the 5 to 10 MeV electrons simulations an
 \vec{X}_{\mathrm{corrected}} = 0.9868\vec{X}_{fit}+(-78.417)\vec{u}_{fit}.
 \end{equation}
 
-Since the parameters of the drive correction were obtained from the reconstructions of the MC simulations, it depends on the simulations. Therefore, the n$_{water}$, mode cut and time residual cut affecting the results of reconstruction will also affect the drive correction parameters, but not significantly.
+Note that these drive correction parameters were obtained from simulations and changes of the simulation model, especially the optical model of the detector, can affect the $n_{gr,eff}$, mode cut and time residual cut, and then affect the drive correction parameters. However, the drive correction parameters can be re-coordinated with the changes in the simulation.
 
 \begin{figure}[!htb]
 	\centering
@@ -208,15 +208,8 @@ Since the parameters of the drive correction were obtained from the reconstructi
 	\label{pullParVsEnergy}
 \end{figure}
 
-
-To check the effects of the drive correction, I simulated 5-MeV $e^-$ at the detector center with (along +x axis)
-
-
-By fitting the simulations of and traveling along the +x direction, 
-
-
-
-the drive effect of the \texttt{MPW fitter} causes a $\sim$50 mm biases from the detector center along the +x axis. The drive correction reduces this drive bias down to $\sim$0.2 mm. For the reconstruction of $^{16}$N data, the drive correction can reduce the fitted position RMS by $\sim$20 mm. In Fig.~\ref{drivecorVsEnergy}, various energies of $e^-$ from 2 to 10 MeV were simulated to check the effects before and after the drive correction. These electrons were generated at the detector center and with momentum directions of (1,0,0). The pull is quantified by radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The mean value of the distributions of the $r_{bias}$ in each simulation is used as the pull in the y-axis. 
+To check the effects of the drive correction, I simulated 5-MeV $e^-$ at the detector center with momentum direction at (1,0,0). It shows that the drive effect in the reconstruction causes a $\sim$+50 mm bias from the detector center in the x axis. The drive correction reduces this drive bias down to $\sim$+0.2 mm in the x axis. The tests on the $^{16}$N central run data show that the drive correction can also improve the 
+resolution of the $r_{bias}$ distribution by $\sim$20 mm. In Fig.~\ref{drivecorVsEnergy}, various energies of $e^-$ from 2 to 10 MeV (with a 1-MeV step) were simulated to check the effects before and after the drive correction. These electrons were generated at the detector center and with momentum directions at (1,0,0). The pull is quantified by the radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The distributions of the $r_{bias}$ in each simulation were fitted with Gaussian functions, and the Gaussian means were used as the pull.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{pullEffectVsEnergy.pdf}
