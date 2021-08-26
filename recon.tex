@@ -23,7 +23,7 @@ According to the physics quantities, the SNO+ fitters can be generally classifie
 	\item Muon track fitter. This fitter is used to reconstruct the tracks of cosmic muons. It treats a muon track as a straight line, and by dividing the SNO+ detector into several XY-slices along z, it reconstructs the intersection points for each slice by utilizing the positions and timing information of the hit PMTs\cite{muonTrackRecon}. It is currently being developed for the scintillator and tellurium-loading phases. It will help to tag and reduce the cosmogenic backgrounds, especially the $^{11}$C backgrounds induced by the muon spallation on the liquid scintillators\cite{sorensen2016temperature}.
 \end{itemize}
 
-For a fitter, its performance is first tested on the Monte Carlo simulations of specific physics processes. Then it is tested on both the simulations and data of the calibration runs. Once the algorithm gives good results and is approved by the collaboration, it is implemented into the SNO+ RAT software to process the SNO+ simulations and data files.
+For a fitter, its performance is first tested on the Monte Carlo simulations of specific physics processes. Then it is tested on both the simulations and data of the calibration runs. Once the algorithm gives good results and is approved by the SNO+ collaboration, it is implemented into the SNO+ RAT software to process the SNO+ simulations and data files.
 
 For a specific SNO+ physics phase, the fitters for reconstructing different physics quantities of an event are integrated. Currently, there are three integrated fitters: the \texttt{Water Fitter} for the water phase, the \texttt{Partial Fitter} for the partial-fill phase, and the \texttt{Scint Fitter} for the scintillator phase and the tellurium loading phase. The fitter parameters, such as the optical parameters, fitter iterations, are coordinated and optimized based on simulations and calibration data from that specific physics phase. In addition, PMT selectors and classifiers are also included in the integrated fitters. The PMT selectors are used to remove the outliers of the hit PMTs for a specific fitter, such as the hit PMT probably triggered by the noises. These selectors can help to make the fitter more accurate or to boost up the fitter speed. The classifiers mainly use the reconstructed results to calculate specific quantities which describe the probability of determining an event as an expected signal or background.
 
@@ -116,7 +116,7 @@ When photons travel through the detector, their group velocities ($v_{gr}$) chan
 	\label{nVsWavelength}
 \end{figure}
 
-To simplify these complicated situations of $v_{gr}$ for the reconstruction, a tuned value of the $v_{gr}$ is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates the $t_{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{gr,eff}$, where $v_{water}$ is replaced by the effective group velocity $v_{gr,eff}$. The value of the $v_{gr,eff}$ set in the fitter can introduce biases in the reconstructed position, which is mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_{gr,eff}$ (a fast effective group velocity) will decrease the $t_{transit}$, while according to Eqn.~\ref{eq:tres_define}, the $t_{res}$ will increase. When the fitter compares the large $t_{res}$ with the timing $PDF$, it will attempt to place the trial vertex away from the hit PMTs to increase the $t_{transit}$ and then decrease the $t_{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if the $v_{gr,eff}$ is set too small (or too slow), the $t_{transit}$ will increase while the $t_{res}$ will decrease, and the fitter will place the trial vertex closer towards the hit PMTs to increase the $t_{res}$. These effects can be quantified as radial bias ($r_{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$)\cite{coulter2013modelling}:
+To simplify these complicated situations of $v_{gr}$ for the reconstruction, a tuned value of the $v_{gr}$ is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates the $t_{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_{gr,eff}$, where the $v_{water}$ is replaced by the effective group velocity $v_{gr,eff}$. The value of the $v_{gr,eff}$ set in the fitter can introduce biases in the reconstructed position, which is mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_{gr,eff}$ (a fast effective group velocity) will decrease the $t_{transit}$, while according to Eqn.~\ref{eq:tres_define}, the $t_{res}$ will increase. During the reconstruction, when the fitter compares the large $t_{res}$ with the timing $PDF$, it will attempt to place the trial vertex away from the hit PMTs to increase the $t_{transit}$ and then decrease the $t_{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if the $v_{gr,eff}$ is set too small (or too slow), the $t_{transit}$ will increase while the $t_{res}$ will decrease, and the fitter will place the trial vertex closer towards the hit PMTs to increase the $t_{res}$. These effects can be quantified as radial bias ($r_{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$)\cite{coulter2013modelling}:
 
 \begin{equation}
 r_{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
@@ -130,7 +130,7 @@ r_{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
 \end{figure}
 It shows that an overestimated $v_{gr,eff}$ (too fast) brings a positive radial bias to the true event position while an underestimated one (too slow) brings a negative radial bias.
 
-In practice, the $v_{gr,eff}$ is calculated by an effective refractive index $n_{eff}$ (or called $RI$ value): $v_{gr,eff}=c/n_{eff}$. To obtain a reasonable $v_{gr,eff}$ for the water-phase vertex fitter, my first attempt is to obtain the value from linear interpolation based on the MC simulations. First, 500 simulations of 5-MeV $e^-$ were generated uniformly inside the AV and with isotropic momentum directions. Then the \texttt{MPW fitter} reconstructed the same MC simulations by using 7 different values of $v_{gr}$, from 200 to 230 mm/ns (the $n_{eff}$ is from 1.50 to 1.30), with a step of 5 mm/ns. The distributions of radial bias from each reconstruction results were calculated and fitted with Gaussian functions. The mean values of these Gaussian fits were taken as the values of the $r_{bias}$, and they were plotted against the $v_{gr}$, as shown in Fig.~\ref{fig:plotVgr}. A linear fit was applied on these points and it gives $v_{gr,eff}=215.868$ mm/ns ( $n_{eff}=1.3888$) at the point where $r_{bias}=0$.
+In practice, the $v_{gr,eff}$ is calculated by an effective refractive index $n_{eff}$ (or called $RI$ value): $v_{gr,eff}=c/n_{eff}$. To obtain a reasonable $v_{gr,eff}$ for the water-phase vertex fitter, my first attempt is to obtain the value from linear interpolation based on the MC simulations. First, 500 simulations of 5-MeV $e^-$ were generated uniformly inside the AV and with isotropic momentum directions. Then the \texttt{MPW fitter} reconstructed the same MC simulations by using 7 different values of $v_{gr}$, from 200 to 230 mm/ns (the $n_{eff}$ is from 1.50 to 1.30), with a step of 5 mm/ns. The distributions of radial bias from each reconstruction results were calculated and fitted with Gaussian functions. The mean values of these Gaussian fits were taken as the values of the $r_{bias}$, and they were plotted against the $v_{gr}$, as shown in Fig.~\ref{fig:plotVgr}. A linear fit was applied on these points and it gives $v_{gr,eff}=215.868\pm 5.585$ mm/ns ($n_{eff}=1.3888$) at the point where $r_{bias}=0$.
 
 \begin{figure}[!htb]
 	\centering
@@ -159,7 +159,7 @@ The final number of the $v_{gr}$ was calculated by averaging the $v_{gr}$ obtain
 
 The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs\cite{groupVmeasure,anderson2021optical}. This analysis can give a more accurate $v_{gr}$, while it was not applied here.
 
-For the vertex fitters used in the partial-fill and scintillator phases which will be discussed in the following sections, since no internal calibration was performed, I adopt a linear interpolation method described in Ref.~\cite{coulter2013modelling}. It will be discussed in Sect.~\ref{sect:scintFitter}.
+For the vertex fitters used in the partial-fill and scintillator phases, since no internal calibration was performed, I adopt the linear interpolation method. It will be discussed in Sect.~\ref{sect:scintFitter}.
 
 \subsection{Fitter Pull and Drive Correction}\label{sect:fitterPull}
 
@@ -208,26 +208,25 @@ Note that these drive correction parameters were obtained from simulations and c
 	\label{pullParVsEnergy}
 \end{figure}
 
-To check the effects of the drive correction, I simulated 5-MeV $e^-$ at the detector center with momentum direction at (1,0,0). It shows that the drive effect in the reconstruction causes a $\sim$+50 mm bias from the detector center in the x axis. The drive correction reduces this drive bias down to $\sim$+0.2 mm in the x axis. The tests on the $^{16}$N central run data show that the drive correction can also improve the 
-resolution of the $r_{bias}$ distribution by $\sim$20 mm. In Fig.~\ref{drivecorVsEnergy}, various energies of $e^-$ from 2 to 10 MeV (with a 1-MeV step) were simulated to check the effects before and after the drive correction. These electrons were generated at the detector center and with momentum directions at (1,0,0). The pull is quantified by the radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The distributions of the $r_{bias}$ in each simulation were fitted with Gaussian functions, and the Gaussian means were used as the pull.
+To check the effects of the drive correction, 1000 simulations of the 5-MeV $e^-$ were generated at the detector center with momentum direction at (1,0,0). It shows that the drive effect in the reconstruction causes a +50 mm bias from the detector center in the x axis (i.e., the pull in +x). The drive correction reduces this pull down to $\sim$+0.2 mm in the x axis. The resolution of the $r_{bias}$ distribution is also improved by $\sim$20 mm. With the same simulation settings, various energies of $e^-$ from 2 to 10 MeV (with a 1-MeV step) were generated to check the effects before and after the drive correction, as shown in Fig.~\ref{drivecorVsEnergy}. The pull is quantified by the radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The distributions of the $r_{bias}$ in each simulation were fitted with Gaussian functions, and the Gaussian means were used as the pull. It shows that, with higher energy, the pull effect is larger. The drive corrections correct the radial biases by about 55 mm. The drive correction is also applied in the \texttt{Rat water fitter}, and their results are also shown.
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{pullEffectVsEnergy.pdf}
-	\caption[Radial biases of the simulated $e^-$ events as a function of energy.]{Radial biases of the simulated $e^-$ events before and after the drive correction, as a function of energy. The results from the official \texttt{RAT water fitter} are also shown here.}
+	\includegraphics[width=9cm]{pullEffectVsEnergy.pdf}
+	\caption[Radial biases of the simulated $e^-$ events as a function of energy.]{Radial biases of the simulated $e^-$ events before (unfilled triangles) and after the drive correction (filled triangles), as a function of energy. The results from the official \texttt{RAT water fitter} are also shown here, with the unfilled blue squares for biases before the correction and filled ones after the correction.}
 	\label{drivecorVsEnergy}
 \end{figure}
 
 \subsection{PMT Selectors for the Reconstruction}\label{sect:PMTselector}
-Several PMT selectors are used to selecting or removing PMTs from all the recorded PMTs triggered by an event and send the proper PMTs to the fitter for reconstruction. They are developed for optimizing the fitter or boosting up the fit speed:
+PMT selectors were developed to selecting proper PMTs for the reconstruction algorithm from all the recorded PMTs triggered by an event. The purpose is to optimize the fitter results and boosting up the fit speed. The PMT selectors used by the \texttt{MP fitter} are:
 
 \begin{itemize}
 	\item[$\bullet$] Straight Light Path Time Residual Cut Selector
 	
-	This selector is used for the direction reconstruction for the SNO+ water phase. It was first introduced by Kalpana Singh\cite{kalpanaMPFitter}. In the selector, the value of time residual ($t_{res}$) is calculated for each hit PMTs from an event and the PMT with a $t_{res}$ value in a prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates $t_{res}$ by using a straight line light path, which is the same as the \texttt{MP water fitter}. The selector can remove the PMTs triggered by photons with late timing, such as the photons reflected off the detector elements (late light), and keep the possible Cherenkov ring hit pattern clear for the direction fitter to fit. Also, dropping the irrelevant PMTs can potentially boost up the fit speed.
+	This selector is used for the direction reconstruction for the SNO+ water phase. It was first developed by Kalpana Singh\cite{kalpanaMPFitter}. In the selector, the value of time residual ($t_{res}$) is calculated for each hit PMTs from an event and the PMT returning a $t_{res}$ value within the prompt time window of $[-10.0, 120.0]~ns$ is selected for the fitter. The selector calculates the $t_{res}$ by using straight line light paths, which is the same as the \texttt{MPW fitter}. The selector mostly removes the PMTs triggered by late timing photons, such as the photons reflected off the detector elements (called ``late light''), and then keeps the possible Cherenkov ring hit pattern clear for the direction reconstruction. Removing the irrelevant PMTs can potentially boost up the fit speed.
 	
 	\item[$\bullet$] Mode Cut Selector
 	
-	This selector was developed by the collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the hit PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the \texttt{MPW fitter}, I found that the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the \texttt{MP scint-water} and \texttt{scint fitter} the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
+	This selector was developed by the SNO+ collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the hit PMTs and finds a mode value of the hit time ($t_{mode}$). If $t_{mode}$ fails to be found, it calculates a median value ($t_{median}$) instead\cite{modeCut}. Then it selects the PMT with $t_\mathrm{PMT} \in [t_{mode}+t_{low}, t_{mode}+t_{high}]~ns$. This selector is used to remove the　PMTs triggered by noise and light light from reflection. The values of $t_{low},~t_{high}$ are optimized for different scintillators. For the \texttt{MPW fitter}, I found that the optimized window is $[t_{mode}-50, t_{mode}+100]$ ns by checking with the fit biases and resolutions for the \isotope[16]{N} central run data in the water phase, while for the \texttt{MP scint-water} and \texttt{scint fitter} the optimized window is $[t_{mode}-100, t_{mode}+100]$ ns based on checking with the simulations.
 	
 	\item[$\bullet$] Uniform PMT Selector
 	
@@ -253,13 +252,13 @@ Several PMT selectors are used to selecting or removing PMTs from all the record
 \end{itemize}
 
 \subsection{Position Figure of Merit}\label{sect:positinFoM}
-A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHit ($\mathrm{NHit}_{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selections mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove some mis-reconstruct events and then improve the results of the reconstruction.
+A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHit ($\mathrm{NHit}_{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selections mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and then improve the results of the reconstruction.
 
 \subsection{Water Fitter Performances}\label{sect:waterFitter}
 
 By using the \texttt{RAT} (version 6.17.6) package, simulations of 10000 $e^-$ events were generated at the detector center (in the PSUP coordination) with isotropic directions, i.e., the event momentum directions were generated randomly and uniformly over all directions. Default detector trigger settings in the SNO+ water phase were used (\texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0). With these settings, some events may fail to trigger the detector, especially those with lower energies ($E<3$ MeV), and thus the number of the reconstructed events can be lower than the simulated events.
 
-The average speed of the event vertex reconstruction of the 5-MeV $e^-$ simulations is 0.005 second/event and the direction reconstruction is 0.002 second/event, which are very fast and acceptable for the data processing in the water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performances for the 5-MeV $e^-$ events. The biases between the fitted and MC positions ($\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$) were projected on the x, y, and z axes respectively and were filled into 1D histograms, which were further fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the Gaussian sigma ($\sigma$) is taken as the fit position resolution.
+The average fit speed of the event vertex reconstruction for the 5-MeV $e^-$ simulations is 0.005 second/event and the direction reconstruction is 0.002 second/event, which are very fast and acceptable for the data processing in the SNO+ water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performances for the 5-MeV $e^-$ events. The biases between the fitted and MC positions: $\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$, were projected on the x, y, and z axes respectively and their distributions were fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the Gaussian sigma ($\sigma$) is taken as the fit position resolution.
 \begin{figure}[htbp]
 	\centering \label{fig:5MeVbeta_center_water}
 	\subfigure[$x_{fit}-x_{mc}$]{
@@ -282,6 +281,7 @@ The average speed of the event vertex reconstruction of the 5-MeV $e^-$ simulati
 	\caption[The position biases projected on the x, y and z axes.]{The position biases projected on the x, y and z axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.}
 \end{figure}
 
+In Fig.~\ref{fig:5MeVbeta_center_water}, there are a few events with position biases larger than 2000 mm, which are considered as mis-reconstruct events. Some of these events are due to relatively lower log-likelihood values and can be tagged by the $posFoM$ mentioned in Sect.~\ref{sect:positinFoM}. As shown in Fig.~\ref{fig:posFOM_5MeVbeta_center_water}, a cut of $scaleLogL>10$ can remove a few mis-reconstructed events. The rest of them can be caused by the straight light path calculation in the \texttt{MP fitter}, since this calculation omits the complicated situations with the refraction and reflection light paths, as mentioned in Sect.~\ref{sect:waterVertex}. However, the fraction of these mis-reconstruct events is low, about 0.1\% and thus it is acceptable.
 
 \begin{figure}[htbp]
 	\centering \label{fig:posFOM_5MeVbeta_center_water}
@@ -305,9 +305,7 @@ The average speed of the event vertex reconstruction of the 5-MeV $e^-$ simulati
 	\caption[The position biases against the position FOMs.]{The position biases against the position FoMs. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.}
 \end{figure}
 
-A cut of $scaleLogL>10$ can remove a few mis-reconstruction . 
-
-A more generic situation is that the events happen everywhere inside the AV. In this simulation, $e^-$ events were generated at random positions uniformly distributed inside the AV volume and with isotropic directions. Various $e^-$ energies were also simulated, from 2 to 15 MeV by a 1-MeV step. Fig.~\ref{fig:MPWposBias_isoFill} and Fig.~\ref{fig:MPWposResol_isoFill} show the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$) respectively. 
+A more generic situation is that the events happen everywhere inside the AV. To simulate this, $e^-$ events were generated at random positions uniformly distributed inside the AV volume and with isotropic directions. Various $e^-$ energies were also simulated, from 2 to 15 MeV with a 1-MeV step. Fig.~\ref{fig:MPWposBias_isoFill} and Fig.~\ref{fig:MPWposResol_isoFill} show the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$) respectively. 
 
 These results show that the fit position biases $\mu_{x,y,z}$ are stable across different energies and for $E\leq 5$ MeV, the biases are within 10 mm.
 The resolutions $\sigma_{x,y,z}$ decrease from about 350 mm to 120 mm and the average is 180 mm. More photons are produced by the $e^-$ events with higher energy, thus triggering more PMTs. With a larger NHits value, more information is provided for the fitter, and it can return better position resolutions. As I will show in the following section, the position resolution can also be improved by using a decent detection medium that can produce more photons for the same event.. 
@@ -328,7 +326,7 @@ With a larger value of NHits, more information is provided for the fitter, and i
 	\label{fig:MPWposResol_isoFill}
 \end{figure}
 
-To check the radial dependence of the reconstruction performance, simulations of the 5-MeV $e^-$ were generated in 11 thin shells, with isotropic directions. The centers of these shell are at the AV center, and their radii are at $r$ m and $r+0.001$ m, where $r$ is from 0.5 m to 5.5 m, with a step of 0.5 m. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position biases and resolutions respectively. 
+To check the radial dependence of the reconstruction performance, simulations of the 5-MeV $e^-$ were generated in 11 thin shells, with isotropic directions. The centers of these shells are at the AV center, and their radii are at $r$ m and $r+0.001$ m, where $r$ is from 0.5 m to 5.5 m, with a step of 0.5 m. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position biases and resolutions respectively. The results show that the fit position biases are stable across the different radii of the AV, while the resolutions become worse when the events are close to the AV, or $R>5$ m. This is called the ``near AV effect'', which was observed in SNO. For the position close to the AV, the AV can serve as a lens and distort the light path\cite{brice1996monte}. A few complicated calculations to tackle this effect and the technique called ``Near AV cut'' were discussed in Refs.~\cite{coulter2013modelling,jones2011background}, but they are not applied in this thesis. 
 
 \begin{figure}[htbp]
 	\centering	
@@ -365,20 +363,30 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) d\cos\theta_e} = a\times 100\%,
 \end{equation}
 where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1 and a better direction reconstruction.
+4.466,0.1188,21.54,0.9066,0.541,0.01801
 
-%2,3,4,5,6,7,8,9,10,11,12,13,14,15
-%
-%range1 -1,3.628,0.1787,22.55,3.598,0.7614,0.03438,114/134,0.851
-%range1 -1,3.836,0.09566,19.79,1.227,0.671,0.01924,183/163,1.123
-%range1 -1,3.864,0.09978,19.4,0.8015,0.5462,0.01707,200.8/167,1.202
-%range1 -1,4.543,0.1134,24.03,0.9498,0.5412,0.01582,221.5/159,1.393
-%-1,5.131,0.145,25.29,0.9413,0.4913,0.01711,252.7/157,1.609
-%range1 -1,5.961,0.1637,29.13,1.141,0.5076,0.01735,277.3/159,1.744
-%range1 -1,6.354,0.1884,30.36,1.115,0.4726,0.01765,259.1/153,1.693
-%range1 -1,7.811,0.2088,39.27,1.584,0.5289,0.01715,245.7/149,1.649
-%-1,9.095,0.2423,43.59,1.876,0.5449,0.01827,273.2/141,1.938
-%-1,8.593,0.2714,37.83,1.386,0.4428,0.01928,246/138,1.783
-%-1,10.97,0.3012,47.45,2.103,0.5293,0.02043,268.3/134,2.002
+
+\begin{table}[ht]
+	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
+		\toprule
+		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+		\hline
+		MPW data & 4.47$\pm$0.12 & 21.54 $\pm$0.95 & 0.54$\pm$0.02 & 221.5/159 & 0.964 & 0.744 & 0.410 \\
+		\hline
+		\texttt{RAT} data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
+		\texttt{RAT} MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:angularResol_MPW}
+\end{table}
+
+These results are slightly better than the SNO fitter results for the 5-MeV $e^-$ in the heavy water, with $\beta_M=3.348\pm 0.08119, \beta_S=19.3\pm 0.6929$\cite{boulay2004direct}.
+
+\begin{figure}[htbp]\label{fig:diResolVsShell_5MeV}
+	\centering
+	\includegraphics[width=12cm]{DirResolVsShell.pdf}
+	\caption[The biases between the fitted and MC directions.]{The biases between the fitted and MC directions, fitted with the resolution function $P(\cos\theta_e)$ (plotted in red). The MC generated $10^4$ 5-MeV $e^-$ at the detector center.}
+\end{figure}
 
 \subsection{Test on Gamma Events}
 
@@ -386,7 +394,7 @@ The $\gamma$ events with energies of 2.2 MeV and 4.4 MeV are crucial for analyzi
 A realistic trigger setting for the antineutrino analysis (run-106904) was also simulated. 
 With this trigger setting in simulations, about 53\% of the low energy 2.2-MeV $\gamma$ events were triggered. So I doubled the simulations to $2\times10^4$.
 
-Table.~\ref{tab:bias_water_gamma} and Table.~ show their reconstruction performances.
+Table.~\ref{tab:bias_water_gamma} shows the reconstruction performances.
 
 \begin{table}[ht]
 	\caption{Reconstruction performances for the 2.2-MeV and 4.4-MeV $\gamma$ events.}\label{tab:bias_water_gamma}
@@ -400,57 +408,6 @@ Table.~\ref{tab:bias_water_gamma} and Table.~ show their reconstruction performa
 		\bottomrule	
 	\end{tabular*}
 \end{table}
-
-
-%2.2
-%range1 -1,2.323,0.06903,8.719,0.7959,0.7346,0.03049,168.5/191,0.8822
-%4.4
-%range1 -1,3.203,0.1215,10.43,0.6085,0.54,0.03515,159.1/170,0.9358
-
-%\begin{figure}[htbp]
-%	\centering
-%	\subfigure[$x_{fit}-x_{mc}$]{
-%		\begin{minipage}[t]{0.5\textwidth}
-%			\includegraphics[width=8cm]{X_2p2MeVgamma.pdf}
-%		\end{minipage}
-%	}   
-%	\subfigure[$y_{fit}-y_{mc}$]{ 
-%		\begin{minipage}[t]{0.38\textwidth}
-%			\centering
-%			\includegraphics[width=8cm]{Y_2p2MeVgamma.pdf}
-%		\end{minipage}
-%	}
-%	\subfigure[$z_{fit}-z_{mc}$]{ 
-%		\begin{minipage}[b]{0.32\textwidth}
-%			\centering
-%			\includegraphics[width=8cm]{Z_2p2MeVgamma.pdf}
-%		\end{minipage}
-%	}
-%	\caption[Fit position biases for 2.2-MeV $\gamma$.]{The fit position biases projected on the x, y and z axes, projected on x, y and z axes. The MC generated $10^4$ 2.2-MeV $\gamma$s at the detector center.}
-%\end{figure}
-%
-%4.4-MeV $\gamma$ events
-%\begin{figure}[htbp]
-%	\centering
-%	\subfigure[$x_{fit}-x_{mc}$]{
-%		\begin{minipage}[t]{0.5\textwidth}
-%			\includegraphics[width=8cm]{X_4p4MeVgamma.pdf}
-%		\end{minipage}
-%	}   
-%	\subfigure[$y_{fit}-y_{mc}$]{ 
-%		\begin{minipage}[t]{0.38\textwidth}
-%			\centering
-%			\includegraphics[width=8cm]{Y_4p4MeVgamma.pdf}
-%		\end{minipage}
-%	}
-%	\subfigure[$z_{fit}-z_{mc}$]{ 
-%		\begin{minipage}[b]{0.32\textwidth}
-%			\centering
-%			\includegraphics[width=8cm]{Z_4p4MeVgamma.pdf}
-%		\end{minipage}
-%	}
-%	\caption[Fit position biases for 4.4-MeV $\gamma$.]{Fit position biases projected on the x, y and z axes. The MC generated $10^4$ 4.4-MeV $\gamma$ particles at the center of the detector.}
-%\end{figure}
 
 \subsubsection{Test on $^{16}$N Calibration Source Events}
 In a more realistic situation, the data collected from the runs of the calibration sources were used to evaluate the fitter performances as well as the reconstruction uncertainties. Chapter 5 will discuss the analyses of the $^{16}$N calibration source in detail. For these tests, a position resolution function including the distributions of the initial interaction positions, rather than the Gaussian function was used, while the same direction resolution function was used. 
@@ -845,7 +802,7 @@ If using a timing $PDF$ with the wrong PPO concentration for the reconstruction,
 The Bi-Po analysis was performed on simulations to check the fitter efficiency. This analysis suggests a model offset of the water level to include more fitted data. A flowchart of the algorithm for picking up the Bi-Po event pairs is shown in Appendix.~\ref{appendix:bipo}, Fig.~\ref{biPo_flowchart}.
 
 \subsection{Discussions for the Partial Fitter}\label{sect:partialFitterDiscuss}
-Suggested by the collaboration, I attempted to use the \texttt{MP partial fitter} to fit the water level\cite{mpFitWaterLevel}. In this case, the water level ($Z_{water}$) is considered as a fit parameter and the \texttt{MP fitter} fits for 5 parameters: $(x,y,z,t,Z_{water})$. The bias between the true $Z_{water}$ and the reconstructed one is fitted with a Gaussian, which gives a bias of 40 mm and a resolution of 492 mm. The fit resolution is much larger than the event position resolution, so this method is not good enough to be applied on the analysis.
+Suggested by the SNO+ collaboration, I attempted to use the \texttt{MP partial fitter} to fit the water level\cite{mpFitWaterLevel}. In this case, the water level ($Z_{water}$) is considered as a fit parameter and the \texttt{MP fitter} fits for 5 parameters: $(x,y,z,t,Z_{water})$. The bias between the true $Z_{water}$ and the reconstructed one is fitted with a Gaussian, which gives a bias of 40 mm and a resolution of 492 mm. The fit resolution is much larger than the event position resolution, so this method is not good enough to be applied on the analysis.
 
 The reconstructed vertices of certain events, such as the $^{214}$Bi$^{214}$Po event pairs, can be used to calculate the time residual distribution, which is taken as the time profile caused by the $e^-$ or $\alpha$ particles in the liquid scintillator. By extracting the time constants from the time profile, the quality and optical properties of the liquid scintillator can be obtained. This analysis has been applied by the collaboration on the partial-fill data\cite{partialFillTres,partialFillBiPo214}.
 
