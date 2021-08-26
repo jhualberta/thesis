@@ -347,7 +347,7 @@ The bias between the true event direction $\vec{u}_{MC}$ and the reconstructed d
 
 To describe the distribution of $\cos\theta_e$, an empirical function for the angular resolution was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components:
 \begin{equation}\label{eq:directResol}
-P(\cos\theta_e)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta)]}{1-\exp(-2\beta_s)},
+P(\cos\theta_e)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta_e)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta_e)]}{1-\exp(-2\beta_s)},
 \end{equation}
 where the parameters: $\beta_M$ and $\beta_S$ are the ``decay'' constants or the ``slopes'' of the two exponential components; $\alpha_M$ is the fraction between two exponential components. The first component, the main peak is due to the single scattering of the electrons and is the true angular resolution of the detector, while the second component which has a broad tail is mainly due to the multiple scattering of electrons; there are also back scattering electrons on the detector components and the poorly reconstructed events in the tails\cite{boulay2004direct}. Fig.~\ref{fig:directionResol_5MeV} shows the $\cos\theta_e$ distribution of the 5-MeV $e^-$ particles generated at the detector center and with isotropic directions.
 
@@ -362,30 +362,26 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \begin{equation}\label{eq:cosTheta_fraction}
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) d\cos\theta_e} = a\times 100\%,
 \end{equation}
-where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1 and a better direction reconstruction.
-4.466,0.1188,21.54,0.9066,0.541,0.01801
-
+where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1 and a better direction reconstruction. The results of the direction resolutions are listed in Table.~\ref{tab:angularResol_MPW}.
 
 \begin{table}[ht]
-	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
-		\toprule
-		107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
-		\hline
-		MPW data & 4.47$\pm$0.12 & 21.54 $\pm$0.95 & 0.54$\pm$0.02 & 221.5/159 & 0.964 & 0.744 & 0.410 \\
-		\hline
-		\texttt{RAT} data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
-		\texttt{RAT} MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
-		\bottomrule
-	\end{tabular}
-	\label{tab:angularResol_MPW}
+	\caption{Direction resolutions for the reconstruction of the 5-MeV $e^-$ events.}\label{tab:angularResol_MPW}\vspace{2mm}
+	\centering		
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccccc}
+		\toprule 
+	    $\beta_M$ &  $\beta_S$ & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
+        \hline
+         4.47$\pm$0.12 & 21.54 $\pm$0.91 & 0.978 & 0.777 & 0.624\\
+		\bottomrule	
+	\end{tabular*}
 \end{table}
 
 These results are slightly better than the SNO fitter results for the 5-MeV $e^-$ in the heavy water, with $\beta_M=3.348\pm 0.08119, \beta_S=19.3\pm 0.6929$\cite{boulay2004direct}.
 
 \begin{figure}[htbp]\label{fig:diResolVsShell_5MeV}
 	\centering
-	\includegraphics[width=12cm]{DirResolVsShell.pdf}
-	\caption[The biases between the fitted and MC directions.]{The biases between the fitted and MC directions, fitted with the resolution function $P(\cos\theta_e)$ (plotted in red). The MC generated $10^4$ 5-MeV $e^-$ at the detector center.}
+	\includegraphics[width=14cm]{DirResolVsShell.pdf}
+	\caption[Direction resolutions as a function of radius.]{Direction resolutions as a function of radius. The MC generated 10000 5-MeV $e^-$ inside the AV with isotropic directions.}
 \end{figure}
 
 \subsection{Test on Gamma Events}
@@ -477,7 +473,7 @@ Similar to Sect.~\ref{sect:directResol}, $\cos\theta_a$ in Eqn.~\ref{eq:cosTheta
 			\\
 			\midrule
 			SNO heavy water  & 0.50 & 0.71 & 0.92  \\	
-			SNO+ water  & 0.53 & 0.76 & 0.93	 \\
+			SNO+ water  & 0.62 & 0.78 & 0.98	\\
 			wbWLS  & 0.37 & 0.63 & 0.90  \\	
 			\bottomrule	
 		\end{tabular*}
