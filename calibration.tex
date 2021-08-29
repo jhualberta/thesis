@@ -120,7 +120,7 @@ Fig.~\ref{hsx} shows the spatial distributions $S(x)$ of the first $\gamma$-ray 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{sx.pdf}
-	\caption{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from the \texttt{RAT} simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
+	\caption[Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis.]{Spatial distributions of {$^{16}$}N first $\gamma$-rays interaction position projected on x axis, obtained from the \texttt{RAT} simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
 	\label{hsx}
 \end{figure}
 
@@ -147,7 +147,7 @@ Fig.~\ref{fig:posresol} shows a comparison of the reconstructed x position of {$
 \begin{figure}
 	\centering
 	\includegraphics[width=140mm]{posResol.pdf}
-	\caption{Distributions of the reconstructed position projected on x axis, obtained from SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
+	\caption[Distributions of the reconstructed position projected on x axis.]{Distributions of the reconstructed position projected on x axis, obtained from SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
 	\label{fig:posresol}
 \end{figure}
 
@@ -181,7 +181,7 @@ Fig.~\ref{MPWscanXYZResols} shows the fitted results of $\mu_P$ and $\sigma_P$ a
 \begin{figure}
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_muPandSigmaP_xyzScans.pdf}
-	\caption{The fitted values of $\mu_P$ (top three) and $\sigma_P$ (bottom three) along x (left), y (middle) and z (right) scans. The source positions in each set of scans are projected onto x, y and z axes respectively. The MC results (red circles) are compared with the data (black boxes).}
+	\caption[The fitted values of $\mu_P$ and $\sigma_P$ along x, y and z scans.]{The fitted values of $\mu_P$ (top) and $\sigma_P$ (bottom) along x (left), y (middle) and z (right) scans. The source positions in each set of scans are projected onto x, y and z axes respectively. The MC results (red circles) are compared with the data (black boxes).}
 	\label{MPWscanXYZResols}
 \end{figure}
 
@@ -199,7 +199,7 @@ It goes worse when the source is close to the AV or at the edges of the axes. Wh
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_6176_pos_sigmaP_data_mc.pdf}
-	\caption{Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
+	\caption[Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position.]{Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
 	\label{pos_relative_sigma_biasesVsPositions}
 \end{figure}
 
@@ -226,7 +226,7 @@ To quantify the vertex shifts between the MC and data, values of vertex shifts: 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_vertexShift_xyzScans.pdf}
-	\caption{Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
+	\caption[Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position.]{Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
 	\label{fig:verteshitfs}
 \end{figure}
 
@@ -263,7 +263,7 @@ To obtain the $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted wi
 	\label{fig:vertexScale}
 \end{figure}
 
-From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{table:vertexScale}. Since the $\chi^2/ndf$ values here were large, according to \cite{waterunidoc} and \cite{pdg2020}, inflated errors were calculated as $S\cdot slope~errors$, where the error scale factor $S=\sqrt{\chi^2/(ndf-1)}$. The downward systematic was calculated as the slope minus the slop error as well as the inflated error. In contrast, the upward systematic was taken as the positivel inflated error, as suggested by \cite{waterunidoc}. For the z scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive due to the possible biases in simulation for the neck geometry effects and makes the slope positive. So this point was not used in the linear fit.
+From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{table:vertexScale}. Since the $\chi^2/ndf$ values here were large, according to Refs.~\cite{waterunidoc,pdg2020}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(ndf-1)}$. The downward systematic was calculated as the slope minus the slop error as well as the inflated error. In contrast, the upward systematic was taken as the positivel inflated error, as suggested by \cite{waterunidoc}. For the z scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive due to the possible biases in simulation for the neck geometry effects and makes the slope positive. So this point was not used in the linear fit.
 
 \begin{table}[ht]
 	\centering
@@ -392,7 +392,7 @@ Fig.~\ref{fig:N16beta14MPW} shows a comparison of the $\beta_{14}$ for the data 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16_beta14_107055.png}
-	\caption{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} processed results and black for the \texttt{RAT} results.}
+	\caption[Distributions of $\beta_{14}$ for the $^{16}$N central run-107055.]{Distributions of $\beta_{14}$ for the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} processed results and black for the \texttt{RAT} results.}
 	\label{fig:N16beta14}
 \end{figure}
 

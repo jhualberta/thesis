@@ -3,29 +3,34 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 398 of file thesis.bib
+You're missing a field name---line 30 of file thesis.bib
+ : 
+ : %  title={Improved measurement of B 8 solar neutrinos with 1.5 kt{\textperiodcentered} y of Borexino exposure},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 423 of file thesis.bib
  : @article{aalbers2020solar
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1270 of file thesis.bib
+Repeated entry---line 1285 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--string name "hamamatsu" is undefined
---line 1369 of file thesis.bib
-I was expecting a `,' or a `}'---line 1369 of file thesis.bib
+--line 1384 of file thesis.bib
+I was expecting a `,' or a `}'---line 1384 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1629 of file thesis.bib
+Repeated entry---line 1644 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1681 of file thesis.bib
+Repeated entry---line 1696 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1828 of file thesis.bib
+Repeated entry---line 1843 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -93,6 +98,10 @@ Warning--empty year in beta14discrepancy
 Warning--empty year in leta
 Warning--empty year in morganFOM
 Warning--empty year in fady_pselmaa
+Warning--empty author in agostini2020improved
+Warning--empty title in agostini2020improved
+Warning--empty journal in agostini2020improved
+Warning--empty year in agostini2020improved
 Warning--empty journal in rottele2019tritium
 Warning--empty journal in piperno2015dark
 Warning--can't use both volume and number fields in han2020pandax
@@ -106,36 +115,36 @@ Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 214 entries,
+You've used 215 entries,
             1876 wiz_defined-function locations,
-            1487 strings with 36889 characters,
-and the built_in function-call counts, 45248 in all, are:
-= -- 3957
-> -- 2474
+            1488 strings with 36911 characters,
+and the built_in function-call counts, 45353 in all, are:
+= -- 3960
+> -- 2475
 < -- 0
-+ -- 935
++ -- 936
 - -- 721
-* -- 3183
-:= -- 6976
+* -- 3195
+:= -- 6985
 add.period$ -- 272
-call.type$ -- 214
+call.type$ -- 215
 change.case$ -- 159
 chr.to.int$ -- 0
-cite$ -- 290
-duplicate$ -- 2482
-empty$ -- 4207
+cite$ -- 295
+duplicate$ -- 2491
+empty$ -- 4224
 format.name$ -- 721
-if$ -- 10707
+if$ -- 10729
 int.to.chr$ -- 0
-int.to.str$ -- 214
-missing$ -- 214
-newline$ -- 705
+int.to.str$ -- 215
+missing$ -- 215
+newline$ -- 708
 num.names$ -- 206
-pop$ -- 797
+pop$ -- 806
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1249
+skip$ -- 1251
 stack$ -- 0
 substring$ -- 1187
 swap$ -- 818
@@ -143,8 +152,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 76
+warning$ -- 80
 while$ -- 328
-width$ -- 217
-write$ -- 1938
-(There were 6 error messages)
+width$ -- 218
+write$ -- 1942
+(There were 7 error messages)

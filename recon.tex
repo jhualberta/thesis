@@ -125,7 +125,7 @@ r_{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{effectOfGroupVelocity.png}
-	\caption{A cartoon shows effects of tuning the effective group velocity. In this case, the effective group velocity is faster than expected, the fitted position is dragged back along the direction to increase the $t_{transit}$.	\label{fig:effectiveVg}}
+	\caption[A cartoon shows effects of tuning the effective group velocity.]{A cartoon shows effects of tuning the effective group velocity. In this case, the effective group velocity is faster than expected, the fitted position is dragged back along the direction to increase the $t_{transit}$.	\label{fig:effectiveVg}}
 \end{figure}
 It shows that an overestimated $v_{gr,eff}$ (too fast) brings a positive radial bias to the true event position while an underestimated one (too slow) brings a negative radial bias.
 
@@ -523,7 +523,7 @@ there is no intersection point or only one intersection point (when $\Delta=0$) 
 \begin{figure}
 	\centering
 {\includegraphics[width=80mm]{line-sphere.png}}
-\caption{Line-sphere intersections. (a) the ray vector intersects the sphere with 2 points; (b) the ray vector intersects the sphere with 1 point; (c) and (d): the ray vector never passes through the sphere.}\label{line-sphere}
+\caption[Line-sphere intersections.]{Line-sphere intersections. (a) the ray vector intersects the sphere with 2 points; (b) the ray vector intersects the sphere with 1 point; (c) and (d): the ray vector never passes through the sphere.}\label{line-sphere}
 \end{figure}
 
 \item Ray-plane intersection
@@ -563,7 +563,7 @@ If $d_{sp}=0$, the light path is always in the water. In this case, the fitter i
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=7cm]{scintpdf.pdf}
-	\caption[The timing $PDF$s used by the \texttt{MP partial fitter}.]{The timing $PDF$s used by the \texttt{MP partial fitter}. Blue: the timing $PDF$ used by the \texttt{MP water fitter}; red: the scintillator timing $PDF$.}
+	\caption[Timing $PDF$s used by the \texttt{MP partial fitter}.]{Timing $PDF$s used by the \texttt{MP partial fitter}. Blue: the timing $PDF$ used by the \texttt{MPW fitter}; red: the scintillator timing $PDF$.}
 	\label{partialpdf}
 \end{figure}
 
@@ -732,7 +732,7 @@ Fig.~\ref{fig:partial_scaleLogLcut} (a) shows the $z_{fit}-z_{MC}$ against the $
 	\caption{Effects of the $scaleLogL$ cut on the reconstructed positions and fit biases.\label{fig:partial_scaleLogLcut}}
 \end{figure}
 
-For the events in the water region, the fit position biases in x and y ($\mu_{x,y}$) are comparable to the results of the \texttt{MPW fitter} shown in Sect.~\ref{sect:waterFitterVertex}, while the $\mu_z$ is about 50 mm worse and the resolutions $\sigma_{x,y,z}$ are about 100 mm worse. This is due to the same effects from the water-scintillator interface and boundaries mentioned previously. These boundary effects are more obvious and worse compared to the scintillator region, as shown in the $\rho$ vs. $z$ plot in Fig.~\ref{fig:partial_inWater} (a). This is due to the lower NHits in the water, or less information of triggered PMTs is provided for the fitter. Since the partial-fill phase analysis is focused on studying the liquid scintillator, the events in the water region are less interested and they are mostly removed by the NHits cut (NHits$>40$ was applied on the data processing during the partial-fill) and fiducial volume cut in the analyses. 
+For the events in the water region, the fit position biases in x and y ($\mu_{x,y}$) are comparable to the results of the \texttt{MPW fitter} shown in Sect.~\ref{sect:waterFitterVertex}, while the $\mu_z$ is about 50 mm worse and the resolutions $\sigma_{x,y,z}$ are about 100 mm worse. This is due to the same effects from the water-scintillator interface and boundaries mentioned previously. These boundary effects are more obvious and worse compared to the scintillator region, as shown in the $\rho$ vs. $z$ plot in Fig.~\ref{fig:partial_inWater} (a). This is due to the lower NHits in the water, or less information of triggered PMTs is provided for the fitter. However, the relatively worse reconstruction performance for the water events is insignificant for the partial-fill analysis, since the analysis is focused on studying the liquid scintillator, the events in the water region are less interested and they are mostly removed by the NHits cut (NHits$>40$ was applied on the data processing during the partial-fill) and fiducial volume cut in the analyses. 
 
 \begin{figure}[htbp]
 	\centering
