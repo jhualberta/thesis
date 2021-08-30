@@ -925,43 +925,16 @@ A \texttt{Dump Likelihood Class} stores the trial fit parameters with respect to
 Once the reconstructed results are obtained, the fitter will send them to the classifiers for further analysis calculations. 
 
 \section{Energy Reconstruction}
-The SNO+ energy fitter mainly uses a lookup table to convert the NHits of a triggered event into reconstructed energy. It uses the fitted position and direction of an event as inputs and then calculates an effective 
+The SNO+ energy reconstruction algorithms (energy fitters) were based on SNO\cite{boulay2004direct,moffat2001optical} and has been further developed and optimized\cite{jones2011background,walker2016study}. 
 
-The optical response of each PMT, including the PMT detection efficiency, transmission probability, attenuation, and etc. 
+The energy fitters mainly use lookup tables to convert the NHits of a triggered event into reconstructed energy. The energy fitters used in the water phase are mainly the energy response processor (\texttt{EnergyRSP fitter})\cite{walker2016study,energyRSP} and the energy Lookup fitter (\texttt{EnergyLookup fitter})\cite{jones2011background}. The \texttt{EnergyRSP fitter} is used to reconstruct the events inside the AV (internal events). It considers the detailed detector effects, such as the asymmetric geometry of the detector, the optical response of each PMT (including the PMT detection efficiency, transmission probability, attenuation, etc.). It utilizes the reconstructed event positions, directions, and time residuals as inputs to convert the corresponding value of NHits to estimated energy based on simulation models and calibration data. The \texttt{EnergyLookup fitter} is simpler and is mainly used to reconstruct the events in the cavity water (external events). It mainly uses the lookup table of the NHits dependence on the event reconstructed position to calculate the energy of the event\cite{jones2011background}. Both fitters correct the actual number of online PMTs for a realistic physics run (or called ``channel efficiency'').
 
-detailed detector effects are also taken into account, such as the asymmetric geometry of the detector, including the neck cylinder on the top of the AV sphere; the actual number of online PMTs in a realistic physics run.
-
-For the energy reconstruction in the water phase,  
-
-energy response processor, or the \texttt{energy RSP fitter} (\texttt{energyRSP}), is derived from SNO \cite{boulay2004direct,moffat2001optical}.
-
-$5~MeV$
-
-estimated $N_\gamma$,
-
-energy look up\cite{energyRSP}.
-(\texttt{energyRSP})
-
-%     A lookup table is used to
-%	// map from estimated Cerenkov photons to energy. 
-%	
-%	the PMT efficiency, and the position and angular dependence of the $NHits$ is also taken into account. 
-%	
-%	// This method calculates the optical response of each PMT (taking into
-%	// account PMT efficiency, solid angle, Cerenkov angular distribution,
-%	// etc.) to estimate the number
-%	// of Cerenkov photons from the prompt hits. This fitter is only
-%	// for a detector geometry with light water in the inner av.
-
-In the next chapter, the resolutions and scales of the energy fitter in the water phase were derived from the $^{16}$N calibration scans at certain detector points.
-
-Energy lookup table built from the simulation data set.
+The resolutions and scales of the energy reconstruction in the water phase were derived from the $^{16}$N calibration scans at certain detector points, which is shown in Chapter 5.
 
 \subsection{Energy Figure of Merit}\label{sect:energy_fom}
 The SNO+ Antineutrino working group developed three figure of merit (FoM) quantities for the energy fitter to identify the poor reconstructed results which have significant biases to the truth energy values, especially for the low energy regions around 2.2 MeV, which helps the analysis of neutron capture\cite{waterFoM,waterunidoc}. The following energy FoMs were applied to the energy reconstruction results during the water phase, discussed in the next chapter.
 
 \begin{itemize}
-	
 	\item[$\bullet$]$U$-test ($U_{test}$):
 	A Mann-Whitney quantity uses the channel hit probabilities by EneryRSP which are ordered and ranked. The rank of the channels with hits are summed.%cite logan docDB 6190	
 		\begin{equation}
@@ -970,23 +943,25 @@ The SNO+ Antineutrino working group developed three figure of merit (FoM) quanti
 	where $S\equiv \sum_{i}^N \mathrm{rank}_i$. 
 	
 	\item[$\bullet$] $G$-test ($G_{test}$):
-	A quantity uses the hit probabilities by EnergyRSP ($E_i$), which are normalized to the number of observed hits ($N$) %cite logan docDB 6190	
-	
+	A quantity uses the hit probabilities by \texttt{EnergyRSP} ($E_i$), which are normalized to the number of observed hits ($N$):
 	\begin{equation}
 	G_{test}\equiv \frac{1}{N}\sum_{i=1}^N \log(\frac{1}{E_i}),
 	\end{equation}
 	
 	\item[$\bullet$] $Z$-factor ($Z_{factor}$):
-	A quantity uses the medians and median absolute deviations
-of hit probabilities by EnergyRSP
-	
+	A quantity uses the medians and median absolute deviations of hit probabilities by \texttt{EnergyRSP}:
 	\begin{equation}
-     Z'\equiv 1-\frac{3(\sigma_p+\sigma_n)}{\mu_p-\mu_n},
+     Z'\equiv 1-\frac{3(\sigma_p+\sigma_n)}{\mu_p-\mu_n}.
     \end{equation}
 \end{itemize}
 
 \subsection{Energy Reconstruction in Partial-fill Phase}
-Up till this thesis writing, there is no proper energy fitter for the partial-fill phase works. I attempted two methods for energy reconstruction in the partial-fill phase: the NHit scale method and the NHit ratio method. Both of them are based on simulations. These two methods need more effects to be improved.
+Up till this thesis writing, there is no proper energy fitter for the partial-fill phase. I attempted two methods for energy reconstruction in the partial-fill phase: the NHits scale method, based on Ref.~\ref{partialEnergy} and the NHits ratio method. Both of them are based on simulations of 
+
+in different detector positions. 
+
+These two methods need more effects to be improved.
+
 \subsubsection{NHit Scale}
 In the partial-fill phase ,  In \cite{partialEnergy}, 
 to scale $\mathrm{NHits}$ based on several sets of simulations.
@@ -995,11 +970,31 @@ to scale $\mathrm{NHits}$ based on several sets of simulations.
 
 The fitter follows the idea of the charge-ratio fitter for the partial energy reconstruction\cite{partialEnergyYang}.
 
-\begin{equation}
-E = p_0+p_1\cdot NHit+p_2\cdot NHit^2
-\end{equation}
+
 
 NHits ratio table based on position.
+
+
+%The previous partialEnergy fitter in RAT was based on Nhits scaling with water level and event z position (docDB-3133). However, for the events below the water level, the Nhits scaling is ill-defined and this causes bias in results, see docDB-5727. This energy fitter currenlty is turned off in the partialFitter.
+%Revisit the charge(Q)-ratio fitter developed by Yang Zhang (docDB-5543-v2).
+%    - This fitter checks the sum of the QHS values of an event (total charge, Q) and then fit to the energy by a third-order polynomial function E' = fE(Q).
+%    - It also corrects the Q with the position (ρ,z), where ρ=sqrt(x2+y2). This position dependence is considered as geometry or systematic effects, not for scaling/weighting the charges of the events in scintillator or water regions.
+%    - It calculates the charge ratios (r) of the other positions to a reference point (choose the point(1000,-1000,-1000) mm)  in the full scintillator geometry (or the water level, split_z = -6000 mm). Then Q' = Q/r.
+%    - It then corrects the Q' according to the water level by a third-order polynomial, Q'' = fQ'(split_z).
+%    - Finally, Efit = fE(Q'').
+%    - Assume chan_eff: 0.75058, active_channels: 9394.
+%
+%Tune and optimize the Q-partial fitter to Rat-6.18.0, for 0.5 g/L PPO concentration and water level at 747.5 mm.
+% Not consider the dependence of water level (no split_z correction) since we are focusing on the data at 747.5 mm analysis currently.
+%Here the Q-ratio table is for scaling/weighting the events in scintillator/water (not the same to the original one): 
+%Create the Q-ratio table:
+%Generate 2.5 MeV e- at different position points with any directions, in the partial-fill geometry. 
+%Assume a symmetry in x-y plane, keep y = 0 and move x from 0 to 5500 mm and z from -5500 to 5500  mm by a step of 500 mm.  Only the (ρ,z) bins inside the AV is considered (we can even set only the inner_av_top region is valid for energy reconstruction). Total bin is 12*23 = 276.
+%For each position point, there are 2000 simulations and the total charge Q is the sum of QHS values for each triggered event, averaged by all the triggered events.
+%Here the total charge of the simulations of 2.5 MeV e- uniformly distributed in the scintillator region (inner_av_top) is used as the reference charge. In this case, the ratios for the events in the inner_av_top can be considered as corrections for systematics while the ratios of the water events are the scaling values (events with the same energy create ~32 times less nhits than the ones in the scintillator).
+%
+%
+%1 and 3 MeV e- in the scintillator region with any directions, 0.5 g/L PPO, split_z = 747.5 mm, 1000 simulations. 
 
 \section{Deep Learning}
 Nowadays, the vast amount of data available to particle experiments make it feasible to implement machine learning and deep learning methods for data analysis. At the time of this writing, a deep learning framework is being developed\cite{markMachineLearning,markNeuralTalk,markNeuralNetwork}. This method investigates the relation between the hit PMT distributions and the event reconstruction, currently for the position and direction. It trains neural networks based on the MC simulation datasets (with $\mathcal{O}(10^6)$ events) as well as the calibration datasets to predict the event position and direction\cite{markNeuralTalk}. A few physics-based loss functions, such as the loss function checking the $t_{res}$, can be further included to improve the reconstruction performance\cite{markNeuralTalk}. 
