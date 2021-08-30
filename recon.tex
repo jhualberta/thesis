@@ -107,12 +107,12 @@ For the $i^{th}$ hit PMT, $\cos\theta^i_{\mathrm{Ch}}=\vec{u}_0\cdot\frac{\vec{X
 Finally, the fitter fits for the angular $PDF$ by using the MRQ method to obtain the best-fit direction. There a few optimizations for improving the fitter performances. First, the group velocity used in the $t_{transit}$ calculation is tuned, as shown in Sect.~\ref{sect:tuneGroupVelocity}. In Sect.~\ref{sect:fitterPull}, a drive correction for compensating the pulls in the reconstructed position is discussed. In Sect.~\ref{sect:PMTselector}, PMT selectors for sending proper PMT information to the fitter are discussed. 
 
 \subsection{Effective Group Velocity}\label{sect:tuneGroupVelocity}
-When photons travel through the detector, their group velocities ($v_{gr}$) change with different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons: $v_{gr}=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive indices ($n$) as a function of wavelength, obtained from the measurements of laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. Furthermore, the $v_{gr}$ can change when the photons are scattered, absorbed, refracted and reflected in the detector.
+When photons travel through the detector, their group velocities ($v_{gr}$) change with different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons: $v_{gr}=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive index ($n$) as a function of wavelength, obtained from the measurements of the laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. Furthermore, the $v_{gr}$ can change when the photons are scattered, absorbed, refracted and reflected in the detector.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{refractiveIndexVsWavelength.pdf}
-	\caption[Refractive index vs wavelength.]{Refractive index vs wavelength. These values are based on the measurements from laserball calibration scans in the SNO+ water phase\cite{laserball_groupVelocity}.}
+	\caption[Refractive index vs wavelength.]{Refractive index vs wavelength, reproduced from \texttt{RAT}. These values are based on the measurements from laserball calibration scans in the SNO+ water phase\cite{laserball_groupVelocity}.}
 	\label{nVsWavelength}
 \end{figure}
 
@@ -786,7 +786,49 @@ Fig.~\ref{fig:partialBiasVsPPO} and Fig.~\ref{fig:partialResolVsPPO} show the $\
 If using a timing $PDF$ with the wrong PPO concentration for the reconstruction, the effect on reconstruction is small\cite{partialFitterPDFtestInvulnerable}. I simulated 3-MeV $e^-$ uniformly distributed in the LAB+0.25 g/L PPO scintillator with isotropic directions, and then reconstructed the events by using the timing $PDF$ of 0.5, 1 and 2 g/L PPO (higher concentrations) respectively. All of these reconstructions give the fitted positions closed to the correct reconstruction using the 0.25 g/L timing $PDF$, with fit biases about 5 mm in the three axes. On the other hand, I did the same simulations in the LAB+2 g/L PPO and then reconstructed by using the timing $PDF$s of 0.25, 0.5 and 1 g/L PPO  (lower concentrations) respectively. The fit biases are also about 5 mm. It shows that the \texttt{MP partial fitter} is invulnerable to the changes caused by different PPO concentrations. Therefore, if the actual PPO concentration in the detector is slightly different to the nominal value, the effect on the reconstruction is not significant.
 
 \subsection{Test on Bi-Po Simulations}
-The Bi-Po analysis was performed on simulations to check the fitter efficiency. This analysis suggests a model offset of the water level to include more fitted data. A flowchart of the algorithm for picking up the Bi-Po event pairs is shown in Appendix.~\ref{appendix:bipo}, Fig.~\ref{biPo_flowchart}.
+Thorium-232 ($^{232}$Th) and Uranium-238 ($^{238}$U) are the two major internal backgrounds in the liquid scintillator. The amounts of these two backgrounds can be evaluated by a technique called ``Bi-Po analysis'', which refers to tag the $^{212}$Bi-$^{212}$Po event pairs from the $^{232}$Th decay chain and to the $^{214}$Bi-$^{214}$Po event pairs from the $^{238}$U decay chain. This analysis is one of the crucial physics studies during the partial-fill phase. Here I tested the \texttt{MP partial fitter} on the simulations of $^{214}$Bi-$^{214}$Po in the detector with the LAB+0.5 g/L PPO and water level at 4.5 m. In the $^{238}$U decay chain, $^{214}$Bi goes through $\beta^-$ decay, which can trigger a prompt event\cite{nndc}; its daughter $^{214}$Po, with a half-life of 164.3 $\mu$s, goes through $\alpha$ decay, and it can trigger a delayed event. Applying proper cuts of the position and time differences between the prompt and delayed events can tag these $\beta-\alpha$ event pairs from the $^{214}$Bi-$^{214}$Po and then evaluate the $^{238}$U level. The optimized algorithm was developed by the collaboration\cite{joshW1}, and a flowchart for picking up the event pairs is shown in Fig.~\ref{biPo_flowchart} in Appendix.~\ref{appendix:bipo}.
+%%  with a chance of 99.9791\% and the end-point energy at 3.27 MeV,  and the emitted 7.33-MeV $\alpha$ particle
+The tagging algorithm was applied to the reconstructed event vertices. Fig.~\ref{fig:214Bipo} shows the distributions of NHits for the tagged $^{214}$Po and $^{214}$Bi events. A clear single peak shows the $\alpha$ events from the $^{214}$Po, and a continuous spectrum shows the $e^-$ events from the $^{214}$Bi. Fig.~\ref{fig:parital_bipo214} shows the biases between the MC and the reconstructed positions, projected in the z-axis. The biases in the three axes were fitted with Gaussian to obtain the biases and resolutions, which are listed in Table.~\ref{tab:partial_bipo214}. These results indicate that the fitter performance is acceptable for the Bi-Po analysis in the partial-fill.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{214Bipo_4500mm0p5PPO.png}
+	\caption[Distributions of NHits for the tagged $^{214}$Po and $^{214}$Bi events.]{Distributions of NHits for the tagged $^{214}$Po (dashed red line) and $^{214}$Bi (solid black line) events.}
+	\label{fig:214Bipo}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[$z_{fit}-z_{MC}$ for tagged $^{214}$Bi.]
+	{ 
+		\begin{minipage}[b]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{214Bi_Bipo214_deltaZ.pdf}
+		\end{minipage}
+	}
+	\subfigure[$z_{fit}-z_{MC}$ for tagged $^{214}$Po.]{ 
+		\begin{minipage}[b]{0.38\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{214Po_Bipo214_deltaZ.pdf}
+		\end{minipage}
+	}
+	\caption[Fit position biases for tagged $^{214}$Bi and $^{214}$Po]{Fit position biases for tagged $^{214}$Bi (left) and $^{214}$Po (right).\label{fig:parital_bipo214}}
+\end{figure}
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{tab:partial_bipo214} Fit position biases and resolutions for the $^{214}$Bi-$^{214}$Po tagging.}	
+	{\centering
+		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccc}
+			\toprule 
+			Tagged isotope & $\mu_x\pm \sigma_x$ & $\mu_y\pm \sigma_y$ & $\mu_z\pm \sigma_z$\\
+			\midrule
+			$^{214}$Bi &  -7.657$\pm$127.2 & -2.071$\pm$ 129.6 & 2.041$\pm$114.5 \\
+			$^{214}$Po &  -0.695$\pm$ 128.5 & -0.1355$\pm$129.3    & -22.21$\pm$103.0\\
+			\bottomrule	
+		\end{tabular*}
+	}
+\end{table}
 
 \subsection{Discussions for the Partial Fitter}\label{sect:partialFitterDiscuss}
 Suggested by the SNO+ collaboration, I attempted to use the \texttt{MP partial fitter} to fit the water level\cite{mpFitWaterLevel}. In this case, the water level ($Z_{water}$) is considered as a fit parameter and the \texttt{MP fitter} fits for 5 parameters: $(x,y,z,t,Z_{water})$. The bias between the true $Z_{water}$ and the reconstructed one is fitted with a Gaussian, which gives a bias of 40 mm and a resolution of 492 mm. The fit resolution is much larger than the event position resolution, so this method is not good enough to be applied on the analysis.

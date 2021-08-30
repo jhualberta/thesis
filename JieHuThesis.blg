@@ -8,33 +8,32 @@ You're missing a field name---line 30 of file thesis.bib
  : %  title={Improved measurement of B 8 solar neutrinos with 1.5 kt{\textperiodcentered} y of Borexino exposure},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 423 of file thesis.bib
+Repeated entry---line 441 of file thesis.bib
  : @article{aalbers2020solar
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1285 of file thesis.bib
+Repeated entry---line 1303 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--string name "hamamatsu" is undefined
---line 1384 of file thesis.bib
-I was expecting a `,' or a `}'---line 1384 of file thesis.bib
+--line 1402 of file thesis.bib
+I was expecting a `,' or a `}'---line 1402 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1644 of file thesis.bib
+Repeated entry---line 1662 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1696 of file thesis.bib
+Repeated entry---line 1714 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1843 of file thesis.bib
+Repeated entry---line 1861 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "sect:fukuda1998evidence"
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in snop_jinst
 Warning--empty year in oxfordMeasurement
@@ -115,45 +114,45 @@ Warning--empty journal in davies1997machine
 Warning--empty year in houghTransform
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 215 entries,
+You've used 216 entries,
             1876 wiz_defined-function locations,
-            1488 strings with 36911 characters,
-and the built_in function-call counts, 45353 in all, are:
-= -- 3960
-> -- 2475
+            1494 strings with 37174 characters,
+and the built_in function-call counts, 45801 in all, are:
+= -- 3998
+> -- 2510
 < -- 0
-+ -- 936
-- -- 721
-* -- 3195
-:= -- 6985
-add.period$ -- 272
-call.type$ -- 215
-change.case$ -- 159
++ -- 948
+- -- 732
+* -- 3236
+:= -- 7055
+add.period$ -- 273
+call.type$ -- 216
+change.case$ -- 160
 chr.to.int$ -- 0
-cite$ -- 295
-duplicate$ -- 2491
-empty$ -- 4224
-format.name$ -- 721
-if$ -- 10729
+cite$ -- 296
+duplicate$ -- 2508
+empty$ -- 4254
+format.name$ -- 732
+if$ -- 10830
 int.to.chr$ -- 0
-int.to.str$ -- 215
-missing$ -- 215
-newline$ -- 708
-num.names$ -- 206
-pop$ -- 806
+int.to.str$ -- 216
+missing$ -- 216
+newline$ -- 711
+num.names$ -- 207
+pop$ -- 807
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1251
+skip$ -- 1265
 stack$ -- 0
-substring$ -- 1187
-swap$ -- 818
+substring$ -- 1219
+swap$ -- 827
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 80
-while$ -- 328
-width$ -- 218
-write$ -- 1942
+while$ -- 332
+width$ -- 219
+write$ -- 1953
 (There were 7 error messages)
