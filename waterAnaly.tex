@@ -18,14 +18,9 @@ The outputs from the data were fitted to obtain the number of signal events and 
 \section{Detector Backgrounds}
 
 \subsection{Physics Backgrounds}
-As mentioned in Chapter 3, Sect.~\ref{sect:overview}, since the depth of the SNO+, the cosmogenic backgrounds induced by the cosmic muons are very few. Most backgrounds come from radioactive isotopes inside or around the detector, mostly from the $\beta$-decays of $^{214}$Bi and $^{208}$Tl. MC simulations were produced. 
+As mentioned in Chapter 3, Sect.~\ref{sect:overview}, since the depth of the SNO+, the cosmogenic backgrounds induced by the cosmic muons are very few. Most backgrounds come from radioactive isotopes inside or around the detector, due to the ubiquitous $^{238}$U and $^{232}$Th decay chains. These have been monitored by \emph{in-situ} and \emph{ex-situ} measurements and analyses. The target level in the SNO+ water phase is $3.5\times 10^{-14}$ gram $^{238}$U in per gram water (gU/gH$_2$O) and $3.5\times 10^{-14}$ gTh/gH$_2$O\cite{waterunidoc}. The rates of the background events caused by the decays from specific isotopes, especially the $\beta$-decays of $^{214}$Bi (from the $^{238}$U decay chain) and $^{208}$Tl (from the $^{232}$Th decay chain), were carefully calculated and were put into the simulations. In this chapter, the simulated background events from the $^{214}$Bi and the $^{208}$Tl $\beta$-decays were used to develop the multi-variable analysis to select solar neutrino events from the background events.
 
-The instrumental backgrounds can be removed by the data-cleaning approaches. Here the data-cleaning masks were applied.
-%Table. is a summary of the $\beta$-decays from these two isotopes. 
-
-%Data taken from \cite{nndc}.
-
-%To investigate the background contamination, \emph{ex-situ} and \emph{in-situ} Radon assays.
+The instrumental backgrounds, such as the flashers from the PMTs, can be removed by the data-cleaning approaches. Here the data-cleaning masks were applied.
 
 \section{Kullback–Leibler (KL) Divergence for High Level Cuts}
 
@@ -152,7 +147,7 @@ Compare the $klDiv$ quantities for the MPW and RAT results.
 
 A plot of refitting the RAT candidate solar events with the MPW on old dataset.
 
-\subsection{TMVA Analysis}\ref{sect:tmva}
+\subsection{TMVA Analysis}\label{sect:tmva}
 The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days for testing and training the TMVA methods.
 
 Two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
@@ -522,7 +517,7 @@ Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and 
 \subsubsection{Fitting on the Whole Dataset (run-200004 to 207718)}
 The whole dataset started from run-200004 (on 24 Oct, 2018) to run-207718 (on 10 July, 2019). This dataset has a live time of 190.33 days. The BDT and MLP were applied on this dataset.
 
-In the region of $5<E_{fit}<15~MeV$, the outputs from the BDT and MLP were fitted to obtain the $N_{sig}$ and $N_{bkg}$. Fig.~\ref{wholeDataset_poissonFit_bdt} and Fig.~\ref{wholeDataset_poissonFit_mlp} show their results respectively.
+In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitted to obtain the $N_{sig}$ and $N_{bkg}$. Fig.~\ref{wholeDataset_poissonFit_bdt} and Fig.~\ref{wholeDataset_poissonFit_mlp} show their results respectively.
 
 These results are also summarized in Table.~\ref{table:wholedata_output}.
 
@@ -665,7 +660,6 @@ Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC E
 		\toprule
 		Systematics & $\Delta f_s$ (+/-)\\
 		\hline
-		\\
 		x shift & $+0.000003/-0.000045$\\	
 		y shift & $-0.00005/-0.0001386$\\
 		z shift & $+0.0001/-0.000138$\\

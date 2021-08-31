@@ -20,10 +20,17 @@ In 1934, Fermi developed the four-fermion vertex interaction theory to describe 
 In 1962, Lederman, Schwartz, and Steinberger demonstrated that more than one type of neutrino exists by detecting the interactions of the muon neutrino ($\nu_\mu$)\cite{danby1962observation}. The tauon neutrino ($\nu_\tau$) was proposed after the discovery of the $\tau$ lepton and was observed in 2000 by the DONUT collaboration\cite{kodama2001observation}. The decay width of the $Z^0$ boson measured by the ALEPH collaboration implied that based on the SM, the number of light neutrino species is three\cite{decamp1989determination}.
 
 \section{Neutrino Interactions}\label{sect:nuInteraction}
-
+(** will be rephrased and shortened **)
 Currently, we know that neutrinos have three leptonic flavors, and they only participate in the weak and gravitational interactions, while gravity can be neglected in the particle-scale interactions. In the weak interactions, a neutrino $\nu_\alpha$ is generated with a definite leptonic flavor, accompanied by one of the three charged leptons: electron ($e$), muon ($\mu$) or tauon ($\tau$). It is identified as an electron neutrino ($\nu_e$), a muon neutrino ($\nu_\mu$), or a tauon neutrino ($\nu_\tau$).
 
+Neutrino interactions mainly include the neutrino-electron scatterings, hadron decays and neutrino-nucleon scatterings\cite{giunti2007fundamentals}.
+
 The weak interactions are described in the SM by fermions exchanging $W^{\pm}$ and $Z^0$ bosons known as weak force carriers.
+
+\begin{equation}
+\mathcal{L}_{eff,int}=-\sqrt{2}G\{[\frac{1}{2}\bar{\nu}_e\gamma^\mu(1-\gamma_5)e][\bar{e}\gamma_\mu(1-\gamma_5)\nu_e]+()\},
+\end{equation}
+
 
 
 Fig.~\ref{fig:feynman-es}
@@ -93,8 +100,8 @@ For the solar neutrinos, the momentum of the recoil electrons are strongly point
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=6cm]{ElasticScatteringCartoon.png}
-	\caption{A diagram of the $\nu e^-$ elastic scattering in the lab frame.}
-	\label{fig:ESdiagram}
+	\caption{A diagram of the $\nu e^-$ elastic scattering in the lab frame, modified from Ref.~\cite{giunti2007fundamentals}.	\label{fig:ESdiagram}}
+
 \end{figure}
 
 %In the next two sections, I will show the two properties which are under the spotlight: neutrinos can change their flavors and they have masses.
@@ -102,7 +109,7 @@ For the solar neutrinos, the momentum of the recoil electrons are strongly point
 \section{Neutrino Flavor Transformation}
 Neutrino flavor transformation is a quantum mechanical interference phenomenon\cite{akhmedov2019quantum}. It was first discovered in 1998, based on the analysis of atmospheric neutrino fluxes measured by the Super-Kamiokande (Super-K) experiment to solve the ``atmospheric neutrino anomaly''\cite{fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the SM is incomplete.
 
-\subsection{Vacuum Oscillation}\label{sectVacuumOsci}
+\subsection{Vacuum Oscillation}\label{sect:VacuumOsci}
 For neutrino flavor oscillation experiments, neutrinos are detected in certain flavor eigenstates via weak interaction. A neutrino flavor state vector can be taken as a linear superposition of the mass eigenstates. For three-flavor neutrino mixing, we have\cite{pdg2020}:
 \begin{equation}\label{eq:mixingmatrix}
 |\nu_f\rangle = \sum_{i=1}^3U^*_{fi}|\nu_i\rangle, 
@@ -194,9 +201,9 @@ Currently, the four parameters in the PMNS matrix, as well as the parameters of 
 	}
 \end{table}
 
-For the $\Delta m^2_{21}$ and $\theta_{12}$, the combined analysis of the measurements from the reactor experiment KamLAND and SNO gave $\Delta m^2_{21} = 7.59^{+0.21}_{-0.21}\times 10^{-5}eV^2$ and $\tan^2{\theta}_{21}=0.47^{+0.06}_{-0.05}$\cite{abe2008precision}.
+For the $\Delta m^2_{21}$ and $\theta_{12}$, the combined analysis of the measurements from the reactor experiment, the Kamioka Liquid Scintillator Antineutrino Detector(KamLAND) and SNO gave $\Delta m^2_{21} = 7.59^{+0.21}_{-0.21}\times 10^{-5}eV^2$ and $\tan^2{\theta}_{21}=0.47^{+0.06}_{-0.05}$\cite{abe2008precision}.
 
-The accelerator neutrino experiments as well as the atmospheric neutrino experiments have measured $\Delta m^2_{32}$ and $\theta_{23}$. The most recent results from SuperK show that in NH, $\sin^2\theta_{23}=0.588^{+0.031}_{-0.064}$ and $\Delta m^2_{32} = 2.5^{+0.13}_{-0.20}\times 10^{-3} eV^2$\cite{abe2018atmospheric}. 
+The accelerator neutrino experiments as well as the atmospheric neutrino experiments have measured $\Delta m^2_{32}$ and $\theta_{23}$. The most recent results from Super-K show that in NH, $\sin^2\theta_{23}=0.588^{+0.031}_{-0.064}$ and $\Delta m^2_{32} = 2.5^{+0.13}_{-0.20}\times 10^{-3} eV^2$\cite{abe2018atmospheric}. 
 
 In 2012, the reactor neutrino experiment Daya Bay reported the discovery of non-zero $\theta_{13}$ with a significance of 5.2$\sigma$. In 2016, Daya Bay reported that $\sin^2 2\theta_{13} = 0.0841\pm0.0027(stat.)\pm0.0019(syst.)$. This high-precision result makes $\sin^2 2\theta_{13}$ the best measured mixing angle\cite{an2017measurement,qian2019physics}.
 
@@ -341,9 +348,15 @@ Table~\ref{table:nuOscillation} summarizes the types of experiments for neutrino
 \vspace{1mm}
 
 \subsection{Solar Neutrinos}
+(** will be rephrased and shortened **)
+
 Since the Sun is an object provides ambient electrons and nucleons, neutrinos coming from the Sun are traditionally used to investigate the matter effects.
 
 In the 1930s, Hans Bethe et al. explained the origin of the Sun's energy as a series of nuclear reactions\cite{bethe1939energy}.
+
+In 1964, John Bahcall and Raymond Davis proposed the first experiment to detect solar neutrinos\cite{bahcall1964solar,davis1964solar}. Raymond Davis designed an experiment that used a 380 m$^3$ tank filled with Perchloroethylene (C$_2$Cl$_4$), a dry-cleaning fluid rich in chlorine. Solar neutrinos were expected to change $^{37}$C1 to $^{37}$Ar via the endothermic reaction $\nu_e+^{37}$Cl$\to^{37}$Ar$+e^-$ and the produced $^{37}$Ar were extracted and counted. The neutrino energy threshold ($E_{thresh}$) of the experiment was 0.814 MeV, which allowed a measurement mostly of the $^8$B neutrino flux but also including some lower energy neutrinos\cite{davis1964solar}. Their first results, announced in 1968, showed that only about one-third of the predicted radioactive argon atoms were measured. This raised the problem of missing solar neutrinos.
+
+
 
 Based on the available physics and experimental data, the Standard Solar Model (SSM) is a modern accepted theory for the evolution of the Sun. The energy in the Sun is mainly produced by two sets of reactions: the proton-proton (pp) chain, which contributes to $\sim 98.6\%$ of the energy release and the Carbon-Nitrogen-Oxygen (CNO) cycle, which contributes $\sim 1.4\%$. Fig.~\ref{ppChain} and Fig.~\ref{CNOcycle} show all the reactions in the two sets respectively. Via these two main sets of nuclear reactions, hydrogen is eventually fused into helium, and the net nuclear transformation is $4p+2e^-\to^{4}$He $+2\nu_e+Q$, where the released energy $Q=26.73$ MeV is mostly in the form of the kinetic energy of the photons, with a small fraction carried by neutrinos\cite{valle2015neutrinos,antonio2018state}. The average energy of solar $\nu_e$ is calculated by summing over the $E_{\nu_e}$ from the $i^{th}$ reaction chain with a flux of $\Phi_{\nu_e}^i$ and divided by $\Phi^{tot}_{\nu_e}$
 
@@ -356,7 +369,7 @@ Based on the available physics and experimental data, the Standard Solar Model (
 
 (the average neutrino energy $\langle E_{2\nu_e} \rangle\sim 0.59$ MeV). 
 
-Besides, about 2 MeV of $Q$ is from annihilation of positrons with electrons in the solar plasma\cite{valle2015neutrinos,antonio2018state}. For every released energy, there are about 2 $\nu_e$ generated. The solar $\nu_e$ flux at the Earth surface can be estimated via the measured solar radiation energy on the Earth surface:
+Besides, about 2-MeV of $Q$ is from annihilation of positrons with electrons in the solar plasma\cite{valle2015neutrinos,antonio2018state}. For every released energy, there are about 2 $\nu_e$ generated. The solar $\nu_e$ flux at the Earth surface can be estimated via the measured solar radiation energy on the Earth surface:
 \begin{equation}
 \Phi_{\nu_e} \simeq \frac{2\mathcal{L}_{\odot}}{4\pi D_\odot^2}\frac{1}{Q-2\langle E_{\nu_e} \rangle}= 6.35\times 10^{10}~\nu_e/cm^2/s,
 \end{equation}
@@ -413,12 +426,10 @@ The electron neutrinos produced in the solar nuclear reactions are called ``sola
 	\caption[Solar neutrino energy spectrum based on BS05(OP).]{Solar neutrino energy spectrum ($E_\nu$ vs. flux) based on the solar model BS05(OP). Figure is from Ref.~\cite{bahcall2005new}.}
 	\label{bp05plot}
 \end{figure}
-solar neutrinos are also major backgrounds to the $0\nu\beta\beta$ search
 
+%solar neutrinos are also major backgrounds to the $0\nu\beta\beta$ search
 
-
-\subsection{Status of the Neutrino Flavor Transformation Experiments}
-In 1964, John Bahcall and Raymond Davis proposed the first experiment to detect solar neutrinos\cite{bahcall1964solar,davis1964solar}. Raymond Davis designed an experiment that used a 380 m$^3$ tank filled with Perchloroethylene (C$_2$Cl$_4$), a dry-cleaning fluid rich in chlorine. Solar neutrinos were expected to change $^{37}$C1 to $^{37}$Ar via the endothermic reaction $\nu_e+^{37}$Cl$\to^{37}$Ar$+e^-$ and the produced $^{37}$Ar were extracted and counted. The neutrino energy threshold ($E_{thresh}$) of the experiment was 0.814 MeV, which allowed a measurement mostly of the $^8$B neutrino flux but also including some lower energy neutrinos\cite{davis1964solar}. Their first results, announced in 1968, showed that only about one-third of the predicted radioactive argon atoms were measured. This raised the problem of missing solar neutrinos.
+%\subsection{Status of the Neutrino Flavor Transformation Experiments}
 
 %\subsection{Atmospheric Neutrino}
 %Cosmic rays from outer space continuously interact with nuclei in the atmosphere and produce secondary particles. Atmospheric neutrinos come from decay products of the hadrons in the secondaries. The dominant processes of atmospheric $\nu_e$ and $\nu_\mu$ production is $\pi^+\to\mu^+ + \nu_\mu$ followed by $\mu^+ \to e^+ + \bar{\nu}_\mu + \nu_e$. In the 1980s, the Kamiokande experiment in Japan measured atmospheric neutrinos by utilizing a 3-kiloton water-Cherenkov detector. The incoming neutrinos, $\nu_e$ ($\nu_\mu$) interacted with the water via charged current interactions, and electrons (muons) were produced. The electrically charged leptons traversed the water at a speed higher than the speed of light in water and thus emit Cherenkov light, which was recorded by the detector as ring patterns (called Cherenkov rings). The produced electrons caused electromagnetic showers during their propagation in the water while the produced muons propagated almost in straight lines without producing electromagnetic showers. Then the $\nu_\mu$ (the $\mu$-like events) were separated from the $\nu_e$ (the $e$-like events) by the fact that the $\mu$-like events created sharper Cherenkov rings than the $e$-like events. Kamiokande measured the ratio of fluxes $\Phi(\nu_\mu+\bar{\nu}_\mu)/\Phi(\nu_e+\bar{\nu}_e)$. The fluxes of atmospheric neutrinos are well understood and the ratio $\nu_\mu/\nu_e$ is expected to be $\sim$2 at low energies $\leq$1~GeV. In 1988, they found a deficit of measured $\mu$-like events compared to the prediction. This was later confirmed by IMB in 1992\cite{becker1992electron} and Soudan-2 in 1997\cite{allison1997measurement} and called ``atmospheric neutrino anomaly''\cite{kajita2012atmospheric}.
@@ -451,24 +462,11 @@ Based on a two-flavor neutrino oscillation analysis, $\Delta m^2_{21}=(5.6^+{1.9
 \cite{aharmim2013combined}.
 
 \subsection{Super-Kamiokande}
-Super-K
-
-15 $\nu$ events/day.
-
-For the $^8$B solar neutrino flux, Super-K reported a measurement of $(2.345\pm0.014\pm0.036)\times 10^6~cm^{-2}s^{-1}$.
-
-
-
-\cite{abe2016solar}.
-
-
+Super-K is able to lower down the energy threshold to 3.5 MeV to search for the $^8$B solar neutrinos\cite{abe2016solar}.
+By utilizing the data from 2008 to 2014 (1664 live days), Super-K reported a measurement of $\Phi_{ES}=(2.308\pm0.020(stat.)^{+0.039}_{-0.040}(syst.))\times 10^6~cm^{-2}s^{-1}$.
+%15 $\nu$ events/day. For the $^8$B solar neutrino flux,
 \subsection{Borexino}
 Borexino is a liquid scintillator neutrino detector with a target mass about 300 tonne. It is located at the Gran Sasso National Laboratory (LNGS) in central Italy, under an overburden of rock with 3800 water equivalent meter (m.w.e) to suppress the cosmogenic backgrounds. They have measured $^7$Be, pep, pp and $^8$B solar neutrino fluxes\cite{agostini2018comprehensive}. 
-
-
-
-
-
 
 In 2020, Borexino reported the first observation of CNO neutrino.
 
@@ -480,9 +478,42 @@ Borexino problems:
 (1)$^{11}$C nuclei induced by the high energy cosmic muon spallation reactions cause a large background contribution. While for SNO+, since it is located at SNOLAB and more deeper,  \cite{whitepaper}.
 (2)intrinsic $\beta$-decays from $^{210}$Bi contaminate the fiducial volume 
 
-Since th
+%Since th
+
+\subsection{Reactor Experiments}
 
 
+For the same parameters,
+
+As mentioned in Sect.~\ref{sect:VacuumOsci}, the reactor neutrino experiment KamLAND is able to study the flavor transformation in the solar section due to the long baseline of 180 kilometers from the reactors to the detector.
+
+Daya Bay and JUNO:
+
+The Jiangmen Underground Neutrino Observatory (JUNO) is a reactor neutrino experiment located at Kaiping, Jiangmen in Southern China. a large liquid scintillator detector 
+large active mass of 20 kilotonne at the energy resolution of 3\% at 1 MeV.
+\cite{giaz2018status}
+
+
+\subsection{Combined Analysis of the Solar and Reactor Experiments}
+So far the solar, reactor, atmospheric and accelerator neutrino oscillation experiments can be consistently described using three active neutrino flavors, i.e. two mass splittings and three mixing angles.
+
+Assuming the CPT invariance, the KamLAND and solar neutrino data can be combined by including solar neutrino and reactor antineutrino data to obtain the oscillation parameters as\cite{oberauer2020solar}:
+
+$0.291<\sin^2\theta_{12}<0.318$
+ 
+$7.20\times 10^{-5}<\Delta m^2_{12}<7.51\times 10^{-5}$
+
+\section{Neutrino Mass and Neutrinoless Double Beta Decay}\label{section:directMeasure}
+(** will be rephrased and shortened **)
+
+The neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses\cite{valle2015neutrinos}:
+\begin{itemize}
+	\item Cosmological measurements. The massive neutrinos can leave imprints on cosmological observables and play an important role in the formation and evolution of the universe. Combining the cosmological data, such as the Cosmic Microwave Background (CMB) data from the Planck space observatory (updated to 2018 results), the Baryon Acoustic Oscillations (BAO) and etc., a tight 95\% constraint on the sum of the masses of the three active types of neutrinos is obtained as: $\sum m_\nu<0.12~eV$\cite{aghanim2020planck}. Currently, the cosmological approaches provide the strongest upper limit of the sum of neutrino masses\cite{dvorkin2019neutrino}. On the other hand, these measurements are strongly model-dependent\cite{lesgourgues2013neutrino}.
+	\item Direct measurements of the $\beta$-decay spectrum.
+	 The KArlsruhe TRItium Neutrino (KATRIN) experiment measures the $\beta$-decay from tritium ($^3$H$\to^3$He$^+$+$e^-+\bar{\nu}_e$). In 2019, the experiment reported an upper limit of $m_\nu<1.1$ eV with 90\% C.L.. After 5 years of measurement, it is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L.\cite{aker2019improved}.
+	 
+	\item A search for the neutrinoless double beta decay ($0\nu\beta\beta$) process. This is the main physics target of the SNO+ experiment and it will be discussed in the following sections.
+\end{itemize}
 
 \subsection{Future Solar Neutrino Experiments}
 There are also a few new experiments planned to precisely measure the solar neutrinos in the near future. 
@@ -493,58 +524,25 @@ Finally, large-scale dark matter direct search experiments, such as DARWIN, are 
 pp, $^7$Be, $^{13}$N, $^{15}$O, pep neutrinos\cite{baudis2014neutrino,aalbers2020solar}.
 
 \begin{itemize}
-\item{Hyper-Kamiokande} is the successor of Kamiokande and Super-K. 
-
-As a water Cherenkov detector with a fiducial mass of 187 kilotonne, Hyper-K expects to observe 130 $\nu e^-$ elastic scattering events per day,
-is aimed for a detection of $hep$ solar neutrino flux, which has not been detected yet.
- and precision measurements.
-\item{JinPing}
-
-\item{ASDC-THEIA}
-
-\item{DARWIN}
-
-for five types of solar neutrinos:
-pp, $^7$Be, $^{13}$N, $^{15}$O and pep
-
-via $\nu-e^-$ elastic scattering\cite{aalbers2020solar}. 
-
-a low energy threshold of 1 keV
-majority of pp neutrinos
+	\item{Hyper-Kamiokande} is the successor of Kamiokande and Super-K. 
+	
+	As a water Cherenkov detector with a fiducial mass of 187 kilotonne, Hyper-K expects to observe 130 $\nu e^-$ elastic scattering events per day,
+	is aimed for a detection of $hep$ solar neutrino flux, which has not been detected yet.
+	and precision measurements.
+	\item{JinPing}
+	
+	\item{ASDC-THEIA}
+	
+	\item{DARWIN}
+	
+	for five types of solar neutrinos:
+	pp, $^7$Be, $^{13}$N, $^{15}$O and pep
+	
+	via $\nu-e^-$ elastic scattering\cite{aalbers2020solar}. 
+	
+	a low energy threshold of 1 keV
+	majority of pp neutrinos
 \end{itemize}
-
-
-\subsection{Rector Experiments}
-For the same parameters,
-
-KamLAND, Daya Bay and JUNO:
-
-The Jiangmen Underground Neutrino Observatory (JUNO) is a reactor neutrino experiment located at Kaiping, Jiangmen in Southern China. a large liquid scintillator detector 
-large active mass of 20 kilotonne at the energy resolution of 3\% at 1 MeV.
-\cite{giaz2018status}
-
-
-\subsection{Combined Analysis of the Solar and Reactor Experiments}
-So far solar, reactor, atmospheric and accelerator neutrino oscillation experiments can be consistently described using three active neutrino flavors, i.e. two mass splittings and three mixing angles.
-
-Assuming the CPT invariance, the KamLAND and solar neutrino data can be combined by including solar neutrino and reactor antineutrino data to obtain the oscillation parameters as\cite{oberauer2020solar}:
-
-$0.291<\sin^2\theta_{12}<0.318$
- 
-$7.20\times 10^{-5}<\Delta m^2_{12}<7.51\times 10^{-5}$
-
-\section{Neutrino Mass}\label{section:directMeasure}
-The neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses\cite{valle2015neutrinos}:
-\begin{itemize}
-	\item Cosmological measurements. The massive neutrinos can leave imprints on cosmological observables and play an important role in the formation and evolution of the universe. Combining the cosmological data, such as the Cosmic Microwave Background (CMB) data from the Planck space observatory (updated to 2018 results), the Baryon Acoustic Oscillations (BAO) and etc., a tight 95\% constraint on the sum of the masses of the three active types of neutrinos is obtained as: $\sum m_\nu<0.12~eV$\cite{aghanim2020planck}. Currently, the cosmological approaches provide the strongest upper limit of the sum of neutrino masses\cite{dvorkin2019neutrino}. On the other hand, these measurements are strongly model-dependent\cite{lesgourgues2013neutrino}.
-	\item Direct measurements of the $\beta$-decay spectrum.
-	 The KArlsruhe TRItium Neutrino (KATRIN) experiment measures the $\beta$-decay from tritium ($^3$H$\to^3$He$^+$+$e^-+\bar{\nu}_e$). In 2019, the experiment reported an upper limit of $m_\nu<1.1$ eV with 90\% C.L.. After 5 years of measurement, it is expected to reach the $m_\nu$ sensitivity down to 0.2 eV with 90\% C.L.\cite{aker2019improved}.
-	 
-	\item A search for the neutrinoless double beta decay ($0\nu\beta\beta$) process. This is the main physics target of the SNO+ experiment and it will be discussed in the following sections.
-\end{itemize}
-
-
-
 
 \subsection{Majorana Neutrinos}
 In the SM, neutrinos are fermions without carrying electrical charges. A conjecture raised up is that they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino, which is one of the reasons why neutrinos are special. As a comparison, a neutron is spin-1/2 and chargeless but it carries magnetic moments opposite to an antineutron\cite{akhmedov2014majorana}.
@@ -572,5 +570,6 @@ Integrating the $\delta t$ with a weight of the nuclear matrix element, the deca
 \begin{equation}
 \Gamma=(T^{0\nu\beta\beta}_{1/2})^{-1} = G_{PS}(Q,Z)|M_{Nuclear}|^2\langle m_{ee}\rangle^2, 
 \end{equation}
-where $G_{PS}(Q,Z)$ is a phase space corresponding to the effective coupling constant, which depends on the endpoint energy $Q$ and the atomic number $Z$; $|M_{Nuclear}|$ is the nuclear matrix element describing the nuclear transition and it can only be calculated theoretically from approximate methods based on many-body nuclear models, such as the Nuclear Shell Model (NSM),
+where $G_{PS}(Q,Z)$ is a phase space corresponding to the effective coupling constant, which depends on the endpoint energy $Q$ and the atomic number $Z$; $|M_{Nuclear}|$ is the nuclear matrix element describing the nuclear transition and it can only be calculated theoretically from approximate methods based on many-body nuclear models, such as the Nuclear Shell Model (NSM).
 
+(Here will place the experiment results, focusing on SNO+)
