@@ -8,32 +8,29 @@ You're missing a field name---line 30 of file thesis.bib
  : %  title={Improved measurement of B 8 solar neutrinos with 1.5 kt{\textperiodcentered} y of Borexino exposure},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 441 of file thesis.bib
- : @article{aalbers2020solar
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1303 of file thesis.bib
+Repeated entry---line 1297 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--string name "hamamatsu" is undefined
---line 1402 of file thesis.bib
-I was expecting a `,' or a `}'---line 1402 of file thesis.bib
+--line 1396 of file thesis.bib
+I was expecting a `,' or a `}'---line 1396 of file thesis.bib
  :  author = hamamatsu 
  :                     Photonics,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1644 of file thesis.bib
+Repeated entry---line 1638 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1697 of file thesis.bib
+Repeated entry---line 1691 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1878 of file thesis.bib
+Repeated entry---line 1872 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in snop_jinst
 Warning--empty year in oxfordMeasurement
@@ -116,45 +113,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 217 entries,
+You've used 218 entries,
             1876 wiz_defined-function locations,
-            1498 strings with 37361 characters,
-and the built_in function-call counts, 45753 in all, are:
-= -- 3981
-> -- 2514
+            1502 strings with 37588 characters,
+and the built_in function-call counts, 46102 in all, are:
+= -- 4005
+> -- 2549
 < -- 0
-+ -- 950
-- -- 733
-* -- 3235
-:= -- 7057
-add.period$ -- 274
-call.type$ -- 217
-change.case$ -- 161
++ -- 962
+- -- 744
+* -- 3268
+:= -- 7117
+add.period$ -- 275
+call.type$ -- 218
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 299
-duplicate$ -- 2509
-empty$ -- 4258
-format.name$ -- 733
-if$ -- 10811
+cite$ -- 300
+duplicate$ -- 2524
+empty$ -- 4279
+format.name$ -- 744
+if$ -- 10889
 int.to.chr$ -- 0
-int.to.str$ -- 217
-missing$ -- 217
-newline$ -- 714
-num.names$ -- 208
-pop$ -- 815
+int.to.str$ -- 218
+missing$ -- 218
+newline$ -- 717
+num.names$ -- 209
+pop$ -- 817
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1253
+skip$ -- 1263
 stack$ -- 0
-substring$ -- 1187
-swap$ -- 821
+substring$ -- 1193
+swap$ -- 828
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 82
-while$ -- 330
-width$ -- 220
-write$ -- 1956
-(There were 7 error messages)
+while$ -- 332
+width$ -- 221
+write$ -- 1967
+(There were 6 error messages)
