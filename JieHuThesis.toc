@@ -16,110 +16,107 @@
 \contentsline {subsection}{\numberline {2.3.6}Borexino}{19}{subsection.2.3.6}
 \contentsline {subsection}{\numberline {2.3.7}Reactor Experiments}{19}{subsection.2.3.7}
 \contentsline {subsection}{\numberline {2.3.8}Combined Analysis of the Solar and Reactor Experiments}{20}{subsection.2.3.8}
-\contentsline {section}{\numberline {2.4}Neutrino Mass and Neutrinoless Double Beta Decay}{20}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Future Solar Neutrino Experiments}{21}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Majorana Neutrinos}{22}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Neutrinoless Double Beta Decay}{22}{subsection.2.4.3}
-\contentsline {chapter}{\numberline {3}The SNO+ Experiment}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview}{24}{section.3.1}
-\contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{25}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Water Phase}{26}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Partial-fill Phase}{28}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Scintillator Phase}{28}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Tellurium Phase}{28}{subsubsection.3.2.3.1}
-\contentsline {section}{\numberline {3.3}Detection Media}{29}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Cherenkov Radiation}{29}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Scintillation from Organic Scintillator}{30}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{33}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Water-based Wavelength Shifter (Proposal)}{34}{subsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.4.1}Unloaded Liquid Scintillator}{34}{subsubsection.3.3.4.1}
-\contentsline {subsubsection}{\numberline {3.3.4.2}Tellurium-loaded Liquid Scintillator}{37}{subsubsection.3.3.4.2}
-\contentsline {subsection}{\numberline {3.3.5}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{39}{subsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.5.1}Measurement Setup and Data Acquisition}{39}{subsubsection.3.3.5.1}
-\contentsline {subsubsection}{\numberline {3.3.5.2}Measurement}{42}{subsubsection.3.3.5.2}
-\contentsline {subsubsection}{\numberline {3.3.5.3}Results}{48}{subsubsection.3.3.5.3}
-\contentsline {section}{\numberline {3.4}Electronics}{48}{section.3.4}
-\contentsline {section}{\numberline {3.5}Calibration}{50}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Optical Calibration Sources}{52}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Radioactive Calibration Sources}{52}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}The $^{16}$N Calibration Source}{52}{subsubsection.3.5.2.1}
-\contentsline {subsubsection}{\numberline {3.5.2.2}The Americium Beryllium Calibration Source}{54}{subsubsection.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Other Calibration Sources}{54}{subsubsection.3.5.2.3}
-\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{55}{section.3.6}
-\contentsline {chapter}{\numberline {4}Event Reconstruction}{56}{chapter.4}
-\contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{56}{section.4.1}
-\contentsline {section}{\numberline {4.2}Multi-path Position and Direction Reconstructions for the Water Phase}{59}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Vertex Reconstruction}{59}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Direction Reconstruction}{62}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Effective Group Velocity}{64}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Fitter Pull and Drive Correction}{67}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}PMT Selectors for the Reconstruction}{70}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Position Figure of Merit}{73}{subsection.4.2.6}
-\contentsline {subsection}{\numberline {4.2.7}Performances of the Water Vertex Reconstruction}{74}{subsection.4.2.7}
-\contentsline {subsection}{\numberline {4.2.8}Performances of the Water Direction Reconstruction}{78}{subsection.4.2.8}
-\contentsline {subsection}{\numberline {4.2.9}Test on Gamma Events}{81}{subsection.4.2.9}
-\contentsline {subsubsection}{\numberline {4.2.9.1}Test on $^{16}$N Calibration Source Events}{82}{subsubsection.4.2.9.1}
-\contentsline {section}{\numberline {4.3}Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}{82}{section.4.3}
-\contentsline {section}{\numberline {4.4}Vertex Reconstruction for the Partial-fill}{86}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Partial-fill}{86}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Making Timing $PDF$s}{91}{subsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.2.1}Different PPO Concentrations during the Filling}{91}{subsubsection.4.4.2.1}
-\contentsline {subsection}{\numberline {4.4.3}Partial Fitter Performances}{93}{subsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.3.1}Test on Different PPO Concentrations}{98}{subsubsection.4.4.3.1}
-\contentsline {subsection}{\numberline {4.4.4}Test on Bi-Po Simulations}{99}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}Discussions for the Partial Fitter}{100}{subsection.4.4.5}
-\contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Scintillator Phase}{103}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Performance of the Vertex Reconstruction}{103}{subsection.4.5.1}
-\contentsline {section}{\numberline {4.6}Multi-path Fitter Structure for Multiple SNO+ Physics Phases}{103}{section.4.6}
-\contentsline {section}{\numberline {4.7}Energy Reconstruction}{108}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Energy Figure of Merit}{108}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Energy Reconstruction in Partial-fill Phase}{109}{subsection.4.7.2}
-\contentsline {section}{\numberline {4.8}Deep Learning}{110}{section.4.8}
-\contentsline {section}{\numberline {4.9}Conclusion}{111}{section.4.9}
-\contentsline {chapter}{\numberline {5}Calibration}{112}{chapter.5}
-\contentsline {section}{\numberline {5.1}\isotope [16]{N} Calibration Scans in the Water Phase}{113}{section.5.1}
-\contentsline {section}{\numberline {5.2}High Level Cuts for the Water Phase}{114}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Effects of the High-level Cuts}{115}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}Reconstruction Evaluations from $^{16}$N Calibration Scans in the Water Phase}{116}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Position Reconstruction Evaluation}{117}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}Position Resolution}{118}{subsubsection.5.3.1.1}
-\contentsline {subsubsection}{\numberline {5.3.1.2}Position Systematics}{122}{subsubsection.5.3.1.2}
-\contentsline {subsubsection}{\numberline {5.3.1.3}Vertex Scale Uncertainties}{125}{subsubsection.5.3.1.3}
-\contentsline {subsection}{\numberline {5.3.2}Direction Reconstruction Evaluation}{128}{subsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.2.1}Direction Resolution}{128}{subsubsection.5.3.2.1}
-\contentsline {subsubsection}{\numberline {5.3.2.2}Direction Systematics}{129}{subsubsection.5.3.2.2}
-\contentsline {subsection}{\numberline {5.3.3}$\beta _{14}$ and Its Systematic}{132}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{134}{subsection.5.3.4}
-\contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{134}{subsubsection.5.3.4.1}
-\contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{136}{subsubsection.5.3.4.2}
-\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{138}{subsubsection.5.3.4.3}
-\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{140}{subsubsection.5.3.4.4}
-\contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{145}{chapter.6}
-\contentsline {section}{\numberline {6.1}Detector Backgrounds}{146}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{146}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Kullback–Leibler (KL) Divergence for High Level Cuts}{147}{section.6.2}
-\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{148}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{148}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}TMVA Analysis}{150}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.2.1}TMVA Outputs for Data}{156}{subsubsection.6.3.2.1}
-\contentsline {subsection}{\numberline {6.3.3}Discussions on the TMVA Results}{156}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{158}{subsection.6.3.4}
-\contentsline {subsubsection}{\numberline {6.3.4.1}Maximum Likelihood Fit}{159}{subsubsection.6.3.4.1}
-\contentsline {subsubsection}{\numberline {6.3.4.2}Ensemble Test}{160}{subsubsection.6.3.4.2}
-\contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{162}{subsubsection.6.3.4.3}
-\contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{163}{subsubsection.6.3.4.4}
-\contentsline {subsubsection}{\numberline {6.3.4.5}Evaluating $^8$B Solar Neutrino Flux}{166}{subsubsection.6.3.4.5}
-\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{171}{subsubsection.6.3.4.6}
-\contentsline {chapter}{\numberline {7}Conclusions}{172}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{173}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{173}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{174}{section.A.2}
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{177}{section.A.3}
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{178}{section.A.4}
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{179}{section.A.5}
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{179}{section.A.6}
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{184}{appendix.B}
-\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{184}{section.B.1}
-\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{190}{appendix.C}
-\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{190}{section.C.1}
-\contentsline {chapter}{References}{192}{appendix*.6}
+\contentsline {subsection}{\numberline {2.3.9}Future Solar Neutrino Experiments}{20}{subsection.2.3.9}
+\contentsline {section}{\numberline {2.4}Neutrino Mass and Neutrinoless Double Beta Decay}{21}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Neutrinoless Double Beta Decay}{22}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Status of Double Beta Decay Experiments}{24}{subsubsection.2.4.1.1}
+\contentsline {chapter}{\numberline {3}The SNO+ Experiment}{28}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{28}{section.3.1}
+\contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Water Phase}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Partial-fill Phase}{32}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Scintillator Phase}{32}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Tellurium Phase}{32}{subsubsection.3.2.3.1}
+\contentsline {section}{\numberline {3.3}Detection Media}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Cherenkov Radiation}{33}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Scintillation from Organic Scintillator}{34}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{37}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Water-based Wavelength Shifter (Proposal)}{38}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Unloaded Liquid Scintillator}{38}{subsubsection.3.3.4.1}
+\contentsline {subsubsection}{\numberline {3.3.4.2}Tellurium-loaded Liquid Scintillator}{41}{subsubsection.3.3.4.2}
+\contentsline {subsection}{\numberline {3.3.5}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{43}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.5.1}Measurement Setup and Data Acquisition}{43}{subsubsection.3.3.5.1}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Measurement}{46}{subsubsection.3.3.5.2}
+\contentsline {subsubsection}{\numberline {3.3.5.3}Results}{52}{subsubsection.3.3.5.3}
+\contentsline {section}{\numberline {3.4}Electronics}{52}{section.3.4}
+\contentsline {section}{\numberline {3.5}Calibration}{54}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}The $^{16}$N Calibration Source}{56}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}The Americium Beryllium Calibration Source}{58}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{58}{section.3.6}
+\contentsline {chapter}{\numberline {4}Event Reconstruction}{60}{chapter.4}
+\contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{60}{section.4.1}
+\contentsline {section}{\numberline {4.2}Multi-path Position and Direction Reconstructions for the Water Phase}{63}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Vertex Reconstruction}{63}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Direction Reconstruction}{66}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Effective Group Velocity}{68}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Fitter Pull and Drive Correction}{71}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}PMT Selectors for the Reconstruction}{74}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Position Figure of Merit}{77}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}Performances of the Water Vertex Reconstruction}{78}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}Performances of the Water Direction Reconstruction}{82}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}Test on Gamma Events}{85}{subsection.4.2.9}
+\contentsline {subsubsection}{\numberline {4.2.9.1}Test on $^{16}$N Calibration Source Events}{86}{subsubsection.4.2.9.1}
+\contentsline {section}{\numberline {4.3}Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}{86}{section.4.3}
+\contentsline {section}{\numberline {4.4}Vertex Reconstruction for the Partial-fill}{90}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Partial-fill}{90}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Making Timing $PDF$s}{95}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Different PPO Concentrations during the Filling}{95}{subsubsection.4.4.2.1}
+\contentsline {subsection}{\numberline {4.4.3}Partial Fitter Performances}{97}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}Test on Different PPO Concentrations}{102}{subsubsection.4.4.3.1}
+\contentsline {subsection}{\numberline {4.4.4}Test on Bi-Po Simulations}{103}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Discussions for the Partial Fitter}{104}{subsection.4.4.5}
+\contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Scintillator Phase}{107}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Performance of the Vertex Reconstruction}{107}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Multi-path Fitter Structure for Multiple SNO+ Physics Phases}{110}{section.4.6}
+\contentsline {section}{\numberline {4.7}Energy Reconstruction}{112}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Energy Figure of Merit}{113}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Energy Reconstruction in Partial-fill Phase}{113}{subsection.4.7.2}
+\contentsline {section}{\numberline {4.8}Deep Learning}{114}{section.4.8}
+\contentsline {section}{\numberline {4.9}Conclusion}{115}{section.4.9}
+\contentsline {chapter}{\numberline {5}Calibration}{116}{chapter.5}
+\contentsline {section}{\numberline {5.1}\isotope [16]{N} Calibration Scans in the Water Phase}{117}{section.5.1}
+\contentsline {section}{\numberline {5.2}High Level Cuts for the Water Phase}{118}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Effects of the High-level Cuts}{119}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Reconstruction Evaluations from $^{16}$N Calibration Scans in the Water Phase}{120}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Position Reconstruction Evaluation}{121}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Position Resolution}{122}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Position Systematics}{126}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Vertex Scale Uncertainties}{129}{subsubsection.5.3.1.3}
+\contentsline {subsection}{\numberline {5.3.2}Direction Reconstruction Evaluation}{132}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Direction Resolution}{132}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Direction Systematics}{133}{subsubsection.5.3.2.2}
+\contentsline {subsection}{\numberline {5.3.3}$\beta _{14}$ and Its Systematic}{136}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{138}{subsection.5.3.4}
+\contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{138}{subsubsection.5.3.4.1}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{140}{subsubsection.5.3.4.2}
+\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{142}{subsubsection.5.3.4.3}
+\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{144}{subsubsection.5.3.4.4}
+\contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{149}{chapter.6}
+\contentsline {section}{\numberline {6.1}Backgrounds}{150}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{150}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Kullback–Leibler (KL) Divergence for High Level Cuts}{151}{section.6.2}
+\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{152}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{152}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}TMVA Analysis}{153}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}TMVA Outputs for Data}{160}{subsubsection.6.3.2.1}
+\contentsline {subsection}{\numberline {6.3.3}Discussions on the TMVA Results}{162}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{163}{subsection.6.3.4}
+\contentsline {subsubsection}{\numberline {6.3.4.1}Maximum Likelihood Fit}{164}{subsubsection.6.3.4.1}
+\contentsline {subsubsection}{\numberline {6.3.4.2}Ensemble Test}{165}{subsubsection.6.3.4.2}
+\contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{168}{subsubsection.6.3.4.3}
+\contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{169}{subsubsection.6.3.4.4}
+\contentsline {subsubsection}{\numberline {6.3.4.5}Evaluating $^8$B Solar Neutrino Flux}{170}{subsubsection.6.3.4.5}
+\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{176}{subsubsection.6.3.4.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{177}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{178}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{178}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{179}{section.A.2}
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{182}{section.A.3}
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{183}{section.A.4}
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{184}{section.A.5}
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{184}{section.A.6}
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{189}{appendix.B}
+\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{189}{section.B.1}
+\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{195}{appendix.C}
+\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{195}{section.C.1}
+\contentsline {chapter}{References}{197}{appendix*.6}

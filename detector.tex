@@ -3,7 +3,7 @@
 %\epigraph{In all experimental science the techniques for obtaining measurements are almost as important as the measurements themselves.}{--- \textup{J. D. Bernal}, \textit{The Social Function of Science}}
 
 \section{Overview}\label{sect:overview}
-The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock, which is $5890\pm94$ water equivalent meter (m.w.e). This rock overburden ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$\cite{snop_jinst}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector. 
+The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock and it ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$, corresponding to 6010 water equivalent meter (m.w.e).\cite{snop_jinst}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector.
 
 The SNO+ detector is a refurbishment of the SNO detector. The SNO+ collaboration makes use of the SNO infrastructure and upgraded it to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide buoyancy for the vessel, and shield radiation backgrounds from the environment, such as the cosmic rays and isotope decays from the rock. 
 
@@ -443,9 +443,6 @@ Table.~\ref{lightyield1} shows the number of photons calculated by the charge we
 Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In \cite{biller2017new}, a relative light yield of $\sim 0.65$ was reported.
 
 \section{Electronics}
-
-(** will be rephrased and shortened **)
-
 In this section, the SNO+ electronics system is introduced. The system includes the trigger and readout systems. As mentioned in \ref{sect:overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charges information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
 
 The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin cesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through a photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by a custom-made operating circuit (called ``PMT base'') at the anode\cite{hamamatsu2018photomultiplier}.
@@ -454,39 +451,33 @@ The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxia
 
 To tackle with more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle is connected to a Paddle Card, which are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives signals from the PMTs. 32 channels (for 32 PMTs) in the PMTIC are plugged into a Front End Card (FEC) that processes, digitizes, and stores PMT signals. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labeled as FEC Diagnose (FECD) channels. These FECD channels are mainly used to tag calibration events. The triggered PMTs can be labeled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_jinst,stringer2019sensitivity}:
 \begin{equation}
-lcn = 512 \times crate + 32 \times FEC + channel
+lcn = 512 \times crate + 32 \times FEC + channel.
 \end{equation}
 %9605 are actually used
 
-A 10 MHz and a 50 MHz clocks are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined $T_{zero}$, the midnight of January 1, 2010 (GMT) to the moment when the event happens. A 10 MHz clock used for counting the absolute time started at $T_{zero}$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays\cite{rattime,stringer2019sensitivity}. 
+A 10-MHz and a 50-MHz clocks are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined $T_{zero}$, the midnight of January 1, 2010 (GMT) to the moment when the event happens. A 10-MHz clock used for counting the absolute time started at $T_{zero}$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the GT to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays\cite{rattime,stringer2019sensitivity}. 
 
 The recorded hit information of the triggered event, including the time and charge information of hit PMTs and the trigger settings, are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher data transfer rates compared to SNO, with a max rate of 14 MB/s, which is equivalent to approximately 2 million hits per second\cite{bonventre2014neutron}. They read out the recorded data and wrap them as ethernet packets and send them to the Data Acquisition System (DAQ) and Event Builder system\cite{walker2016study}. The Event Builder system writes information into event records based on their GT identification number (GTID) and saves them on storage disk\cite{snop_jinst}. These raw data are written to the disc and are further processed into ROOT format by high-performance computing clusters.
 
 As a summary, the SNO+ electronic system can measure signals with a nanosecond-level timing resolution and a single-photon level charge resolution. It can handle an event rate of several kHz and even much higher rates for cases such as the burst events from a galactic supernova\cite{snop_jinst}.
 
 \section{Calibration}\label{sect:calibr}
-(** will be rephrased and shortened **)
+Calibration sources with known physics parameters are applied to understand the detector response to the events and thus to make accurate measurements.
 
-Calibration sources with known physics parameters help to understand the detector response to the events and to make accurate measurements.
-
-Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMTs; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. Various types of radioactive sources producing different types of particles ($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
-
-The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. The detector geometry is not perfectly symmetric, due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. 
-
-The scan of the sources is realized through a source manipulator system (SMS).
-
-umbilical vertical and side ropes as shown in Fig.~\ref{sms}.
-
- in the PSUP and differences    
-
-All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
+The detector geometry is not perfectly symmetric, due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. The scan of the sources is realized through a source manipulator system (SMS).
 
 
 A Universal Interface (UI) connects the AV and the SMS. It is a sealed glove
 box above the AV neck in a clean room set on the SNO+ deck.
 
-
+umbilical vertical and side ropes as shown in Fig.~\ref{sms}.
 reduce the radio contamination in the detector
+
+In addition, to measure the position of the calibration source deployed in the detector, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs and then triangulate the source location. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
+
+ in the PSUP and differences    
+
+All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
 
 \begin{figure}[!htb]
 	\centering
@@ -495,29 +486,18 @@ reduce the radio contamination in the detector
 	\label{sms}
 \end{figure}
 
-In addition, to measure the position of the calibration source deployed in the detector, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs and then triangulate the source location. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
+Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMT responses\cite{snop_jinst,anderson2021optical}; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. 
 
-\subsection{Optical Calibration Sources}
-(** will be rephrased and shortened **)
-The optical calibration sources are used to calibrate the PMT response and to measure the optical properties of the detector media. The optical sources mainly include a light diffusing sphere (called ``laserball", LB), as well as the Embedded Light-emitting diode (LED)/Laser Light Injection Entity (ELLIE)\cite{snop_jinst}.
+Among the radioactive sources, an Nitrogen-16 calibration source deployed in the water phase was used to test the reconstruction algorithm discussed in Chapter 4 and to obtain reconstruction uncertainties, which is the topic of Chapter 5. The source is described in the next section (Sect.~\ref{sect:n16}).
 
-%The laserball injects lights from a nitrogen dye laser to a glass bubble.
-%\cite{anderson2021optical}.
-%fast pulsing LED or lasers measures optical properties and parameters of describing the detector optical model,
+Various types of radioactive sources producing different types of particles ($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
+  
+New calibration sources are being developed to calibrate the energy scale in the scintillator and tellurium-loading phases, especially for the energy region of interest (ROI) in the $0\nu\beta\beta$ study. They are the $^{46}$Sc tagged source with a PMT and three additional untagged $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co\cite{snop_jinst}. Among them, the isotopes of $^{48}$Sc ($T_{1/2}$=43.67 hours, 100\% $\beta^-$ decay) and $^{137}$Cs ($T_{1/2}$=30.1 years, 100\% $\beta^-$ decay) can provide both the $\beta^-$ and $\gamma$ particles while the $^{57}$Co ($T_{1/2}$=271.74 days, 100\% electron capture) only emits $\gamma$s. They can provide $\gamma$s with energies ranging from 14 keV ($^{57}$Co) to 1310 keV ($^{48}$Sc) and $\beta^-$ particles with energies ranging from 480 keV ($^{48}$Sc) to 1176 keV ($^{137}$Cs)\cite{nndc}.
 
-%, such as scattering, attenuation of the detector materials, the response of PMTs, angular and wavelength dependent wavelength dependent absorption and the optical degradation.
-
-%Optical calibration \emph{in-situ}
-
-%various dyes provide different peak wavelengths of the laser light, mainly at 365, 385, 420, 450 and 500 nm.
-
-Due to the requirements of very low radioactive background levels for SNO+, frequent deployments of calibration sources inside the AV are needed to be avoided. To conduct weekly calibrations of the PMTs, the ELLIE system was developed by SNO+. It uses fast pulsing light injection devices which were mounted on the PSUP at fixed positions, covering all inward facing PMTs. The ELLIE system consists of three modules: (1) the timing module (TELLIE), which utilizes LED for calibrating the PMT hit-time and gains; (2) the scattering module (SMELLIE), which uses laser light to measure the Rayleigh scattering length and scattering angle of the detector media; (3) the attenuation module (AMELLIE), which is used to monitor the relative changes in attenuation lengths of detection media\cite{snop_jinst,jones2011background,walker2016study,dunger2018topological}.
-
-\subsection{Radioactive Calibration Sources}
-\subsubsection{The $^{16}$N Calibration Source}\label{n16_description}
+\subsection{The $^{16}$N Calibration Source}\label{sect:n16}
 The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}.   
 
-Since the $^{16}$N isotope has a short half-life of $7.13~s$, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through the reaction: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the CO$_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the CO$_2$ gas tubing\cite{dragowsky200216n}.  
+Since the $^{16}$N isotope has a short half-life of $7.13$ s, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through the reaction: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the CO$_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the CO$_2$ gas tubing\cite{dragowsky200216n}.  
 
 The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{end~point}=4.29$ MeV and a 22.8\% chance to an electron with $E_{end~point}=10.42$ MeV; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$'s. There are mainly 6.13-MeV $\gamma$ with an intensity of 67.0\% and 7.12-MeV $\gamma$ with an intensity of 4.9\%. The intensities of the $\gamma$ particles with other energies are all below 1\%\cite{nndc}. A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
@@ -550,7 +530,7 @@ Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber
 
 A detailed study of using the $^{16}$N source for testing and estimating the reconstruction uncertainties will be shown in \ref{sect:n16_water}.
 
-\subsubsection{The Americium Beryllium Calibration Source}\label{sect:AmBesource}
+\subsection{The Americium Beryllium Calibration Source}\label{sect:AmBesource}
 (** will be rephrased and shortened **)
 Also being inherited from the SNO collaboration, the americium-beryllium (AmBe) source is used to produce neutrons and a 4.4-MeV $\gamma$ with a chance of 59\%. 
 This source is mainly used to study the efficiency of the neutron capture for the antineutrino analysis.
@@ -572,10 +552,6 @@ This source is mainly used to study the efficiency of the neutron capture for th
 %in an excited state, it will de-excite by emitting at least one γ-ray. The γ radiation from this reaction is
 %predominantly 4.4 MeV, and occurs whenever the 12C is not formed in the ground state. Depending on the
 %form and setup of the source, these γ-rays accompany ($59.1\pm 1.5$)\% of all neutrons 
-
-\subsubsection{Other Calibration Sources}
-
-New calibration sources are being developed to calibrate the energy scale in the scintillator and tellurium-loading phases, especially for the energy region of interest (ROI) in the $0\nu\beta\beta$ study. They are the $^{46}$Sc tagged source with a PMT and three additional untagged $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co\cite{snop_jinst}. Among them, the isotopes of $^{48}$Sc ($T_{1/2}$=43.67 hours, 100\% $\beta^-$ decay) and $^{137}$Cs ($T_{1/2}$=30.1 years, 100\% $\beta^-$ decay) can provide both the $\beta^-$ and $\gamma$ particles while the $^{57}$Co  ($T_{1/2}$=271.74 days, 100\% electron capture) only emits $\gamma$s. They can provide $\gamma$s with energies ranging from 14 keV ($^{57}$Co) to 1310 keV ($^{48}$Sc) and $\beta^-$ particles with energies ranging from 480 keV ($^{48}$Sc) to 1176 keV ($^{137}$Cs)\cite{nndc}.
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.
