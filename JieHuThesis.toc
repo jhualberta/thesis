@@ -19,7 +19,6 @@
 \contentsline {subsection}{\numberline {2.3.9}Future Solar Neutrino Experiments}{20}{subsection.2.3.9}
 \contentsline {section}{\numberline {2.4}Neutrino Mass and Neutrinoless Double Beta Decay}{21}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Neutrinoless Double Beta Decay}{22}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Status of Double Beta Decay Experiments}{24}{subsubsection.2.4.1.1}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{28}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{28}{section.3.1}
 \contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{29}{section.3.2}
@@ -41,7 +40,6 @@
 \contentsline {section}{\numberline {3.4}Electronics}{52}{section.3.4}
 \contentsline {section}{\numberline {3.5}Calibration}{54}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}The $^{16}$N Calibration Source}{56}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}The Americium Beryllium Calibration Source}{58}{subsection.3.5.2}
 \contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{58}{section.3.6}
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{60}{chapter.4}
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{60}{section.4.1}
@@ -88,8 +86,8 @@
 \contentsline {subsection}{\numberline {5.3.3}$\beta _{14}$ and Its Systematic}{136}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{138}{subsection.5.3.4}
 \contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{138}{subsubsection.5.3.4.1}
-\contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{140}{subsubsection.5.3.4.2}
-\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{142}{subsubsection.5.3.4.3}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{139}{subsubsection.5.3.4.2}
+\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{143}{subsubsection.5.3.4.3}
 \contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{144}{subsubsection.5.3.4.4}
 \contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{149}{chapter.6}
 \contentsline {section}{\numberline {6.1}Backgrounds}{150}{section.6.1}

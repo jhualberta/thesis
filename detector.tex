@@ -103,19 +103,21 @@ The transitions between the singlet and triplet states are highly forbidden due 
 electron spin-flip is involved\cite{von2015measurement,sorensen2016temperature}. There also exists a relatively rare process called intersystem crossing (ISC), which converts excited singlet states into triplet states. Besides this, 75\% of triplet states can be produced by ionization-recombination\cite{von2015measurement,dunger2018topological}.
 
 For the de-excitation, the similar processes of internal degradation occur among $T_{2,3, ...} \to T_1$. $T_1$ is a relatively stable state and the lifetime of the molecule in the triplet state is in $\mathcal{O}(10^{-4}~-~10~s)$\cite{mcquarrie1997physical}. $T_1\to S_0$ is highly forbidden. However, the $T_1$ state can go through an indirect decay process by interacting with another excited $T_1$ molecule and forms an excited singlet state:
-\[
-T_1+T_1\to S^*+S_0+phonons
-\]
+\begin{equation}
+T_1+T_1\to S^*+S_0+phonons.
+\end{equation}
+
 The $S^*$ will de-excite and emit delayed scintillation light. The process for emitting this delayed scintillation light is called delayed fluorescence or phosphorescence\cite{leo2012techniques}. This process contributes to the delayed component of scintillation light.
 
 For a typical scintillator detector, the time scale of detector response is $\mathcal{O}(1-100~ns)$. In this time region, the emission of the scintillation light contains the primary fluorescence from the de-excitation of the singlet states (prompt component) and the delayed fluorescence from the de-excitation of the indirect triplet states (delayed component)\cite{dunger2018topological}. The time profile of the scintillation light emission is a mixture of prompt and delayed components. 
 
-Different charged particles can cause different ionization densities when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$ particle can cause a high ionization density, which produces a higher ratio of triplet states. Therefore, the time profile for the $\alpha$ particle has more delayed components or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, collaboration2020development}. 
+Different charged particles can cause different ionization densities when they deposit energies to the scintillator molecules. The ionization density affects the relative population of the excited singlet and triplet states. Compared to an $e^-$, an $\alpha$-particle can cause a high ionization density, which produces a higher ratio of triplet states. Therefore, the time profile for the $\alpha$-particle has more delayed components or longer tails than the $e^-$. This enables the organic scintillator to distinguish $\alpha$ with $e^-$ or other lighter charged particles\cite{dunger2018topological, collaboration2020development}. 
 
 An empirical formula, called follows Birk's law\cite{birks1951scintillations, birks1965theory}, describes the photon yield along with unit distance by the incident particle:
-\[
+\begin{equation}
 \frac{dY}{dx}=A\frac{dE/dx}{1+k_B\cdot dE/dx},
-\]
+\end{equation}
+
 where $A$ is a normalization constant, $k_B$ is the Birks' constant of the scintillator, which in practice is obtained by fitting the formula to the measured data.
 
 \subsection{Liquid Scintillator for SNO+}\label{sect:LSproperty}
@@ -355,15 +357,15 @@ A Cesium-137 (\isotope[137]{Cs}) radioactive source was always placed at the bot
 The source was made by Radiochemical Centre Amersham. The radioactivity measured on 1st April 1974 was $11.09~microcurie(\mu Ci)$, with an accuracy of $3.7\%$. The activity was expected to be 
 $11.09\times ({\frac{1}{2}})^{\frac{46}{30.08}}=3.84~\mu Ci$ in 2020, considering a half-life of 30.08 years for the $^{137}$Cs\cite{nndc}.
 
-The $^{137}$Cs isotope has a 85.10\% chance to emit 0.661 MeV $\gamma$-rays\cite{nndc}. These $\gamma$-rays can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
+The $^{137}$Cs isotope has a 85.10\% chance to emit 0.661 MeV $\gamma$-particles\cite{nndc}. These $\gamma$-particles can travel into the liquid scintillator samples in the vial, interact with the samples and create scintillation photon.
 
-For each sample, measurements were taken for a one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$ rays interacted with the LAB-PPO sample. The p.e. signals triggered PMT pulses, and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time ($t_{trigger}$) tag.
+For each sample, measurements were taken for a one-minute time duration. Waveforms from the PMT photo-current signals were digitized in a 252 ns time window. Shown in Fig.~\ref{teLSwaveform} is a typical waveform caused by $\gamma$-particles interacting with the LAB-PPO sample. The p.e. signals triggered PMT pulses, and the pulses were digitized as waveforms. For each waveform, the digitizer firmware dynamically calculated the baseline as the mean value of 256 data points inside a moving time window of 252 ns. A threshold was set as 100 units above the baseline. The data point on the 90\% leading edge of the pulse was taken as the trigger time ($t_{trigger}$) tag.
 From this $t_{trigger}$ tag, in the following 80-ns window, the digitizer did not calculate another trigger to avoid introducing another pulse (trigger hold-off). Also, from the $t_{trigger}$ tag, a pre-gate of 8 ns was set. The waveform was integrated into the time gate of $[t_{trigger}-8, t_{trigger}+72]$ ns. This gives the integrated charge, which was calculated as an A/D converter (ADC) channel number. If the measurement system can be calibrated, the ADC channel number can be exactly converted into the energy of the particle interaction. Since here we only interested in the photon numbers, we used the ADC channel as the energy. Once the pulse in the waveform passed the threshold and a triggered time tag can be found, the digitizer considered it as a triggered event. A time flow started when the measurement began. Timestamps were recorded as event time when the triggered event happened. The waveform was recorded, and the ADC channel number (energy) of this event was calculated.
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=8cm]{teLS_waveform.png}
-	\caption[A typical triggered waveform.]{A typical waveform triggered by scintillation photons from $^{137}$Cs $\gamma$-rays interaction with LAB-PPO sample.}
+	\caption[A typical triggered waveform.]{A typical waveform triggered by scintillation photons from $^{137}$Cs $\gamma$-particles interacting with LAB-PPO sample.}
 	\label{teLSwaveform}
 \end{figure}
 
@@ -388,7 +390,7 @@ Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and witho
 Fig.~\ref{teLSresults} (a) shows the result of a one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered event fall in certain ADC channel numbers in each channel. A 10 ns coincidence window cut was applied to cut down noise, single p.e., and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence. Fig.~\ref{teLSresults} (b) and (c) show the results of the TeSOP and TeDDA samples respectively. Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields can be observed clearly.
 
 The 2D plots were projected onto a single channel, as shown in 
-Fig.~\ref{teLSresults} (d). We used an empty vial and let $\gamma$-rays from $^{137}$Cs source passed through it as a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
+Fig.~\ref{teLSresults} (d). We used an empty vial and let $\gamma$-particles from $^{137}$Cs source passed through it as a background run (without the coincidence cut). This is to verify the single p.e. peak and noise region, shown as the black background spectrum.
 
 From this plot, the single p.e. peaks for all the samples and the background match together. The multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP are slightly larger than the TeDDA. 
 
@@ -464,60 +466,44 @@ As a summary, the SNO+ electronic system can measure signals with a nanosecond-l
 \section{Calibration}\label{sect:calibr}
 Calibration sources with known physics parameters are applied to understand the detector response to the events and thus to make accurate measurements.
 
-The detector geometry is not perfectly symmetric, due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. The scan of the sources is realized through a source manipulator system (SMS).
+Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMT responses\cite{snop_jinst,anderson2021optical}; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine reconstruction systematic uncertainties. Various types of radioactive sources designed for SNO+ cover the energy range from 0.1 MeV to about 10 MeV, as listed in Table.~\ref{tab:radioSource}\cite{snop_jinst}. All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
 
+\begin{table}[ht]
+	\centering
+	\caption[A list of SNO+ radioactive sources.]{A list of SNO+ radioactive sources. The main energy is given as the total $\gamma$ energy, modified from Ref.~\cite{snop_jinst}.}
+	\label{tab:radioSource}
+	\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
+		\toprule
+		source & total $\gamma$ energy [MeV]\\
+		\midrule
+		\vspace{1mm}
+		$^{16}$N  & 6.1\\
+		AmBe & 4.4\\
+		$^{46}$Sc & 2.0\\
+		$^{48}$Sc & 3.3\\
+		$^{137}$Cs & 0.66\\
+		$^{57}$Co & 0.14\\		
+		\bottomrule
+	\end{tabular*}
+\end{table}
 
-A Universal Interface (UI) connects the AV and the SMS. It is a sealed glove
-box above the AV neck in a clean room set on the SNO+ deck.
+Among these radioactive sources, the Nitrogen-16 ($^{16}$N) calibration source and the Americium Beryllium (AmBe) source have been deployed in the water phase and the partial-fill phase. The $^{16}$N source was used to test and optimize the reconstruction algorithm discussed in Chapter 4. It was also used to obtain the reconstruction uncertainties in the water phase, which is the topic of Chapter 5. A detailed description of $^{16}$N source is given in Sect.~\ref{sect:n16}. 
 
-umbilical vertical and side ropes as shown in Fig.~\ref{sms}.
-reduce the radio contamination in the detector
+The $^{46}$Sc, $^{48}$Sc, $^{137}$Cs and $^{57}$Co sources are newly designed by SNO+ to calibrate the energy scale in the scintillator and tellurium-loading phases, especially for the energy region of interest (ROI) in the $0\nu\beta\beta$ study\cite{snop_jinst}. 
 
-In addition, to measure the position of the calibration source deployed in the detector, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs and then triangulate the source location. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
-
- in the PSUP and differences    
-
-All the calibration sources have been designed to meet the radiopurity required by SNO+ and their materials are compatible with the detection media\cite{snop_jinst}.
+The detector geometry is not perfectly symmetric due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. To realize this, a few fixed optical sources were mounted at different positions on the PSUP. Besides that, a source manipulator system (SMS) was installed, as shown in Fig.~\ref{sms}. The sources are attached or detached to the SMS via the Universal Interface (UI), which is a sealed cylinder-shaped glove box on the top of the AV to prevent the air in the lab leaking into the detector. The motion of the deployed sources along the central vertical axis inside the AV is controlled by the Umbilical Retrieval Mechanism (URM) through an umbilical and a central rope, and the off-axis motion is controlled by the side rope manipulator system. The motion of the sources in the external water region between the AV and PSUP is along the calibration guide tubes\cite{snop_jinst}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{SMS.png}
-	\caption{The SNO+ Source Manipulator System, taken from Ref.~\cite{snop_jinst}.}
-	\label{sms}
+	\caption[The SNO+ Source Manipulator System.]{The SNO+ Source Manipulator System, from Ref.~\cite{snop_jinst}.}
+	\label{fig: sms}
 \end{figure}
 
-Two kinds of calibration sources are used by SNO+: (1) the optical sources to measure the \emph{in-situ} optical properties of the detector media and to calibrate the PMT responses\cite{snop_jinst,anderson2021optical}; and (2) the radioactive sources to test the detector energy responses, check the performance of event reconstruction algorithms for reconstructing event position, direction and energy and then determine their systematic uncertainties. 
-
-Among the radioactive sources, an Nitrogen-16 calibration source deployed in the water phase was used to test the reconstruction algorithm discussed in Chapter 4 and to obtain reconstruction uncertainties, which is the topic of Chapter 5. The source is described in the next section (Sect.~\ref{sect:n16}).
-
-Various types of radioactive sources producing different types of particles ($\beta,\gamma$ particles or neutrons) with different energies can also help to test the analysis tools for particle identifications.
-  
-New calibration sources are being developed to calibrate the energy scale in the scintillator and tellurium-loading phases, especially for the energy region of interest (ROI) in the $0\nu\beta\beta$ study. They are the $^{46}$Sc tagged source with a PMT and three additional untagged $\gamma$ sources: $^{48}$Sc, $^{137}$Cs and $^{57}$Co\cite{snop_jinst}. Among them, the isotopes of $^{48}$Sc ($T_{1/2}$=43.67 hours, 100\% $\beta^-$ decay) and $^{137}$Cs ($T_{1/2}$=30.1 years, 100\% $\beta^-$ decay) can provide both the $\beta^-$ and $\gamma$ particles while the $^{57}$Co ($T_{1/2}$=271.74 days, 100\% electron capture) only emits $\gamma$s. They can provide $\gamma$s with energies ranging from 14 keV ($^{57}$Co) to 1310 keV ($^{48}$Sc) and $\beta^-$ particles with energies ranging from 480 keV ($^{48}$Sc) to 1176 keV ($^{137}$Cs)\cite{nndc}.
+The position of the deployed source can be evaluated by the manipulator system. In addition, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs of the source and then triangulate its position. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
 
 \subsection{The $^{16}$N Calibration Source}\label{sect:n16}
-The $^{16}$N calibration source is one of the radioactive sources. This source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}.   
-
-Since the $^{16}$N isotope has a short half-life of $7.13$ s, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through the reaction: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the CO$_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the CO$_2$ gas tubing\cite{dragowsky200216n}.  
-
-The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{end~point}=4.29$ MeV and a 22.8\% chance to an electron with $E_{end~point}=10.42$ MeV; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$'s. There are mainly 6.13-MeV $\gamma$ with an intensity of 67.0\% and 7.12-MeV $\gamma$ with an intensity of 4.9\%. The intensities of the $\gamma$ particles with other energies are all below 1\%\cite{nndc}. A simplified decay scheme is shown in Fig.~\ref{n16decay}.
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=6cm]{n16_decay.png}
-	\caption[$^{16}$N main decay scheme]{$^{16}$N main decay scheme, modified from Ref.~\cite{dragowsky200216n}.}
-	\label{n16decay}
-\end{figure}
-
-Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside\cite{dragowsky1999sudbury}.
-
-%to ensure a high fraction of the $\gamma$-rays 
-
-%lighthouse where the liquid in the scintillator volume (for example, pure water in the water phase) is free to enter.
-%tagged by a small PMT inside
-
-%A polyethelene bumper cone is at the bottom of the source.
-
-%gas capillary tube 
+The $^{16}$N calibration source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}. Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside\cite{dragowsky1999sudbury}.
 
 \begin{figure}[!htb]
 	\centering
@@ -526,32 +512,18 @@ Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber
 	\label{n16pic}
 \end{figure}
 
-%The $^{16}$N source $^{3}$H$(p,\gamma)^{4}$He reaction.
+Since the $^{16}$N isotope has a short half-life of $7.13$ s, it must be produced on-site during the calibration runs. A commercial deuterium-tritium (DT) generator was installed in SNOLAB to produce neutrons through the reaction: $D+T\to n+^{4}$He; then the produced 14-MeV neutrons interact with the CO$_2$ gas streaming through the small diameter capillary tubing and produce the $^{16}$N isotopes via the $(n,p)$ reaction: $n+^{16}$O$\to^{16}$N$+p$. These $^{16}$N isotopes are transferred into the cavity or the detector by the CO$_2$ gas tubing\cite{dragowsky200216n}.  
 
-A detailed study of using the $^{16}$N source for testing and estimating the reconstruction uncertainties will be shown in \ref{sect:n16_water}.
+The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^{16}$O$+e^-+\bar{\nu}_e$. It has a 66.2\% chance to emit an electron with $E_{end~point}=4.29$ MeV and a 22.8\% chance to an electron with $E_{end~point}=10.42$ MeV; while the resulting $^{16}$O deexcites and produces a cascade of $\gamma$-particles. There are mainly 6.13-MeV $\gamma$ with an intensity of 67.0\% and 7.12-MeV $\gamma$ with an intensity of 4.9\%. The intensities of the $\gamma$-particles with other energies are all below 1\%\cite{nndc}. A simplified decay scheme is shown in Fig.~\ref{n16decay}.
 
-\subsection{The Americium Beryllium Calibration Source}\label{sect:AmBesource}
-(** will be rephrased and shortened **)
-Also being inherited from the SNO collaboration, the americium-beryllium (AmBe) source is used to produce neutrons and a 4.4-MeV $\gamma$ with a chance of 59\%. 
-This source is mainly used to study the efficiency of the neutron capture for the antineutrino analysis.
-%The $\alpha$-emitter $^{241}$Am  
-%
-%
-%  9Be target
-%
-%the neutrons are expected to be captured and it emits 2.2-MeV delayed $\gamma$s. 
-%\begin{equation}
-%\begin{split}
-%\alpha + \isotope[9]{Be} \to \isotope[12]{C} + n (40.9\%),\\
-%\alpha + \isotope[9]{Be} \to \isotope[12]{C}^* + n (59.1\%),\\
-%\isotope[12]{C}^* \to \isotope[12]{C} + \gamma (4.4~MeV),\\
-%\end{split}
-%\end{equation}
-%
-%The 9Be nucleus then produces a 12C nucleus through neutron emission. If the 12C nucleus is produced
-%in an excited state, it will de-excite by emitting at least one γ-ray. The γ radiation from this reaction is
-%predominantly 4.4 MeV, and occurs whenever the 12C is not formed in the ground state. Depending on the
-%form and setup of the source, these γ-rays accompany ($59.1\pm 1.5$)\% of all neutrons 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=6cm]{n16_decay.png}
+	\caption[$^{16}$N main decay scheme]{$^{16}$N main decay scheme, modified from Ref.~\cite{dragowsky200216n}.}
+	\label{n16decay}
+\end{figure}
+
+A detailed study of using the $^{16}$N source for testing and estimating the reconstruction uncertainties will be shown in Chapter 5.
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.

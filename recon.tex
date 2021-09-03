@@ -31,7 +31,7 @@ In this chapter, a Multi-path (MP) reconstruction framework and its principles a
 
 In addition, the potentials of extracting the directional information from the scintillator phase are also discussed in this chapter.
 
-\section{Multi-path Position and Direction Reconstructions for the Water Phase}\label{sect:mpw}
+\section{Multi-path Vertex and Direction Reconstructions for the Water Phase}\label{sect:mpw}
 In the SNO+ water phase, both the cavity and the AV were filled with ultra-pure water. In this case, the detector geometry is simple since everything inside the PSUP sphere can be simplified as water if omitting the AV shell. Therefore, to explain the reconstruction concepts, I will start with the \texttt{MP water fitter} (the \texttt{MPW fitter}).
 
 The \texttt{MPW fitter} fits for the vertex and direction of a triggered event in the SNO+ water phase. It first fits for the event vertex and then takes the results of the reconstructed position to fit for the event direction.
@@ -924,7 +924,7 @@ A \texttt{Dump Likelihood Class} stores the trial fit parameters with respect to
 
 Once the reconstructed results are obtained, the fitter will send them to the classifiers for further analysis calculations. 
 
-\section{Energy Reconstruction}
+\section{Energy Reconstruction}\label{sect:energyFitter}
 The SNO+ energy reconstruction algorithms (energy fitters) were based on SNO\cite{boulay2004direct,moffat2001optical} and has been further developed and optimized\cite{jones2011background,walker2016study,energyRSP}. 
 
 The energy fitters mainly use lookup tables to convert the NHits of a triggered event into reconstructed energy. The energy fitters used in the water phase are mainly the energy response processor (\texttt{EnergyRSP fitter})\cite{boulay2004direct,moffat2001optical,walker2016study} and the energy Lookup fitter (\texttt{EnergyLookup fitter})\cite{jones2011background,energyFunctional}. The \texttt{EnergyRSP fitter} is used to reconstruct the events inside the AV (internal events). It considers the detailed detector effects, such as the asymmetric geometry of the detector, the optical response of each PMT (including the PMT detection efficiency, transmission probability, attenuation, etc.). It utilizes the reconstructed event positions, directions, and time residuals as inputs to convert the corresponding value of NHits to estimated energy based on simulation models and calibration data. The \texttt{EnergyLookup fitter} is simpler and is mainly used to reconstruct the events in the cavity water (external events). It mainly uses the lookup table of the NHits dependence on the event reconstructed position from simulations to calculate the energy of the event\cite{jones2011background}. For the scintillator phase, a method using functional form based on simulations was developed by Ref.~\cite{energyFunctional,energyRThetaFunctional} and is currently used in the \texttt{EnergyRThetaFunctional fitter}. All these fitters correct the actual number of online PMTs for a realistic physics run (or called ``channel efficiency''). 

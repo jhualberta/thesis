@@ -1,12 +1,6 @@
-A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. To make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source was used for the primary detector calibration. The $^{16}$N runs were mainly used for checking the performances of the reconstruction of the event position, direction, and energy. The source was described in Sect.~\ref{n16_description}.
+A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. To make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source (described in Sect.~\ref{sect:n16}, Chapter 3) was used for the primary detector calibration. The $^{16}$N calibration data ($^{16}$N runs) were mainly used for checking the performances of the reconstruction of the event position, direction, and energy. 
 
-In this chapter, I applied the \texttt{Multi-path fitter} mentioned in Chapter 4 to the $^{16}$N calibration data and simulations.
-
-First, for the $^{16}$N calibration runs during the water phase, the \texttt{MP water fitter} (\texttt{MPW fitter}) was applied on both data and simulations. By comparing the differences between the data and MC, systematics of the position and direction reconstruction were extracted. Setting the \texttt{MPW fitter} fitted event vertex and direction as seed, the event energy was reconstructed via the energy RSP fitter. Also, based on the \texttt{MPW fitter} reconstructed vertex and direction results, the other parameters, such as the in-time-ratio ($ITR$) and the isotropic parameter ($\beta_{14}$) were calculated. By comparing the $^{16}$N data and the MC simulations, the systematics were also evaluated. These systematic results were used in the solar neutrino analysis in Chapter 6.
-
-%The \texttt{MPW fitter} was also applied on the simulations of the AmBe source calibration runs during the water phase. The performances of %the \texttt{MPW fitter} reconstruction on low energy events, specially the 2.2 MeV $\gamma$ events were discussed.
-
-%The last section of this chapter is to check the performance of the \texttt{MP partial fitter} for the $^{16}$N calibration runs during the partial-fill phase. An attempt of extracting the Cherenkov signals from the events in the scintillator was made. This attempt will be useful for extracting the solar neutrino events and reconstructing their directions during the scintillator phase. 
+In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}, Chapter 4) was applied on both the data and simulations of the $^{16}$N runs in the water phase. By comparing the differences between the data and MC, systematics of the position and direction reconstruction were extracted. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}, Chapter 4), which utilizes the \texttt{MPW fitter} fitted event vertex and direction. Also, based on the \texttt{MPW fitter} reconstructed vertex and direction results, the other parameters, such as the in-time-ratio ($ITR$) and the isotropic parameter ($\beta_{14}$) were calculated. By comparing the $^{16}$N data and the MC simulations, the relevant systematics were also evaluated. These systematic results were used in the solar neutrino analysis in Chapter 6.
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
 During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November 2017 and as external scans in March 2018. For each calibration run, the source was placed at a fixed position, and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). The source was inside the AV for the internal scans, moving along x, y, and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along the z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. Details of the calibration runs are listed in the tables in Appendix.~\ref{appendix:calibration}. 
@@ -236,7 +230,7 @@ In Table.~\ref{vertexShifts}, the averages and the standard deviations of the $\
 	\caption{Vertex shifts for the reconstructed positions in x, y and z axes. Unit: mm.}
 	\vspace{3mm}
 	\label{vertexShifts}
-	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccc}
+	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
 		axis & vertex shift  & systematic to be applied ($\delta$) &smearing\\
 		\hline 
@@ -268,7 +262,7 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 \begin{table}[ht]
 	\centering
 	\caption{Vertex shifts for the reconstructed positions in x, y and z axes. Unit: mm.}
-	\vspace{3mm}
+	\vspace{2mm}
 	\label{table:vertexScale}
 	\begin{tabular*}{130mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
