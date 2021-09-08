@@ -224,7 +224,7 @@ This provides a measure of CP violation\cite{aitchison2012gauge}:
 
 where the $\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing2011neutrinos}. In 2019, the Tokai-to-Kamioka (T2K) experiment in Japan claimed confidence intervals for $\delta_{CP}$ with three standard deviations ($3\sigma$): [-3.41,-0.03] (NH) or [-2.54,-0.32] (IH). This result indicates that the CP violation exists in leptons\cite{abe2019constraint}.
 
-\subsection{Matter Effect}\label{sect:matterEffect}
+\subsection{Matter Effect}\label{sect:MSW}
 The matter effect is caused by neutrinos interacting with ambient electrons and nucleons in the matter such as the Sun or the Earth. $\nu_e$ interacts with electrons via both charged weak current (exchanging $W$ boson) and neutral weak current ($Z$ boson) while $\nu_\mu$ and $\nu_\tau$ interact only by the neutral current. The $\nu_e$ energy has an addition term, $V_{CC} =\sqrt2G_Fn_e$, where $n_e$ is the number density of the electrons in matter and $G_F$ is the Fermi coupling constant for the weak interaction. This affects the oscillation probabilities for neutrinos propagating in matter compared to vacuum, which is called the Mikheyev-Smirnov-Wolfenstein (MSW) mechanism\cite{smirnov2016solar,smirnov2005msw}.
 
 In vacuum two-flavor mixing, the Schr\"{o}dinger equation can be written (in natural units)\cite{xing2011neutrinos}:
@@ -302,46 +302,30 @@ The denominator in equation (\ref{eq:thetaM}) implies a resonance condition:
 From this condition, for a given $E$, there is a resonance density $n^{reson}_e$ while for a given $n_e$, there is a resonance energy $E^{reson}$. When the resonance condition is satisfied, $\theta_m = \frac{\pi}{4}$ and two flavor neutrinos are maximally mixed, even if the vacuum mixing angle $\theta$ is small. This is called matter enhanced neutrino oscillation\cite{smirnov2016solar,fukugita2013physics}. Since the Sun is an object provides ambient electrons and nucleons, neutrinos coming from the Sun are traditionally used to investigate the matter effects. The matter effect was first observed by measuring the solar neutrino fluxes, which will be discussed in the next section.
 
 \subsection{Solar Neutrinos}\label{sect:solarNu}
-In the 1930s, Hans Bethe et al. explained that the Sun's energy is driven by a series of nuclear reactions\cite{bethe1939energy}. 
+In the 1930s, Hans Bethe et al. explained that the Sun's energy is driven by a series of nuclear reactions\cite{bethe1939energy}. The current knowledge of the nuclear reactions has been summarized in the Standard Solar Model (SSM). 
 
-Based on the available physics and experimental data, the Standard Solar Model (SSM) is a modern accepted theory for the evolution of the Sun. The energy in the Sun is mainly produced by two sets of reactions: the proton-proton (pp) chain, which contributes to $\sim 98.6\%$ of the energy release and the Carbon-Nitrogen-Oxygen (CNO) cycle, which contributes $\sim 1.4\%$\cite{antonio2018state}. Fig.~\ref{ppChain} and Fig.~\ref{CNOcycle} show all the reactions in the two sets respectively. 
+The SSM is a modern accepted theory for tracing the evolution of the Sun from its beginning, which is based on the contemporary data from theories and experimental measurements, such as an equation of state describing the balance between the gravitation force and pressure, the cross-sections of the nuclear reactions, the modern Sun's mass, age, radius, luminosity, etc\cite{haxton2013solar}. According to the SSM, the energy in the Sun is mainly produced by two sets of reactions: the proton-proton (pp) chain, which is dominant and contributes to $\sim 98.6\%$ of the energy release, and the Carbon-Nitrogen-Oxygen (CNO) cycle, which contributes $\sim 1.4\%$\cite{antonio2018state}. Fig.~\ref{fig:ppChain} shows all the reactions in the pp chain, and Fig.~\ref{fig:CNOcycle} shows the reactions in the CNO cycle. 
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=14cm]{ppChain.png}
-	\caption[All reactions in the three PP chains.]{All reactions in the three PP chains: PP-I, PP-II, PP-III. The reactions producing neutrinos are labeled in the solid frames. Modified from \cite{oberauer2020solar}.}
-	\label{ppChain}
+	\caption[All reactions in the three PP chains.]{All reactions in the three PP chains: PP-I, PP-II, PP-III. The reactions producing neutrinos are labeled in the solid frames. Modified from \cite{oberauer2020solar}.	\label{fig:ppChain}}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=14cm]{CNOcycle.png}
-	\caption[All reactions in the CNO bicycle.]{All reactions in the CNO bicycle. The reactions producing neutrinos are labeled in the solid frames. Modified from \cite{oberauer2020solar}.}
-	\label{CNOcycle}
+	\caption[All reactions in the CNO bicycle.]{All reactions in the CNO bicycle. The reactions producing neutrinos are labeled in the solid frames. Modified from \cite{oberauer2020solar}.	\label{fig:CNOcycle}}
 \end{figure}
 
+Via these nuclear reactions, hydrogen is eventually fused into helium, and the net nuclear transformation is $4p+2e^-\to^{4}$He $+2\nu_e+Q$, where the released energy $Q=26.73$ MeV is mostly in the form of the kinetic energy of the photons, with a small fraction carried by neutrinos\cite{antonio2018state,valle2015neutrinos}.
 
-Via these two main sets of nuclear reactions, hydrogen is eventually fused into helium, and the net nuclear transformation is $4p+2e^-\to^{4}$He $+2\nu_e+Q$, where the released energy $Q=26.73$ MeV is mostly in the form of the kinetic energy of the photons, with a small fraction carried by neutrinos\cite{antonio2018state,valle2015neutrinos}. The average energy of solar $\nu_e$ is calculated by summing over the $E_{\nu_e}$ from the $i^{th}$ reaction chain with a flux of $\Phi_{\nu_e}^i$ and divided by $\Phi^{tot}_{\nu_e}$\cite{antonio2018state}:
-
-\begin{equation}
-\langle E_{\nu_e}\rangle = \sum_i E_i \frac{\Phi^i_{\nu_e}}{\Phi^{tot}_{\nu_e}}\approx 0.265~\mathrm{MeV},
-\end{equation}
-
-(the average neutrino energy $\langle E_{2\nu_e} \rangle\sim 0.59$ MeV). 
-
-The electron neutrinos $\nu_e$ produced in the solar nuclear reactions are called ``solar neutrinos'' and they can be detected on the Earth. Due to the branching ratios and unterminated chains in the pp chain and CNO cycle, the solar neutrinos come from different reactions, as shown in Table~\ref{solarnu}. The specific solar neutrinos detected on the Earth are named after the specific fusion process\cite{haxton2013solar}. They have different fluxes and energies, as shown in Fig.~\ref{bp05plot}\cite{bahcall2005new}.
-
-Besides, about 2-MeV of $Q$ is from annihilation of positrons with electrons in the solar plasma\cite{valle2015neutrinos,antonio2018state}. For every released energy, there are about 2 $\nu_e$ generated. The solar $\nu_e$ flux at the Earth surface can be estimated via the measured solar radiation energy on the Earth surface:
-\begin{equation}
-\Phi_{\nu_e} \simeq \frac{2\mathcal{L}_{\odot}}{4\pi D_\odot^2}\frac{1}{Q-2\langle E_{\nu_e} \rangle}= 6.35\times 10^{10}~\nu_e/cm^2/s,
-\end{equation}
-
-where the solar constants $G_{sc}=\mathcal{L}_\odot/(4\pi D^2_\odot)\simeq 0.136$ W/cm$^2$ \cite{suekane2015neutrino}. 
+The electron neutrinos $\nu_e$ produced in the solar nuclear reactions are called ``solar neutrinos'' and they can be detected on the Earth. Due to the branching ratios and unterminated chains in the pp chain and CNO cycle, the solar neutrinos come from different reactions, as shown in Fig.~\ref{fig:ppChain} and Fig.~\ref{fig:CNOcycle}. They are named after the corresponding reactions, as shown in Table.~\ref{tab:solarNu}.
 
 \begin{table}[htp]
-	\caption[]{\label{solarnu} Solar neutrinos from reactions in pp chain (a) and CNO cycle (b).}	
+	\caption[The main reactions produce solar neutrinos.]{The main reactions produce solar neutrinos in pp chain (a) and CNO cycle (b).\label{tab:solarNu} }	
 	\subfigure[pp chain]{
-		\begin{tabular*}{62mm}{cc}
+		\begin{tabular*}{65mm}{cc}
 			\toprule 
 			solar $\nu_e$  & reaction  \\
 			\midrule
@@ -354,7 +338,7 @@ where the solar constants $G_{sc}=\mathcal{L}_\odot/(4\pi D^2_\odot)\simeq 0.136
 		\end{tabular*}
 	}
 	\subfigure[CNO cycle]{
-		\begin{tabular*}{60mm}{cc}
+		\begin{tabular*}{65mm}{cc}
 			\toprule 
 			solar $\nu_e$   & reaction \\
 			\midrule
@@ -366,43 +350,38 @@ where the solar constants $G_{sc}=\mathcal{L}_\odot/(4\pi D^2_\odot)\simeq 0.136
 	}
 \end{table}
 
+The average energy of solar $\nu_e$ is calculated by summing over the $E_{\nu_e}$ from the $i^{th}$ reaction chain with a flux of $\Phi_{\nu_e}^i$ and divided by $\Phi^{tot}_{\nu_e}$\cite{antonio2018state}:
+\begin{equation}\label{eq:solarNuEaverage}
+\langle E_{\nu_e}\rangle = \sum_i E_i \frac{\Phi^i_{\nu_e}}{\Phi^{tot}_{\nu_e}}\approx 0.265~\mathrm{MeV}.
+\end{equation}
+
+For every released energy, there are about two $\nu_e$ generated. Then the solar $\nu_e$ flux at the Earth surface can be estimated via the measured solar radiation energy on the Earth surface:
+\begin{equation}
+\Phi_{\nu_e} \simeq \frac{\mathcal{L}_{\odot}}{4\pi D_\odot^2}\frac{2}{Q-2\langle E_{\nu_e} \rangle}\simeq 6.40\times 10^{10}~\nu_e/cm^2/s,
+\end{equation}
+where the solar constants $G_{sc}=\mathcal{L}_\odot/(4\pi D^2_\odot)\simeq 0.136$ W/cm$^2$ \cite{suekane2015neutrino}. 
+
+The SSM can predict the fluxes and energies of the solar neutrinos coming from different reactions, as shown in Fig.~\ref{fig:haxton2013plot}\cite{haxton2013solar}.
+
 \begin{figure}[htbp]
 	\centering	
-	\includegraphics[width=10cm]{BP05.pdf}
-	\caption[Solar neutrino energy spectrum based on BS05(OP).]{Solar neutrino energy spectrum ($E_\nu$ vs. flux) based on the solar model BS05(OP). Figure is from Ref.~\cite{bahcall2005new}.}
-	\label{bp05plot}
+	\includegraphics[width=12cm]{haxton09.png}
+	\caption[Solar neutrino energy spectrum.]{Solar neutrino energy spectrum ($E_\nu$ vs. flux) along with the SSM uncertainties, from Ref.~\cite{haxton2013solar}.}
+	\label{fig:haxton2013plot}
 \end{figure}
 
-In 1964, John Bahcall and Raymond Davis proposed the first experiment to detect solar neutrinos\cite{bahcall1964solar,davis1964solar}. Raymond Davis designed an experiment that used a 380 m$^3$ tank filled with Perchloroethylene (C$_2$Cl$_4$), a dry-cleaning fluid rich in chlorine. Solar neutrinos were expected to change $^{37}$C1 to $^{37}$Ar via the endothermic reaction $\nu_e+^{37}$Cl$\to^{37}$Ar$+e^-$, and the produced $^{37}$Ar were extracted and counted. The neutrino energy threshold ($E_{thresh}$) of the experiment was 0.814 MeV, which allowed a measurement mostly of the $^8$B neutrino flux but also including some lower energy neutrinos\cite{davis1964solar}. Their first results, announced in 1968, showed that only about one-third of the predicted radioactive argon atoms were measured\cite{davis1968search}. This raised the problem of missing solar neutrinos, which is denoted as the solar neutrino problem.
+In 1964, John Bahcall and Raymond Davis proposed the first experiment to detect solar neutrinos\cite{bahcall1964solar,davis1964solar}. Raymond Davis designed an experiment that used a 380 m$^3$ tank filled with Perchloroethylene (C$_2$Cl$_4$), a dry-cleaning fluid rich in chlorine. Solar neutrinos were expected to change $^{37}$C1 to $^{37}$Ar via the endothermic reaction $\nu_e+^{37}$Cl$\to^{37}$Ar$+e^-$, and the produced $^{37}$Ar were extracted and counted. The neutrino energy threshold ($E_{thresh}$) of the experiment was 0.814 MeV, which allowed a measurement mostly of the $^8$B solar $\nu_e$ flux but also including some lower energy neutrinos\cite{davis1964solar}. Their first results, announced in 1968, showed that only about one-third of the predicted radioactive argon atoms were measured\cite{davis1968search}. This pioneering experiment raised a problem of missing solar neutrinos, which is denoted as the solar neutrino problem.
 
 \subsection{SNO}
-Currently, it is well known that the missing solar neutrinos are due to the neutrino flavor transformation $\nu_e\to\nu_{\mu,\tau}$.
-The Sudbury Neutrino Observatory (SNO) experiment 
-D$_2$O
+It was the Sudbury Neutrino Observatory (SNO) experiment first confirmed that the missing solar neutrinos are due to the neutrino flavor transformation $\nu_e\to\nu_{\mu,\tau}$, along with the matter effect mentioned in Sect.~\ref{sect:MSW}. 
 
-the rate of neutral current (NC) on deuteron ($d$),
-\begin{equation}
-\nu_x+d\to p+n+\nu_x,
-\end{equation}
-
-the charged current (CC) reactions on deuteron,
-\begin{equation}
-\nu_e+d\to p+p+e^-,
-\end{equation}
-
-the rate of elastic scattering (ES) reactions,
-\begin{equation}
-\nu_x+e^-\to \nu_x+e^-,
-\end{equation}
-
-as mentioned in Sect.~\ref{sect:nuInteraction}
+SNO used a 1-kilotonne heavy water (D$_2$O) Cherenkov detector to distinguish the flavors of solar neutrinos. The SNO detector was sensitive to the $^8$B solar neutrinos via three interactions: (1) the charged current (CC) on deuteron ($d$):
+$\nu_e+d\to p+p+e^-$, (2) the neutral current (NC): $\nu_x+d\to p+n+\nu_x,$, and (3) the elastic scattering (ES): $\nu_x+e^-\to \nu_x+e^-$. The CC channel was only sensitive to $\nu_e$ while the NC channel was independent of the neutrino type, which provided a measurement of the total solar neutrino flux regardless of neutrino flavors. The ES channel was also sensitive to all flavors but with reduced sensitivities to $\nu_\mu$ and $\nu_\tau$\cite{ahmad2002direct}. As mentioned in Sect.~\ref{sect:nuInteraction}, the NC cross-section is 6.5 times smaller. 
 
 for $\nu_\mu$ and $\nu_\tau$,  neutral currents (NCs), 
 
-the NC cross-section is 6.5 times smaller. 
 
 due to the flavor transformation: 
-
 \begin{equation}
 R = \Phi_{CC}/\Phi_{NC} = \Phi_e/\Phi_{tot}=0.34\pm 0.04,
 \end{equation}
@@ -416,7 +395,7 @@ Super-K is able to lower down the energy threshold to 3.5 MeV to search for the 
 By utilizing the data from 2008 to 2014 (1664 live days),
 and combined with the three phases
 
- Super-K reported a measurement of $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times 10^6~cm^{-2}s^{-1}$.
+ Super-K reported a measurement of $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}$.
 
 
 
