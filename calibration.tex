@@ -3,7 +3,7 @@ A detailed description of the SNO+ detector has been implemented in the \texttt{
 In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}, Chapter 4) was applied on both the data and simulations of the $^{16}$N runs in the water phase. By comparing the differences between the data and MC, systematics of the position and direction reconstruction were extracted. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}, Chapter 4), which utilizes the \texttt{MPW fitter} fitted event vertex and direction. Also, based on the \texttt{MPW fitter} reconstructed vertex and direction results, the other parameters, such as the in-time-ratio ($ITR$) and the isotropic parameter ($\beta_{14}$) were calculated. By comparing the $^{16}$N data and the MC simulations, the relevant systematics were also evaluated. These systematic results were used in the solar neutrino analysis in Chapter 6.
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
-During the water phase, the $^{16}$N calibration source was deployed as internal calibration scans in June and November 2017 and as external scans in March 2018. For each calibration run, the source was placed at a fixed position, and the data were taken for about 20 minutes (for central run-107055, it took 1 hour). The source was inside the AV for the internal scans, moving along x, y, and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along the z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the $^{16}$N source deployment. In this thesis, 79 internal scan runs and 19 external runs were used. Details of the calibration runs are listed in the tables in Appendix.~\ref{appendix:calibration}. 
+During the water phase, the $^{16}$N source was deployed at different positions inside the AV in June and in November 2017 to perform internal calibration scans. It was also deployed at different positions in the external water region between the AV and the PSUP in March 2018 to perform external scans. For each $^{16}$N run, the source was placed at a fixed position, and the data were taken for about 20 minutes (for the central run-107055, it took 1 hour). The source was inside the AV for the internal scans, moving along x, y, and z-axes (called ``X, Y, Z scans'' in this thesis). It was also was moved diagonally across the AV and was placed at the corners of the inner AV (``corner scans''). For the external scans, the source was placed in the external water region but outside the AV. The source was moved along the z-axis with a fixed $(x,y)$ position close to the AV at (-5861.0,-2524.0)~mm. Fig.~\ref{N16_3Dscan} shows the different positions of the source deployment. In this thesis, 79 internal scan runs were used. Details of the calibration runs are listed in the tables in Appendix.~\ref{appendix:calibration}. %%%%%% and 19 external runs
 
 \begin{figure}[!htb]
 	\centering
@@ -14,7 +14,7 @@ During the water phase, the $^{16}$N calibration source was deployed as internal
 
 The $^{16}$N calibration runs provide ideal tests for the fitter performance. From a comparison of reconstructions for data and MC, we can also extract the resolution and bias of the fitter. Here I worked out the vertex and the direction reconstruction performances for both of the \texttt{RAT water fitter} and the \texttt{MPW fitter}. The vertex shifts as well as the uncertainties were evaluated. 
 
-To tackle with the $^{16}$N calibration data and simulations, an FECD tag cut ($FECD==9188$) was applied during the data processing to only save the events when the source trigger fired. A reconstruction threshold on $NHit$: $NHit>=6$ was used in the MC and data. Besides these cuts, high-level cuts based on classifiers were used. 
+To tackle with the $^{16}$N run data and simulations, an FECD tag cut ($FECD==9188$) was applied during the data processing, to save the events only when the source trigger fired. A reconstruction threshold on NHits$\geq 6$ was applied to the MC and data. Besides these cuts, high-level cuts based on classifiers were used. 
 
 \section{High Level Cuts for the Water Phase}\label{sect:high_level_cuts}
 A set of classifiers were developed by SNO analysis and been optimized for the SNO+ water analysis\cite{highlevel}. These classifiers utilized the reconstructed quantities, so they always require valid reconstructions.
@@ -76,7 +76,7 @@ The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:positinF
 	\label{posBiasVsFOM}
 \end{figure}
 
-For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000~mm$). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
+For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000$ mm). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
 
 Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). 
 
@@ -490,8 +490,16 @@ Here I used the MC simulations as well as the data of the $^{16}$N central run-1
 All the cuts on the three energy FoM quantities remove 0.40\% events from MC and 0.37\% events from data. These cuts were also used in the water phase analysis, described in the next chapter.
 
 \subsubsection{Energy Resolution and Systematics}
-The RSP energy reconstruction algorithm mentioned in Chapter 4 was applied on $^{16}$N MC simulations and data. 
-The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
+The energy reconstruction algorithms for the water phase (mentioned in Sect.~\ref{sect:energyFitter}, Chapter 4) was applied on the $^{16}$N MC simulations and data. The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[N16Run106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
+	\subfigure[N16Run106925]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
+	\caption[Reconstructed energy spectrum from the $^{16}$N central run-107055.]{Reconstructed energy spectrum from the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.
+		Reconstructed $^{16}$N energy spectrum for run-106925. Reconstructed $^{16}$N energy spectrum for run-106925. The source manipulation position is $\vec{X}_{source}=(-186.0,254.0,-4999.899)$ mm.}
+	\label{fig:N16_energy}	
+\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -502,37 +510,9 @@ The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}
-	\caption[Reconstructed $^{16}$N energy spectrum for run-106925.]{Reconstructed $^{16}$N energy spectrum for run-106925. The source manipulation position is $\vec{X}_{source}=(-186.0,254.0,-4999.899)$ mm.}
-	\label{N16_106925}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
 	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
 	\caption[Simulated $^{16}$N energy spectrum for different processes.]{Simulated $^{16}$N energy spectrum for different processes, extracted from $10^5$ MC simulations.}
 	\label{N16nhitsSimu}
-\end{figure}
-
-
-The energy spectrum of the photons is converted into an apparent electron energy spectrum\cite{waterunidoc}.
-
-By simulating mono-energetic electrons events with different energies,
-
-A 2D map that describes the relationship between the number of Cherenkov photons and electron energy is shown in Fig.~\ref{N16energyMap}.  
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=10cm]{2dmap_EvsNphoton.png}
-	\caption{Electron energy vs number of Cherenkov photons.}
-	\label{N16energyMap}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=10cm]{N16_reconE_107055.png}
-	\caption[Reconstructed energy spectrum from the $^{16}$N central run-107055.]{Reconstructed energy spectrum from the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.}
-	\label{N16energy}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -565,8 +545,15 @@ A 2D map that describes the relationship between the number of Cherenkov photons
 	\label{EvsBeta14}
 \end{figure}
 
-
 \subsubsection{Energy Resolutions}
+Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating mono-energetic electrons events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap} (a). By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source is converted into an effective or apparent electron energy spectrum ($P_{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of the $^{16}$N central run-107055.
+
+\begin{figure}[htbp]
+	\centering
+    \subfigure[]{\includegraphics[width=8cm]{2dmap_EvsNphoton.png}}
+	\subfigure[]{\includegraphics[width=8cm]{N16_run107055_apparentEnergy.pdf}}
+	\caption[Converting number of photons to effective electron spectrum.]{Converting number of photons to effective electron spectrum. (a): A 2D map of Electron energy vs number of Cherenkov photons. (b):	Effective electron spectrum of $^{16}$N central run-107055.\label{N16energyMap}}
+\end{figure}
 
 To obtain the energy reconstruction resolutions, the reconstructed energy spectrum $P(T_{eff})$ is fitted with the energy resolution function defined as\cite{waterunidoc}:
 
@@ -577,19 +564,15 @@ where the predicted apparent energy spectrum, $P_{source}(T_e)$, is convolved wi
 
 Before fitting the reconstructed energy spectrum with the energy resolution function, a few cuts were applied on both the data and MC: the position FoM cut $scaleLogL>10$ and the energy FoM cuts: $0<G_{test}<1.9$, $U_{test}<0.95$ and $-11<Z_{factor}<1$ mentioned in the previous sections were used; the cuts of NHit$>5$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used to remove instrumental backgrounds; a distance cut: $|\vec{X}_{fit}-\vec{X}_{src}|>700~mm$ was suggested by Refs.~\cite{leta,waterunidoc} to remove the shadow effects when the events are close to the source container; for the event reconstructed within the $700~mm$ distance, if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$, its energy will also be kept.
 
-A default fit range of [3.5, 8.8]~MeV was suggested by Ref.~\cite{waterunidoc} to remove poorly reconstructed events due to the trigger inefficiency.
-
-Fig.~\ref{fittedEnergyResol} shows the reconstructed energy spectrum fitted with the energy resolution functions, for both the MC and data.
+A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to remove poorly reconstructed events due to the trigger inefficiency. Fig.~\ref{fittedEnergyResol} shows the energy resolution function fitted with the reconstructed energy spectrum of the $^{16}$N central run-107055 data, after applying the cuts mentioned above.
 \begin{figure}
 	\centering
-	\subfigure[MC]{\includegraphics[width=8cm]{N16mc_energy_fitted_107055.pdf}}
-	\subfigure[data]{\includegraphics[width=8cm]{N16data_energy_fitted_107055.pdf}}
-	\caption[The reconstructed energy spectrum fitted with resolution function.]{The reconstructed energy spectrum fitted with resolution function (red). For the $^{16}$N central run-107055 MC (a) and data (b).}
+	\includegraphics[width=8cm]{N16data_energy_fitted_107055.png}
+	\caption[The reconstructed energy spectrum fitted with resolution function.]{The reconstructed energy spectrum of central run-107055 data, fitted with the resolution function (red).}
 	\label{fittedEnergyResol}
 \end{figure}
 
-
-Fig.~\ref{fig:EscaleVsR} and Fig.~\ref{fig:EresolVsR} show the energy scale ($\delta_E$) and energy resolution ($b$) as a function of the radius of the source manipulation positions, for both data and MC.
+For all the internal scans, Fig.~\ref{fig:EscaleVsR} and Fig.~\ref{fig:EresolVsR} show the energy scale ($\delta_E$) and energy resolution ($b$) as a function of the radius of the source manipulation positions. Both the data and MC are shown.
 \begin{figure}
 	\centering
     \includegraphics[width=12cm]{EscaleVsSrcRadius.pdf}

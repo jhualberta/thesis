@@ -3,7 +3,7 @@
 %\epigraph{In all experimental science the techniques for obtaining measurements are almost as important as the measurements themselves.}{--- \textup{J. D. Bernal}, \textit{The Social Function of Science}}
 
 \section{Overview}\label{sect:overview}
-The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/m^2/day$\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock and it ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/m^2/day$, corresponding to 6010 water equivalent meter (m.w.e).\cite{snop_jinst}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector.
+The SNO+ experiment is located at SNOLAB. This deep underground facility sits at Vale's Creighton mine in Sudbury, Ontario, Canada (coordinate: 46$^\circ$28'19.6"N, 81$^\circ$11'12.4"W). It provides an environment with extremely low cosmic ray backgrounds. At sea level, an average cosmic muon ($\mu$) flux rate is about $1.44\times 10^7~\mu/\mathrm{m^2/day}$\cite{muonflux}. Cosmic muons with high energies (mostly $\mathcal{O}$(GeV)) can induce spallation backgrounds, such as fast neutrons and lasting isotopes, which are harmful to the low background counting experiments\cite{beacom2017physics}. The SNOLAB has a $2092\pm6$ m flat overburden of rock and it ensures that cosmic muon ($\mu$) flux rate is as low as $0.286\pm0.009~\mu/\mathrm{m^2/day}$, corresponding to 6010 water equivalent meter (m.w.e)\cite{snop_jinst}, which means that every hour only about 1 $\mu$ passes through the SNO+ detector.
 
 The SNO+ detector is a refurbishment of the SNO detector. The SNO+ collaboration makes use of the SNO infrastructure and upgraded it to be a liquid scintillator detector. As shown in Fig.~\ref{snopdetector}, the detector is inside a barrel-like rock cavity with a diameter of 22 m at its waist and a height of 34 m. The cavity is filled with 7000 tonnes of ultrapure water (UPW) to provide buoyancy for the vessel, and shield radiation backgrounds from the environment, such as the cosmic rays and isotope decays from the rock. 
 
@@ -186,82 +186,28 @@ Fig.~\ref{absLength} shows absorption lengths.
 %the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
 %the transfer efficiencies
 
-This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau
-\cite{collaboration2020development}.
+This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau\cite{collaboration2020development}.
 
 
-The optical response of the liquid scintillator.
+% The optical response of the liquid scintillator.
 
-The time profiles of scintillator were obtained from bench-top measurement. 
-An empirical model consists $n$ ($n=3~or~4$) exponential decays  with a common rise time is used to describe the time profiles\cite{biller2020slow}.
+The time profiles of scintillator were obtained from bench-top measurement. An empirical model consists $n$ ($n$=3 or 4) exponential decays with a common rise time is used to describe the time profiles\cite{biller2020slow}.
 
-Default timing fitting functions:
-\[\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}
-\]
-
-while the rise time, $t_{rise} = 0.8~ns$ the timing parameters $t_i$,
-amplitude $a_i$ are determined by the bench-top measurements \cite{chicagoTiming}.
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{cc}
-		\toprule
-		PPO concentration (g/L) & $\mathcal{\epsilon}_{transfer}$(\%)	\\
-		\midrule
-		4   & $86.0\pm 0.8$\\
-		2  & $78.2\pm 1.5$\\
-		1  & $67.7\pm 2.3$\\
-		0.5 & $59.3\pm 3.2$\\
-		0.25 & $48.7\pm 5.0$\\
-		\bottomrule
-	\end{tabular}
-	\label{transfer_efficiency}
-\end{table}
-
-%T. Kaptanoglu. Measurements of light yield and timing of 0.5 g/L LAB+PPO. SNO+ Internal Document (docDB-5997-v1).
-%T. Kaptanoglu. Timing and light yield measurement of Te+DDA LAB+PPO. SNO+ Internal Document (docDB-4813-v4).
-%T. Kaptanoglu. Penn Light Yield Measurements of Te+DDA samples. SNO+ Internal Document (docDB-5124-v2).
-
-\begin{table}[ht]
-	\caption[]{scintillator $\alpha/\beta$ timing parameters\cite{tanner0p5,joshW1,chicagoTiming}.}	\label{scint_timing} 
-	\centering
-	\begin{tabular*}{165mm}{c@{\extracolsep{\fill}}*9c}
-		\toprule 
-		\multicolumn{1}{c}{scintillator} & \multicolumn{4}{c}{timing [ns]} & \multicolumn{4}{c}{amplitudes}\\
-		\cline{0-1}\cline{2-5} \cline{6-9}		
-		particles      & $t_1$ & $t_2$ & $t_3$ & $t_4$ & $a_1$ &$a_2$ &$a_3$&$a_4$\\
-		\midrule
-		\multicolumn{9}{l}{LAB + 2g/L PPO (default scintillator)}\\
-		$e^-$ & 4.88 & 15.4 & 66.0 & 400 & 0.665 & 0.218 & 0.083& 0.0346\\	
-		$\alpha$ & 4.79 & 18.4 & 92.0 & 900 & 0.427 & 0.313 & 0.157 & 0.1027\\
-		\hline
-		\multicolumn{9}{l}{LAB + 0.5g/L PPO (partial-fill phase)} \\
-		$e^-$& 7.19 & 24.81 & 269.87 & -- &0.553 &0.331 &0.116 & --\\
-		$\alpha$& 6.56 &23.82 &224.19&--& 0.574&0.311& 0.115&--\\
-		\hline
-		\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations DDA} \\
-		$e^-$ & 5.0& 12.1& 33.3& 499.0& 0.68& 0.21& 0.07& 0.04\\
-		$\alpha$ &3.8 &11.3& 65.3& 758.0& 0.48& 0.32& 0.14& 0.06 \\
-		\hline
-		\multicolumn{9}{l}{LAB + 2g/L PPO + 0.5\% molar concentrations Te+0.5\% molar DDA}\\
-		$e^-$ & 3.7 & 10.0 & 52.0  & 500.0 & 0.72 & 0.23 & 0.02 &0.03\\
-		$\alpha$ & 3.69 & 15.5 & 79.3  & 489.0 & 0.63 & 0.23 & 0.07 &0.07\\	
-		\bottomrule	
-	\end{tabular*}
-\end{table}
+A default time profile function is:
+\begin{equation}
+\sum^{n}_{i=1}A_i\cdot\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}},
+\end{equation}
+where the rise time ($t_{rise}$), timing parameters $t_i$, and amplitude $a_i$ of a certain liquid scintillator are determined by the measurement results. Fig.~\ref{fig:allTiming} plots the time profiles based on the measured parameters from the collaboration\cite{chicagoTiming,tanner0p5,tannerTeDDA,joshW1}. It shows the time profiles of 4 different liquid scintillators planned for SNO+, including the LAB + 0.5g/L PPO for the partial-fill phase, which will be discussed in Chapter 4; the LAB + 2g/L PPO for the scintillator phase; the LAB + 2g/L PPO + 0.5\% molar concentrations DDA, which will be a transit state before loading the Te; and the LAB + 2g/L PPO + 0.5\% molar concentrations Te+0.5\% molar DDA for the tellurium phase. For each liquid scintillator, their timing responses to the $\beta^-$ (solid lines) and $\alpha$-particles (dashed lines) are also shown. It shows that for the liquid scintillators with 2 g/L PPO, there are obvious differences between the $\alpha$ and $\beta^-$ timing, while for the 0.5 g/L PPO, it is not. So for the partial-fill phase, it is difficult to distinguish the $\alpha/\beta^-$ by time profiles.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{plotAllTiming.pdf}
 	\caption{Time profiles for liquid scintillators in different SNO+ phases.}
-	\label{allTiming}
+	\label{fig:allTiming}
 \end{figure}
 
 \subsubsection{Tellurium-loaded Liquid Scintillator}\label{sect:TeLS_SNO+}
-(** will be rephrased and shortened **)
-
-To load the $^{130}$Te into the liquid scintillator, an organo-metallic compound, called the ``Tellurium Butanediol (TeBD)'', is formed by 
-condensation (or called ``diolization'') reactions between telluric acid (TeA) and 1,2-butanediol (BD)\cite{Paton:2019kgy}. A tertiary amine: N, N-Dimethyldodecylamine (DDA) is added during the reaction to stabilize TeBD compounds and avoid any phase separation\cite{teLoadingPaper}. Fig.~\ref{fig:paton_te} shows initial stages of the process. This compound is then loaded into the liquid scintillator.
+To load the $^{130}$Te into the liquid scintillator, an organo-metallic compound, called the ``Tellurium Butanediol (TeBD)'', is formed by condensation (or called ``diolization'') reactions between telluric acid (TeA) and 1,2-butanediol (BD)\cite{Paton:2019kgy}. A tertiary amine: N, N-Dimethyldodecylamine (DDA) is added during the reaction to stabilize TeBD compounds and avoid any phase separation\cite{teLoadingPaper}. Fig.~\ref{fig:paton_te} shows initial stages of the process. This compound is then loaded into the liquid scintillator.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[height = 3cm]{TeBD_process.png}
@@ -312,7 +258,7 @@ a few efforts are aimed to develop high light yield Tellurium-loaded scintillato
 
 \subsubsection{Measurement Setup and Data Acquisition}
 
-We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, affecting the light yield for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples. Te-butanediol samples from both of the DDA and SOP synthesis procedures were prepared. They are referred to as TeDDA and TeSOP samples, respectively. These samples were further transferred into scintillation vials for the measurement. These vials have PTFE caps sealed on the top of the glass cylinders. The liquid level for each sample was kept at 30 mm to avoid air bubbles created by squeezing the vial cap into the liquid. The dimensions of the vial are shown in the left picture of Fig.~\ref{scintVial}.
+We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO mixture was distilled by heating and flowing with liquid nitrogen to remove humidity and oxygen, affecting the light yield for 48 hours. The distilled LAB-PPO was added into the original 16.5\% weight Te-butanediol samples to dilute into the 0.5\% TeLS samples. Two Te-butanediol samples synthesized from the DDA and SOP synthesis procedures (described in Ref.~\cite{teLoadingPaper}) were prepared and were tagged as the TeDDA and TeSOP samples, respectively. These samples were further transferred into scintillation vials for the measurement, as shown in the left picture of Fig.~\ref{scintVial}. The vials have PTFE caps sealed on the top of the glass cylinders to prevent the humidity exposure from the air. The liquid level for each sample was kept at 30 mm to avoid air bubbles and contamination created by squeezing the vial cap into the liquid.
 
 \begin{figure}[htbp]
 	\subfigure{
@@ -326,11 +272,10 @@ We first prepared LAB+2 g/L PPO by dissolving PPO into the pure LAB. The LAB-PPO
 			\includegraphics[width=6cm]{plasticHolder.png}
 		\end{minipage}
 	}
-	\caption[A vial of the test sample and the measurement setup.]{A vial of the test sample (left) and the measurement setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs were aligned to face to the scintillation vial from each side.}
-	\label{scintVial}
+	\caption[A vial of the test sample and the measurement setup.]{A vial of the test sample (left) and the measurement setup (right). Left: The samples were filled into scintillation vials. The dimensions are shown in the picture. Right: two PMTs were aligned to face to the scintillation vial from each side.\label{scintVial}}
 \end{figure}
 
-Two Hamamatsu R580 PMTs \cite{pmtR580} were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~12.  The plastic piece is cylindrical with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to pass through the vial from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable polylactide (PLA) filament and was machined by a 3D printing facility at the University of Alberta. The pictures of the pieces are shown in Fig.~\ref{scintVial}.
+Two Hamamatsu R580 PMTs (described by Ref.~\cite{pmtR580}) were used for detecting the light. The diameter of the PMT round surface is 38.71 mm. These PMTs were housed in stainless steel cylinders (PMT holders), set face to face, looking at the scintillation vial from each side. The PMTs and the vial were aligned by a plastic piece, as shown in the right picture in Fig.~\ref{scintVial}.  The plastic piece is cylindrical with a hole on the top to plug in the scintillation vial and a slot at the bottom to attach a radioactive source. Inside the cylinder, there is a button-shaped groove at the bottom to fix the vial plugged in and keep the vial upright. Also, a 2-mm-diameter hole was drilled at the bottom of the piece to allow the radiation rays to pass through the vial from the bottom. The surface inside was polished to reduce the absorption of the material to the photons. The piece is made of plant-based and biodegradable polylactide (PLA) filament and was machined by a 3D printing facility at the University of Alberta\footnote{Shengzhao Yu helped with the machining.}.
 
 \begin{figure}[htbp]
 	\centering	
@@ -378,7 +323,7 @@ In a coincidence time measurement, the event times of the events recorded by eac
 	\label{teLScoinCut}
 \end{figure}
 
-Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there is a zero peak caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT\cite{leo2012techniques}.  The peak on the right is the multiple p.e. peak, in our case, which is mainly caused by some scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peaks are removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
+Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and without coincidence time cut ($10~ns$) on the ADC channel 0.  Without the coincidence time cut, there is a zero peak caused by the pulses from random electronic noises or fluctuations of the digitized waveforms. The peak on the left is the single p.e. peak. It is mainly caused by some light sources which are weak enough that the photons only strike out at most one single p.e. inside the PMT\cite{leo2012techniques}. The peak on the right is the multiple p.e. peak, in our case, which is mainly caused by some scintillation photons produced by the γ-ray interacting with the LAB-PPO. In the coincidence time measurement mode, it only records the photons detected by the two PMTs almost simultaneously. Therefore, the zero peaks are removed while the single p.e. peak is suppressed. The multiple p.e. peak is consistent with the non-coincidence measurement. A threshold in energy can be set to count only the scintillation photons emitted from LAB-PPO. 
 
 \begin{figure}[htbp]
 	\centering	
@@ -420,7 +365,7 @@ To define the multiple p.e. region for the counting, the spectrum projected on e
 	\label{2DboxCut}
 \end{figure}
 
-Two dimensional spectrum of LAB-PPO with coincidence cut is shown in Fig.~\ref{2DboxCut}. A box cut is defined for multiple PE counting. 
+Two dimensional (2D) spectrum of LAB-PPO with coincidence cut is shown in Fig.~\ref{2DboxCut}. A box cut is defined for multiple PE counting. 
 
 Once the total number of photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
 
@@ -440,16 +385,14 @@ Once the total number of photons for a certain sample is counted, we can calcula
 	\end{tabular*}
 \end{table}
 
-Table.~\ref{lightyield1} shows the number of photons calculated by the charge weighted photon number method.
-
-Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In \cite{biller2017new}, a relative light yield of $\sim 0.65$ was reported.
+Table.~\ref{lightyield1} shows the number of photons calculated by the charge weighted photon number method. Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In \cite{biller2017new}, a relative light yield of $\sim 0.65$ was reported.
 
 \section{Electronics}
 In this section, the SNO+ electronics system is introduced. The system includes the trigger and readout systems. As mentioned in \ref{sect:overview}, the PMTs as photon sensors are the basic detection elements for the SNO+ detector. The signals from the PMTs are sent to the SNO+ electronics system, which records the PMT time and charges information and then transfers the digitized data to offsite computing systems for data analysis. These steps are detailed in the following.
 
 The photons created from particle interactions in the detector propagate to the PMT sphere and may hit a certain PMT and strike on its photo-cathode, which is a thin cesium bialkali film coated on the inner surface of PMT glass. The photocathode then produces a photo-electron (p.e.) through a photoelectric effect. The photocathode is set at ground voltage while the anode is at a high voltage ranging from $+1700$ to $+2100~V$ \cite{boger2000sudbury,dunger2018topological}. This forms electric fields inside the PMT. The p.e. is accelerated and focused by the electric field in the PMT and goes through the volume which is under vacuum until it reaches the region of a series of secondary emission electrodes, called dynodes. When the p.e. transfers its energy to the materials in dynodes, a number of secondary electrons escape and form a measurable current which is collected by a custom-made operating circuit (called ``PMT base'') at the anode\cite{hamamatsu2018photomultiplier}.
 
-The anode pulse produced from the PMT travels along 35 m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. 
+The anode pulse produced from the PMT travels along 35-m-long RG59/U type coaxial cable (with a resistance of 75 $\Omega$) to the front-end electronics which are set up on the deck above the detector. The coaxial cable also carries the high-voltage\cite{boger2000sudbury}. 
 
 To tackle with more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to each PMTs are grouped into bundles. Each bundle is connected to a Paddle Card, which are linked to a PMT Interface Card (PMTIC). The PMTIC supplies high voltages and receives signals from the PMTs. 32 channels (for 32 PMTs) in the PMTIC are plugged into a Front End Card (FEC) that processes, digitizes, and stores PMT signals. 19 crates tackle 9728 PMT channels in total, of which 32 channels are reserved for calibration inputs and labeled as FEC Diagnose (FECD) channels. These FECD channels are mainly used to tag calibration events. The triggered PMTs can be labeled by the logical channel number (lcn) using the map of the PMT to the crates and cards\cite{snop_jinst,stringer2019sensitivity}:
 \begin{equation}
@@ -500,7 +443,7 @@ The detector geometry is not perfectly symmetric due to the presence of the AV n
 	\label{fig: sms}
 \end{figure}
 
-The position of the deployed source can be evaluated by the manipulator system. In addition, six underwater cameras were mounted on the PSUP and work as a camera system to take photographs of the source and then triangulate its position. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
+The position of the deployed source in the detector can be evaluated by the manipulator system. In addition, a camera system with six underwater cameras already mounted on the PSUP can take photographs of the source and then triangulate its position. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.
 
 \subsection{The $^{16}$N Calibration Source}\label{sect:n16}
 The $^{16}$N calibration source is inherit from the SNO experiment and has been well-understood\cite{dragowsky1999sudbury,dragowsky200216n,hamer2001energy}. Fig.~\ref{n16pic} shows the geometry of the $^{16}$N source chamber. The chamber is a stainless steel cylinder mainly containing a small PMT and a gas decay chamber. The chamber was designed to confine the electrons from $^{16}$N decay within the chamber and let them be detected by the PMT inside\cite{dragowsky1999sudbury}.
@@ -523,7 +466,7 @@ The $^{16}$N isotope mainly decays through $\beta$-decay process: $^{16}$N$\to ^
 	\label{n16decay}
 \end{figure}
 
-A detailed study of using the $^{16}$N source for testing and estimating the reconstruction uncertainties will be shown in Chapter 5.
+Studies of using the $^{16}$N source for testing, optimizing and estimating the reconstructions will be shown in Chapter 4 and 5.
 
 \section{Monte Carlo Simulation and RAT Software}\label{sect:rat}
 The SNO+ collaboration uses a software package called the Reactor Analysis Tool (\texttt{RAT}) for Monte Carlo simulation as well as event-based analysis offline and online. To accomplish these two tasks, \texttt{RAT} integrates the \texttt{Geant4} simulation toolkit\cite{agostinelli2003geant4} and ROOT data analysis framework\cite{brunroot} for processing and analyzing data. This feature makes it easy to analyze Monte Carlo-generated events and real data in a same framework and data structure.

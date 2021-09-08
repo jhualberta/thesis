@@ -8,31 +8,27 @@ You're missing a field name---line 30 of file thesis.bib
  : %  title={Improved measurement of B 8 solar neutrinos with 1.5 kt{\textperiodcentered} y of Borexino exposure},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1324 of file thesis.bib
+Repeated entry---line 1237 of file thesis.bib
+ : @article{tanner0p5
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1326 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Warning--string name "hamamatsu" is undefined
---line 1423 of file thesis.bib
-I was expecting a `,' or a `}'---line 1423 of file thesis.bib
- :  author = hamamatsu 
- :                     Photonics,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1654 of file thesis.bib
+Repeated entry---line 1656 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1707 of file thesis.bib
+Repeated entry---line 1709 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Reallocated field_info (elt_size=4) to 10014 items from 5000.
-Repeated entry---line 1888 of file thesis.bib
+Repeated entry---line 1890 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "agostini2016search"
-Warning--I didn't find a database entry for "agostini2017discovery"
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in oxfordMeasurement
 Warning--empty year in directorReview
@@ -42,7 +38,6 @@ Warning--empty year in kalpanaWLS
 Warning--empty year in kalpanaWLS2
 Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
-Warning--empty journal in piperno2015dark
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in davini2016cno
@@ -53,15 +48,13 @@ Warning--empty year in markchen_bkg
 Warning--empty year in novikov
 Warning--empty year in chicagoTiming
 Warning--empty year in tanner0p5
+Warning--empty year in tannerTeDDA
 Warning--empty year in joshW1
 Warning--empty year in teLoadingPaper
 Warning--can't use both volume and number fields in biller2017new
 Warning--empty year in teDDA
 Warning--empty year in DDAvsSOP
-Warning--empty author in pmtR580
-Warning--empty title in pmtR580
 Warning--empty journal in pmtR580
-Warning--empty year in pmtR580
 Warning--empty journal in caen
 Warning--empty journal in compass
 Warning--empty journal in hamamatsu2018photomultiplier
@@ -113,45 +106,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 219 entries,
+You've used 218 entries,
             1876 wiz_defined-function locations,
-            1508 strings with 37874 characters,
-and the built_in function-call counts, 46660 in all, are:
-= -- 4031
-> -- 2639
+            1502 strings with 37698 characters,
+and the built_in function-call counts, 46329 in all, are:
+= -- 3999
+> -- 2634
 < -- 0
-+ -- 992
-- -- 773
-* -- 3332
-:= -- 7232
-add.period$ -- 276
-call.type$ -- 219
++ -- 990
+- -- 772
+* -- 3296
+:= -- 7195
+add.period$ -- 277
+call.type$ -- 218
 change.case$ -- 163
 chr.to.int$ -- 0
-cite$ -- 299
-duplicate$ -- 2536
-empty$ -- 4293
-format.name$ -- 773
-if$ -- 10999
+cite$ -- 295
+duplicate$ -- 2525
+empty$ -- 4256
+format.name$ -- 772
+if$ -- 10924
 int.to.chr$ -- 0
-int.to.str$ -- 219
-missing$ -- 219
-newline$ -- 720
+int.to.str$ -- 218
+missing$ -- 218
+newline$ -- 718
 num.names$ -- 210
-pop$ -- 815
+pop$ -- 810
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1271
+skip$ -- 1263
 stack$ -- 0
-substring$ -- 1199
-swap$ -- 834
+substring$ -- 1143
+swap$ -- 832
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 80
-while$ -- 334
-width$ -- 222
-write$ -- 1979
+warning$ -- 77
+while$ -- 329
+width$ -- 221
+write$ -- 1973
 (There were 6 error messages)
