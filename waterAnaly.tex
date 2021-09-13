@@ -650,7 +650,7 @@ To fit for the total $^8$B neutrino flux, the fit parameter used here is the flu
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{TOTALfluxFit.png}
-	\caption{A fit on the total flux. The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\caption[A fit on the total $^8$B flux.]{A fit on the total $^8$B flux. The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
 	\label{fig:TOTALfluxFit}
 \end{figure}
 
@@ -660,23 +660,23 @@ Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 1
 \Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.))\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC ES $PDF$, and then refit the data with the smeared $PDF$, new values of the flux ratio based on the smeared $PDF$ ($f'_s$) were found. These values were compared to the unmeasured one by $\Delta f_s =f'_s-f_s$ to obtain the systematics of the $f_s$. It finds that the position and $\beta_{14}$ smearing are negligible while the direction and energy smearing give more obvious uncertainties. These results are listed in Table.~\ref{table:smearingResults}. Fig.~\ref{smearESpdfs} shows the effects of smearing the energy scale, energy resolution and direction on the MC $PDF$. The original $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms. 
+Applying the same systematics in Table.~\ref{tab:solar_uncertainties} on the MC ES $PDF$, and then refit the data with the smeared $PDF$, new values of the flux ratio based on the smeared $PDF$ ($f'_s$) were found. These values were compared to the unmeasured one by $\Delta f_s =f'_s-f_s$ to obtain the systematics of the $f_s$. It finds that the position and $\beta_{14}$ smearing are negligible while the direction and energy smearing give more obvious uncertainties. These results are listed in Table.~\ref{tab:smearingResults}. Fig.~\ref{smearESpdfs} shows the effects of smearing the energy scale, energy resolution and direction on the MC $PDF$. The original $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms. 
 
 \begin{table}[ht]
 	\centering
 	\caption{Systematics for the fitted flux scale $f_s$.}
-	\label{table:smearingResults}
+	\label{tab:smearingResults}
 	\begin{tabular*}{80mm}{c@{\extracolsep{\fill}}cc}
 		\toprule
 		Systematics & $\Delta f_s$ (+/-)\\
 		\hline
 		x shift & $+0.000003/-0.000045$\\	
-		y shift & $-0.00005/-0.0001386$\\
+		y shift & $+0.000009/-0.000056$\\
 		z shift & $+0.0001/-0.000138$\\
 		position scale & $+0.00132/-0.00115$\\\	
 		$\delta_\theta$  &$+0.01888/-0.00210$\\
 		$E_{scale}~(\Delta_{\delta_E})$ & $+0.01466/-0.01395$\\
-		$E_{resol}~(\Delta_b)$ & $+0.00143/-0.00143$ \\
+		$E_{resol}~(\Delta_b)$ & $+0.039916/-0.039916$ \\
 		$\beta_{14}$ shifts & $+0.000178/-0.000558$\\
 		\bottomrule
 	\end{tabular*}
@@ -706,11 +706,9 @@ Applying the same systematics in Table.~\ref{table:ReconSystematics} on the MC E
 	\label{smearESpdfs}
 \end{figure}   
 
-
-
-Using the quadrature calculations, the total systematics is expected to be: ${f_s}^{+0.024}_{-0.014}$. Adding this systematics, the total flux is:
+Using the quadrature calculations, the total systematics is expected to be: ${f_s}^{+0.0465}_{-0.0424}$. Adding this systematics, the total flux is:
 \begin{equation}
-\Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.08}(syst.))\times 10^6~cm^{-2}s^{-1}.
+\Phi^{total}_{fit}(\mathcal{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.25}_{-0.23}(syst.))\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
 To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=322.69)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f_s=0.369\pm 0.036$ (corresponding to $N_{sig}=119.07\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.0704.
@@ -722,14 +720,33 @@ To fit for the $^8$B flux corresponding to an observed flux of ES interactions, 
 	\label{fig:ESfluxFit}
 \end{figure}
 
-By using the same procedure to evaluate the systematics of the elastic scattering, it gives ${f_s}^{+0.011}_{-0.006}$.
+By using the same procedure to evaluate the systematics of the elastic scattering, it gives ${f_s}^{+0.0218}_{-0.0201}$.
 
 Thus, for the nominal $^8$B solar neutrino flux, the ES flux is evaluated as:
 \begin{equation}
-\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.06}_{-0.03} (syst.)\times 10^6~cm^{-2}s^{-1}.
+\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.12}_{-0.11} (syst.)\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-Compared to the Super-K measurement (mentioned in Sect.~\ref{sect:superKsolarnu}, Chapter 2): $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times 10^6~cm^{-2}s^{-1}$\cite{abe2016solar} and the SNO+ 2018 published results: $\Phi_{ES}=(2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.))\times 10^6~cm^{-2}s^{-1}$\cite{anderson2019measurement}.
+Compared to the SNO+ 2018 published results: $\Phi_{ES}=(2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.))\times \mathrm{10^6~cm^{-2}s^{-1}}$\cite{anderson2019measurement} and the Super-K measurement (mentioned in Sect.~\ref{sect:superKsolarnu}, Chapter 2): $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times \mathrm{10^6~cm^{-2}s^{-1}}$\cite{abe2016solar}, the results given here is consistent with these two published results, if taking the uncertainties into account. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{ESfluxCompare.pdf}
+	\caption[A comparison of the ES flux measured recently by various experiments.]{A comparison of the ES fluxes measured recently by various experiments. The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors.}
+	\label{fig:ESfluxCompare}
+\end{figure}
+
+The average value $\hat \theta$ and uncertainty $\sigma_{\hat\theta}$ from various experiments are calculated by\cite{behnke2013data}:
+\begin{equation}
+\hat \theta = \sum_{i=1}^{N} \left(\frac{x_i}{\sigma_i^2}\right)\Biggm/\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
+\end{equation}
+\begin{equation}
+\sigma_{\hat\theta} = \sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
+\end{equation}
+where $x_i$ is the measured $\Phi_{ES}$ value from each experiment, and $\sigma_i$ is taken the largest total uncertainties from each experiment.
+
+If not including the value from this work, the average result is $(2.338 \pm 0.02868)\times  10^6~\mathrm{cm^{-2}s^{-1}}$. After including this work, the average result is  
+$(2.334\pm0.02847)\times 10^6~\mathrm{cm^{-2}s^{-1}}$.
 
 %\begin{figure}[!htb]
 %	\centering
@@ -751,6 +768,3 @@ Here I used the background types descried in the Table.~\ref{table:mixed_MC}, wh
 For the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic shape of the distribution can be investigated to describe the backgrounds more properly.
 
 For the whole period of data, I used the same cuts to remove the backgrounds, while the background level can vary over time and thus require different cuts for different time periods. A more detailed description of the backgrounds over time can make the results more accurate. 
-
-%fractions
-%efficiency

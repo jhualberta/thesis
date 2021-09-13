@@ -616,7 +616,8 @@ The measured parameters are listed in Table.~\ref{tab:measureAmplitude} and Tabl
 		\end{tabular*}
 	}
 \end{table}
-These Oxford-measured  time profiles were convolved with the PMT time response profile mentioned in Sect.~\ref{sect:waterVertex}, Fig.~\ref{fig:MPW_timingPDF}, to make the timing $PDF$ for the partial-fill vertex reconstruction. 
+
+These Oxford-measured time profiles were convolved with the PMT time response profile mentioned in Sect.~\ref{sect:waterVertex}, Fig.~\ref{fig:MPW_timingPDF}, to make the timing $PDF$ for the partial-fill vertex reconstruction. 
 \begin{equation}\label{eq:OxfordTimingPDF}
 f(t)_{PDF} = f_{optics}(t)\otimes f_{PMT~response}(t-t'),
 \end{equation}
@@ -867,12 +868,7 @@ Since the 2.5-MeV event is the major interested signal in the scintillator and t
 			\includegraphics[width=6cm]{fullScint_2p5_zbias.png}
 		\end{minipage}
 	}
-	%	\subfigure[$(\vec{X}_{fit}-\vec{X}_{mc})\cdot \hat{X}_{mc}$]{ 
-	%	\begin{minipage}[b]{0.38\textwidth}
-	%		\centering
-	%		\includegraphics[width=6cm]{fullscint_2p5MeV_radialBias.png}
-	%	\end{minipage}
-	%    }
+	%\includegraphics[width=6cm]{fullscint_2p5MeV_radialBias.png}
 	\caption[The fit position biases projected on the x, y and z axes, for 2.5-MeV $e^-$ in full scintillator simulations.]{The fit position biases projected on the x, y and z axes, for 2.5-MeV $e^-$ in full scintillator simulations. The distributions were fitted with Gaussian functions.\label{fig:scintIsoFill_2p5MeV}}
 \end{figure}
 
@@ -957,17 +953,17 @@ The SNO+ Antineutrino working group developed three figure of merit (FoM) quanti
 \subsection{Energy Reconstruction in Partial-fill Phase}
 Up till this thesis writing, there is no proper energy fitter for the partial-fill phase. I attempted two methods for energy reconstruction in the partial-fill phase: the NHits-scale method, based on Ref.~\cite{partialEnergy} and the NHits-ratio method, based on Ref.~\cite{partialEnergyYang}. Both of them use look up tables produced by simulations of $e^-$ events in the partial-fill geometry, then compare with the case in the full-fill geometry and scale the energy. Both of these methods need further efforts to produce well-defined results\cite{jiePartialEnergy,jiePartialEnergyNhitRatio}.
 
-In the NHits-scale method, for an $e^-$ event at (0,0,z) with a fixed energy (the 1 MeV and 2.5 MeV were tested), a scaling factor between its NHits value in the partial-fill (NHits$_{partial}$) with a water level $Z_{water}$ set in the simulation and the NHits value in the full-fill (NHits$_{full}$) is found by $scale = (NHits_{partial} - NHits_{full}/NHits_{full} = 0.33\cdot a_0\cdot (Z_{water}+6005)^{2.76}$, where the last term is an empirical function and the fit parameter $a_0$ depends on the different event z positions in the simulations. Then the energy in the partial-fill is found by $E_{partial} = E/(1 + scaling)$\cite{partialEnergy, jiePartialEnergy}.
+In the NHits-scale method, for an $e^-$ event at (0,0,z) with a fixed energy (the 1 MeV and 2.5 MeV were tested), a scaling factor between its NHits value in the partial-fill (NHits$_{partial}$) with a water level $Z_{water}$ set in the simulation and the NHits value in the full-fill (NHits$_{full}$) is found by $scale = (\mathrm{NHits_{partial} - NHits_{full})/NHits_{full}} = 0.33\cdot a_0\cdot (Z_{water}+6005)^{2.76}$, where the last term is an empirical function and the fit parameter $a_0$ depends on the different event z positions in the simulations. Then the energy in the partial-fill is found by $E_{partial} = E/(1 + scaling)$\cite{partialEnergy, jiePartialEnergy}.
  
-In the NHits-ratio method, the NHits of an $e^-$ event at (0,0,0) mm in the full scintillator geometry was used as a reference ($NHits_{ref}$). By simulating 1 to 10-MeV (with a 1-MeV step) $e^-$ events in the full-fill geometry with 0.5 g/L PPO, and fitting the NHits to the energies, a converting function between the energy and NHits is found by: $E_{full} = f(NHits)=0.051+0.003\cdot NHits+2.49\times10^{-7}\cdot NHits$\cite{jiePartialEnergyNhitRatio}.
+In the NHits-ratio method, the NHits of an $e^-$ event at (0,0,0) mm in the full scintillator geometry was used as a reference (NHits$_{ref}$). By simulating 1 to 10-MeV (with a 1-MeV step) $e^-$ events in the full-fill geometry with 0.5 g/L PPO, and fitting the NHits to the energies, a converting function between the energy and NHits is found by: $E_{full} = f(\mathrm{NHits})=0.051+0.003\cdot NHits+2.49\times10^{-7}\cdot \mathrm{NHits}$\cite{jiePartialEnergyNhitRatio}.
 
-Then for the partial-fill geometry with a fixed $Z_{water}$, the $e^-$ events were simulated at different $(\rho=\sqrt{x^2+y^2},z)$ positions in the AV, where $\rho$ goes from 0 to 5500 mm by a step of 500 mm and $z$ goes from -5500 to 5500 by a step of 500 mm to cover all the interested AV volume. The value of scaled NHits for an event at $(\rho_0,z_0)$ is found by: $NHits' = NHits_{partial}/(NHits(\rho_0,z_0)/NHits_{ref})$.
-Finally, the partial energy is found by $E_{partial} = f(NHits')$\cite{jiePartialEnergyNhitRatio}.
+Then for the partial-fill geometry with a fixed $Z_{water}$, the $e^-$ events were simulated at different $(\rho=\sqrt{x^2+y^2},z)$ positions in the AV, where $\rho$ goes from 0 to 5500 mm by a step of 500 mm and $z$ goes from -5500 to 5500 by a step of 500 mm to cover all the interested AV volume. The value of scaled NHits for an event at $(\rho_0,z_0)$ is found by: $\mathrm{NHits' = NHits_{partial}/(NHits(\rho_0,z_0)/NHits_{ref})}$.
+Finally, the partial energy is found by $E_{partial} = f(\mathrm{NHits'})$\cite{jiePartialEnergyNhitRatio}.
 
 \section{Deep Learning}
 Nowadays, the vast amount of data available to particle experiments make it feasible to implement machine learning and deep learning methods for data analysis. At the time of this writing, a deep learning framework is being developed\cite{markMachineLearning,markNeuralTalk,markNeuralNetwork}. This method investigates the relation between the hit PMT distributions and the event reconstruction, currently for the position and direction. It trains neural networks based on the MC simulation datasets (with $\mathcal{O}(10^6)$ events) as well as the calibration datasets to predict the event position and direction\cite{markNeuralTalk}. A few physics-based loss functions, such as the loss function checking the $t_{res}$, can be further included to improve the reconstruction performance\cite{markNeuralTalk}. 
 
-Once the neural networks are trained, the reconstruction speed is expected to be 100 to 1000 times quicker than the traditional likelihood-fit method running on the CPU (Central Processing Unit). Since the deep learning method can also utilize the computing power of the GPU (Graphics Processing Unit), it is expected to be $10^4$ times quicker\cite{markNeuralTalk,markNeuralNetwork}. Such a fast speed reconstruction will be promising to be applied in the scintillator phase, where it is time-consuming for reconstructing the higher $\mathrm{NHits}$ events. The deep learning framework is also expected to aid the data analysis.
+Once the neural networks are trained, the reconstruction speed is expected to be 100 to 1000 times quicker than the traditional likelihood-fit method running on the CPU (Central Processing Unit). Since the deep learning method can also utilize the computing power of the GPU (Graphics Processing Unit), it is expected to be $10^4$ times quicker\cite{markNeuralTalk,markNeuralNetwork}. Such a fast speed reconstruction will be promising to be applied in the scintillator phase, where it is time-consuming for reconstructing the higher NHits events. The deep learning framework is also expected to aid the data analysis.
 
 \section{Conclusion}
 The Multi-path Fitter framework of event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the \texttt{MP water fitter} works as an alternative fitter to provide additional reconstruction information for the water data, and it gives proper position and direction resolutions for the water analysis. The \texttt{MP scint-water fitter} works as the prime fitter for the SNO+ partial-fill phase.

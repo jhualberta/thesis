@@ -294,7 +294,7 @@ $r^+=(1+\delta^+_r/100)\cdot r$ and $r^-=(1+\delta^-_r/100)\cdot r$.
 \subsubsection{Direction Resolution}
 For the reconstructed events in the $^{16}$N calibration, assuming a $\gamma$ particle emitted from the source and interacts with $e^-$ at the reconstructed position, the ``true'' direction of an event is defined as the direction pointing from the source manipulation position to the reconstructed position: $\vec{u}_{true} = (\vec{X}_{fit}-\vec{X}_{src})/|\vec{X}_{fit}-\vec{X}_{src}|$. The angle $\theta$ is the displacement between the ``true'' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
 
-The distribution of the $\cos\theta$ was fitted with the direction resolution function mentioned in Sect.~\ref{sect:directResol}, Eqn.~\ref{eq:directResol}. Before the fitting, a few cuts relating to the position and energy reconstruction were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut: $scaleLogL>10$ was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ analysis to remove the instrumental backgrounds and poor reconstructions for the events close to the source container or far away from the source. To remove the instrumental backgrounds, the cuts of $E_{fit}>3.5~MeV$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut of $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300~mm$ was applied. For the internal scans, a radius cut $R'<5850~mm$ was also applied. This radial cut was not applied on the external and neck scans\cite{waterunidoc}.
+The distribution of the $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}, Chapter 4. Before the fitting, a few cuts relating to the position and energy reconstruction were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut: $scaleLogL>10$ was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ analysis to remove the instrumental backgrounds and poor reconstructions for the events close to the source container or far away from the source. To remove the instrumental backgrounds, the cuts of $E_{fit}>3.5$~MeV, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut of $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm was applied. For the internal scans, a radius cut $R'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans\cite{waterunidoc}.
 
 Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions in a fit range of [0.3,1] after the cuts mentioned. 
 \begin{figure}
@@ -316,25 +316,13 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 	\texttt{RAT} MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
 		\bottomrule
 	\end{tabular}
-	\label{angularResolValuesUpdated}
+	\label{tab:angularResolValuesUpdated}
 \end{table}
 
-From the Eqn.~\ref{eq:directResol} in Sect.~\ref{sect:directResol}, 
-
-the $^{16}$N results give
-%To describe the $\cos\theta_e$ distribution, the angles that contain 50\%, 80\%
-%and 90\% of the reconstructed events, the $\cos\theta_{0.5}$, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ can also be used. Their values are solved numerically by the equation \ref{eq:cosTheta_e} below (take $\cos\theta_{0.5}$ as an example):
-%
-%\begin{equation}\label{eq:cosTheta_e}
-%\frac{\int_{\cos\theta_{0.5}}^1 P(\cos\theta_e) d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) d\cos\theta_e} = 50\%,
-%\end{equation}
-%
-%where $P(\cos\theta_e)$ is the direction resolution function with the best fitted parameters. If these values are large, the $\cos\theta_e$ distribution is sharper and more peaked around +1.
-
-From the results above, the direction resolutions of the MC are always better than the data due to the ideal situations in the simulations. The \texttt{MPW} and the \texttt{RAT} reconstructions are similar, while the $\beta_M$ values of the \texttt{MPW fitter} are about 10\% higher than the \texttt{RAT} in both of the data and the MC. This indicates the direction resolution of the \texttt{MPW fitter} is slightly better than the \texttt{RAT}.
+The resolution parameters are shown in Table.~\ref{tab:angularResolValuesUpdated}. It shows that the direction resolutions of the MC are always better than the data due to the ideal situations in the simulations. The reconstruction performance of the \texttt{MPW fitter} and the \texttt{RAT water fitter} are similar, while the $\beta_M$ values of the \texttt{MPW} are about 10\% higher than the \texttt{RAT} in both of the data and the MC. This indicates the direction resolution of the \texttt{MPW} is slightly better than the \texttt{RAT}.
 
 \subsubsection{Direction Systematics}
-For all the internal $^{16}$N scans, the cuts mentioned in the last section were applied on both the data and simulations. Similar to the evaluation of the position uncertainties, the angular resolution function was first fitted with three free parameters: $\alpha_M$, $\beta_S$, $\beta_M$. To simplify the calculation in propagating systematics, an average value of the fitted $\alpha_M$ was calculated from all the internal scans (except the three neck scans), as 0.613 for data and 0.585 for MC. With the fixed values of $\alpha_M$, both the data and the MC were refit with $\beta_S$ and $\beta_M$ only. The default fit range is [0.3,1], while for some scans close to the AV, the events can be few after the cuts. For these situations, to ensure more than 5000 events were fitted, the fit range was enlarged by moving a 0.1 step to the left until the left value reaches -0.5: $[0.3-0.1\cdot step,1]$.
+For all the internal $^{16}$N scans, the cuts mentioned in the last section were applied on both the data and simulations. Similar to the evaluation of the position uncertainties, the angular resolution function was first fitted with three free parameters: $\alpha_M$, $\beta_S$, and $\beta_M$. To simplify the calculation in propagating systematics, an average value of the fitted $\alpha_M$ was calculated from all the internal scans (except the three neck scans), as 0.613 for data and 0.585 for MC. With the fixed values of $\alpha_M$, both the data and the MC were refit with $\beta_S$ and $\beta_M$ only. The default fit range is [0.3,1], while for some scans close to the AV, the events can be few after the cuts. For these situations, to ensure more than 5000 events were fitted, the fit range was enlarged by moving a 0.1 step to the left until the left value reaches -0.5: $[0.3-0.1\cdot step,1]$.
 
 Fig.~\ref{angularResolScan} shows the results of the fitted $\beta_M$ and $\beta_S$ values for the internal $^{16}$N x, y and z-axes scans. It shows that for most of the scans, the MC results are better than the data. The three Z scans in the neck have the worst direction resolutions due to the asymmetry of the detector geometry. 
 
@@ -487,18 +475,17 @@ Here I used the MC simulations as well as the data of the $^{16}$N central run-1
 	
 \end{itemize}
 
-All the cuts on the three energy FoM quantities remove 0.40\% events from MC and 0.37\% events from data. These cuts were also used in the water phase analysis, described in the next chapter.
+All the cuts on the three energy FoM quantities remove 0.40\% events from MC and 0.37\% events from data. These cuts were also used in the water phase analysis in Chapter 6.
 
 \subsubsection{Energy Resolution and Systematics}
-The energy reconstruction algorithms for the water phase (mentioned in Sect.~\ref{sect:energyFitter}, Chapter 4) was applied on the $^{16}$N MC simulations and data. The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{N16energy}. The results from the MC and the data are compared.
+The energy reconstruction algorithms for the water phase (mentioned in Sect.~\ref{sect:energyFitter}, Chapter 4) was applied on the $^{16}$N MC simulations and data. The reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}. The results from the MC and the data are compared.
 
 \begin{figure}[htbp]
 	\centering
-	\subfigure[N16Run106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
-	\subfigure[N16Run106925]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
-	\caption[Reconstructed energy spectrum from the $^{16}$N central run-107055.]{Reconstructed energy spectrum from the $^{16}$N central run-107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.
-		Reconstructed $^{16}$N energy spectrum for run-106925. Reconstructed $^{16}$N energy spectrum for run-106925. The source manipulation position is $\vec{X}_{source}=(-186.0,254.0,-4999.899)$ mm.}
-	\label{fig:N16_energy}	
+	\subfigure[$^{16}$N run-106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
+	\subfigure[$^{16}$N run-107055]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
+	\caption[Reconstructed energy spectrum from the $^{16}$N central run-106925 and 107055.]{Reconstructed energy spectrum from the $^{16}$N central run-106925 (top) and 107055 (bottom). For the run-106925 (top), the reconstructed data (black dots) are compared to the MC (blue line), both are \texttt{MPW fitter} results; for the run-107055 (bottom), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.}
+	\label{fig:N16energy}	
 \end{figure}
 
 \begin{figure}[htbp]
@@ -596,7 +583,7 @@ where $\delta=b$ or $\delta_E$ and $\Delta_b=\sqrt{\Delta^2_{b}}$ since the reso
 
 Taking the $^{16}$N scan runs within $r<6~m$, the averaged uncertainties are: $\overline{\Delta_{\delta_E}}=0.0107$ and $\overline{\Delta_{b}}=0.0369$. For the $^{16}$N scan runs within $r<5.5~m$, which is the fiducial volume of the solar neutrino analysis mentioned in Chapter 6, $\overline{\Delta_{\delta_E}}=0.0100$ and $\overline{\Delta_{b}}=0.0320$.
 
-To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E})\cdot E_{fit}$, where the "+" sign is for scaling up the energy while "-" for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run-107055. It is obvious that scaling up the $E_{fit}$ widen the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
+To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E})\cdot E_{fit}$, where the ``+" sign is for scaling up the energy while ``-" for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run-107055. It is obvious that scaling up the $E_{fit}$ widen the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEscale_N16.pdf}
