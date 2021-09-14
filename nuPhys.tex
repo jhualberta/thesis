@@ -23,17 +23,29 @@ Currently, we know that neutrinos have three leptonic flavors, and they only par
 
 The weak interactions are described in the SM by fermions exchanging $W^{\pm}$ and $Z^0$ bosons known as weak force carriers.
 
-Neutrino interactions mainly include the neutrino-electron scatterings, hadron decays and neutrino-nucleon scatterings\cite{giunti2007fundamentals}. The next section mainly focuses on the low-energy ($\mathcal{O}$(MeV)) neutrino-electron ($\nu-e^-$) elastic scatting which is relevant to the detection of solar neutrinos.
+In the SM, only the left-handed neutrino and right-handed antineutrino can take part in the weak interaction.
 
-\section{Neutrino Electron Elastic Scattering}\label{sect:nuInteraction}
-The $\nu-e^-$ elastic scattering is a pure leptonic process and can be precisely described by the electroweak theory in the SM. 
+
+
+lepton number conservation
+
+Neutrino interactions mainly include the neutrino-electron scatterings, hadron decays and neutrino-nucleon scatterings\cite{giunti2007fundamentals}. The next section mainly focuses on the low-energy ($\mathcal{O}$(MeV)) neutrino-electron ($\nu e^-$) elastic scattering, which plays an important role in the detection of solar neutrinos.
+
+\section{Neutrino-Electron Elastic Scattering}\label{sect:nuInteraction}
+The $\nu e^-$ elastic scattering: $\nu_x + e^{-}\to\nu_x+e^-$ is a pure leptonic process and can be precisely described by the electroweak theory in the SM. The amplitude for this process is contributed by both neutral and charged current interactions. Fig.~\ref{fig:feynman-es} shows the tree-level Feynman diagrams.
+
+The charged-current interaction is mediated by the charged vector bosons $W^\pm$, while the neutral-current is mediated by the neutral vector boson $Z^0$.
+
+is sensitive to all neutrino flavors, but $\nu_e$ has channels of (a) and (b)
+
+
 
 
 \begin{equation}
 \mathcal{L}_{eff,int}=-\sqrt{2}G\{[\frac{1}{2}\bar{\nu}_e\gamma^\mu(1-\gamma_5)e][\bar{e}\gamma_\mu(1-\gamma_5)\nu_e]+()\},
 \end{equation}
 
-Fig.~\ref{fig:feynman-es}
+
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[t]{0.45\textwidth}{(a)}
@@ -52,13 +64,7 @@ Fig.~\ref{fig:feynman-es}
 	\label{fig:feynman-es}
 \end{figure}
 
-The charged-current interaction is mediated by the charged vector bosons $W^\pm$, while the neutral-current is mediated by the neutral vector boson $Z^0$.
 
-neutrino-electron elastic scattering ($\nu e^-$ ES)
-\begin{equation}
-\nu_x + e^{-}\to\nu_x+e^-,
-\end{equation}
-is sensitive to all neutrino flavors, but $\nu_e$ has channels of (a) and (b)
 
 the cross-section is 6.5 times larger than the $\nu_{\mu,\tau}$.
 
@@ -66,7 +72,7 @@ the cross-section is 6.5 times larger than the $\nu_{\mu,\tau}$.
 In a particle detector, the electron is usually from the atom of detection medium. 
 
 \begin{equation}
-\frac{d\sigma}{dT_e}=\frac{2G_F^2m_e}{\pi}[g_L^2+g_R^2\left(1-\frac{T_e}{E_\nu}\right)^2-g_Lg_R\frac{m_eT_e}{E_\nu^2}],
+\frac{d\sigma}{dT_e}(E_\nu,T_e)=\frac{2G_F^2m^2_e}{\pi}\left[g_L^2+g_R^2\left(1-\frac{T_e}{E_\nu}\right)^2-g_Lg_R\frac{m_eT_e}{E_\nu^2}\right],
 \end{equation}
 where the coupling parameters $g_L=(\sin^2\theta_W\pm\frac{1}{2})$, $g_R=\sin^2\theta_W$, $\sin^2\theta_W=0.23$.
 
@@ -76,13 +82,19 @@ T_e = \frac{2m_eE_\nu^2\cos\theta}{(m_e+E_\nu)^2-E_\nu^2\cos^2\theta},
 \end{equation}
 where the scattering angle $\theta$ is between the incoming neutrino direction and the outgoing electron direction.
 
-The maximum energy of the recoil electron is: $T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$
-the cross-section is $\sigma(\nu_e+e^-\to \nu_e+e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
+The maximum energy of the recoil electron is: $T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$, and
+the cross-section is $\sigma^{ES}(\nu_e e^-)=9.52\times 10^{-44}(E_\nu/10~MeV)~cm^2$
 the expected solar neutrino rate is 
 $R=A\int_{T_{thresh}}^{T_{max}}\frac{d\sigma}{dE}\frac{dN}{dE_\nu}dE_\nu$.
 
+The ratio of $\sigma^{ES}(\nu_e e^-)$ to $\sigma^{ES}(\nu_x e^-)$ is:
+\begin{equation}
+\frac{\sigma^{ES}(\nu_e e^-)}{\sigma^{ES}(\nu_x e^-)} = \frac{3(1+g_L)^2+(g_R)^2}{3(g_L)^2+(g_R)^2} = 
+\end{equation}
+
+
 The direction of the scattered electron is correlated with the direction of the incident neutrino. 
-$\nu-e^-$ elastic scattering: 
+$\nu e^-$ elastic scattering: 
 \begin{equation}\label{eq:costhetaSun}
 \cos\theta_{sun}=\sqrt{\frac{T_e(m_e+E_\nu)^2}{2m_eE_\nu^2+T_eE_\nu^2}},
 \end{equation}

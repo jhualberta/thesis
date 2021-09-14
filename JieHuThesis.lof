@@ -1,13 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Feynman diagrams for the elastic scattering interaction in different channels at tree level.}}{8}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A diagram of the $\nu e^-$ elastic scattering in the lab frame, modified from Ref.\nobreakspace {}\cite {giunti2007fundamentals}. }}{9}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A diagram of the $\nu e^-$ elastic scattering in the lab frame, modified from Ref.\nobreakspace {}\cite {giunti2007fundamentals}. }}{10}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces All reactions in the three PP chains.}}{16}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces All reactions in the CNO bicycle.}}{16}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Solar neutrino energy spectrum.}}{18}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Feynman diagrams for $2\nu \beta \beta $ and $0\nu \beta \beta $.}}{23}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay.}}{24}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Natural abundance vs. Q-values for different $2\nu \beta \beta $ isotopes, from Ref.\nobreakspace {}\cite {snop_nim_draft}.}}{25}{figure.2.8}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay.}}{25}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Natural abundance vs. Q-values for different $2\nu \beta \beta $ isotopes, from Ref.\nobreakspace {}\cite {snop_nim_draft}.}}{26}{figure.2.8}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The SNO+ detector labeled with main structures.}}{29}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces A Jablonski diagram for the organic scintillator.}}{34}{figure.3.2}
@@ -183,7 +183,6 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale. Blue dotted for smearing down and red dashed for smearing up.}}}{172}{figure.6.24}
 \contentsline {figure}{\numberline {6.25}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{173}{figure.6.25}
 \contentsline {figure}{\numberline {6.26}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{174}{figure.6.26}
-\contentsline {figure}{\numberline {6.27}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after simple cuts).}}{174}{figure.6.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{184}{figure.A.1}

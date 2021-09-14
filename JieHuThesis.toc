@@ -6,16 +6,16 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Neutrinos}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Neutrino Electron Elastic Scattering}{8}{section.2.2}
+\contentsline {section}{\numberline {2.2}Neutrino-Electron Elastic Scattering}{8}{section.2.2}
 \contentsline {section}{\numberline {2.3}Neutrino Flavor Transformation}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Vacuum Oscillation}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Matter Effect}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Matter Effect}{14}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Solar Neutrinos}{15}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Kamiokande and Super-Kamiokande}{18}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}SNO}{19}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}Combined Analysis of Solar and Reactor Measurements}{20}{subsection.2.3.6}
 \contentsline {subsection}{\numberline {2.3.7}Borexino}{20}{subsection.2.3.7}
-\contentsline {subsection}{\numberline {2.3.8}Future Solar Neutrino Experiments}{21}{subsection.2.3.8}
+\contentsline {subsection}{\numberline {2.3.8}More Studies on Solar Neutrino and Future Experiments}{21}{subsection.2.3.8}
 \contentsline {section}{\numberline {2.4}Neutrinoless Double Beta Decay}{22}{section.2.4}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{27}{section.3.1}
@@ -102,7 +102,7 @@
 \contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{166}{subsubsection.6.3.4.3}
 \contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{167}{subsubsection.6.3.4.4}
 \contentsline {subsubsection}{\numberline {6.3.4.5}Evaluating $^8$B Solar Neutrino Flux}{168}{subsubsection.6.3.4.5}
-\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{175}{subsubsection.6.3.4.6}
+\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{174}{subsubsection.6.3.4.6}
 \contentsline {chapter}{\numberline {7}Conclusions}{176}{chapter.7}
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{177}{appendix.A}
 \contentsline {section}{\numberline {A.1}Create a Random Vertex}{177}{section.A.1}
