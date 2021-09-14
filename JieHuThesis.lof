@@ -143,6 +143,7 @@
 \contentsline {figure}{\numberline {5.28}{\ignorespaces Fitted energy resolutions ($b$) as a function of the source radial manipulation position.}}{144}{figure.5.28}
 \contentsline {figure}{\numberline {5.29}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run-107055.}}{145}{figure.5.29}
 \contentsline {figure}{\numberline {5.30}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run-107055.}}{146}{figure.5.30}
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Figure used before.}}{146}{figure.5.31}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Angular distributions of the MC events in run-by-run simulations.}}{150}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.}}{152}{figure.6.2}
@@ -181,7 +182,8 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution. Red dashed line for smearing.}}}{172}{figure.6.24}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale. Blue dotted for smearing down and red dashed for smearing up.}}}{172}{figure.6.24}
 \contentsline {figure}{\numberline {6.25}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{173}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces A comparison of the ES flux measured recently by various experiments.}}{174}{figure.6.26}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{174}{figure.6.26}
+\contentsline {figure}{\numberline {6.27}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after simple cuts).}}{174}{figure.6.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{184}{figure.A.1}

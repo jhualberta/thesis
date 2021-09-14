@@ -764,7 +764,7 @@ For the events in the water region, the fit position biases in x and y ($\mu_{x,
 	\caption{Reconstructed positions and fit biases of the 3-MeV $e^-$ events in the water region.\label{fig:partial_inWater}}
 \end{figure}
 
-\subsubsection{Test on Different PPO Concentrations}
+\subsubsection{Test on Different PPO Concentrations}\label{sect:ppoConcentration}
 To study the effects of different PPO concentrations, in the partial-fill geometry, the water level was set at 3 m, and the PPO concentrations were set to 0.25, 0.5, 1, 2, and 6 g/L respectively. Simulations of 5000 3-MeV $e^-$ were generated in the scintillator region with uniformly distributed positions and isotropic directions. The \texttt{MP scint-water fitter fitter} uses the effective velocities and $PDF$s re-coordinated to the simulation geometries with corresponding PPO concentrations. The distributions of the position biases between the reconstruction and MC in x, y, and z axes were fitted with Gaussians to obtain the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$).
 
 Fig.~\ref{fig:partialBiasVsPPO} and Fig.~\ref{fig:partialResolVsPPO} show the $\mu_{x,y,z}$ and $\sigma_{x,y,z}$ against PPO concentrations. It shows that the values of $\mu_{x,y,z}$ are stable in the [-15,15] mm region, while the values of $\sigma_{x,y,z}$ decrease from about 150 mm to about 60 mm as the concentration increases. The light yield of the liquid scintillator goes up as the PPO concentration increases, which gives larger NHits and more PMT information for the fitter. However, the differences between the 2 g/L and 6 g/L cases are small, which indicates a saturation effect for the PPO concentration above 2 g/L.

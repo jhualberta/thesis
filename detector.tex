@@ -139,44 +139,33 @@ SNO+ adopts a liquid scintillator cocktail contains two primary components: LAB 
 	\label{labppo-molecule}
 \end{figure}
 
-LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, collaboration2020development}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and bring very low risks to the environment or human health\cite{wiki_LAB}. 
-
-Due to the long carbon chain, LAB is an effective energy absorber. Its response to energy is close to linear.
-
-High light yield and attenuation length. good optical transparency  attenuation length
-
-
-
-
-
-%Kosswig, Kurt (2005). "Surfactants". Ullmann's Encyclopedia of Industrial Chemistry. Wiley-VCH. doi:10.1002/14356007.a25_747. ISBN 3527306730.
+LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, collaboration2020development}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and bring very low risks for the environment or human health\cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber to transfer the deposit energy to lights. It also has a long attenuation length of ($72\pm 14$) m at 546 nm and thus \cite{snop_jinst}.
 
 As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor. Energies are transferred from LAB to PPO via non-radiative F{\"o}rster resonant energy transfer. It can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is in the sensitive range of the PMT detection and can also reduce the probability of being the self-absorption of LAB.
 
-A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary}, borexino], as well as bench-top measurements \cite{xing2015preliminary,kaptanoglu2019cherenkov, novikov}. The absolute light yield of the LAB+2g/L PPO liquid scintillator determined by SNO+ is 11900 photons/MeV\cite{grullon2014light}. And this light yield is expected to be increased by over 15\% after extensive purification process\cite{snop_jinst}. 
+A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary,agostini2018comprehensive}, as well as bench-top measurements\cite{xing2015preliminary,kaptanoglu2019cherenkov, novikov}. This mixture of the LAB and PPO is denoted as the unloaded liquid scintillator in the text. The absolute light yield of the unloaded liquid scintillator determined by SNO+ is $11900\pm 60$ photons/MeV, and it is expected to be increased by over 15\% after extensive purification process\cite{snop_jinst,grullon2014light}.
 
+The unloaded liquid scintillator has fast timing response different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha/\beta$ discrimination. It has very low levels of natural radioactive contaminants such as U, Th and K.
 
+The LAB and the PPO used by SNO+ are of ultra purity. 
 
-
-Good stability and chemically compatible
-
-Its flash point is at 140 $^\circ C$.
-
-It has fast timing response different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha/\beta$ discrimination. 
-
-appropriate density for mechanical stability Low cost.
-
-It has very low levels of natural radioactive contaminants such as U, Th and K.
-
-The LAB used by SNO+ is provided by CEPSA Qu\'{i}mica B\'ecancour Inc., which 
 The target background levels for the SNO+ LAB are expected to be $\mathcal O(10^{-17})$ gram of $^{238}$U in per gram LAB (g$^{238}$U/gLAB), which is equal to be thousands of events per year;
 The $^{232}$Th and $^{40}$K levels are $\mathcal O(10^{-17})$ g/gLAB, which is equal to be hundreds of events per year\cite{snop_jinst,markchen_bkg}.
 purification plant
  is designed to maintain the optical clarity and radiopurity of the scintillator through solvent-solvent
    extraction with ultrapure water, steam stripping, and the use of metal scavengers. 
-   
-   
-  
+ultra high purity.   
+
+good optical transparency  attenuation length   
+  At the target PPO concentration of 2 g/L, the emission decay time will be ∼5 ns. This is fast
+  enough to prevent the decay time from adversely effecting position reconstruction, provided there is
+  a sufficiently high light yield. 
+
+At higher PPO concentrations, the scintillation timing can be slightly
+  faster, but this is offset by an increase in self-absorption.
+
+an effect on the reconstruction is described in Sect.~\ref{sect:ppoConcentration}, Chapter 4.
+    
 Fig.~\ref{absLength} shows absorption lengths.
 
 \begin{figure}[!htb]
@@ -190,7 +179,11 @@ Fig.~\ref{absLength} shows absorption lengths.
 %the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
 %the transfer efficiencies
 
-This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau\cite{collaboration2020development}.
+This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau due to self-absorption effects\cite{collaboration2020development}.
+
+for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
+6190 photons/MeV\cite{tanner0p5,joshW1}.
+
 
 % The optical response of the liquid scintillator.
 
@@ -218,33 +211,20 @@ To load the $^{130}$Te into the liquid scintillator, an organo-metallic compound
 	\label{fig:paton_te}
 \end{figure}
 
-Two synthesis procedures, the DDA and SOP procedures, are being developed by the SNO+ Tellurium-loading working groups\cite{biller2017new,teDDA,DDAvsSOP}. These methods allow the optical transparency of the scintillator 
+Two synthesis procedures, the DDA and SOP procedures, are being developed by the SNO+ Tellurium-loading (Te-loading) working groups\cite{biller2017new,teDDA,DDAvsSOP}. These methods can keep the optical transparency of the unloaded scintillator after the Te-loading and the mixture can have a long-term material stability. The total light yield of the full cocktail is expected to be 400 NHits/MeV, which is about 65\% of the unloaded scintillator light yield.
 
-to be conserved. 
+% to the reaction mixture aids inunder exposure to humidity and prevents the formation of precipitates.
 
-to the reaction mixture aids in long-term material stability under exposure to humidity and prevents the formation of precipitates.
-
-The total light yield of the full cocktail is expected to be 400 NHits/MeV 
-
-Tellurium-loaded 65\% of the pure, unloaded scintillator
-
+Tellurium-loaded 
 
 time profile, the intensity of scintillation light as a function of time
+% the prompt fluorescence intensity at a time $t$ excitation be $I=I_0e^{-\frac{t}{\tau}}$
 
-the prompt fluorescence intensity at a time $t$ excitation be $I=I_0e^{-\frac{t}{\tau}}$
-
-singlet and triplet states 
-ionization density 
-depend
-$\alpha$-particle
-high ionization density 
-quenching, 
-
-
-2 g/L PPO gives an absolute light yield of 11900 photons/MeV.
-
-for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
-6190 photons/MeV\cite{tanner0p5,joshW1}.
+%singlet and triplet states 
+%ionization density 
+%depend
+%$\alpha$-particle
+%high ionization density  quenching, 
 
 For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak is at $2.5~MeV$\cite{whitepaper}. This peak is relatively small and can be immersed in the ubiquitous radioactive decays from natural sources, such as the natural Uranium and thorium decay chains existing in the materials\cite{whitepaper}. Therefore, the $0\nu\beta\beta$-decay experiments require a very high energy resolution to distinguish the signal from the backgrounds. For the liquid scintillator, it is expected to create as large amount of light caused by a particle interaction as possible. A quantity of light yield, defined as the number of photons for per MeV energy deposit (photons/MeV) by a particle interaction, is used for describing the detection property of the liquid scintillator.
 
@@ -253,7 +233,7 @@ To meet the low background requirement of the $0\nu\beta\beta$ analysis, the pur
 \subsection{Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}
 As mentioned in the previous section, the $0\nu\beta\beta$ analysis requires high purity and a good light yield of the TeLS. %%% add more
 
-Here we measured the light yield of $0.5\%$ Te-loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (called ``relative light yield'', RLT). With tellurium being loaded into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors. The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution of the detector and sensitivity for studying the $0\nu\beta\beta$ process from the $^{130}$Te. A few efforts are aimed to develop high light yield Tellurium-loaded scintillators\cite{biller2017new}.
+Here I measured the light yield of $0.5\%$ Te-loaded LAB (TeLS) samples relative to the LAB-PPO scintillator (called ``relative light yield'', RLT). With tellurium being loaded into the LAB, the light yield of the liquid scintillator will go down since the tellurium atoms can block the photon transmissions to the photosensors. The light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution of the detector and sensitivity for studying the $0\nu\beta\beta$ process from the $^{130}$Te. A few efforts are aimed to develop high light yield Tellurium-loaded scintillators\cite{biller2017new}.
 
 \subsubsection{Measurement Setup and Data Acquisition}
 

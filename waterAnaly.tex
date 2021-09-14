@@ -720,33 +720,40 @@ To fit for the $^8$B flux corresponding to an observed flux of ES interactions, 
 	\label{fig:ESfluxFit}
 \end{figure}
 
-By using the same procedure to evaluate the systematics of the elastic scattering, it gives ${f_s}^{+0.0218}_{-0.0201}$.
+By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f_s$), it gives ${f_s}^{+0.0218}_{-0.0201}$.
 
 Thus, for the nominal $^8$B solar neutrino flux, the ES flux is evaluated as:
 \begin{equation}
 \Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.12}_{-0.11} (syst.)\times 10^6~cm^{-2}s^{-1}.
 \end{equation}
 
-Compared to the SNO+ 2018 published results: $\Phi_{ES}=(2.53^{+0.31}_{-0.28}(stat.)^{+0.13}_{-0.10}(syst.))\times \mathrm{10^6~cm^{-2}s^{-1}}$\cite{anderson2019measurement} and the Super-K measurement (mentioned in Sect.~\ref{sect:superKsolarnu}, Chapter 2): $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times \mathrm{10^6~cm^{-2}s^{-1}}$\cite{abe2016solar}, the results given here is consistent with these two published results, if taking the uncertainties into account. 
+Fig.~\ref{fig:ESfluxCompareBDT} shows a comparison of the $\Phi_{ES}$ results given here to the recent measurements from the other experiments, including the SNO+ 2018 published water phase\cite{anderson2019measurement}, Super-K\cite{abe2016solar}, and Borexino\cite{agostini2020improved} measurements.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{ESfluxCompareBDT.pdf}
+	\caption[A comparison of the ES flux measured recently by three independent experiments (after BDT selection).]{A comparison of the ES fluxes measured recently by three independent experiments (after BDT selection). The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded area is for the unconstrained average value and uncertainty: $\hat \theta \pm \sigma_{\hat \theta}$.}
+	\label{fig:ESfluxCompareBDT}
+\end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ESfluxCompare.pdf}
-	\caption[A comparison of the ES flux measured recently by various experiments.]{A comparison of the ES fluxes measured recently by various experiments. The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors.}
+	\caption[A comparison of the ES flux measured recently by three independent experiments (after simple cuts).]{A comparison of the ES flux measured recently by three independent experiments (after simple cuts).}
 	\label{fig:ESfluxCompare}
 \end{figure}
 
-The average value $\hat \theta$ and uncertainty $\sigma_{\hat\theta}$ from various experiments are calculated by\cite{behnke2013data}:
+To combine these measurements, the unconstrained average value $\hat \theta$ and uncertainty $\sigma_{\hat\theta}$ from independent experiments are calculated by\cite{pdg2020,behnke2013data}:
 \begin{equation}
 \hat \theta = \sum_{i=1}^{N} \left(\frac{x_i}{\sigma_i^2}\right)\Biggm/\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
 \end{equation}
 \begin{equation}
 \sigma_{\hat\theta} = \sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
 \end{equation}
-where $x_i$ is the measured $\Phi_{ES}$ value from each experiment, and $\sigma_i$ is taken the largest total uncertainties from each experiment.
+where $x_i$ is the measured $\Phi_{ES}$ value from each experiment, and the quadratic error $\sigma_i$ is calculated by using the larger uncertainties from each experiment: $\sigma^i_{tot}=\sqrt{\sigma^2_{stat,larger}+\sigma^2_{sys,larger}}$.
 
 If not including the value from this work, the average result is $(2.338 \pm 0.02868)\times  10^6~\mathrm{cm^{-2}s^{-1}}$. After including this work, the average result is  
-$(2.334\pm0.02847)\times 10^6~\mathrm{cm^{-2}s^{-1}}$.
+$(2.334\pm0.02847)\times 10^6~\mathrm{cm^{-2}s^{-1}}$. The region of $\hat \theta\pm\sigma_{\hat\theta,tot}$ is plotted as the shaded area in Fig.~\ref{fig:ESfluxCompareBDT}.
 
 %\begin{figure}[!htb]
 %	\centering
@@ -763,7 +770,7 @@ $(2.334\pm0.02847)\times 10^6~\mathrm{cm^{-2}s^{-1}}$.
 %\end{figure}
 
 \subsubsection{Limitations of this Study}
-Here I used the background types descried in the Table.~\ref{table:mixed_MC}, which were not complete. There were a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmogenic ones mainly caused by the cosmic muons. A more comprehensive study requires to include all possible backgrounds.
+Here I used the background types descried in the Table.~\ref{table:mixed_MC}, which were not complete. There were a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmic muon induced isotopes. A more comprehensive study requires to include all possible backgrounds.
 
 For the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic shape of the distribution can be investigated to describe the backgrounds more properly.
 

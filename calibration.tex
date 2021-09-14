@@ -579,11 +579,11 @@ By comparing the differences between data and MC, the uncertainties of the energ
 \begin{equation}
 \Delta^2_{\delta}= (\delta_{data}-\delta_{MC})^2+\mathrm{Error}^2_{\delta,data}+\mathrm{Error}^2_{\delta,MC},
 \end{equation}
-where $\delta=b$ or $\delta_E$ and $\Delta_b=\sqrt{\Delta^2_{b}}$ since the resolution is always positive; while $\Delta_{\delta_E}=\pm\sqrt{\Delta^2_{\delta_E}}$. The fit errors in data and MC were also included in the uncertainties.
+where $\delta=b$ or $\delta_E$, and $\Delta_b=\sqrt{\Delta^2_{b}}$ since the resolution is always positive; while $\Delta_{\delta_E}=\pm\sqrt{\Delta^2_{\delta_E}}$. The fit errors in data and MC were also included in the uncertainties.
 
 Taking the $^{16}$N scan runs within $r<6~m$, the averaged uncertainties are: $\overline{\Delta_{\delta_E}}=0.0107$ and $\overline{\Delta_{b}}=0.0369$. For the $^{16}$N scan runs within $r<5.5~m$, which is the fiducial volume of the solar neutrino analysis mentioned in Chapter 6, $\overline{\Delta_{\delta_E}}=0.0100$ and $\overline{\Delta_{b}}=0.0320$.
 
-To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E})\cdot E_{fit}$, where the ``+" sign is for scaling up the energy while ``-" for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run-107055. It is obvious that scaling up the $E_{fit}$ widen the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
+To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E})\cdot E_{fit}$, where the ``$+$" sign is for scaling up the energy while ``$-$" for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run-107055. It is obvious that scaling up the $E_{fit}$ widen the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEscale_N16.pdf}
@@ -591,12 +591,18 @@ To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is sme
 	\label{fig:EscaleSmear}
 \end{figure}
 
-To apply the energy resolution systematics, the reconstructed energy $E_{fit}$ is randomly resampled from a Gaussian $Gaus(E_{fit},\sigma)$, which has a mean at $E_{fit}$ and a resolution of $\sigma=\sqrt{E_{fit}}\cdot\sqrt{(1+\Delta_{b})^2-1}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run-107055. It is obvious that smearing with the energy resolution widen the $E_{fit}$ spectrum. 
+To apply the energy resolution systematics, the reconstructed energy $E_{fit}$ is randomly resampled from a Gaussian $Gaus(E_{fit},\sigma)$, which has a mean at $E_{fit}$ and a resolution of $\sigma=\sqrt{E_{fit}}\cdot\sqrt{(1+\Delta_{b})^2}$ (was $\sqrt{(1+\Delta_{b})^2-1}$ . Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run-107055. It is obvious that smearing with the energy resolution widen the $E_{fit}$ spectrum. 
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{SmearedEresol_N16_1.pdf}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run-107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run-107055. The red dash line is for smearing the $E_{fit}$ with $Gaus(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.}
+	\label{fig:EresolSmear}
+\end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEresol_N16.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run-107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run-107055. The red dash line is for smearing the $E_{fit}$ with $Gaus(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.}
-	\label{fig:EresolSmear}
+	\caption{Figure used before.}
+	\label{fig:EresolSmearOld}
 \end{figure}
 
 There is no unfolding procedure on the energy resolution, so this systematic is one-sided\cite{marzec2019measurement}. In the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.

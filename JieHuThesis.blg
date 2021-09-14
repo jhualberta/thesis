@@ -3,28 +3,23 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-You're missing a field name---line 30 of file thesis.bib
- : 
- : %  title={Improved measurement of B 8 solar neutrinos with 1.5 kt{\textperiodcentered} y of Borexino exposure},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 1197 of file thesis.bib
+Repeated entry---line 1209 of file thesis.bib
  : @article{tanner0p5
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1286 of file thesis.bib
+Repeated entry---line 1298 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1616 of file thesis.bib
+Repeated entry---line 1628 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1669 of file thesis.bib
+Repeated entry---line 1681 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1850 of file thesis.bib
+Repeated entry---line 1862 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -49,10 +44,10 @@ Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
 Warning--empty year in novikov
 Warning--empty year in markchen_bkg
-Warning--empty year in chicagoTiming
 Warning--empty year in tanner0p5
-Warning--empty year in tannerTeDDA
 Warning--empty year in joshW1
+Warning--empty year in chicagoTiming
+Warning--empty year in tannerTeDDA
 Warning--empty year in teLoadingPaper
 Warning--can't use both volume and number fields in biller2017new
 Warning--empty year in teDDA
@@ -96,10 +91,6 @@ Warning--empty year in beta14discrepancy
 Warning--empty year in leta
 Warning--empty year in morganFOM
 Warning--empty year in fady_pselmaa
-Warning--empty author in agostini2020improved
-Warning--empty title in agostini2020improved
-Warning--empty journal in agostini2020improved
-Warning--empty year in agostini2020improved
 Warning--empty journal in rottele2019tritium
 Warning--there's a number but no series in perkins2009particle
 Warning--empty author in operator
@@ -109,45 +100,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 216 entries,
+You've used 217 entries,
             1876 wiz_defined-function locations,
-            1490 strings with 37249 characters,
-and the built_in function-call counts, 45354 in all, are:
-= -- 3900
-> -- 2584
+            1500 strings with 37661 characters,
+and the built_in function-call counts, 45972 in all, are:
+= -- 3967
+> -- 2622
 < -- 0
-+ -- 973
-- -- 757
-* -- 3215
-:= -- 7061
-add.period$ -- 277
-call.type$ -- 216
-change.case$ -- 160
++ -- 986
+- -- 769
+* -- 3257
+:= -- 7155
+add.period$ -- 279
+call.type$ -- 217
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 293
-duplicate$ -- 2475
-empty$ -- 4191
-format.name$ -- 757
-if$ -- 10686
+cite$ -- 290
+duplicate$ -- 2504
+empty$ -- 4228
+format.name$ -- 769
+if$ -- 10839
 int.to.chr$ -- 0
-int.to.str$ -- 216
-missing$ -- 217
-newline$ -- 714
-num.names$ -- 208
-pop$ -- 813
+int.to.str$ -- 217
+missing$ -- 218
+newline$ -- 717
+num.names$ -- 210
+pop$ -- 807
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1210
+skip$ -- 1241
 stack$ -- 0
-substring$ -- 1069
-swap$ -- 798
+substring$ -- 1113
+swap$ -- 820
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 77
-while$ -- 319
-width$ -- 219
-write$ -- 1948
-(There were 6 error messages)
+warning$ -- 73
+while$ -- 325
+width$ -- 220
+write$ -- 1966
+(There were 5 error messages)

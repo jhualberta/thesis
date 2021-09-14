@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Liquid Scintillator for SNO+}{36}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Water-based Wavelength Shifter (Proposal)}{37}{subsection.3.3.4}
 \contentsline {subsubsection}{\numberline {3.3.4.1}Unloaded Liquid Scintillator}{37}{subsubsection.3.3.4.1}
-\contentsline {subsubsection}{\numberline {3.3.4.2}Tellurium-loaded Liquid Scintillator}{40}{subsubsection.3.3.4.2}
+\contentsline {subsubsection}{\numberline {3.3.4.2}Tellurium-loaded Liquid Scintillator}{41}{subsubsection.3.3.4.2}
 \contentsline {subsection}{\numberline {3.3.5}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{42}{subsection.3.3.5}
 \contentsline {subsubsection}{\numberline {3.3.5.1}Measurement Setup and Data Acquisition}{42}{subsubsection.3.3.5.1}
 \contentsline {subsubsection}{\numberline {3.3.5.2}Measurement}{45}{subsubsection.3.3.5.2}
@@ -102,7 +102,7 @@
 \contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{166}{subsubsection.6.3.4.3}
 \contentsline {subsubsection}{\numberline {6.3.4.4}Systematics Evaluation}{167}{subsubsection.6.3.4.4}
 \contentsline {subsubsection}{\numberline {6.3.4.5}Evaluating $^8$B Solar Neutrino Flux}{168}{subsubsection.6.3.4.5}
-\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{174}{subsubsection.6.3.4.6}
+\contentsline {subsubsection}{\numberline {6.3.4.6}Limitations of this Study}{175}{subsubsection.6.3.4.6}
 \contentsline {chapter}{\numberline {7}Conclusions}{176}{chapter.7}
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{177}{appendix.A}
 \contentsline {section}{\numberline {A.1}Create a Random Vertex}{177}{section.A.1}
