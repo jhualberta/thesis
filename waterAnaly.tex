@@ -58,9 +58,9 @@ Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. The quantity is not
 
 \section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
 \subsection{Open Dataset Analysis}
-This open dataset was used to compare the MPW and the RAT fitted results.
+This open dataset was used to compare the reconstructed events by the \texttt{MPW fitter} and the \texttt{RAT water fitter}.
 
-In SNO+ water phase, solar $\nu_e$s are measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$, which was discussed in Sect.~\ref{sect:weakInteraction}. The observable quantity is the solar angle $\theta_{sun}$, the direction of the event relative to the Sun's location, which is defined as:
+In SNO+ water phase, solar $\nu_e$s are measured via elastic scattering $\nu_e+e^-\to \nu_e+e^-$ ($\nu+e^-$ ES) (was discussed in Sect.~\ref{sect:nuInteraction}). The observable quantity is the solar angle $\theta_{sun}$, the direction of the event relative to the Sun's location, which is defined as:
 \begin{equation}
 \cos\theta_{sun}\equiv \vec u_{event}\cdot \frac{\vec{X}_{event}-\vec{X}_{sun}}{|\vec{X}_{event}-\vec{X}_{sun}|},
 \end{equation}
@@ -104,12 +104,11 @@ High level cuts mentioned in \ref{sect:high_level_cuts} were applied.
 		100915&	169700   &	5.684 &	-1.07 &5.08 &0.61&0.338534\\
 		100984&	8621621&	5.701 & 0.76 &4.75 &0.502&-0.647735\\
 		101075&	11673714&	5.667 &4.43 &5.18 &0.64& 0.587303\\
-		
 		\bottomrule
 	\end{tabular*}
 \end{table}
-solar neutrino candidate events in the open dataset.
 
+A plot of refitting the candidate solar events from the \texttt{Rat water fitter} with the \texttt{MPW fitter} on open dataset.
 \begin{figure}[htbp]
 	\centering
 	\subfigure[Run 100093, GTID 11108354]{ 
@@ -149,13 +148,11 @@ solar neutrino candidate events in the open dataset.
 		\end{minipage}
 	}
 	\caption[Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.]{Reconstruction results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for
-		the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the waterFitter; red open star stands for the direction fitted by the MPW; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the waterFitter; open square stands for the position fitted by the MPW.}
+		the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the \texttt{Rat water fitter}; red open star stands for the direction fitted by the \texttt{MPW fitter}; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the \texttt{Rat water fitter}; open square stands for the position fitted by the \texttt{MPW fitter}.}
 	\label{openDataSetCandidate}
 \end{figure}
 
-Compare the $klDiv$ quantities for the MPW and RAT results. 
-
-A plot of refitting the RAT candidate solar events with the MPW on old dataset.
+% Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
 
 \subsection{TMVA Analysis}\label{sect:tmva}
 The MC simulations of the runs 200004 to 203602 were used. These run-by-run simulations simulated the full detector conditions for every run. This is a sub-dataset to the whole ``low background dataset'', with a live time of 92.54 days for testing and training the TMVA methods.
@@ -201,8 +198,6 @@ Before the analysis, a few ``beforehand cuts'' were applied: NHits$>20$, $R'_{fi
 
 Distributions of input variables:
 signal vs combined backgrounds
-
-
 
 After applying these beforehand cuts, for $4<E_{fit}<15$ MeV, the training dataset had 416780 events and the testing dataset had 184330 events.
 
@@ -618,7 +613,7 @@ For the rare case when $\cos\theta_{sun}'<-1$ happened, which is unphysical and 
 A software called \texttt{PSelmaa} (Physics interpretation Sun-Earth Large Mixing Angle Adiabatic
 Approximation) was implemented in \texttt{RAT}\cite{fady_pselmaa}. The software uses the BS05(OP) SSM model. It assumes the normal mass hierarchy. It also applies the MSW effects from the Sun (see Chapter 2) but neglects the MSW effects from the Earth (i.e., the regeneration of coherence in the Earth). Fig.~\ref{fig:pselmaa_curves} shows the survival probability curve as a function of energies (in 0.1 MeV intervals) taken from the \texttt{PSelmaa}.
 
-Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, $P_{e\alpha}$ includes only the $\nu_\mu$ MC.
+Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, only the $\nu_\mu$ MC is included in the $P_{e\alpha}$.
 
 \begin{figure}[!htb]
 	\centering
@@ -632,9 +627,9 @@ Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, $P_{e\alpha}$ includes
 %\Phi_{^8B} = \Phi_{^8B,MC}\frac{N_{fit}}{N_{expected}},
 %\end{equation}
 
-In the \texttt{RAT} MC simulations, to gain more statistics, the solar $\nu_e$ events is generated by 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the solar $\nu_\mu$ events is generated by 9600 times the nominal ($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, to compare the MC with the data, a live time scale was taken into accounts: $t_{frac}=\frac{t_{data~live~time}}{t_{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$.
+To gain more statistics of the MC simulations, the number of the simulated solar $\nu_e$ events is 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the number of the solar $\nu_\mu$ events is 9600 times the nominal($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, to compare the MC with the data, a live time scale was taken into accounts: $t_{frac}=\frac{t_{data~live~time}}{t_{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$.
 
-Therefore, the MC generated $\nu_e$ and $\nu_\mu$ are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT cuts on the MC histograms, Fig.~\ref{fig:MCfluxPdfs} shows the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV with and without oscillations.
+Therefore, the numbers of the MC generated $\nu_e$ and $\nu_\mu$ events are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT cuts to the MC histograms, the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV with and without oscillations are shown in Fig.~\ref{fig:MCfluxPdfs}.
 
 \begin{figure}[!htb]
 	\centering
@@ -731,7 +726,7 @@ Fig.~\ref{fig:ESfluxCompareBDT} shows a comparison of the $\Phi_{ES}$ results gi
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{ESfluxCompareBDT.pdf}
+	\includegraphics[width=10cm]{ESfluxCompareMLP.pdf}
 	\caption[A comparison of the ES flux measured recently by three independent experiments (after BDT selection).]{A comparison of the ES fluxes measured recently by three independent experiments (after BDT selection). The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded area is for the unconstrained average value and uncertainty: $\hat \theta \pm \sigma_{\hat \theta}$.}
 	\label{fig:ESfluxCompareBDT}
 \end{figure}

@@ -3,27 +3,27 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1209 of file thesis.bib
+Repeated entry---line 1221 of file thesis.bib
  : @article{tanner0p5
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1298 of file thesis.bib
+Repeated entry---line 1310 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1628 of file thesis.bib
+Repeated entry---line 1640 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1681 of file thesis.bib
+Repeated entry---line 1693 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1862 of file thesis.bib
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
+Repeated entry---line 1874 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
-Reallocated field_info (elt_size=4) to 10014 items from 5000.
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "davini2016cno"
 Warning--I didn't find a database entry for "cerdeno2018cno"
@@ -37,6 +37,7 @@ Warning--empty year in kalpanaWLS2
 Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
 Warning--empty journal in superKwebsite
+Warning--can't use both volume and number fields in gann2015everything
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in sorensen2016temperature
@@ -100,45 +101,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 217 entries,
+You've used 218 entries,
             1876 wiz_defined-function locations,
-            1500 strings with 37661 characters,
-and the built_in function-call counts, 45972 in all, are:
-= -- 3967
-> -- 2622
+            1507 strings with 37807 characters,
+and the built_in function-call counts, 46275 in all, are:
+= -- 3999
+> -- 2626
 < -- 0
-+ -- 986
-- -- 769
-* -- 3257
-:= -- 7155
-add.period$ -- 279
-call.type$ -- 217
-change.case$ -- 162
++ -- 988
+- -- 770
+* -- 3273
+:= -- 7188
+add.period$ -- 280
+call.type$ -- 218
+change.case$ -- 163
 chr.to.int$ -- 0
-cite$ -- 290
-duplicate$ -- 2504
-empty$ -- 4228
-format.name$ -- 769
-if$ -- 10839
+cite$ -- 292
+duplicate$ -- 2528
+empty$ -- 4259
+format.name$ -- 770
+if$ -- 10920
 int.to.chr$ -- 0
-int.to.str$ -- 217
-missing$ -- 218
-newline$ -- 717
-num.names$ -- 210
-pop$ -- 807
+int.to.str$ -- 218
+missing$ -- 219
+newline$ -- 720
+num.names$ -- 211
+pop$ -- 812
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1241
+skip$ -- 1262
 stack$ -- 0
-substring$ -- 1113
-swap$ -- 820
+substring$ -- 1125
+swap$ -- 834
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 73
-while$ -- 325
-width$ -- 220
-write$ -- 1966
+warning$ -- 74
+while$ -- 327
+width$ -- 221
+write$ -- 1977
 (There were 5 error messages)
