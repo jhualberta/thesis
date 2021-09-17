@@ -12,9 +12,8 @@ For the trial direction, two random seeds are used. Each follows a uniform distr
 
 Note that here the $\texttt{ranPi}$ and $\texttt{ran2Pi}$ are generated independently for the trial direction and they are not related to the vertex case.
 
-\section{Levenberg-Marquardt Method}\footnote{This section refers to \cite{press2007numerical}.}\label{appendix:MRQ}
-
-Levenberg-Marquardt (MRQ) method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
+\section[Levenberg-Marquardt Method]{Levenberg-Marquardt Method}\label{appendix:MRQ}
+This section refers to Ref.~\cite{press2007numerical}. Levenberg-Marquardt (MRQ) method is a common routine for non-linear fitting. Let ${\bf a} = [a_0, a_1, ..., a_{M-1}]^T$ be an $M$-dimensional vector with $M$ unknown parameters to be fit, for example, $\bf a$ is an event vertex with 4 parameters: ${\bf a}=[x,y,z,t]^T$.
 
 A $\chi^2$ merit function with the unknown parameter vector $\bf a$ can be built and by minimizing the function, the best-fit $\bf a$ can be found.
 
@@ -30,7 +29,7 @@ where ${\bf a}_{cur}$ is the current trial value of $\bf a$ and we assume matrix
 
 According to the definition of a $\chi^2$ merit function, it can be written out explicitly as:
 \begin{equation}
-\chi^2({\bf a})=\sum_{i=0}^{N-1}[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}]^2,
+\chi^2({\bf a})=\sum_{i=0}^{N-1}\left[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}\right]^2,
 \end{equation}
 and with the same Taylor expansion, the quadratic form is written as:
 \begin{equation}\label{eq:3}
@@ -38,11 +37,11 @@ and with the same Taylor expansion, the quadratic form is written as:
 \end{equation}
 where the first derivatives are:
 \begin{equation}\label{eq:4}
-\frac{\partial \chi^2}{\partial a_k}=-2\sum_{i=0}^{N-1}[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}]\frac{\partial y(x_i|{\bf a})}{\partial a_k}, k = 0,1,...,M-1,
+\frac{\partial \chi^2}{\partial a_k}=-2\sum_{i=0}^{N-1}\left[\frac{y_i-y(x_i|{\bf a})}{\sigma_i}\right]\frac{\partial y(x_i|{\bf a})}{\partial a_k}, k = 0,1,...,M-1,
 \end{equation}
 and the second derivatives are:
 \begin{equation}\label{eq:5}
-\frac{\partial^2 \chi^2}{\partial a_k\partial a_l}=2\sum_{i=0}^{N-1}\{\frac{\partial y(x_i|{\bf a})}{\partial a_k}\frac{\partial y(x_i|{\bf a})}{\partial a_l}-[y_i-y(x_i|a)]\frac{\partial^2 y(x_i|{\bf a})}{\partial a_k\partial a_l}\}, k = 0, 1, ..., M-1.
+\frac{\partial^2 \chi^2}{\partial a_k\partial a_l}=2\sum_{i=0}^{N-1}\left\{\frac{\partial y(x_i|{\bf a})}{\partial a_k}\frac{\partial y(x_i|{\bf a})}{\partial a_l}-[y_i-y(x_i|a)]\frac{\partial^2 y(x_i|{\bf a})}{\partial a_k\partial a_l}\right\}, k = 0, 1, ..., M-1.
 \end{equation}
 
 Let $\beta_k\equiv-\frac{1}{2}\frac{\partial\chi^2}{\partial a_k}, \alpha_{kl}\equiv \frac{1}{2}\frac{\partial^2\chi^2}{\partial a_k\partial a_l}$, then the factor of 2 is removed. The $\alpha_{kl}$ is defined as the curvature matrix and ${\bf \alpha}=\frac{1}{2}{\bf D}$, which implies that it is the half of the Hessian matrix.
@@ -88,10 +87,10 @@ Once the minimum is reached, $\lambda$ is set to 0 and then the estimated covari
 
 The MRQ method is the core algorithm in the \texttt{MP fitter} framework for likelihood fitting. A few fitter setting parameters relating to the method can be optimized in practice. These parameters are:
 \begin{itemize}
-	\item fit tolerance: \texttt{fTolerance}, which is set for $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$.
-	\item the number of good fits: \texttt{nGood}. The maximum number of the ``good fits'' required to be a valid result. This is to avoid the case when the MRQ minimizer finds a local minima instead of a global minima.
-	\item the maximum iteration: \texttt{fMaxIter}. The allowed maximum number for looping the MRQ minimizer.
-	\item the maximum number of start positions: \texttt{nStart}. If the start value does not give a valid result, the fitter will try another random start value. \texttt{nStart} is the maximum number of the start value the fitter is allowed to try.
+	\item \texttt{fTolerance}: the fit tolerance, which is set as $|\chi^2_{curren}-\chi^2_{previous}|<\texttt{fTolerance}$.
+	\item \texttt{nGood}: the number of good fits. The maximum number of the ``good fits'' required to be a valid result. This is to avoid the case when the MRQ minimizer finds a local minima instead of a global minima.
+	\item \texttt{fMaxIter}: the maximum iteration. The allowed maximum number for looping the MRQ minimizer.
+	\item \texttt{nStart}: the maximum number of start positions. If the start value does not give a valid result, the fitter will try another random start value. \texttt{nStart} is the maximum number of the start value the fitter is allowed to try.
 \end{itemize}
 
 Table.~\ref{table:MRQ_params} shows the optimized values of the fitter setting parameters for different phases. 

@@ -3,28 +3,27 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1221 of file thesis.bib
+Repeated entry---line 1219 of file thesis.bib
  : @article{tanner0p5
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1310 of file thesis.bib
+Repeated entry---line 1308 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1640 of file thesis.bib
+Repeated entry---line 1638 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1693 of file thesis.bib
+Repeated entry---line 1691 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Reallocated field_info (elt_size=4) to 10014 items from 5000.
-Repeated entry---line 1874 of file thesis.bib
+Repeated entry---line 1872 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
 Warning--I didn't find a database entry for "davini2016cno"
 Warning--I didn't find a database entry for "cerdeno2018cno"
 Warning--empty journal in Paton:2019kgy
