@@ -153,45 +153,55 @@
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{153}{figure.6.2}
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{153}{figure.6.2}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Energy spectrum of events from different simulations.}}{155}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{157}{figure.6.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{157}{figure.6.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{157}{figure.6.4}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{157}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<15$\nobreakspace {}MeV.}}{158}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces ROC curves from TMVA output, for event with $5<E_{fit}<15$ MeV (energy above 5 MeV).}}{158}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<5$ MeV (low energy region).}}{159}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15$ MeV.}}{160}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15$\nobreakspace {}MeV.}}{161}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15$ MeV.}}{161}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $5<E_{fit}<15$ MeV.}}{162}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces A comparison of the outputs of the BDT, MLP and the default cuts for the $5<E_{fit}<15$ MeV.}}{162}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces The $\qopname \relax o{cos}\theta _{sun}$ distribution of solar $\nu _e$ extracted from the simulations, which was used as a $PDF$ function.}}{163}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Real data from run-200004 to 203602 (``half dataset''), after the default cuts.}}{165}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces An example of the randomly generated $\qopname \relax o{cos}\theta _{sun}$ fitted with $(N_{sig},N_{bkg})$.}}{165}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets.}}{166}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets.}}{167}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces The $-2\qopname \relax o{ln}L$ of the best fitted results for 5000 fake datasets.}}{167}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from BDT outputs.}}{168}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Fitted results for the $5<E_{fit}<15\nobreakspace {}MeV$, from MLP outputs.}}{168}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{170}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.}}{171}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces A fit on the total $^8$B flux.}}{172}{figure.6.23}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Energy vs $\beta _{14}$ for the data and MC. Both the \texttt {RAT} and the \texttt {MPW} results are shown.}}{173}{figure.6.24}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction. Blue dotted for smearing down and red dashed for smearing up.}}}{173}{figure.6.24}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution. Red dashed line for smearing.}}}{173}{figure.6.24}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale. Blue dotted for smearing down and red dashed for smearing up.}}}{173}{figure.6.24}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{174}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{175}{figure.6.26}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Multiple variables as the inputs for the TMVA analysis.}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta _{14}$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$E_{fit}$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$U_{test}$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$Z_{factor}$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$ITR$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\mathaccentV {vec}17E{u}\cdot \mathaccentV {vec}17E{R'}$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {$scaleLogL$}}}{157}{figure.6.4}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$klDiv$}}}{157}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{158}{figure.6.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{158}{figure.6.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{158}{figure.6.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{158}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<15$\nobreakspace {}MeV.}}{159}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces ROC curves from TMVA output, for event with $5<E_{fit}<15$ MeV (energy above 5 MeV).}}{160}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces ROC curves from TMVA output, for event with $4<E_{fit}<5$ MeV (low energy region).}}{160}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15$ MeV.}}{162}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15$\nobreakspace {}MeV.}}{162}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces BDT output for $\qopname \relax o{cos}\theta _{sun}$, with $4<E_{fit}<15$ MeV.}}{163}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces MLP output for $\qopname \relax o{cos}\theta _{sun}$, with $5<E_{fit}<15$ MeV.}}{163}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces A comparison of the outputs of the BDT, MLP and the default cuts for the $5<E_{fit}<15$ MeV.}}{164}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces The $\qopname \relax o{cos}\theta _{sun}$ distribution of solar $\nu _e$ extracted from the simulations, which was used as a $PDF$ function.}}{165}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Real data from run-200004 to 203602 (``half dataset''), after the default cuts.}}{166}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces An example of the randomly generated $\qopname \relax o{cos}\theta _{sun}$ fitted with $(N_{sig},N_{bkg})$.}}{167}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets.}}{167}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets.}}{168}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces The $-2\qopname \relax o{ln}L$ of the best fitted results for 5000 fake datasets.}}{168}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Fitted results for the $5<E_{fit}<15$\nobreakspace {}MeV, from BDT outputs.}}{169}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Fitted results for the $5<E_{fit}<15$\nobreakspace {}MeV, from MLP outputs.}}{169}{figure.6.21}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{171}{figure.6.22}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.}}{172}{figure.6.23}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces A fit on the total $^8$B flux.}}{173}{figure.6.24}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Energy vs $\beta _{14}$ for the data and MC. Both the \texttt {RAT} and the \texttt {MPW} results are shown.}}{174}{figure.6.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction. Blue dotted for smearing down and red dashed for smearing up.}}}{174}{figure.6.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution. Red dashed line for smearing.}}}{174}{figure.6.25}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale. Blue dotted for smearing down and red dashed for smearing up.}}}{174}{figure.6.25}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{175}{figure.6.26}
+\contentsline {figure}{\numberline {6.27}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{176}{figure.6.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{185}{figure.A.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{185}{figure.A.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{185}{figure.A.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{185}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{186}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{187}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{187}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{188}{figure.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{186}{figure.A.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{186}{figure.A.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{186}{figure.A.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{186}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{187}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{188}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{188}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{189}{figure.A.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{196}{figure.C.1}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{197}{figure.C.1}

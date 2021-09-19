@@ -591,28 +591,10 @@ To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is sme
 	\label{fig:EscaleSmear}
 \end{figure}
 
-To apply the energy resolution systematics, the reconstructed energy $E_{fit}$ is randomly resampled from a Gaussian $Gaus(E_{fit},\sigma)$, which has a mean at $E_{fit}$ and a resolution of $\sigma=\sqrt{E_{fit}}\cdot\sqrt{(1+\Delta_{b})^2}$ (was $\sqrt{(1+\Delta_{b})^2-1}$ . Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run-107055. It is obvious that smearing with the energy resolution widen the $E_{fit}$ spectrum. 
+To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $Gaus(0,\sigma_{smear})$, where $\sigma_{smear}=\sqrt{E_{fit}}\cdot\sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_{smear}$ is randomly sampled from $Gaus(0,\sigma_{smear})$, and then $E'_{fit}=E_{fit}+E_{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run-107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widen the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided\cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
 \begin{figure}
 	\centering
-	\includegraphics[width=10cm]{SmearedEresol_N16_1.pdf}
+	\includegraphics[width=10cm]{SmearedEresol_N16_new.pdf}
 	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run-107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run-107055. The red dash line is for smearing the $E_{fit}$ with $Gaus(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.}
 	\label{fig:EresolSmear}
 \end{figure}
-
-There is no unfolding procedure on the energy resolution, so this systematic is one-sided\cite{marzec2019measurement}. In the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
-
-%\begin{figure}[!htb]\label{map_energyScale}
-%	\centering
-%	\includegraphics[width=5.5cm]{skyShine.png}
-%	\caption{A map of relative energy scale $\delta_E$ across the detector.}
-%
-%\end{figure}
-%
-%\begin{figure}[!htb]\label{map_energyResol}
-%	\centering
-%	\includegraphics[width=5.5cm]{skyShine.png}
-%	\caption{A map of relative energy scale $\delta_E$ across the detector.}
-%\end{figure}
-
-%\section{Extracting \texorpdfstring{$\gamma$}{Lg}-rays from Neutron Capture}
-%The AmBe calibration source is used for the calibrations of the SNO+ neutron capture process.

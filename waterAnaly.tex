@@ -51,10 +51,10 @@ These values were used for distinguishing the signal from backgrounds, which wil
 \end{figure}
 
 A symmetrical form of $klDiv$ can be taken as:
-\begin{equation}
+\begin{equation}\label{eq:symKlDiv}
 klDiv(p,q) \equiv \frac{1}{2}\sum_{i}^N (p\log{\frac{p}{q}}+q\log{\frac{q}{p}}),
 \end{equation}
-Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. The quantity is not used in the thesis, but can be considered in future.
+Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. This quantity is used in the TMVA method in Sect.~\ref{sect:tmva}.
 
 \section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
 \subsection{Open Dataset Analysis}
@@ -155,7 +155,7 @@ A plot of refitting the candidate solar events from the \texttt{Rat water fitter
 % Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
 
 \subsection{Signal-background Discrimination Based on TMVA}\label{sect:tmva}
-This section describes a signal-background discrimination analysis based on the TMVA method. Here the run-by-run simulations that simulated the full detector conditions for a specific run were used. The MC dataset includes the run-by-run simulations from the run-200004 to 203602, which has a live time of 92.54 days and is about a half of the whole ``low background dataset''. Thus it is denoted as the ``half dataset''.
+This section describes a signal-background discrimination analysis based on the TMVA method. Here the run-by-run simulations that simulated the full detector conditions for a specific run were used. The MC dataset includes the run-by-run simulations from the run-200004 to 203602, which has a live time of 92.54 days and is about a half of the whole ``low background dataset''. Thus it is denoted as the ``half dataset''. This half dataset was used for testing the analyses in this section and the next.
 
 For the MC dataset, two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
@@ -188,19 +188,36 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{TMVA_bkgs_1.png}
-	\caption[Energy spectrum of events from different simulations.]{Energy spectrum of events from different simulations: $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu_e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}
+	\caption[Energy spectrum of events from different simulations.]{Energy spectrum of events from different simulations in the half dataset: $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu_e$ (orange). Solid lines show the internal events and dotted lines show the AV events.}
 	\label{TMVA_bkgs_1}
 \end{figure}
 
-In the MC dataset, runs from run-200004 to 202516 were taken as the training set (69.5\% of the total sub-dataset), and the rest 30.5\% were taken as testing set\footnote{To obtain a more unbiased analysis, a bootstrap method\cite{murphy2012machine} that randomly separates training and testing sets can be used, but it is not discussed here.}. Once the weights of the variables were tuned, they were put into the actual data.
+In the MC dataset, runs from run-200004 to 202516 were taken as the training set (about 67 live days and 72.4\% of the half dataset), and the rest 27.6\% were taken as testing set\footnote{For a more unbiased analysis, a bootstrap method\cite{murphy2012machine} that randomly separates the training and testing datasets can be used, but it is not applied here.}. Once the weights of the variables were obtained by the TMVA training, the weights were applied to the actual data.
 
-Before the analysis, a few ``beforehand cuts'' were applied: NHits$>20$, $R'_{fit}<5500~mm$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$. Here NHits$>20$ was applied as a reconstruction threshold. Only the events with $NHits>20$ were reconstructed by the MPW fitter for the solar neutrino analysis; a default fiducial volume of $5.5~m$ was set; the $ITR$ and $\beta_{14}$ cuts were suggested by the collaboration, which were mostly based on the experiences for removing the instrumental backgrounds\cite{waterunidoc}. 
+Before the analysis, a few ``beforehand cuts'' were applied: NHits$>20$, $R'_{fit}<5500~mm$, $ITR>0.55$, and $-0.12<\beta_{14}<0.95$. Here NHits$>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with NHits$>20$ were reconstructed by the \texttt{MPW fitter}; the default fiducial volume is $5500$ mm; the $ITR$ and $\beta_{14}$ cuts were suggested by the collaboration, which were mostly based on the experiences for removing the instrumental backgrounds\cite{waterunidoc}. 
 
-After applying these beforehand cuts, for $4<E_{fit}<15$ MeV, the training dataset had 416780 events and the testing dataset had 184330 events.
+Two other ranges of $E_{fit}$ were also tested: $4<E_{fit}<5$ MeV (low energy region) and $5<E_{fit}<15$ MeV ($E>5$ MeV region). 
 
-Two other ranges of $E_{fit}$ were also tested: $4<E_{fit}<5$ MeV (low energy region) and $5<E_{fit}<15$ MeV ($E>5$ MeV region). %$6<E_{fit}<15$ ($E>6$).
+After applying these beforehand cuts, for the different energy regions, the ratios of the signal event numbers ($N_{sig}$) to the background event numbers ($N_{bkg}$) are listed in Table.~\ref{tab:signalToBkg_tmva}. It shows that, in the low energy region $4<E_{fit}<5$ MeV, the background events are dominant, while for the $E_{fit}>5$ MeV, the background events are significantly reduced.
 
-After the training and testing datasets were ready, three classification methods implemented in the TMVA package were used: the Fisher discriminants/linear discriminant analysis (Fisher/LD), the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short)\cite{albertsson2007tmva}.
+\begin{table}[ht]
+	\centering
+	\caption{Ratios of the signal event numbers to the background event numbers.}
+	\label{tab:signalToBkg_tmva}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
+		\toprule
+		energy region (MeV) & $N_{sig}$ & $N_{bkg}$ & $N_{sig}/N_{bkg}$ \\
+		\midrule
+		$4<E_{fit}<15$ & 434830& 166280& 2.6 \\ 
+		\midrule
+		$5<E_{fit}<15$ & 317205 & 6359 & 49.9\\
+		\midrule
+		$4<E_{fit}<5$ & 117625 & 159921& 0.73\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+Three classification methods implemented in the TMVA package were applied to the training and testing datasets: the Fisher discriminants/linear discriminant analysis (Fisher/LD), the Boosted Decision Tree (BDT), and the Artificial Neural Networks Multilayer Perceptron (ANN-MLP, or MLP in short)\cite{albertsson2007tmva}.
 
 The Fisher discriminant $y_{F_i}(i)$ for classifying event $i$ is defined by \cite{tmvaWebsite}:
 \begin{equation}
@@ -216,10 +233,73 @@ For the settings in the TMVA, the BDT method was set with: (1) using the adaptiv
 
 The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles.
 
-I used 9 variables as inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$. Among them, the input values of $ITR$ and $\beta_{14}$ were after the beforehand cuts mentioned above. The $NHits$ and $\theta_{ij}$ were not used, since the $NHits$ is correlated to the energy while the $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
+There are 9 variables used as the TMVA inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R'}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the $ITR$ and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. Here the NHits and $\theta_{ij}$ were not used, since the NHits is correlated to the energy while the $\theta_{ij}$ is anticorrelated to the $\beta_{14}$.
 
-%%Distributions of input variables:
-%%signal vs combined backgrounds
+The distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences between the signal (black solid lines) and background (red dotted lines) distributions can be observed.
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[$\beta_{14}$]{
+		\begin{minipage}[t]{0.3\textwidth}
+			\includegraphics[width=4cm]{tmvaCompare_Beta14.pdf}
+		\end{minipage}
+	}
+	\subfigure[$E_{fit}$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_energy.pdf}
+		\end{minipage}
+	}
+	\subfigure[$G_{test}$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_Gtest.pdf}
+		\end{minipage}
+	}
+	\subfigure[$U_{test}$]{
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=4cm]{tmvaCompare_Utest.pdf}
+	\end{minipage}
+    }	
+   \subfigure[$Z_{factor}$]{
+   \begin{minipage}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=4cm]{tmvaCompare_zfactor.pdf}
+   \end{minipage}
+   }	
+   \subfigure[$ITR$]{
+   \begin{minipage}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=4cm]{tmvaCompare_itr.pdf}
+    \end{minipage}
+   }	
+   \subfigure[$\vec{u}\cdot\vec{R'}$]{
+   \begin{minipage}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=4cm]{tmvaCompare_udotR.pdf}
+    \end{minipage}
+}
+   \subfigure[$scaleLogL$]{
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=4cm]{tmvaCompare_scaleLogL.pdf}
+	\end{minipage}
+}	
+   \subfigure[$klDiv$]{
+    \begin{minipage}[b]{0.3\textwidth}
+	\centering
+	\includegraphics[width=4cm]{tmvaCompare_klDiv.pdf}
+   \end{minipage}
+   }
+%   \subfigure[$\cos\theta_{sun}$]{
+%	\begin{minipage}[b]{0.3\textwidth}
+%		\centering
+%		\includegraphics[width=4cm]{tmvaCompare_cosThetaSun.pdf}
+%	\end{minipage}
+%   }	
+	\caption[Multiple variables as the inputs for the TMVA analysis.]{Multiple variables as the inputs for the TMVA analysis. The distributions of the backgrounds are show in dotted red lines while the signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:inputParamsTMVA}}
+\end{figure}
 
 The MLP method gave the best results, while it was the most CPU-consuming method.
 
@@ -243,11 +323,10 @@ The output signal/background distributions on the test sub-dataset are shown in 
 			\includegraphics[width=6cm]{output_allE_MLP.pdf}
 		\end{minipage}
 	}
-	\caption{TMVA outputs for signal/background separations by different methods.}
-	\label{output_separation_allE}
+	\caption{TMVA outputs for signal/background separations by different methods.\label{output_separation_allE}}
 \end{figure}
 
-As one of the essential TMVA output, the background rejection versus signal efficiency curve is also called a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
+As one of the essential TMVA output, the background rejection versus signal efficiency curve is denoted as a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ROC_E4to15.pdf}
@@ -270,47 +349,27 @@ where the Fisher/LD is the worst case; the BDT and MLP outputs are close to each
 	\label{E4to5_roc}
 \end{figure}
 
-A typical CPU time for a certain method to train the dataset is listed in Table.~\ref{table:tmvaMethod_allE}, \ref{table:tmvaMethod_hiE} and \ref{table:tmvaMethod_lowE}.
-
+A typical CPU time ($t_{CPU}$) for a certain method to train the dataset with different energy regions is listed in Table.~\ref{tab:tmvaMethod_allE}.
 \begin{table}[ht]
 	\centering
-	\caption{Testing results of $4<E_{fit}<15$~MeV from different TMVA methods.}
-	\label{table:tmvaMethod_allE}
+	\caption{Testing results from different TMVA methods.}
+	\label{tab:tmvaMethod_allE}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
-		Method & AUC &CPU time (second/$10^6$ events) \\
+		Method & AUC & $t_{CPU}$ (second/$10^6$ events) \\
 		\midrule
+		$4<E_{fit}<15$~MeV \\
 		Fisher/LD & 0.915 & 0.81\\
 		BDT &  0.940 & 249.53 \\
 		MLP & 0.944 & 1370.02\\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-\begin{table}[ht]
-	\centering
-	\caption[Testing results of $E_{fit}$ above 5 MeV from different TMVA methods.]{Testing results of $5<E_{fit}<15$ MeV (above 5 MeV) from different TMVA methods.}
-	\label{table:tmvaMethod_hiE}
-	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}ccc}
-		\toprule
-		Method & AUC &CPU time (second/$10^6$ events)\\
-		\midrule
-		Fisher/LD & 0.915& 0.93\\
+	   \hline
+	   $5<E_{fit}<15$ MeV\\
+				Fisher/LD & 0.915& 0.93\\
 		BDT & 0.950 & 269.71\\
 		MLP &  0.958 & 1450.90\\
-		\bottomrule
-	\end{tabular*}
-\end{table}
-
-\begin{table}[ht]
-	\centering
-	\caption[Testing results of low energy region from different TMVA methods.]{Testing results of $4<E_{fit}<5$ MeV (low energy region) from different TMVA methods.}
-	\label{table:tmvaMethod_lowE}
-	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccc}
-		\toprule
-		Method & AUC & CPU time (second/$10^6$ events) \\
-		\midrule
-		Fisher/LD & 0.782 & 0.84\\
+	   \hline
+	   $4<E_{fit}<5$ MeV \\
+	   Fisher/LD & 0.782 & 0.84\\
 		BDT & 0.816 & 280.1\\
 		MLP & 0.823 &1337.9\\
 		\bottomrule
@@ -322,8 +381,9 @@ It shows that, when the energy goes lower, it is more difficult to separate the 
 The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. It is also used to extract the number of signal and background events, which will be discussed in the following sections. Here I applied the BDT and the MPL method on the test sub-dataset. For the real dataset from run-200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
 %The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
 %4<E<15 MeV
-%BDT signal efficiency     = 0.828483
-%BDT background efficiency = 0.0764527
+%%BDT signal efficiency     = 0.944954
+%% MLP signal efficiency        = 0.926606
+ 
 %MLP signal efficiency        = 0.842493
 %MLP background efficiency    = 0.0840084
 %5<E<15 MeV
@@ -331,6 +391,9 @@ The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show t
 %BDT background efficiency = 0.103896
 %MLP signal efficiency        = 0.887622
 %MLP background efficiency    = 0.104416
+
+%%% BDT signal efficiency     = 0.733945
+%% MLP signal efficiency        = 0.779817
 %
 %4<E<5 MeV
 %BDT signal efficiency     = 0.72266
@@ -386,7 +449,7 @@ Cuts on the position and energy FoMs suggested by the collaboration\cite{morganF
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{cosThetaToSun_4to15_MLP.pdf}
-	\caption[MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15$~MeV.]{MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15~MeV$. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
+	\caption[MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15$~MeV.]{MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15$~MeV. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
 	\label{cosThetaToSun_4to15_MLP}
 \end{figure}
 
@@ -408,7 +471,7 @@ Cuts on the position and energy FoMs suggested by the collaboration\cite{morganF
 
 %Comparisons
 
-The main analysis is focused on the [5,15] MeV energy region. A comparison of the outputs of $5<E_{fit}<15~MeV$ from the BDT, MLP and the default cuts is shown in Fig.~\ref{compare_cosThetaToSun_5to15}.
+The main analysis of this thesis is focused on the [5,15] MeV energy region. A comparison of the outputs of $5<E_{fit}<15$~MeV from the BDT, MLP and the default cuts is shown in Fig.~\ref{compare_cosThetaToSun_5to15}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{Compare_cosThetaSun_5to15.pdf}
@@ -417,9 +480,9 @@ The main analysis is focused on the [5,15] MeV energy region. A comparison of th
 \end{figure}
 
 \subsection{Discussions on the TMVA Results}
-A more stringent radial cut (or tighter FV) can be applied on lower energy region $4<E_{fit}<5~MeV$ to further remove the backgrounds which are dominant in lower energy region. However, this tighter cut can also reduce the number of signals.
+A more stringent radial cut (or tighter FV) can be applied on lower energy region $4<E_{fit}<5$~MeV to further remove the background events which are dominant in lower energy region. However, this tighter cut can also reduce the signal events.
 
-Other packages developed for high energy particle physics, such as StatPatternRecognition (SPR)\cite{sprWebsite}, can also be considered as an alternative tool or as a reference for results comparisons. 
+Other packages developed for high energy particle physics, such as \texttt{StatPatternRecognition} (SPR)\cite{sprWebsite}, can also be considered as an alternative tool or as a reference for results comparisons. 
 
 \subsection{Likelihood Fits for Solar Neutrino Candidate Events}
 In the previous section, the optimized cuts obtained from the TMVA analysis were applied on the dataset. 
@@ -532,19 +595,19 @@ These results are also summarized in Table.~\ref{table:wholedata_output}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{wholedataFit_bdt.pdf}
-	\caption{Fitted results for the $5<E_{fit}<15~MeV$, from BDT outputs.} \label{wholeDataset_poissonFit_bdt}
+	\caption{Fitted results for the $5<E_{fit}<15$~MeV, from BDT outputs.} \label{wholeDataset_poissonFit_bdt}
 \end{figure} 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{wholedataFit_mlp.pdf}
-	\caption{Fitted results for the $5<E_{fit}<15~MeV$, from MLP outputs.}
+	\caption{Fitted results for the $5<E_{fit}<15$~MeV, from MLP outputs.}
 	\label{wholeDataset_poissonFit_mlp}
 \end{figure} 
 
 \begin{table}[ht]
 	\centering
-	\caption{Fitted results for the whole dataset ($5<E<15~MeV$).}
+	\caption{Fitted results for the whole dataset ($5<E<15$~MeV).}
 	\label{table:wholedata_output}
 
 	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccc}
@@ -722,7 +785,7 @@ By using the same procedure to evaluate the systematics of the elastic scatterin
 
 Thus, for the nominal $^8$B solar neutrino flux, the ES flux is evaluated as:
 \begin{equation}
-\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.12}_{-0.11} (syst.)\times 10^6~cm^{-2}s^{-1}.
+\mathrm{\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.01\pm 0.20(stat.)^{+0.12}_{-0.11} (syst.)\times 10^6~cm^{-2}s^{-1}}.
 \end{equation}
 
 Fig.~\ref{fig:ESfluxCompareBDT} shows a comparison of the $\Phi_{ES}$ results given here to the recent measurements from the other experiments, including the SNO+ 2018 published water phase\cite{anderson2019measurement}, Super-K\cite{abe2016solar}, and Borexino\cite{agostini2020improved} measurements.
