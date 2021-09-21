@@ -177,31 +177,30 @@
 \contentsline {figure}{\numberline {6.13}{\ignorespaces A comparison of the outputs of the BDT, MLP and the default cuts for the $5<E_{fit}<15$ MeV.}}{164}{figure.6.13}
 \contentsline {figure}{\numberline {6.14}{\ignorespaces The $\qopname \relax o{cos}\theta _{sun}$ distribution of solar $\nu _e$ extracted from the simulations, which was used as a $PDF$ function.}}{165}{figure.6.14}
 \contentsline {figure}{\numberline {6.15}{\ignorespaces Real data from run-200004 to 203602 (``half dataset''), after the default cuts.}}{166}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces An example of the randomly generated $\qopname \relax o{cos}\theta _{sun}$ fitted with $(N_{sig},N_{bkg})$.}}{167}{figure.6.16}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces An example of the randomly generated $\qopname \relax o{cos}\theta _{sun}$ fitted with $(N_{sig},N_{bkg})$.}}{166}{figure.6.16}
 \contentsline {figure}{\numberline {6.17}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets.}}{167}{figure.6.17}
 \contentsline {figure}{\numberline {6.18}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets.}}{168}{figure.6.18}
 \contentsline {figure}{\numberline {6.19}{\ignorespaces The $-2\qopname \relax o{ln}L$ of the best fitted results for 5000 fake datasets.}}{168}{figure.6.19}
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Fitted results for the $5<E_{fit}<15$\nobreakspace {}MeV, from BDT outputs.}}{169}{figure.6.20}
 \contentsline {figure}{\numberline {6.21}{\ignorespaces Fitted results for the $5<E_{fit}<15$\nobreakspace {}MeV, from MLP outputs.}}{169}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{171}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.}}{172}{figure.6.23}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces A fit on the total $^8$B flux.}}{173}{figure.6.24}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Energy vs $\beta _{14}$ for the data and MC. Both the \texttt {RAT} and the \texttt {MPW} results are shown.}}{174}{figure.6.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction. Blue dotted for smearing down and red dashed for smearing up.}}}{174}{figure.6.25}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution. Red dashed line for smearing.}}}{174}{figure.6.25}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale. Blue dotted for smearing down and red dashed for smearing up.}}}{174}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{175}{figure.6.26}
-\contentsline {figure}{\numberline {6.27}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{176}{figure.6.27}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{173}{figure.6.22}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.}}{174}{figure.6.23}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces A fit on the total $^8$B flux.}}{174}{figure.6.24}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _{sun}$.}}{176}{figure.6.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $. The histogram with black solid line is the original. The blue dotted histogram is for smearing down and the red dashed is for smearing up.}}}{176}{figure.6.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution. Red dashed line for smearing down the $E_{resol}$.}}}{176}{figure.6.25}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{177}{figure.6.26}
+\contentsline {figure}{\numberline {6.27}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{178}{figure.6.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{186}{figure.A.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{186}{figure.A.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{186}{figure.A.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{186}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{187}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{188}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{188}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{189}{figure.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{188}{figure.A.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{188}{figure.A.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{188}{figure.A.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{188}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{189}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{190}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{190}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{191}{figure.A.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{197}{figure.C.1}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{199}{figure.C.1}
