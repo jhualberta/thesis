@@ -623,7 +623,7 @@ These results are also summarized in Table.~\ref{table:wholedata_output}.
 It can be concluded here that the BDT results are consistent with the MLP results. The estimated background rate in the [5,15] MeV energy region is about $\frac{1}{3}$ of the signal rate, which indicates that a low background measurement is achieved for the solar neutrino analysis with the energy down to 5 MeV.
 
 \subsubsection{Systematics Evaluation}
-In Chapter 5, the reconstruction systematics of position, direction and energy were obtained. The quantities of position scale, position shifts, direction resolution, $\beta_{14}$ shifts, energy scale ($E_{scale}$) and energy resolution ($E_{resol}$) were used to evaluate the systematics of the solar neutrino analysis. Table.~\ref{tab:solar_uncertainties} summarizes these systematics and their applications to transform the reconstructed results.
+In Chapter 5, the reconstruction systematics of position, direction and energy were obtained. The quantities of position scale, position shifts, direction resolution, $\beta_{14}$ shifts, energy scale ($E_{scale}$) and energy resolution ($E_{resol}$) were used to evaluate the systematic uncertainties of the solar neutrino analysis. Table.~\ref{tab:solar_uncertainties} summarizes these systematics and their applications to transform the reconstructed results. In this thesis, only the systematics mentioned below were taken into account, and these systematics are considered uncorrelated. 
 
 \begin{table}[ht]
 	\centering
@@ -641,7 +641,7 @@ In Chapter 5, the reconstruction systematics of position, direction and energy w
 		z scale ($\Delta s_z$)& +0.08\%/-0.01\%  & $(1\pm \Delta s_z)z_{fit}$ \\
 	    direction $\delta_\theta$  & +0.013/-0.101 & $1+\frac{\cos\theta_{sun}-1}{1\pm\delta_\theta}$\\
 	    $E_{scale}~(\Delta_{\delta_E})$ &  1.0\%  & $(1\pm \Delta_{\delta_E})E_{fit}$\\
-	    $E_{resol}~(\Delta_b)$ &  0.037 $\sqrt{\mathrm{MeV}}$  & $E_{fit}+Gaus(0,\sigma_{smear})$  \\
+	    $E_{resol}~(\Delta_b)$ &  0.037 $\sqrt{\mathrm{MeV}}$  & $E_{fit}+Gaus(0,\sigma_{smear})$, \\
 	    & &$\sigma_{smear}=\sqrt{E_{fit}}\sqrt{(1+\Delta_b)^2-1}$\\
 	    $\beta_{14}$ shift ($\Delta \beta_{14}$) & +0.010/-0.036 & $\beta_{14}\pm \Delta \beta_{14}$\\
 		\bottomrule
@@ -652,56 +652,10 @@ Note that the position shifts were applied to the $x_{fit},~y_{fit}$, and $z_{fi
 
 $\vec{X'}_{fit}=((1\pm \Delta s_x)x_{fit},(1\pm \Delta s_y)y_{fit},(1\pm \Delta s_z)z_{fit})$.
 
-In this thesis, only the systematics mentioned in Table.~\ref{tab:solar_uncertainties} were taken into account, and these systematics are considered uncorrelated. To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_{sun}$ distribution used as the $PDF$ will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the $PDF$ shape directly. Finally, the spectrum from the data was re-fit with the smeared $PDF$s to obtain the physics quantity (specifically, the flux ratio mentioned in the next section), and the different fit results are used as the systematics of the physics quantity.
+To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_{sun}$ distribution used as the $PDF$ will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the $PDF$ shape directly. Finally, the spectrum from the data was re-fit with the smeared $PDF$s to obtain the physics quantity (specifically, the flux ratio mentioned in the next section), and the different fit results are used as the systematics of the physics quantity.
 
-To obtain the smeared $PDF$s, first, the cuts on $\beta_{14}$ and $R'_{fit}$ (fiducial volume) in the ``beforehand cut'' mentioned before were removed, and only the cuts NHit$>20$ (reconstruction threshold) and $ITR>0.55$ (determined from the instrumental noises and considered as no systematics) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. The positive (``smearing up'') and negative (``smearing down'') values were also applied, respectively.
-
-
-the cuts NHit$>20$ and $ITR>0.55$ were applied to the 
-
-Applying this transformation to the solar $\nu_e$ or $\nu_\mu$ MC simulations to obtain smeared $PDF$s, then the flux spectrum of the data was re-fit with the smeared $PDF$s and the values of systematics were evaluated.
-
-For the energy scale ($E_{scale}$) and resolution ($E_{resol}$), applying the transformations to the reconstructed energy $E_{fit}$ event by event will affect the results of the energy cuts for the analysis.
-
-This 
-
-
-and scale
-
-
-\begin{itemize}
-\item Energy scale and resolution
-As mentioned in Sect.~\ref{sect:eneryUncertianties}, for the energy scale $\delta_E$, the reconstructed energy ($E_{fit}$) of an MC event was scaled up and down by: $E'_{fit} = (1\pm 0.01)E_{fit}$. 
-
-For the energy resolution $b$, the $E_{fit}$ of an MC event was resampled by $E$
-$Gaus(0,\sigma_{smear})$, where $\sigma_{smear}=\sqrt{E_{fit}}\cdot\sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_{smear}$ is randomly sampled from $Gaus(0,\sigma_{smear})$, and then $E'_{fit}=E_{fit}+E_{smear}$.
-
-was randomly resampled from a Gaussian with a mean at $E_{fit}$ and with a resolution of $\sigma_E=\sqrt{0.255E_{fit}}$.
-
-%the energy resolution was determined to be $21.0^{+5.0}_{-9.2}\%$ at 5 MeV.
-\item Direction
-
-To apply systematics in direction, a remapping equation of $\cos\theta_{sun}$ was derived by the SNO collaboration Ref.~\cite{drouin2012three}:
-\begin{equation}\label{remapThetaSun}
-\cos\theta_{sun}'=1+\frac{\cos\theta_{sun}-1}{1+\delta_\theta},
-\end{equation} 
-
-By applying the Eqn.~\ref{remapTheta} on the MC $PDF$, 
-
-For the rare case when $\cos\theta_{sun}'<-1$ happened, which is unphysical and is considered as an effect introduced from mis-reconstruction, a random value was picked uniformly in [-1,1] for the $\cos\theta_{sun}'$; while for $\cos\theta_{sun}>+1$, 0.99 was assigned.
-
-%Its impact is $^{+0.3}_{-0.2}$ events.
-%
-%The position shifts and position scales:
-\end{itemize}
-
-
-
-
-
-
-
-
+To obtain the smeared $PDF$s, first, the ``beforehand cut'' mentioned before was loosen by removing the cuts on $\beta_{14}$ and $R'_{fit}$ (fiducial volume), and only the cuts NHit$>20$ (reconstruction threshold) and $ITR>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. The positive (``smearing up'') and negative (``smearing down'') values were also applied, respectively. After the transformation, the whole ``beforehand cut'' was applied. At last, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_{sun}$ spectrum was used as the smeared $PDF$ for that quantity. For example, if the $E_{fit}$ is smeared by scaling up: $E_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then outputs of the $\cos\theta_{sun}$ after the ``beforehand cut'' and TMVA BDT selection is used as the ``energy scale-up $PDF$''.
+ 
 \subsubsection{Evaluating $^8$B Solar Neutrino Flux}
 
 A software called \texttt{PSelmaa} (Physics interpretation Sun-Earth Large Mixing Angle Adiabatic
