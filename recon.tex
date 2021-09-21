@@ -555,7 +555,7 @@ Similar to the ray-sphere case, if $a'_{+}>a'_->0$, the length of the path insid
 
 To evaluate the length of the $|\vec{l}_p|$ in the scintillator region ($d_{sp}$), the above three geometries needs to be combined carefully. The following two procedures go through all the possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the light path in the AV scintillator region ($d_{sp,AV}$). Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the light path in the neck scintillator region ($d_{sp,neck}$). Detailed algorithms are shown in Appendix.~\ref{appendix:lightpath}.
 
-Since the valid fit requires the events inside the PSUP sphere, only the neck region inside the PSUP sphere (with $6108<z_{neck}<8390~mm$) needs to be considered. The neck path calculation is also allowed to be turned off, while a worse fitted result is expected. Detailed calculations are shown in Appendix.~\ref{appendix:lightpath}.
+Since the valid fit requires the events inside the PSUP sphere, only the neck region inside the PSUP sphere (with $6108<z_{neck}<8390~mm$) needs to be considered. The neck path calculation is also allowed to be turned off, while a worse fit result is expected. Detailed calculations are shown in Appendix.~\ref{appendix:lightpath}.
 
 If $d_{sp}=0$, the light path is always in the water. In this case, the fitter is the same to the \texttt{MP water fitter}. It fits the vertex with the \texttt{MP water fitter} $PDF$. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing $PDF$, in which the PMT time response was modified to photon propagation time in scintillator, as shown in Fig.~\ref{partialpdf}.
 
