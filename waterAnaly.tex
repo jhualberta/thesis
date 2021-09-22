@@ -650,30 +650,30 @@ Therefore, the numbers of the MC generated $\nu_e$ and $\nu_\mu$ events are scal
 
 Reading from the above histograms, the expected event number for $\nu_e$ without the oscillation is $N_{\nu_e} = 322.69$ while including the oscillations, the expected event number for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 113.58$ and $N^{osci}_{\nu_\mu} = 32.64$ respectively, and the combined event number is $N^{osci}_{\nu_e+\nu_\mu}=146.22$.
 
-To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eqn.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f_s\cdot N^{osci}_{\nu_e+\nu_\mu}(=146.22)$, and then fitting the $N_{sig}$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f_s=0.82\pm 0.08$ (corresponding to $N_{sig}=119.35\pm11.70$  events) and $N_{bkg}=36.64\pm7.55$ events, with a p-value of 0.0714. The fit result is shown in Fig.~\ref{fig:TOTALfluxFit}.
+To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f^{tot}_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eqn.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f^{tot}_s\cdot N^{osci}_{\nu_e+\nu_\mu}$(where the estimated $N^{osci}_{\nu_e+\nu_\mu}=141.57$), and then fitting the $f^{tot}_s$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f^{tot}_s=0.8462\pm 0.08398$ (corresponding to $N_{sig}=119.8\pm11.89$ events) and $N_{bkg}=38.20\pm7.731$ events, with a p-value of 0.1470. Fig.~\ref{fig:TOTALfluxFit} show the fit spectrum.
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{TOTALfluxFit.png}
-	\caption[A fit on the total $^8$B flux.]{A fit on the total $^8$B flux. The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$, the distribution of $\nu_e$ flux without oscillation. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\includegraphics[width=8cm]{TotalFluxFit.pdf}
+	\caption[A fit on the total $^8$B flux.]{A fit on the total $^8$B flux. The black dots are the data points and the blue histogram is the fitted total flux.}
 	\label{fig:TOTALfluxFit}
 \end{figure}
-
+%%  The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$,the distribution of $\nu_e$ flux without oscillation. 
 Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux here is:
 
 \begin{equation}
-\mathrm{\Phi^{total}_{fit}(^8 B)=f_s\cdot \Phi^{total}_{MC}=(
- 4.93 \pm 0.49(stats.))\times 10^6~cm^{-2}s^{-1}}.
+\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stats.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
 \end{equation}
 
-To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=314.68)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f_s=0.3798\pm 0.03772$ (corresponding to $N_{sig}=119.52\pm11.62$ events) and $N_{bkg}=36.81\pm 7.56$ events, with a p-value = 0.14.
+To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=314.68)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f_s=0.3798\pm 0.03772$ (corresponding to $N_{sig}=119.5\pm11.62$ events) and $N_{bkg}=38.48\pm 7.751$ events, with a p-value = 0.140.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ESfluxFit.pdf}
-	\caption[Fitting with the spectrum of elastic scattering.]{Fitting with the spectrum of elastic scattering. The gray dotted histogram is the distribution of $\nu_e$ flux without oscillation ($PDF(\nu_e,without~oscillation)$). The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\caption[Fitting with the spectrum of elastic scattering.]{Fitting with the spectrum of elastic scattering. The black dots are the data points and the blue histogram is the fitted ES flux.}
 	\label{fig:ESfluxFit}
 \end{figure}
+%%% The gray dotted histogram is the distribution of $\nu_e$ flux without oscillation ($PDF(\nu_e,without~oscillation)$). 
 
 %\begin{figure}[!htb]
 %	\centering
@@ -751,7 +751,7 @@ Fig.~\ref{smearESpdfs} shows the effects of smearing the energy resolution and d
 
 Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} to the MC ES $PDF$, and then refit the data with the smeared $PDF$s one by one, the smeared values of the flux ratio ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table.~\ref{tab:smearingResults}.
 
-It finds that the position and $\beta_{14}$ smearing are negligible while the direction and energy smearing give more obvious uncertainties. 
+It finds that the systematic uncertainties from the smeared position and $\beta_{14}$ are negligible, while the direction and energy smearing give more significant uncertainties. 
 \begin{table}[ht]
 	\centering
 	\caption{Systematics for the fitted flux scale $f_s$.}
@@ -760,32 +760,34 @@ It finds that the position and $\beta_{14}$ smearing are negligible while the di
 		\toprule
 		Systematics & $\Delta f_s$ (+/-)\\
 		\hline
-		x shift & $+0.000003/-0.000045$\\	
-		y shift & $+0.000009/-0.000056$\\
-		z shift & $+0.0001/-0.000138$\\
-		position scale & $+0.00132/-0.00115$\\\	
-		$\delta_\theta$  &$+0.01858/-0.002112$\\		
-		$E_{scale}~(\Delta_{\delta_E})$ & $+0.01466/-0.01395$\\
-		$E_{resol}~(\Delta_b)$ & $+0.0428/-0.0428$ \\
-		$\beta_{14}$ shifts & $+0.000178/-0.000558$\\
+		x shift & $+0.001891/-0.001962$\\	
+		y shift & $+0.001888/-0.001955$\\
+		z shift & $+0.002071/-0.001818$\\
+		position scale & $+0.000583/-0.00306$\\\	
+		$\delta_\theta$  &$+0.01676/-0.004034$\\		
+		$E_{scale}~(\Delta_{\delta_E})$ & $+0.01456/-0.01752$\\
+		$E_{resol}~(\Delta_b)$ & $+0.003363/-0.003363$ \\
+		$\beta_{14}$ shifts & $+0.003968/-0.003285$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematics is expected to be: ${f_s}^{+0.0240}_{-0.0142}$.
+Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: ${f^{tot}_s}^{+0.02306}_{-0.01912}$.
 
-By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f_s$), it gives ${f_s}^{+0.0576}_{-0.0333}$.
+By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f^{ES}_s$), it gives ${f^{ES}_s}^{+0.009655}_{-0.008305}$.
 
 \subsubsection{A Summary of the Results}
-With the systematic uncertainties obtained from the previous section, the total flux is:
+With the systematic uncertainties of the fraction ratios obtained from the previous section, the total flux is:
 \begin{equation}
-\mathrm{\Phi^{total}_{fit}({^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.08}(syst.))\times 10^6~cm^{-2}s^{-1}.}
+{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.10}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.}
 \end{equation}
 
 And the ES flux is:
 \begin{equation}
-\mathrm{\Phi_{ES}=f_s\cdot \Phi^{total}_{MC}=2.07\pm 0.22(stat.)^{+0.06}_{-0.03} (syst.)\times 10^6~cm^{-2}s^{-1}}.
+\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.07\pm 0.206(stat.)^{+0.0527}_{-0.0454} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
 \end{equation}
+2.07383 +/- 0.206117
+
 
 Fig.~\ref{fig:ESfluxCompareBDT} shows a comparison of the $\Phi_{ES}$ results given here to the recent measurements from the other experiments, including the SNO+ 2018 published water phase data\cite{anderson2019measurement}, Super-K\cite{abe2016solar}, and Borexino\cite{agostini2020improved} measurements.
 
