@@ -583,7 +583,7 @@ Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and 
 	\label{poisson_fitLnL}
 \end{figure}
 
-\subsubsection{Fitting on the Whole Dataset (run-200004 to 207718)}
+\subsubsection{Fitting on the Whole Dataset (run-200004 to 207718)}\label{sect:fitTheWhole}
 The whole dataset started from run-200004 (on 24 Oct, 2018) to run-207718 (on 10 July, 2019). This dataset has a live time of 190.33 days. The TMAV method was applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations\footnote{the solar $\nu_mu$ was also trained with the background simulations to calculate the solar neutrino flux mentioned in next section}. The trained BDT and MLP weights were applied to this whole dataset.
 
 In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitted to obtain the $N_{sig}$ and $N_{bkg}$. Fig.~\ref{wholeDataset_poissonFit_bdt} and Fig.~\ref{wholeDataset_poissonFit_mlp} show their results respectively. The fit results are also summarized in Table.~\ref{table:wholedata_output}.
@@ -637,14 +637,14 @@ Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, only the $\nu_\mu$ MC 
 %\Phi_{^8B} = \Phi_{^8B,MC}\frac{N_{fit}}{N_{expected}},
 %\end{equation}
 
-To gain more statistics of the MC simulations, the number of the simulated solar $\nu_e$ events is 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the number of the solar $\nu_\mu$ events is 9600 times the nominal($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately\cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC: $f_{live~time}=\frac{t_{data~live~time}}{t_{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$. Also, assuming a sacrifice of 1.7\% from the data cleaning cuts on the data, a scale factor of $f_{dataClean}=(1-\frac{1.7}{100})$ was applied on the MC simulations.
+To gain more statistics of the MC simulations, the number of the simulated solar $\nu_e$ events is 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the number of the solar $\nu_\mu$ events is 9600 times the nominal($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately\cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC: $f_{live~time}=\frac{t_{data~live~time}}{t_{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$. Also, assuming a sacrifice of 1.7\% from the data cleaning cuts on the data, a scale factor of $f_{dataClean}=(1-\frac{1.7}{100})$ was applied to the MC simulations.
 
 Therefore, the numbers of the MC generated $\nu_e$ and $\nu_\mu$ events are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT cuts to the MC histograms, the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV with and without oscillations are shown in Fig.~\ref{fig:MCfluxPdfs}.
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{MCfluxPdfs.png}
-	\caption[The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.]{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts. The histogram in black is the $\nu_e$ flux without oscillation, denoted by $PDF(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The dashed red histogram is the $\nu_e$ flux and the dashed green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the blue histogram as the total flux including the oscillation, denoted by $PDF(\nu_e+\nu_\mu,oscillated)$, which is used for fitting the total flux.}
+	\includegraphics[width=8cm]{MCfluxPdfs.pdf}
+	\caption[The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.]{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the TMVA BDT selections. The histogram in think black line is the $\nu_e$ flux without oscillation, denoted as $PDF(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The histogram in dashed red line is the $\nu_e$ flux and the green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the total flux including the oscillation, which is in blue line and is denoted by $PDF(\nu_e+\nu_\mu,oscillated)$. This histogram is used for fitting the total flux.}
 	\label{fig:MCfluxPdfs}
 \end{figure} 
 
@@ -659,13 +659,10 @@ To fit for the total $^8$B neutrino flux, the fit parameter used here is the flu
 	\label{fig:TOTALfluxFit}
 \end{figure}
 %%  The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$,the distribution of $\nu_e$ flux without oscillation. 
-Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux here is:
 
-\begin{equation}
-\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stats.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
-\end{equation}
+To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=314.68)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f^{ES}_s=0.3798\pm 0.03772$ (corresponding to $N_{sig}=119.5\pm11.62$ events) and $N_{bkg}=38.48\pm 7.751$ events, with a p-value = 0.140.
 
-To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=314.68)$ and the $PDF$ was changed to $PDF(\nu_e,without~oscillation)$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f_s=0.3798\pm 0.03772$ (corresponding to $N_{sig}=119.5\pm11.62$ events) and $N_{bkg}=38.48\pm 7.751$ events, with a p-value = 0.140.
+The $N_{sig}$ and $N_{bkg}$ results obtained by fitting flux fractions are consistent with
 
 \begin{figure}[!htb]
 	\centering
@@ -673,6 +670,21 @@ To fit for the $^8$B flux corresponding to an observed flux of ES interactions, 
 	\caption[Fitting with the spectrum of elastic scattering.]{Fitting with the spectrum of elastic scattering. The black dots are the data points and the blue histogram is the fitted ES flux.}
 	\label{fig:ESfluxFit}
 \end{figure}
+
+The $N_{sig}$ and $N_{bkg}$ values obtained here by fitting the flux fractions are consistent with the values obtained in Sect.~\ref{sect:fitTheWhole}.
+
+Thus, with the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}=5.46\times 10^6~cm^{-2}s^{-1}$, the estimated total flux is:
+
+\begin{equation}
+\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stats.))\times 10^6~\mathrm{cm^{-2}s^{-1}},
+\end{equation}
+
+and the estimated elastic scattering flux is:
+\begin{equation}
+\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=( 2.074\pm 0.2061(stat.)\times 10^6~\mathrm{cm^{-2}s^{-1}}.
+\end{equation}
+
+The next section will evaluate the systematic uncertainties of the flux fractions.
 %%% The gray dotted histogram is the distribution of $\nu_e$ flux without oscillation ($PDF(\nu_e,without~oscillation)$). 
 
 %\begin{figure}[!htb]
@@ -690,7 +702,7 @@ To fit for the $^8$B flux corresponding to an observed flux of ES interactions, 
 %\end{figure}
 
 \subsubsection{Systematics Evaluation}
-In Chapter 5, the reconstruction systematics of position, direction and energy were obtained. The quantities of position scale, position shifts, direction resolution, $\beta_{14}$ shifts, energy scale ($E_{scale}$) and energy resolution ($E_{resol}$) were used to evaluate the systematic uncertainties of the solar neutrino analysis. Table.~\ref{tab:solar_uncertainties} summarizes these systematics and their applications to transform the reconstructed results. In this thesis, only the systematics mentioned below were taken into account, and these systematics are considered uncorrelated. 
+In Chapter 5, the reconstruction systematics of the event position, direction and energy were obtained. The quantities of position scale, position shifts, direction resolution, $\beta_{14}$ shifts, energy scale ($E_{scale}$) and energy resolution ($E_{resol}$) were used to evaluate the systematic uncertainties of the solar neutrino analysis. Table.~\ref{tab:solar_uncertainties} summarizes these systematics and their applications to transform the reconstructed results. In this thesis, only the systematics mentioned below were taken into account, and these systematics are considered uncorrelated. 
 
 \begin{table}[ht]
 	\centering
@@ -777,7 +789,7 @@ Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that
 By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f^{ES}_s$), it gives ${f^{ES}_s}^{+0.009655}_{-0.008305}$.
 
 \subsubsection{A Summary of the Results}
-With the systematic uncertainties of the fraction ratios obtained from the previous section, the total flux is:
+With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
 {\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.10}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.}
 \end{equation}
