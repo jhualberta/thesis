@@ -785,43 +785,63 @@ It finds that the systematic uncertainties from the smeared position and $\beta_
 	\end{tabular*}
 \end{table}
 
-Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: ${f^{tot}_s}^{+0.02306}_{-0.01912}$.
+Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.02306}_{-0.01912}$.
 
-By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f^{ES}_s$), it gives ${f^{ES}_s}^{+0.009655}_{-0.008305}$.
+By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f^{ES}_s$), it gives $({f^{ES}_s})^{+0.009655}_{-0.008305}$.
 
 \subsubsection{A Summary of the Results} \label{sect:solarESresults}
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
-{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.10}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.}
+{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.459(stats.)^{+0.126}_{-0.104}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.}
 \end{equation}
 
 And the ES flux is:
 \begin{equation}
 \Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.07\pm 0.206(stat.)^{+0.0527}_{-0.0454} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
 \end{equation}
-2.07383 +/- 0.206117
 
+A quadratic total uncertainty $\sigma_{tot}$ is calculated by combining the larger uncertainties in statistics and systematics:
+\begin{equation}
+\sigma_{tot}=\sqrt{\sigma^2_{stat,larger}+\sigma^2_{sys,larger}}.
+\end{equation}
 
-Fig.~\ref{fig:ESfluxCompareBDT} shows a comparison of the $\Phi_{ES}$ results given here to the recent measurements from the other experiments, including the SNO+ 2018 published water phase data\cite{anderson2019measurement}, Super-K\cite{abe2016solar}, and Borexino\cite{agostini2020improved} measurements.
+Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given here to the recent measurements from the other experiments (mentioned in Sect.~\ref{sect:solarNu}, Chapter 2), including the SNO+ water phase measurement published in 2018\cite{anderson2019measurement}, the Super-K phase-IV measurement (Super-K IV) and the combined four phases measurement (Super-K combined)\cite{abe2016solar}, and the Borexino measurements published in 2020 (Borexino 2020)\cite{agostini2020improved}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{ESfluxCompare.pdf}
-	\caption[A comparison of the ES flux measured recently by three independent experiments (after BDT selection).]{A comparison of the ES fluxes measured recently by three independent experiments (after BDT selection). The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded area is for the unconstrained average value and uncertainty: $\hat \theta \pm \sigma_{\hat \theta}$.}
-	\label{fig:ESfluxCompareBDT}
+	\caption[A comparison of the ES flux measured recently by three independent experiments (after BDT selection).]{A comparison of the ES fluxes measured recently by three independent experiments (after BDT selection). The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded band is for the unconstrained average value and uncertainty of all the results: $\hat \theta \pm 1\sigma_{\hat \theta}$.}
+	\label{fig:ESfluxCompare}
 \end{figure}
 
-To combine these measurements, the unconstrained average value $\hat \theta$ and uncertainty $\sigma_{\hat\theta}$ from independent experiments are calculated by\cite{pdg2020,behnke2013data}:
+To combine the results from different experiments, an unconstrained average value $\hat \theta$ and its uncertainty $\sigma_{\hat\theta}$ are calculated by\cite{pdg2020,behnke2013data}:
 \begin{equation}
 \hat \theta = \sum_{i=1}^{N} \left(\frac{x_i}{\sigma_i^2}\right)\Biggm/\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
 \end{equation}
-\begin{equation}
-\sigma_{\hat\theta} = \sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
-\end{equation}
-where $x_i$ is the measured $\Phi_{ES}$ value from each experiment, and the quadratic error $\sigma_i$ is calculated by using the larger uncertainties from each experiment: $\sigma^i_{tot}=\sqrt{\sigma^2_{stat,larger}+\sigma^2_{sys,larger}}$.
 
-If not including the value from this work, the average result is $(2.338 \pm 0.02868)\times  10^6~\mathrm{cm^{-2}s^{-1}}$. After including this work, the average result is  
-$(2.333\pm0.02843)\times 10^6~\mathrm{cm^{-2}s^{-1}}$. The region of $\hat \theta\pm\sigma_{\hat\theta,tot}$ is plotted as the shaded area in Fig.~\ref{fig:ESfluxCompareBDT}.
+\begin{equation}
+\sigma_{\hat\theta} =\left[\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right) \right]^{-\frac{1}{2}},
+\end{equation}
+where $x_i$ is the measured $\Phi_{ES}$ value from each experiment, and the $\sigma_i$ is the total uncertainty $\sigma_{tot}$ calculated from each experiment. 
+
+Combined with the results from other experiments, the average results are listed in Table.~\ref{tab:ESaverage}.
+The $\Phi_{ES}$ result from this thesis is combined with the SNO+ 2018 result and then with all the other experiments' results. The average result without this work is also shown. All the three average results are consistent with each other.
+
+\begin{table}[ht]
+	\centering
+	\caption{Average results.\label{tab:ESaverage}}
+	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
+		\toprule
+		Combinations & $\Phi_{ES}$ ($\times 10^6$ cm$^{-2}$s$^{-1}$)\\
+		\hline
+		 not including this work & $2.338 \pm 0.02868$\\
+         this work and SNO+ 2018 & $2.281 \pm 0.1571$\\
+         all & $2.333\pm0.02843$\\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+From the average result including all the experiments mentioned, the region of $\hat \theta\pm 1\sigma_{\hat\theta,tot}$ is plotted as the shaded band in Fig.~\ref{fig:ESfluxCompare}.
 
 \subsubsection{Limitations of this Study}
 Here I used the background simulations described in the Table.~\ref{table:mixed_MC}, which were not complete. There were a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs and the cosmic muon induced isotopes. A more comprehensive study requires to include all possible backgrounds.
