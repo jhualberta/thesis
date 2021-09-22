@@ -184,12 +184,13 @@
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Fit results for the $5<E_{fit}<15$\nobreakspace {}MeV, from BDT outputs.}}{169}{figure.6.20}
 \contentsline {figure}{\numberline {6.21}{\ignorespaces Fit results for the $5<E_{fit}<15$\nobreakspace {}MeV, from MLP outputs.}}{169}{figure.6.21}
 \contentsline {figure}{\numberline {6.22}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{170}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.}}{172}{figure.6.23}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces The MC $\qopname \relax o{cos}\theta _{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.}}{171}{figure.6.23}
 \contentsline {figure}{\numberline {6.24}{\ignorespaces A fit on the total $^8$B flux.}}{172}{figure.6.24}
 \contentsline {figure}{\numberline {6.25}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{173}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _{sun}$.}}{176}{figure.6.26}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $. The histogram with black solid line is the original. The blue dotted histogram is for smearing down and the red dashed is for smearing up.}}}{176}{figure.6.26}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution. Red dashed line for smearing down the $E_{resol}$.}}}{176}{figure.6.26}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _{sun}$ $PDF$.}}{176}{figure.6.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{176}{figure.6.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{176}{figure.6.26}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{176}{figure.6.26}
 \contentsline {figure}{\numberline {6.27}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{178}{figure.6.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -46,7 +46,7 @@ These values were used for distinguishing the signal from backgrounds, which wil
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{klDiv_example.png}
-	\caption[Angular distributions of the MC events in run-by-run simulations.]{Angular distributions of the MC events in run-by-run simulations of run-206391, with the same event GTID =7. The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The $PDF$ is scaled to the number of the hits in solar $\nu_e$ event (black dashed line) and the $^{214}$Bi event (red dotted line) respectively.}
+	\caption[Angular distributions of the MC events in run-by-run simulations.]{Angular distributions of the MC events in run-by-run simulations of run-206391, with the same event GTID =7. The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The $PDF$ is scaled to the number of the hits in solar $\nu_e$ event (dashed black line) and the $^{214}$Bi event (dotted red line) respectively.}
 	\label{kLdiv_example}
 \end{figure}
 
@@ -628,7 +628,7 @@ Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, only the $\nu_\mu$ MC 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{PSelmaa_bs05op.pdf}
-	\caption[The MSW survival probability curves as functions of MC energies.]{The MSW survival probability curves as functions of MC energies. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee})$ is in green dashed line.}
+	\caption[The MSW survival probability curves as functions of MC energies.]{The MSW survival probability curves as functions of MC energies. The $P_{ee}$ is in solid red line and $P_{e\alpha}(=1-P_{ee})$ is in dashed green line.}
 	\label{fig:pselmaa_curves}
 \end{figure}
 
@@ -639,23 +639,23 @@ Since SNO+ can not discriminate $\nu_\mu$ and $\nu_\tau$, only the $\nu_\mu$ MC 
 
 To gain more statistics of the MC simulations, the number of the simulated solar $\nu_e$ events is 1700 times the nominal ($flux~scale = \frac{1}{1700}$); while the number of the solar $\nu_\mu$ events is 9600 times the nominal($flux~scale=\frac{1}{9600}$). Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ via detecting the elastic scattering events, $\nu_\tau$ is not generated separately\cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC: $f_{live~time}=\frac{t_{data~live~time}}{t_{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$. Also, assuming a sacrifice of 1.7\% from the data cleaning cuts on the data, a scale factor of $f_{dataClean}=(1-\frac{1.7}{100})$ was applied to the MC simulations.
 
-Therefore, the numbers of the MC generated $\nu_e$ and $\nu_\mu$ events are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT cuts to the MC histograms, the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV with and without oscillations are shown in Fig.~\ref{fig:MCfluxPdfs}.
+Therefore, the numbers of the MC generated $\nu_e$ and $\nu_\mu$ events are scaled by the $t_{frac}$ and $flux~scale$, and then weighted by the oscillation probability $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT selections to the MC histograms, the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV with and without oscillations are shown in Fig.~\ref{fig:MCfluxPdfs}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{MCfluxPdfs.pdf}
-	\caption[The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT cuts.]{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the TMVA BDT selections. The histogram in think black line is the $\nu_e$ flux without oscillation, denoted as $PDF(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The histogram in dashed red line is the $\nu_e$ flux and the green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the total flux including the oscillation, which is in blue line and is denoted by $PDF(\nu_e+\nu_\mu,oscillated)$. This histogram is used for fitting the total flux.}
+	\caption[The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.]{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections. The histogram in think black line is the $\nu_e$ flux without oscillation, denoted as $PDF(\nu_e,without~oscillation)$. This histogram is used for fitting the elastic scattering flux. The histogram in dashed red line is the $\nu_e$ flux and the green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the total flux including the oscillation, which is in blue line and is denoted by $PDF(\nu_e+\nu_\mu,oscillated)$. This histogram is used for fitting the total flux.}
 	\label{fig:MCfluxPdfs}
 \end{figure} 
 
-Reading from the above histograms, the expected event number for $\nu_e$ without the oscillation is $N_{\nu_e} = 322.69$ while including the oscillations, the expected event number for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 113.58$ and $N^{osci}_{\nu_\mu} = 32.64$ respectively, and the combined event number is $N^{osci}_{\nu_e+\nu_\mu}=146.22$.
+Reading from the above histograms, the expected event number for $\nu_e$ without the oscillation is $N_{\nu_e} = 314.679$ while including the oscillations, the expected event number for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 109.494$ and $N^{osci}_{\nu_\mu} = 32.0757$ respectively, and the combined event number is $N^{osci}_{\nu_e+\nu_\mu}=141.569$.
 
 To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f^{tot}_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eqn.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f^{tot}_s\cdot N^{osci}_{\nu_e+\nu_\mu}$(where the estimated $N^{osci}_{\nu_e+\nu_\mu}=141.57$), and then fitting the $f^{tot}_s$ and the $N_{bkg}$ with the $pdf(\nu_e+\nu_\mu,oscillated)$. The fit results are $f^{tot}_s=0.8462\pm 0.08398$ (corresponding to $N_{sig}=119.8\pm11.89$ events) and $N_{bkg}=38.20\pm7.731$ events, with a p-value of 0.1470. Fig.~\ref{fig:TOTALfluxFit} show the fit spectrum.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{TotalFluxFit.pdf}
-	\caption[A fit on the total $^8$B flux.]{A fit on the total $^8$B flux. The black dots are the data points and the blue histogram is the fitted total flux.}
+	\caption[A fit on the total $^8$B flux.]{A fit on the total $^8$B flux. The black dots are the data points and the blue histogram is the fit.}
 	\label{fig:TOTALfluxFit}
 \end{figure}
 %%  The gray histogram is the $PDF(\nu_e+\nu_\mu,with~oscillations)$,the distribution of $\nu_e$ flux without oscillation. 
@@ -667,7 +667,7 @@ The $N_{sig}$ and $N_{bkg}$ results obtained by fitting flux fractions are consi
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ESfluxFit.pdf}
-	\caption[Fitting with the spectrum of elastic scattering.]{Fitting with the spectrum of elastic scattering. The black dots are the data points and the blue histogram is the fitted ES flux.}
+	\caption[Fitting with the spectrum of elastic scattering.]{Fitting with the spectrum of elastic scattering. The black dots are the data points and the blue histogram is the fit.}
 	\label{fig:ESfluxFit}
 \end{figure}
 
@@ -735,33 +735,34 @@ For the $\delta_\theta$, since there is no physics meanings for the case when $\
 
 To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_{sun}$ distribution used as the $PDF$ will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the $PDF$ shape directly. Finally, the spectrum of the data was re-fit with the smeared $PDF$s to obtain the smeared physics quantity (specifically, the flux ratio $f_s$ mentioned in the previous section), and the differences between the original value and the smeared value are used as the systematics of the physics quantity.
 
-To obtain the smeared $PDF$s, first, the ``beforehand cut'' mentioned before was loosen by removing the cuts on $\beta_{14}$ and $R'_{fit}$ (fiducial volume), and only the cuts NHit$>20$ (reconstruction threshold) and $ITR>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. The positive (``smearing up'') and negative (``smearing down'') values were also applied, respectively. After the transformation, the whole ``beforehand cut'' was applied. At last, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_{sun}$ spectrum was used as the smeared $PDF$ for that quantity. For example, if the $E_{fit}$ is smeared by scaling up: $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_{sun}$ after the ``beforehand cut'' and TMVA BDT selection is used as the ``energy scale-up $PDF$''.
+To obtain the smeared $PDF$s, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and $ITR>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. The positive (``smearing up'') and negative (``smearing down'') values were also applied, respectively. After the transformation, the whole ``beforehand cut'' was applied. At last, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_{sun}$ spectrum was used as the smeared $PDF$ for that quantity. For example, if the $E_{fit}$ is smeared by scaling up: $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_{sun}$ after the ``beforehand cut'' and TMVA BDT selection is used as the ``energy scale-up $PDF$''.
 
-Fig.~\ref{smearESpdfs} shows the effects of smearing the energy resolution and direction on the MC $PDF$. The original MC $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms. 
+Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, energy scale and energy resolution on the MC $PDF$. The original MC $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms.
+
 \begin{figure}[htbp]
 	\centering
-	\subfigure[Smearing direction parameter $\delta_\theta$. The histogram with black solid line is the original. The blue dotted histogram is for smearing down and the red dashed is for smearing up.]{ 
+	\subfigure[Smearing direction parameter $\delta_\theta$.]{ 
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=8cm]{smearCosSunPDF_Dir.pdf}
 		\end{minipage}
 	}
-	\subfigure[Smearing energy resolution. Red dashed line for smearing down the $E_{resol}$.]{ 
+	\subfigure[Smearing energy resolution $\Delta_b$.]{ 
 		\begin{minipage}[b]{0.5\textwidth}
 			\centering
 			\includegraphics[width=8cm]{smearCosSunPDF_Eresol.pdf}
 		\end{minipage}
 	}
-	%	\subfigure[Smearing energy scale. The histogram with black solid line is the original. The blue dotted histogram is for smearing down and the red dashed is for smearing up.]{ 
-	%		\begin{minipage}[t]{0.4\textwidth}
-	%			\centering
-	%			\includegraphics[width=8cm]{smearCosSunPDF_Escale.pdf}
-	%		\end{minipage}
-	%	}
-	\caption[Smearing effects on the $\cos\theta_{sun}$.]{Smearing effects on the $\cos\theta_{sun}$.	\label{smearESpdfs}}
+	\subfigure[Smearing energy scale $\Delta_{\delta_E}$.]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=8cm]{smearCosSunPDF_Escale.pdf}
+		\end{minipage}
+		}
+	\caption[Smearing effects on the $\cos\theta_{sun}$ $PDF$.]{Smearing effects on the $\cos\theta_{sun}$. The histogram with solid black line is the $PDF$ before smearing. The dotted blue histogram is for smearing up the quantity (i.e., taking the positive values) and the dashed red is for smearing down (i.e., taking the positive values).\label{smearESpdfs}}
 \end{figure}   
 
-Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} to the MC ES $PDF$, and then refit the data with the smeared $PDF$s one by one, the smeared values of the flux ratio ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table.~\ref{tab:smearingResults}.
+Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} to the MC ES $PDF$, and then refitting the data with the smeared $PDF$s for each quantity, the smeared values of the flux fractions ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table.~\ref{tab:smearingResults}.
 
 It finds that the systematic uncertainties from the smeared position and $\beta_{14}$ are negligible, while the direction and energy smearing give more significant uncertainties. 
 \begin{table}[ht]
@@ -788,7 +789,7 @@ Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that
 
 By using the same procedure to evaluate the systematics of the elastic scattering flux fraction ($f^{ES}_s$), it gives ${f^{ES}_s}^{+0.009655}_{-0.008305}$.
 
-\subsubsection{A Summary of the Results}
+\subsubsection{A Summary of the Results} \label{sect:solarESresults}
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
 {\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.48\pm 0.44(stats.)^{+0.13}_{-0.10}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.}
