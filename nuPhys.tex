@@ -1,9 +1,9 @@
 %\epigraph{Yesterday's rose stands only in name, we hold only empty names.}{--- \textup{Umberto Eco}, \textit{The Name of Rose}}
 This Chapter introduces the properties of neutrinos and their interactions, focusing on the weak interactions, neutrino mass and flavor transformations. 
 
-Since the first discovery of the neutrinos in the 1950s, different types of neutrino experiments have measured and studied neutrinos produced from different sources, which are mainly: the core of the Sun, the Earth's mantle and crust, the atmosphere, fission reactors, accelerator beams, and astrophysical objects, such as supernovae in space. These sources produce solar neutrinos, geoneutrinos, atmospheric neutrinos, reactor antineutrinos, accelerator neutrinos and supernova/astrophysical neutrinos respectively. Among them, the experiments measuring solar neutrinos have unraveled the phenomenon of neutrino flavor transformations in the matter. The solar neutrino experiments relevant to the analysis presented in Chapter 6 are introduced. The rest of the Chapter introduces the major physics target for SNO+: the neutrinoless double beta decay, and the relevant experiments.
+Since the first discovery of the neutrinos in the 1950s, different types of neutrino experiments have measured and studied neutrinos produced from different sources, which are mainly: the core of the Sun, the Earth's mantle and crust, the atmosphere, fission reactors, accelerator beams, and astrophysical objects, such as supernovae in space. These sources produce solar neutrinos, geoneutrinos, atmospheric neutrinos, reactor antineutrinos, accelerator neutrinos and supernova/astrophysical neutrinos respectively. Among them, the experiments measuring solar neutrinos have unraveled the phenomenon of neutrino flavor transformations in the matter. The solar neutrino experiments relevant to the analysis presented in Chapter 6 are introduced. The last section of this chapter introduces the major physics target for SNO+: the neutrinoless double beta decay, and the relevant experiments.
 
-\section{Neutrinos}
+\section{Overview}
 
 A neutrino is a spin-1/2 fermion with a neutral electric charge and only interacts via weak interaction and gravity. Its basic properties and interactions are described by the Standard Model (SM), a theory describing the properties of all elementary particles currently observed and their interactions based on the three fundamental forces: the strong, weak, and electromagnetic forces. Notably, gravity as one of the fundamental forces is not included in the SM, and it still waits for a new theory. 
 
@@ -19,49 +19,80 @@ In 1934, Fermi developed the four-fermion vertex interaction theory to describe 
 
 In 1962, Lederman, Schwartz, and Steinberger demonstrated that more than one type of neutrino exists by detecting the interactions of the muon neutrino ($\nu_\mu$)\cite{danby1962observation}. The tauon neutrino ($\nu_\tau$) was proposed after the discovery of the $\tau$ lepton and was observed in 2000 by the DONUT collaboration\cite{kodama2001observation}. The decay width of the $Z^0$ boson measured by the ALEPH collaboration implied that based on the SM, the number of light neutrino species is three\cite{decamp1989determination}.
 
-Currently, we know that neutrinos have three leptonic flavors, and they only participate in the weak and gravitational interactions, while the latter can be neglected in the particle-scale. In the weak interactions, a neutrino $\nu_\alpha$ is generated with a definite leptonic flavor, accompanied by one of the three charged leptons: electron ($e$), muon ($\mu$) or tauon ($\tau$). It is identified as an electron neutrino ($\nu_e$), a muon neutrino ($\nu_\mu$), or a tauon neutrino ($\nu_\tau$).
+Currently, there are three flavor neutrinos described in the SM. Neutrinos mostly participate in the weak interaction, while the other interactions are negligible. Via weak interaction, a neutrino $\nu_x$ is generated with a definite leptonic flavor, accompanied by one of the three charged leptons: electron ($e$), muon ($\mu$) or tauon ($\tau$), from which it is identified as an electron neutrino ($\nu_e$), a muon neutrino ($\nu_\mu$), or a tauon neutrino ($\nu_\tau$). By observing the produced secondarycharged particles, neutrinos can be detected.
 
-The weak interactions are described in the SM by fermions exchanging $W^{\pm}$ and $Z^0$ bosons known as weak force carriers. 
+\section{Neutrino Interactions}\label{sect:nuInteraction}
+
+In the SM, the weak interaction is described by the electroweak theory based on the Glashow-Weinberg-Salam (GWS) model, as fermions exchanging three types of gauge bosons known as weak force carriers: the charged $W^{\pm}$, and the neutral $Z^0$. 
+
+lepton number and lepton flavor conservation 
+
+In the SM, only the left-handed neutrino and right-handed antineutrino can take part in the weak interaction. 
 
 % The charged-current (CC) interaction is mediated by the charged vector bosons $W^\pm$, while the neutral-current (NC) is mediated by the neutral vector boson $Z^0$.
 
-In the SM, only the left-handed neutrino and right-handed antineutrino can take part in the weak interaction.
+Neutrino interactions mainly include the neutrino-electron scatterings, hadron decays and neutrino-nucleon scatterings\cite{giunti2007fundamentals}. 
+
+deep inelastic scattering
+
+For higher energy, 
+the neutrino-electron elastic scattering
+
+The next section mainly focuses on the low-energy (in the ``few to few tens of MeV range'', $\mathcal{O}$(0.1-10 MeV)) 
+\begin{table}
+	 	\caption{Neutrino interactions in $\mathcal{O}$(0.1-10 MeV) energy region, modified from Ref.~\cite{antonio2018state}.\label{tab:nuInteraction}.}
+ \begin{tabular*}{130mm}{ccc}
+	\toprule 
+	ES & IBD  & Nuclear Interactions\\
+	\midrule
+    $\overset{(-)}\nu_x+e^-\to \overset{(-)}\nu_x+e^-$ & $\bar{\nu}_e+p\to n+e^+$ & $\nu_e+(N,Z)\to(N-1,Z+1)+e^-$\\
+    $\overset{(-)}\nu_x+p\to \overset{(-)}\nu_x+p$ &   & $\bar{\nu}_e+(N,Z)\to(N+1,Z-1)+e^+$\\
+   & & $\nu_x+A\to \nu_x+A^*$\\
+   & & $\nu_x+A\to \nu_x+A$\\
+	\bottomrule	
+\end{tabular*}
+\end{table}
 
 
-
-lepton number conservation
-
-Neutrino interactions mainly include the neutrino-electron scatterings, hadron decays and neutrino-nucleon scatterings\cite{giunti2007fundamentals}. The next section mainly focuses on the low-energy ($\mathcal{O}$(MeV)) neutrino-electron ($\nu+e^-$) elastic scattering, which plays an important role in the detection of solar neutrinos.
-
-\section{Neutrino-Electron Elastic Scattering}\label{sect:nuInteraction}
-The $\nu+e^-$ elastic scattering (ES): $\nu_x + e^{-}\to\nu_x+e^-$ (also for $\bar{\nu}_x$) is a pure leptonic process and can be precisely described by the electroweak theory in the SM. The amplitude for this process is contributed by both neutral current (NC) and charged current (CC) interactions. Fig.~\ref{fig:feynman-es} shows the tree-level Feynman diagrams (without radiative corrections).
-
-The $\nu+e^-$ ES is sensitive to all neutrino flavors, but the $\nu_e$ can undergo CC (exchanging W boson) (as shown in Fig.~\ref{fig:feynman-es}) and NC (exchanging $Z^0$ boson) interactions, whereas $\nu_\mu$ and $\nu_\tau$ interact only through the
-NC. 
+conservation of momentum.
 
 for the neutrinos with $\mathcal{O}$(10 MeV) energy, especially the solar neutrinos (will be discussed in Sect.~\ref{sect:solarNu}), 
 
+The next section will focus on the $\nu+e^-$ ES, which plays an important role in the detection of solar neutrinos.
+
+
+
+\subsection{Neutrino-Electron Elastic Scattering}\label{sect:NuEStheory}
+The $\nu+e^-$ ES process: $\nu_x + e^{-}\to\nu_x+e^-$ is a pure leptonic process and can be precisely described by the electroweak theory in the SM. Here $x=e,\mu,\tau$, which means the $\nu+e^-$ ES is sensitive to all neutrino flavors. It is valid for both neutrino and antineutrino.
+
+The amplitude for this process is contributed by both neutral current (NC) and charged current (CC) interactions. Fig.~\ref{fig:feynman-es} shows the tree-level Feynman diagrams (without radiative corrections) for the CC ES (Fig.~\ref{fig:feynman-es:a}) and the NC ES (Fig.~\ref{fig:feynman-es:b}).
+
+From the diagrams, the $\nu_e$ can undergo both the CC ES and NC ES interactions, whereas $\nu_{\mu}$ and $\nu_\tau$ interact only through the NC ES interaction\footnote{For $\bar{\nu}_e$, the Feynman diagram of the CC ES is a s-channel diagram rather than the t-channel presented in Fig~\ref{fig:feynman-es:a}. While for the NC ES, the Feynman diagram is same for all flavors $\bar{\nu}_x$.}\cite{giunti2007fundamentals,xing2011neutrinos}. 
 
 \begin{figure}[htbp]
 	\centering
-	\begin{minipage}[t]{0.45\textwidth}{(a)}
-		\centering
-		\includegraphics[width=4.5cm]{charged-1.eps}
+	\subfigure[CC ES.\label{fig:feynman-es:a}]{ 
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering %\label{fig:feynman-es:CC_ES}
+		\includegraphics[height=4.5cm]{charged.eps}
 	\end{minipage}
-	\begin{minipage}[t]{0.3\textwidth}{(b)}
-		\centering
-		\includegraphics[height=4cm]{charged.eps}
-	\end{minipage}
-	\begin{minipage}[t]{0.4\textwidth}{(c)}
-		\centering
-		\includegraphics[height=4cm]{neutral.eps}
-	\end{minipage}
-	\caption[Feynman diagrams for the elastic scattering interaction in different channels at tree level.]{Feynman diagrams for the elastic scattering interaction in different channels at tree level. (a) and (b): CC for s and t channels, respectively; (c): NC.}
-	\label{fig:feynman-es}
+}
+	\subfigure[NC ES.\label{fig:feynman-es:b}]{ 
+	\begin{minipage}[b]{0.35\textwidth}
+	\centering % \label{fig:feynman-es:NC_ES}
+	\includegraphics[height=4.5cm]{neutral.eps}
+    \end{minipage}
+}
+	\caption[Feynman diagrams for the elastic scattering interaction in different channels at tree level.]{Feynman diagrams for the elastic scattering interaction in different channels at tree level. (a): CC ES for $\nu_e$; (b): NC ES for all flavors $\nu_x$ ($x=e,\mu,\tau$).\label{fig:feynman-es}}
 \end{figure}
+%	\begin{minipage}[t]{0.45\textwidth}{(b)}
+%	\centering
+%	\includegraphics[width=5cm]{charged_antiNu.eps}
+%\end{minipage}
+
 
 In a particle detector, the electron is usually from the atom of detection medium. 
-conservation of momentum.
+
 In the laboratory frame, the kinetic energy of a recoil electron from the $\nu+e^-$ ES process is\cite{giunti2007fundamentals}:
 \begin{equation}
 T_e = \frac{2m_eE_\nu^2\cos^2\theta}{(m_e+E_\nu)^2-E_\nu^2\cos^2\theta},
@@ -80,20 +111,21 @@ The direction of the scattered electron is strongly correlated with the directio
 \cos\theta_{sun}=\sqrt{\frac{T_e(m_e+E_\nu)^2}{2m_eE_\nu^2+T_eE_\nu^2}},
 \end{equation}
 
-The differential cross section of the $\nu+e^-$ ES in the lab frame (without radiative corrections) is given by\cite{suzuki2020sun,xing2011neutrinos,giunti2007fundamentals}:
+The differential cross-section of the $\nu+e^-$ ES in the lab frame (without radiative corrections) is given by\cite{suzuki2020sun,xing2011neutrinos,giunti2007fundamentals}:
 \begin{equation}
 \frac{d\sigma}{dT_e}(E_\nu,T_e)=\frac{G_F^2m_e}{2\pi}\left[(c_V+c_A)+(c_V-c_A)^2\left(1-\frac{T_e}{E_\nu}\right)^2-(c_V^2-c_A^2)\frac{m_eT_e}{E_\nu^2}\right],
 \end{equation}
-where the coupling parameters $c_V=(2\sin^2\theta_W\pm\frac{1}{2})$, $c_A=\pm\frac{1}{2}$, $\sin^2\theta_W=0.23$, and the ``$+$'' sign is for the $\nu_e+e^-$ case while ``$-$'' sign is for the $\nu_{\mu,\tau}+e^-$ case.
+where the coupling parameters $c_V=2\sin^2\theta_W\pm\frac{1}{2}$, $c_A=\pm\frac{1}{2}$, and the ``$+$'' sign is for the $\nu_e+e^-$ case while ``$-$'' sign is for the $\nu_{\mu,\tau}+e^-$ cases. The $G_F=$, and the $\theta_W$
+and its value is given by and $\sin^2\theta_W=0.23$.
 
 The maximum energy of the recoil electron is: $T_{max}=\frac{2E^2_\nu}{2E_\nu+m_e c^2}$, and
-the cross-section is $\sigma^{ES}(\nu_e e^-)=9.52\times 10^{-44}(E_\nu/10~\mathrm{MeV)~cm^2}$
+the cross-section is $\sigma^{ES}(\nu_e +e^-)=9.52\times 10^{-44}~(E_\nu/10~\mathrm{MeV)~cm^2}$
 the expected solar neutrino rate is 
 $R=A\int_{T_{thresh}}^{T_{max}}\frac{d\sigma}{dE}\frac{dN}{dE_\nu}dE_\nu$.
-
+ 
 The shape of the recoil electron energy spectrum and the directionality are utilized by the experiments to tag solar neutrinos in real-time\cite{suzuki2020sun}. These experiments will be introduced in Sect.~\ref{sect:solarNu}.
 
-For the solar neutrino case, $E_\nu\gg m_e$, the total cross section of $\nu_e+e^-$ ES and $\nu_x+e^-$ ES ($x=\mu$ or $\tau$) can safely approximate to\cite{xing2011neutrinos}:
+For the solar neutrino case, $E_\nu\gg m_e$, the total cross-section of $\nu_e+e^-$ ES and $\nu_x+e^-$ ES ($x=\mu$ or $\tau$) can safely approximate to\cite{xing2011neutrinos}:
 \begin{equation}
 \begin{aligned}
 \sigma^{ES}(\nu_e+e^-) = \frac{2G_F^2}{\pi}m_e E_\nu \left[(1+c_L)^2+\frac{1}{3}(c_R)^2\right],\\
@@ -104,10 +136,12 @@ where $x=\mu$ or $\tau$, $c_L=\frac{(c_V+c_A)}{2}$ and $c_R = \frac{(c_V-c_A)}{2
 
 Then the ratio of $\sigma^{ES}(\nu_{\mu,\tau}+e^-)$ to $\sigma^{ES}(\nu_e+e^-)$ is\cite{xing2011neutrinos}:
 \begin{equation}
-\frac{\sigma^{ES}(\nu_{x} e^-)}{\sigma^{ES}(\nu_e e^-)} = \frac{3(c_L)^2+({c_R})^2}{3(1+c_L)^2+(c_R)^2} \approx 0.155,
+\frac{\sigma^{ES}(\nu_{x}+e^-)}{\sigma^{ES}(\nu_e+e^-)} = \frac{3(c_L)^2+({c_R})^2}{3(1+c_L)^2+(c_R)^2} \approx 0.155,
 \end{equation}
 
-Or, the cross section of the CC ES is about 6.5 times larger than the NC ES. %This indicates that for the experiments measuring the $\nu$ via the $\nu e^-$ ES channel, for the same exposure (detector running time$\time$ active target mass), the number of the measured $\nu_e$ is about 6.5 times the number of $\nu_\mu$ or $\nu_\tau$.  
+Or, the cross-section of the CC ES is about 6.5 times larger than the NC ES. Therefore, if the fluxes of $\nu_e$ and $\nu_{\mu}$ (or $\nu_\tau$) coming to the detector are the same, the number of detected $\nu_e$ is statistically expected to be about 6.5 times than the $\nu_{\mu}$ (or $\nu_\tau$). This fact was an input in the solar neutrino simulations, which will be discussed in Sect.~\ref{sect:evaluateFlux}, Chapter 6. 
+
+%This indicates that for the experiments measuring the $\nu$ via the $\nu e^-$ ES channel, for the same exposure (detector running time$\time$ active target mass), the number of the measured $\nu_e$ is about 6.5 times the number of $\nu_\mu$ or $\nu_\tau$.  
 
 \section{Neutrino Flavor Transformation}
 Neutrino flavor transformation is a quantum mechanical interference phenomenon\cite{akhmedov2019quantum}. It was first discovered in 1998, based on the analysis of atmospheric neutrino fluxes measured by the Super-Kamiokande (Super-K) experiment to solve the ``atmospheric neutrino anomaly''\cite{fukuda1998evidence}. It is the first direct evidence showing that neutrinos have finite masses and the SM is incomplete.
@@ -228,7 +262,7 @@ This provides a measure of CP violation\cite{aitchison2012gauge}:
 where the $\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$\cite{xing2011neutrinos}. In 2019, the Tokai-to-Kamioka (T2K) experiment in Japan claimed confidence intervals for $\delta_{CP}$ with three standard deviations ($3\sigma$): [-3.41,-0.03] (NH) or [-2.54,-0.32] (IH). This result indicates that the CP violation exists in leptons\cite{abe2019constraint}.
 
 \subsection{Matter Effect}\label{sect:MSW}
-The matter effect is caused by neutrinos interacting with ambient electrons and nucleons in the matter such as the Sun or the Earth. As mentioned in Sect.~\ref{sect:nuInteraction}, $\nu_e$ interacts with electrons via both charged weak current and neutral weak current while $\nu_\mu$ and $\nu_\tau$ interact only by the neutral current. The $\nu_e$ energy has an addition term, $V_{CC} =\sqrt2G_Fn_e$, where $n_e$ is the number density of the electrons in matter and $G_F$ is the Fermi coupling constant for the weak interaction. This affects the oscillation probabilities for neutrinos propagating in matter compared to vacuum, which is called the Mikheyev-Smirnov-Wolfenstein (MSW) mechanism\cite{smirnov2016solar,smirnov2005msw}.
+The matter effect is caused by neutrinos interacting with ambient electrons and nucleons in the matter such as the Sun or the Earth. As mentioned in Sect.~\ref{sect:NuEStheory}, $\nu_e$ interacts with electrons via both charged weak current and neutral weak current while $\nu_\mu$ and $\nu_\tau$ interact only by the neutral current. The $\nu_e$ energy has an addition term, $V_{CC} =\sqrt2G_Fn_e$, where $n_e$ is the number density of the electrons in matter and $G_F$ is the Fermi coupling constant for the weak interaction. This affects the oscillation probabilities for neutrinos propagating in matter compared to vacuum, which is called the Mikheyev-Smirnov-Wolfenstein (MSW) mechanism\cite{smirnov2016solar,smirnov2005msw}.
 
 In vacuum two-flavor mixing, the Schr\"{o}dinger equation can be written (in natural units)\cite{xing2011neutrinos}:
 \begin{equation}\label{eq:2flavor_simple}
@@ -380,13 +414,13 @@ The solar neutrino problem was later confirmed by the Kamiokande-II experiment i
 
 In 2000, Super-K reported the observed solar neutrino flux was about 45\% of the expected flux in SSM with more than 99.9\% confidence level, suggesting the flavor transformation of solar neutrinos and limiting the oscillation parameters ($\Delta m^2_{21}$, $\theta_{12}$)\cite{superKwebsite}. 
 
-Super-K continues to measure solar neutrinos with more precision and high statistical accuracy and it is able to lower down the energy threshold to 3.5 MeV to search for the $^8$B solar neutrinos. The fourth phase of Super-K (Super-K-IV) took data from 2008 to 2014, and by utilizing this 1664 live-day data, Super-K-IV reported a measurement of the elastic scattering flux as: $\Phi_{ES}=(2.308\pm0.020(stat.)^{+0.039}_{-0.040}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}$\cite{abe2016solar}. Combined with the previous three phases, it gives $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}$\cite{abe2016solar}. These values will be compared to the measurement of this thesis in Sect.~\ref{sect:solarESresults}, Chapter 6.
+Super-K continues to measure solar neutrinos with more precision and high statistical accuracy and it is able to lower down the energy threshold to 3.5 MeV to search for the $^8$B solar neutrinos. The fourth phase of Super-K (Super-K-IV) took data from 2008 to 2014, and by utilizing this 1664 live-day data, Super-K-IV reported a measurement of the elastic scattering flux as: $\Phi_{ES}=(2.308\pm0.020(stat.)^{+0.039}_{-0.040}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}$\cite{abe2016solar}. Combined with the previous three phases, it gives $\Phi_{ES}=(2.345\pm0.014(stat.)\pm 0.036(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}$\cite{abe2016solar}. These values will be compared to the measurement of this thesis in Chapter 6.
 
 \subsection{SNO}
 It was the Sudbury Neutrino Observatory (SNO) experiment finally resolved the solar neutrino problem and first confirmed that the missing solar neutrinos are due to the neutrino flavor transformation $\nu_e\to\nu_{\mu,\tau}$, along with the matter effect mentioned in Sect.~\ref{sect:MSW}. 
 
 SNO used a 1-kilotonne heavy water (D$_2$O) Cherenkov detector to distinguish the flavors of solar neutrinos. The SNO detector was sensitive to the $^8$B solar neutrinos via three interactions: (1) the charged current (CC) on deuteron ($d$):
-$\nu_e+d\to p+p+e^-$, (2) the neutral current (NC): $\nu_x+d\to p+n+\nu_x$, and (3) the elastic scattering (ES): $\nu_x+e^-\to \nu_x+e^-$. The CC channel was only sensitive to $\nu_e$ while the NC channel was independent of the neutrino type (``flavor-blind''), which provided a measurement of the total solar neutrino flux regardless of neutrino flavors. The ES channel was also sensitive to all flavors but with reduced sensitivities to $\nu_\mu$ and $\nu_\tau$\cite{ahmad2002direct}. As mentioned in Sect.~\ref{sect:nuInteraction}, the ES cross-section of $\nu_e$ is 6.5 times larger than the $\nu_{\mu,\tau}$. 
+$\nu_e+d\to p+p+e^-$, (2) the neutral current (NC): $\nu_x+d\to p+n+\nu_x$, and (3) the elastic scattering (ES): $\nu_x+e^-\to \nu_x+e^-$. The CC channel was only sensitive to $\nu_e$ while the NC channel was independent of the neutrino type (``flavor-blind''), which provided a measurement of the total solar neutrino flux regardless of neutrino flavors. The ES channel was also sensitive to all flavors but with reduced sensitivities to $\nu_\mu$ and $\nu_\tau$\cite{ahmad2002direct}. As mentioned in Sect.~\ref{sect:NuEStheory}, the ES cross-section of $\nu_e$ is 6.5 times larger than the $\nu_{\mu,\tau}$. 
 
 In 2002, SNO reported that the measured total $^8$B solar neutrino flux
 via the NC channel ($\Phi_{NC}$) was consistent with the SSM while the $\nu_e$
@@ -399,7 +433,7 @@ A combined analysis of SNO data acquired from 1999 to 2006 gave the measured tot
 \cite{aharmim2013combined}.
 
 \subsection{Combined Analysis of Solar and Reactor Measurements}
-As mentioned in Sect.~\ref{sect:VacuumOsci}, the reactor antineutrino experiments study the neutrino flavor transformation by measuring $\mathcal{O}$(MeV) $\bar{\nu}_e$ produced from reactors. If the distance between the reactor and the detector is long enough (according to Eqn.~\ref{oscillationCondition}, $L\sim\mathcal{O}(100$~km)), such experiments can probe the $\Delta m^2_{12}$ and $\theta_{12}$ parameters, or the flavor transformation parameters in the solar sector. KamLAND is able to study the solar sector due to its long baseline of 180 kilometers (the average value of the distances to the various reactors). It is a 1-kilotonne liquid scintillator detector, located in Gifu Prefecture, Japan, under Mount Ikenoyama at a depth of about 2700 $m.w.e$\cite{abe2008precision}.
+As mentioned in Sect.~\ref{sect:VacuumOsci}, the reactor antineutrino experiments study the neutrino flavor transformation by measuring $\mathcal{O}$(MeV) $\bar{\nu}_e$ produced from reactors. If the distance between the reactor and the detector is long enough (according to Eqn.~\ref{oscillationCondition}, $L\sim\mathcal{O}(100$~km)), such experiments can probe the $\Delta m^2_{12}$ and $\theta_{12}$ parameters, or the flavor transformation parameters in the solar sector. KamLAND is able to study the solar sector due to its long baseline of 180 kilometers (the average value of the distances to the various reactors). It is a 1-kilotonne liquid scintillator detector, located in Gifu Prefecture, Japan, under Mount Ikenoyama at a depth of about 2700 $m.w.e$\cite{abe2008precision}. 
 
 Assuming the CPT invariance, the KamLAND and solar neutrino data can be combined by including solar $\nu_e$ and reactor $\bar{\nu}_e$ data to obtain the oscillation parameters.
 $\Delta m^2_{21}$
@@ -423,10 +457,13 @@ In 2020, Borexino reported the first observation of CNO neutrino\cite{borexino20
 %(1)$^{11}$C nuclei induced by the high energy cosmic muon spallation reactions cause a large background contribution. While for SNO+, since it is located at SNOLAB and more deeper,  \cite{whitepaper}.
 %(2)intrinsic $\beta$-decays from $^{210}$Bi contaminate the fiducial volume 
 
-\subsection{More Studies on Solar Neutrino and Future Experiments}
+\subsection{More Studies on Solar Neutrino and Future Experiments}\label{sect:futureSolar}
 %%% Since neutrinos' extremely low interaction cross-sections, neutrinos produced in the Sun can reach the detectors on the Earth without being interrupted. Since neutrinos' extremely low interaction cross-sections, neutrinos produced in the Sun can reach the detectors on the Earth without being interrupted. 
 There are three aspects for the solar neutrino research in the future: (1) precision measurements of solar neutrino fluxes, (2) 
 sub-leading effects on the phenomenology from both standard and nonstandard physics, and (3) new detection techniques\cite{antonio2018state}.
+
+The pep neutrinos are mono-energetic, with $E_\nu$=1.442 MeV and their flux is well predicted by the Standard Solar Model\cite{davini2016cno}. A measurement of the pep neutrinos will give more information on the matter effects in neutrino oscillations. 
+The solar metallicity is the abundance of elements heavier than $^4$He (called ``metal'' elements in the context of astronomy). It is poorly constrained and the predictions from different solar models disagree with each other. A measurement of the CNO neutrinos can give the abundance of $^{12}$C, $^{13}$N and $^{15}$O and can thus resolve the metallicity problem\cite{cerdeno2018cno}.
 
 Precise measurements of low energy solar neutrinos can probe the details of the matter effects, 
 
@@ -481,7 +518,7 @@ With the improving sensitivities, ton-scale dark matter direct search experiment
 
 DUNE
 
-Among these experiments, SNO+ has measured $^8$B solar neutrino flux in its initial water phase. In the next scintillator phase, SNO+ is able to measure low energy solar neutrinos ($E_\nu<2$ MeV), especially for the CNO and $pep$ neutrinos. Due to the depth of SNOLAB (will be discussed in Sect.~\ref{sect:overview}, Chapter 3), SNO+ is expected to have much lower cosmogenic backgrounds than the Borexino, and thus may obtain more precise measurements\cite{directorReview}. 
+Among these experiments, SNO+ has measured $^8$B solar neutrino flux in its initial water phase\cite{anderson2019measurement}. In the next scintillator phase, SNO+ is able to measure low energy solar neutrinos ($E_\nu<2$ MeV), especially for the CNO and $pep$ neutrinos. Due to the depth of SNOLAB, SNO+ is expected to have much lower cosmogenic backgrounds than the Borexino, and thus may obtain more precise measurements\cite{directorReview}. More details will be discussed in Sect.~\ref{sect:scintPhase}, Chapter 3.
 
 \section{Neutrinoless Double Beta Decay}\label{sect:doublebeta}
 The neutrino flavor transformation experiments proved that neutrinos are not massless and have finite masses. However, in these experiments, the mass differences, rather than the absolute mass values are measured so we can not know the absolute scale of neutrino masses from these results. Currently, there are mainly three approaches to probe the neutrino masses\cite{valle2015neutrinos}: (1) Cosmological measurements\cite{aghanim2020planck,dvorkin2019neutrino,lesgourgues2013neutrino}; (2) Direct measurements of the $\beta$-decay spectrum; and (3) A search for the neutrinoless double beta decay ($0\nu\beta\beta$) process, which will be discussed below.
@@ -491,18 +528,21 @@ For heavy radioactive isotopes ($A>70$) with nuclei of even neutron number and e
 In the SM, neutrinos are fermions without carrying electrical charges. A conjecture raised up is that they could be ``truly neutral'', i.e., no charge-like quantum number can be used to distinguish a neutrino and an antineutrino\cite{akhmedov2014majorana}. Such a neutral fermion 
 that is its own antiparticle, is called Majorana particle, which was proposed by Ettore Majorana based on a mathematical modification of the Dirac equation\cite{majorana2006symmetric}.
 
-Proposed by W.H.Furry in 1939\cite{furry1939transition}, if neutrinos are Majorana particles (Majorana neutrinos), a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected: $(Z,A) \to (Z+2,A)+2e^{-}+Q_{\beta\beta}$. In this process, the lepton number is violated by 2, which is not allowed in the SM and New Physics interpretations are required. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Fig.~\ref{feynman1}.
+Proposed by W.H.Furry in 1939\cite{furry1939transition}, if neutrinos are Majorana particles (Majorana neutrinos), a process called neutrinoless double beta decay ($0\nu\beta\beta$) will also be expected: $(Z,A) \to (Z+2,A)+2e^{-}+Q_{\beta\beta}$. In this process, the lepton number is violated by 2, which is not allowed in the SM and New Physics interpretations are required. The Feynman diagrams of $2\nu\beta\beta$ and $0\nu\beta\beta$ are illustrated in Fig.~\ref{fig:feynman}.
 \begin{figure}[htbp]
 	\centering
-	{	
-		\begin{minipage}[t]{0.45\textwidth}{(a)}
+	{
+	\subfigure[$2\nu\beta\beta$.\label{fig:feynman:2nubb}]{
+		\begin{minipage}[t]{0.45\textwidth}
 			\includegraphics[width=5cm]{doubleBeta2nu_feynman.png}
 		\end{minipage}
-		\begin{minipage}[t]{0.45\textwidth}{(b)}
+	}
+	\subfigure[$0\nu\beta\beta$.\label{fig:feynman:0nubb}]{
+		\begin{minipage}[t]{0.45\textwidth}
 			\includegraphics[width=5cm]{doubleBeta_feynman.png}
 		\end{minipage}
-		\caption[Feynman diagrams for $2\nu\beta\beta$ and $0\nu\beta\beta$.]{Feynman diagrams for $2\nu\beta\beta$ (a) and $0\nu\beta\beta$ (b).}
-		\label{feynman1}
+	}
+		\caption[Feynman diagrams for $2\nu\beta\beta$ and $0\nu\beta\beta$.]{Feynman diagrams for $2\nu\beta\beta$ (a) and $0\nu\beta\beta$ (b).		\label{fig:feynman}}
 	}
 \end{figure}
 
