@@ -3,24 +3,24 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1238 of file thesis.bib
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
+Repeated entry---line 1275 of file thesis.bib
  : @article{tanner0p5
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1327 of file thesis.bib
+Repeated entry---line 1364 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Reallocated field_info (elt_size=4) to 10014 items from 5000.
-Repeated entry---line 1657 of file thesis.bib
+Repeated entry---line 1694 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1710 of file thesis.bib
+Repeated entry---line 1747 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1891 of file thesis.bib
+Repeated entry---line 1928 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -100,45 +100,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 220 entries,
+You've used 223 entries,
             1876 wiz_defined-function locations,
-            1515 strings with 38372 characters,
-and the built_in function-call counts, 46921 in all, are:
-= -- 4040
-> -- 2696
+            1529 strings with 38891 characters,
+and the built_in function-call counts, 47903 in all, are:
+= -- 4131
+> -- 2749
 < -- 0
-+ -- 1012
-- -- 792
-* -- 3338
-:= -- 7305
-add.period$ -- 282
-call.type$ -- 220
-change.case$ -- 165
++ -- 1031
+- -- 808
+* -- 3403
+:= -- 7440
+add.period$ -- 285
+call.type$ -- 223
+change.case$ -- 168
 chr.to.int$ -- 0
-cite$ -- 294
-duplicate$ -- 2550
-empty$ -- 4301
-format.name$ -- 792
-if$ -- 11056
+cite$ -- 297
+duplicate$ -- 2612
+empty$ -- 4378
+format.name$ -- 808
+if$ -- 11302
 int.to.chr$ -- 0
-int.to.str$ -- 220
-missing$ -- 221
-newline$ -- 726
-num.names$ -- 213
-pop$ -- 817
+int.to.str$ -- 223
+missing$ -- 224
+newline$ -- 735
+num.names$ -- 216
+pop$ -- 828
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1271
+skip$ -- 1324
 stack$ -- 0
-substring$ -- 1144
-swap$ -- 840
+substring$ -- 1176
+swap$ -- 875
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 74
-while$ -- 332
-width$ -- 223
-write$ -- 1996
+while$ -- 338
+width$ -- 226
+write$ -- 2028
 (There were 5 error messages)
