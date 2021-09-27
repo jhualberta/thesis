@@ -94,27 +94,27 @@
 \contentsline {section}{\numberline {6.2}Kullback–Leibler Divergence for High Level Cuts}{151}{section.6.2}
 \contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{153}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{153}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Signal-background Discrimination Based on TMVA}{155}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.2.1}TMVA Outputs for Data}{162}{subsubsection.6.3.2.1}
-\contentsline {subsection}{\numberline {6.3.3}Discussions on the TMVA Results}{162}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Likelihood Fits for Solar Neutrino Candidate Events}{163}{subsection.6.3.4}
-\contentsline {subsubsection}{\numberline {6.3.4.1}Maximum Likelihood Fit}{164}{subsubsection.6.3.4.1}
-\contentsline {subsubsection}{\numberline {6.3.4.2}Ensemble Test}{166}{subsubsection.6.3.4.2}
-\contentsline {subsubsection}{\numberline {6.3.4.3}Fitting on the Whole Dataset (run-200004 to 207718)}{168}{subsubsection.6.3.4.3}
-\contentsline {subsubsection}{\numberline {6.3.4.4}Evaluating $^8$B Solar Neutrino Flux}{170}{subsubsection.6.3.4.4}
-\contentsline {subsubsection}{\numberline {6.3.4.5}Systematics Evaluation}{174}{subsubsection.6.3.4.5}
-\contentsline {subsubsection}{\numberline {6.3.4.6}A Summary of the Results}{178}{subsubsection.6.3.4.6}
-\contentsline {subsubsection}{\numberline {6.3.4.7}Limitations of this Study}{179}{subsubsection.6.3.4.7}
-\contentsline {chapter}{\numberline {7}Conclusions}{181}{chapter.7}
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{182}{appendix.A}
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{182}{section.A.1}
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{183}{section.A.2}
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{186}{section.A.3}
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{187}{section.A.4}
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{188}{section.A.5}
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{188}{section.A.6}
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{193}{appendix.B}
-\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{193}{section.B.1}
-\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{199}{appendix.C}
-\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{199}{section.C.1}
-\contentsline {chapter}{References}{201}{appendix*.6}
+\contentsline {subsection}{\numberline {6.3.2}Likelihood Fits for Solar Neutrino Candidate Events}{155}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}Maximum Likelihood Fit}{155}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Ensemble Test}{156}{subsubsection.6.3.2.2}
+\contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{159}{subsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.1}TMVA Outputs on MC and Data}{167}{subsubsection.6.3.3.1}
+\contentsline {subsection}{\numberline {6.3.4}Discussions on the TMVA Results}{169}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Fitting on the Whole Dataset (run-200004 to 207718)}{170}{subsection.6.3.5}
+\contentsline {subsubsection}{\numberline {6.3.5.1}Evaluating $^8$B Solar Neutrino Flux}{172}{subsubsection.6.3.5.1}
+\contentsline {subsubsection}{\numberline {6.3.5.2}Systematics Evaluation}{175}{subsubsection.6.3.5.2}
+\contentsline {subsubsection}{\numberline {6.3.5.3}A Summary of the Results}{179}{subsubsection.6.3.5.3}
+\contentsline {subsubsection}{\numberline {6.3.5.4}Limitations of this Study}{181}{subsubsection.6.3.5.4}
+\contentsline {chapter}{\numberline {7}Conclusions}{183}{chapter.7}
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{184}{appendix.A}
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{184}{section.A.1}
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{185}{section.A.2}
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{188}{section.A.3}
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{189}{section.A.4}
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{190}{section.A.5}
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{190}{section.A.6}
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{195}{appendix.B}
+\contentsline {section}{\numberline {B.1}Information for $^{16}$N Scan Runs}{195}{section.B.1}
+\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{201}{appendix.C}
+\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{201}{section.C.1}
+\contentsline {chapter}{References}{203}{appendix*.6}

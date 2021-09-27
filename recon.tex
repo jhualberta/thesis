@@ -300,7 +300,7 @@ In Fig.~\ref{fig:5MeVbeta_center_water}, there are a few events with position bi
 			\includegraphics[width=8cm]{scaleLogLvsZ_water5MeV.pdf}
 		\end{minipage}
 	}
-	\caption[The position biases against the position FOMs.]{The position biases against the position FoMs. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.}
+	\caption[The position biases against the position FoMs.]{The position biases against the position FoMs. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.}
 \end{figure}
 
 A more generic situation is that the events happen everywhere inside the AV. To simulate this, $e^-$ events were generated at random positions uniformly distributed inside the AV volume and with isotropic directions. Various $e^-$ energies were also simulated, from 2 to 15 MeV with a 1-MeV step. Fig.~\ref{fig:MPWposBias_isoFill} and Fig.~\ref{fig:MPWposResol_isoFill} show the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$) respectively. 
@@ -570,7 +570,7 @@ The next section will discuss the timing $PDF$s used by the fitter.
 
 \subsection{Making Timing $PDF$s}
 
-\subsubsection{Different PPO Concentrations during the Filling}
+\subsubsection{Different PPO Concentrations during the Filling}\label{sect:differentPPOconcen}
 During the partial-fill phase, the water level and the concentration of the PPO were changing. The PPO was gradually added into and mixed with the LAB, and for the relative stable partial-fill stages which were used for taking and analyzing data, the PPO concentrations dissolved in the LAB were 0.25 g/L (earlier stage from 2019 to 2020) or 0.5 g/L (later stage from 2020 to 2021). The planned concentration of the PPO in the scintillator phase is 2 g/L.
 
 An understanding of the characteristic photon emission response is crucial for building the timing $PDF$ for the reconstruction. The Oxford group from the SNO+ collaboration did several bench-top measurements to obtain the time constants and relative light yields of the LAB sample dissolved with the following PPO concentrations: 0.25, 0.5, 1.0, 2.0 and 6.0 g/L\cite{oxfordMeasurement0,oxfordMeasurement}.
@@ -599,6 +599,7 @@ The measured parameters are listed in Table.~\ref{tab:measureAmplitude} and Tabl
 		\end{tabular*}
 	}
 \end{table}
+
 \begin{table}[ht]
 	\centering\label{tab:measureLightYield}
 	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by Ref.~\cite{oxfordMeasurement}.}	

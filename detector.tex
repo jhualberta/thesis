@@ -121,7 +121,7 @@ X. Dai et al.\cite{dai2008wavelength} made a proposal for adding wavelength shif
 There was a proposal of adding wavelength shifter (WLS) into the SNO+ detector in the middle of the water phase, made by the University of Alberta group. The specific wavelength shifter we considered is PPO, which is a well-studied ingredient of the liquid scintillator used in the SNO+ scintillator phase and Te-loaded phase. Although this proposal was not adopted due to the experiment schedule, it is still worthwhile for a conceptual study of a SNO+-like detector that uses water-based wavelength shifter (wbWLS) as the detection medium. In Chapter 4, an event reconstruction algorithm based on the wbWLS is discussed. Based on the algorithm, it shows that comparing the wbWLS to the water, the energy threshold can be pushed down and the event position resolutions can be improved, while the directionality is still kept.
 
 \subsubsection{Unloaded Liquid Scintillator}\label{sect:LS_SNO+}
-SNO+ adopts a liquid scintillator cocktail contains two primary components: LAB as solvent and PPO as solute. LAB is doped with PPO to a concentration of 2 g/L. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{collaboration2020development}.
+SNO+ adopts a liquid scintillator cocktail contains two primary components: LAB as solvent and PPO as solute. The LAB is doped with PPO to a concentration of 2 g/L. This mixture of the LAB and 2 g/L PPO is denoted as the unloaded liquid scintillator in the text. Fig.~\ref{labppo-molecule} shows the chemical structural formulae of LAB and PPO\cite{collaboration2020development}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{lab-ppo-molecule.png}
@@ -129,29 +129,7 @@ SNO+ adopts a liquid scintillator cocktail contains two primary components: LAB 
 	\label{labppo-molecule}
 \end{figure}
 
-LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, collaboration2020development}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and bring very low risks for the environment or human health\cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber to transfer the deposit energy to lights. It also has a long attenuation length of ($72\pm 14$) m at 546 nm and thus \cite{snop_jinst}.
-
-As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor. Energies are transferred from LAB to PPO via non-radiative F{\"o}rster resonant energy transfer. It can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is in the sensitive range of the PMT detection and can also reduce the probability of being the self-absorption of LAB.
-
-A 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB-PPO liquid scintillator has been well-measured from large particle physics experiments \cite{xing2015preliminary,agostini2018comprehensive}, as well as bench-top measurements\cite{xing2015preliminary,kaptanoglu2019cherenkov, novikov}. This mixture of the LAB and PPO is denoted as the unloaded liquid scintillator in the text. The absolute light yield of the unloaded liquid scintillator determined by SNO+ is $11900\pm 60$ photons/MeV, and it is expected to be increased by over 15\% after extensive purification process\cite{snop_jinst,grullon2014light}.
-
-The unloaded liquid scintillator has fast timing response different timing spectrum for $\alpha$ and $\beta$ events, which enables an $\alpha/\beta$ discrimination. It has very low levels of natural radioactive contaminants such as U, Th and K.
-
-The LAB and the PPO used by SNO+ are of ultra purity. The target background levels for the SNO+ LAB are expected to be $\mathcal O(10^{-17})$ gram of $^{238}$U in per gram LAB (g$^{238}$U/gLAB), which is equal to be thousands of events per year;
-The $^{232}$Th and $^{40}$K levels are $\mathcal O(10^{-17})$ g/gLAB, which is equal to be hundreds of events per year\cite{snop_jinst,markchen_bkg}. A liquid scintillator purification plant has been implemented to maintain the optical clarity and radiopurity of the scintillator\cite{snop_jinst}.
-
-good optical transparency  attenuation length   
-  At the target PPO concentration of 2 g/L, the emission decay time will be ∼5 ns. This is fast
-  enough to prevent the decay time from adversely effecting position reconstruction, provided there is
-  a sufficiently high light yield. 
-
-At higher PPO concentrations, the scintillation timing can be slightly
-  faster, but this is offset by an increase in self-absorption.
-
-an effect on the reconstruction is described in Sect.~\ref{sect:ppoConcentration}, Chapter 4.
-    
-Fig.~\ref{absLength} shows absorption lengths.
-
+LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons\cite{wiki_LAB, collaboration2020development}. It has been used as a biodegradable detergent since the 1960s and it is proved to be relatively non-toxic and bring very low risks for the environment or human health\cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber to transfer the deposit energy to lights. It also has a long attenuation length of ($72\pm 14$) m at 546 nm and thus has a good optical transparency\cite{snop_jinst}. Fig.~\ref{absLength} shows the absorption lengths of SNO+ optical components, comparing the LAB, PPO to the water.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{absLength.png}
@@ -159,17 +137,11 @@ Fig.~\ref{absLength} shows absorption lengths.
 	\label{absLength}
 \end{figure}
 
-%non-radiative transfer from LAB (solvent) to PPO (fluor)
-%the non-radiative transfer efficiency for 2g/L PPO in LAB is measured as $78.2\pm 1.5~\%$
-%the transfer efficiencies
+As a wavelength shifter, PPO is usually added and dissolved into the LAB \cite{wunderly1990new}. This wavelength shifter is used as a fluor. Energies are transferred from LAB to PPO via non-radiative F{\"o}rster resonant energy transfer. It can shift the wavelengths of the scintillation photons to a range of 300-550 nm, which is in the sensitive range of the PMT detection and can also reduce the probability of being the self-absorption of LAB. 
 
-This transfer efficiency ($\mathcal{\epsilon}_{transfer}$) increases as the PPO concentration increasing, as shown in the Table. Above the 2 g/L concentration, the light yield reaches a plateau due to self-absorption effects\cite{collaboration2020development}.
+The 2 g/L PPO concentration in LAB is optimized by SNO+\cite{whitepaper}. The absolute light yield of the LAB+ 2g/L PPO mixture has been well-measured from large particle physics experiments\cite{xing2015preliminary,agostini2018comprehensive}, as well as bench-top measurements\cite{xing2015preliminary,kaptanoglu2019cherenkov, novikov}. The absolute light yield determined by SNO+ is $11900\pm 60$ photons/MeV, and it is expected to be increased by over 15\% after extensive purification process\cite{snop_jinst,grullon2014light}. At the 2 g/L PPO concentration, the emission decay time is about 5 ns, which is good enough for the event vertex reconstruction, and this fast timing enables different timing spectrum for $\alpha$ and $\beta$ events, which is crucial to the analysis of the $\alpha/\beta$ discrimination for reducing the backgrounds\cite{snop_jinst}. 
 
-for the partial-fill phase, 0.5 g/L PPO gives Measurements in 0.5 g/L showed a light yield of 52\% of 2 g/L,  
-6190 photons/MeV\cite{tanner0p5,joshW1}.
-
-
-% The optical response of the liquid scintillator.
+During the SNO+ partial-fill phase, the filling amounts of the PPO were at 0.25 g/L, 0.5 g/L and 1 g/L concentrations. When the PPO concentration increases, the PPO transfer efficiency will increase, which can increase the light yield of the liquid scintillator, and also cause a faster scintillation timing response. However, it finds that if the concentration is above 2 g/L, due to the an increase in self-absorption, there is not much to be gained as the light yield reaches a plateau and the timing goes slightly faster (see Sect.~\ref{sect:differentPPOconcen}, Chapter 4 for more details)\cite{snop_jinst,collaboration2020development}. In Sect.~\ref{sect:ppoConcentration}, Chapter 4, I show the effects of the PPO concentrations on the event position reconstruction. It finds that from 0.25 g/L to 2 g/L, the reconstructed position resolution for SNO+ increases by about 90 mm (for 3-MeV electron events); while from 2 g/L to 6 g/L, there is almost no changes, which demonstrates the optimized 2 g/L PPO concentration is proper.
 
 The time profiles of scintillator were obtained from bench-top measurement. An empirical model consists $n$ ($n$=3 or 4) exponential decays with a common rise time is used to describe the time profiles\cite{biller2020slow}.
 
@@ -185,6 +157,8 @@ where the rise time ($t_{rise}$), timing parameters $t_i$, and amplitude $a_i$ o
 	\caption{Time profiles for liquid scintillators in different SNO+ phases.}
 	\label{fig:allTiming}
 \end{figure}
+
+The LAB and the PPO used by SNO+ are ultrapure, with very low levels of natural radioactive contaminants such as U, Th and K. The target background levels for the SNO+ LAB are expected to be $\mathcal O(10^{-17})$ gram of $^{238}$U in per gram LAB (g$^{238}$U/gLAB), which is equal to be thousands of events per year. While the $^{232}$Th and $^{40}$K levels are $\mathcal O(10^{-17})$ g/gLAB, which is equal to be hundreds of events per year\cite{snop_jinst,markchen_bkg}. A liquid scintillator purification plant has been implemented to maintain the optical clarity and radiopurity of the scintillator\cite{snop_jinst}.
 
 \subsubsection{Tellurium-loaded Liquid Scintillator}\label{sect:TeLS_SNO+}
 To load the $^{130}$Te into the liquid scintillator, an organo-metallic compound, called the ``Tellurium Butanediol (TeBD)'', is formed by condensation (or called ``diolization'') reactions between telluric acid (TeA) and 1,2-butanediol (BD)\cite{Paton:2019kgy}. A tertiary amine: N, N-Dimethyldodecylamine (DDA) is added during the reaction to stabilize TeBD compounds and avoid any phase separation\cite{teLoadingPaper}. Fig.~\ref{fig:paton_te} shows initial stages of the process. This compound is then loaded into the liquid scintillator.
@@ -383,13 +357,13 @@ Among these radioactive sources, the Nitrogen-16 ($^{16}$N) calibration source a
 
 The $^{46}$Sc, $^{48}$Sc, $^{137}$Cs and $^{57}$Co sources are newly designed by SNO+ to calibrate the energy scale in the scintillator and tellurium-loading phases, especially for the energy region of interest (ROI) in the $0\nu\beta\beta$ study\cite{snop_jinst}. 
 
-The detector geometry is not perfectly symmetric due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. To realize this, a few fixed optical sources were mounted at different positions on the PSUP. Besides that, a source manipulator system (SMS) was installed, as shown in Fig.~\ref{sms}. The sources are attached or detached to the SMS via the Universal Interface (UI), which is a sealed cylinder-shaped glove box on the top of the AV to prevent the air in the lab leaking into the detector. The motion of the deployed sources along the central vertical axis inside the AV is controlled by the Umbilical Retrieval Mechanism (URM) through an umbilical and a central rope, and the off-axis motion is controlled by the side rope manipulator system. The motion of the sources in the external water region between the AV and PSUP is along the calibration guide tubes\cite{snop_jinst}.
+The detector geometry is not perfectly symmetric due to the presence of the AV neck, ropes, gaps between the PMTs, and the difference in individual PMTs\cite{snop_jinst}. The deployment of calibration sources at different positions in the detector can help to understand the asymmetries in the detector responses. To realize this, a few fixed optical sources were mounted at different positions on the PSUP. Besides that, a source manipulator system (SMS) was installed, as shown in Fig.~\ref{fig:sms}. The sources are attached or detached to the SMS via the Universal Interface (UI), which is a sealed cylinder-shaped glove box on the top of the AV to prevent the air in the lab leaking into the detector. The motion of the deployed sources along the central vertical axis inside the AV is controlled by the Umbilical Retrieval Mechanism (URM) through an umbilical and a central rope, and the off-axis motion is controlled by the side rope manipulator system. The motion of the sources in the external water region between the AV and PSUP is along the calibration guide tubes\cite{snop_jinst}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{SMS.png}
 	\caption[The SNO+ Source Manipulator System.]{The SNO+ Source Manipulator System, from Ref.~\cite{snop_jinst}.}
-	\label{fig: sms}
+	\label{fig:sms}
 \end{figure}
 
 The position of the deployed source in the detector can be evaluated by the manipulator system. In addition, a camera system with six underwater cameras already mounted on the PSUP can take photographs of the source and then triangulate its position. An accuracy of several centimeters is achieved. This system is also used to monitor the physical state of the detector, such as the offset of the AV center with respect to the PSUP, the movement of the rope net, the height of the water-scintillator interface during the partial-fill, etc\cite{singh2020underwater,snop_jinst}.

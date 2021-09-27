@@ -96,7 +96,7 @@ High level cuts mentioned in Sect.~\ref{sect:high_level_cuts}, Chapter 5 were ap
 	\label{opendataMPW}
 	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
 		\toprule
-		Run & GTID & energy & $z-0.108$ & $R$ & $(R/R_{av})^3$ & $\cos\theta_{sun}$\\
+		Run & GTID & $E_{fit}$ (MeV) & $z-0.108$ (m) & $R$ (m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$\\
 		\hline 
 		100093 &	11108354	&5.827 & 3.43 & 3.52 & 0.20 & -0.907005\\
 		100632&	7882360    &6.183& 1.67 &3.11 &0.14 &0.914612\\
@@ -154,8 +154,113 @@ A plot of refitting the candidate solar events from the \texttt{Rat water fitter
 
 % Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
 
+\subsection{Likelihood Fits for Solar Neutrino Candidate Events}
+In this section, a maximum likelihood fit method for counting the numbers of the candidate solar neutrino events ($N_{sig}$) as well as the number of background events ($N_{bkg}$) is discussed. To check the method, here only the ``beforehand cuts'' were applied to both the data and simulations.
+
+\subsubsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
+
+To prepare for the fit, the values of $\cos\theta_{sun}$ from the data were filled into a histogram divided into bins.
+For each bin, the observed event number ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The $n_{obs}$ in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg}\cdot P_{bkg}+N_{sig}\cdot P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distribution of backgrounds and solar $\nu_e$ events respectively.
+
+For the background events, a uniform distribution of $\cos\theta_{sun}$ was assumed. On the other hand, the $\cos\theta_{sun}$ distributions of solar $\nu_e$ were extracted from the realistic run simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{solarPDF.png}
+	\caption{The $\cos\theta_{sun}$ distribution of solar $\nu_e$ extracted from the simulations, which was used as a $PDF$ function.}
+	\label{solarPDF}
+\end{figure}
+
+Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as the free parameters for fitting, the maximum likelihood function was built as\cite{pdg2020}:
+%\begin{equation}\label{eq:solar_poissonFit}
+%-\ln\mathcal L(N_{sig},N_{bkg}|n_{obs})
+%=-\sum_i^{N_{bins}}\ln(Poisson(n^i_{obs}, N_{bkg}P^i_{bkg}+N_{sig}P^i_{ES}(E^i))).
+%\end{equation}
+
+\begin{equation}\label{eq:solar_poissonFitMinimizer}
+-2\ln\mathcal \lambda(N_{sig},N_{bkg})
+=2\sum_{i=0}^{N_{bins}}[\mu_i(N_{sig},N_{bkg})-n_i+n_i\ln\frac{n_i}{\mu_i(N_{sig},N_{bkg})}],
+\end{equation}
+where $\mu_i(N_{sig},N_{bkg})$ is the expected number of events in each bin: $\mu_i(N_{sig},N_{bkg})=N_{sig}\cdot P^i_{ES}(E^i)+N_{bkg}\cdot1/N_{bins}$; $N_{bins}$ is the total number of the bins, usually taken as 40 (per 0.05 bins). This quantity also includes the cases when the bin contains zero ($n_i=0$).
+
+Fitting the data with $(N_{bkg},N_{sig})$ by maximizing the quantity \ref{eq:solar_poissonFitMinimizer}, $N_{bkg}$ and $N_{sig}$ were obtained. In the next section, an ensemble test based on fake datasets was used for testing the fit results.
+%Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ events is $N_{sig} = 67.1\pm9.2$, which is equivalent to a rate of $1.04\pm 0.14~event/(day\cdot kiloton)$; while the fitted number of background events is $N_{sig} = 3.4\pm0.91$, which is equivalent to a rate of $0.05\pm 0.01 event/(day\cdot kiloton)$.
+%
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=8cm]{solarFits1.png}
+%	\caption{Fit results for the $N_{bkg}$ and $N_{sig}$ via the maximum likelihood method.}
+%	\label{solarFits1}
+%\end{figure}
+%
+%2D fits
+\subsubsection{Ensemble Test}
+To check the uncertainty of the Poisson fit, 5000 fake datasets were generated. Here I used the method similar to the Ref.~\cite{leta}.
+ The MC dataset includes the run-by-run simulations from the run-200004 to 203602. 
+, which has a live time of 92.54 days, and it is about a half of the whole low background dataset (run-200004 to 207718 with 190.33 live days). Thus it is denoted as the ``half-dataset''
+
+The fake data were taken from the run-by-run MC simulations of the half-dataset. The ``beforehand'' cuts were applied to these simulations.
+%In the MC dataset, for $E_{fit}>5~MeV$, there were 6359 backgrounds from different background events and 317205 signals of internal solar $\nu_e$ events (the event types were mentioned in Table.~\ref{table:mixed_MC}).
+
+The number of backgrounds in a fake dataset, $N^f_{bkg}$, was assumed to be two times of the event number in the $-1<\cos\theta_{sun}<0$ region while the number of signals $N^f_{sig}=N^f_{total}-N^f_{bkg}$. Reading from the sub-dataset of run-200004 to 203602, it found $N^f_{bkg}=38$ and then $N^f_{sig}=109-N^f_{bkg}=71$, as shown in Fig.~\ref{half_data}. To do the ensemble test, for each fake dataset, two random numbers: $N^r_{sig}$ and $N^r_{bkg}$ were generated by the $\texttt{ROOT TRandom3}$ random number generator class. Each of the two random numbers followed the random Poisson distribution: $e^{-\mu}\mu^{N^r}/N^r!$, where $\mu=71$ or $38$, and thus they fluctuated around $N^f_{sig}$ or $N^f_{bkg}$.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{cosThetaToSun_halfData_5to15.pdf}
+	\caption[Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts.]{Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts. The number of counts in $-1<\cos\theta_{sun}<0$ region is 19.}
+	\label{half_data}
+\end{figure}
+
+To create the fake datasets, from the solar $\nu_e$ MC simulations, $N^r_{sig}$ events which passed the cuts were randomly selected; similarly, from the merged background simulations, there were $N^r_{bkg}$ events randomly selected. These randomly selected events were merged into a fake dataset, and their values of $E_{fit}$ and $\cos\theta_{sun}$ were recorded.
+By repeating the random selection, an ensemble of fake datasets were created. Each fake dataset was fitted with the maximum likelihood function described in Sect.~\ref{sect:poisson_fit}. Fig.~\ref{ensemble_test} shows an example of the fit results from a random fake dataset.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{ensemble_fitExample.pdf}
+	\caption[An example of the $\cos\theta_{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$.]{An example of the $\cos\theta_{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line shows the fit. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fit results are $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.}
+	\label{ensemble_test}
+\end{figure} 
+
+The fit pull and the fit bias were defined by \cite{leta}:
+\begin{equation}
+bias=\frac{N_{sig}-N^r_{sig}}{N_{sig}},
+\end{equation}
+
+\begin{equation}
+pull=\frac{N_{sig}-N^r_{sig}}{\sigma_{sig}},
+\end{equation}
+where $N_{sig}$ is the fitted number of signal events, $\sigma_{sig}$ is the statistical uncertainty of $N_{sig}$; $N^{r}_{sig}$ is used as the true number of signal events in the fake dataset.
+
+Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and biases respectively. The histograms were fitted with Gaussians. For the fitted number of signal events, the Gaussian mean of the fit biases is $-0.0044\pm0.0008$ for 5000 fake datasets while the Gaussian mean of the fit pulls is $-0.026\pm0.006$. These pulls and biases will be applied on the data. Fig.~\ref{poisson_fitLnL} shows the distributions of the $-2\ln L$ returned by the best fit result ($-2\ln L_{best}$) for each fake dataset. The distribution, $f({-2\ln L_{best}})$, follows the asymptotic $\chi^2$ $PDF$ with a degree of 40 and is used to compute the $p-value$s\cite{pdg2020}. For a best-fit set ($N^i_{sig},N^i_{bkg}$) with a value of $-2\ln L^i_{best}$, the $p-value$ is calculated as $p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}})d(-2\ln L_{best})$.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{ensemble_fitBias.pdf}
+	\caption{$N_{sig}$ fit biases for 5000 fake datasets.}
+	\label{poisson_fitBias}
+\end{figure} 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{ensemble_fitPull.pdf}
+	\caption{$N_{sig}$ fit pulls for 5000 fake datasets.}
+	\label{poisson_fitPull}
+\end{figure} 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{ensemble_lnLbest.pdf}
+	\caption{The $-2\ln L$ distribution of the best fit results from the 5000 fake datasets.}
+	\label{poisson_fitLnL}
+\end{figure}
+
+
 \subsection{Signal-background Discrimination Based on TMVA}\label{sect:tmva}
-This section describes a signal-background discrimination analysis based on the TMVA method. Here the run-by-run simulations that simulated the full detector conditions for a specific run were used. The MC dataset includes the run-by-run simulations from the run-200004 to 203602, which has a live time of 92.54 days, and it is about a half of the whole low background dataset (run-200004 to 207718 with 190.33 live days). Thus it is denoted as the ``half-dataset''. This half-dataset was used for testing the analyses in this section and the next.
+This section describes a signal-background discrimination analysis based on the TMVA method. 
+
+To further reduce the background events, besides the ``beforehand cuts'' mentioned in the previous section, the position and energy FoMs are used as cuts. These FoM cuts suggested by the collaboration (mainly based on the $^{16}$N analyses)\cite{morganFOM} are: $-11<Z_{factor}<1$, $scaleLogL>10.85$, $0<G_{test}<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$\footnote{There is also a suggested cut on the quantity of position error (position error$<525$~mm). However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.}.
+
+Here the run-by-run simulations that simulated the full detector conditions for a specific run were used. The 90. live-day half-dataset was used for testing the analyses in this section and the next.
 
 For the MC dataset, two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds) , in the AV and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table.~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
@@ -235,7 +340,7 @@ The MLP method was set with: (1) using sigmoid function as the activate function
 
 There are 9 variables used as the TMVA inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the $ITR$ and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. Here the NHits and $\theta_{ij}$ were not used, since the NHits is correlated to the energy, while the $\theta_{ij}$ is anticorrelated to the $\beta_{14}$, which can be redundant inputs. 
 
-Use the $4<E<15$ MeV training dataset as an example, the distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences in distributions between the signal inputs (black solid lines) and background inputs (red dotted lines) can be observed.
+Using the $4<E<15$ MeV training dataset as an example, the distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences in distributions between the signal inputs (black solid lines) and background inputs (red dotted lines) can be observed.
 
 \begin{figure}[htbp]
 	\centering
@@ -257,47 +362,47 @@ Use the $4<E<15$ MeV training dataset as an example, the distributions of these 
 		\end{minipage}
 	}
 	\subfigure[$U_{test}$]{
-	\begin{minipage}[b]{0.3\textwidth}
-		\centering
-		\includegraphics[width=4cm]{tmvaCompare_Utest.pdf}
-	\end{minipage}
-    }	
-   \subfigure[$Z_{factor}$]{
-   \begin{minipage}[b]{0.3\textwidth}
-	\centering
-	\includegraphics[width=4cm]{tmvaCompare_zfactor.pdf}
-   \end{minipage}
-   }	
-   \subfigure[$ITR$]{
-   \begin{minipage}[b]{0.3\textwidth}
-	\centering
-	\includegraphics[width=4cm]{tmvaCompare_itr.pdf}
-    \end{minipage}
-   }	
-   \subfigure[$\vec{u}\cdot\vec{R'}$]{
-   \begin{minipage}[b]{0.3\textwidth}
-	\centering
-	\includegraphics[width=4cm]{tmvaCompare_udotR.pdf}
-    \end{minipage}
-}
-   \subfigure[$scaleLogL$]{
-	\begin{minipage}[b]{0.3\textwidth}
-		\centering
-		\includegraphics[width=4cm]{tmvaCompare_scaleLogL.pdf}
-	\end{minipage}
-}	
-   \subfigure[$klDiv$]{
-    \begin{minipage}[b]{0.3\textwidth}
-	\centering
-	\includegraphics[width=4cm]{tmvaCompare_klDiv.pdf}
-   \end{minipage}
-   }
-%   \subfigure[$\cos\theta_{sun}$]{
-%	\begin{minipage}[b]{0.3\textwidth}
-%		\centering
-%		\includegraphics[width=4cm]{tmvaCompare_cosThetaSun.pdf}
-%	\end{minipage}
-%   }	
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_Utest.pdf}
+		\end{minipage}
+	}	
+	\subfigure[$Z_{factor}$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_zfactor.pdf}
+		\end{minipage}
+	}	
+	\subfigure[$ITR$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_itr.pdf}
+		\end{minipage}
+	}	
+	\subfigure[$\vec{u}\cdot\vec{R'}$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_udotR.pdf}
+		\end{minipage}
+	}
+	\subfigure[$scaleLogL$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_scaleLogL.pdf}
+		\end{minipage}
+	}	
+	\subfigure[$klDiv$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[width=4cm]{tmvaCompare_klDiv.pdf}
+		\end{minipage}
+	}
+	%   \subfigure[$\cos\theta_{sun}$]{
+	%	\begin{minipage}[b]{0.3\textwidth}
+	%		\centering
+	%		\includegraphics[width=4cm]{tmvaCompare_cosThetaSun.pdf}
+	%	\end{minipage}
+	%   }	
 	\caption[Multiple variables as the inputs for the TMVA analysis, for the $4<E<15$ MeV dataset.]{Multiple variables as the inputs for the TMVA analysis, for the $4<E<15$ MeV dataset. The distributions of the backgrounds are show in dotted red lines while the signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:inputParamsTMVA}}
 \end{figure}
 
@@ -324,27 +429,26 @@ The output signal/background distributions on the test sub-dataset are shown in 
 	\caption{TMVA outputs for signal/background separations by different methods, for the $4<E<15$ MeV testing dataset.\label{output_separation_allE}}
 \end{figure}
 
-As one of the essential TMVA output, the background rejection versus signal efficiency curve is denoted as a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{allE_roc} shows the ROC curves for different methods:
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{ROC_E4to15.pdf}
-	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<15$~MeV.}
-	\label{allE_roc}
-\end{figure}
-where the Fisher/LD is the worst case; the BDT and MLP outputs are close to each other while the MLP gives the largest AUC values.
+As one of the essential TMVA output, the background rejection versus signal efficiency curve is denoted as a receiver operating characteristic (ROC) curve, which is usually used to test the performance of machine learning classifier. A quantity taking the integrals of the ROC curve: called the ``area under the curve'' (AUC) is often used to summarize the quality of a ROC curve\cite{murphy2012machine}.  Fig.~\ref{fig:energyVsROC} shows the ROC curves for three different methods and for the testing datasets with different energy regions.
 
-\begin{figure}[!htb]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=10cm]{ROC_E5to15.pdf}
-	\caption{ROC curves from TMVA output, for event with $5<E_{fit}<15$ MeV (energy above 5 MeV).}
-	\label{E5to15_roc}
-\end{figure}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{ROC_E4to5.pdf}
-	\caption{ROC curves from TMVA output, for event with $4<E_{fit}<5$ MeV (low energy region).}
-	\label{E4to5_roc}
+	\subfigure[$4<E_{fit}<15$~MeV.]{
+		\begin{minipage}[t]{0.5\textwidth}
+			\includegraphics[width=8cm]{ROC_E4to15.pdf}
+		\end{minipage}
+	}
+	\subfigure[$5<E_{fit}<15$ MeV (energy above 5 MeV).]{
+		\begin{minipage}[b]{0.4\textwidth}
+			\includegraphics[width=8cm]{ROC_E5to15.pdf}
+		\end{minipage}
+	}
+	\subfigure[$4<E_{fit}<5$~MeV.]{
+		\begin{minipage}[b]{0.4\textwidth}
+			\includegraphics[width=8cm]{ROC_E4to5.pdf}
+		\end{minipage}
+	}
+	\caption[TMVA outputs for signal/background separations by different methods]{TMVA outputs for signal/background separations by different methods, for the $4<E<15$ MeV, $5<E<15$ MeV and $4<E<5$ MeV testing dataset.\label{fig:energyVsROC}}
 \end{figure}
 
 A typical CPU time ($t_{CPU}$) for a certain method to train the dataset with different energy regions is listed in Table.~\ref{tab:tmvaMethod_allE}.
@@ -360,28 +464,28 @@ A typical CPU time ($t_{CPU}$) for a certain method to train the dataset with di
 		Fisher/LD & 0.915 & 0.81\\
 		BDT &  0.940 & 249.53 \\
 		MLP & 0.944 & 1370.02\\
-	   \hline
-	   $5<E_{fit}<15$ MeV\\
-				Fisher/LD & 0.915& 0.93\\
+		\hline
+		$5<E_{fit}<15$ MeV\\
+		Fisher/LD & 0.915& 0.93\\
 		BDT & 0.950 & 269.71\\
 		MLP &  0.958 & 1450.90\\
-	   \hline
-	   $4<E_{fit}<5$ MeV \\
-	   Fisher/LD & 0.782 & 0.84\\
+		\hline
+		$4<E_{fit}<5$ MeV \\
+		Fisher/LD & 0.782 & 0.84\\
 		BDT & 0.816 & 280.1\\
 		MLP & 0.823 &1337.9\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-It shows that, the MLP method gave the best results, while it was the most CPU-consuming method. When the energy goes lower, it is more difficult to separate the signals from the backgrounds.
+It shows that, the Fisher/LD output gives the worst AUC. The BDT and MLP outputs are close to each other while the MLP gives the largest AUC values. However, the MLP was the most CPU-consuming method. For the energy in the lower region, it is more difficult for all three methods to separate the signals from the backgrounds.
 
 The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. It is also used to extract the number of signal and background events, which will be discussed in the following sections. Here I applied the BDT and the MLP method on the test sub-dataset. For the real dataset from run-200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
 %The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
 %4<E<15 MeV
 %%BDT signal efficiency     = 0.944954
 %% MLP signal efficiency        = 0.926606
- 
+
 %MLP signal efficiency        = 0.842493
 %MLP background efficiency    = 0.0840084
 %5<E<15 MeV
@@ -405,14 +509,33 @@ The distributions of the ``solar angle'', $\cos\theta_{sun}$ were used to show t
 %	\caption{Comparison between solar $\nu_e$ and external solar $\nu_e$; MPW results.}
 %	\label{itrCmp}
 %\end{figure}
-\subsubsection{TMVA Outputs for Data}
+\subsubsection{TMVA Outputs on MC and Data}
+The trained weights were applied to the actual data from the 92.54 live-day half-dataset.
 
-%Fig.~\ref{cosThetaToSun_4to15_BDT} and Fig.~\ref{cosThetaToSun_5to15_BDT} show the BDT selection outputs from the 190.33-day dataset. Fig.~\ref{cosThetaToSun_4to15_MLP} and Fig.~\ref{cosThetaToSun_5to15_MLP} show the MLP outputs. 
 
-%Table.~\ref{table:eventNumbers} shows the number of the output events for different energy regions and from different methods.
 
-Cuts on the position and energy FoMs suggested by the collaboration\cite{morganFOM} are: $-11<Z_{factor}<1$, $scaleLogL>10.85$, $0<G_{test}<1.9$, $U_{test}<0.95$, $ITR>0.55$, $-0.12<\beta_{14}<0.95$\footnote{There is also a suggested cut on the quantity of position error (position error$<525$~mm). However, since this quantity was not calculated by the \texttt{MPW fitter}, it was not included here.}. Combined with the ``beforehand cuts'', the whole set of cuts is considered as ``default cuts'' here and is compared with the TMVA outputs.
+For the same 5000 fake datasets,
 
+The fake dataset is the same to the one used by the previous section.
+Fig.~\ref{fig:BDToutputs} shows the BDT output distributions of the $\cos\theta_{sun}$ for one random fake dataset. For this fake dataset, the true number of signal and background events are: $N^{true}_{sig}=68$ and $N^{true}_{bkg}=46$, while the BDT outputs are: $N^{BDT}_{sig}=61$ and $N^{BDT}_{bkg}=53$. It indicates an underestimate of the signal ($N^{BDT}_{sig}=0.90 N^{true}_{sig}$) and overestimate of the background ($N^{BDT}_{sig}=1.15 N^{true}_{sig}$). 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{tmvaHalfFakeData_output.pdf}
+	\caption[BDT outputs from one random fake dataset, with $5<E_{fit}<15$ MeV.]{BDT outputs from one random fake dataset, with $5<E_{fit}<15$ MeV. The solid blue line and the solid red line are for the BDT output of the signal and background events, respectively; the dashed black line and the shaded red histogram are for the true signal and background events, respectively.\label{fig:BDToutputs}}
+\end{figure}
+
+As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT selection to the 5000 fake datasets, the fractions of the event number selected by the BDT to the true event number are $91.26\pm 4.77 \%$, and $117.1\pm 10.46 \%$ (using the histogram mean and root mean square).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{TMVAratios_fakedataset.pdf}
+	\caption[BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV.]{BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV.\label{fig:TMVAfractions}}
+\end{figure}
+
+In this case, the number of signal events is underestimated, while the number of background events is overestimated. 
+
+Combined with the ``beforehand cuts'', the whole set of cuts is considered as ``default cuts'' here and is compared with the TMVA outputs.
 %\begin{table}[ht]
 %	\centering
 %	\caption{Number of candidate events for different selection methods.}
@@ -437,19 +560,18 @@ Cuts on the position and energy FoMs suggested by the collaboration\cite{morganF
 %\end{table}
 %
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{cosThetaToSun_4to15_BDT.pdf}
-	\caption[BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV.]{BDT output for $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
-	\label{cosThetaToSun_4to15_BDT}
-\end{figure}
+Fig.~\ref{fig:cosThetaToSun_4to15_output} shows a potential for the energy threshold down to 4 MeV.
+
+the outputs of the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 80.8\% of the total data as the backgrounds while the MLP classifies about 76.17\%. Flat distributions of the $\cos\theta_{sun}$ can be seen obviously in the plots.
+
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=8cm]{cosThetaToSun_4to15_MLP.pdf}
-	\caption[MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15$~MeV.]{MLP output for $\cos\theta_{sun}$, with $4<E_{fit}<15$~MeV. The solid blue line shows the selected candidate solar $\nu_e$ events while the dotted red line shows the selected background events.}
-	\label{cosThetaToSun_4to15_MLP}
+	\includegraphics[width=10cm]{cosThetaToSun_4to15_output.pdf}
+	\caption[BDT and MLP outputs for the $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV.]{BDT and MLP outputs for the $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV. The solid red line shows the BDT selected candidate solar $\nu_e$ events, and the blue shaded histogram shows the MLP selected ones. The dotted red line is for BDT selected backgrounds, while the solid blue line is for the MLP selected backgrounds.\label{fig:cosThetaToSun_4to15_output}}
 \end{figure}
+
+
 
 The main analysis of this thesis is focused on the [5,15] MeV energy region. A comparison of the outputs of $5<E_{fit}<15$~MeV from the BDT, MLP and the default cuts is shown in Fig.~\ref{fig:compare_cosThetaToSun_5to15}.
 \begin{figure}[!htb]
@@ -466,105 +588,10 @@ A more stringent radial cut (or tighter FV) can be applied on lower energy regio
 
 Other packages developed for high energy particle physics, such as \texttt{StatPatternRecognition} (SPR)\cite{sprWebsite}, can also be considered as an alternative tool or as a reference for results comparisons. 
 
-\subsection{Likelihood Fits for Solar Neutrino Candidate Events}
-In this section, a maximum likelihood fit method for counting the numbers of the candidate solar neutrino events ($N_{sig}$) as well as the number of background events ($N_{bkg}$) is discussed. To check the method, here only the ``beforehand cuts'' were applied. 
+\subsection{Fitting on the Whole Dataset (run-200004 to 207718)}\label{sect:fitTheWhole}
+To combine the analyses in the previous two sections, the TMVA selection method was applied to the actual data from the 190.33 live-day whole dataset and then a maximum likelihood fit was applied on the selected data. 
 
-\subsubsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
-
-To prepare for the fit, the values of $\cos\theta_{sun}$ from the data were filled into a histogram divided into bins.
-For each bin, the observed event number ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The $n_{obs}$ in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg}\cdot P_{bkg}+N_{sig}\cdot P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distribution of backgrounds and solar $\nu_e$ events respectively.
-
-For the background events, a uniform distribution of $\cos\theta_{sun}$ was assumed. On the other hand, the $\cos\theta_{sun}$ distributions of solar $\nu_e$ were extracted from the realistic run simulations after applying the optimized cuts, as shown in Fig.~\ref{solarPDF}. 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{solarPDF.png}
-	\caption{The $\cos\theta_{sun}$ distribution of solar $\nu_e$ extracted from the simulations, which was used as a $PDF$ function.}
-	\label{solarPDF}
-\end{figure}
-
-Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as the free parameters for fitting, the maximum likelihood function was built as\cite{pdg2020}:
-%\begin{equation}\label{eq:solar_poissonFit}
-%-\ln\mathcal L(N_{sig},N_{bkg}|n_{obs})
-%=-\sum_i^{N_{bins}}\ln(Poisson(n^i_{obs}, N_{bkg}P^i_{bkg}+N_{sig}P^i_{ES}(E^i))).
-%\end{equation}
-
-\begin{equation}\label{eq:solar_poissonFitMinimizer}
--2\ln\mathcal \lambda(N_{sig},N_{bkg})
-=2\sum_{i=0}^{N_{bins}}[\mu_i(N_{sig},N_{bkg})-n_i+n_i\ln\frac{n_i}{\mu_i(N_{sig},N_{bkg})}],
-\end{equation}
-where $\mu_i(N_{sig},N_{bkg})$ is the expected number of events in each bin: $\mu_i(N_{sig},N_{bkg})=N_{sig}\cdot P^i_{ES}(E^i)+N_{bkg}\cdot1/N_{bins}$; $N_{bins}$ is the total number of the bins, usually taken as 40 (per 0.05 bins). This quantity also includes the cases when the bin contains zero ($n_i=0$).
-
-Fitting the data with $(N_{bkg},N_{sig})$ by maximizing the quantity \ref{eq:solar_poissonFitMinimizer}, $N_{bkg}$ and $N_{sig}$ were obtained. In the next section, an ensemble test based on fake datasets was used for testing the fit results.
-%Fig.~\ref{solarFits1} shows the fit results. The fitted number of solar $\nu_e$ events is $N_{sig} = 67.1\pm9.2$, which is equivalent to a rate of $1.04\pm 0.14~event/(day\cdot kiloton)$; while the fitted number of background events is $N_{sig} = 3.4\pm0.91$, which is equivalent to a rate of $0.05\pm 0.01 event/(day\cdot kiloton)$.
-%
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=8cm]{solarFits1.png}
-%	\caption{Fit results for the $N_{bkg}$ and $N_{sig}$ via the maximum likelihood method.}
-%	\label{solarFits1}
-%\end{figure}
-%
-%2D fits
-\subsubsection{Ensemble Test}
-To check the uncertainty of the Poisson fit, 5000 fake datasets were generated. Here I used the method similar to the Ref.~\cite{leta}.
-The fake data were taken from the run-by-run MC simulations of the half-dataset mentioned before. The default cuts mentioned in the last section were applied on these simulations.
-%In the MC dataset, for $E_{fit}>5~MeV$, there were 6359 backgrounds from different background events and 317205 signals of internal solar $\nu_e$ events (the event types were mentioned in Table.~\ref{table:mixed_MC}).
-
-The number of backgrounds in a fake dataset, $N^f_{bkg}$, was assumed to be two times of the event number in the $-1<\cos\theta_{sun}<0$ region while the number of signals $N^f_{sig}=N^f_{total}-N^f_{bkg}$. Reading from the sub-dataset of run-200004 to 203602, it found $N^f_{bkg}=38$ and then $N^f_{sig}=109-N^f_{bkg}=71$, as shown in Fig.~\ref{half_data}. To do the ensemble test, for each fake dataset, two random numbers: $N^r_{sig}$ and $N^r_{bkg}$ were generated by the $\texttt{ROOT TRandom3}$ random number generator class. Each of the two random numbers followed the random Poisson distribution: $e^{-\mu}\mu^{N^r}/N^r!$, where $\mu=71$ or $38$, and thus they fluctuated around $N^f_{sig}$ or $N^f_{bkg}$.
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{cosThetaToSun_halfData_5to15.pdf}
-	\caption[Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts.]{Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts. The number of counts in $-1<\cos\theta_{sun}<0$ region is 19.}
-	\label{half_data}
-\end{figure}
-
-To create the fake datasets, from the solar $\nu_e$ MC simulations, $N^r_{sig}$ events which passed the cuts were randomly selected; similarly, from the merged background simulations, there were $N^r_{bkg}$ events randomly selected. These randomly selected events were merged into a fake dataset, and their values of $E_{fit}$ and $\cos\theta_{sun}$ were recorded.
-By repeating the random selection, an ensemble of fake datasets were created. Each fake dataset was fitted with the maximum likelihood function described in Sect.~\ref{sect:poisson_fit}. Fig.~\ref{ensemble_test} shows an example of the fit results from a random fake dataset.
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{ensemble_fitExample.pdf}
-	\caption[An example of the $\cos\theta_{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$.]{An example of the $\cos\theta_{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line shows the fit. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fit results are $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.}
-	\label{ensemble_test}
-\end{figure} 
-
-The fit pull and the fit bias were defined by \cite{leta}:
-\begin{equation}
-bias=\frac{N_{sig}-N^r_{sig}}{N_{sig}},
-\end{equation}
-
-\begin{equation}
-pull=\frac{N_{sig}-N^r_{sig}}{\sigma_{sig}},
-\end{equation}
-where $N_{sig}$ is the fitted number of signal events, $\sigma_{sig}$ is the statistical uncertainty of $N_{sig}$; $N^{r}_{sig}$ is used as the true number of signal events in the fake dataset.
-
-Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and biases respectively. The histograms were fitted with Gaussians. For the fitted number of signal events, the Gaussian mean of the fit biases is $-0.0044\pm0.0008$ for 5000 fake datasets while the Gaussian mean of the fit pulls is $-0.026\pm0.006$. These pulls and biases will be applied on the data. Fig.~\ref{poisson_fitLnL} shows the distributions of the $-2\ln L$ returned by the best fit result ($-2\ln L_{best}$) for each fake dataset. The distribution, $f({-2\ln L_{best}})$, follows the asymptotic $\chi^2$ $PDF$ with a degree of 40 and is used to compute the $p-value$s\cite{pdg2020}. For a best-fit set ($N^i_{sig},N^i_{bkg}$) with a value of $-2\ln L^i_{best}$, the $p-value$ is calculated as $p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}})d(-2\ln L_{best})$.
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{ensemble_fitBias.pdf}
-	\caption{$N_{sig}$ fit biases for 5000 fake datasets.}
-	\label{poisson_fitBias}
-\end{figure} 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{ensemble_fitPull.pdf}
-	\caption{$N_{sig}$ fit pulls for 5000 fake datasets.}
-	\label{poisson_fitPull}
-\end{figure} 
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=8cm]{ensemble_lnLbest.pdf}
-	\caption{The $-2\ln L$ distribution of the best fit results from the 5000 fake datasets.}
-	\label{poisson_fitLnL}
-\end{figure}
-
-\subsubsection{Fitting on the Whole Dataset (run-200004 to 207718)}\label{sect:fitTheWhole}
-The whole dataset started from run-200004. This dataset has a live time of 190.33 days. The TMAV method was applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations\footnote{the simulations of solar $\nu_{\mu}$ were also trained with the background simulations to calculate the detected $\nu_\mu$ from the oscillated solar neutrino flux mentioned in next section}. The trained BDT and MLP weights were applied to this whole dataset.
+For the whole dataset, the TMAV method was applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations\footnote{the simulations of solar $\nu_{\mu}$ were also trained with the background simulations to calculate the detected $\nu_\mu$ from the oscillated solar neutrino flux mentioned in next section}. The trained BDT and MLP weights were applied to this whole dataset.
 
 In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitted to obtain the $N_{sig}$ and $N_{bkg}$. Fig.~\ref{wholeDataset_poissonFit_bdt} and Fig.~\ref{wholeDataset_poissonFit_mlp} show their results respectively. The fit results are also summarized in Table.~\ref{table:wholedata_output}.
 
@@ -805,7 +832,9 @@ The $\Phi_{ES}$ result from this thesis is combined with the SNO+ 2018 result an
 From the average result including all the experiments mentioned, the region of $\hat \theta\pm 1\sigma_{\hat\theta,tot}$ is plotted as the shaded band in Fig.~\ref{fig:ESfluxCompare}.
 
 \subsubsection{Limitations of this Study}
-Here I used the $^{208}$Tl and $^{214}$Bi background simulations listed in the Table.~\ref{table:mixed_MC}, which were not complete. There are a few other backgrounds, such as the backgrounds from the AV ropes, the PMTs, the cosmic muon induced isotopes, etc. A more comprehensive study requires to include all possible background simulations.
+This study focuses on measuring solar neutrinos in the energy region [5,15] MeV with a fiducial volume of 5.5 m.
+
+As listed in Table.~\ref{table:mixed_MC}, I used the $^{208}$Tl and $^{214}$Bi backgrounds simulated in three detector components , which were not complete. There are a few other backgrounds, such as the backgrounds in the other detector components (like the AV ropes, the PMTs, etc), the other isotopes such as the cosmic muon induced isotopes, etc. A more comprehensive study requires to include all possible background simulations.
 
 To fit the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic shape of the distribution can be investigated to describe the backgrounds more properly. In addition, the background levels can vary over time, so a more detailed analysis including different time periods can make the results more accurate.
 
