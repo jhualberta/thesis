@@ -1,8 +1,8 @@
 \contentsline {chapter}{Abstract}{iii}{chapter*.1}
 \contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}
 \contentsline {chapter}{Contents}{v}{chapter*.2}
-\contentsline {chapter}{List of Figures}{ix}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xv}{chapter*.4}
+\contentsline {chapter}{List of Figures}{x}{chapter*.3}
+\contentsline {chapter}{List of Tables}{xvi}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Neutrino physics}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Overview}{5}{section.2.1}
@@ -11,13 +11,13 @@
 \contentsline {section}{\numberline {2.3}Neutrino Flavor Transformation}{11}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Vacuum Oscillation}{11}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Matter Effect}{15}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Solar Neutrinos}{16}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Kamiokande and Super-Kamiokande}{19}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}SNO}{20}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Combined Analysis of Solar and Reactor Measurements}{21}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}Borexino}{21}{subsection.2.3.7}
-\contentsline {subsection}{\numberline {2.3.8}More Studies on Solar Neutrino and Future Experiments}{22}{subsection.2.3.8}
-\contentsline {section}{\numberline {2.4}Neutrinoless Double Beta Decay}{24}{section.2.4}
+\contentsline {section}{\numberline {2.4}Solar Neutrinos}{16}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Kamiokande and Super-Kamiokande}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}SNO}{20}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}KamLAND}{21}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Borexino}{22}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}More Studies on Solar Neutrino and Future Experiments}{22}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Neutrinoless Double Beta Decay}{24}{section.2.5}
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{29}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{29}{section.3.1}
 \contentsline {section}{\numberline {3.2}SNO+ Physics Phases}{30}{section.3.2}
@@ -67,8 +67,8 @@
 \contentsline {section}{\numberline {4.6}Multi-path Fitter Structure for Multiple SNO+ Physics Phases}{110}{section.4.6}
 \contentsline {section}{\numberline {4.7}Energy Reconstruction}{112}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Energy Figure of Merit}{113}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Energy Reconstruction in Partial-fill Phase}{113}{subsection.4.7.2}
-\contentsline {section}{\numberline {4.8}Deep Learning}{114}{section.4.8}
+\contentsline {subsection}{\numberline {4.7.2}Energy Reconstruction in Partial-fill Phase}{114}{subsection.4.7.2}
+\contentsline {section}{\numberline {4.8}Machine Learning and Deep Learning}{115}{section.4.8}
 \contentsline {section}{\numberline {4.9}Conclusion}{115}{section.4.9}
 \contentsline {chapter}{\numberline {5}Calibration}{116}{chapter.5}
 \contentsline {section}{\numberline {5.1}\isotope [16]{N} Calibration Scans in the Water Phase}{117}{section.5.1}
@@ -90,21 +90,21 @@
 \contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{145}{subsubsection.5.3.4.4}
 \contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{149}{chapter.6}
 \contentsline {section}{\numberline {6.1}Backgrounds}{150}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Physics Backgrounds}{150}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Kullback–Leibler Divergence for High Level Cuts}{151}{section.6.2}
-\contentsline {section}{\numberline {6.3}Solar $\nu _e$ Analysis and Background Separation in Water Phase}{153}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Open Dataset Analysis}{153}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Likelihood Fits for Solar Neutrino Candidate Events}{155}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.2.1}Maximum Likelihood Fit}{155}{subsubsection.6.3.2.1}
-\contentsline {subsubsection}{\numberline {6.3.2.2}Ensemble Test}{156}{subsubsection.6.3.2.2}
-\contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{159}{subsection.6.3.3}
-\contentsline {subsubsection}{\numberline {6.3.3.1}TMVA Outputs on MC and Data}{167}{subsubsection.6.3.3.1}
-\contentsline {subsection}{\numberline {6.3.4}Discussions on the TMVA Results}{169}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Fitting on the Whole Dataset (run-200004 to 207718)}{170}{subsection.6.3.5}
-\contentsline {subsubsection}{\numberline {6.3.5.1}Evaluating $^8$B Solar Neutrino Flux}{172}{subsubsection.6.3.5.1}
-\contentsline {subsubsection}{\numberline {6.3.5.2}Systematics Evaluation}{175}{subsubsection.6.3.5.2}
-\contentsline {subsubsection}{\numberline {6.3.5.3}A Summary of the Results}{179}{subsubsection.6.3.5.3}
-\contentsline {subsubsection}{\numberline {6.3.5.4}Limitations of this Study}{181}{subsubsection.6.3.5.4}
+\contentsline {subsection}{\numberline {6.1.1}Internal backgrounds}{150}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}External backgrounds}{151}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Solar neutrino Analysis in Open Dataset}{151}{section.6.2}
+\contentsline {section}{\numberline {6.3}Likelihood Fits for Solar Neutrino Candidate Events}{154}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Maximum Likelihood Fit}{154}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{155}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Kullback–Leibler Divergence for High Level Cuts}{158}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Signal-background Discrimination Based on TMVA}{160}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}TMVA Outputs}{167}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Discussions on TMVA Results}{170}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.7}Fitting Whole Low Background Dataset}{170}{subsection.6.3.7}
+\contentsline {subsection}{\numberline {6.3.8}Evaluating $^8$B Solar Neutrino Flux}{171}{subsection.6.3.8}
+\contentsline {subsection}{\numberline {6.3.9}Systematics Evaluation}{175}{subsection.6.3.9}
+\contentsline {subsection}{\numberline {6.3.10}A Summary of Results}{179}{subsection.6.3.10}
+\contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{181}{subsection.6.3.11}
 \contentsline {chapter}{\numberline {7}Conclusions}{183}{chapter.7}
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{184}{appendix.A}
 \contentsline {section}{\numberline {A.1}Create a Random Vertex}{184}{section.A.1}

@@ -4,23 +4,23 @@ The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
 Reallocated field_info (elt_size=4) to 10014 items from 5000.
-Repeated entry---line 1275 of file thesis.bib
+Repeated entry---line 1294 of file thesis.bib
  : @article{tanner0p5
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1364 of file thesis.bib
+Repeated entry---line 1383 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1694 of file thesis.bib
+Repeated entry---line 1713 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1747 of file thesis.bib
+Repeated entry---line 1766 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1928 of file thesis.bib
+Repeated entry---line 1947 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -43,11 +43,11 @@ Warning--empty journal in sorensen2016temperature
 Warning--empty journal in PerkinElmer
 Warning--empty journal in wiki_LAB
 Warning--empty year in novikov
-Warning--empty year in markchen_bkg
-Warning--empty year in tanner0p5
-Warning--empty year in joshW1
 Warning--empty year in chicagoTiming
+Warning--empty year in tanner0p5
 Warning--empty year in tannerTeDDA
+Warning--empty year in joshW1
+Warning--empty year in markchen_bkg
 Warning--empty year in teLoadingPaper
 Warning--can't use both volume and number fields in biller2017new
 Warning--empty year in teDDA
@@ -100,45 +100,45 @@ Warning--empty year in joshTrigger
 Warning--empty year in neuronetwork
 Warning--empty year in skyshine
 Warning--empty year in brianLowBG
-You've used 223 entries,
+You've used 225 entries,
             1876 wiz_defined-function locations,
-            1529 strings with 38891 characters,
-and the built_in function-call counts, 47903 in all, are:
-= -- 4131
-> -- 2749
+            1540 strings with 39347 characters,
+and the built_in function-call counts, 48651 in all, are:
+= -- 4201
+> -- 2795
 < -- 0
-+ -- 1031
-- -- 808
-* -- 3403
-:= -- 7440
-add.period$ -- 285
-call.type$ -- 223
-change.case$ -- 168
++ -- 1047
+- -- 822
+* -- 3459
+:= -- 7548
+add.period$ -- 287
+call.type$ -- 225
+change.case$ -- 170
 chr.to.int$ -- 0
-cite$ -- 297
-duplicate$ -- 2612
-empty$ -- 4378
-format.name$ -- 808
-if$ -- 11302
+cite$ -- 299
+duplicate$ -- 2650
+empty$ -- 4432
+format.name$ -- 822
+if$ -- 11482
 int.to.chr$ -- 0
-int.to.str$ -- 223
-missing$ -- 224
-newline$ -- 735
-num.names$ -- 216
-pop$ -- 828
+int.to.str$ -- 225
+missing$ -- 226
+newline$ -- 741
+num.names$ -- 218
+pop$ -- 832
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1324
+skip$ -- 1357
 stack$ -- 0
-substring$ -- 1176
-swap$ -- 875
+substring$ -- 1220
+swap$ -- 897
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 74
-while$ -- 338
-width$ -- 226
-write$ -- 2028
+while$ -- 344
+width$ -- 228
+write$ -- 2049
 (There were 5 error messages)
