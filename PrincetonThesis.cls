@@ -381,57 +381,64 @@
 	\begin{center}
 		{\LARGE\pu@title}
 	\vskip 3em
+	{by}
+	\vskip 1em
 		{\Large\pu@author}
 	\vskip 3em
 	\large\baselineskip 2em
-		A Dissertation\\
-		Presented to the Faculty\\
-		of University of Alberta\\
-		in Candidacy for the Degree\\
-		of Doctor of Philosophy\\
-	\vskip 2em
-		Recommended for Acceptance\\
-		by the Department of\\
-		\pu@department \\
-	\vskip 2em
-		\pu@degreemonth, \pu@degreeyear
+    A thesis submitted in partial fulfillment of the requirements for the degree of\\  Doctor of Philosophy
+	\vskip 4em
+%\pu@department 
+   Department of Physics\\
+	University of Alberta	%Recommended for Acceptance\\ by the Department of\\
+		
+%	\vskip 2em
+		%\pu@degreemonth, \pu@degreeyear
+%	\end{center}
+%\newcommand*{\pu@copyrightpage}{
+%	\thispagestyle{empty}
+	%\null
+	\vskip 8em	\large\baselineskip 2em
+%	\begin{center}
+ \copyright\ Jie Hu, 2021
+%		All rights reserved.
 	\end{center}
 	\null\vfil
 	\clearpage
 }
 \fi
 
-\if@PUThesisSenior
-\newcommand*{\pu@titlepage}{
-	\thispagestyle{empty}
-	\null\vfil
-	\begin{center}
-		{\LARGE\pu@title}
-	\vskip 5em
-		{\Large\pu@author}
-	\vfil
-		\sc a senior thesis submitted in partial fulfillment\\
-		of the requirements for the degree of Bachelor of Arts in
-		\pu@department at Princeton University\\
-	\vskip 2em
-		\pu@degreeyear
-	\end{center}
-	\null\vfil
-	\clearpage
-}
-\fi
+%\if@PUThesisSenior
+%\newcommand*{\pu@titlepage}{
+%	\thispagestyle{empty}
+%	\null\vfil
+%	\begin{center}
+%		{\LARGE\pu@title}
+%	\vskip 5em
+%		{\Large\pu@author}
+%	\vfil
+%		\sc a senior thesis submitted in partial fulfillment\\
+%		of the requirements for the degree of Bachelor of Arts in
+%		\pu@department at Princeton University\\
+%	\vskip 2em
+%		\pu@degreeyear
+%	\end{center}
+%	\null\vfil
+%	\clearpage
+%}
+%\fi
 
 %% COPYRIGHT PAGE
 
-\newcommand*{\pu@copyrightpage}{
-	\thispagestyle{empty}
-	\null\vskip 3em
-	\begin{center}
-		\copyright\ Copyright \pu@degreeyear\ by \pu@author.\\
-		All rights reserved.
-	\end{center}
-	\clearpage
-}
+%\newcommand*{\pu@copyrightpage}{
+%	\thispagestyle{empty}
+%	\null\vskip 3em
+%	\begin{center}
+%		\copyright\ Copyright \pu@degreeyear\ by \pu@author.\\
+%		All rights reserved.
+%	\end{center}
+%	\clearpage
+%}
 
 %% TABLE OF CONTENTS
 
@@ -553,7 +560,7 @@
 \renewcommand*{\document}{
 	\pu@document
 	\pu@titlepage
-	\pu@copyrightpage
+	%\pu@copyrightpage
 }
 
 \newenvironment{frontmatter}
