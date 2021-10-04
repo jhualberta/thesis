@@ -3,7 +3,6 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Reallocated field_info (elt_size=4) to 10014 items from 5000.
 Repeated entry---line 1294 of file thesis.bib
  : @article{tanner0p5
  :                   ,
@@ -91,54 +90,45 @@ Warning--empty year in beta14discrepancy
 Warning--empty year in leta
 Warning--empty year in morganFOM
 Warning--empty year in fady_pselmaa
-Warning--empty journal in rottele2019tritium
-Warning--there's a number but no series in perkins2009particle
-Warning--empty author in operator
-Warning--empty year in operator
-Warning--empty author in joshTrigger
-Warning--empty year in joshTrigger
-Warning--empty year in neuronetwork
-Warning--empty year in skyshine
-Warning--empty year in brianLowBG
-You've used 225 entries,
+You've used 183 entries,
             1876 wiz_defined-function locations,
-            1540 strings with 39347 characters,
-and the built_in function-call counts, 48651 in all, are:
-= -- 4201
-> -- 2795
+            1359 strings with 32758 characters,
+and the built_in function-call counts, 38754 in all, are:
+= -- 3327
+> -- 2235
 < -- 0
-+ -- 1047
-- -- 822
-* -- 3459
-:= -- 7548
-add.period$ -- 287
-call.type$ -- 225
-change.case$ -- 170
++ -- 840
+- -- 657
+* -- 2744
+:= -- 6051
+add.period$ -- 236
+call.type$ -- 183
+change.case$ -- 138
 chr.to.int$ -- 0
-cite$ -- 299
-duplicate$ -- 2650
-empty$ -- 4432
-format.name$ -- 822
-if$ -- 11482
+cite$ -- 248
+duplicate$ -- 2123
+empty$ -- 3543
+format.name$ -- 657
+if$ -- 9112
 int.to.chr$ -- 0
-int.to.str$ -- 225
-missing$ -- 226
-newline$ -- 741
-num.names$ -- 218
-pop$ -- 832
+int.to.str$ -- 183
+missing$ -- 179
+newline$ -- 605
+num.names$ -- 178
+pop$ -- 685
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1357
+skip$ -- 1052
 stack$ -- 0
-substring$ -- 1220
-swap$ -- 897
+substring$ -- 906
+swap$ -- 698
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 74
-while$ -- 344
-width$ -- 228
-write$ -- 2049
+warning$ -- 65
+while$ -- 270
+width$ -- 186
+write$ -- 1652
 (There were 5 error messages)
