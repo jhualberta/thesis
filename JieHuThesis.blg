@@ -1,29 +1,28 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1294 of file thesis.bib
+Repeated entry---line 1306 of file thesis.bib
  : @article{tanner0p5
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1383 of file thesis.bib
+Repeated entry---line 1395 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1713 of file thesis.bib
+Repeated entry---line 1725 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1766 of file thesis.bib
+Repeated entry---line 1778 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1947 of file thesis.bib
+Repeated entry---line 1959 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "davini2016cno"
 Warning--I didn't find a database entry for "cerdeno2018cno"
 Warning--empty journal in Paton:2019kgy
 Warning--empty year in oxfordMeasurement
@@ -36,6 +35,7 @@ Warning--empty year in kalpanaMPFitter
 Warning--empty year in jieMPW
 Warning--empty journal in superKwebsite
 Warning--can't use both volume and number fields in gann2015everything
+Warning--empty journal in davini2016cno
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
 Warning--empty journal in sorensen2016temperature
@@ -90,45 +90,45 @@ Warning--empty year in beta14discrepancy
 Warning--empty year in leta
 Warning--empty year in morganFOM
 Warning--empty year in fady_pselmaa
-You've used 183 entries,
+You've used 184 entries,
             1876 wiz_defined-function locations,
-            1359 strings with 32758 characters,
-and the built_in function-call counts, 38754 in all, are:
-= -- 3327
-> -- 2235
+            1363 strings with 32996 characters,
+and the built_in function-call counts, 39162 in all, are:
+= -- 3359
+> -- 2270
 < -- 0
-+ -- 840
-- -- 657
-* -- 2744
-:= -- 6051
-add.period$ -- 236
-call.type$ -- 183
-change.case$ -- 138
++ -- 852
+- -- 668
+* -- 2777
+:= -- 6113
+add.period$ -- 237
+call.type$ -- 184
+change.case$ -- 139
 chr.to.int$ -- 0
-cite$ -- 248
-duplicate$ -- 2123
-empty$ -- 3543
-format.name$ -- 657
-if$ -- 9112
+cite$ -- 250
+duplicate$ -- 2144
+empty$ -- 3567
+format.name$ -- 668
+if$ -- 9207
 int.to.chr$ -- 0
-int.to.str$ -- 183
-missing$ -- 179
-newline$ -- 605
-num.names$ -- 178
-pop$ -- 685
+int.to.str$ -- 184
+missing$ -- 180
+newline$ -- 608
+num.names$ -- 179
+pop$ -- 689
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1052
+skip$ -- 1071
 stack$ -- 0
-substring$ -- 906
-swap$ -- 698
+substring$ -- 918
+swap$ -- 710
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 65
-while$ -- 270
-width$ -- 186
-write$ -- 1652
+warning$ -- 66
+while$ -- 272
+width$ -- 187
+write$ -- 1662
 (There were 5 error messages)
