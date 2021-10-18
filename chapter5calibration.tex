@@ -24,7 +24,7 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 \begin{itemize}
 	\item[$\bullet$] In time ratio ($ITR$) classifier
 	
-	For each event, this classifier loops the triggered PMTs (hits), calculates the $t_{res}$, and then finds the ratio of the number of hits in an optimized prompt time window. In the water phase, the time window was [-2.5,5.0]~ns. If the $ITR$ ratio is too low for an event, it indicates that most of the triggered PMTs are not caused by the prompt lights and thus the event probably does not originate from Cherenkov lights; it can be an instrumental noise, or caused by a large amount of lights reflecting off the detector components (called ``late lights''). 
+	For each event, this classifier loops through the triggered PMTs (hits), calculates $t_{res}$ for each, and determines the fraction of hit PMTs for which $t_{res}$ falls within an optimized `prompt time window'. In the water phase, the time window was [-2.5,5.0]~ns. If the $ITR$ ratio is too low for an event, a large proportion of the hit PMTs were not triggered prompt light, suggesting that the event probably did not originate from Cherenkov light; it could be instrumental noise, or caused by a large amount of light reflecting off detector components (called ``late light''). 
 	
 	\item[$\bullet$] $\beta_{14}$ isotropy classifier
 	
@@ -94,15 +94,15 @@ In the MC (data) case, there are about 13.04 \% (12.89\%) of the events with $E_
 	\label{energyVsFOM}
 \end{figure}
 
-As a summary, there are about 0.04\% of the reconstructed events which were poorly reconstructed (mis-reconstructed) by the \texttt{MPW fitter} with position biases over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
+As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mis-reconstructed) by the \texttt{MPW fitter}, resulting in position error of over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
 
 \subsubsection{Position Resolution}
-A position resolution function is defined for the reconstructed electron position distribution\cite{boulay2004direct}:
+
+A position resolution function is defined for the reconstructed electron position distribution \cite{boulay2004direct}:
 \begin{equation}
 R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
 \end{equation}
-where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is
-the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
+where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
 
 The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering, as shown in Fig.~\ref{N16centralDiagram}. The position distribution of the $\gamma$ interaction vertices is peaked around the source container, spreading to about 2 meters.
 
@@ -212,9 +212,9 @@ As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviati
 		\toprule
 		axis & systematic uncertainties & systematic to be applied ($\delta$) &smearing\\
 		\hline 
-		x  & $73.89\pm39.71$ & 113.6 & $x+\mathcal{N}(0,\delta)$\\
-		y  &  $56.03\pm34.96$ & 90.99 & $y+\mathcal{N}(0,\delta)$\\
-		z   & $75.47\pm70.09$ & 145.56& $z+\mathcal{N}(0,\delta)$\\
+		$x$  & $73.89\pm39.71$ & 113.6 & $x+\mathcal{N}(0,\delta)$\\
+		$y$  &  $56.03\pm34.96$ & 90.99 & $y+\mathcal{N}(0,\delta)$\\
+		$z$   & $75.47\pm70.09$ & 145.56& $z+\mathcal{N}(0,\delta)$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -272,9 +272,9 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 		\toprule
 		axis & fitted slope (\%)  & inflated error &systematic ($\delta^+/\delta^-$) (\%)\\
 		\hline 
-		x scale &  0.005$\pm$0.021 & 0.048 & +0.07/-0.06\\	
-		y scale  & -0.027$\pm$0.018 & 0.030&  +0.02/-0.07\\
-		z scale & 0.032$\pm$0.020 & 0.027&  +0.08/-0.01\\
+		$x$ scale &  0.005$\pm$0.021 & 0.048 & +0.07/-0.06\\	
+		$y$ scale  & -0.027$\pm$0.018 & 0.030&  +0.02/-0.07\\
+		$z$ scale & 0.032$\pm$0.020 & 0.027&  +0.08/-0.01\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -356,7 +356,7 @@ Fig.~\ref{relative_biasesVsPositions} shows the relative differences for the int
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{angularResol_scanXYZ.pdf}
-	\caption[Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.]{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
+	\caption[Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.]{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.}
 	\label{relative_biasesVsPositions}
 \end{figure}
 
@@ -393,7 +393,7 @@ Fig.~\ref{fig:N16beta14MPW} shows a comparison of the $\beta_{14}$ for the data 
 	\label{fig:N16beta14MPW}
 \end{figure}
 
-Fig.~\ref{beta14_XYZscans} shows effects when the source moving along x, y and z axes. Taking all the 80 internal runs mentioned before, I calculated the $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$ for each run. The mean and standard deviation of these $\Delta \beta_{14}$ values were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in Ref.~\cite{waterunidoc}, an asymmetric uncertain was taken: the upward shift was taken as $+0.010$ while the downward was taken as $-0.026-0.01=-0.036$. Thus the shifts: $+0.010/-0.036$ were taken as the $\beta_{14}$ systematics. It will be applied to the solar neutrino analysis in the next chapter. 
+Fig.~\ref{beta14_XYZscans} shows the effects on $\beta_{14}$ when source position is moved along the ($x, y, z$) axes. $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$ was calculated for each of the 80 internal runs (i.e. including neck runs), and the mean and standard deviation of these $\Delta \beta_{14}$ values were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in Ref.~\cite{waterunidoc}, an asymmetric uncertainty was taken: the upward shift was taken as $+0.010$ while the downward shift was taken as $-0.026-0.01=-0.036$. Thus the shifts  $+0.010/-0.036$ were taken as the $\beta_{14}$ systematics, and will be applied to the solar neutrino analysis in the next chapter. 
 
 \begin{figure}[htbp]
 	\centering
@@ -545,7 +545,7 @@ The energy reconstruction algorithms for the water phase (mentioned in Sect.~\re
 
 \subsubsection{Energy Resolutions}
 
-Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating mono-energetic electrons events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap} (a). By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source is converted into an effective or apparent electron energy spectrum ($P_{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of the $^{16}$N central run 107055.
+Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap} (a). By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathcal{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
 
 \begin{figure}[htbp]
 	\centering
@@ -554,16 +554,25 @@ Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a 
 	\caption[Converting number of photons to effective electron spectrum.]{Converting number of photons to effective electron spectrum. (a): A 2D map of Electron energy vs number of Cherenkov photons. (b):	Effective electron spectrum of $^{16}$N central run 107055.\label{N16energyMap}}
 \end{figure}
 
-To obtain the energy reconstruction resolutions, the reconstructed energy spectrum $P(T_{eff})$ is fitted with the energy resolution function defined as\cite{waterunidoc}:
+To obtain the energy reconstruction resolutions, the reconstructed energy spectrum $P(T_{eff})$ is fitted with the energy resolution function defined as \cite{waterunidoc}:
 
 \begin{equation}
-P(T_{eff})=N\int P_{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma_E}\exp \{-\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma_E^2}\},
+P(T_{eff})=N\int P_\mathrm{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma_E} \; \exp \left[ -\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma_E^2} \, \right] \, ,
 \end{equation}
-where the predicted apparent energy spectrum, $P_{source}(T_e)$, is convolved with a Gaussian resolution function. In the Gaussian function, $\sigma_E$ is the detector resolution and $\sigma_E = b\sqrt {T_{eff}}$, where $b$ is the energy resolution parameter and $\delta_E$ is the energy scale parameter. The $P_{source}(T_e)$ is the apparent energy spectrum.
+where the predicted apparent energy spectrum, $P_\mathrm{source}(T_e)$, is convolved with a Gaussian resolution function. In the Gaussian function, $\sigma_E$ is the detector resolution and $\sigma_E = b\sqrt {T_{eff}}$, where $b$ is the energy resolution parameter and $\delta_E$ is the energy scale parameter. $P_\mathrm{source}(T_e)$ is the apparent energy spectrum.
 
-Before fitting the reconstructed energy spectrum with the energy resolution function, a few cuts were applied on both the data and MC: the position FoM cut $scaleLogL>10$ and the energy FoM cuts: $0<G_{test}<1.9$, $U_{test}<0.95$ and $-11<Z_{factor}<1$ mentioned in the previous sections were used; the cuts of NHit$>5$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used to remove instrumental backgrounds; a distance cut: $|\vec{X}_{fit}-\vec{X}_{src}|>700~mm$ was suggested by Refs.~\cite{leta,waterunidoc} to remove the shadow effects when the events are close to the source container; for the event reconstructed within the $700~mm$ distance, if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$, its energy will also be kept.
+Before fitting the reconstructed energy spectrum with the energy resolution function, the following cuts were applied (on both the data and MC): 
 
-A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to remove poorly reconstructed events due to the trigger inefficiency. Fig.~\ref{fittedEnergyResol} shows the energy resolution function fitted with the reconstructed energy spectrum of the $^{16}$N central run-107055 data, after applying the cuts mentioned above.
+\begin{itemize}
+\item the position FoM cut $scaleLogL>10$ and the energy FoM cuts mentioned in the previous sections, i.e. $0<G_{test}<1.9$, $U_{test}<0.95$ and $-11<Z_{factor}<1$;
+
+\item cuts NHit$>5$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
+
+\item a conditional distance cut,  $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{leta,waterunidoc} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
+
+\end{itemize}
+
+A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to avoid including poorly reconstructed events due to the trigger inefficiency. Fig.~\ref{fittedEnergyResol} shows the energy resolution function fitted with the reconstructed energy spectrum of the $^{16}$N central run-107055 data, after applying the cuts mentioned above.
 \begin{figure}
 	\centering
 	\includegraphics[width=8cm]{N16data_energy_fitted_107055.png}
