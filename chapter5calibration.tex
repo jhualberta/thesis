@@ -1,6 +1,6 @@
 A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. To make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source (described in Sect.~\ref{sect:n16}, Chapter 3) was used for the primary detector calibration. The $^{16}$N calibration data ($^{16}$N runs) were mainly used to check the performance of the reconstruction algorithms for event position, direction, and energy. 
 
-In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}, Chapter 4) was applied on both the experimental data from, and simulations of, the $^{16}$N runs in the water phase. By analyzing the differences between the $^{16}$N data and corresponding MC simulations, systematics of the position and direction reconstruction were extracted, and these were used in the solar neutrino analysis of Chapter 6. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}, Chapter 4), which utilizes the \texttt{MPW fitter}'s event vertex and direction. Also, based on the \texttt{MPW fitter}'s reconstructed vertex and direction other parameters, such as the in-time-ratio ($ITR$) and the isotropy parameter ($\beta_{14}$) were calculated.
+In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}, Chapter 4) was applied on both the experimental data from, and simulations of, the $^{16}$N runs in the water phase. By analyzing the differences between the $^{16}$N data and corresponding MC simulations, systematics of the position and direction reconstruction were extracted, and these were used in the solar neutrino analysis of Chapter 6. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}, Chapter 4), which utilizes the \texttt{MPW fitter}'s event vertex and direction. Also, based on the \texttt{MPW fitter}'s reconstructed vertex and direction other parameters, such as the in-time-ratio (ITR) and the isotropy parameter ($\beta_{14}$) were calculated.
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
 
@@ -22,9 +22,9 @@ When analyzing $^{16}$N run data and simulations, an FECD tag cut ($FECD==9188$)
 A set of (event-) classifiers, developed originally for the SNO analysis, have been adjusted and optimized for the SNO+ water phase analysis\cite{highlevel}. These event classifiers utilize reconstructed quantities, so they always require a valid reconstruction.
 John: change equation order
 \begin{itemize}
-	\item[$\bullet$] In time ratio ($ITR$) classifier
+	\item[$\bullet$] In time ratio (ITR) classifier
 	
-	For each event, this classifier loops through the triggered PMTs (hits), calculates $t_{res}$ for each, and determines the fraction of hit PMTs for which $t_{res}$ falls within an optimized `prompt time window'. In the water phase, the time window was [-2.5,5.0]~ns. If the $ITR$ ratio is too low for an event, a large proportion of the hit PMTs were not triggered prompt light, suggesting that the event probably did not originate from Cherenkov light; it could be instrumental noise, or caused by a large amount of light reflecting off detector components (called ``late light''). 
+	For each event, this classifier loops through the triggered PMTs (hits), calculates $t_{res}$ for each, and determines the fraction of hit PMTs for which $t_{res}$ falls within an optimized `prompt time window'. In the water phase, the time window was [-2.5,5.0]~ns. If the ITR ratio is too low for an event, a large proportion of the hit PMTs were not triggered prompt light, suggesting that the event probably did not originate from Cherenkov light; it could be instrumental noise, or caused by a large amount of light reflecting off detector components (called ``late light''). 
 	
 	\item[$\bullet$] $\theta_{ij}$ isotropy classifier John: Jie, is this number, or rather, set of numbers, really an event classifier? There are, what, $N^2$ values of this property for EACH event? So it is not a single number for a given event. I wonder whether actually it is just needed as an input for $\beta_{14}$? Maybe I'm wrong, but it seems out of place, it doesn't have the same character as ITR and beta14 John
 
@@ -45,17 +45,17 @@ John: change equation order
 
 \subsection{Effects of the High-level Cuts}
 
-As described above, the classifiers can help to distinguish the physical events from Cherenkov events and unphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events John (add: such as those due to PMT breakdowns(?)){black}, cuts of $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
+As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events John (add: such as those due to PMT breakdowns(?)){black}, cuts of ITR$>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
 
-The $^{16}$N central run 107055 data and (corresponding) MC simulation were used to check the effects of the high-level cuts. For the MC (data), the cut $ITR>0.55$ removed 0.69\% (0.79\%) of the total events and the cut $-0.12<\beta_{14}<0.95$ removed 1.11\% (0.93\%) of the total events. Combining the $ITR$ and $\beta_{14}$ cuts, 1.69\% (1.62\%) of the total events were removed.
+The $^{16}$N central run 107055 data and (corresponding) MC simulation were used to check the effects of the high-level cuts. For the MC (data), the cut ITR$>0.55$ removed 0.69\% (0.79\%) of the total events and the cut $-0.12<\beta_{14}<0.95$ removed 1.11\% (0.93\%) of the total events. Combining the ITR and $\beta_{14}$ cuts, 1.69\% (1.62\%) of the total events were removed.
 
 Poorly reconstructed events with large position bias ($>6000~$mm) were counted. For the MC case, the position biases were taken as the distance between the reconstructed position and the true (MC) position, $|\vec{X}_{fit}-\vec{X}_{MC}|$. For the data however, the bias was taken as the difference between the reconstructed position and the source manipulator position, $|\vec{X}_{fit}-\vec{X}_{src}|$. Events with (so-defined) bias exceeding 6000 mm made up 0.13\% of the total event count, both in the MC and experimental calibration data. The high-level cuts removed 73.12\% (66.82\%) of these from the population of MC (data) events. In summary, the high-level cuts remove more than half of the events having large (reconstructed) position offset, while removing only about 1.6\% of the total events. 
 
-Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and the $ITR$, $\beta_{14}$ respectively, for the data and MC.
+Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and the ITR, $\beta_{14}$ respectively, for the data and MC.
 \begin{figure}
 	\centering
 	\includegraphics[width=14cm]{N16_107055_highLevelCuts.pdf}
-	\caption[Position biases vs $ITR$ (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs $ITR$ (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).}
+	\caption[Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).}
 	\label{n16_highLevelCut}
 \end{figure}
 
@@ -64,7 +64,7 @@ Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and 
 
 In this section, by analyzing the $^{16}$N data and corresponding simulations in the water phase, I extracted the resolution of the reconstruction algorithm for event position, direction, and energy. Then by comparing the data with the MC, the reconstruction systematics were evaluated.
 
-To do these evaluations, a few cuts were applied to both the data and MC. Firstly, the level cuts  ($ITR>0.55$, $-0.12<\beta_{14}<0.95$) were applied. For events having valid position, direction and energy reconstructions, further cuts on the reconstruction figure of merit (FoM) and source geometry (to be described in detail below) were applied, to ensure that the analyzed events were nicely reconstructed physics events caused by $\gamma$ particles (that originated in the source) interacting with the detector water.
+To do these evaluations, a few cuts were applied to both the data and MC. Firstly, the level cuts (ITR$>0.55$, $-0.12<\beta_{14}<0.95$) were applied. For events having valid position, direction and energy reconstructions, further cuts on the reconstruction figure of merit (FoM) and source geometry (to be described in detail below) were applied, to ensure that the analyzed events were nicely reconstructed physics events caused by $\gamma$ particles (that originated in the source) interacting with the detector water.
 
 \subsection{Position Reconstruction Evaluation}
 
@@ -236,7 +236,7 @@ x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta + \beta \; x^
 \end{equation}
 Since $x^{data}_{fit}=\Delta + (1+\beta) \; x^{MC}_{fit}$, if the vertex scale factor is defined $\alpha\equiv 1+\beta$ then $x_{data}=\alpha x_{MC}$.
 
-To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1 \; x_\mathcal{src}$ (where $x_\mathcal{src}$ is the source position), as shown in Fig.~\ref{fig:vertexScale}. John: {red}(What do you mean by `shifts'? If it is a specific variable, please give the variable's name. If it is a new variable, can a nicer symbol be used?){red}
+To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1 \; x_\mathrm{src}$ (where $x_\mathrm{src}$ is the source position), as shown in Fig.~\ref{fig:vertexScale}. John: {red}(What do you mean by `shifts'? If it is a specific variable, please give the variable's name. If it is a new variable, can a nicer symbol be used?){red}
 
 \begin{figure}
 	\centering
@@ -288,7 +288,7 @@ Now define $\theta$ as the angular difference between the ``true'' and the recon
 The distribution of $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}, Chapter 4. Before the fitting, a few cuts relating to the position and energy reconstructions were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut ($scaleLogL>10$) was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ collaboration to remove instrumental backgrounds, and poor reconstructions for events close to the source container or far away from the source. To remove instrumental backgrounds, the cuts
 \begin{itemize}
 \item $E_{fit} > 3.5$ MeV
-\item $ITR>0.55$
+\item ITR$>0.55$
 \item $-0.12<\beta_{14}<0.95$
 \end{itemize}
 were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut, $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm, was applied. For the internal scans, a radius cut $R'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans \cite{waterunidoc}.
@@ -361,7 +361,7 @@ This angular remapping function was used to smear the angular distributions for 
 
 \subsection{$\beta_{14}$ and its Systematic}
 
-Since $\beta_{14}$ itself is used as the high-level cut, only the cuts $ITR>0.55$ and NHits$>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5]$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
+Since $\beta_{14}$ itself is used as the high-level cut, only the cuts ITR$>0.55$ and NHits$>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5]$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
 
 \begin{figure}[htbp]
 	\centering
@@ -529,7 +529,7 @@ The energy reconstruction algorithms for the water phase (mentioned in Sect.~\re
 
 \subsubsection{Energy Resolutions}
 
-Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap} (a). By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathcal{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
+Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap} (a). By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
 
 \begin{figure}[htbp]
 	\centering
@@ -550,7 +550,7 @@ Before fitting the reconstructed energy spectrum with the energy resolution func
 \begin{itemize}
 \item the position FoM cut $scaleLogL>10$ and the energy FoM cuts mentioned in the previous sections, i.e. $0<G_{test}<1.9$, $U_{test}<0.95$ and $-11<Z_{factor}<1$;
 
-\item cuts NHit$>5$, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
+\item cuts NHit$>5$, ITR$>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
 
 \item a conditional distance cut,  $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{leta,waterunidoc} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
 
@@ -596,7 +596,7 @@ To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is sme
 	\label{fig:EscaleSmear}
 \end{figure}
 
-To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathcal{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided\cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
+To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided\cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEresol_N16_new.pdf}

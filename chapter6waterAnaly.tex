@@ -139,14 +139,14 @@ Before the analysis, the following ``beforehand cuts'' were applied:
 \begin{itemize}
     \item NHits$>20$, 
     \item $R'_{fit}<5500 \; \mathrm{mm}$,
-    \item $ITR>0.55$,
+    \item ITR$>0.55$,
     \item $-0.12<\beta_{14}<0.95$. 
 \end{itemize}
 Here NHits$>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with NHits$>20$ were reconstructed by the \texttt{MPW fitter}. The $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
 \begin{equation*}
 R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}    
 \end{equation*}
-(the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4.). The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts $ITR$ and $\beta_{14}$ cuts were mentioned previously.
+(the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4.). The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
 
 \subsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
 
@@ -280,7 +280,7 @@ To further reduce the background events, in addition to the `beforehand' cuts me
     \item $scaleLogL>10.85$ \, ,
     \item $0<G_{test}<1.9$ \, ,
     \item $U_{test}<0.95$ \, , 
-    \item $ITR>0.55$ \, , 
+    \item ITR$>0.55$ \, , 
     \item $-0.12<\beta_{14}<0.95$ \, . 
 \end{itemize}
 These cuts are denoted as ``default cuts''.
@@ -357,7 +357,7 @@ For the settings in the TMVA, the BDT method was set by: (1) using the adaptive 
 
 The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles.
 
-Nine variables were used as the TMVA inputs: $ITR$, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the $ITR$ and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant:  NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
+Nine variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant:  NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
 
 Using the $4<E<15$ MeV training dataset as an example, the distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences in distributions between the signal inputs (black solid lines) and background inputs (red dotted lines) can be observed.
 
@@ -392,7 +392,7 @@ Using the $4<E<15$ MeV training dataset as an example, the distributions of thes
 			\includegraphics[width=4cm]{tmvaCompare_zfactor.pdf}
 		\end{minipage}
 	}	
-	\subfigure[$ITR$]{
+	\subfigure[ITR]{
 		\begin{minipage}[b]{0.3\textwidth}
 			\centering
 			\includegraphics[width=4cm]{tmvaCompare_itr.pdf}
@@ -658,12 +658,12 @@ The $N_{sig}$ and $N_{bkg}$ values obtained here by fitting the flux fractions a
 With the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}$, the estimated total flux is:
 
 \begin{equation}
-\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stats.))\times 10^6~\mathrm{cm^{-2}s^{-1}},
+\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}},
 \end{equation}
 
 and the estimated elastic scattering flux is:
 \begin{equation}
-\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=( 2.074\pm 0.2061(stat.)\times 10^6~\mathrm{cm^{-2}s^{-1}}.
+\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.074\pm 0.2061(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
 \end{equation}
 
 The next section will evaluate the systematic uncertainties of the flux fractions.
@@ -702,7 +702,7 @@ For $\delta_\theta$, since there is no physical meaning to the case that $\vert 
 
 To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_{sun}$ distribution used as the $PDF$ will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the $PDF$ shape directly. Finally, the spectrum of the data was re-fit with the smeared $PDF$s to obtain the smeared physics quantity (specifically, the flux ratio $f_s$ mentioned in the previous section), and the differences between the original value and the smeared value are used as the systematics of the physics quantity.
 
-To obtain the smeared PDFs, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and $ITR>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. For the transformations, the positive (``smearing up'') and negative (``smearing down'') values were applied, respectively. After the transformation, the whole beforehand cut was applied. Lastly, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_{sun}$ spectrum was used as the smeared $PDF$ for that quantity. For example, if $E_{fit}$ is smeared by scaling up, i.e. $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_{sun}$ after the beforehand cut and TMVA BDT selection is used as the ``energy scale-up $PDF$''.
+To obtain the smeared PDFs, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and ITR$>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. For the transformations, the positive (``smearing up'') and negative (``smearing down'') values were applied, respectively. After the transformation, the whole beforehand cut was applied. Lastly, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_{sun}$ spectrum was used as the smeared $PDF$ for that quantity. For example, if $E_{fit}$ is smeared by scaling up, i.e. $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_{sun}$ after the beforehand cut and TMVA BDT selection is used as the ``energy scale-up $PDF$''.
 
 Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, energy scale and energy resolution on the MC $PDF$. The original MC $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms.
 
@@ -756,7 +756,7 @@ Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that
 
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
-{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.459(stats.)^{+0.126}_{-0.104}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}},
+{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.459(stat.)^{+0.126}_{-0.104}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}},
 \end{equation}
 while the ES flux is:
 \begin{equation}
