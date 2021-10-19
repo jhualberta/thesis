@@ -20,33 +20,32 @@ When analyzing $^{16}$N run data and simulations, an FECD tag cut ($FECD==9188$)
 \section{High Level Cuts for the Water Phase}\label{sect:high_level_cuts}
 
 A set of (event-) classifiers, developed originally for the SNO analysis, have been adjusted and optimized for the SNO+ water phase analysis\cite{highlevel}. These event classifiers utilize reconstructed quantities, so they always require a valid reconstruction.
-
+John: change equation order
 \begin{itemize}
 	\item[$\bullet$] In time ratio ($ITR$) classifier
 	
 	For each event, this classifier loops through the triggered PMTs (hits), calculates $t_{res}$ for each, and determines the fraction of hit PMTs for which $t_{res}$ falls within an optimized `prompt time window'. In the water phase, the time window was [-2.5,5.0]~ns. If the $ITR$ ratio is too low for an event, a large proportion of the hit PMTs were not triggered prompt light, suggesting that the event probably did not originate from Cherenkov light; it could be instrumental noise, or caused by a large amount of light reflecting off detector components (called ``late light''). 
 	
-	\item[$\bullet$] $\beta_{14}$ isotropy classifier
-	
-	This classifier uses Legendre polynomials to return the	first ($\beta_1$) and the fourth ($\beta_4$) spherical harmonics of an event, where:
-	\begin{equation}
-	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij}),
-	\end{equation}
-	and $P_l(\cos\theta_{ij})$ are Legendre polynomials. 
-	
-	A combination of two $\beta_l$ terms was chosen by the SNO collaboration to be: $\beta_{14}=\beta_1+4\beta_4$. This quantity gives a gaussian-like distribution for Cherenkov events\cite{dunmore2004separation}.	In principle, any deviation from zero suggests some polarity or a deviation from a totally isotropic pattern.
-	
-	\item[$\bullet$] $\theta_{ij}$ isotropy classifier 
-	
-	This classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j, which is calculated as:
+	\item[$\bullet$] $\theta_{ij}$ isotropy classifier John: Jie, is this number, or rather, set of numbers, really an event classifier? There are, what, $N^2$ values of this property for EACH event? So it is not a single number for a given event. I wonder whether actually it is just needed as an input for $\beta_{14}$? Maybe I'm wrong, but it seems out of place, it doesn't have the same character as ITR and beta14 John
+
+	This classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j, as defined by:
 	\begin{equation}
 	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}.
 	\end{equation}
+	
+	\item[$\bullet$] $\beta_{14}$ isotropy classifier
+	
+	This classifier is derived from the event's {\em set} of angles $\theta_{ij}$. The first ($\beta_1$) and the fourth ($\beta_4$) spherical harmonics of an event are determined from
+	\begin{equation}
+	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij}) \; ,
+	\end{equation}
+	where $N$ is the selected NHit used by the reconstruction (see Sect.~\ref{sect:positionFoM}), and the $P_l(\cos\theta_{ij})$ are Legendre polynomials, and (following the precedent of the SNO collaboration) the linear combination  $\beta_{14}=\beta_1+4\beta_4$ is taken. For a set of events produced by Cherenkov light, the corresponding set of values of $\beta_{14}$ has a Gaussian-like distribution \cite{dunmore2004separation}. In principle, any systematic deviation of $\beta_{14}$ from zero suggests some polarity or a deviation from a totally isotropic pattern.
+	
 \end{itemize}
 
 \subsection{Effects of the High-level Cuts}
 
-As described above, the classifiers can help to distinguish the signals from Cherenkov events and backgrounds from non-Cherenkov events. To remove the non-Cherenkov backgrounds, cuts of $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ (called ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analyses of data cleaning, simulated physics events as well as the SNO experience\cite{waterunidoc,marzec2019measurement,dunmore2004separation}.
+As described above, the classifiers can help to distinguish the physical events from Cherenkov events and unphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events John (add: such as those due to PMT breakdowns(?)){black}, cuts of $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
 
 The $^{16}$N central run 107055 data and (corresponding) MC simulation were used to check the effects of the high-level cuts. For the MC (data), the cut $ITR>0.55$ removed 0.69\% (0.79\%) of the total events and the cut $-0.12<\beta_{14}<0.95$ removed 1.11\% (0.93\%) of the total events. Combining the $ITR$ and $\beta_{14}$ cuts, 1.69\% (1.62\%) of the total events were removed.
 
@@ -56,16 +55,16 @@ Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and 
 \begin{figure}
 	\centering
 	\includegraphics[width=14cm]{N16_107055_highLevelCuts.pdf}
-	\caption[Position biases vs $ITR$ (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs $ITR$ (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the source position ($\vec{X}_{src}$) was compared.}
+	\caption[Position biases vs $ITR$ (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs $ITR$ (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).}
 	\label{n16_highLevelCut}
 \end{figure}
 
 
-\section{Reconstruction Evaluations from $^{16}$N Calibration Scans in the Water Phase}
+\section{Quality of event reconstruction judged by $^{16}$N Calibration Scans in the Water Phase}
 
-In this section, by analyzing the $^{16}$N data and MC in the water phase, I extracted the reconstruction resolutions of the event position, direction, and energy respectively. Then by comparing the data with the MC, the reconstruction systematics were evaluated.
+In this section, by analyzing the $^{16}$N data and corresponding simulations in the water phase, I extracted the resolution of the reconstruction algorithm for event position, direction, and energy. Then by comparing the data with the MC, the reconstruction systematics were evaluated.
 
-To do these evaluations, a few cuts were applied to both the data and MC. Firstly, the level cuts  ($ITR>0.55$, $-0.12<\beta_{14}<0.95$) were applied. For events with the position, direction and energy successfully reconstructed (i.e., the event has valid position, direction and energy reconstructions), further cuts on the reconstruction figure of merit (FoM) and source geometry (will be described in detail) were applied to ensure that the analyzed events were nicely reconstructed physics events caused by the source $\gamma$ particles interacting with the detector water.
+To do these evaluations, a few cuts were applied to both the data and MC. Firstly, the level cuts  ($ITR>0.55$, $-0.12<\beta_{14}<0.95$) were applied. For events having valid position, direction and energy reconstructions, further cuts on the reconstruction figure of merit (FoM) and source geometry (to be described in detail below) were applied, to ensure that the analyzed events were nicely reconstructed physics events caused by $\gamma$ particles (that originated in the source) interacting with the detector water.
 
 \subsection{Position Reconstruction Evaluation}
 
@@ -74,16 +73,13 @@ The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:positinF
 \begin{figure}
 	\centering
 		\includegraphics[width=13cm]{N16_107055_scaleLogLvsPosBias.pdf}
-	\caption[Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055.]{Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the source position ($\vec{X}_{src}$) was compared.}
+	\caption[Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055.]{Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).}
 	\label{posBiasVsFOM}
 \end{figure}
 
 For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000$ mm). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
 
-Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). 
-
-For the events with reconstructed energies below the water solar neutrino analysis threshold 3.5~MeV ($E_{fit}<3.5~MeV$), they are mostly coming from the U/Th isotopes, decays of Potassium as well as instrumental noises\cite{waterunidoc}. Their lower energies or $NHits$ can affect the position reconstruction since there are fewer PMTs to be used, and thus their $posFoM$ can be worse.
-In the MC (data) case, there are about 13.04 \% (12.89\%) of the events with $E_{fit}<3.5~MeV$. By applying the cut of $scaleLogL>10$, 0.10\% (0.09\%) of such events were removed.
+Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). Events with reconstructed energies below the water solar neutrino analysis threshold of 3.5~MeV ($E_{fit}<3.5~MeV$) are mostly coming from the U/Th isotopes, decays of Potassium and instrument noise \cite{waterunidoc}. Their lower energy (or $NHits$) negatively impacts the quality of position reconstruction because there are fewer hit PMTs providing information, so it is not unexpected that their $posFoM$ would be worse. In the MC (data) case, about 13.04 \% (12.89\%) of the events had  $E_{fit}<3.5~MeV$. By applying a $scaleLogL>10$ cut, proportions of 0.10\% (0.09\%) of such events were removed.
 
 \begin{figure}[!htb]
 	\centering
@@ -102,16 +98,14 @@ R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\si
 \end{equation}
 where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
 
-The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering, as shown in Fig.~\ref{N16centralDiagram}. The position distribution of the $\gamma$ interaction vertices is peaked around the source container, spreading to about 2 meters.
+The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering, as shown in Fig.~\ref{N16centralDiagram}. The position distribution of the $\gamma$ interaction vertices (i.e. locations where electrons undergo scattering and are set in motion, producing Cherenkov light) encircles the source container, and extends out to a radius of about 2 meters. Fig.~\ref{hsx}, obtained from MC simulation, shows the spatial distribution $S(x)$ of the {\em first} $\gamma$-ray interaction positions (first Compton scatter) projected onto the $x$-axis. Therefore, the $^{16}$N source is considered to be an {\em electron} source having a known spatial distribution \cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{N16centralDiagram.png}
-	\caption{A cartoon shows the $^{16}$N source.}
+	\caption{Schematic of the $^{16}$N source (not drawn to scale), showing the Compton scattering of a $\gamma$ emanating from the source. The radius of the dashed circle is about 2 m.}
 	\label{N16centralDiagram}
 \end{figure}
-
-Fig.~\ref{hsx} shows the spatial distributions $S(x)$ of the first $\gamma$-ray interaction positions projected on the x-axis obtained from MC simulation. Therefore, the $^{16}$N source is considered as an electron source with a known spatial distribution\cite{boulay2004direct}. For simplicity, in the following, we always discuss the $x$ component of the position vector $\vec{X}$. 
 
 \begin{figure}[!htb]
 	\centering
@@ -120,25 +114,21 @@ Fig.~\ref{hsx} shows the spatial distributions $S(x)$ of the first $\gamma$-ray 
 	\label{hsx}
 \end{figure}
 
-For electrons from the $^{16}$N calibration source, their spatial distribution function $N_{R}(x)$ can be described by the position resolution function smeared by the convolution of $S(x)$ as\cite{boulay2004direct}:
+The spatial distribution function $N_{R}(x)$ for electrons from the $^{16}$N calibration source can be described by the convolution of the position resolution function with $S(x)$ \cite{boulay2004direct},
 \begin{equation}
-N_{R}(x)=\int^{+\infty}_{-\infty} S(x)R(x_{fit}-x)dx,
+N_{R}(x)=\int^{+\infty}_{-\infty} S(x) \, R(x_{fit} - x) \, dx \; .
 \end{equation}
 
-The values of $N_{R}(x)$ can be calculated bin by bin from the histograms of $S(x)$ and $R(x)$ extracted from the MC or data: 
+The values of $N_{R}(x)$ can be calculated bin by bin from histograms of $S(x)$ and $R(x)$ extracted from the MC or data, 
 \begin{equation}
-N_R(x_i)=\sum_{x_i=-\infty}^{+\infty}S(x_i)R(x_{fit}^i-x_i),
+N_R(x_i)=\sum_{x_i=-\infty}^{+\infty}S(x_i) \, R(x_{fit}^i-x_i) \; .
 \end{equation}
 
-Then the $\chi^2$ is calculated by:
+Then the $\chi^2$ statistic is calculated, 
 \begin{equation}
-\chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2,
+\chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2 \; ,
 \end{equation}
-where $N_R^{fit}$ is a trial fit to the $N_R$ by tuning the $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and $\sigma_i$ is taken as the bin width of the histograms.
-
-By minimizing the $\chi^2$, the parameters of the resolution function, $\{\alpha_e,\mu_p,\sigma_p,\tau_p\}$ and a best $N_R^{fit}$ were obtained.
-
-Fig.~\ref{fig:posresol} shows a comparison of the reconstructed x position of {$^{16}$}N events between data and MC. The reconstructed position distributions were fitted with $N_R^{fit}$.
+where $N_R^{fit}$ is a trial fit to the $N_R$ obtained by tuning $(\alpha_e,\mu_p,\sigma_p,\tau_p)$, and $\sigma_i$ is taken as the bin width of the histograms. By minimizing $\chi^2$, the parameters $(\alpha_e,\mu_p,\sigma_p,\tau_p)$ of the resolution function, and a best $N_R^{fit}$, were obtained. Fig.~\ref{fig:posresol} shows a comparison of the reconstructed $x$ position of {$^{16}$}N events between data and MC. The reconstructed position distributions were fitted with $N_R^{fit}$.
 
 \begin{figure}
 	\centering
@@ -167,43 +157,39 @@ Table.~\ref{tab:posresol} summarizes the values of position resolution parameter
 
 \subsubsection{Position Systematics}
 
-To evaluate the position uncertainties, the MC and data runs of the $^{16}$N internal scans along ($x, y, z$) axes were taken to evaluate the $(x, y, z)$ position uncertainties respectively (the runs are listed in Table.~\ref{table:n16scanTable_zscan} to ~\ref{table:n16scanTable_xscan}. Three neck runs in the $z$-scan were not used). The high-level cuts mentioned earlier, as well as the $E_{fit}>3.5~MeV$ and $scaleLogL>10$ cuts, were applied. The fit range was set as $[-2000, +2000]~mm$ (because, recall, most of the source $\gamma$'s have their first Compton scatter -- knocking an $e^{-}$ into motion -- within that distance from the source). If the lower range \color{red}(of what??)\color{black} was smaller than -6000~mm, it was set to -6000~mm; if the upper range was larger than 6000~mm, it was set to +6000~mm. This was used to remove the effects caused by the AV \color{red} (I think this sentence should be more specific about which effects)\color{black}.
+To evaluate the position uncertainties, the MC and data runs of the $^{16}$N internal scans along ($x, y, z$) axes were taken to evaluate the $(x, y, z)$ position uncertainties respectively (the runs are listed in Table.~\ref{table:n16scanTable_zscan} to ~\ref{table:n16scanTable_xscan}. Three neck runs in the $z$-scan were not used). The high-level cuts mentioned earlier, as well as the $E_{fit}>3.5$~MeV and $scaleLogL>10$ cuts, were applied. The fit range was set as $[X_\mathrm{source}-2000, X_\mathrm{source}+2000]$~mm, where $X=(x,y,z)$ for the scans along $(x,y,z)$ axes respectively. This is because, recall, most of the source $\gamma$'s have their first Compton scatter -- knocking an $e^{-}$ into motion -- within that distance from the source. If the value of $(X-2000)~$mm was smaller than -6000~mm, it was set to -6000~mm; if the $(X+2000)~$mm was larger than 6000~mm, it was set to +6000~mm. This was used to remove the AV effects, mainly the AV lensing and the material boundaries which distort the reconstruction performances, as mentioned in Chapter 4.
 
-The position resolution function was first fitted with 4 free parameters: $\alpha_e,\mu_p$, $\sigma_p$ and $\tau_p$. The the average values of the $\alpha_e$ and $\tau_p$ were calculated from all the scan runs used here. To simplify the calculation in propagating systematics, the $\alpha_e$ and the $\tau_p$ were fixed to the average value: $\alpha_e=0.5288$ (0.5375) for the MC (data); $\tau_p=271.738$ (263.735) for the MC (data). With the fixed values of $\alpha_e$ and $\tau_p$, both the data and the MC were refit with $\mu_p$ and $\sigma_p$ only. Using the fixed values of $\alpha_e$ and the $\tau_p$ is based on the reasons that these parameters in principle can be viewed as corrections to the $\gamma$ distribution ($S(x)$) and they can be absorbed, which would not depend on position\cite{waterunidoc}. 
+The position resolution function was first fitted with four free parameters, $(\alpha_e,\mu_p$, $\sigma_p$, $\tau_p$). The average values of $\alpha_e$ and $\tau_p$ were calculated from all the scan runs used here and then, to simplify the calculation in propagating systematics, those average values\footnote{Using fixed values for ($\alpha_e$, $\tau_p$) is justified by the fact that these parameters in principle can be viewed as corrections to the spatial distribution of the $\gamma$'s ($S(x)$) that would not depend on position \cite{waterunidoc}.} were assigned as constant values: $\alpha_e=0.5288$ (0.5375) for the MC (data) and $\tau_p=271.738$ (263.735) for the MC (data). With the fixed values of $\alpha_e$ and $\tau_p$, both the data and the MC were refitted to optimize $\mu_p$ and $\sigma_p$ only. 
 
 Fig.~\ref{MPWscanXYZResols} shows the fitted results for $\mu_P$ and $\sigma_P$ along the $(x, y, z)$-axes scans respectively. For the sake of simplicity, for the $x$-scan case, only the $x$-axis results ($\mu_{P,x},\sigma_{P,x}$) are shown here. Similarly, only the $\mu_{P,y}$ and $\sigma_{P,y}$ ($\mu_{P,z}$ and $\sigma_{P,z}$) are shown for the $y$-scan ($z$-scan). The relative differences discussed later consider all three axes.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_muPandSigmaP_xyzScans.pdf}
-	\caption[The fitted values of $\mu_P$ and $\sigma_P$ along x, y and z scans.]{The fitted values of $\mu_P$ (top) and $\sigma_P$ (bottom) along x (left), y (middle) and z (right) scans. The source positions in each set of scans are projected onto x, y and z axes respectively. The MC results (red circles) are compared with the data (black boxes).}
+	\caption[The fitted values of $\mu_P$ and $\sigma_P$ along $x$, $y$ and $z$-scans.]{The fitted values of $\mu_P$ (top) and $\sigma_P$ (bottom) along $x$ (left), $y$ (middle) and $z$ (right) scans. The source positions in each set of scans are projected onto $(x, y, z)$ axes respectively. The MC results (red circles) are compared with the data (black boxes).}
 	\label{MPWscanXYZResols}
 \end{figure}
 
-It shows that the position resolutions of the MC are mostly better than the data, which is expected since the non-uniformities of the detector in realistic situations can cause a broader resolution in the data\cite{waterunidoc}. Also, when the source is close to the AV or at the edges of the axes, the Gaussian shift $\mu_P$ becomes large and the resolution worsens. Also, the difference between the MC and data becomes large.
+John: Fig.~\ref{MPWscanXYZResols} shows that the resolution for vertex reconstruction is generally better for the MC simulations than for the detector data. This is not unexpected, because of the non-uniformities of the detector in realistic situations (as opposed to the idealizations inherent in the MC simulation) \cite{waterunidoc}. Also, when the source is close to the AV or at the ends of the axes, the Gaussian shift $\mu_P$ becomes large and the resolution worsens. Also, the difference between the MC and data becomes large.
 
-To quantify the discrepancies between the MC and data, a relative difference of $\sigma_p$ between the MC and data is defined as\cite{waterunidoc}:
+To quantify the discrepancies between the MC and data, a relative difference of $\sigma_p$ between the MC and data is defined as \cite{waterunidoc}:
 \begin{equation}
 \sigma_{p,\delta}\equiv\sqrt{\sum_i|(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2|}~~(i=x,y,z),
 \end{equation}
- 
-Fig.~\ref{pos_relative_sigma_biasesVsPositions} shows the $\sigma_{p,\delta}$ changing along the internal x, y and z-axes scans respectively. All the differences are below $190~mm$ except the run 106979 with the source at $z=4973.567~mm$. The neck effects can cause this worst resolution. 
 
-It goes worse when the source is close to the AV or at the edges of the axes. When the source is close to the AV center, the differences are below $100~mm$.
+John: Fig.~\ref{pos_relative_sigma_biasesVsPositions} shows that $\sigma_{p,\delta}$ varies along the internal ($x, y, z$)-axis scans. All the $\sigma_p$ values are smaller than $190~$mm, except for that with the source at $z=4973.567~$mm (run 106979) and (therefore) in proximity to the neck of the AV, whose presence probably is responsible for the anomaly. Looking at the pattern on Fig.~\ref{pos_relative_sigma_biasesVsPositions} we see that $\sigma_p$ is larger (worse) when the source is close to the AV (i.e. at the end of the position axes) and that when the source is close to the {\em center} of the AV, the differences are below $100~$mm.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_6176_pos_sigmaP_data_mc.pdf}
-	\caption[Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position.]{Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
+	\caption[Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position.]{Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.}
 	\label{pos_relative_sigma_biasesVsPositions}
 \end{figure}
 
-The values of $\sigma_{p,\delta}$ were taken to represent the position resolution systematics.
-
-As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of the $\sigma_{p,\delta}$ were taken as the resolution systematics for x, y and z-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The upper values $\delta$ were used to smear the positions.
+John: As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of $\sigma_{p,\delta}$ were taken as the resolution systematics for the $(x, y z$)-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The listed values for the standard deviation ($\delta$) of this Gaussian were used to smear the positions.
 \begin{table}[ht]
 	\centering
-	\caption{The \texttt{MPW fitter} position resolution systematic uncertainties in x, y and z axes. Unit: mm.}
+	\caption{Systematic uncertainties [mm] of the \texttt{MPW fitter} for position on ($x,y,z$)-axes.}
 	\vspace{3mm}
 	\label{vertexResolsSys}
 	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccc}
@@ -221,14 +207,14 @@ To quantify the vertex shifts between the MC and data, values of vertex shifts: 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_vertexShift_xyzScans.pdf}
-	\caption[Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position.]{Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the x-scan runs; green circles represent the y-scan runs and the blue triangles represent the z-scan runs.}
+	\caption[Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position.]{Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.}
 	\label{fig:verteshitfs}
 \end{figure}
 
-In Table.~\ref{vertexShifts}, the averages and the standard deviations of the $\mu_{P,\delta}$ were taken as the vertex shifts for x, y and z-axes respectively. To smear the position results, the positions were simply shifted by the upper values $\delta$ were used to smear the positions.
+In Table.~\ref{vertexShifts}, the averages and the standard deviations of $\mu_{P,\delta}$ were taken as the vertex shifts for ($x, y, z$)-axes. To smear the position results, the positions were simply shifted by the upper values $\delta$ John: {red}(Jie, what do you mean by `upper values'?){black} that were used to smear the positions.
 \begin{table}[ht]
 	\centering
-	\caption{Vertex shifts for the reconstructed positions in x, y and z axes. Unit: mm.}
+	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm.}
 	\vspace{3mm}
 	\label{vertexShifts}
 	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
@@ -244,11 +230,13 @@ In Table.~\ref{vertexShifts}, the averages and the standard deviations of the $\
 
 \subsubsection{Vertex Scale Uncertainties}
 
-In addition to the vertex shifts mentioned previously, the vertex scale is defined as a linear scale factor between the fitted positions of the data and the MC: $x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta+\beta\cdot x^{MC}_{fit}$.
+In addition to the vertex shifts mentioned previously, the vertex scale is defined as a linear scale factor between the fitted positions of the data and the MC,
+\begin{equation}
+x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta + \beta \; x^{MC}_{fit} \; .
+\end{equation}
+Since $x^{data}_{fit}=\Delta + (1+\beta) \; x^{MC}_{fit}$, if the vertex scale factor is defined $\alpha\equiv 1+\beta$ then $x_{data}=\alpha x_{MC}$.
 
-Since $x^{data}_{fit}=\Delta+(1+\beta)\cdot x^{MC}_{fit}$, if the vertex scale factor is defined as: $\alpha\equiv 1+\beta$, then $x_{data}=\alpha x_{MC}$.
-
-To obtain the $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1\cdot x_{src}$ (where $x_{src}$ is the source position), as shown in Fig.~\ref{fig:vertexScale}.
+To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1 \; x_\mathcal{src}$ (where $x_\mathcal{src}$ is the source position), as shown in Fig.~\ref{fig:vertexScale}. John: {red}(What do you mean by `shifts'? If it is a specific variable, please give the variable's name. If it is a new variable, can a nicer symbol be used?){red}
 
 \begin{figure}
 	\centering
@@ -259,13 +247,13 @@ To obtain the $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted wi
 	\label{fig:vertexScale}
 \end{figure}
 
-From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{table:vertexScale}. Since the $\chi^2/ndf$ values here were large, according to Refs.~\cite{waterunidoc,pdg2020}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(ndf-1)}$. The downward systematic was calculated as the slope minus the slop error as well as the inflated error. In contrast, the upward systematic was taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the z scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive due to the possible biases in simulation for the neck geometry effects and makes the slope positive. So this point was not used in the linear fit.
+From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{tab:vertexScale}. Since the $\chi^2/\mathrm{ndf}$ values\footnote{John: {red}Here `ndf' means `number of degrees of freedom.' See ?? for background on this measure of goodness of fit.{red}} here were large, according to Refs.~\cite{waterunidoc,pdg2020}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(\mathrm{ndf}-1)}$. The downward systematic was calculated as the slope minus the slope error as well as the inflated error. In contrast, the upward systematic was taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the $z$ scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive, possibly due to the bias in simulation from the neck geometry effects. This point was not used in the linear fit.
 
 \begin{table}[ht]
 	\centering
-	\caption{Vertex shifts for the reconstructed positions in x, y and z axes. Unit: mm.}
+	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm.}
 	\vspace{2mm}
-	\label{table:vertexScale}
+	\label{tab:vertexScale}
 	\begin{tabular*}{130mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
 		axis & fitted slope (\%)  & inflated error &systematic ($\delta^+/\delta^-$) (\%)\\
@@ -277,29 +265,36 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 	\end{tabular*}
 \end{table}
 
-The vertex scale systematics is then transformed by:
-$x'=(1+\delta_x/100)x$, the same for $y,z$.
+The vertex scale systematics were then transformed, e.g. $x'=(1+\delta_x/100)x$ with equivalent formulae for the $(y,z)$ axes.
 
-The scale systematics also depends on the radius $r=\sqrt{x^2+y^2+z^2}$\cite{waterunidoc}. By the error propagation, for an event position (x,y,z), $\delta_r$ is calculated as\cite{waterunidoc}:
+The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r$ is calculated as\cite{waterunidoc}:
 \begin{equation}
-\delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2\delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}},
+\delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}}.
 \end{equation}
-
-where the $\delta^+_r$ and $\delta^-_r$ are calculated by $\delta^+$ and $\delta^-$ respectively.
-
-Then the two-sided bounds of the radial $r$ are calculated by:
-$r^+=(1+\delta^+_r/100)\cdot r$ and $r^-=(1+\delta^-_r/100)\cdot r$.
+Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table.~\ref{tab:vertexScale}, the $\delta_r^+$ and $\delta_r^-$ are calculated, respectively. Then the two-sided bounds for the confidence interval of reconstructed radius $r$ are calculated by as $r^+=(1+\delta^+_r/100) \; r$ and $r^-=(1+\delta^-_r/100) \; r$.
 
 %Uncertainties from the source manipulator positions are assumed to be 50~mm.
 
 \subsection{Direction Reconstruction Evaluation}
 
 \subsubsection{Direction Resolution}
-For the reconstructed events in the $^{16}$N calibration, assuming a $\gamma$ particle emitted from the source and interacts with $e^-$ at the reconstructed position, the ``true'' direction of an event is defined as the direction pointing from the source manipulation position to the reconstructed position: $\vec{u}_{true} = (\vec{X}_{fit}-\vec{X}_{src})/|\vec{X}_{fit}-\vec{X}_{src}|$. The angle $\theta$ is the displacement between the ``true'' and the reconstructed directions and $\cos\theta=\vec{u}_{true}\cdot \vec{u}_{fit}$.
 
-The distribution of the $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}, Chapter 4. Before the fitting, a few cuts relating to the position and energy reconstruction were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut: $scaleLogL>10$ was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ analysis to remove the instrumental backgrounds and poor reconstructions for the events close to the source container or far away from the source. To remove the instrumental backgrounds, the cuts of $E_{fit}>3.5$~MeV, $ITR>0.55$ and $-0.12<\beta_{14}<0.95$ were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut of $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm was applied. For the internal scans, a radius cut $R'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans\cite{waterunidoc}.
+For reconstructed $^{16}$N calibration events, on the assumption that a $\gamma$ particle emitted by the source interacted with an electron at the reconstructed position, the ``true'' direction of an event is defined as the direction pointing from the source manipulator position to the reconstructed position,
+\begin{equation}
+\vec{u}_{\mathrm{true}} = \frac{\vec{X}_{\mathrm{fit}}-\vec{X}_{\mathrm{src}}}{|\vec{X}_{\mathrm{fit}}-\vec{X}_\mathrm{src}|} \; .    
+\end{equation}
+Now define $\theta$ as the angular difference between the ``true'' and the reconstructed event orientations, viz. $\cos\theta= \vec{u}_{\mathrm{true}} \cdot \vec{u}_{\mathrm{fit}}$.
 
-Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions in a fit range of [0.3,1] after the cuts mentioned. 
+The distribution of $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}, Chapter 4. Before the fitting, a few cuts relating to the position and energy reconstructions were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut ($scaleLogL>10$) was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ collaboration to remove instrumental backgrounds, and poor reconstructions for events close to the source container or far away from the source. To remove instrumental backgrounds, the cuts
+\begin{itemize}
+\item $E_{fit} > 3.5$ MeV
+\item $ITR>0.55$
+\item $-0.12<\beta_{14}<0.95$
+\end{itemize}
+were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut, $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm, was applied. For the internal scans, a radius cut $R'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans \cite{waterunidoc}.
+
+Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions over a fit range (in $\cos \theta_e$) of [0.3,1], after the cuts mentioned, and the resolution parameters are shown in Table.~\ref{tab:angularResolValuesUpdated}. Direction resolution for the MC is better than for the data, due to the idealized (simpler) configuration modelled in the simulations. The reconstruction performances of the \texttt{MPW fitter} and the \texttt{RAT water fitter} are similar, while for both the detector data and MC, $\beta_M$ values yielded by \texttt{MPW} are about 10\% higher than those from \texttt{RAT}. In short, direction resolution of the \texttt{MPW} is slightly better than that of the \texttt{RAT}.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{16NangularResol.pdf}
@@ -308,7 +303,7 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 \end{figure}
 
 \begin{table}[ht]
-	\caption{Direction resolutions.\label{tab:angularResolValuesUpdated}}
+	\caption{Direction resolution of two fitters, when applied to $^{16}$N calibration data and when applied to MC simulations of the calibration process.\label{tab:angularResolValuesUpdated}}
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
 	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
@@ -321,8 +316,6 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 		\bottomrule
 	\end{tabular}
 \end{table}
-
-The resolution parameters are shown in Table.~\ref{tab:angularResolValuesUpdated}. It shows that the direction resolutions of the MC are always better than the data due to the ideal situations in the simulations. The reconstruction performance of the \texttt{MPW fitter} and the \texttt{RAT water fitter} are similar, while the $\beta_M$ values of the \texttt{MPW} are about 10\% higher than the \texttt{RAT} in both of the data and the MC. This indicates the direction resolution of the \texttt{MPW} is slightly better than the \texttt{RAT}.
 
 \subsubsection{Direction Systematics}
 
@@ -348,7 +341,9 @@ and the error of the relative difference is defined as
 \delta_{(\Delta q)_{rel}} = \sqrt{(\frac{\delta_{q_{data}}}{q_{data}})^2+(\frac{\delta_{q_{MC}}}{q_{MC}})^2}\times 100\% \; .
 \end{equation}\label{eq:erors_relativeBiases}
 
-Fig.~\ref{relative_biasesVsPositions} shows the relative differences for the internal x, y, z scans (not using the neck scans).
+Fig.~\ref{relative_biasesVsPositions} shows the relative differences for the internal $(x, y, z)$ scans (excluding the neck scans). Based on those scans (i.e. the internal scans barring those with the source in the neck, leaving 77 runs in total) the means and standard deviations of the relative differences are $\Delta(\beta_M)_{rel}=(-6.09\pm4.01)\%$ and $\Delta(\beta_S)_{rel}=(-3.09\pm4.39)\%$.
+
+To be conservative, taking the largest and smallest values of the $\Delta(\beta_M)_{rel}$ and $\Delta(\beta_S)_{rel}$, the negative and positive values of the direction systematic ($\delta_\theta$) are obtained as $\delta_\theta=+0.013/-0.101$.
 
 \begin{figure}[!htb]
 	\centering
@@ -357,13 +352,7 @@ Fig.~\ref{relative_biasesVsPositions} shows the relative differences for the int
 	\label{relative_biasesVsPositions}
 \end{figure}
 
-Taking the internal scans except the neck scans (77 runs in total), the means and standard deviations of the relative differences are:
-
-$\Delta(\beta_M)_{rel}=(-6.09\pm4.01)\%$, and $\Delta(\beta_S)_{rel}=(-3.09\pm4.39)\%$.
-
-To be conservative, taking the largest and smallest values of the $\Delta(\beta_M)_{rel}$ and $\Delta(\beta_S)_{rel}$, the negative and positive values of the direction systematic ($\delta_\theta$) are obtained as $\delta_\theta=+0.013/-0.101$.
-
-To propagate the uncertainties of $\beta$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
+To propagate the uncertainties in $\beta_M$ and $\beta_S$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
 \begin{equation}\label{remapTheta}
 \cos\theta'=1+(\cos\theta-1)(1+\delta_{\theta}) \, .
 \end{equation}
