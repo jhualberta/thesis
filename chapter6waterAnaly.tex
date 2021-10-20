@@ -30,11 +30,11 @@ As mentioned in Chapter 3, Sect.~\ref{sect:overview}, due to the great depth of 
 The open dataset was taken in 2017 at the beginning of the water phase from run 100000 to run 100399, an interval providing a live time of 16.607 days.
 This open dataset was used to compare the reconstructed events furnished by the \texttt{MPW fitter} against those from the \texttt{RAT water fitter}.
 
-In the SNO+ water phase, solar $\nu_e$s are measured via elastic scattering: $\nu_e+e^-\to \nu_e+e^-$ ($\nu+e^-$ ES, see Sect.~\ref{sect:NuEStheory}). The observable quantity is the solar angle $\theta_{sun}$, the direction of the event relative to the Sun's location, which is defined as:
+In the SNO+ water phase, solar $\nu_e$s are measured via elastic scattering: $\nu_e+e^-\to \nu_e+e^-$ ($\nu+e^-$ ES, see Sect.~\ref{sect:NuEStheory}). The observable quantity is the solar angle $\theta_\mathrm{sun}$, the direction of the event relative to the Sun's location, which is defined as:
 \begin{equation}
-\cos\theta_{sun}\equiv \vec u_{event}\cdot \frac{\vec{X}_{event}-\vec{X}_{sun}}{|\vec{X}_{event}-\vec{X}_{sun}|},
+\cos\theta_\mathrm{sun}\equiv \vec u_\mathrm{event}\cdot \frac{\vec{X}_\mathrm{event}-\vec{X}_\mathrm{sun}}{|\vec{X}_\mathrm{event}-\vec{X}_\mathrm{sun}|},
 \end{equation}
-where $\vec{X}_{sun}$ is taken as the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun. 
+where $\vec{X}_\mathrm{sun}$ is taken as the Sun's location relative to the SNOLAB location since the whole lab can be treated as a point regarding the long distance to the Sun. 
 
 For the open dataset, the data cleaning mask and high level cuts
 \begin{itemize}
@@ -49,7 +49,7 @@ were applied to the data (as mentioned in Sect.~\ref{sect:high_level_cuts}, Chap
 	\label{tab:opendataCompare}
 	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccccc}
 		\toprule
-		Fitter &	Run &  GTID &  $z-0.108$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$ & SNO+ Day\\
+		Fitter &	Run &  GTID &  $z-0.108$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_\mathrm{sun}$ & SNO+ Day\\
 		\hline 
 		Rat & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954 &2683.92 \\	
 		MPW &  --& --& 3.43 &	3.52 &	0.20	& -0.906 & --\\
@@ -71,7 +71,7 @@ were applied to the data (as mentioned in Sect.~\ref{sect:high_level_cuts}, Chap
 	\label{tab:opendataMPW}
 	\begin{tabular*}{145mm}{c@{\extracolsep{\fill}}cccccccc}
 		\toprule
-		Run & GTID & $E_{fit}$ (MeV) & $z-0.108$ (m) & $R$ (m)& $(R/R_{av})^3$ & $\cos\theta_{sun}$\\
+		Run & GTID & $E_{fit}$ (MeV) & $z-0.108$ (m) & $R$ (m)& $(R/R_{av})^3$ & $\cos\theta_\mathrm{sun}$\\
 		\hline 
 		100093 &	11108354	&5.83 & 3.43 & 3.52 & 0.20 & -0.907\\
 		100632&	7882360    &6.18& 1.67 &3.11 &0.14 &0.915\\
@@ -126,7 +126,7 @@ Firstly, all of the solar neutrino candidate events found by the \texttt{Rat wat
 	\caption[Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.]{Reconstruction results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the \texttt{Rat water fitter}; red open star stands for the direction fitted by the \texttt{MPW fitter}; full double diamond stands for the solar direction*-1; blue full square stands for the event position fitted by the \texttt{Rat water fitter}; open square stands for the position fitted by the \texttt{MPW fitter}.	\label{fig:openDataSetCandidate}}
 \end{figure}
 
-From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) it can be seen that that, for the candidate events, the results from the \texttt{MPW} are largely consistent with those from \texttt{RAT}, although (not apparent from the figure) the \texttt{MPW} fitter disfavored one event in run 100207 (with GTID=5079885), placing its position outside the AV, and the $\cos\theta_{sun}$ becomes smaller and is further away from +1. %This event can be checked by looking at the $klDiv$ values (using Eqn.~\ref{eq:symKlDiv}). It gives $klDiv(\mathrm{MPW})=4.95$ and $klDiv(\mathrm{RAT})=9.62$, which indicates that the \texttt{MPW} reconstructed $\cos\theta_\mathrm{Ch}$ distribution is more closer to the nominal Cherenkov angle distribution.
+From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) it can be seen that that, for the candidate events, the results from the \texttt{MPW} are largely consistent with those from \texttt{RAT}, although (not apparent from the figure) the \texttt{MPW} fitter disfavored one event in run 100207 (with GTID=5079885), placing its position outside the AV, and the $\cos\theta_\mathrm{sun}$ becomes smaller and is further away from +1. %This event can be checked by looking at the $klDiv$ values (using Eqn.~\ref{eq:symKlDiv}). It gives $klDiv(\mathrm{MPW})=4.95$ and $klDiv(\mathrm{RAT})=9.62$, which indicates that the \texttt{MPW} reconstructed $\cos\theta_\mathrm{Ch}$ distribution is more closer to the nominal Cherenkov angle distribution.
 
 In addition to refitting the candidate events found by the \texttt{RAT}, the \texttt{MPW} fitter can be (and was) used directly to search for candidate events, with the result shown in Table.~\ref{tab:opendataMPW}. Evidently the \texttt{MPW} fitter obtained a different set of candidate events, albeit overlapping with the set provided by the \texttt{RAT} fitter, and so it provides an alternative analysis of the solar neutrinos.
 % Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
@@ -150,14 +150,14 @@ R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}
 
 \subsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
 
-To prepare for the fit, the values of the solar angle, $\cos\theta_{sun}$ from the data were filled into a histogram covering a range of [-1,1] with 40 bins. For each bin, the observed event count ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The count in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg} \, P_{bkg}+N_{sig} \, P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distributions of background events and solar $\nu_e$ events respectively.
+To prepare for the fit, the values of the solar angle, $\cos\theta_\mathrm{sun}$ from the data were filled into a histogram covering a range of [-1,1] with 40 bins. For each bin, the observed event count ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The count in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg} \, P_{bkg}+N_{sig} \, P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distributions of background events and solar $\nu_e$ events respectively.
 
-For background events, a uniform distribution of $\cos\theta_{sun}$ was assumed. On the other hand, $\cos\theta_{sun}$ distributions for solar $\nu_e$ events were extracted from the realistic run simulations after applying the beforehand cuts, as shown in Fig.~\ref{solarPDF}. 
+For background events, a uniform distribution of $\cos\theta_\mathrm{sun}$ was assumed. On the other hand, $\cos\theta_\mathrm{sun}$ distributions for solar $\nu_e$ events were extracted from the realistic run simulations after applying the beforehand cuts, as shown in Fig.~\ref{solarPDF}. 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{solarPDF.pdf}
-	\caption[The $\cos\theta_{sun}$ distribution of solar $\nu_e$ used as a PDF function.]{The $\cos\theta_{sun}$ distribution for solar $\nu_e$ events extracted from the simulations, which is scaled (so as to have an integral of 1) to obtain a probability density function.}
+	\caption[The $\cos\theta_\mathrm{sun}$ distribution of solar $\nu_e$ used as a PDF function.]{The $\cos\theta_\mathrm{sun}$ distribution for solar $\nu_e$ events extracted from the simulations, which is scaled (so as to have an integral of 1) to obtain a probability density function.}
 	\label{solarPDF}
 \end{figure}
 
@@ -189,22 +189,22 @@ Fitting the data with $(N_{bkg},N_{sig})$ by maximizing the quantity $-2\ln\math
 To check the uncertainty of the Poisson fit, a method similar to that of Ref.~\cite{leta} was used. 5000 fake datasets were generated from the run-by-run MC simulations of the 92.54 live-day half-dataset (runs 200004 to 203602). The `beforehand cuts' had been applied to these simulations.
 %In the MC dataset, for $E_{fit}>5~MeV$, there were 6359 backgrounds from different background events and 317205 signals of internal solar $\nu_e$ events (the event types were mentioned in Table.~\ref{table:mixed_MC}).
 
-The number of background events in a fake dataset, $N^f_{bkg}$, was assumed to be twice the event number in the $-1<\cos\theta_{sun}<0$ region, while the number of signal events $N^f_{sig}=N^f_{total}-N^f_{bkg}$. These numbers were determined from the actual data, rather than the simulations. Fig.~\ref{half_data} shows the actual data of the half-dataset, after the data-cleaning cuts and beforehand cuts. Reading from the actual data, it found $N^f_{bkg}=38$ and then $N^f_{sig}=109-N^f_{bkg}=71$. To do the ensemble test, for each fake dataset, two random numbers: $N^r_{sig}$ and $N^r_{bkg}$ were generated by the $\texttt{ROOT TRandom3}$ random number generator class. Each of the two random numbers followed the random Poisson distribution: $e^{-\mu}\mu^{N^r}/N^r!$, where $\mu=71$ or $38$, and thus they fluctuated around $N^f_{sig}$ or $N^f_{bkg}$.
+The number of background events in a fake dataset, $N^f_{bkg}$, was assumed to be twice the event number in the $-1<\cos\theta_\mathrm{sun}<0$ region, while the number of signal events $N^f_{sig}=N^f_{total}-N^f_{bkg}$. These numbers were determined from the actual data, rather than the simulations. Fig.~\ref{half_data} shows the actual data of the half-dataset, after the data-cleaning cuts and beforehand cuts. Reading from the actual data, it found $N^f_{bkg}=38$ and then $N^f_{sig}=109-N^f_{bkg}=71$. To do the ensemble test, for each fake dataset, two random numbers: $N^r_{sig}$ and $N^r_{bkg}$ were generated by the $\texttt{ROOT TRandom3}$ random number generator class. Each of the two random numbers followed the random Poisson distribution: $e^{-\mu}\mu^{N^r}/N^r!$, where $\mu=71$ or $38$, and thus they fluctuated around $N^f_{sig}$ or $N^f_{bkg}$.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{cosThetaToSun_halfData_5to15.pdf}
-	\caption[Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts.]{Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts. The number of counts in the $-1<\cos\theta_{sun}<0$ region is 19.}
+	\caption[Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts.]{Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts. The number of counts in the $-1<\cos\theta_\mathrm{sun}<0$ region is 19.}
 	\label{half_data}
 \end{figure}
 
-To create the fake datasets, from the solar $\nu_e$ MC simulations, $N^r_{sig}$ events which passed the cuts were randomly selected; similarly, from the merged background simulations, $N^r_{bkg}$ events were randomly selected. These randomly selected events were merged into a fake dataset, and their values of $E_{fit}$ and $\cos\theta_{sun}$ were recorded.
+To create the fake datasets, from the solar $\nu_e$ MC simulations, $N^r_{sig}$ events which passed the cuts were randomly selected; similarly, from the merged background simulations, $N^r_{bkg}$ events were randomly selected. These randomly selected events were merged into a fake dataset, and their values of $E_{fit}$ and $\cos\theta_\mathrm{sun}$ were recorded.
 By repeating the random selection, an ensemble of fake datasets were created. Each fake dataset was fitted with the maximum likelihood function described in Sect.~\ref{sect:poisson_fit}. Fig.~\ref{ensemble_test} shows an example of the fit results from a random fake dataset.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ensemble_fitExample.pdf}
-	\caption[An example of the $\cos\theta_{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$.]{An example of the $\cos\theta_{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line shows the fit. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fit results are $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.}
+	\caption[An example of the $\cos\theta_\mathrm{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$.]{An example of the $\cos\theta_\mathrm{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line shows the fit. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fit results are $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.}
 	\label{ensemble_test}
 \end{figure} 
 
@@ -257,12 +257,12 @@ klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
 \end{equation}
 where $p(x_i)$ is the angular distribution after a time residual window cut: $-5<t_{Res}<1~ns$, to extract prompt Cherenkov lights. Both of the event and the MC distributions were filled into a histogram with 40 bins ranging from [-1,1] and the $klDiv$ values were calculated bin by bin excluding the empty bins (zero count). A small $klDiv$ value indicates a small dissimilarity.
 
-These values were used for distinguishing the signal from backgrounds, which will be discussed in the Sect.~\ref{sect:tmva}. Fig.~\ref{kLdiv_example} shows an example of the $klDiv$ calculation. Two events are compared here: one is a randomly selected event from the solar $\nu_e$ run-by-run MC ($E=4.78$~MeV), the other is from the $^{214}$Bi MC ($E=2.18$~MeV), with the same event GTID. Their $\cos\theta_\mathrm{Ch}$ distributions were scaled to the nominal one. It can be seen that the background event with lower energy is more dispersive while the signal event has a peak around the Cherenkov angle, and thus its shape is more close to the $PDF$. The calculation of \ref{eq:kldiv} gives $klDiv(\mathrm{solar}~\nu_e)=11.78$ and $klDiv(^{214}\mathrm{Bi})=22.69$, which verifies the observation.
+These values were used for distinguishing the signal from backgrounds, which will be discussed in the Sect.~\ref{sect:tmva}. Fig.~\ref{kLdiv_example} shows an example of the $klDiv$ calculation. Two events are compared here: one is a randomly selected event from the solar $\nu_e$ run-by-run MC ($E=4.78$~MeV), the other is from the $^{214}$Bi MC ($E=2.18$~MeV), with the same event GTID. Their $\cos\theta_\mathrm{Ch}$ distributions were scaled to the nominal one. It can be seen that the background event with lower energy is more dispersive while the signal event has a peak around the Cherenkov angle, and thus its shape is more close to the PDF. The calculation of \ref{eq:kldiv} gives $klDiv(\mathrm{solar}~\nu_e)=11.78$ and $klDiv(^{214}\mathrm{Bi})=22.69$, which verifies the observation.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{klDiv_example.png}
-	\caption[Angular distributions of the MC events in run-by-run simulations.]{Angular distributions of the MC events in run-by-run simulations of run-206391, with the same event (GTID = 7). The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The $PDF$ is scaled to the number of the hits in solar $\nu_e$ event (dashed black line) and the $^{214}$Bi event (dotted red line) respectively.}
+	\caption[Angular distributions of the MC events in run-by-run simulations.]{Angular distributions of the MC events in run-by-run simulations of run-206391, with the same event (GTID = 7). The black line is the MC solar $\nu_e$ distribution, while the red line is the MC $^{214}$Bi distribution. The PDF is scaled to the number of the hits in solar $\nu_e$ event (dashed black line) and the $^{214}$Bi event (dotted red line) respectively.}
 	\label{kLdiv_example}
 \end{figure}
 
@@ -416,7 +416,7 @@ Using the $4<E<15$ MeV training dataset as an example, the distributions of thes
 			\includegraphics[width=4cm]{tmvaCompare_klDiv.pdf}
 		\end{minipage}
 	}
-	%   \subfigure[$\cos\theta_{sun}$]{
+	%   \subfigure[$\cos\theta_\mathrm{sun}$]{
 	%	\begin{minipage}[b]{0.3\textwidth}
 	%		\centering
 	%		\includegraphics[width=4cm]{tmvaCompare_cosThetaSun.pdf}
@@ -499,8 +499,8 @@ Typical CPU times ($t_{CPU}$) to train each algorithm for chosen energy regions 
 
 The testing results in Table.~\ref{tab:tmvaMethod_allE} show that the Fisher/LD output gives the worst AUC. The BDT and MLP outputs are close to each other while the MLP gives the largest AUC values. However, the MLP was the expensive method in terms of CPU usage. All three methods are less successful in  separating signal from backgrounds in the lower energy region.
 
-The distributions of $\cos\theta_{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MLP method on the test sub-dataset. For the real dataset from run-200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
-%The distributions of $\cos\theta_{sun}$ were shown in Fig. as the results.
+The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MLP method on the test sub-dataset. For the real dataset from run-200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
+%The distributions of $\cos\theta_\mathrm{sun}$ were shown in Fig. as the results.
 %4<E<15 MeV
 %%BDT signal efficiency     = 0.944954
 %% MLP signal efficiency        = 0.926606
@@ -530,15 +530,15 @@ The distributions of $\cos\theta_{sun}$ were used to show the performance of the
 %\end{figure}
 \subsection{TMVA Outputs}
 
-The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 80.8\% of the total data as background events while the MLP classifies about 76.17\% as background. Rather flat distributions for  $\cos\theta_{sun}$ are apparent the plots. Since background events are predominant in the $4<E<5$ MeV region, the analyses to follow will focus only on the $5<E<15$ MeV region.
+The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 80.8\% of the total data as background events while the MLP classifies about 76.17\% as background. Rather flat distributions for  $\cos\theta_\mathrm{sun}$ are apparent the plots. Since background events are predominant in the $4<E<5$ MeV region, the analyses to follow will focus only on the $5<E<15$ MeV region.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{cosThetaToSun_4to15_output.pdf}
-	\caption[BDT and MLP outputs for the $\cos\theta_{sun}$, with $4<E_{fit}<15$ MeV.]{BDT and MLP outputs for $\cos\theta_{sun}$, in the $4<E_{fit}<15$ MeV energy range. The solid red line shows the BDT-selected candidate solar $\nu_e$ events, while the blue shaded histogram shows the MLP-selected ones. The dotted red line is for BDT-selected backgrounds, while the solid blue line is for the MLP-selected backgrounds.\label{fig:cosThetaToSun_4to15_output}}
+	\caption[BDT and MLP outputs for the $\cos\theta_\mathrm{sun}$, with $4<E_{fit}<15$ MeV.]{BDT and MLP outputs for $\cos\theta_\mathrm{sun}$, in the $4<E_{fit}<15$ MeV energy range. The solid red line shows the BDT-selected candidate solar $\nu_e$ events, while the blue shaded histogram shows the MLP-selected ones. The dotted red line is for BDT-selected backgrounds, while the solid blue line is for the MLP-selected backgrounds.\label{fig:cosThetaToSun_4to15_output}}
 \end{figure}
 
-To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensemble} were used. Fig.~\ref{fig:BDToutputs} shows the BDT output distributions of the $\cos\theta_{sun}$ for one random fake dataset, for event energy range $5<E_{fit}<15$ MeV. The output after the default cuts is also shown here as a comparison. For this fake dataset, the true number of signal and background events are: $N^{true}_{sig}=68$ and $N^{true}_{bkg}=46$, while the BDT outputs are $N^{BDT}_{sig}=61$ and $N^{BDT}_{bkg}=53$. This indicates an underestimate of the signal ($N^{BDT}_{sig}=0.90 N^{true}_{sig}$) and an overestimate of the background ($N^{BDT}_{sig}=1.15 N^{true}_{sig}$). 
+To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensemble} were used. Fig.~\ref{fig:BDToutputs} shows the BDT output distributions of the $\cos\theta_\mathrm{sun}$ for one random fake dataset, for event energy range $5<E_{fit}<15$ MeV. The output after the default cuts is also shown here as a comparison. For this fake dataset, the true number of signal and background events are: $N^{true}_{sig}=68$ and $N^{true}_{bkg}=46$, while the BDT outputs are $N^{BDT}_{sig}=61$ and $N^{BDT}_{bkg}=53$. This indicates an underestimate of the signal ($N^{BDT}_{sig}=0.90 N^{true}_{sig}$) and an overestimate of the background ($N^{BDT}_{sig}=1.15 N^{true}_{sig}$). 
 
 \begin{figure}[!htb]
 	\centering
@@ -554,7 +554,7 @@ As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT selection to eac
 	\caption[Event count fractions from BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV.]{Event count ratios from BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV. The black histogram is the distribution of the signal fraction, and the red histogram is the distribution of the background fraction.\label{fig:TMVAfractions}}
 \end{figure}
 
-In this case, although the number of signal events is underestimated, the TMVA methods do succeed to remove most of the background events. Also, for the Poisson fit, the TMVA methods were also applied to the MC simulations used as $PDF$s, these effects can be neutralized in fitting the events.  Sect.~\ref{sect:fitTheWhole} will show the fit of the TMVA outputs for the whole dataset. 
+In this case, although the number of signal events is underestimated, the TMVA methods do succeed to remove most of the background events. Also, for the Poisson fit, the TMVA methods were also applied to the MC simulations used as PDFs, these effects can be neutralized in fitting the events.  Sect.~\ref{sect:fitTheWhole} will show the fit of the TMVA outputs for the whole dataset. 
 
 \subsection{Discussions of TMVA Results}
 
@@ -624,12 +624,12 @@ Approximation) was implemented in \texttt{RAT} \cite{fady_pselmaa}. The software
 
 In order to enlarge the MC datasets for analysis, the MC simulations of solar neutrinos were produced much larger than the expected numbers. The number of simulated solar $\nu_e$ events is 1700 times the nominal ($\mathrm{flux~scale} = \frac{1}{1700}$); while the number of solar $\nu_\mu$ events is 9600 times the nominal ($\mathrm{flux~scale}=\frac{1}{9600}$). The two $\mathrm{flux~scale}$ factors are prescribed according to the ratio of the ES cross-sections: $\sigma^{ES}(\nu_{e}+e^-)/\sigma^{ES}(\nu_{\mu,\tau}+e^-)\approx 6.5$, as mentioned in Sect.~\ref{sect:NuEStheory}. A nominal $^8$B solar $\nu_e$ flux $\Phi^{total}_{MC}=5.46\times 10^6$~cm$^{-2}$s$^{-1}$ from the SSM prediction (see Refs.~\cite{vinyoles2017new,pdg2020}) is used by the simulation.
 
-Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ by detecting the elastic scattering events, $\nu_\tau$ is not generated separately \cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC: $f_\mathrm{live~time}=\frac{t_\mathrm{data~live~time}}{t_\mathrm{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$. Similarly, assuming a sacrifice of 1.7\% from the data cleaning cuts on the data, a scale factor $f_{dataClean}=(1-\frac{1.7}{100})$ was applied to the MC simulations. Accordingly the numbers of MC-generated $\nu_e$ and $\nu_\mu$ events are scaled by $f_\mathrm{live\, time}$ and $\mathrm{flux~scale}$, then weighted by the oscillation probabilities $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT selections to the MC histograms, the MC $\cos\theta_{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV are shown (with and without oscillations) in Fig.~\ref{fig:MCfluxPdfs}.
+Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ by detecting the elastic scattering events, $\nu_\tau$ is not generated separately \cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC: $f_\mathrm{live~time}=\frac{t_\mathrm{data~live~time}}{t_\mathrm{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$. Similarly, assuming a sacrifice of 1.7\% from the data cleaning cuts on the data, a scale factor $f_{dataClean}=(1-\frac{1.7}{100})$ was applied to the MC simulations. Accordingly the numbers of MC-generated $\nu_e$ and $\nu_\mu$ events are scaled by $f_\mathrm{live\, time}$ and $\mathrm{flux~scale}$, then weighted by the oscillation probabilities $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the BDT selections to the MC histograms, the MC $\cos\theta_\mathrm{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV are shown (with and without oscillations) in Fig.~\ref{fig:MCfluxPdfs}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{MCfluxPdfs.pdf}
-	\caption[The MC $\cos\theta_{sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.]{The MC $\cos\theta_{sun}$ distributions used as $PDF$s for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections. The black histogram is the $\nu_e$ flux without oscillation, denoted $PDF(\nu_e, \, \mathrm{without~oscillation})$. This histogram is used for fitting the elastic scattering flux. The histogram in dashed red line is the $\nu_e$ flux and the green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the total flux including the oscillation, which is given by the blue line and is denoted by $PDF(\nu_e+\nu_\mu, \, \mathrm{oscillated})$. This (blue) histogram is used for fitting the total flux.}
+	\caption[The MC $\cos\theta_\mathrm{sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.]{The MC $\cos\theta_\mathrm{sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections. The black histogram is the $\nu_e$ flux without oscillation, denoted $PDF(\nu_e, \, \mathrm{without~oscillation})$. This histogram is used for fitting the elastic scattering flux. The histogram in dashed red line is the $\nu_e$ flux and the green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the total flux including the oscillation, which is given by the blue line and is denoted by $PDF(\nu_e+\nu_\mu, \, \mathrm{oscillated})$. This (blue) histogram is used for fitting the total flux.}
 	\label{fig:MCfluxPdfs}
 \end{figure} 
 
@@ -685,7 +685,7 @@ In Chapter 5, the reconstruction systematics of the event position, direction an
 		x scale ($\Delta s_x$)& +0.07\%/-0.06\%  & $(1\pm \Delta s_x)x_{fit}$\\	
 		y scale ($\Delta s_y$)& +0.02\%/-0.07\%  & $(1\pm \Delta s_y)y_{fit}$ \\
 		z scale ($\Delta s_z$)& +0.08\%/-0.01\%  & $(1\pm \Delta s_z)z_{fit}$ \\
-		direction $\delta_\theta$  & +0.013/-0.101 & $1+\frac{\cos\theta_{sun}-1}{1\pm\delta_\theta}$\\
+		direction $\delta_\theta$  & +0.013/-0.101 & $1+\frac{\cos\theta_\mathrm{sun}-1}{1\pm\delta_\theta}$\\
 		$E_{scale}~(\Delta_{\delta_E})$ &  1.0\%  & $(1\pm \Delta_{\delta_E})E_{fit}$\\
 		$E_{resol}~(\Delta_b)$ &  0.037 $\sqrt{\mathrm{MeV}}$  & $E_{fit}+Gaus(0,\sigma_{smear})$, \\
 		& &$\sigma_{smear}=\sqrt{E_{fit}}\sqrt{(1+\Delta_b)^2-1}$\\
@@ -698,13 +698,13 @@ Note that the position shifts were applied to the $x_{fit},~y_{fit}$, and $z_{fi
 
 $\vec{X'}_{fit}=((1\pm \Delta s_x)x_{fit},(1\pm \Delta s_y)y_{fit},(1\pm \Delta s_z)z_{fit})$.
 
-For $\delta_\theta$, since there is no physical meaning to the case that $\vert \cos\theta_{sun} \vert >1$. If the transformation causes $\cos\theta_{sun}>1$, the smeared value is reset to 0.999; on the other hand, the $\cos\theta_{sun}<-1$ case happens more frequently and is considered to be a consequence of mis-reconstruction. In this case, a random value is chosen by uniformly sampling on the range [-1,1]. This procedure follows Ref.~\cite{waterunidoc}.
+For $\delta_\theta$, since there is no physical meaning to the case that $\vert \cos\theta_\mathrm{sun} \vert >1$. If the transformation causes $\cos\theta_\mathrm{sun}>1$, the smeared value is reset to 0.999; on the other hand, the $\cos\theta_\mathrm{sun}<-1$ case happens more frequently and is considered to be a consequence of mis-reconstruction. In this case, a random value is chosen by uniformly sampling on the range [-1,1]. This procedure follows Ref.~\cite{waterunidoc}.
 
-To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_{sun}$ distribution used as the $PDF$ will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the $PDF$ shape directly. Finally, the spectrum of the data was re-fit with the smeared $PDF$s to obtain the smeared physics quantity (specifically, the flux ratio $f_s$ mentioned in the previous section), and the differences between the original value and the smeared value are used as the systematics of the physics quantity.
+To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_\mathrm{sun}$ distribution used as the PDF will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the PDF shape directly. Finally, the spectrum of the data was re-fit with the smeared PDFs to obtain the smeared physics quantity (specifically, the flux ratio $f_s$ mentioned in the previous section), and the differences between the original value and the smeared value are used as the systematics of the physics quantity.
 
-To obtain the smeared PDFs, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and ITR$>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. For the transformations, the positive (``smearing up'') and negative (``smearing down'') values were applied, respectively. After the transformation, the whole beforehand cut was applied. Lastly, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_{sun}$ spectrum was used as the smeared $PDF$ for that quantity. For example, if $E_{fit}$ is smeared by scaling up, i.e. $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_{sun}$ after the beforehand cut and TMVA BDT selection is used as the ``energy scale-up $PDF$''.
+To obtain the smeared PDFs, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and ITR$>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. For the transformations, the positive (``smearing up'') and negative (``smearing down'') values were applied, respectively. After the transformation, the whole beforehand cut was applied. Lastly, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_\mathrm{sun}$ spectrum was used as the smeared PDF for that quantity. For example, if $E_{fit}$ is smeared by scaling up, i.e. $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_\mathrm{sun}$ after the beforehand cut and TMVA BDT selection is used as the ``energy scale-up PDF''.
 
-Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, energy scale and energy resolution on the MC $PDF$. The original MC $PDF$ is shown as black solid line histograms, overlaid by the smeared histograms.
+Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, energy scale and energy resolution on the MC PDF. The original MC PDF is shown as black solid line histograms, overlaid by the smeared histograms.
 
 \begin{figure}[htbp]
 	\centering
@@ -726,10 +726,10 @@ Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, en
 			\includegraphics[width=8cm]{smearCosSunPDF_Escale.pdf}
 		\end{minipage}
 		}
-	\caption[Smearing effects on the $\cos\theta_{sun}$ $PDF$.]{Smearing effects on the $\cos\theta_{sun}$. The histogram with solid black line is the $PDF$ before smearing. The dotted blue histogram is for smearing up the quantity (i.e., taking the positive values) and the dashed red is for smearing down (i.e., taking the positive values).\label{smearESpdfs}}
+	\caption[Smearing effects on the $\cos\theta_\mathrm{sun}$ PDF.]{Smearing effects on the $\cos\theta_\mathrm{sun}$. The histogram with solid black line is the PDF before smearing. The dotted blue histogram is for smearing up the quantity (i.e., taking the positive values) and the dashed red is for smearing down (i.e., taking the positive values).\label{smearESpdfs}}
 \end{figure}   
 
-Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} to the MC ES $PDF$, and then refitting the data with the smeared $PDF$s for each quantity, the smeared values of the flux fractions ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table.~\ref{tab:smearingResults}. Summarising, the systematic uncertainties from the smeared position and $\beta_{14}$ are negligible, while those resulting from smearing the direction and energy result in more significant uncertainties. 
+Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} to the MC ES PDF, and then refitting the data with the smeared PDFs for each quantity, the smeared values of the flux fractions ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table.~\ref{tab:smearingResults}. Summarising, the systematic uncertainties from the smeared position and $\beta_{14}$ are negligible, while those resulting from smearing the direction and energy result in more significant uncertainties. 
 \begin{table}[ht]
 	\centering
 	\caption{Systematics for the fitted flux scale $f_s$.}
@@ -811,7 +811,7 @@ This study focuses on measuring solar neutrinos in the energy region [5,15] MeV 
 
 As listed in Table.~\ref{table:mixed_MC}, I only used the $^{208}$Tl and $^{214}$Bi backgrounds simulated in three detector components. The other sources of backgrounds were not included, such as the radio-isotopes in AV ropes and PMTs (etc.) and cosmic muon induced isotopes. A more comprehensive study would be required if one wished to simulate and account for all possible background events.
 
-To fit the background events, I assumed a flat distribution of $\cos\theta_{sun}$. A more realistic distribution could be investigated to more properly describe the backgrounds. Furthermore background levels might vary over time, so a more detailed analysis including different time intervals would increase confidence that the present results are representative.
+To fit the background events, I assumed a flat distribution of $\cos\theta_\mathrm{sun}$. A more realistic distribution could be investigated to more properly describe the backgrounds. Furthermore background levels might vary over time, so a more detailed analysis including different time intervals would increase confidence that the present results are representative.
 
 The evaluation here of systematic uncertainties is not comprehensive. In particular, uncertainties intrinsic to the solar neutrino model used by the MC simulations to `produce' solar neutrinos and apply oscillations are {\em not included} here. The uncertainties in the SSM model as well as the neutrino flavor transformation parameters can affect the MC simulations. In addition, the energy calibration used to mitigate the difference between data and simulations is not applied. This procedure can reduce the uncertainties from the energy reconstructions. 
 
