@@ -111,7 +111,7 @@ Finally, the fitter fits for the angular PDF by using the MRQ method to obtain t
 
 \subsection{Effective Group Velocity}\label{sect:tuneGroupVelocity}
 
-When photons travel through the detector, their group velocities ($v_\mathrm{gr}$) change in accordance with the different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons: $v_\mathcal{gr}=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive index ($n$) of water as a function of wavelength, obtained from the measurements of the laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. Furthermore, $v_\mathcal{gr}$ can change when photons are scattered, absorbed, refracted and reflected in the detector.
+When photons travel through the detector, their group velocities ($v_\mathrm{gr}$) change in accordance with the different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons: $v_\mathrm{gr}=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive index ($n$) of water as a function of wavelength, obtained from the measurements of the laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. Furthermore, $v_\mathrm{gr}$ can change when photons are scattered, absorbed, refracted and reflected in the detector.
 
 \begin{figure}[!htb]
 	\centering
@@ -120,7 +120,7 @@ When photons travel through the detector, their group velocities ($v_\mathrm{gr}
 	\label{nVsWavelength}
 \end{figure}
 
-To simplify reconstruction, a tuned value (of $v_\mathcal{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_\mathcal{gr,eff}$, where the $v_{water}$ is replaced by the effective group velocity $v_\mathcal{gr,eff}$. The value of  $v_\mathcal{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathcal{gr,eff}$ (a fast effective group velocity) will decrease $t_{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_{res}$ will increase. During the reconstruction, when the fitter compares the large $t_{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_{transit}$ and then decrease $t_{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathcal{gr,eff}$ is set too small (i.e. too slow), $t_{transit}$ will increase while $t_{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_{res}$. These effects can be quantified as radial bias ($r_{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
+To simplify reconstruction, a tuned value (of $v_\mathrm{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_{transit}=|\vec{x}_{event}-\vec{x}_{PMT}|/v_\mathrm{gr,eff}$, where the $v_{water}$ is replaced by the effective group velocity $v_\mathrm{gr,eff}$. The value of  $v_\mathrm{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathrm{gr,eff}$ (a fast effective group velocity) will decrease $t_{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_{res}$ will increase. During the reconstruction, when the fitter compares the large $t_{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_{transit}$ and then decrease $t_{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathrm{gr,eff}$ is set too small (i.e. too slow), $t_{transit}$ will increase while $t_{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_{res}$. These effects can be quantified as radial bias ($r_{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
 \begin{equation}
 r_{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
 \end{equation}
@@ -130,9 +130,9 @@ r_{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
 	\includegraphics[width=6cm]{effectOfGroupVelocity.png}
 	\caption[A cartoon shows effects of tuning the effective group velocity.]{A cartoon shows effects of tuning the effective group velocity. In this case, the effective group velocity is faster than expected, and the fitted position is dragged back along the direction to increase $t_{transit}$.\label{fig:effectiveVg}}
 \end{figure}
-An overestimated $v_\mathcal{gr,eff}$ (too fast) results in a positive radial bias to the true event position while an underestimated one (too slow) brings a negative radial bias.
+An overestimated $v_\mathrm{gr,eff}$ (too fast) results in a positive radial bias to the true event position while an underestimated one (too slow) brings a negative radial bias.
 
-In practice, $v_\mathcal{gr,eff}$ is calculated by an effective refractive index $n_\mathcal{eff}$ (or `$RI$ value'): $v_\mathcal{gr,eff}=c/n_\mathcal{eff}$. To obtain a reasonable $v_\mathcal{gr,eff}$ for the water-phase vertex fitter, my initial approach was to obtain the value by a linear interpolation based on MC simulations. First, 500 simulations of 5-MeV electrons were generated uniformly inside the AV, with isotropic momentum directions. Then the \texttt{MPW fitter} reconstructed the same MC simulations by using seven different values of $v_\mathcal{gr}$, from 200 to 230 mm/ns (such that $n_\mathcal{eff}$ ranged from 1.50 to 1.30), with a step of 5 mm/ns. The distributions of radial bias from each reconstruction result were calculated and fitted with Gaussian functions. The mean values of these Gaussian fits were taken as the values of $r_{bias}$, and they were plotted against $v_\mathcal{gr}$, as shown in Fig.~\ref{fig:plotVgr}. A linear fit was applied on these points, giving $v_\mathcal{gr,eff}=215.868\pm 5.585$ mm/ns ($n_\mathcal{eff}=1.3888$) at the point where $r_{bias}=0$.
+In practice, $v_\mathrm{gr,eff}$ is calculated by an effective refractive index $n_\mathrm{eff}$ (or `$RI$ value'): $v_\mathrm{gr,eff}=c/n_\mathrm{eff}$. To obtain a reasonable $v_\mathrm{gr,eff}$ for the water-phase vertex fitter, my initial approach was to obtain the value by a linear interpolation based on MC simulations. First, 500 simulations of 5-MeV electrons were generated uniformly inside the AV, with isotropic momentum directions. Then the \texttt{MPW fitter} reconstructed the same MC simulations by using seven different values of $v_\mathrm{gr}$, from 200 to 230 mm/ns (such that $n_\mathrm{eff}$ ranged from 1.50 to 1.30), with a step of 5 mm/ns. The distributions of radial bias from each reconstruction result were calculated and fitted with Gaussian functions. The mean values of these Gaussian fits were taken as the values of $r_{bias}$, and they were plotted against $v_\mathrm{gr}$, as shown in Fig.~\ref{fig:plotVgr}. A linear fit was applied on these points, giving $v_\mathrm{gr,eff}=215.868\pm 5.585$ mm/ns ($n_\mathrm{eff}=1.3888$) at the point where $r_{bias}=0$.
 
 \begin{figure}[!htb]
 	\centering
@@ -153,12 +153,12 @@ For each event, suppose the triggered PMTs were found within solid angle $\Omega
 
 On the other hand, a solid angle $\Omega'$ is calculated as opposed to the solid angle $\Omega$ subtended at the source position. Similarly, the triggered PMTs within the $\Omega'$ were found and then the arrival time $T_2$ was calculated. An average group velocity was then calculated as:
 \begin{equation}
-v_\mathcal{gr}=\frac{2 r_{PSUP}}{(T_1+T_2)}.
+v_\mathrm{gr}=\frac{2 r_{PSUP}}{(T_1+T_2)}.
 \end{equation}
 
-The final estimate for $v_\mathcal{gr}$ was calculated by averaging the $v_\mathcal{gr}$ values obtained from all the events and triggered PMTs in both run-100934 and run-107055. It was found that $v_\mathcal{gr}=c/n_{water,eff}=216.478$ mm/ns, where $n_{water,eff}=1.38486$.
+The final estimate for $v_\mathrm{gr}$ was calculated by averaging the $v_\mathrm{gr}$ values obtained from all the events and triggered PMTs in both run-100934 and run-107055. It was found that $v_\mathrm{gr}=c/n_{water,eff}=216.478$ mm/ns, where $n_{water,eff}=1.38486$.
 
-The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs \cite{groupVmeasure,anderson2021optical}. That analysis can give a more accurate value for $v_\mathcal{gr}$, but it it was not applied here.
+The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs \cite{groupVmeasure,anderson2021optical}. That analysis can give a more accurate value for $v_\mathrm{gr}$, but it it was not applied here.
 
 For the vertex fitters used in the partial-fill and scintillator phases, since no internal calibration was performed, I adopted the linear interpolation method, which will be discussed in Sect.~\ref{sect:scintFitter}.
 
@@ -225,7 +225,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	\item[$\bullet$] Mode Cut Selector
 	
-	This selector was developed by the SNO+ collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the hit PMTs and finds the mode of the hit time ($t_\mathrm{mode}$). Here the $t_\mathrm{mode}$ is required to be a unique number and is found by looking for the peak of the $t_\mathrm{PMT}$ distribution. If it fails to get $t_\mathrm{mode}$, it instead calculates the median ($t_\mathrm{median}$) \cite{modeCut}. Then it selects PMTs for which $t_\mathrm{PMT} \in [t_\mathrm{mode}+t_\mathcal{low}, t_\mathrm{mode}+t_\mathcal{high}]$ ns. This selector is used to remove the PMTs triggered by noise, or reflected light. The values of $t_\mathcal{low}$ and $t_\mathcal{high}$ are optimized for different detection media. For the \texttt{MPW fitter}, the optimized window is found to be $[t_\mathrm{mode}-50, t_\mathrm{mode}+100]$ ns by checking with the fit biases and resolutions for the $^{16}$N central run data in the water phase, while for the \texttt{MP partial fitter} and \texttt{MP scint fitter}, the optimized window is $[t_\mathrm{mode}-100, t_\mathrm{mode}+100]$ ns based on tuning with the simulations.
+	This selector was developed by the SNO+ collaboration for all fitters. It checks the hit time ($t_\mathrm{PMT}$) distributions of all the hit PMTs and finds the mode of the hit time ($t_\mathrm{mode}$). Here the $t_\mathrm{mode}$ is required to be a unique number and is found by looking for the peak of the $t_\mathrm{PMT}$ distribution. If it fails to get $t_\mathrm{mode}$, it instead calculates the median ($t_\mathrm{median}$) \cite{modeCut}. Then it selects PMTs for which $t_\mathrm{PMT} \in [t_\mathrm{mode}+t_\mathrm{low}, t_\mathrm{mode}+t_\mathrm{high}]$ ns. This selector is used to remove the PMTs triggered by noise, or reflected light. The values of $t_\mathrm{low}$ and $t_\mathrm{high}$ are optimized for different detection media. For the \texttt{MPW fitter}, the optimized window is found to be $[t_\mathrm{mode}-50, t_\mathrm{mode}+100]$ ns by checking with the fit biases and resolutions for the $^{16}$N central run data in the water phase, while for the \texttt{MP partial fitter} and \texttt{MP scint fitter}, the optimized window is $[t_\mathrm{mode}-100, t_\mathrm{mode}+100]$ ns based on tuning with the simulations.
 	
 	\item[$\bullet$] Uniform PMT Selector
 	
@@ -477,9 +477,9 @@ The following two sections discuss about vertex reconstruction in liquid scintil
 
 In the partial-fill geometry, the SNO+ detector can be described as being composed of three parts: the neck cylinder filled with scintillator; the AV sphere, which contains scintillator above and water below the water-scintillator interface (plane); and the water-filled PSUP sphere lying outside the neck and the AV.
 
-If we neglect complications related to the acrylic and other solid parts of the detector, then photons travel in only two media: water and  scintillator (see Fig.~\ref{fig:scintpath}). By definition the length of the straight light path from a vertex to a hit PMT position is $|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$. The \texttt{MP scint-water fitter} evaluates the portion $d_{sp}$ of the total path travelled in scintillator, and length of the path travelled in water obviously is $|\vec{l}_p|-d_{sp}$. Since photons travel at different speeds ($v_\mathcal{gr,scint}$, $v_\mathcal{gr,water}$) in these two media, the \texttt{MP scint-water fitter} evaluates the time of flight, as:
+If we neglect complications related to the acrylic and other solid parts of the detector, then photons travel in only two media: water and  scintillator (see Fig.~\ref{fig:scintpath}). By definition the length of the straight light path from a vertex to a hit PMT position is $|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$. The \texttt{MP scint-water fitter} evaluates the portion $d_{sp}$ of the total path travelled in scintillator, and length of the path travelled in water obviously is $|\vec{l}_p|-d_{sp}$. Since photons travel at different speeds ($v_\mathrm{gr,scint}$, $v_\mathrm{gr,water}$) in these two media, the \texttt{MP scint-water fitter} evaluates the time of flight, as:
 \begin{equation}
-t_{\mathrm{transit}} = \frac{|\vec{l}_p|-d_{sp}}{v_\mathcal{gr,water}} +\frac{d_{sp}}{v_\mathcal{gr,scint}} \; .
+t_{\mathrm{transit}} = \frac{|\vec{l}_p|-d_{sp}}{v_\mathrm{gr,water}} +\frac{d_{sp}}{v_\mathrm{gr,scint}} \; .
 \end{equation}
 Once having computed $t_{\mathrm{transit}}$ the time residual $t_{res}$ can be calculated, and the balance of the fitting procedure is the same as in the \texttt{MP water fitter}.
 
@@ -628,17 +628,17 @@ for vertex reconstruction during the partial-fill. I wrote a python tool to crea
 	\label{fig:oxfordPdf}
 \end{figure}
 
-Following the same method as was used for tuning $v_\mathcal{gr,eff}$ (see Sect.~\ref{sect:tuneGroupVelocity}), the effective group velocity in scintillator ($v_\mathcal{gr,scint}$) was obtained on the basis of simulations of 500 3 MeV electrons generated uniformly and with isotropic direction in the full scintillator geometry. The \texttt{MP scint fitter}, which will be discussed in Sect.~\ref{sect:scintFitter}, was used to reconstruct the same simulation data with different values of $v_\mathcal{gr}$. Once $v_\mathcal{gr,scint}$ was obtained, it was fixed in the \texttt{MP scint-water fitter}. Then  $v_\mathcal{gr,water}$ was tuned by simulating five hundred 3 MeV electron events in the water region of the partial-fill geometry, with the water level set at z = 3000 mm in the AV coordinate. Fig.~\ref{fig:scint_groupVelocity} shows the convergence of the values of (a) $v_\mathcal{gr,scint}$ and (b) $v_\mathcal{gr,water}$ to their optimal values, from a linear interpolation in the LAB+0.5 g/L PPO scintillator case. Table.~\ref{partial_groupV} lists the effective group velocities and refractive indices ($n_\mathcal{eff}$) for the liquid scintillator with different PPO concentrations. 
+Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~\ref{sect:tuneGroupVelocity}), the effective group velocity in scintillator ($v_\mathrm{gr,scint}$) was obtained on the basis of simulations of 500 3 MeV electrons generated uniformly and with isotropic direction in the full scintillator geometry. The \texttt{MP scint fitter}, which will be discussed in Sect.~\ref{sect:scintFitter}, was used to reconstruct the same simulation data with different values of $v_\mathrm{gr}$. Once $v_\mathrm{gr,scint}$ was obtained, it was fixed in the \texttt{MP scint-water fitter}. Then  $v_\mathrm{gr,water}$ was tuned by simulating five hundred 3 MeV electron events in the water region of the partial-fill geometry, with the water level set at z = 3000 mm in the AV coordinate. Fig.~\ref{fig:scint_groupVelocity} shows the convergence of the values of (a) $v_\mathrm{gr,scint}$ and (b) $v_\mathrm{gr,water}$ to their optimal values, from a linear interpolation in the LAB+0.5 g/L PPO scintillator case. Table.~\ref{partial_groupV} lists the effective group velocities and refractive indices ($n_\mathrm{eff}$) for the liquid scintillator with different PPO concentrations. 
 		
 \begin{figure}[htbp]
 		\caption[Tuning the effective group velocities in the scintillator and water.]{Tuning the effective group velocities in the scintillator (a) and water (b).\label{fig:scint_groupVelocity}}
-	\subfigure[Tuning the $v_\mathcal{gr,scint}$.]{
+	\subfigure[Tuning the $v_\mathrm{gr,scint}$.]{
 		\begin{minipage}[t]{0.4\textwidth}
 		\centering
 			\includegraphics[width=6.5cm]{tune_groupVelocity_scint.png}
 		\end{minipage}
 	}   
-	\subfigure[Tuning the $v_\mathcal{gr,water}$.]{ 
+	\subfigure[Tuning the $v_\mathrm{gr,water}$.]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{tune_groupVelocity_water.png}
@@ -652,7 +652,7 @@ Following the same method as was used for tuning $v_\mathcal{gr,eff}$ (see Sect.
 	{\centering
 		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
 			\toprule 
-			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_\mathcal{eff,scint}$ & $V_{gr,water}$ [mm/ns]& $n_\mathcal{eff,water}$\\
+			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_\mathrm{eff,scint}$ & $V_{gr,water}$ [mm/ns]& $n_\mathrm{eff,water}$\\
 			\midrule
 			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
 			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\

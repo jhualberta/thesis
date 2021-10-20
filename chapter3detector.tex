@@ -58,28 +58,28 @@ In the SNO+ detector, charged particles interact with the detection medium and c
 
 For any charged particle traveling in a transparent medium at an ultra-relativistic speed (a speed greater than the local phase speed of light in the medium), a type of electromagnetic radiation, called Cherenkov radiation, can be emitted from the coherent response of the medium under the action of the field of the moving particle \cite{jackson2007classical,landau2013electrodynamics}.
 
-Suppose a charged particle moves in a transparent, isotropic, and non-magnetic medium and creates an electromagnetic wave. The electromagnetic wave propagates with a wavenumber $k=n \, \omega/c \equiv \omega/n$, where $c$ is the speed of light in vacuum, $\omega$ is the frequency, $n=n(\omega)$ is the real-valued refractive index and $v_p=c/n(\omega)$ is the phase velocity in the medium. If the particle travels uniformly along the $x$-axis with speed $v>v_p$, Cherenkov radiation of frequency $\omega$ is emitted \cite{landau2013electrodynamics}. The ``Cherenkov angle'', $\theta_c$, is the angle between the direction of motion of the particle and the direction of Cherenkov emission, and it is given  by 
+Suppose a charged particle moves in a transparent, isotropic, and non-magnetic medium and creates an electromagnetic wave. The electromagnetic wave propagates with a wavenumber $k=\omega/v_p \equiv n\omega/c$, where $c$ is the speed of light in vacuum, $\omega$ is the frequency, $n=n(\omega)$ is the real-valued refractive index and $v_p=c/n(\omega)$ is the phase velocity in the medium. If the particle travels uniformly along the $x$-axis with speed $v>v_p$, Cherenkov radiation of frequency $\omega$ is emitted \cite{landau2013electrodynamics}. The ``Cherenkov angle'', $\theta_\mathrm{Ch}$, is the angle between the direction of motion of the particle and the direction of Cherenkov emission, and it is given by 
 \begin{equation}
-\cos\theta_c(\omega) = \frac{c}{n(\omega)v} \; .    
+\cos\theta_\mathrm{Ch}(\omega) = \frac{c}{n(\omega)v} \; .    
 \end{equation}
-The radiation is distributed over the surface of a cone with the half-opening angle $\theta_c$. 
+The radiation is distributed over the surface of a cone with the half-opening angle $\theta_\mathrm{Ch}$. 
 
 Now consider the the case of an electron traveling in a water detector: what threshold speed and energy must the electron possess, in order to promote Cherenkov radiation? Taking $n_{water}\simeq 1.33$  \cite{pdg2020}, i.e. neglecting the dependence of $n$ on $\omega$,  we obtain a threshold speed $v^{\mathrm{min}} = v_p \simeq 2.254\times10^8~m/s$. This corresponds to a kinetic energy:
 \begin{equation*}
 E_k=(\gamma-1)mc^2=0.264~\mathrm{MeV},
 \end{equation*}
-where $\gamma=1/\sqrt{1-v_p^2/c^2}$. This is the lowest kinetic energy to create Cherenkov radiation in water, and is referred to as the Cherenkov threshold ($E_{\mathrm{thresh}}$). The corresponding Cherenkov angle is $\theta_c\simeq 41.25^\circ$. For the LAB-PPO (scintillator) medium, $n\simeq 1.50$ \cite{tseung2011ellipsometric}, giving threshold electron (kinetic) energy $E_{\mathrm{thresh}}\simeq 0.175$ MeV and $\theta_c\simeq 48.19^\circ$.   
-For a particle with a charge of $ze$, the number of photons produced by Cherenkov radiation per unit path length and per unit frequency of the photons is given by \cite{leo2012techniques}:
+where $\gamma=1/\sqrt{1-v_p^2/c^2}$. This is the lowest kinetic energy to create Cherenkov radiation in water, and is referred to as the Cherenkov threshold ($E_{\mathrm{thresh}}$). The corresponding Cherenkov angle is $\theta_\mathrm{Ch}\simeq 41.25^\circ$. For the LAB-PPO (scintillator) medium, $n\simeq 1.50$ \cite{tseung2011ellipsometric}, giving threshold electron (kinetic) energy $E_{\mathrm{thresh}}\simeq 0.175$ MeV and $\theta_\mathrm{Ch}\simeq 48.19^\circ$.   
+For a particle with a charge of $ze$, the number of photons produced by Cherenkov radiation per unit path length and per unit frequency of the photons is given by \cite{leo2012techniques}
 \begin{equation}
-\frac{d^2N}{d\omega dx}=\frac{\alpha^2 (ze)^2}{c}\sin^2\theta_c=\frac{z^2\alpha}{c} \; \left(1-\frac{1}{\beta^2 n^2(\omega)} \right) \, ,
+\frac{d^2N}{d\omega dx}=\frac{\alpha (ze)^2}{c}\sin^2\theta_\mathrm{Ch}=\frac{\alpha (ze)^2}{c} \; \left(1-\frac{1}{\beta^2 n^2(\omega)} \right) \, ,
 \end{equation}
-where $\alpha$ is the fine structure constant and $\beta=v/c$. Substituting $\omega= \lambda/(2\pi)$ and integrating over a wavelength band  $\lambda_1 \le \lambda \le \lambda_2$, the number of photons produced per unit of distance along the $x$-axis (i.e. particle path) within that waveband is \cite{leo2012techniques}:
+where $\alpha$ is the fine structure constant and $\beta=v/c$. Substituting $\omega= (2\pi c)/\lambda$ and integrating over a wavelength band  $\lambda_1 \le \lambda \le \lambda_2$, the number of photons produced per unit of distance along the $x$-axis (i.e. particle path) within that waveband is \cite{leo2012techniques}:
 \begin{equation}
-\frac{dN}{dx}=2\pi (ze)^2\alpha\sin\theta_c\int_{\lambda_1}^{\lambda_2}\frac{d\lambda}{\lambda^2} \; .
+\frac{dN}{dx}=2\pi \alpha (ze)^2\sin^2\theta_\mathrm{Ch}\int_{\lambda_1}^{\lambda_2}\frac{d\lambda}{\lambda^2} \; .
 \end{equation}
 For optical photons with wavelengths ranging from $350$ to $550 \; \mathrm{nm}$ (a typical PMT sensitivity range), the above formula evaluates to \cite{leo2012techniques}:
 \begin{equation}
-\frac{dN}{dx}=476(ze)^2\sin^2\theta_c \; \mathrm{photons/cm}.
+\frac{dN}{dx}=476(ze)^2\sin^2\theta_\mathrm{Ch} \; \mathrm{photons/cm}.
 \end{equation}
 For Cherenkov radiation caused by electron motion in a water detector, $dN/dx \simeq 207 \; \mathrm{photons/cm}$; while in the LAB-PPO case, $dN/dx \simeq 264 \; \mathrm{photons/cm}$. In more detailed accounting, PMT coverage and detection efficiency need to be admitted into the derivation.
 

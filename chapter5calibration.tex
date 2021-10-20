@@ -20,17 +20,17 @@ When analyzing $^{16}$N run data and simulations, an FECD tag cut ($FECD==9188$)
 \section{High Level Cuts for the Water Phase}\label{sect:high_level_cuts}
 
 A set of (event-) classifiers, developed originally for the SNO analysis, have been adjusted and optimized for the SNO+ water phase analysis\cite{highlevel}. These event classifiers utilize reconstructed quantities, so they always require a valid reconstruction.
-John: change equation order
+
 \begin{itemize}
 	\item[$\bullet$] In time ratio (ITR) classifier
 	
-	For each event, this classifier loops through the triggered PMTs (hits), calculates $t_{res}$ for each, and determines the fraction of hit PMTs for which $t_{res}$ falls within an optimized `prompt time window'. In the water phase, the time window was [-2.5,5.0]~ns. If the ITR ratio is too low for an event, a large proportion of the hit PMTs were not triggered prompt light, suggesting that the event probably did not originate from Cherenkov light; it could be instrumental noise, or caused by a large amount of light reflecting off detector components (called ``late light''). 
+	For each event, this classifier loops through the triggered PMTs (hits), calculates $t_{res}$ for each, and determines the fraction of hit PMTs for which $t_{res}$ falls within an optimized `prompt time window'. In the water phase, the time window was $[-2.5,5.0]$~ns. If the ITR ratio is too low for an event, a large proportion of the hit PMTs were not triggered prompt light, suggesting that the event probably did not originate from Cherenkov light; it could be instrumental noise, or caused by a large amount of light reflecting off detector components (called ``late light''). 
 	
 	\item[$\bullet$] $\theta_{ij}$ isotropy classifier John: Jie, is this number, or rather, set of numbers, really an event classifier? There are, what, $N^2$ values of this property for EACH event? So it is not a single number for a given event. I wonder whether actually it is just needed as an input for $\beta_{14}$? Maybe I'm wrong, but it seems out of place, it doesn't have the same character as ITR and beta14 John
 
 	This classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j, as defined by:
 	\begin{equation}
-	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_{event})}{|\vec{X}_{PMT\#i}- \vec{X}_{event}||\vec{X}_{PMT\#j}- \vec{X}_{event}|}.
+	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event})}{|\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event}||\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event}|}.
 	\end{equation}
 	
 	\item[$\bullet$] $\beta_{14}$ isotropy classifier
@@ -45,7 +45,7 @@ John: change equation order
 
 \subsection{Effects of the High-level Cuts}
 
-As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events John (add: such as those due to PMT breakdowns(?)){black}, cuts of ITR$>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
+As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events such as instrumental noises, cuts of ITR$>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
 
 The $^{16}$N central run 107055 data and (corresponding) MC simulation were used to check the effects of the high-level cuts. For the MC (data), the cut ITR$>0.55$ removed 0.69\% (0.79\%) of the total events and the cut $-0.12<\beta_{14}<0.95$ removed 1.11\% (0.93\%) of the total events. Combining the ITR and $\beta_{14}$ cuts, 1.69\% (1.62\%) of the total events were removed.
 
@@ -170,7 +170,7 @@ Fig.~\ref{MPWscanXYZResols} shows the fitted results for $\mu_P$ and $\sigma_P$ 
 	\label{MPWscanXYZResols}
 \end{figure}
 
-John: Fig.~\ref{MPWscanXYZResols} shows that the resolution for vertex reconstruction is generally better for the MC simulations than for the detector data. This is not unexpected, because of the non-uniformities of the detector in realistic situations (as opposed to the idealizations inherent in the MC simulation) \cite{waterunidoc}. Also, when the source is close to the AV or at the ends of the axes, the Gaussian shift $\mu_P$ becomes large and the resolution worsens. Also, the difference between the MC and data becomes large.
+Fig.~\ref{MPWscanXYZResols} shows that the resolution for vertex reconstruction is generally better for the MC simulations than for the detector data. This is not unexpected, because of the non-uniformities of the detector in realistic situations (as opposed to the idealizations inherent in the MC simulation) \cite{waterunidoc}. Also, when the source is close to the AV or at the ends of the axes, the Gaussian shift $\mu_P$ becomes large and the resolution worsens, which causes the difference between the MC and data to become large.
 
 To quantify the discrepancies between the MC and data, a relative difference of $\sigma_p$ between the MC and data is defined as \cite{waterunidoc}:
 \begin{equation}
