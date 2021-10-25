@@ -3,7 +3,7 @@
 
 The SNO+ water phase data were taken from May 2017 to July 2019, of which the period from May 2017 to October 2018 constitutes the first stage. During this stage, several calibration runs were taken, including $^{16}$N calibration scans and laserball scans. During the period from October 2018 to July 2019, over 20 tonnes of LAB (without PPO) was filled into the detector, and formed a layer extending down the neck to a level slightly below the neck base. With the nitrogen cover gas on the top of the AV, the dataset taken during this period is called the ``low background dataset''. The main analyses of this chapter are based on this low background dataset. The dataset was processed by the data cleaning procedure, and 4838 runs were used, which summed up a total live time of 190.33 days.
 
-In this chapter, I applied the \texttt{MPW fitter} described in Chapter 4 to reconstruct the event vertex and direction both for the data and for  run-by-run MC simulations. The run-by-run simulations simulated the full detector conditions for each specific run. The reconstructed event vertex and direction were used as inputs to the \texttt{energy fitter}, the classifiers, and the high level cuts. This reconstruction framework differs from the official SNO+ reconstruction (\texttt{RAT water fitter}), and therefore provides an alternative analysis of the detector data yielding helpful information, especially in relation to assessment of the systematic uncertainties associated with reconstruction.
+In this chapter, I applied the \texttt{MPW fitter} described in Chapter 4 to reconstruct the event vertex and direction both for the data and for run-by-run MC simulations. The run-by-run simulations simulated the full detector conditions for each specific run. The reconstructed event vertex and direction were used as inputs to the \texttt{energy fitter}, the classifiers, and the high level cuts. This reconstruction framework differs from the official SNO+ reconstruction (\texttt{RAT water fitter}), and therefore provides an alternative analysis of the detector data yielding helpful information, especially in relation to assessment of the systematic uncertainties associated with reconstruction.
 
 First, a small volume of the open dataset of 2017 was used to test the \texttt{MPW} results, and the results yielded by the \texttt{RAT water fitter} were compared. Based on the simulations a new quantity called the ``Kullback–Leibler Divergence'' was developed to evaluate the Cherenkov signals coming from the solar $\nu_e$'s. Subsequently I analyzed the low background dataset, using sub-datasets of the run-by-run MC simulations to evaluate the ability to separate the solar $\nu_e$ signals from background. The Toolkit for Multivariate Data Analysis with ROOT (\texttt{TMVA}) package \cite{tmvaWebsite,albertsson2007tmva} was trained and tested on the MC simulations to obtain optimized discriminants. These optimized discriminants were applied on the whole dataset to remove the backgrounds.
 
@@ -144,7 +144,7 @@ Before the analysis, the following ``beforehand cuts'' were applied:
 \end{itemize}
 Here NHits$>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with NHits$>20$ were reconstructed by the \texttt{MPW fitter}. The $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
 \begin{equation*}
-R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}    
+R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}
 \end{equation*}
 (the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4.). The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
 
@@ -169,7 +169,7 @@ Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as the free parameters
 \end{equation}
 where $\mu_i(N_{sig},N_{bkg})$ is the expected number of events in each bin
 \begin{equation*}
-\mu_i(N_{sig},N_{bkg})=N_{sig}\cdot P^i_{ES}(E^i)+N_{bkg}\cdot\frac{1}{N_{bins}}\,   
+\mu_i(N_{sig},N_{bkg})=N_{sig}\cdot P^i_{ES}(E^i)+N_{bkg}\cdot\frac{1}{N_{bins}}\,
 \end{equation*}
 and $N_{bins}$ is the total number of the bins, usually taken as 40 (for a bin width of 0.05 covering -1 to 1). The calculation of Eqn.~\ref{eq:solar_poissonFitMinimizer} includes the cases when the bin contains zero ($n_i=0$).
 
@@ -220,7 +220,7 @@ where $N_{sig}$ is the fitted number of signal events, $\sigma_{sig}$ is the sta
 
 Fig.~\ref{poisson_fitPull} and Fig.~\ref{poisson_fitBias} show the fit pull and bias respectively. The histograms were fitted with Gaussians. For the fitted number of signal events, the Gaussian mean of the fit biases is $-0.0044\pm0.0008$ for 5000 fake datasets while the Gaussian mean of the fit pulls is $-0.026\pm0.006$. These pulls and biases will be applied on the data. Fig.~\ref{poisson_fitLnL} shows the distribution of $-2\ln L$ (the log likelihood is calculated according to Eqn.~\ref{eq:solar_poissonFitMinimizer}) returned by the best fit result ($-2\ln L_{best}$) for each fake dataset. The distribution, $f({-2\ln L_{best}})$, follows the asymptotic $\chi^2$ PDF with a degree of 40 and is used to compute the $p-\mathrm{value}$s \cite{pdg2020}. For a best-fit set ($N^i_{sig},N^i_{bkg}$) with a value of $-2\ln L^i_{best}$, the $p-\mathrm{value}$ is calculated as
 \begin{equation*}
-p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}}) \; d(-2\ln L_{best}) \; .    
+p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}}) \; d(-2\ln L_{best}) \; .
 \end{equation*}
 
 
@@ -274,7 +274,7 @@ Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. This symmetric quan
 
 \subsection{Signal-background Discrimination Based on TMVA}\label{sect:tmva}
 
-To further reduce the background events, in addition to the `beforehand' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration\footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{Rat water fitter}, with position error$<525$~mm). However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
+To further reduce the background events, in addition to the `beforehand' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration\footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{Rat water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
 \begin{itemize}
     \item $-11<Z_{factor}<1$ \, , 
     \item $scaleLogL>10.85$ \, ,

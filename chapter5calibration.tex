@@ -39,7 +39,7 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 	\begin{equation}
 	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij}) \; ,
 	\end{equation}
-	where $N$ is the selected NHit used by the reconstruction (see Sect.~\ref{sect:positionFoM}), and the $P_l(\cos\theta_{ij})$ are Legendre polynomials, and (following the precedent of the SNO collaboration) the linear combination  $\beta_{14}=\beta_1+4\beta_4$ is taken. For a set of events produced by Cherenkov light, the corresponding set of values of $\beta_{14}$ has a Gaussian-like distribution \cite{dunmore2004separation}. In principle, any systematic deviation of $\beta_{14}$ from zero suggests some polarity or a deviation from a totally isotropic pattern.
+	where $N$ is the selected NHit used by the reconstruction (see Sect.~\ref{sect:positionFoM}), and the $P_l(\cos\theta_{ij})$ are Legendre polynomials, and (following the precedent of the SNO collaboration) the linear combination $\beta_{14}=\beta_1+4\beta_4$ is taken. For a set of events produced by Cherenkov light, the corresponding set of values of $\beta_{14}$ has a Gaussian-like distribution \cite{dunmore2004separation}. In principle, any systematic deviation of $\beta_{14}$ from zero suggests some polarity or a deviation from a totally isotropic pattern.
 	
 \end{itemize}
 
@@ -79,7 +79,7 @@ The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:positinF
 
 For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000$ mm). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
 
-Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). Events with reconstructed energies below the water solar neutrino analysis threshold of 3.5~MeV ($E_{fit}<3.5~$MeV) are mostly coming from the U/Th isotopes, decays of Potassium and instrument noise \cite{waterunidoc}. Their lower energy (or $NHits$) negatively impacts the quality of position reconstruction because there are fewer hit PMTs providing information, so it is not unexpected that their $posFoM$ would be worse. In the MC (data) case, about 13.04 \% (12.89\%) of the events had  $E_{fit}<3.5~MeV$. By applying a $scaleLogL>10$ cut, proportions of 0.10\% (0.09\%) of such events were removed.
+Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). Events with reconstructed energies below the water solar neutrino analysis threshold of 3.5~MeV ($E_{fit}<3.5~$MeV) are mostly coming from the U/Th isotopes, decays of Potassium and instrument noise \cite{waterunidoc}. Their lower energy (or $NHits$) negatively impacts the quality of position reconstruction because there are fewer hit PMTs providing information, so it is not unexpected that their $posFoM$ would be worse. In the MC (data) case, about 13.04 \% (12.89\%) of the events had $E_{fit}<3.5~MeV$. By applying a $scaleLogL>10$ cut, proportions of 0.10\% (0.09\%) of such events were removed.
 
 \begin{figure}[!htb]
 	\centering
@@ -145,7 +145,7 @@ Table.~\ref{tab:posresol} summarizes the values of position resolution parameter
 	\label{tab:posresol}
 	\begin{tabular}{ccccc}
 		\toprule
-		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) &  $\tau_P$ (mm)& $\mu_P$ (mm)\\
+		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) & $\tau_P$ (mm)& $\mu_P$ (mm)\\
 		\hline 
 		data& 0.58$\pm$0.04 & 175.8$\pm$3.8 & 288.0$\pm$5.7 & -28.8$\pm$1.0\\	
 		\hline 
@@ -283,7 +283,7 @@ Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table.~\ref{tab:vert
 
 For reconstructed $^{16}$N calibration events, on the assumption that a $\gamma$ particle emitted by the source interacted with an electron at the reconstructed position, the ``true'' direction of an event is defined as the direction pointing from the source manipulator position to the reconstructed position,
 \begin{equation}
-\vec{u}_{\mathrm{true}} = \frac{\vec{X}_{\mathrm{fit}}-\vec{X}_{\mathrm{src}}}{|\vec{X}_{\mathrm{fit}}-\vec{X}_\mathrm{src}|} \; .    
+\vec{u}_{\mathrm{true}} = \frac{\vec{X}_{\mathrm{fit}}-\vec{X}_{\mathrm{src}}}{|\vec{X}_{\mathrm{fit}}-\vec{X}_\mathrm{src}|} \; .
 \end{equation}
 Now define $\theta$ as the angular difference between the ``true'' and the reconstructed event orientations, viz. $\cos\theta= \vec{u}_{\mathrm{true}} \cdot \vec{u}_{\mathrm{fit}}$.
 
@@ -379,7 +379,7 @@ Since $\beta_{14}$ itself is used as the high-level cut, only the cuts ITR$>0.55
 	\label{fig:N16beta14MPW}
 \end{figure}
 
-Fig.~\ref{beta14_XYZscans} shows the effects on $\beta_{14}$ when source position is moved along the ($x, y, z$) axes. $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$ was calculated for each of the 80 internal runs (i.e. including neck runs), and the mean and standard deviation of these $\Delta \beta_{14}$ values were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in Ref.~\cite{waterunidoc}, an asymmetric uncertainty was taken: the upward shift was taken as $+0.010$ while the downward shift was taken as $-0.026-0.01=-0.036$. Thus the shifts  $+0.010/-0.036$ were taken as the $\beta_{14}$ systematics, and will be applied to the solar neutrino analysis in the next chapter. 
+Fig.~\ref{beta14_XYZscans} shows the effects on $\beta_{14}$ when source position is moved along the ($x, y, z$) axes. $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$ was calculated for each of the 80 internal runs (i.e. including neck runs), and the mean and standard deviation of these $\Delta \beta_{14}$ values were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in Ref.~\cite{waterunidoc}, an asymmetric uncertainty was taken: the upward shift was taken as $+0.010$ while the downward shift was taken as $-0.026-0.01=-0.036$. Thus the shifts $+0.010/-0.036$ were taken as the $\beta_{14}$ systematics, and will be applied to the solar neutrino analysis in the next chapter. 
 
 \begin{figure}[htbp]
 	\centering
@@ -554,7 +554,7 @@ Before fitting the reconstructed energy spectrum with the energy resolution func
 
 \item cuts NHit$>5$, ITR$>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
 
-\item a conditional distance cut,  $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{leta,waterunidoc} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
+\item a conditional distance cut, $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{leta,waterunidoc} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
 
 \end{itemize}
 

@@ -50,7 +50,7 @@ To calculate $t_{\mathrm{transit}}$, the fitter uses Cherenkov photons in a prom
 \begin{equation*}
 t_{\mathrm{transit}}=\frac{|\vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}|}{v_{\mathrm{water}}} \, 
 \end{equation*}
-where $v_{\mathrm{water}}$ is an effective average photon group velocity obtained by tuning on Monte Carlo simulations. Sect.~\ref{sect:tuneGroupVelocity} will show the details of this tuning. Based on reconstruction experience from the SNO experiment, it is found that even  without the detailed tuning of $v_{\mathrm{water}}$ the fitter still produces results that are rather consistent with the outcome that {\em does}  use a more detailed calculation \cite{boulay2004direct,jones2011background}. Fig.~\ref{mpwdiagram_position} shows straight light paths from the event position to the hit PMT positions.
+where $v_{\mathrm{water}}$ is an effective average photon group velocity obtained by tuning on Monte Carlo simulations. Sect.~\ref{sect:tuneGroupVelocity} will show the details of this tuning. Based on reconstruction experience from the SNO experiment, it is found that even without the detailed tuning of $v_{\mathrm{water}}$ the fitter still produces results that are rather consistent with the outcome that {\em does} use a more detailed calculation \cite{boulay2004direct,jones2011background}. Fig.~\ref{mpwdiagram_position} shows straight light paths from the event position to the hit PMT positions.
 \begin{figure}[htbp]
 	\centering
    \includegraphics[width=6cm]{mpwDiagram.png}
@@ -120,7 +120,7 @@ When photons travel through the detector, their group velocities ($v_\mathrm{gr}
 	\label{nVsWavelength}
 \end{figure}
 
-To simplify reconstruction, a tuned value (of $v_\mathrm{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_\mathrm{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_\mathrm{transit}=|\vec{X}_\mathrm{event}-\vec{X}_\mathrm{PMT}|/v_\mathrm{gr,eff}$, where the $v_{water}$ is replaced by the effective group velocity $v_\mathrm{gr,eff}$. The value of  $v_\mathrm{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathrm{gr,eff}$ (a fast effective group velocity) will decrease $t_\mathrm{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_{res}$ will increase. During the reconstruction, when the fitter compares the large $t_{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_\mathrm{transit}$ and then decrease $t_{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathrm{gr,eff}$ is set too small (i.e. too slow), $t_\mathrm{transit}$ will increase while $t_{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_{res}$. These effects can be quantified as radial bias ($r_{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
+To simplify reconstruction, a tuned value (of $v_\mathrm{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_\mathrm{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_\mathrm{transit}=|\vec{X}_\mathrm{event}-\vec{X}_\mathrm{PMT}|/v_\mathrm{gr,eff}$, where the $v_{water}$ is replaced by the effective group velocity $v_\mathrm{gr,eff}$. The value of $v_\mathrm{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathrm{gr,eff}$ (a fast effective group velocity) will decrease $t_\mathrm{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_{res}$ will increase. During the reconstruction, when the fitter compares the large $t_{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_\mathrm{transit}$ and then decrease $t_{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathrm{gr,eff}$ is set too small (i.e. too slow), $t_\mathrm{transit}$ will increase while $t_{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_{res}$. These effects can be quantified as radial bias ($r_{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
 \begin{equation}
 r_{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
 \end{equation}
@@ -193,7 +193,7 @@ To obtain the values of $p_0$ and $p_1$, I generated electron events uniformly d
 \begin{equation}
 \chi^2 = \sum_{i=1}^{N_{\mathrm{events}}}[\vec{X}^i_{MC}-(p_0\vec{X}^i_{fit}+p_1\vec{u}^i_{fit})]^2 \; ,
 \end{equation}
-and the parameters ($p_0$, $p_1$) were obtained by minimizing the $\chi^2$ function. When calculating $\chi^2$, fitted events having  $|\vec{X}_{fit}-\vec{X}_{MC}| > 3~\mathrm{m}$ were rejected to improve the $\chi^2$ minimization results.
+and the parameters ($p_0$, $p_1$) were obtained by minimizing the $\chi^2$ function. When calculating $\chi^2$, fitted events having $|\vec{X}_{fit}-\vec{X}_{MC}| > 3~\mathrm{m}$ were rejected to improve the $\chi^2$ minimization results.
 
 For the 2 to 10 MeV $e^-$ event simulations (using \texttt{RAT} version 6.17.6), the values obtained for ($p_0$, $p_1$) are energy- (or NHit-) dependent. However using NHits-dependent functions $p_0(\mathrm{NHit}), p_1(\mathrm{NHit})$ as drive corrections does not improve the results. 
 Finally we take average values from the 5 to 10 MeV electron simulations and find the optimal drive correction is: 
@@ -225,7 +225,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 \begin{itemize}
 	\item[$\bullet$] Straight Light Path Time Residual Cut Selector
 	
-	This selector is used for the direction reconstruction for the SNO+ water phase, and was first developed by K. Singh \cite{kalpanaMPFitter}. The time residual ($t_{res}$) is calculated for each hit PMT, and PMTs returning a $t_{res}$ value within the prompt time window $[-10.0, 120.0]$ ns are selected for the fitter. The calculation of $t_{res}$ is based on using straight line light paths, as in the case of the \texttt{MPW fitter}. The selector mostly removes PMTs that had been triggered by late arriving photons, such as those reflected off the detector elements (called ``late light''), and thereby keeps the possible Cherenkov ring hit pattern clear for the direction reconstruction. Removing  irrelevant PMTs can potentially boost the fit speed.
+	This selector is used for the direction reconstruction for the SNO+ water phase, and was first developed by K. Singh \cite{kalpanaMPFitter}. The time residual ($t_{res}$) is calculated for each hit PMT, and PMTs returning a $t_{res}$ value within the prompt time window $[-10.0, 120.0]$ ns are selected for the fitter. The calculation of $t_{res}$ is based on using straight line light paths, as in the case of the \texttt{MPW fitter}. The selector mostly removes PMTs that had been triggered by late arriving photons, such as those reflected off the detector elements (called ``late light''), and thereby keeps the possible Cherenkov ring hit pattern clear for the direction reconstruction. Removing irrelevant PMTs can potentially boost the fit speed.
 	
 	\item[$\bullet$] Mode Cut Selector
 	
@@ -249,7 +249,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100~ns$, where $100~ns$ is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. Thus the number of the hit PMTs is reduced to $n\times n$ for the fitter, i.e., $n_\mathrm{select}=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
 	
-		Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution.  Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
+		Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
@@ -267,7 +267,7 @@ The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ sim
 		\begin{minipage}[t]{0.5\textwidth}
 			\includegraphics[width=8cm]{5MeVbetaX.pdf}
 		\end{minipage}
-	}   
+	}
 	\subfigure[$y_{fit}-y_{mc}$]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
@@ -291,7 +291,7 @@ In Fig.~\ref{fig:5MeVbeta_center_water} there are a few events with position bia
 		\begin{minipage}[t]{0.5\textwidth}
 			\includegraphics[width=8cm]{scaleLogLvsX_water5MeV.pdf}
 		\end{minipage}
-	}   
+	}
 	\subfigure[$y_{fit}-y_{mc}$ vs. $scaleLogL$.]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
@@ -360,7 +360,7 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \begin{equation}\label{eq:cosTheta_fraction}
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) \, d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) \, d\cos\theta_e} = a\times 100\% \, ,
 \end{equation}
-where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table.~\ref{tab:angularResol_MPW}, are slightly better those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which   \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.3\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in  Sect.~\ref{sect:waterFitterVertex}
+where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table.~\ref{tab:angularResol_MPW}, are slightly better those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.3\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
 
 \begin{table}[ht]
 	\caption{Direction resolutions for the reconstruction of 5 MeV $e^-$ events.\label{tab:angularResol_MPW}}
@@ -404,7 +404,7 @@ In a more realistic situation, the data collected from the calibration runs were
 
 \section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}\label{sect:WLSfitter}
 
-A reconstruction algorithm was developed to investigate the proposal, mentioned in Sect.~\ref{sect:wbWLS}, for incorporating in the detector a water-based wavelength-shifter. Fig.~\ref{pmt_wls} shows the position distribution of hit PMTs for MC simulated 5 MeV electrons traveling along the positive $x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water into which is mixed the wavelength shifter PPO at a concentration of 0.1 ppm (``wbWLS''). For the same set of electron events, the number of hit PMTs (NHits) in wbWLS is about 2.4 times greater than in pure water. Although in the wbWLS medium extra isotropic light is emitted, the Cherenkov ring can still be clearly distinguished, allowing reconstruction of the directionality of events.  
+A reconstruction algorithm was developed to investigate the proposal, mentioned in Sect.~\ref{sect:wbWLS}, for incorporating in the detector a water-based wavelength-shifter. Fig.~\ref{pmt_wls} shows the position distribution of hit PMTs for MC simulated 5 MeV electrons traveling along the positive $x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water into which is mixed the wavelength shifter PPO at a concentration of 0.1 ppm (``wbWLS''). For the same set of electron events, the number of hit PMTs (NHits) in wbWLS is about 2.4 times greater than in pure water. Although in the wbWLS medium extra isotropic light is emitted, the Cherenkov ring can still be clearly distinguished, allowing reconstruction of the directionality of events.
 
 \begin{figure}[htbp]
 	\centering
@@ -481,7 +481,7 @@ The following two sections discuss about vertex reconstruction in liquid scintil
 
 In the partial-fill geometry, the SNO+ detector can be described as being composed of three parts: the neck cylinder filled with scintillator; the AV sphere, which contains scintillator above and water below the water-scintillator interface (plane); and the water-filled PSUP sphere lying outside the neck and the AV.
 
-If we neglect complications related to the acrylic and other solid parts of the detector, then photons travel in only two media: water and  scintillator (see Fig.~\ref{fig:scintpath}). By definition the length of the straight light path from a vertex to a hit PMT position is $|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$. The \texttt{MP scint-water fitter} evaluates the portion $d_{sp}$ of the total path travelled in scintillator, and length of the path travelled in water obviously is $|\vec{l}_p|-d_{sp}$. Since photons travel at different speeds ($v_\mathrm{gr,scint}$, $v_\mathrm{gr,water}$) in these two media, the \texttt{MP scint-water fitter} evaluates the time of flight, as:
+If we neglect complications related to the acrylic and other solid parts of the detector, then photons travel in only two media: water and scintillator (see Fig.~\ref{fig:scintpath}). By definition the length of the straight light path from a vertex to a hit PMT position is $|\vec{l}_p|=|\vec{X}_\mathrm{PMT}-\vec{X}_0|$. The \texttt{MP scint-water fitter} evaluates the portion $d_{sp}$ of the total path travelled in scintillator, and length of the path travelled in water obviously is $|\vec{l}_p|-d_{sp}$. Since photons travel at different speeds ($v_\mathrm{gr,scint}$, $v_\mathrm{gr,water}$) in these two media, the \texttt{MP scint-water fitter} evaluates the time of flight, as:
 \begin{equation}
 t_{\mathrm{transit}} = \frac{|\vec{l}_p|-d_{sp}}{v_\mathrm{gr,water}} +\frac{d_{sp}}{v_\mathrm{gr,scint}} \; .
 \end{equation}
@@ -506,15 +506,15 @@ $(\vec{l}_0-\vec{O}_{av})^2 = r^2_{AV}$.
 
 Now define 
 \begin{equation}
-\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av} \; .    
+\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av} \; .
 \end{equation}
 If $\Delta>0$, one may solve to evaluate two roots,
 \begin{equation}\label{eq:ray-sphere}
-a_{\pm} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta} \;  .
+a_{\pm} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta} \;.
 \end{equation}
 In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point (different to the line intersection with no direction). Thus the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_{AV}$ is automatically met. 
 
-If $\Delta\leq 0$, there is either {\bf no} intersection point (Fig.~\ref{line-sphere} (c)) or there is {\bf one} intersection point  (Fig.~\ref{line-sphere} (d)). In either case, the ray vector never passes through the AV sphere.
+If $\Delta\leq 0$, there is either {\bf no} intersection point (Fig.~\ref{line-sphere} (c)) or there is {\bf one} intersection point (Fig.~\ref{line-sphere} (d)). In either case, the ray vector never passes through the AV sphere.
 
 \begin{figure}
 	\centering
@@ -632,7 +632,7 @@ for vertex reconstruction during the partial-fill. I wrote a python tool to crea
 	\label{fig:oxfordPdf}
 \end{figure}
 
-Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~\ref{sect:tuneGroupVelocity}), the effective group velocity in scintillator ($v_\mathrm{gr,scint}$) was obtained on the basis of simulations of 500 3 MeV electrons generated uniformly and with isotropic direction in the full scintillator geometry. The \texttt{MP scint fitter}, which will be discussed in Sect.~\ref{sect:scintFitter}, was used to reconstruct the same simulation data with different values of $v_\mathrm{gr}$. Once $v_\mathrm{gr,scint}$ was obtained, it was fixed in the \texttt{MP scint-water fitter}. Then  $v_\mathrm{gr,water}$ was tuned by simulating five hundred 3 MeV electron events in the water region of the partial-fill geometry, with the water level set at z = 3000 mm in the AV coordinate. Fig.~\ref{fig:scint_groupVelocity} shows the convergence of the values of (a) $v_\mathrm{gr,scint}$ and (b) $v_\mathrm{gr,water}$ to their optimal values, from a linear interpolation in the LAB+0.5 g/L PPO scintillator case. Table.~\ref{partial_groupV} lists the effective group velocities and refractive indices ($n_\mathrm{eff}$) for the liquid scintillator with different PPO concentrations. 
+Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~\ref{sect:tuneGroupVelocity}), the effective group velocity in scintillator ($v_\mathrm{gr,scint}$) was obtained on the basis of simulations of 500 3 MeV electrons generated uniformly and with isotropic direction in the full scintillator geometry. The \texttt{MP scint fitter}, which will be discussed in Sect.~\ref{sect:scintFitter}, was used to reconstruct the same simulation data with different values of $v_\mathrm{gr}$. Once $v_\mathrm{gr,scint}$ was obtained, it was fixed in the \texttt{MP scint-water fitter}. Then $v_\mathrm{gr,water}$ was tuned by simulating five hundred 3 MeV electron events in the water region of the partial-fill geometry, with the water level set at z = 3000 mm in the AV coordinate. Fig.~\ref{fig:scint_groupVelocity} shows the convergence of the values of (a) $v_\mathrm{gr,scint}$ and (b) $v_\mathrm{gr,water}$ to their optimal values, from a linear interpolation in the LAB+0.5 g/L PPO scintillator case. Table.~\ref{partial_groupV} lists the effective group velocities and refractive indices ($n_\mathrm{eff}$) for the liquid scintillator with different PPO concentrations. 
 		
 \begin{figure}[htbp]
 		\caption[Tuning the effective group velocities in the scintillator and water.]{Tuning the effective group velocities in the scintillator (a) and water (b).\label{fig:scint_groupVelocity}}
@@ -825,7 +825,7 @@ This tagging algorithm was applied to reconstructed event vertices. Fig.~\ref{fi
 			Tagged isotope & $\mu_x\pm \sigma_x$ & $\mu_y\pm \sigma_y$ & $\mu_z\pm \sigma_z$\\
 			\midrule
 			$^{214}$Bi &  -7.657$\pm$127.2 & -2.071$\pm$ 129.6 & 2.041$\pm$114.5 \\
-			$^{214}$Po &  -0.695$\pm$ 128.5 & -0.1355$\pm$129.3    & -22.21$\pm$103.0\\
+			$^{214}$Po &  -0.695$\pm$ 128.5 & -0.1355$\pm$129.3 & -22.21$\pm$103.0\\
 			\bottomrule	
 		\end{tabular*}
 	}
