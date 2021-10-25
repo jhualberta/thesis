@@ -254,7 +254,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
 
-A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHit ($\mathrm{NHit}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
+A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
 
 \subsection{Performance of the Water Vertex Reconstruction}\label{sect:waterFitterVertex}
 
