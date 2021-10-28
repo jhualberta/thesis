@@ -190,7 +190,7 @@ Here we measured the light yield of $0.5\%$ Te-loaded LAB samples relative to th
 
 \subsubsection{Measurement Setup and Data Acquisition}
 
-We first prepared LAB+2 g/L PPO by dissolving PPO into pure LAB. The LAB-PPO mixture was fully mixed by an electromagnetic stirrer. During the stirring, the mixture was distilled by heating at 50 $^\circ$C and flowing with pure and dry nitrogen gas for 48 hours to remove dissolved water (humidity) and oxygen in the scintillator, both of which can reduce the light yield. The distilled LAB-PPO was added into the original Te-butanediol samples which contain 16.5\% Te by weight, and these samples were diluted into 0.5\% TeLS samples. 
+We first prepared LAB+2 g/L PPO by dissolving PPO into pure LAB. The LAB-PPO mixture was fully mixed by an electromagnetic stirrer. During the stirring, the mixture was distilled by heating at 75 $^\circ$C \footnote{This temperature is far below the flash points of the LAB (140 $^\circ$C) and the PPO (335 $^\circ$C). Data from the Material Safety Data Sheet (MSDS).} and flowing with pure and dry nitrogen gas for 48 hours to remove dissolved water (humidity) and oxygen in the scintillator, both of which can reduce the light yield. The distilled LAB-PPO was added into the original Te-butanediol samples which contain 16.5\% Te by weight, and these samples were diluted into 0.5\% TeLS samples. 
 
 The two original Te-butanediol samples were synthesized from the DDA and SOP synthesis procedures (described in Ref.~\cite{teLoadingPaper}). The diluted 0.5\% TeLS samples were tagged as the TeDDA and TeSOP samples, respectively\footnote{Dr. M. Sharma, who worked in Prof. Veinot's lab at Department of Chemistry at U. Alberta, performed the tellurium synthesis procedures and helped with the sample preparations.}. The TeDDA and TeSOP samples were transferred into scintillation vials to be used for the measurements, as shown in the left picture of Fig.~\ref{scintVial}. The vials have PTFE caps sealed on the top of the glass cylinders to prevent humidity exposure from the air. The liquid level for each sample was kept at 30 mm from the bottom of the vial to avoid air bubbles and contamination created by squeezing the vial cap into the liquid.
 
@@ -218,7 +218,7 @@ Two Hamamatsu R580 PMTs (see Hamamatsu R580 manual\cite{pmtR580} for details) we
 	\label{teLSsetup}
 \end{figure}
 
-Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic coupling piece held the radioactive source and the scintillation vial. It also aligned two PMTs to face the scintillation vial from each side, and shielded the vial from outside light. The apparatus was placed in a dark box to prevent light from the lab. Two RG59/U-type high voltage (HV) cables connected the PMTs to an HV supply outside the dark box. The HV cables were connected to two signal/HV split boxes to separate the HV current and electrical signals. Due to the resistance of the split box, the HV supply was set to 2200 Volts (V) for PMT operation, instead of the 1800 V operation voltage suggested by Ref.~\ref{pmtR580}. 
+Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic coupling piece held the radioactive source and the scintillation vial. It also aligned two PMTs to face the scintillation vial from each side, and shielded the vial from outside light. The apparatus was placed in a dark box to prevent light from the lab. Two RG59/U-type high voltage (HV) cables connected the PMTs to an HV supply outside the dark box. The HV cables were connected to two signal/HV split boxes to separate the HV current and electrical signals. Due to the resistance of the split box, the HV supply was set to 2200 Volts (V) for PMT operation, instead of the 1800 V operation voltage suggested by Ref.~\cite{pmtR580}. 
 
 The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier, which inverted the signals and amplified them by 26 dB. The amplified signals were then input to a two-channel digitizer whence they were recorded on a desktop computer.
 
@@ -230,7 +230,7 @@ Each channel recorded the signals from each PMT individually. With the two-PMT s
 
 \subsubsection{Measurement}
 
-The liquid scintillator samples we have measured are LAB-PPO, TeDDA, and TeSOP. The unloaded LAB-PPO sample served as a standard candle. 
+The liquid scintillator samples we have measured are LAB-PPO, TeDDA, and TeSOP. The unloaded LAB-PPO sample served as a standard candle.
 
 A Cesium-137 ($^{137}$Cs) radioactive source was always placed at the bottom of the scintillation vials.
 The source was made by Radiochemical Centre Amersham. The radioactivity measured on 1st April 1974 was $11.09 \, \mathrm{microcurie}(\mu\mathrm{Ci})$ on record, with an accuracy of $3.7\%$. Then the activity was expected to be 
@@ -269,7 +269,7 @@ Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and witho
 	\label{teLSresults}
 \end{figure}
 
-Fig.~\ref{teLSresults} (a) shows the result of a one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered events ready by the ADC channel 0 and 1 simultaneously. A 10 ns coincidence window cut was applied to cut down noise, single p.e., and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence cut. Fig.~\ref{teLSresults} (b) and (c) show corresponding results for the TeSOP and TeDDA samples respectively. Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields can be observed clearly. %% John: confusions here
+Fig.~\ref{teLSresults} (a) shows the result of a one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered events read by the ADC channel 0 and 1 simultaneously. A 10 ns coincidence window cut was applied to cut down noise, single p.e., and background events. The events in the 0 ADC channel, which represent noises, were totally cut off after applying the coincidence cut. Fig.~\ref{teLSresults} (b) and (c) show corresponding results for the TeSOP and TeDDA samples respectively. Compared to the LAB-PPO sample, a shift of the multiple p.e. peak due to the different light yields can be observed clearly. %% John: confusions here
 
 The 2D plots were projected onto a single channel, as shown in Fig.~\ref{teLSresults} (d). We used an empty vial and let $\gamma$-particles from the $^{137}$Cs source pass through it as a background run (without imposing the coincidence cut). This was to verify the single p.e. peak and noise region, shown as the black background spectrum. From this plot, the single p.e. peaks for all the samples and the background match together. The several different multiple p.e. peaks indicate the different light yields of the scintillator samples. Here we can see the multiple p.e. peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP are slightly larger than the TeDDA. 
 
@@ -293,7 +293,7 @@ Then in the multiple p.e. region, weighting (dividing) the counts of the event i
 	\label{fitSinglePE}
 \end{figure}
 
-To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons. Fig.~ 16 and Fig.~ 19 show the case of the LAB-PPO sample.
+To define the multiple p.e. region for the counting, the spectrum projected on each channel with and without coincidence cut are compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between two spectrum are close to each other. From two channels, we get two thresholds and then define a box cut in the 2D coincidence plot. We weights the events in the box to obtain the total number of photons.
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=6cm]{TeLS_2DboxCut.png}
@@ -321,7 +321,7 @@ Once the total number of photons for a certain sample is counted, we can calcula
 	\end{tabular*}
 \end{table}
 
-Table.~\ref{lightyield1} shows the number of photons calculated by the charge weighted photon number method. Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.61$ and the one of the $0.5\%$ Te by DDA procedure is 0.67. The light yield of TeSOP is slightly larger than the TeDDA. In Ref.~\cite{biller2017new}, a relative light yield of $\sim 0.65$ was reported.
+Table.~\ref{lightyield1} shows the number of photons calculated by the charge weighted photon number method. Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.67$ and the one of the $0.5\%$ Te by DDA procedure is 0.61. The light yield of TeSOP is slightly larger than the TeDDA. These results are close to the relative light yield of $\sim 0.65$ for the $0.5\%$ Te loading samples reported by Ref.~\cite{biller2017new}.
 
 \section{SNO+ Electronics}
 
