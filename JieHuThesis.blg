@@ -3,23 +3,15 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1306 of file thesis.bib
- : @article{tanner0p5
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1399 of file thesis.bib
+Repeated entry---line 1713 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1729 of file thesis.bib
- : @article{anderson2021optical
- :                             ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1782 of file thesis.bib
+Repeated entry---line 1766 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1970 of file thesis.bib
+Repeated entry---line 1954 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -132,4 +124,4 @@ warning$ -- 67
 while$ -- 274
 width$ -- 189
 write$ -- 1679
-(There were 5 error messages)
+(There were 3 error messages)
