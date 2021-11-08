@@ -19,7 +19,7 @@ Repeated entry---line 1782 of file thesis.bib
  : @article{partialFillTres
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1963 of file thesis.bib
+Repeated entry---line 1970 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -91,45 +91,45 @@ Warning--empty year in beta14discrepancy
 Warning--empty year in leta
 Warning--empty year in morganFOM
 Warning--empty year in fady_pselmaa
-You've used 185 entries,
+You've used 186 entries,
             1876 wiz_defined-function locations,
-            1368 strings with 33156 characters,
-and the built_in function-call counts, 39294 in all, are:
-= -- 3369
-> -- 2274
+            1372 strings with 33280 characters,
+and the built_in function-call counts, 39418 in all, are:
+= -- 3384
+> -- 2278
 < -- 0
-+ -- 854
-- -- 669
-* -- 2786
-:= -- 6134
-add.period$ -- 238
-call.type$ -- 185
++ -- 856
+- -- 670
+* -- 2791
+:= -- 6157
+add.period$ -- 240
+call.type$ -- 186
 change.case$ -- 140
 chr.to.int$ -- 0
-cite$ -- 252
-duplicate$ -- 2153
-empty$ -- 3584
-format.name$ -- 669
-if$ -- 9237
+cite$ -- 253
+duplicate$ -- 2160
+empty$ -- 3595
+format.name$ -- 670
+if$ -- 9265
 int.to.chr$ -- 0
-int.to.str$ -- 185
+int.to.str$ -- 186
 missing$ -- 181
-newline$ -- 611
-num.names$ -- 180
-pop$ -- 694
+newline$ -- 615
+num.names$ -- 181
+pop$ -- 696
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1072
+skip$ -- 1074
 stack$ -- 0
 substring$ -- 918
-swap$ -- 711
+swap$ -- 712
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 67
-while$ -- 273
-width$ -- 188
-write$ -- 1669
+while$ -- 274
+width$ -- 189
+write$ -- 1679
 (There were 5 error messages)
