@@ -382,7 +382,7 @@ where $P(\cos\theta_e)$ is the direction resolution function with the best fit p
 
 \subsection{Test on Gamma Events}
 
-For analyzing the AmBe calibration data, reconstructing $\gamma$-events with energies of 2.2 MeV and 4.4 MeV is crucial . When a realistic trigger setting for the antineutrino analysis ( taken as that of run-106904) is adopted in simulations, only about 53\% of the (simulated) low energy 2.2-MeV $\gamma$ events triggered a detector response. The event count for simulations was therefore doubled to $2\times10^4$. Table.~\ref{tab:bias_water_gamma} shows the performance (bias and resolution on each axis) of the event position reconstruction for these important gamma events.
+For analyzing the AmBe calibration data, reconstructing $\gamma$-events with energies of 2.2 MeV and 4.4 MeV is crucial. When a realistic trigger setting for the antineutrino analysis ( taken as that of run-106904) is adopted in simulations, only about 53\% of the (simulated) low energy 2.2-MeV $\gamma$ events triggered a detector response. The event count for simulations was therefore doubled to $2\times10^4$. Table.~\ref{tab:bias_water_gamma} shows the performance (bias and resolution on each axis) of the event position reconstruction for these important gamma events.
 
 \begin{table}[ht]
 	\caption{Reconstruction performances for the 2.2-MeV and 4.4-MeV $\gamma$ events.}\label{tab:bias_water_gamma}
@@ -399,7 +399,7 @@ For analyzing the AmBe calibration data, reconstructing $\gamma$-events with ene
 
 \subsubsection{Test on $^{16}$N Calibration Source Events}
 
-In a more realistic situation, the data collected from the calibration runs were used to evaluate the fitter performance as well as the reconstruction uncertainties. Chapter 5 will discuss the analyses of the $^{16}$N calibration source in detail. For these tests, a position resolution function including the distributions of the initial interaction positions, rather than the Gaussian function was used, while the same direction resolution function was used. 
+In a more realistic situation, the data collected from the calibration runs were used to evaluate the fitter performance as well as the reconstruction uncertainties. Chapter 5 will discuss the analyses of the $^{16}$N calibration source in detail. For these analyses, rather than the simple Gaussian function used here, a more specific position resolution function was used. It is construct by the distributions of the initial interaction positions of the particles emit from the source, convolved with a Gaussian resolution function. On the other hand, the same direction resolution function was used in Chapter 5. 
 
 \section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}\label{sect:WLSfitter}
 
@@ -419,7 +419,7 @@ A reconstruction algorithm was developed to investigate the proposal, mentioned 
 	\label{pmt_wls}
 \end{figure}
 
-Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $\mathrm{NHit}$ distribution (mean NHits). In pure water, a 1 MeV electron simulation does not trigger any PMTs at all, but in the wbWLS case the 1 MeV electron results (on average) in a detected event with NHits$=20$.
+Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $\mathrm{NHit}$ distribution (mean NHits). In pure water, a 1 MeV electron may cause about 7 PMT hits (but below the detector trigger threshold), while in the wbWLS case the 1 MeV electron simulation results (on average) in a detected event with NHits$=20$.
 
 \begin{figure}[htbp]
 	\centering	
