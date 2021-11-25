@@ -415,8 +415,7 @@ A reconstruction algorithm was developed to investigate the proposal, mentioned 
 		\centering
 		\includegraphics[width=7cm]{PMT_5MeVElectron0p1ppmPPO.pdf}
 	\end{minipage}
-	\caption[Position distribution of hit PMTs (zenith and azimuth angles).]{Position distribution of hit PMTs (zenith and azimuth angles) for 5 MeV electrons traveling along the $+x$ direction in pure water (left) and water bearing 0.1 ppm PPO (right).}
-	\label{pmt_wls}
+	\caption[Position distribution of hit PMTs (zenith and azimuth angles).]{Position distribution of hit PMTs (zenith and azimuth angles) for 5 MeV electrons traveling along the $+x$ direction in pure water (left) and water bearing 0.1 ppm PPO (right).\label{pmt_wls}}	
 \end{figure}
 
 Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $\mathrm{NHit}$ distribution (mean NHits). In pure water, a 1 MeV electron may cause about 7 PMT hits (but below the detector trigger threshold), while in the wbWLS case the 1 MeV electron simulation results (on average) in a detected event with NHits$=20$.
@@ -424,11 +423,10 @@ Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of t
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{nhits_wls.pdf}
-	\caption[The energies of simulated electrons as a function of mean NHits.]{The energies of simulated electrons as a function of mean NHits. The values in the 0.1 ppm PPO (solid line with inverted triangle) are compared with the water (dashed line with star).}
-	\label{nhit_wls}
+	\caption[The energies of simulated electrons as a function of mean NHits.]{The energies of simulated electrons as a function of mean NHits. The values in the 0.1 ppm PPO (solid line with inverted triangle) are compared with the water (dashed line with star).	\label{nhit_wls}}
 \end{figure}
 
-In the wbWLS case, since the WLS absorbs and re-emits photons, the reconstruction mentioned in section \ref{sect:mpw} is slightly modified to build the MP WLS Fitter. Given the optical properties of PPO, the prompt light emitted from an event has a probability of $\sim$0.6 to be absorbed by the WLS and then re-emitted at a vertex that is {\em shifted} along the direction of motion ($\hat{n}$) of the event-originating charged particle. Accordingly the fitter returns a shifted vertex, $\vec{X}_{0,shifted}=\vec{X}_0+\mathrm{offset}\cdot\hat{n}$. The offset specified in the fitter, obtained from simulations, is 100 mm. Fig.~\ref{WLS_pdf} shows the timing PDF for the wbWLS, which is the PMT response time modified for photon propagation time in the wbWLS.
+In the wbWLS case, since the WLS absorbs and re-emits photons, the reconstruction mentioned in section \ref{sect:mpw} is slightly modified to build the MP WLS Fitter. Given the optical properties of PPO, the prompt light emitted from an event has a probability of $\sim$0.6 to be absorbed by the WLS and then re-emitted at a vertex that is {\em shifted} along the direction of motion ($\hat{n}$) of the event-originating charged particle. Accordingly the fitter returns a shifted vertex, $\vec{X}_\mathrm{0,shifted}=\vec{X}_0+\mathrm{offset}\cdot\hat{n}$. The offset specified in the fitter, obtained from simulations, is 100 mm. Fig.~\ref{WLS_pdf} shows the timing PDF for the wbWLS, which is the PMT response time modified for photon propagation time in the wbWLS.
 
 \begin{figure}[htbp]	
 	\centering		
@@ -448,15 +446,15 @@ To reconstruct event direction, in addition to the angular distribution of Chere
 To test the performance of the \texttt{MP WLS Fitter}, a simulation was performed with 5 MeV electrons released at the center of the wbWLS-filled AV and traveling along +x direction; and for comparison, the equivalent simulation was also done for the pure water-filled AV, in which case the simulated events were reconstructed by the water fitter. Fig.~\ref{WLSFitPos} shows the performance of the WLS fitter reconstructed positions of the MC simulations, in comparison with the pure water case. For the fit position distribution of 5 MeV $e^-$ in the wbWLS medium, we obtained a root mean square (RMS) position error (i.e position resolution) of 201 mm, and a bias towards the AV center (the mean of histogram) of 29 mm. Compared to the pure water case, the RMS is a 188 mm improvement, and the fit bias is about 19 mm better.
 
 \begin{figure}[htbp]	
-	\centering	\label{WLSFitPos} 		
+	\centering	 		
 	\includegraphics[height=5cm]{WLS_FittedPos.pdf}		
-	\caption[Fitted $x$ position.]{Fitted $x$ position. The \texttt{MP WLS fitter} reconstructed $x$ positions of the 5-MeV $e^-$ events in the wbWLS (red) are compared to those in the pure water (blue).
+	\caption[Fitted $x$ position.]{Fitted $x$ position. The \texttt{MP WLS fitter} reconstructed $x$ positions of the 5-MeV $e^-$ events in the wbWLS (red) are compared to those in the pure water (blue).\label{WLSFitPos}
 	}
 \end{figure}
 
 As it had been in Sect.~\ref{sect:directResol}, again here $\cos\theta_a$ in Eqn.~\ref{eq:cosTheta_fraction} was used to characterize the performance of the direction reconstruction. Table.~\ref{tab:quantAngular} compares the \texttt{MP WLS Fitter}$'s \cos\theta_{a}$ values when applied to SNO heavy water data\cite{boulay2004direct}, and to simulations for both SNO+ pure water and SNO+ wbWLS. The best direction reconstruction is obtained for the SNO+ pure water case, with results for the wbWLS case proving less satisfactory (e.g. by about 30\% for $\cos\theta_{0.9}$).
 \begin{table}[ht]
-	\caption{A comparison of quantitative estimates for the angular resolution for the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.}\label{tab:quantAngular}
+	\caption{A comparison of quantitative estimates for the angular resolution for the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.\label{tab:quantAngular}}
 				\centering		
 		\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 			\toprule 
@@ -489,29 +487,28 @@ Once having computed $t_{\mathrm{transit}}$ the time residual $t_\mathrm{res}$ c
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=7cm]{scintpath.png}
-	\caption[Light path calculation for the \texttt{MP scint-water fitter fitter}.]{Light path calculation for the \texttt{MP scint-water fitter fitter}. In the figure, a light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, $d_{sp}$) includes the paths in the neck ($d_{sp,neck}$) and in the AV ($d_{sp,AV}$). Calculations of the ray-cylinder, ray-plane and ray-sphere intersections are applied.}
-	\label{fig:scintpath}
+	\caption[Light path calculation for the \texttt{MP scint-water fitter fitter}.]{Light path calculation for the \texttt{MP scint-water fitter fitter}. In the figure, a light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, $d_{sp}$) includes the paths in the neck ($d_{sp,\mathrm{neck}}$) and in the AV ($d_{sp,\mathrm{AV}}$). Calculations of the ray-cylinder, ray-plane and ray-sphere intersections are applied.	\label{fig:scintpath}}
 \end{figure}
 
-It follows that the crucial part of the calculation is obtaining $d_{sp}$. The light path vector $\vec{l}_p$, encoding length and direction, may intersect and one or more of three geometrical objects: the neck cylinder, the AV sphere and the water-scintillator interface plane. As illustrated in Fig.~\ref{fig:scintpath}, a detailed calculation of $d_{sp}$ includes evaluation of (1) $\vec{l}_p$ and neck (ray-cylinder) intersection; (2) $\vec{l}_p$ and the AV (ray-sphere) intersection and (3) $\vec{l}_p$ and the water-scintillator interface (ray-plane) intersection. The distance $d_{sp}$ is further separated into path segments within the neck ($d_{sp,neck}$) and within the AV ($d_{sp,AV}$). 
+It follows that the crucial part of the calculation is obtaining $d_{sp}$. The light path vector $\vec{l}_p$, encoding length and direction, may intersect and one or more of three geometrical objects: the neck cylinder, the AV sphere and the water-scintillator interface plane. As illustrated in Fig.~\ref{fig:scintpath}, a detailed calculation of $d_{sp}$ includes evaluation of (1) $\vec{l}_p$ and neck (ray-cylinder) intersection; (2) $\vec{l}_p$ and the AV (ray-sphere) intersection and (3) $\vec{l}_p$ and the water-scintillator interface (ray-plane) intersection. The distance $d_{sp}$ is further separated into path segments within the neck ($d_{sp,\mathrm{neck}}$) and within the AV ($d_{sp,\mathrm{AV}}$). 
 
-For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a hit PMT position $\vec{X}_{\mathrm{pmt}}=(x_\mathrm{pmt},y_\mathrm{pmt},z_\mathrm{pmt})$, define the ray vector as $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between the vertex and the PMT intersection point, i.e. the parameter to be determined, and $\vec u=(\vec{X}_{\mathrm{pmt}}-\vec{X}_0 ) / |\vec{X}_{\mathrm{pmt}}-\vec{X}_0|$ is the direction of the ray vector, i.e. is a unit vector pointing from $\vec{X}_0$ to $\vec{X}_{\mathrm{pmt}}$. The following three types of intersection occur:
+For a trial position $\vec{X}_0=(x_0,y_0,z_0)$ and a hit PMT position $\vec{X}_{\mathrm{PMT}}=(x_\mathrm{PMT},y_\mathrm{PMT},z_\mathrm{PMT})$, define the ray vector as $\vec{l}_0\equiv\vec{X}_0+a\cdot \vec{u}$, where $a$ is the distance between the vertex and the PMT intersection point, i.e. the parameter to be determined, and $\vec u=(\vec{X}_{\mathrm{PMT}}-\vec{X}_0 ) / |\vec{X}_{\mathrm{PMT}}-\vec{X}_0|$ is the direction of the ray vector, i.e. is a unit vector pointing from $\vec{X}_0$ to $\vec{X}_{\mathrm{PMT}}$. The following three types of intersection occur:
 
 \begin{itemize}
 \item Ray-sphere intersection
 
-In the ray-sphere intersection case (ray vector passes through the AV sphere), the intersection points ($\vec{X}$) on $\vec{l}_0$ must satisfy the equation $|(\vec{X}-\vec{O}_{av})|^2= r^2_{AV}$, where $r_{av}=6005$ mm is the radius of the AV sphere and $\vec{O}_{AV}$ its origin, with the value $\vec{O}_{AV} = (0,0,108)$ mm in the PSUP coordinate system. Thus the intersection equation is:
-$(\vec{l}_0-\vec{O}_{av})^2 = r^2_{AV}$.
+In the ray-sphere intersection case (ray vector passes through the AV sphere), the intersection points ($\vec{X}$) on $\vec{l}_0$ must satisfy the equation $|(\vec{X}-\vec{O}_\mathrm{AV})|^2= r^2_\mathrm{AV}$, where $r_\mathrm{AV}=6005$ mm is the radius of the AV sphere and $\vec{O}_\mathrm{AV}$ its origin, with the value $\vec{O}_{AV} = (0,0,108)$ mm in the PSUP coordinate system. Thus the intersection equation is:
+$(\vec{l}_0-\vec{O}_\mathrm{AV})^2 = r^2_\mathrm{AV}$.
 
 Now define 
 \begin{equation}
-\Delta \equiv {[(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_{av})}^2+r^2_{av} \; .
+\Delta \equiv {[(\vec{X}_0-\vec{O}_\mathrm{AV})\cdot\vec{u}]}^2-{(\vec{X}_0-\vec{O}_\mathrm{AV})}^2+r^2_\mathrm{AV} \; .
 \end{equation}
 If $\Delta>0$, one may solve to evaluate two roots,
 \begin{equation}\label{eq:ray-sphere}
-a_{\pm} = -(\vec{X}_0-\vec{O}_{av})\cdot\vec{u}\pm\sqrt{\Delta} \;.
+a_{\pm} = -(\vec{X}_0-\vec{O}_\mathrm{AV})\cdot\vec{u}\pm\sqrt{\Delta} \;.
 \end{equation}
-In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point (different to the line intersection with no direction). Thus the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_{AV}$ is automatically met. 
+In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_\mathrm{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point\footnote{the line intersection with no direction can pass two points}, and then the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_\mathrm{AV}$ is automatically met. 
 
 If $\Delta\leq 0$, there is either {\bf no} intersection point (Fig.~\ref{line-sphere} (c)) or there is {\bf one} intersection point (Fig.~\ref{line-sphere} (d)). In either case, the ray vector never passes through the AV sphere.
 
@@ -523,47 +520,46 @@ If $\Delta\leq 0$, there is either {\bf no} intersection point (Fig.~\ref{line-s
 
 \item Ray-plane intersection
 
-For a `ray-plane' intersection, the $z$ components of the intersection points on $\vec{l}_0$ satisfy the plane equation $z=Z_{split}$, where $Z_{split}$ is the water level, i.e., the $z$ position of the water-scintillator intersection. Thus the intersection equation is:
-$l_{0,z}=Z_{split}$, where $l_{0,z}=z_0+a\cdot u_z$.
+For a `ray-plane' intersection, the $z$ components of the intersection points on $\vec{l}_0$ satisfy the plane equation $z=Z_\mathrm{split}$, where $Z_\mathrm{split}$ is the water level, i.e., the $z$ position of the water-scintillator intersection. Thus the intersection equation is:
+$l_{0,z}=Z_\mathrm{split}$, where $l_{0,z}=z_0+a\cdot u_z$.
 
-If $u_z=z_\mathrm{pmt}-z_0=0$, the ray is parallel to the plane and never intersects the plane.
+If $u_z=z_\mathrm{PMT}-z_0=0$, the ray is parallel to the plane and never intersects the plane.
 
-If $u_z\neq 0$, solve the intersection equation $l_{0,z}=Z_{split}$, we have: $a=(Z_{split}-z_0)/u_z=(Z_{split}-z_0)$.
+If $u_z\neq 0$, solve the intersection equation $l_{0,z}=Z_\mathrm{split}$, we have: $a=(Z_\mathrm{split}-z_0)/u_z$.
 Let: 
 \begin{equation}
-a_3 \equiv a = \frac{(Z_{split}-z_0)|\vec{X}_{\mathrm{pmt}}-\vec{X_0}|}{z_\mathrm{pmt}-z_0}~~(if ~z_\mathrm{pmt}-z_0\neq 0),
+a_3 \equiv a = \frac{(Z_\mathrm{split}-z_0)|\vec{X}_{\mathrm{PMT}}-\vec{X_0}|}{z_\mathrm{PMT}-z_0}~~(if ~z_\mathrm{PMT}-z_0\neq 0),
 \end{equation}
 
 Similar to the case of ray-sphere intersection, if $a_3<0$, the ray-plane intersection point is on the extended line along the opposite direction to the ray; $a_3 \geq 0$ ensures the ray hits the interface. Note that here we consider the plane to be infinitely large: later we will combine with further logic to correct this fallacy. 
 
 \item Ray-cylinder intersection
 
-For a ray-cylinder intersection, the $x$ and $y$ components of the intersection points on $\vec l_0$ satisfy the intersection equation $l^2_{0,x}+l^2_{0,y} = r^2_{neck}$, where $r_{neck}$ is the radius of the neck cylinder ($r_{neck}=785~mm$).
+For a ray-cylinder intersection, the $x$ and $y$ components of the intersection points on $\vec l_0$ satisfy the intersection equation $l^2_{0,x}+l^2_{0,y} = r^2_\mathrm{neck}$, where $r_\mathrm{neck}$ is the radius of the neck cylinder ($r_\mathrm{neck}=785$~mm).
 
-To solve the equation, let 
+To solve the intersection equation, let 
 \begin{equation*}
-\Delta'\equiv [x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2] \; . 
+\Delta'\equiv [x_0\cdot (x_\mathrm{PMT}-x_0)+y_0\cdot(y_\mathrm{PMT}-y_0)]^2 - ( x_0^2+y_0^2-r^2_{neck})\cdot [(x_\mathrm{PMT}-x_0)^2+(y_\mathrm{PMT}-y_0)^2] \; . 
 \end{equation*}
 Then if $\Delta'>0$ we can solve for two roots, 
 \begin{equation}\label{eq:ray-cylinder}
-a'_{\pm} = |\vec{X}_{PMT}-\vec{X}_0|\cdot\frac{-[x_0\cdot (x_{PMT}-x_0)+y_0\cdot(y_{PMT}-y_0)] \pm \sqrt\Delta' }{(x_{PMT}-x_0)^2+(y_{PMT}-y_0)^2} \; .
+a'_{\pm} = |\vec{X}_\mathrm{PMT}-\vec{X}_0|\cdot\frac{-[x_0\cdot (x_\mathrm{PMT}-x_0)+y_0\cdot(y_\mathrm{PMT}-y_0)] \pm \sqrt{\Delta'} }{(x_\mathrm{PMT}-x_0)^2+(y_\mathrm{PMT}-y_0)^2} \; .
 \end{equation}
 
-Similar to the ray-sphere case, if $a'_{+} > a'_{-} > 0$, the length of the path inside the cylinder is $a'_{+} - a'_{-}$. In this case, the event position should be outside the cylinder, and the condition $(x^2_0+y^2_0)\geq r_{neck}$ is automatically met. If $a'_+>0>a'_-$, the event position should be inside the cylinder and the ray-vector intersects the cylinder with one point (while the other point is along the opposite direction). Therefore, in this case the length of the path inside the cylinder is $a'_+$. If $\Delta'\leq0$, the ray vector never passes through the neck cylinder. Note that the calculations mentioned here assume that the cylinder is infinitely long ($-\infty<z<+\infty$). However, since the geometrical boundaries of the AV and PSUP are considered in the calculations, the fitter calculation in the neck region is only valid if $6000<z<8390$ mm (in the PSUP coordinates).
+Similar to the ray-sphere case, if $a'_{+} > a'_{-} > 0$, the length of the path inside the cylinder is $a'_{+} - a'_{-}$. In this case, the event position should be outside the cylinder, and the condition $(x^2_0+y^2_0)\geq r_\mathrm{neck}$ is automatically met. If $a'_+>0>a'_-$, the event position should be inside the cylinder and the ray-vector intersects the cylinder with one point (while the other point is along the opposite direction). Therefore, in this case the length of the path inside the cylinder is $a'_+$. If $\Delta'\leq0$, the ray vector never passes through the neck cylinder. Note that the calculations mentioned here assume that the cylinder is infinitely long ($-\infty<z<+\infty$). However, since the geometrical boundaries of the AV and PSUP are considered in the calculations, the fitter calculation in the neck region is only valid if $6000<z<8390$ mm (in the PSUP coordinates).
 
 \end{itemize}
 
-To evaluate the length ($d_{sp}$) of $|\vec{l}_p|$ that lies in the scintillator region, the above three geometrical criteria need to be combined carefully. The following two procedures go through all possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the light path in the AV scintillator region ($d_{sp,AV}$). Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the light path in the neck scintillator region ($d_{sp,neck}$). Detailed algorithms are shown in Appendix.~\ref{appendix:lightpath}.
+To evaluate the length ($d_{sp}$) of $|\vec{l}_p|$ that lies in the scintillator region, the above three geometrical criteria need to be combined carefully. The following two procedures go through all possible situations. First combine the evaluations of the ray-sphere and the ray-plane intersections to calculate the light path in the AV scintillator region ($d_{sp,\mathrm{AV}}$). Then combine the evaluations of the ray-sphere and the ray-cylinder intersections to calculate the light path in the neck scintillator region ($d_{sp,\mathrm{neck}}$). Detailed algorithms are shown in Appendix.~\ref{appendix:lightpath}.
 
-Since a valid fit requires events to lie inside the PSUP sphere, only the part of the neck region that lies inside the PSUP sphere (with $6108<z_{neck}<8390~mm$) needs to be considered. There is an option to turn off the neck path calculation, but if doing so a worse fit result is expected. Detailed calculations are shown in Appendix.~\ref{appendix:lightpath}.
+Since a valid fit requires events to lie inside the PSUP sphere, only the part of the neck region that lies inside the PSUP sphere (with $6108<z_\mathrm{neck}<8390$~mm) needs to be considered. There is an option to turn off the neck path calculation, but if doing so a worse fit result is expected. Detailed calculations are shown in Appendix.~\ref{appendix:lightpath}.
 
 If $d_{sp}=0$, the light path is entirely in water. In this case, the fitter is equivalent to the \texttt{MP water fitter}, and fits the vertex with the \texttt{MP water fitter} PDF. Once the light path passes through the scintillator region, the fitter fits with a scintillator timing PDF, in which the PMT time response is adjusted to account for photon propagation time in scintillator, as shown in Fig.~\ref{partialpdf}.
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=7cm]{scintpdf.pdf}
-	\caption[Timing PDFs used by the \texttt{MP scint-water fitter}.]{Timing PDFs used by the \texttt{MP scint-water fitter}. Blue: the timing PDF used by the \texttt{MPW fitter}; red: the scintillator timing PDF.}
-	\label{partialpdf}
+	\caption[Timing PDFs used by the \texttt{MP scint-water fitter}.]{Timing PDFs used by the \texttt{MP scint-water fitter}. Blue: the timing PDF used by the \texttt{MPW fitter}; red: the scintillator timing PDF.	\label{partialpdf}}
 \end{figure}
 
 The next section will discuss the timing PDFs used by the fitter.
@@ -770,15 +766,13 @@ Fig.~\ref{fig:partialBiasVsPPO} and Fig.~\ref{fig:partialResolVsPPO} show the $\
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{partialBiasVsPPO.pdf}
-	\caption{Fit position biases against the PPO concentrations.}
-	\label{fig:partialBiasVsPPO}
+	\caption{Fit position biases against the PPO concentrations.	\label{fig:partialBiasVsPPO}}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{partialResolVsPPO.pdf}
-	\caption{Fit position resolutions against the PPO concentrations.}
-	\label{fig:partialResolVsPPO}
+	\caption{Fit position resolutions against the PPO concentrations.	\label{fig:partialResolVsPPO}}
 \end{figure}
 
 If using a timing PDF with the wrong PPO concentration for the reconstruction, the effect on reconstruction is small \cite{partialFitterPDFtestInvulnerable}. I simulated 3-MeV $e^-$ uniformly distributed in the LAB+0.25 g/L PPO scintillator with isotropic directions, and then reconstructed the events by using the timing PDFs for 0.5, 1 and 2 g/L PPO (higher concentrations) respectively. All of these reconstructions gave fitted positions close to the correct reconstruction using the 0.25 g/L timing PDF, with fit biases of about 5 mm on the three axes. On the other hand, by repeating the simulations but with LAB+2 g/L PPO and then reconstructing using the timing PDFs of 0.25, 0.5 and 1 g/L PPO (lower concentrations) respectively, I found the fit biases were still around 5 mm. This indicates that the fit provided by the \texttt{MP scint-water fitter} is indifferent to changes in PPO concentration. The implication is that if the true PPO concentration in the detector were slightly different from the nominal value assumed for reconstruction, the effect on the reconstruction would not be very significant.
@@ -793,8 +787,7 @@ This tagging algorithm was applied to reconstructed event vertices. Fig.~\ref{fi
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{214Bipo_4500mm0p5PPO.png}
-	\caption[Distributions of NHits for the tagged $^{214}$Po and $^{214}$Bi events.]{Distributions of NHits for the tagged $^{214}$Po (dashed red line) and $^{214}$Bi (solid black line) events.}
-	\label{fig:214Bipo}
+	\caption[Distributions of NHits for the tagged $^{214}$Po and $^{214}$Bi events.]{Distributions of NHits for the tagged $^{214}$Po (dashed red line) and $^{214}$Bi (solid black line) events.	\label{fig:214Bipo}}
 \end{figure}
 
 \begin{figure}[htbp]

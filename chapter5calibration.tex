@@ -9,8 +9,7 @@ During the water phase, in June and in November 2017 the $^{16}$N source was dep
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=15cm]{N16_3Dscan.pdf}
-	\caption[The deployed source positions of the $^{16}$N scan runs.]{The deployed source positions of the $^{16}$N scan runs used by this thesis. The black dots are internal runs while the red squares are external runs.}
-	\label{N16_3Dscan}
+	\caption[The deployed source positions of the $^{16}$N scan runs.]{The deployed source positions of the $^{16}$N scan runs used by this thesis. The black dots are internal runs while the red squares are external runs.	\label{N16_3Dscan}}
 \end{figure}
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can extract the resolution and bias of the fitter. Here I determined the performance of both the \texttt{RAT water fitter} and the \texttt{MPW fitter} for vertex and direction reconstruction, characterizing that performance in terms of statistics pertaining to vertex shift (or offset), and uncertainty. 
@@ -55,8 +54,7 @@ Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and 
 \begin{figure}
 	\centering
 	\includegraphics[width=14cm]{N16_107055_highLevelCuts.pdf}
-	\caption[Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).}
-	\label{n16_highLevelCut}
+	\caption[Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$). \label{n16_highLevelCut}}
 \end{figure}
 
 
@@ -72,9 +70,8 @@ The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:position
 
 \begin{figure}
 	\centering
-		\includegraphics[width=13cm]{N16_107055_scaleLogLvsPosBias.pdf}
-	\caption[Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055.]{Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).}
-	\label{posBiasVsFOM}
+	\includegraphics[width=13cm]{N16_107055_scaleLogLvsPosBias.pdf}
+	\caption[Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055.]{Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).\label{posBiasVsFOM}}
 \end{figure}
 
 For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000$ mm). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
@@ -84,8 +81,8 @@ Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstr
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=13cm]{N16_107055_scaleLogLvsEnergy.pdf}
-	\caption[Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055.]{Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data.}
-	\label{energyVsFOM}
+	\caption[Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055.]{Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data.\label{energyVsFOM}}
+
 \end{figure}
 
 As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mis-reconstructed) by the \texttt{MPW fitter}, resulting in position error of over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
@@ -103,15 +100,13 @@ The $\gamma$-rays emitted from the $^{16}$N source interact with the water in th
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{N16centralDiagram.png}
-	\caption{Schematic of the $^{16}$N source (not drawn to scale), showing the Compton scattering of a $\gamma$ emanating from the source. The radius of the dashed circle is about 2 m.}
-	\label{N16centralDiagram}
+	\caption{Schematic of the $^{16}$N source (not drawn to scale), showing the Compton scattering of a $\gamma$ emanating from the source. The radius of the dashed circle is about 2 m.	\label{N16centralDiagram}}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{sx.pdf}
-	\caption[Spatial distribution of {$^{16}$}N $\gamma$-ray's first interaction positions, projected onto the $x$-axis.]{Spatial distributions of {$^{16}$}N $\gamma$-ray's first interaction position, projected onto the $x$-axis, obtained from the \texttt{RAT} simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.}
-	\label{hsx}
+	\caption[Spatial distribution of {$^{16}$}N $\gamma$-ray's first interaction positions, projected onto the $x$-axis.]{Spatial distributions of {$^{16}$}N $\gamma$-ray's first interaction position, projected onto the $x$-axis, obtained from the \texttt{RAT} simulations. The double-peak structure is due to the wall of the stainless steel container of the $^{16}$N source.\label{hsx}}
 \end{figure}
 
 The spatial distribution function $N_{R}(x)$ for electrons from the $^{16}$N calibration source can be described by the convolution of the position resolution function with $S(x)$ \cite{boulay2004direct},
@@ -133,8 +128,7 @@ where $N_R^{fit}$ is a trial fit to the $N_R$ obtained by tuning $(\alpha_e,\mu_
 \begin{figure}
 	\centering
 	\includegraphics[width=140mm]{posResol.pdf}
-	\caption[Distributions of the reconstructed position projected onto the $x$-axis.]{Distributions of the reconstructed position projected onto the $x$-axis, obtained from the SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).}
-	\label{fig:posresol}
+	\caption[Distributions of the reconstructed position projected onto the $x$-axis.]{Distributions of the reconstructed position projected onto the $x$-axis, obtained from the SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).	\label{fig:posresol}}
 \end{figure}
 
 Table.~\ref{tab:posresol} summarizes the values of position resolution parameters (for the $x$-axis) obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
@@ -166,8 +160,7 @@ Fig.~\ref{MPWscanXYZResols} shows the fitted results for $\mu_P$ and $\sigma_P$ 
 \begin{figure}
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_muPandSigmaP_xyzScans.pdf}
-	\caption[The fitted values of $\mu_P$ and $\sigma_P$ along $x$, $y$ and $z$-scans.]{The fitted values of $\mu_P$ (top) and $\sigma_P$ (bottom) along $x$ (left), $y$ (middle) and $z$ (right) scans. The source positions in each set of scans are projected onto $(x, y, z)$ axes respectively. The MC results (red circles) are compared with the data (black boxes).}
-	\label{MPWscanXYZResols}
+	\caption[The fitted values of $\mu_P$ and $\sigma_P$ along $x$, $y$ and $z$-scans.]{The fitted values of $\mu_P$ (top) and $\sigma_P$ (bottom) along $x$ (left), $y$ (middle) and $z$ (right) scans. The source positions in each set of scans are projected onto $(x, y, z)$ axes respectively. The MC results (red circles) are compared with the data (black boxes).	\label{MPWscanXYZResols}}
 \end{figure}
 
 Fig.~\ref{MPWscanXYZResols} shows that the resolution for vertex reconstruction is generally better for the MC simulations than for the detector data. This is not unexpected, because of the non-uniformities of the detector in realistic situations (as opposed to the idealizations inherent in the MC simulation) \cite{waterunidoc}. Also, when the source is close to the AV or at the ends of the axes, the Gaussian shift $\mu_P$ becomes large and the resolution worsens, which causes the difference between the MC and data to become large.
@@ -183,16 +176,15 @@ Fig.~\ref{pos_relative_sigma_biasesVsPositions} shows that $\sigma_{p,\delta}$ v
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_6176_pos_sigmaP_data_mc.pdf}
-	\caption[Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position.]{Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.}
-	\label{pos_relative_sigma_biasesVsPositions}
+	\caption[Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position.]{Relative differences of $\sigma_P$ ($\sigma_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.	\label{pos_relative_sigma_biasesVsPositions}}
+
 \end{figure}
 
 As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of $\sigma_{p,\delta}$ were taken as the resolution systematics for the $(x, y z$)-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The listed values for the standard deviation ($\delta$) of this Gaussian were used to smear the positions.
 \begin{table}[ht]
 	\centering
-	\caption{Systematic uncertainties [mm] of the \texttt{MPW fitter} for position on ($x,y,z$)-axes.}
+	\caption{Systematic uncertainties [mm] of the \texttt{MPW fitter} for position on ($x,y,z$)-axes.	\label{vertexResolsSys}}
 	\vspace{3mm}
-	\label{vertexResolsSys}
 	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		axis & systematic uncertainties & systematic to be applied ($\delta$) &smearing\\
@@ -208,17 +200,16 @@ To quantify the vertex shifts between the MC and data, values of vertex shifts: 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{N16_rat6176_vertexShift_xyzScans.pdf}
-	\caption[Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position.]{Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.}
-	\label{fig:verteshitfs}
+	\caption[Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position.]{Vertex shifts of $\mu_P$ ($\mu_{p,\delta}$) as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.\label{fig:verteshitfs}}
 \end{figure}
 
 In Table.~\ref{vertexShifts}, the averages and the standard deviations of $\mu_{P,\delta}$ were taken as the vertex shifts for ($x, y, z$)-axes. To smear the position results, the $(x,y,z)$ values were shifted up or down by adding positive or negative values. The values on each axis were shifted independently. For example, the x shift-up is $(x,y,z)\to(x+6.48,y,z)$ mm; the z shift-down is $(x,y,z)\to (x,y,z-4.82)$ mm.
 
 \begin{table}[ht]
 	\centering
-	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm.}
+	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm. \label{vertexShifts}}
 	\vspace{3mm}
-	\label{vertexShifts}
+
 	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
 		axis & vertex shift  & systematic to be applied ($\delta$) &smearing\\
@@ -245,17 +236,16 @@ To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with l
 	\subfigure[$^{16}$N x-scan runs.]{\includegraphics[width=8cm]{vertexScaleSysX.pdf}}
 	\subfigure[$^{16}$N y-scan runs.]{\includegraphics[width=8cm]{vertexScaleSysY.pdf}}
 	\subfigure[$^{16}$N z-scan runs.]{\includegraphics[width=8cm]{vertexScaleSysZ.pdf}}
-	\caption{Vertex shifts along x, y, z axes and fitted with linear functions.}
-	\label{fig:vertexScale}
+	\caption{Vertex shifts along x, y, z axes and fitted with linear functions.\label{fig:vertexScale}}
+
 \end{figure}
 
 From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{tab:vertexScale}. Since the $\chi^2/\mathrm{ndf}$ values here were large, according to Refs.~\cite{waterunidoc,pdg2020}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(\mathrm{ndf}-1)}$. The downward systematic was calculated as the slope minus the slope error as well as the inflated error. In contrast, the upward systematic was taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the $z$ scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive, possibly due to the bias in simulation from the neck geometry effects. This point was not used in the linear fit.
 %%%\footnote{John: {red}Here `ndf' means `number of degrees of freedom.' See ?? for background on this measure of goodness of fit.{red}}
 \begin{table}[ht]
 	\centering
-	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm.}
+	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm. \label{tab:vertexScale}}
 	\vspace{2mm}
-	\label{tab:vertexScale}
 	\begin{tabular*}{130mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
 		axis & fitted slope (\%)  & inflated error &systematic ($\delta^+/\delta^-$) (\%)\\
@@ -300,8 +290,8 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{16NangularResol.pdf}
-	\caption[Distributions of the angular error in direction reconstruction, from the data and from MC.]{Distributions of the angular error in direction reconstruction, from the data (red solid line) and MC (black dashed line); both are reconstructed by the \texttt{MPW fitter}. These distributions are fitted with the angular resolution functions over the range [0.3,1].}
-	\label{angularResolMPW}
+	\caption[Distributions of the angular error in direction reconstruction, from the data and from MC.]{Distributions of the angular error in direction reconstruction, from the data (red solid line) and MC (black dashed line); both are reconstructed by the \texttt{MPW fitter}. These distributions are fitted with the angular resolution functions over the range [0.3,1].\label{angularResolMPW}}
+
 \end{figure}
 
 \begin{table}[ht]
@@ -330,8 +320,7 @@ Fig.~\ref{angularResolScan} shows the results for the fitted $\beta_M$ and $\bet
 	\subfigure[$^{16}$N $x$-scan runs.]{\label{angular:xscan}\includegraphics[width=12cm]{16NangularScan_x.pdf}}
 	\subfigure[$^{16}$N $y$-scan runs.]{\label{angular:yscan}\includegraphics[width=12cm]{16NangularScan_y.pdf}}
 	\subfigure[$^{16}$N $z$-scan runs.]{\label{angular:zscan}\includegraphics[width=12cm]{16NangularScan_z.pdf}}
-	\caption{Fitted direction resolution parameters $\beta_M$, $\beta_S$ for the source scans on ($x, y, z$)-axes respectively. Solid squares, MC; Open circles, data.}
-	\label{angularResolScan}
+	\caption{Fitted direction resolution parameters $\beta_M$, $\beta_S$ for the source scans on ($x, y, z$)-axes respectively. Solid squares, MC; Open circles, data.\label{angularResolScan}}
 \end{figure}
 
 The relative difference between data and MC of a fitted resolution quantity $q\pm \delta_q$ is defined as
@@ -350,8 +339,7 @@ To be conservative, taking the largest and smallest values of the $\Delta(\beta_
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{angularResol_scanXYZ.pdf}
-	\caption[Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.]{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs.}
-	\label{relative_biasesVsPositions}
+	\caption[Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.]{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs. \label{relative_biasesVsPositions}}
 \end{figure}
 
 To propagate the uncertainties in $\beta_M$ and $\beta_S$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
@@ -368,15 +356,13 @@ Since $\beta_{14}$ itself is used as the high-level cut, only the cuts ITR$>0.55
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16_beta14_107055.png}
-	\caption[Distributions of $\beta_{14}$ for the $^{16}$N central run 107055.]{Distributions of $\beta_{14}$ for the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} processed results and black for the \texttt{RAT} results.}
-	\label{fig:N16beta14}
+	\caption[Distributions of $\beta_{14}$ for the $^{16}$N central run 107055.]{Distributions of $\beta_{14}$ for the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} processed results and black for the \texttt{RAT} results.	\label{fig:N16beta14}}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=8cm]{N16FitMPW_beta14_107055.png}
-	\caption{A comparison of the $\beta_{14}$ for the data and the MC in run 107055.}
-	\label{fig:N16beta14MPW}
+	\caption{A comparison of the $\beta_{14}$ for the data and the MC in run 107055.	\label{fig:N16beta14MPW}}
 \end{figure}
 
 Fig.~\ref{beta14_XYZscans} shows the effects on $\beta_{14}$ when source position is moved along the ($x, y, z$) axes. $\Delta \beta_{14}\equiv\mu_{data}-\mu_{MC}$ was calculated for each of the 80 internal runs (i.e. including neck runs), and the mean and standard deviation of these $\Delta \beta_{14}$ values were taken as the shift in $\beta_{14}$: $-0.026\pm0.010$. Following the suggestion in Ref.~\cite{waterunidoc}, an asymmetric uncertainty was taken: the upward shift was taken as $+0.010$ while the downward shift was taken as $-0.026-0.01=-0.036$. Thus the shifts $+0.010/-0.036$ were taken as the $\beta_{14}$ systematics, and will be applied to the solar neutrino analysis in the next chapter. 
@@ -384,8 +370,7 @@ Fig.~\ref{beta14_XYZscans} shows the effects on $\beta_{14}$ when source positio
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=16cm]{beta14_xyzScans.pdf}
-	\caption{$\beta_{14}$ systematic along $(x, y, z$) scans.}
-	\label{beta14_XYZscans}
+	\caption{$\beta_{14}$ systematic along $(x, y, z$) scans.	\label{beta14_XYZscans}}
 \end{figure}
 %Discussions for the external scan runs.
 %For external scans, the radial cuts were not applied. 
@@ -424,8 +409,8 @@ Three energy FoM quantities, namely $G_{test}$, $U_{test}$ and $Z_{factor}$, wer
 				\includegraphics[width=7.5cm]{Utest_data_N16_107055.png}
 			\end{minipage}
 		}
-		\caption{$^{16}$N central-run 107055, $U_{test}$ vs. $E_{fit}$/5.1 MeV.}
-		\label{energyFOM_Utest}
+		\caption{$^{16}$N central-run 107055, $U_{test}$ vs. $E_{fit}$/5.1 MeV.\label{energyFOM_Utest}}
+		
 	\end{figure}
 	
 	\item[$\bullet$] $G_{test}$: Fig.~\ref{energyFOM_Gtest} shows $G_{test}$ vs. energy biases. A cut of $0<G_{test}<1.9$ was suggested by the collaboration, which removes 0.01\% events for both MC and data.	
@@ -444,8 +429,7 @@ Three energy FoM quantities, namely $G_{test}$, $U_{test}$ and $Z_{factor}$, wer
 				\includegraphics[width=7.5cm]{Gtest_data_N16_107055.png}
 			\end{minipage}
 		}
-		\caption{$^{16}$N central-run 107055, $G_{test}$ vs. $E_{fit}$/5.1 MeV.}
-		\label{energyFOM_Gtest}
+		\caption{$^{16}$N central-run 107055, $G_{test}$ vs. $E_{fit}$/5.1 MeV.\label{energyFOM_Gtest}}
 	\end{figure}
 	
 	\item[$\bullet$]$Z_{factor}$:
@@ -464,8 +448,8 @@ Three energy FoM quantities, namely $G_{test}$, $U_{test}$ and $Z_{factor}$, wer
 				\includegraphics[width=7.5cm]{Zfactor_data_N16_107055.png}
 			\end{minipage}
 		}
-		\caption{$^{16}$N central-run 107055, $Z_{factor}$ vs. $E_{fit}$/5.1 MeV.}
-		\label{energyFOM_Zfactor}
+		\caption{$^{16}$N central-run 107055, $Z_{factor}$ vs. $E_{fit}$/5.1 MeV.\label{energyFOM_Zfactor}}
+		
 	\end{figure}
 	
 	
@@ -481,22 +465,19 @@ The energy reconstruction algorithms for the water phase (mentioned in Sect.~\re
 	\centering
 	\subfigure[$^{16}$N run 106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
 	\subfigure[$^{16}$N run 107055]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
-	\caption[Reconstructed energy spectrum from the $^{16}$N central run 106925 and 107055.]{Reconstructed energy spectrum from the $^{16}$N central run 106925 (upper) and 107055 (lower). For run 106925 (upper), the reconstructed data (black dots) are compared to the MC (blue line), both being \texttt{MPW fitter} results; for run 107055 (lower), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.}
-	\label{fig:N16energy}	
+	\caption[Reconstructed energy spectrum from the $^{16}$N central run 106925 and 107055.]{Reconstructed energy spectrum from the $^{16}$N central run 106925 (upper) and 107055 (lower). For run 106925 (upper), the reconstructed data (black dots) are compared to the MC (blue line), both being \texttt{MPW fitter} results; for run 107055 (lower), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.\label{fig:N16energy}}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
-	\caption[NHit spectrum for the $^{16}$N central run 107055.]{NHit spectrum for the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.}
-	\label{N16nhits}
+	\caption[NHit spectrum for the $^{16}$N central run 107055.]{NHit spectrum for the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.\label{N16nhits}}	
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
-	\caption[Simulated $^{16}$N energy spectrum for different processes.]{Simulated $^{16}$N energy spectrum for different processes, extracted from $10^5$ MC simulations.}
-	\label{N16nhitsSimu}
+	\caption[Simulated $^{16}$N energy spectrum for different processes.]{Simulated $^{16}$N energy spectrum for different processes, extracted from $10^5$ MC simulations.\label{N16nhitsSimu}}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -525,8 +506,7 @@ The energy reconstruction algorithms for the water phase (mentioned in Sect.~\re
 			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
 		\end{minipage}
 	}
-	\caption[$E_{fit}$ vs $\beta_{14}$ for the data and MC.]{$E_{fit}$ vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} and the \texttt{MPW} results are shown.}
-	\label{EvsBeta14}
+	\caption[$E_{fit}$ vs $\beta_{14}$ for the data and MC.]{$E_{fit}$ vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} and the \texttt{MPW} results are shown.\label{EvsBeta14}}
 \end{figure}
 
 \subsubsection{Energy Resolutions}
@@ -562,23 +542,20 @@ A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to avoid 
 \begin{figure}
 	\centering
 	\includegraphics[width=8cm]{N16data_energy_fitted_107055.png}
-	\caption[The reconstructed energy spectrum fitted with resolution function.]{The reconstructed energy spectrum of central run 107055 data, fitted with the resolution function (red).}
-	\label{fittedEnergyResol}
+	\caption[The reconstructed energy spectrum fitted with resolution function.]{The reconstructed energy spectrum of central run 107055 data, fitted with the resolution function (red).	\label{fittedEnergyResol}}
 \end{figure}
 
 For all the internal scans, Fig.~\ref{fig:EscaleVsR} and Fig.~\ref{fig:EresolVsR} show the energy scale ($\delta_E$) and energy resolution ($b$) as a function of the source manipulator's radial position. Both the data and MC are shown.
 \begin{figure}
 	\centering
     \includegraphics[width=12cm]{EscaleVsSrcRadius.pdf}
-	\caption[Fitted energy scales as a function of the source manipulator's radial position.]{Fitted energy scales ($\delta_E$) as a function of the source manipulator's radial position. Red circles for data and blue squares for the MC.}
-	\label{fig:EscaleVsR}
+	\caption[Fitted energy scales as a function of the source manipulator's radial position.]{Fitted energy scales ($\delta_E$) as a function of the source manipulator's radial position. Red circles for data and blue squares for the MC.	\label{fig:EscaleVsR}}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=12cm]{EresolVsSrcRadius.pdf}
-	\caption[Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.]{Fitted energy resolutions ($b$) as a function of the source manipulator's radial position. Red circles for data and blue squares for the MC.}
-	\label{fig:EresolVsR}
+	\caption[Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.]{Fitted energy resolutions ($b$) as a function of the source manipulator's radial position. Red circles for data and blue squares for the MC.	\label{fig:EresolVsR}}
 \end{figure}
 
 \subsubsection{Energy Uncertainties}\label{sect:eneryUncertianties}
@@ -594,14 +571,12 @@ To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is sme
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEscale_N16.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.}
-	\label{fig:EscaleSmear}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:EscaleSmear}}
 \end{figure}
 
 To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided\cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEresol_N16_new.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The red dash line is for smearing the $E_{fit}$ with $\mathrm{Gaus}(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.}
-	\label{fig:EresolSmear}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The red dash line is for smearing the $E_{fit}$ with $\mathrm{Gaus}(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.\label{fig:EresolSmear}}
 \end{figure}
