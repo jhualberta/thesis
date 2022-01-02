@@ -76,7 +76,7 @@ The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:position
 
 For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000$ mm). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
 
-Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). Events with reconstructed energies below the water solar neutrino analysis threshold of 3.5~MeV ($E_{fit}<3.5~$MeV) are mostly coming from the U/Th isotopes, decays of Potassium and instrument noise \cite{waterunidoc}. Their lower energy (or $NHits$) negatively impacts the quality of position reconstruction because there are fewer hit PMTs providing information, so it is not unexpected that their $posFoM$ would be worse. In the MC (data) case, about 13.04 \% (12.89\%) of the events had $E_{fit}<3.5$~MeV. By applying a $scaleLogL>10$ cut, proportions of 0.10\% (0.09\%) of such events were removed.
+Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstructed energy ($E_{fit}$). Events with reconstructed energies below the water solar neutrino analysis threshold of 3.5~MeV ($E_{fit}<3.5~$MeV) are mostly coming from the U/Th isotopes, decays of Potassium and instrument noise \cite{waterunidoc}. Their lower energy (or NHits) negatively impacts the quality of position reconstruction because there are fewer hit PMTs providing information, so it is not unexpected that their $posFoM$ would be worse. In the MC (data) case, about 13.04 \% (12.89\%) of the events had $E_{fit}<3.5$~MeV. By applying a $scaleLogL>10$ cut, proportions of 0.10\% (0.09\%) of such events were removed.
 
 \begin{figure}[!htb]
 	\centering
@@ -123,7 +123,7 @@ Then the $\chi^2$ statistic is calculated,
 \begin{equation}
 \chi^2=\sum^{N_{bins}}_{i=0}[\frac{N_R(x_{fit}^i)-N_R^{fit}(x_{fit}^i)}{\sigma_i}]^2 \; ,
 \end{equation}
-where $N_R^{fit}$ is a trial fit to the $N_R$ obtained by tuning $(\alpha_e,\mu_p,\sigma_p,\tau_p)$, and $\sigma_i$ is taken as the bin width of the histograms. By minimizing $\chi^2$, the parameters $(\alpha_e,\mu_p,\sigma_p,\tau_p)$ of the resolution function, and a best $N_R^{fit}$, were obtained. Fig.~\ref{fig:posresol} shows a comparison of the reconstructed $x$ position of {$^{16}$}N events between data and MC. The reconstructed position distributions were fitted with $N_R^{fit}$.
+where $N_R^{fit}$ is a trial fit to the $N_R$ obtained by tuning $(\alpha_e,\mu_p,\sigma_p,\tau_p)$, and $\sigma_i$ is obtained from the bin width of the histograms. By minimizing $\chi^2$, the parameters $(\alpha_e,\mu_p,\sigma_p,\tau_p)$ of the resolution function, and a best $N_R^{fit}$, were obtained. Fig.~\ref{fig:posresol} shows a comparison of the reconstructed $x$ position of {$^{16}$}N events between data and MC. The reconstructed position distributions were fitted with $N_R^{fit}$.
 
 \begin{figure}
 	\centering
@@ -180,7 +180,7 @@ Fig.~\ref{pos_relative_sigma_biasesVsPositions} shows that $\sigma_{p,\delta}$ v
 
 \end{figure}
 
-As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of $\sigma_{p,\delta}$ were taken as the resolution systematics for the $(x, y z$)-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The listed values for the standard deviation ($\delta$) of this Gaussian were used to smear the positions.
+As listed in Table.~\ref{vertexResolsSys}, the averages and the standard deviations of $\sigma_{p,\delta}$ were taken as the resolution systematics for the $(x, y, z$)-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The listed values for the standard deviation ($\delta$) of this Gaussian were used to smear the positions.
 \begin{table}[ht]
 	\centering
 	\caption{Systematic uncertainties [mm] of the \texttt{MPW fitter} for position on ($x,y,z$)-axes.	\label{vertexResolsSys}}
@@ -227,7 +227,7 @@ In addition to the vertex shifts mentioned previously, the vertex scale is defin
 \begin{equation}
 x^{data}_{fit}-x^{MC}_{fit}=\mu^{data}_{P,x}-\mu^{MC}_{P,x}=\Delta + \beta \; x^{MC}_{fit} \; .
 \end{equation}
-Since $x^{data}_{fit}=\Delta + (1+\beta) \; x^{MC}_{fit}$, if the vertex scale factor is defined $\alpha\equiv 1+\beta$ then $x_{data}=\alpha x_{MC}$.
+Since $x^{data}_{fit}=\Delta + (1+\beta) \; x^{MC}_{fit}$, if the vertex scale factor is defined $\alpha\equiv 1+\beta$ then $x_{data}=\alpha x_{MC}$. %%%% needs to be clearified
 
 To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with linear functions: $shifts = p_0+p_1 \; x_\mathrm{src}$ (where $x_\mathrm{src}$ is the source position), as shown in Fig.~\ref{fig:vertexScale}. %John: {red}(What do you mean by `shifts'? If it is a specific variable, please give the variable's name. If it is a new variable, can a nicer symbol be used?){red}
 
@@ -244,7 +244,7 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 %%%\footnote{John: {red}Here `ndf' means `number of degrees of freedom.' See ?? for background on this measure of goodness of fit.{red}}
 \begin{table}[ht]
 	\centering
-	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm. \label{tab:vertexScale}}
+	\caption{Vertex scales for the reconstructed positions on ($x, y, z$) axes.\label{tab:vertexScale}}
 	\vspace{2mm}
 	\begin{tabular*}{130mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
@@ -525,7 +525,7 @@ To obtain the energy reconstruction resolutions, the reconstructed energy spectr
 \begin{equation}
 P(T_{eff})=N\int P_\mathrm{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma_E} \; \exp \left[ -\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma_E^2} \, \right] \, ,
 \end{equation}
-where the predicted apparent energy spectrum, $P_\mathrm{source}(T_e)$, is convolved with a Gaussian resolution function. In the Gaussian function, $\sigma_E$ is the detector resolution and $\sigma_E = b\sqrt {T_{eff}}$, where $b$ is the energy resolution parameter and $\delta_E$ is the energy scale parameter. $P_\mathrm{source}(T_e)$ is the apparent energy spectrum.
+where the predicted apparent energy spectrum, $P_\mathrm{source}(T_e)$, is convolved with a Gaussian resolution function. In the Gaussian function, $\sigma_E$ is the detector resolution and $\sigma_E = b\sqrt {T_{eff}}$, where $b$ is the energy resolution parameter and $\delta_E$ is the energy scale parameter. %$P_\mathrm{source}(T_e)$ is the apparent energy spectrum.
 
 Before fitting the reconstructed energy spectrum with the energy resolution function, the following cuts were applied (on both the data and MC): 
 

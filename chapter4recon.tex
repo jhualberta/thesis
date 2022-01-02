@@ -929,7 +929,7 @@ The SNO+ Antineutrino working group developed three figure of merit (FoM) quanti
 
 \begin{itemize}
 	\item[$\bullet$]$U$-test ($U_{test}$):
-	a Mann-Whitney score uses the channel hit probabilities calculated by \texttt{EneryRSP} which are ordered and ranked. \texttt{EneryRSP} calculates the $N$ as the prompt NHits, and $N_{active}$ as the total number of active channels. For each active channel, the smallest hit probability assigned rank 1 and largest $N_{active}$. $S$ is a sum of assigned ranks and $S\equiv \sum_{i}^N \mathrm{rank}_i$.
+	a Mann-Whitney score uses the channel hit probabilities calculated by \texttt{EneryRSP} which are ordered and ranked. \texttt{EneryRSP} calculates the $N$ as the prompt NHits, and $N_{active}$ as the total number of active channels. For each active channel, the smallest hit probability assigned rank 1 and largest $N_{active}$. $S$ is a sum of assigned ranks for hit PMTs and $S\equiv \sum_{i}^N \mathrm{rank}_i$.
 	\begin{equation}
 	U_{test}\equiv \frac{S-N(N+1)/2}{N(N_{active}-N)},
 	\end{equation}
@@ -959,9 +959,9 @@ S = \mathrm{\frac{NHits_{partial} - NHits_{full}}{NHits_{full}}} = 0.33 \, a_0 \
 \end{equation}
 where the final term is an empirical function and the fit parameter $a_0$ depends on the different event $z$ positions in the simulations. Then the energy in the partial-fill is found by $E_\mathrm{partial} = E/(1 + S)$ \cite{partialEnergy, jiePartialEnergy}.
  
-In the NHits-ratio method, the NHits value of an $e^-$ event at (0,0,0) mm in the full scintillator geometry was used as a reference (NHits$_{ref}$). By simulating 1 to 10 MeV $e^-$ events (with a 1 MeV step) in the full-fill geometry with 0.5 g/L PPO, and fitting the NHits to the energies, a converting function between the energy and NHits was found \cite{jiePartialEnergyNhitRatio}: 
+In the NHits-ratio method, the NHits value of an $e^-$ event at (0,0,0) mm in the full scintillator geometry was used as a reference (NHits$_\mathrm{ref}$). By simulating 1 to 10 MeV $e^-$ events (with a 1 MeV step) in the full-fill geometry with 0.5 g/L PPO, and fitting the NHits to the energies, a converting function between the energy and NHits was found \cite{jiePartialEnergyNhitRatio}: 
 \begin{equation}
-E_{full} = f(\mathrm{NHits})=0.051+0.003\cdot NHits+2.49\times10^{-7}\cdot \mathrm{NHits} \; .    
+E_\mathrm{full} = f(\mathrm{NHits})=0.051+0.003\cdot \mathrm{NHits}+2.49\times 10^{-7}\cdot \mathrm{NHits} \; .    
 \end{equation}
 Then for the partial-fill geometry with a given $Z_\mathrm{water}$, $e^-$ events were simulated at different $(\rho=\sqrt{x^2+y^2},z)$ positions in the AV, with $\rho$ ranging from 0 to 5500 mm with a step of 500 mm, and $z$ ranging from -5500 to 5500 with a step of 500 mm (these ranges cover the AV volume of interest). The value of scaled NHits for an event at $(\rho_0,z_0)$ is found by
 \begin{equation}
