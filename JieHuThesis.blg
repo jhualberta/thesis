@@ -3,14 +3,15 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-Repeated entry---line 1742 of file thesis.bib
+Repeated entry---line 1731 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1991 of file thesis.bib
+Repeated entry---line 1980 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "snop_nim_draft"
 Warning--I didn't find a database entry for "cerdeno2018cno"
 Warning--empty journal in Paton:2019kgy
 Warning--empty journal in superKwebsite
@@ -34,45 +35,45 @@ Warning--empty year in brunroot
 Warning--empty year in markMachineLearning
 Warning--empty year in markNeuralTalk
 Warning--empty journal in marzec2019measurement
-You've used 187 entries,
+You've used 186 entries,
             1876 wiz_defined-function locations,
-            1380 strings with 33509 characters,
-and the built_in function-call counts, 39513 in all, are:
-= -- 3443
-> -- 2282
+            1379 strings with 33479 characters,
+and the built_in function-call counts, 39248 in all, are:
+= -- 3431
+> -- 2247
 < -- 0
-+ -- 858
-- -- 671
-* -- 2706
-:= -- 6226
-add.period$ -- 242
-call.type$ -- 187
-change.case$ -- 141
++ -- 846
+- -- 660
+* -- 2679
+:= -- 6174
+add.period$ -- 241
+call.type$ -- 186
+change.case$ -- 140
 chr.to.int$ -- 0
-cite$ -- 209
-duplicate$ -- 2169
-empty$ -- 3612
-format.name$ -- 671
-if$ -- 9344
+cite$ -- 208
+duplicate$ -- 2160
+empty$ -- 3595
+format.name$ -- 660
+if$ -- 9291
 int.to.chr$ -- 0
-int.to.str$ -- 187
-missing$ -- 182
-newline$ -- 619
-num.names$ -- 182
-pop$ -- 655
+int.to.str$ -- 186
+missing$ -- 181
+newline$ -- 616
+num.names$ -- 181
+pop$ -- 651
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1075
+skip$ -- 1074
 stack$ -- 0
 substring$ -- 918
-swap$ -- 712
+swap$ -- 711
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 22
-while$ -- 275
-width$ -- 190
-write$ -- 1734
+while$ -- 274
+width$ -- 189
+write$ -- 1726
 (There were 2 error messages)
