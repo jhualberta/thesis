@@ -111,7 +111,7 @@ Finally, the fitter fits for the angular PDF by using the MRQ method to obtain t
 
 \subsection{Effective Group Velocity}\label{sect:tuneGroupVelocity}
 
-When photons travel through the detector, their group velocities ($v_\mathrm{gr}$) change in accordance with the different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons: $v_\mathrm{gr}=c/n(\lambda)$. Fig~.\ref{nVsWavelength} shows the measured refractive index ($n$) of water as a function of wavelength, obtained from the measurements of the laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. %Furthermore, $v_\mathrm{gr}$ can change when photons are scattered, absorbed, refracted and reflected in the detector.
+When photons travel through the detector, their group velocities ($v_\mathrm{gr}$) change in accordance with the different refractive indices of different detector materials. The group velocities also depend on the wavelengths of the photons: $v_\mathrm{gr}=c/n(\lambda)$. Fig.~\ref{nVsWavelength} shows the measured refractive index ($n$) of water as a function of wavelength, obtained from the measurements of the laserball scans in the SNO+ water phase\cite{laserball_groupVelocity}. %Furthermore, $v_\mathrm{gr}$ can change when photons are scattered, absorbed, refracted and reflected in the detector.
 
 \begin{figure}[!htb]
 	\centering
@@ -185,7 +185,7 @@ A simple way to eliminate this ``fitter pull'' effect is to pull back the fitted
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{driveCor.png}
-	\caption{ A diagram illustrates the drive correction.}
+	\caption{ A diagram illustrating the drive correction.}
 	\label{drivecor}
 \end{figure}
 
@@ -247,20 +247,20 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 		\label{GroupPMTs}
 	\end{figure}
 	
-	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100~ns$, where $100~ns$ is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. Thus the number of the hit PMTs is reduced to $n\times n$ for the fitter, i.e., $n_\mathrm{select}=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
+	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. Thus the number of the hit PMTs is reduced to $n\times n$ for the fitter, i.e., $n_\mathrm{select}=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
 	
 		Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
 
-A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction FoM ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
+A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
 
 \subsection{Performance of the Water Vertex Reconstruction}\label{sect:waterFitterVertex}
 
 Using the \texttt{RAT} (version 6.17.6) package, MC simulations were performed in which 10,000 electron events were generated at the detector center (in the PSUP coordinate frame) with isotropic direction, i.e. the orientation of the momentum vector was generated randomly and uniformly over the entire solid angle ($4\pi$). The default detector trigger settings of the SNO+ water phase were \texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0 and with those settings some events, especially those with lower energies ($E<3$ MeV), may fail to trigger the detector. Since the fitters only reconstruct triggered events, the number of events reconstructed by the fitter may be lower than the number simulated.
 
-The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ simulations was 0.005 second/event and for the direction reconstruction fit speed was 0.002 second/event, figures that are very fast and certainly acceptable for the data processing in the SNO+ water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performance for the 5 MeV $e^-$ events. The bias between the fitted and MC positions, $\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$, was projected onto the $(x,y,z)$ axes respectively and its distribution was fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the standard deviation ($\sigma$) is taken as the fit position resolution.
+The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ simulations was 0.005 s/event and for the direction reconstruction fit speed was 0.002 second/event, figures that are very fast and certainly acceptable for the data processing in the SNO+ water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performance for the 5 MeV $e^-$ events. The bias between the fitted and MC positions, $\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$, was projected onto the $(x,y,z)$ axes respectively and its distribution was fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the standard deviation ($\sigma$) is taken as the fit position resolution.
 \begin{figure}[htbp]
 	\centering 
 	\subfigure[$x_{fit}-x_{mc}$]{
@@ -283,7 +283,7 @@ The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ sim
 	\caption[The position biases projected on the x, y and z axes.]{The position biases projected on the x, y and z axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.\label{fig:5MeVbeta_center_water}}
 \end{figure}
 
-In Fig.~\ref{fig:5MeVbeta_center_water} there are a few events with position biases larger than 2000 mm, and these are interpreted as being mis-reconstructed events. Some of these events are due to relatively lower log-likelihood values and can be tagged by the $posFoM$ mentioned in Sect.~\ref{sect:positionFoM}. As shown in Fig.~\ref{fig:posFOM_5MeVbeta_center_water}, a cut requiring $\mathrm{scaleLogL}>10$ can remove some mis-reconstructed events. The remainder may have resulted from the `straight light path' approximation used by the \texttt{MP fitter}, since this calculation misrepresents refracted and/or reflected light paths from event to PMT, as mentioned in Sect.~\ref{sect:waterVertex}. However, the fraction of these mis-reconstructed events is low, about 0.1\% and thus it is tolerable.
+In Fig.~\ref{fig:5MeVbeta_center_water} there are a few events with position biases larger than 2000 mm, and these are interpreted as being mis-reconstructed events. Some of these events are due to relatively lower log-likelihood values and can be tagged by the $posFoM$ mentioned in Sect.~\ref{sect:positionFoM}. As shown in Fig.~\ref{fig:posFOM_5MeVbeta_center_water}, a cut requiring $scaleLogL>10$ can remove some mis-reconstructed events. The remainder may have resulted from the `straight light path' approximation used by the \texttt{MP fitter}, since this calculation misrepresents refracted and/or reflected light paths from event to PMT, as mentioned in Sect.~\ref{sect:waterVertex}. However, the fraction of these mis-reconstructed events is low, about 0.1\% and thus it is tolerable.
 
 \begin{figure}[htbp]
 	\centering 
@@ -309,7 +309,7 @@ In Fig.~\ref{fig:5MeVbeta_center_water} there are a few events with position bia
 
 The above results pertain to electron events at the centre of the PSUP, but a more realistic analysis must permit events to happen anywhere and everywhere inside the AV. To simulate this, electron events were generated at random positions uniformly distributed inside the AV volume, and (again) with isotropic directions. Simulations were performed for a range of $e^-$ energies covering 2 to 15 MeV, with a 1 MeV interval. Fig.~\ref{fig:MPWposBias_isoFill} and Fig.~\ref{fig:MPWposResol_isoFill} show the fit position bias ($\mu_{x,y,z}$) and resolution ($\sigma_{x,y,z}$) respectively. 
 
-These results show that the fit position biases $\mu_{x,y,z}$ are stable across different energies and (with one exception) smaller than 10 mm in magnitude. The resolution $\sigma_{x,y,z}$ improve (i.e. the $\sigma$'s decrease) with increasing event energy, from about 350 mm at 2 MeV to about 120 mm at 15 MeV, the average value being 180 mm. Of course more photons are produced by higher-energy $e^-$ events, thus triggering more PMTs, and events having a larger NHits value provide more information for the fitter: this explains the trend in resolution given by Fig.~\ref{fig:MPWposResol_isoFill}. As will be shown in the following section, the position resolution can also be improved by using a detection medium that produces more photons for the same event. 
+These results show that the fit position biases $\mu_{x,y,z}$ are stable across different energies and (with two exceptions) smaller than 10 mm in magnitude. The resolution $\sigma_{x,y,z}$ improve (i.e. the $\sigma$'s decrease) with increasing event energy, from about 350 mm at 2 MeV to about 120 mm at 15 MeV, the average value being 180 mm. Of course more photons are produced by higher-energy $e^-$ events, thus triggering more PMTs, and events having a larger NHits value provide more information for the fitter: this explains the trend in resolution given by Fig.~\ref{fig:MPWposResol_isoFill}. As will be shown in the following section, the position resolution can also be improved by using a detection medium that produces more photons for the same event. 
 
 \begin{figure}[htbp]
 	\centering	
@@ -324,7 +324,7 @@ These results show that the fit position biases $\mu_{x,y,z}$ are stable across 
 	\label{fig:MPWposResol_isoFill}
 \end{figure}
 
-To check the radial dependence of reconstruction performance, simulations were performed with 5 MeV electrons generated (with an isotropic orientation, and uniformly in azimuth and elevation angles) within each of eleven concentric shells. The centers of these shells were at the AV center, and their inner and outer radii were at $r, r+0.001$ m, where $r$ ranged from 0.5 m to 5.5 m with a step of 0.5 m. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position bias and resolution respectively. Evidently fit position bias is rather stable across the differing radii, but resolution deteriorates for events close to the AV wall, or $R>5$ m. This is called the ``near AV effect'', and it was observed in the SNO experiment. For events that occur close to the AV wall, the plexiglass can serve as a lens that distorts the light path \cite{brice1996monte}. A complicated calculation to encompass this complication, and a technique called the ``Near AV cut'', are discussed Refs.~\cite{coulter2013modelling,jones2011background}, but they are not applied in this thesis. 
+To check the radial dependence of reconstruction performance, simulations were performed with 5 MeV electrons generated (with an isotropic orientation, and uniformly in azimuth and elevation angles) within each of eleven concentric shells. The centers of these shells were at the AV center, and their inner and outer radii were at $r, r+0.001$ m, where $r$ ranged from 0.5 m to 5.5 m with a step of 0.5 m. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position bias and resolution respectively. Evidently fit position bias is rather stable across the differing radii, but resolution deteriorates for events close to the AV wall, or $R>5$ m. This is called the ``near AV effect'', and it was observed in the SNO experiment. For events that occur close to the AV wall, the plexiglass can serve as a lens that distorts the light path \cite{brice1996monte}. A complicated calculation to encompass this complication, and a technique called the ``Near AV cut'', are discussed in Refs.~\cite{coulter2013modelling,jones2011background}, but they are not applied in this thesis. 
 
 \begin{figure}[htbp]
 	\centering	
@@ -342,7 +342,7 @@ To check the radial dependence of reconstruction performance, simulations were p
  
 \subsection{Performances of the Direction Reconstruction in water}\label{sect:directResol}
 
-The bias between the true event direction (unit vector $\vec{u}_{\mathrm{MC}}$) and the reconstructed direction (unit vector $\vec{u}_{\mathrm{fit}}$) is described by the angle ``$\theta_e$'', defined as $\cos\theta_e \equiv \vec{u}_{\mathrm{fit}} \cdot \vec{u}_{\mathrm{MC}}$. To describe the distribution of $\cos\theta_e$, an empirical function for the angular resolution was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components, viz.
+The bias between the true event direction (unit vector $\vec{u}_{\mathrm{MC}}$) and the reconstructed direction (unit vector $\vec{u}_{\mathrm{fit}}$) is described by the angle ``$\theta_e$'', defined as $\cos\theta_e \equiv \vec{u}_{\mathrm{fit}} \cdot \vec{u}_{\mathrm{MC}}$. To describe the distribution of $\cos\theta_e$, an empirical function for the angular resolution was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components,
 \begin{equation}\label{eq:directResol}
 P(\cos\theta_e)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta_e)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta_e)]}{1-\exp(-2\beta_s)},
 \end{equation}
@@ -359,7 +359,7 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \begin{equation}\label{eq:cosTheta_fraction}
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) \, d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) \, d\cos\theta_e} = a\times 100\% \, ,
 \end{equation}
-where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table.~\ref{tab:angularResol_MPW}, are slightly better those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.3\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
+where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table.~\ref{tab:angularResol_MPW}, are slightly better than those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.3\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
 
 \begin{table}[ht]
 	\caption{Direction resolutions for the reconstruction of 5 MeV $e^-$ events.\label{tab:angularResol_MPW}}
@@ -382,7 +382,7 @@ where $P(\cos\theta_e)$ is the direction resolution function with the best fit p
 
 \subsection{Test on Gamma Events}
 
-For analyzing the AmBe calibration data, reconstructing $\gamma$-events with energies of 2.2 MeV and 4.4 MeV is crucial. When a realistic trigger setting for the antineutrino analysis ( taken as that of run-106904) is adopted in simulations, only about 53\% of the (simulated) low energy 2.2-MeV $\gamma$ events triggered a detector response. The event count for simulations was therefore doubled to $2\times10^4$. Table.~\ref{tab:bias_water_gamma} shows the performance (bias and resolution on each axis) of the event position reconstruction for these important gamma events.
+For analyzing the AmBe calibration data, reconstructing $\gamma$-events with energies of 2.2 MeV and 4.4 MeV is crucial. When a realistic trigger setting for the antineutrino analysis (taken as that of run-106904) is adopted in simulations, only about 53\% of the (simulated) low energy 2.2-MeV $\gamma$ events triggered a detector response. The event count for simulations was therefore doubled to $2\times10^4$. Table.~\ref{tab:bias_water_gamma} shows the performance (bias and resolution on each axis) of the event position reconstruction for these important gamma events.
 
 \begin{table}[ht]
 	\caption{Reconstruction performances for the 2.2-MeV and 4.4-MeV $\gamma$ events.}\label{tab:bias_water_gamma}
@@ -403,7 +403,7 @@ In a more realistic situation, the data collected from the calibration runs were
 
 \section{Vertex and Direction Reconstruction for the Water-based Wavelength-shifter}\label{sect:WLSfitter}
 
-A reconstruction algorithm was developed to investigate the proposal, mentioned in Sect.~\ref{sect:wbWLS}, for incorporating in the detector a water-based wavelength-shifter. Fig.~\ref{pmt_wls} shows the position distribution of hit PMTs for MC simulated 5 MeV electrons traveling along the positive $x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water into which is mixed the wavelength shifter PPO at a concentration of 0.1 ppm (``wbWLS''). For the same set of electron events, the number of hit PMTs (NHits) in wbWLS is about 2.4 times greater than in pure water. Although in the wbWLS medium extra isotropic light is emitted, the Cherenkov ring can still be clearly distinguished, allowing reconstruction of the directionality of events.
+A reconstruction algorithm was developed to investigate the proposal, mentioned in Sect.~\ref{sect:wbWLS}, for incorporating in the detector a water-based wavelength-shifter. Fig.~\ref{pmt_wls} shows the position distribution of hit PMTs for MC simulated 5 MeV electrons traveling along the positive $x$ direction in the AV. The left panel shows the case when the detector is filled with pure water while the right panel is for water into which is mixed with the wavelength shifter PPO at a concentration of 0.1 ppm (``wbWLS''). For the same set of electron events, the number of hit PMTs (NHits) in wbWLS is about 2.4 times greater than in pure water. Although in the wbWLS medium extra isotropic light is emitted, the Cherenkov ring can still be clearly distinguished, allowing reconstruction of the directionality of events.
 
 \begin{figure}[htbp]
 	\centering
