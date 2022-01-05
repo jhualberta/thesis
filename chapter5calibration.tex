@@ -1,6 +1,6 @@
-A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. To make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source (described in Sect.~\ref{sect:n16}, Chapter 3) was used for the primary detector calibration. The $^{16}$N calibration data ($^{16}$N runs) were mainly used to check the performance of the reconstruction algorithms for event position, direction, and energy. 
+A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. To make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source (described in Sect.~\ref{sect:n16}) was used for the primary detector calibration. The $^{16}$N calibration data ($^{16}$N runs) were mainly used to check the performance of the reconstruction algorithms for event position, direction, and energy. 
 
-In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}, Chapter 4) was applied on both the experimental data from, and simulations of, the $^{16}$N runs in the water phase. By analyzing the differences between the $^{16}$N data and corresponding MC simulations, systematics of the position and direction reconstruction were extracted, and these were used in the solar neutrino analysis of Chapter 6. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}, Chapter 4), which utilizes the \texttt{MPW fitter}'s event vertex and direction. Also, based on the \texttt{MPW fitter}'s reconstructed vertex and direction other parameters, such as the in-time-ratio (ITR) and the isotropy parameter ($\beta_{14}$) were calculated.
+In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}) was applied on both the experimental data from, and simulations of, the $^{16}$N runs in the water phase. By analyzing the differences between the $^{16}$N data and corresponding MC simulations, systematics of the position and direction reconstruction were extracted, and these were used in the solar neutrino analysis of Chapter 6. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}), which utilizes the \texttt{MPW fitter}'s event vertex and direction. Also, based on the \texttt{MPW fitter}'s reconstructed vertex and direction other parameters, such as the in-time-ratio (ITR) and the isotropy parameter ($\beta_{14}$) were calculated.
 
 \section{\isotope[16]{N} Calibration Scans in the Water Phase}\label{sect:n16_water}
 
@@ -38,7 +38,7 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 	\begin{equation}
 	\beta_l = \frac{2}{N(N-1)}\sum_{i=1}^{N-1}\sum_{j=i+1}^N P_l(\cos\theta_{ij}) \; ,
 	\end{equation}
-	where $N$ is the selected NHit used by the reconstruction (see Sect.~\ref{sect:positionFoM}, Chapter 4), and the $P_l(\cos\theta_{ij})$ are Legendre polynomials, and (following the precedent of the SNO collaboration) the linear combination $\beta_{14}=\beta_1+4\beta_4$ is taken. For a set of events produced by Cherenkov light, the corresponding set of values of $\beta_{14}$ has a Gaussian-like distribution \cite{dunmore2004separation}. In principle, any systematic deviation of $\beta_{14}$ from zero suggests some polarity or a deviation from a totally isotropic pattern.
+	where $N$ is the selected NHit used by the reconstruction (see Sect.~\ref{sect:positionFoM}), and the $P_l(\cos\theta_{ij})$ are Legendre polynomials, and (following the precedent of the SNO collaboration) the linear combination $\beta_{14}=\beta_1+4\beta_4$ is taken. For a set of events produced by Cherenkov light, the corresponding set of values of $\beta_{14}$ has a Gaussian-like distribution \cite{dunmore2004separation}. In principle, any systematic deviation of $\beta_{14}$ from zero suggests some polarity or a deviation from a totally isotropic pattern.
 	
 \end{itemize}
 
@@ -85,7 +85,7 @@ Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstr
 
 \end{figure}
 
-As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mis-reconstructed) by the \texttt{MPW fitter}, resulting in position error of over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
+As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mis-reconstructed) by the \texttt{MPW fitter}, resulting in a position error of over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
 
 \subsubsection{Position Resolution}
 
@@ -271,13 +271,13 @@ Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table.~\ref{tab:vert
 
 \subsubsection{Direction Resolution}
 
-For reconstructed $^{16}$N calibration events, on the assumption that a $\gamma$ particle emitted by the source interacted with an electron at the reconstructed position, the ``true'' direction of an event is defined as the direction pointing from the source manipulator position to the reconstructed position,
+For reconstructed $^{16}$N calibration events, on the assumption that a $\gamma$ photon emitted by the source interacted with an electron at the reconstructed position, the ``true'' direction of an event is defined as the direction pointing from the source manipulator position to the reconstructed position,
 \begin{equation}
 \vec{u}_{\mathrm{true}} = \frac{\vec{X}_{\mathrm{fit}}-\vec{X}_{\mathrm{src}}}{|\vec{X}_{\mathrm{fit}}-\vec{X}_\mathrm{src}|} \; .
 \end{equation}
 Now define $\theta$ as the angular difference between the ``true'' and the reconstructed event orientations, viz. $\cos\theta= \vec{u}_{\mathrm{true}} \cdot \vec{u}_{\mathrm{fit}}$.
 
-The distribution of $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}, Chapter 4. Before the fitting, a few cuts relating to the position and energy reconstructions were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut ($scaleLogL>10$) was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ collaboration to remove instrumental backgrounds, and poor reconstructions for events close to the source container or far away from the source. To remove instrumental backgrounds, the cuts
+The distribution of $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}. Before the fitting, a few cuts relating to the position and energy reconstructions were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut ($scaleLogL>10$) was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ collaboration to remove instrumental backgrounds, and poor reconstructions for events close to the source container or far away from the source. To remove instrumental backgrounds, the cuts
 \begin{itemize}
 \item $E_{fit} > 3.5$ MeV
 \item ITR$>0.55$
@@ -459,7 +459,7 @@ All the cuts on the three energy FoM quantities remove 0.40\% events from MC and
 
 \subsubsection{Energy Resolution and Systematics}
 
-The energy reconstruction algorithms for the water phase (mentioned in Sect.~\ref{sect:energyFitter}, Chapter 4) were applied on the $^{16}$N MC simulations and data. Spectra of the reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}, comparing results from the MC and the data.
+The energy reconstruction algorithms for the water phase (mentioned in Sect.~\ref{sect:energyFitter}) were applied on the $^{16}$N MC simulations and data. Spectra of the reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}, comparing results from the MC and the data.
 
 \begin{figure}[htbp]
 	\centering

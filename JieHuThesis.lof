@@ -189,7 +189,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{179}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{179}{figure.6.16}%
 \contentsline {figure}{\numberline {6.17}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{180}{figure.6.17}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.}}{182}{figure.6.18}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.}}{181}{figure.6.18}%
 \contentsline {figure}{\numberline {6.19}{\ignorespaces A fit on the total $^8$B flux.}}{182}{figure.6.19}%
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{183}{figure.6.20}%
 \contentsline {figure}{\numberline {6.21}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{186}{figure.6.21}%
@@ -199,13 +199,13 @@
 \contentsline {figure}{\numberline {6.22}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{188}{figure.6.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{200}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{200}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{200}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{200}{figure.A.1}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{201}{figure.A.2}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{202}{figure.A.3}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{202}{figure.A.4}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{203}{figure.A.5}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{199}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{199}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{199}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{199}{figure.A.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{200}{figure.A.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.}}{201}{figure.A.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{201}{figure.A.4}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{202}{figure.A.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{210}{figure.B.1}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{209}{figure.B.1}%
