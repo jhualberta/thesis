@@ -544,6 +544,11 @@
 	{\chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}}
 	{\clearpage}
 
+%%%%% Preface
+\newenvironment{preface}
+{\chapter*{Preface}\addcontentsline{toc}{chapter}{Preface}}
+{\clearpage}
+
 \newcommand{\ackname}{Acknowledgements}
 \newenvironment{acknowledgements}
 	{\chapter*{\ackname}\addcontentsline{toc}{chapter}{\ackname}}

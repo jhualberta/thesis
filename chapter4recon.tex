@@ -37,7 +37,7 @@ The \texttt{MPW fitter} determines the vertex and direction of a triggered event
 
 \subsection{Vertex Reconstruction}\label{sect:waterVertex}
 
-The vertex is defined by four parameters, namely $x,y,z$ and $t$. The fitter first creates a randomly-generated position inside a sphere of radius $10~m$ (i.e. larger than the PSUP radius $r_{\mathrm{PSUP}}=8.39~$m). Meanwhile, a random event time $t_0$ (relating to the global trigger time) is also generated from a uniform distribution in the range of $[100,300~ns]$. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $(\vec{X}_0,t_0)$. Details are given in the Appendix.~\ref{appendix:random_gen}.
+The vertex is defined by four parameters, namely $x,y,z$ and $t$. The fitter first creates a randomly-generated position inside a sphere of radius $10$ m (i.e. larger than the PSUP radius $r_{\mathrm{PSUP}}=8.39~$m). Meanwhile, a random event time $t_0$ (relating to the global trigger time) is also generated from a uniform distribution in the range of $[100,300]$~ns. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $(\vec{X}_0,t_0)$. Details are given in the Appendix.~\ref{appendix:random_gen}.
 
 For each triggered event, photons created around the event position propagate to the hit PMTs. In a simplified detector geometry model that neglects the effects of scattering, reflection, and refraction, these photons are considered as propagating along straight lines that connect the trial event vertex to the hit PMTs. Thus the fitter evaluates a timing parameter, called the time residual ($t_\mathrm{res}$), which is defined as:
 \begin{equation}
@@ -53,7 +53,7 @@ t_{\mathrm{transit}}=\frac{|\vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}|}{v_
 where $v_{\mathrm{water}}$ is an effective average photon group velocity obtained by tuning on Monte Carlo simulations. Sect.~\ref{sect:tuneGroupVelocity} will show the details of this tuning. Based on reconstruction experience from the SNO experiment, it is found that even without the detailed tuning of $v_{\mathrm{water}}$ the fitter still produces results that are rather consistent with the outcome that {\em does} use a more detailed calculation \cite{boulay2004direct,jones2011background}. Fig.~\ref{mpwdiagram_position} shows straight light paths from the event position to the hit PMT positions.
 \begin{figure}[htbp]
 	\centering
-   \includegraphics[width=6cm]{mpwDiagram.png}
+   \includegraphics[width=6cm]{mpwDiagram_coord.png}
 	\caption[Straight light path calculation in the water geometry.]{A diagram of straight light paths for event position reconstruction in the SNO+ water phase geometry.}
 	\label{mpwdiagram_position}
 \end{figure}
@@ -75,7 +75,7 @@ where $t^i_{\mathrm{res}}$ is the time residual calculated from the $i^{th}$ hit
 
 In summary the likelihood function starts with a random ($\vec{X}_0,t_0$) as a seed and calculates the likelihoods and their derivatives for various paths, assuming straight-line paths of the prompt Cherenkov light from the trial vertex $(\vec{X}_0,t_0)$ to each of the hit PMTs. The trial vertex is varied until the likelihood function reaches the global maximum, which corresponds to the best-fit vertex. This fitting scheme implements the Levenberg-Marquardt (MRQ) method, which is commonly used for fitting a nonlinear model with multiple parameters. In Sect.~\ref{appendix:MRQ} this method is described in detail, along with its application for the \texttt{MP fitter} (also see Refs.~\cite{gregory2005bayesian, press2007numerical} for details).
 
-As will be shown in the sections to follow, one of the main tasks for the fitter is to calculate $t_{\mathrm{transit}}$ by evaluating light paths. As mentioned earlier, the water phase geometry is the simplest case, for in the other situations the AV is filled with the wavelength shifter or scintillator. Such materials, with properties quite distinct from the cavity water, make the light path calculations more complicated.
+As will be shown in the sections to follow, one of the main tasks for the fitter is to calculate $t_{\mathrm{transit}}$ by evaluating light paths. As mentioned earlier, the water phase geometry is the simplest case compared to the other situations when the AV is filled with the wavelength shifter or scintillator. Such materials, with properties quite distinct from the cavity water, make the light path calculations more complicated.
 
 \subsection{Direction Reconstruction}\label{sect:waterDirection}
 
@@ -87,7 +87,7 @@ which is easily seen to have unit magnitude.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=6cm]{mpwDiagram2.png}
+	\includegraphics[width=6cm]{mpwDiagram2_coord.png}
 	\caption[Cherenkov cone and straight line light paths (SNO+ water phase).]{Cherenkov cone and straight line light paths, in the SNO+ water phase geometry.}
 	\label{mpwdiagram_direction}
 \end{figure}
@@ -104,7 +104,7 @@ A 1D PDF, serving as a model of the angular distribution of the triggered PMTs a
 
 For the $i^{th}$ hit PMT, $\cos\theta^i_{\mathrm{Ch}}=\vec{u}_0\cdot\frac{\vec{X}^i_{{\mathrm{diff}}}}{|\vec{X}^i_{{\mathrm{diff}}}|}$, then the likelihood function is built as:
 \begin{equation}
-\ln L(\vec{u}_0)=\sum_{i=1}^{{\mathrm{Nhits}}}L_i(\cos\theta_{\mathrm{Ch}}^i),
+\ln \mathcal{L}(\vec{u}_0)=\sum_{i=1}^{{\mathrm{Nhits}}}L_i(\cos\theta_{\mathrm{Ch}}^i),
 \end{equation}
 
 Finally, the fitter fits for the angular PDF by using the MRQ method to obtain the best-fit direction. There are several optimizations for improving the fitter performance. First, the group velocity used in the $t_{\mathrm{transit}}$ calculation is tuned, as shown in Sect.~\ref{sect:tuneGroupVelocity}. In Sect.~\ref{sect:fitterPull}, a drive correction for compensating the pulls in the reconstructed position is discussed. In Sect.~\ref{sect:PMTselector}, PMT selectors for sending proper PMT information to the fitter are discussed. 
@@ -122,7 +122,7 @@ When photons travel through the detector, their group velocities ($v_\mathrm{gr}
 
 To simplify reconstruction, a tuned value (of $v_\mathrm{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_\mathrm{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_\mathrm{transit}=|\vec{X}_\mathrm{event}-\vec{X}_\mathrm{PMT}|/v_\mathrm{gr,eff}$, where the $v_\mathrm{water}$ is replaced by the effective group velocity $v_\mathrm{gr,eff}$. The value of $v_\mathrm{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathrm{gr,eff}$ (a fast effective group velocity) will decrease $t_\mathrm{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_\mathrm{res}$ will increase. During the reconstruction, when the fitter compares the large $t_\mathrm{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_\mathrm{transit}$ and then decrease $t_\mathrm{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathrm{gr,eff}$ is set too small (i.e. too slow), $t_\mathrm{transit}$ will increase while $t_\mathrm{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_\mathrm{res}$. These effects can be quantified as radial bias ($r_\mathrm{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
 \begin{equation}
-r_\mathrm{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC},
+r_\mathrm{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC}.
 \end{equation}
 
 \begin{figure}[!htb]
@@ -140,13 +140,13 @@ In practice, $v_\mathrm{gr,eff}$ is calculated by an effective refractive index 
 	\caption[Group velocity vs. radial bias for the \texttt{MPW fitter}.]{Group velocity vs. radial bias for the \texttt{MPW fitter}.	\label{fig:plotVgr}}
 \end{figure}
 
-Later I turned to a more data-driven approach rather than tuning from the simulations. This approach is to extract an average group velocity by analyzing the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run-100934 and run-107055, the source was deployed almost at the PSUP center, whence the optical photons propagated to reach PMTs on the PSUP. 
+Later I turned to a more data-driven approach rather than only tuning from the simulations. This approach is to extract an average group velocity by analyzing the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run-100934 and run-107055, the source was deployed almost at the PSUP center, and the optical photons propagated to reach PMTs on the PSUP. 
 
-For each event, suppose the triggered PMTs were found within solid angle
+For each event, suppose the triggered PMTs were found within a solid angle
 \begin{equation*}
 \Omega=\frac{\pi(L/2)^2}{r^2_\mathrm{PSUP}}\; ,
 \end{equation*}
-where $L$ is the line segment and $r_\mathrm{PSUP}=8390$ mm is the radius of the PSUP, as shown in Fig.~\ref{fig:n16_groupVeloctiy}. Since the diameter of the PMT concentrator is 27 cm, the line segment is chosen as $L = 50$ cm ($\theta=\arcsin(\frac{1}{2}L/r_\mathrm{PSUP})\approx 0.17^\circ$) to let roughly 2 PMTs be within the $\Omega$. Then the arrival time $T_1$ was found by calculating $|\vec{X}_\mathrm{source}-\vec{X}_\mathrm{PMTin\Omega}|/v_\mathrm{water}$, where $v_\mathrm{water}=217.554$ mm/ns is an effective velocity obtained by the SNO+ collaboration for light in water \cite{coulter2013modelling}.
+where $L$ is the line segment and $r_\mathrm{PSUP}=8390$ mm is the radius of the PSUP, as shown in Fig.~\ref{fig:n16_groupVeloctiy}. Since the diameter of the PMT concentrator is 27 cm, the line segment is chosen as $L = 50$ cm ($\theta=\arcsin(\frac{1}{2}L/r_\mathrm{PSUP})\approx 0.17^\circ$) to let roughly 2 triggered PMTs be within the $\Omega$ (these PMTs are called `PMTin$\Omega$'). Then the arrival time $T_1$ was found by calculating $|\vec{X}_\mathrm{source}-\vec{X}_\mathrm{PMTin\Omega}|/v_\mathrm{water}$, where $v_\mathrm{water}=217.554$ mm/ns is an effective velocity obtained by the SNO+ collaboration for light in water \cite{coulter2013modelling}.
 
 \begin{figure}[!htb]
 	\centering
