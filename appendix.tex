@@ -2,11 +2,11 @@
 
 Four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
 
-One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]$~ns, say, $t\sim U(100,300)$ ns.
+One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]$~ns, say, $t\sim U(100,300)$~ns.
 
-Three random seeds are used for generating the position of the trial vertex: $\texttt{ran0}\sim U(0,1)$, $\texttt{ran1}\sim U(-1,1)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. 
+Three random seeds are used for generating the position of the trial vertex: $\texttt{ran0}\sim U(0,1)$, $\texttt{ran1}\sim U(-1,1)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$.
 
-Let $r=\sqrt[3]{\texttt{ran0}}*10000~mm$, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
+Let $r=\sqrt[3]{\texttt{ran0}}*8390$ mm\footnote{$r_{PSUP}=8390$~mm is the radius of the PSUP.}, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
 
 For the trial direction, two random seeds are used. Each follows a uniform distribution: $\texttt{ranPi}\sim U(0,\pi)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. Then the trial direction is built as: $\vec{u}_{0}=(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta)$, with zenith angle $\theta=\texttt{ranPi}$ and azimuth angle $\phi=\texttt{ran2Pi}$.
 
@@ -135,7 +135,7 @@ Then it comes out for the water vertex case,
 \frac{\partial L}{\partial z}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Z_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g},
 \end{equation}
 
-where the derivative $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing $pdf$ saved as a binned histogram.
+where the derivative $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing PDF saved as a binned histogram.
 
 For the water direction case,
 \begin{equation}
@@ -149,7 +149,7 @@ where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$
 \frac{\partial L}{\partial\phi}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{d\phi}
 =\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\phi}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|},
 \end{equation} 
-where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. The derivative $\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}$ can be calculated numerically from the PMT angular response $PDF$ saved as a binned histogram.
+where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. The derivative $\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}$ can be calculated numerically from the PMT angular response PDF saved as a binned histogram.
 
 \section{Inversion of Hessian Matrix}
 Matrix inversion is a frequent calculation when applying the MRQ method. In the \texttt{MP fitter}, the inversion of a $2\times 2$ Hessian matrix (usually used for direction reconstruction with two parameters) is calculated directly. For the higher dimension matrix, usually the $4\times 4$ matrix for vertex reconstruction, a \texttt{SDecompQRH} class is called for calculating the inversion matrix by using QR decomposition method\cite{press2007numerical}. This class was introduced by Jeff Tseng and it was modified from the \texttt{ROOT TDecompQRH} class\cite{TDecompQRH}. Compared to the ROOT version, its \texttt{Solve()} function was slightly modified for solving the matrix equation $Ax=b$, where $A = QR$ is composed of an orthogonal matrix $Q$ and an upper triangular matrix $R$. If the diagonal element in R is too small, instead of returning failure, the modified algorithm simply sets the corresponding x component to be 0. This allows an optimization for the MRQ method to continue in frequent cases when the matrix is singular.

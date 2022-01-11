@@ -1,9 +1,8 @@
 \contentsline {chapter}{Abstract}{iii}{chapter*.1}%
-\contentsline {chapter}{Preface}{iv}{chapter*.2}%
-\contentsline {chapter}{Acknowledgements}{vii}{chapter*.3}%
-\contentsline {chapter}{Contents}{ix}{chapter*.3}%
-\contentsline {chapter}{List of Figures}{xiv}{chapter*.4}%
-\contentsline {chapter}{List of Tables}{xx}{chapter*.5}%
+\contentsline {chapter}{Acknowledgements}{iv}{chapter*.2}%
+\contentsline {chapter}{Contents}{vi}{chapter*.2}%
+\contentsline {chapter}{List of Figures}{xi}{chapter*.3}%
+\contentsline {chapter}{List of Tables}{xvii}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Neutrino physics}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Overview}{5}{section.2.1}%
@@ -117,4 +116,4 @@
 \contentsline {section}{\numberline {A.7}Information for $^{16}$N Scan Runs}{202}{section.A.7}%
 \contentsline {chapter}{\numberline {B}Bi-Po Analysis}{207}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Uranium chain and Bi-Po Analysis}{207}{section.B.1}%
-\contentsline {chapter}{References}{209}{appendix*.7}%
+\contentsline {chapter}{References}{209}{appendix*.6}%

@@ -235,11 +235,11 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	I implemented this selector and the Earliest Hit Selector mentioned below for the partial-fill and scintillator phases, when a single event can trigger many PMTs due to the high light yields of the liquid scintillator. In this case, the fit speed for each event becomes slow, which can present a difficulty for the data processing. These selectors can reduce the number of the hit PMTs to a designated number ($n_\mathrm{select}$) to boost the fit speed, while still providing acceptable values for fit bias and resolution. 
 	
-	For the Uniform PMT Selector, when an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks one PMT per interval of $\left \lceil{N/n_\mathrm{select}}\right \rceil $. If $N\leq n_\mathrm{select}$, the selector does nothing. In this way the selector uniformly reduces the number of the PMTs for the fitter, without introducing an obvious bias.
+	For the Uniform PMT Selector, when an event triggers $N$ calibrated PMTs, the selector goes through these recorded PMTs and uniformly picks one PMT per interval of $\left \lceil{N/n_\mathrm{select}}\right \rceil $. If $N\leq n_\mathrm{select}$, the selector does nothing. This way, the selector uniformly reduces the number of the PMTs for the fitter, without introducing an obvious bias.
 	
 	\item[$\bullet$] Earliest Hit PMT Selector
 	
-	This selector first groups the PMTs by their positions on the PSUP sphere. Taking the centre of the sphere as the origin of the coordinate, the sphere is decomposed into intervals of azimuth angle $\phi$ (longitude) and zenith angle $\theta$ (latitude). The PMT positions are projected to $\phi\in [-\pi,\pi]$ and $\cos\theta\in [-1, 1]$ on the sphere, each range being uniformly divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels by $\phi$ and $\cos\theta$: $\mathrm{PMT}(\phi_i,\cos\theta_j) \in [i\cdot\phi/n, j\cdot\cos\theta/n],~(i,j=1,2,..,n)$, see Fig.~\ref{GroupPMTs}. 
+	This selector first groups the PMTs by their positions on the PSUP sphere. Taking the centre of the sphere as the origin of the coordinate, the sphere is decomposed into intervals of azimuth angle $\phi$ (longitude) and zenith angle $\theta$ (latitude). The PMT positions are projected to $\phi\in [-\pi,\pi]$ and $\cos\theta\in [-1, 1]$ on the sphere, each range being uniformly divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels by $\phi$ and $\cos\theta$: $\mathrm{PMT}(\phi_i,\cos\theta_j) \in [i\cdot\phi/n, j\cdot\cos\theta/n],~(i,j=1,2,..,n)$, see Fig.~\ref{GroupPMTs}.
 	\begin{figure}[!htb]
 		\centering
 		\includegraphics[width=5cm]{GroupPMTs.png}
@@ -418,7 +418,7 @@ A reconstruction algorithm was developed to investigate the proposal, mentioned 
 	\caption[Position distribution of hit PMTs (zenith and azimuth angles).]{Position distribution of hit PMTs (zenith and azimuth angles) for 5 MeV electrons traveling along the $+x$ direction in pure water (left) and water bearing 0.1 ppm PPO (right).\label{pmt_wls}}	
 \end{figure}
 
-Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $\mathrm{NHit}$ distribution (mean NHits). In pure water, a 1 MeV electron may cause about 7 PMT hits (but below the detector trigger threshold), while in the wbWLS case the 1 MeV electron simulation results (on average) detecting event with NHits = 20.
+Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $\mathrm{NHit}$ distribution (mean NHits). In pure water, a 1 MeV electron may cause about 7 PMT hits (but below the detector trigger threshold), while in the wbWLS case the 1 MeV electron simulation results (on average) detect an event with NHits = 20.
 
 \begin{figure}[htbp]
 	\centering	
