@@ -577,11 +577,11 @@ The model used by the Oxford group to fit the emission time profile is \cite{oxf
 f_{optics}(t)= A' \; \frac{e^{-\frac{t}{\tau_{rise}}}}{\tau_{rise}} \, + \, \sum_{i=1}^3 (A_i\frac{e^{-\frac{t}{\tau_i}}-e^{-\frac{t}{\tau_{rise}}}}{\tau_i-\tau_{rise}}) \; ,
 \end{equation}
 where $A_i$ is the fraction of scintillation light emitted in the $i^{th}$ component of the detector medium, $A'$ is a small additional component with an instantaneous rise time and a
-fall time equivalent to the rise time of the primary fluor to improve the fit quality with the measured data, $\tau_i$ is the corresponding decay constant, and $\tau_{rise}$ is the rise time of scintillator. The parameter values determined by the Oxford group from the bench-top experiments are listed in Table.~\ref{tab:measureAmplitude} and Table.~\ref{tab:measureLightYield}.
+fall time equivalent to the rise time of the primary fluor to improve the fit quality with the measured data, $\tau_i$ is the corresponding decay constant, and $\tau_{rise}$ is the rise time of scintillator. The parameter values determined by the Oxford group from the bench-top experiments are listed in Table.~\ref{tab:oxfordMeasure} and Table.~\ref{tab:oxfordMeasure2}.
 
 \begin{table}[ht]
-	\centering\label{tab:measureAmplitude}
-	\caption{\label{oxfordMeasure} Time constants and amplitudes measured by Ref.~\cite{oxfordMeasurement}. Here the relative light yield is with respect to the LAB+2 g/L PPO case (11900 photons/MeV).}	
+	\centering
+	\caption{\label{tab:oxfordMeasure} Time constants and amplitudes measured by Ref.~\cite{oxfordMeasurement}. Here the relative light yield is with respect to the LAB+2 g/L PPO case (11900 photons/MeV).}	
 	{\centering
 		\begin{tabular*}{160mm}{c@{\extracolsep{\fill}}ccccccccc}
 			\toprule 
@@ -598,8 +598,8 @@ fall time equivalent to the rise time of the primary fluor to improve the fit qu
 \end{table}
 
 \begin{table}[ht]
-	\centering\label{tab:measureLightYield}
-	\caption{\label{oxfordMeasure2}Relative light yield (RLY) measured by Ref.~\cite{oxfordMeasurement}.}	
+	\centering
+	\caption{\label{tab:oxfordMeasure2}Relative light yield (RLY) measured by Ref.~\cite{oxfordMeasurement}.}	
 	{\centering
 		\begin{tabular*}{60mm}{c@{\extracolsep{\fill}}cc}
 			\toprule 
@@ -699,7 +699,7 @@ The average fit speed for vertex reconstruction of events in the scintillator re
 	\caption{Reconstructed position and fit bias for simulated 3 MeV electron events in the scintillator region.\label{fig:partial_inScint}}
 \end{figure}
 
-Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint} (d). Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut. 
+Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint} (d). Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut.
 
 Fig.~\ref{fig:partial_scaleLogLcut} (a) shows the (vertical) fit error $z_{fit}-z_{MC}$ versus the $posFoM$ quantity $scaleLogL$ mentioned in Sect.~\ref{sect:positionFoM}. Application of a $scaleLogL>9.8$ cut removes more than a third of the mis-reconstructed events with $|\vec{X}_{fit}-\vec{X}_{MC}|>1000$ mm. In Fig.~\ref{fig:partial_scaleLogLcut} (b), the fit position bias in $z$ ($z_{fit}-z_{MC}$) after the cut is plotted in red, overlaid with the distribution before the cut in black. By fitting with the Gaussian function, it is evident that the cut removes some mis-reconstructed events on the tail of the distribution, improving the resolution by about 1.5 mm and reducing the bias by about 1.9 mm compared to the plot in Fig.~\ref{fig:partial_inScint} (d). As shown in Fig.~\ref{fig:partial_scaleLogLcut} (c), this cut removes most of the outliers observed in the $\rho$ vs $z$ plot in Fig.~\ref{fig:partial_inScint} (a).
 
@@ -805,7 +805,7 @@ This tagging algorithm was applied to reconstructed event vertices. Fig.~\ref{fi
 			\includegraphics[width=6.5cm]{214Po_Bipo214_deltaZ.pdf}
 		\end{minipage}
 	}
-	\caption[Fit position biases for tagged $^{214}$Bi and $^{214}$Po]{Fit position biases for tagged $^{214}$Bi (left) and $^{214}$Po (right).\label{fig:parital_bipo214}}
+	\caption[Fit position biases for tagged $^{214}$Bi and $^{214}$Po.]{Fit position biases for tagged $^{214}$Bi (left) and $^{214}$Po (right).\label{fig:parital_bipo214}}
 \end{figure}
 
 \begin{table}[ht]
