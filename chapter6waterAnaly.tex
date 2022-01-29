@@ -38,8 +38,8 @@ where $\vec{X}_\mathrm{sun}$ is taken as the Sun's location relative to the SNOL
 
 For the open dataset, the data cleaning mask and high level cuts
 \begin{itemize}
-    \item ITR$>0.55$
-    \item $-0.12<\beta_{14}<0.95$
+    \item $\mathrm{ITR}>0.55$\;,
+    \item $-0.12<\beta_{14}<0.95$\;,
 \end{itemize}
 were applied to the data (as mentioned in Sect.~\ref{sect:high_level_cuts}). These cuts were suggested by the collaboration, based on earlier experience for removing instrumental backgrounds \cite{waterunidoc}. 
 
@@ -135,12 +135,12 @@ For this section, I focus on the 190.33 live-day low background dataset taken in
 
 Before the analysis, the following ``beforehand cuts'' were applied: 
 \begin{itemize}
-    \item NHits$>20$, 
-    \item $R'_{fit}<5500 \; \mathrm{mm}$,
-    \item ITR$>0.55$,
-    \item $-0.12<\beta_{14}<0.95$. 
+    \item $\mathrm{NHits}>20$\;, 
+    \item $R'_{fit}<5500 \; \mathrm{mm}$\;,
+    \item $\mathrm{ITR}>0.55$\;,
+    \item $-0.12<\beta_{14}<0.95$\;. 
 \end{itemize}
-Here NHits$>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with NHits$>20$ were reconstructed by the \texttt{MPW fitter}. The $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
+Here $\mathrm{NHits}>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with $\mathrm{NHits}>20$ were reconstructed by the \texttt{MPW fitter}. The $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
 \begin{equation*}
 R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}
 \end{equation*}
@@ -267,12 +267,12 @@ Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. This symmetric quan
 
 To further reduce the background events, in addition to the `beforehand' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration\footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{Rat water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
 \begin{itemize}
-    \item $-11<Z_{factor}<1$, 
-    \item $scaleLogL>10.85$,
-    \item $0<G_{test}<1.9$,
-    \item $U_{test}<0.95$,
-    \item ITR$>0.55$,
-    \item $-0.12<\beta_{14}<0.95$. 
+    \item $-11<Z_{factor}<1$\; , 
+    \item $scaleLogL>10.85$\;,
+    \item $0<G_{test}<1.9$\;,
+    \item $U_{test}<0.95$\;,
+    \item $\mathrm{ITR}>0.55$\;,
+    \item $-0.12<\beta_{14}<0.95$\;. 
 \end{itemize}
 These cuts are denoted as ``default cuts''.
 
@@ -687,7 +687,7 @@ For $\delta_\theta$, since there is no physical meaning to the case that $\vert 
 
 To evaluate the systematics of the solar neutrino analysis, the systematic transformations in Table.~\ref{tab:solar_uncertainties} were applied to the reconstructed quantities in MC simulations independently. The reconstructed quantities after the transformations are called ``smeared'' values. The smeared values of an event can affect whether the event will pass the cuts: the smeared positions of an event affect whether the event can pass the fiducial volume cut and then affect the results after the position cuts; the smeared energies affect the results after the energy cuts and the smeared $\beta_{14}$ affect the results after the $\beta_{14}$ cuts. Thus, for the solar $\nu_e$ and $\nu_\mu$ simulations, the shape of the $\cos\theta_\mathrm{sun}$ distribution used as the PDF will be changed by the smeared values. In addition, the $\delta_\theta$ transformation changes the PDF shape directly. Finally, the spectrum of the data was re-fit with the smeared PDFs to obtain the smeared physics quantity (specifically, the flux ratio $f_s$ mentioned in the previous section), and the differences between the original value and the smeared value are used as the systematics of the physics quantity.
 
-To obtain the smeared PDFs, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and ITR$>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. For the transformations, the positive (``smearing up'') and negative (``smearing down'') values were applied, respectively. After the transformation, the whole beforehand cut was applied. Lastly, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_\mathrm{sun}$ spectrum was used as the smeared PDF for that quantity. For example, if $E_{fit}$ is smeared by scaling up, i.e. $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_\mathrm{sun}$ after the beforehand cut and TMVA BDT selection is used as the ``energy scale-up PDF''.
+To obtain the smeared PDFs, first, only the cuts $5<E_{fit}<15$ MeV (for selecting energy region), NHit$>20$ (reconstruction threshold) and $\mathrm{ITR}>0.55$ (determined from the instrumental noises and its systematic uncertainty was not considered) were applied to the MC simulations of the solar $\nu_e$ and $\nu_\mu$. Then the systematic transformations were applied one by one and event by event. For the transformations, the positive (``smearing up'') and negative (``smearing down'') values were applied, respectively. After the transformation, the whole beforehand cut was applied. Lastly, the TMVA BDT selection was applied. For a specific smeared quantity, the final output of the MC $\cos\theta_\mathrm{sun}$ spectrum was used as the smeared PDF for that quantity. For example, if $E_{fit}$ is smeared by scaling up, i.e. $E'_{fit}=(1+\Delta_{\delta_E})E_{fit}$, then the outputs of the $\cos\theta_\mathrm{sun}$ after the beforehand cut and TMVA BDT selection is used as the ``energy scale-up PDF''.
 
 Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, energy scale and energy resolution on the MC PDF. The original MC PDF is shown as black solid line histograms, overlaid by the smeared histograms.
 
@@ -798,4 +798,4 @@ To fit the background events, I assumed a flat distribution of $\cos\theta_\math
 
 The evaluation here of systematic uncertainties is not comprehensive. In particular, uncertainties intrinsic to the solar neutrino model used by the MC simulations to `produce' solar neutrinos and apply oscillations are {\em not included} here. The uncertainties in the SSM model as well as the neutrino flavor transformation parameters can affect the MC simulations. In addition, the energy calibration used to mitigate the difference between data and simulations is not applied. This procedure can reduce the uncertainties from the energy reconstructions. 
 
-Since the dataset used here has a very low level of background events, it is possible to probe the energy region down to 3.5 MeV, enabling the study of the solar neutrinos in a lower energy region. However since the reconstruction threshold was set as NHits$>20$, that analysis is not included in the thesis. It may be worthwhile to investigate the data with a lower NHit threshold down to NHits$>6$, and to apply a proper TMVA method selection for reducing the backgrounds in the lower energy region.
+Since the dataset used here has a very low level of background events, it is possible to probe the energy region down to 3.5 MeV, enabling the study of the solar neutrinos in a lower energy region. However since the reconstruction threshold was set as $\mathrm{NHits}>20$, that analysis is not included in the thesis. It may be worthwhile to investigate the data with a lower NHit threshold down to $\mathrm{NHits}>6$, and to apply a proper TMVA method selection for reducing the backgrounds in the lower energy region.

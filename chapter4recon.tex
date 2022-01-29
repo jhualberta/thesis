@@ -930,13 +930,13 @@ The SNO+ Antineutrino working group developed three figure of merit (FoM) quanti
 	\item[$\bullet$]$U$-test ($U_{test}$):
 	a Mann-Whitney score uses the channel hit probabilities calculated by \texttt{EneryRSP} which are ordered and ranked. \texttt{EneryRSP} calculates the $N$ as the prompt NHits, and $N_{active}$ as the total number of active channels. For each active channel, the smallest hit probability assigned rank 1 and largest $N_{active}$. $S$ is a sum of assigned ranks for hit PMTs and $S\equiv \sum_{i}^N \mathrm{rank}_i$.
 	\begin{equation}
-	U_{test}\equiv \frac{S-N(N+1)/2}{N(N_{active}-N)},
+	U_{test}\equiv \frac{S-N(N+1)/2}{N(N_{active}-N)}\; ,
 	\end{equation}
 
 	\item[$\bullet$] $G$-test ($G_{test}$):
  	a score that uses the hit probabilities from \texttt{EnergyRSP} ($E_i$), which are normalized to the number of observed hits ($N$):
 	\begin{equation}
-	G_{test}\equiv \frac{1}{N}\sum_{i=1}^N \log(\frac{1}{E_i}),
+	G_{test}\equiv \frac{1}{N}\sum_{i=1}^N \log(\frac{1}{E_i})\; ,
 	\end{equation}
 	
 	\item[$\bullet$] $Z$-factor ($Z_{factor}$):
@@ -944,8 +944,7 @@ The SNO+ Antineutrino working group developed three figure of merit (FoM) quanti
 	\begin{equation}
      Z'\equiv 1-\frac{3(\sigma_p+\sigma_n)}{\mu_p-\mu_n}\; ,
     \end{equation}
-    where $\mu_p$ is the median probability of all active PMT channels with hits; $\mu_n$ is the median probability of all active PMT channels; $\sigma_p$ is the median absolute deviation of hit PMT probability distribution; and
-    $\sigma_n$ is median absolute deviation of PMT probability distribution.
+    where $\mu_p$ is the median probability of all active PMT channels with hits; $\mu_n$ is the median probability of all active PMT channels; $\sigma_p$ is the median absolute deviation of hit PMT probability distribution; and $\sigma_n$ is median absolute deviation of PMT probability distribution.
 \end{itemize}
 
 \subsection{Energy Reconstruction in Partial-fill Phase}
