@@ -29,7 +29,7 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 
 	This classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j, as defined by:
 	\begin{equation}
-	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event})}{|\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event}||\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event}|}.
+	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event})}{|\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event}||\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event}|}\;.
 	\end{equation}
 	%% John: Jie, is this number, or rather, set of numbers, really an event classifier? There are, what, $N^2$ values of this property for EACH event? So it is not a single number for a given event. I wonder whether actually it is just needed as an input for $\beta_{14}$? Maybe I'm wrong, but it seems out of place, it doesn't have the same character as ITR and beta14 John
 	\item[$\bullet$] $\beta_{14}$ isotropy classifier
@@ -44,11 +44,11 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 
 \subsection{Effects of the High-level Cuts}
 
-As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events such as instrumental noises, cuts of ITR$>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
+As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events such as instrumental noises, cuts of $\mathrm{ITR}>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
 
 The $^{16}$N central run 107055 data and (corresponding) MC simulation were used to check the effects of the high-level cuts. For the MC (data), the cut ITR$>0.55$ removed 0.69\% (0.79\%) of the total events and the cut $-0.12<\beta_{14}<0.95$ removed 1.11\% (0.93\%) of the total events. Combining the ITR and $\beta_{14}$ cuts, 1.69\% (1.62\%) of the total events were removed.
 
-Poorly reconstructed events with large position bias ($>6000~$mm) were counted. For the MC case, the position biases were taken as the distance between the reconstructed position and the true (MC) position, $|\vec{X}_{fit}-\vec{X}_{MC}|$. For the data however, the bias was taken as the difference between the reconstructed position and the source manipulator position, $|\vec{X}_{fit}-\vec{X}_{src}|$. Events with (so-defined) bias exceeding 6000 mm made up 0.13\% of the total event count, both in the MC and experimental calibration data. The high-level cuts removed 73.12\% (66.82\%) of these from the population of MC (data) events. In summary, the high-level cuts remove more than half of the events having large (reconstructed) position offset, while removing only about 1.6\% of the total events. 
+Poorly reconstructed events with large position bias ($>6000~$mm) were counted. For the MC case, the position biases were taken as the distance between the reconstructed position and the true (MC) position, $|\vec{X}_{fit}-\vec{X}_{MC}|$. For the data however, the bias was taken as the difference between the reconstructed position and the source manipulator position, $|\vec{X}_{fit}-\vec{X}_{src}|$\footnote{The source manipulator position is mainly measured by the ropes in the source manipulator system described in Sect.~\ref{sect:calibr}.}. Events with (so-defined) bias exceeding 6000 mm made up 0.13\% of the total event count, both in the MC and experimental calibration data. The high-level cuts removed 73.12\% (66.82\%) of these from the population of MC (data) events. In summary, the high-level cuts remove more than half of the events having large (reconstructed) position offset, while removing only about 1.6\% of the total events. 
 
 Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and the ITR, $\beta_{14}$ respectively, for the data and MC.
 \begin{figure}
@@ -66,7 +66,7 @@ To do these evaluations, a few cuts were applied to both the data and MC. Firstl
 
 \subsection{Position Reconstruction Evaluation}
 
-The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:positionFoM} were applied on the reconstruction results. Fig.~\ref{posBiasVsFOM} shows the $scaleLogL$ with the position biases for the reconstructed events in the $^{16}$N central calibration run 107055. Results from both the data and the MC simulations are shown. For the MC case, the position biases are between the reconstructed positions and the true positions generated by the MC, $|\vec{X}_{fit}-\vec{X}_{MC}|$, while for the data, the biases are between the reconstructed positions and the source manipulation position, $|\vec{X}_{fit}-\vec{X}_{src}|$.
+The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:positionFoM} were applied on the reconstruction results. Fig.~\ref{posBiasVsFOM} shows the $scaleLogL$ with the position biases for the reconstructed events in the $^{16}$N central calibration run 107055. Results from both the data and the MC simulations are shown. For the MC case, the position biases are between the reconstructed positions and the true positions generated by the MC, $|\vec{X}_{fit}-\vec{X}_{MC}|$, while for the data, the biases are between the reconstructed positions and the source manipulator position, $|\vec{X}_{fit}-\vec{X}_{src}|$.
 
 \begin{figure}
 	\centering
@@ -91,7 +91,7 @@ As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mi
 
 A position resolution function is defined for the reconstructed electron position distribution \cite{boulay2004direct}:
 \begin{equation}
-R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}},
+R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\sigma_p})^2]+\frac{\alpha_e}{2\tau_p}\exp{[\frac{-|x-\mu_p|}{\tau_p}]}}\;,
 \end{equation}
 where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
 
@@ -320,7 +320,7 @@ Fig.~\ref{angularResolScan} shows the results for the fitted $\beta_M$ and $\bet
 	\subfigure[$^{16}$N $x$-scan runs.]{\label{angular:xscan}\includegraphics[width=12cm]{16NangularScan_x.pdf}}
 	\subfigure[$^{16}$N $y$-scan runs.]{\label{angular:yscan}\includegraphics[width=12cm]{16NangularScan_y.pdf}}
 	\subfigure[$^{16}$N $z$-scan runs.]{\label{angular:zscan}\includegraphics[width=12cm]{16NangularScan_z.pdf}}
-	\caption{Fitted direction resolution parameters $\beta_M$, $\beta_S$ for the source scans on ($x, y, z$)-axes respectively. Solid squares, MC; Open circles, data.\label{angularResolScan}}
+	\caption[Fitted direction resolution parameters $\beta_M$, $\beta_S$ for the source scans.]{Fitted direction resolution parameters $\beta_M$, $\beta_S$ for the source scans on ($x, y, z$)-axes respectively. Solid squares, MC; Open circles, data.\label{angularResolScan}}
 \end{figure}
 
 The relative difference between data and MC of a fitted resolution quantity $q\pm \delta_q$ is defined as
@@ -459,19 +459,21 @@ All the cuts on the three energy FoM quantities remove 0.40\% events from MC and
 
 \subsubsection{Energy Resolution and Systematics}
 
-The energy reconstruction algorithms for the water phase (mentioned in Sect.~\ref{sect:energyFitter}) were applied on the $^{16}$N MC simulations and data. Spectra of the reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}, comparing results from the MC and the data.
+The energy fitters for the water phase (mentioned in Sect.~\ref{sect:energyFitter}) were applied to the $^{16}$N MC simulations and data. The fitters converted the NHits into the reconstructed energies. Fig.~\ref{fig:N16nhits} shows the NHits spectra of the $^{16}$N central run 107055, comparing results from the MC and the data.
 
-\begin{figure}[htbp]
-	\centering
-	\subfigure[$^{16}$N run 106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
-	\subfigure[$^{16}$N run 107055]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
-	\caption[Reconstructed energy spectrum from the $^{16}$N central run 106925 and 107055.]{Reconstructed energy spectrum from the $^{16}$N central run 106925 (upper) and 107055 (lower). For run 106925 (upper), the reconstructed data (black dots) are compared to the MC (blue line), both being \texttt{MPW fitter} results; for run 107055 (lower), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.\label{fig:N16energy}}
-\end{figure}
+Spectra of the reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
-	\caption[NHit spectrum for the $^{16}$N central run 107055.]{NHit spectrum for the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.\label{N16nhits}}	
+	\caption[NHits spectrum of the $^{16}$N central run 107055.]{NHits spectrum of the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.\label{fig:N16nhits}}	
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+   \subfigure[$^{16}$N run 107055]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
+	\subfigure[$^{16}$N run 106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
+	\caption[Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.]{Reconstructed energy spectra from the $^{16}$N central run 107055 (upper) and 106925 (lower). For run 107055 (lower), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared; for run 106925 (lower), the reconstructed data (black dots) are compared to the MC (blue line), both being \texttt{MPW fitter} results. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.\label{fig:N16energy}}
 \end{figure}
 
 \begin{figure}[htbp]

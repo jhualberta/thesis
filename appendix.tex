@@ -1,12 +1,16 @@
 \section{Create a Random Vertex}\label{appendix:random_gen}
 
-Four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
+This section is derived from P. G. Jones and I. Coutler's early work on the SNO+ reconstruction algorithms \cite{jones2011background,coulter2013modelling}, and K. Singh's work on the \texttt{MultiPath} processor\cite{kalpanaMPFitter}.
+
+To create a random vertex, four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
 
 One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]$~ns, say, $t\sim U(100,300)$~ns.
 
 Three random seeds are used for generating the position of the trial vertex: $\texttt{ran0}\sim U(0,1)$, $\texttt{ran1}\sim U(-1,1)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$.
 
-Let $r=\sqrt[3]{\texttt{ran0}}*8390$ mm\footnote{$r_{PSUP}=8390$~mm is the radius of the PSUP.}, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: $\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
+Let $r=\sqrt[3]{\texttt{ran0}}*8390$ mm\footnote{$r_{PSUP}=8390$~mm is the radius of the PSUP.}, $\phi=\texttt{ran2Pi}$, $\cos\theta=\texttt{ran1}$ and $\sin\theta=\sqrt{1-{\cos^2\theta}}$, then the trial position can be built in Cartesian coordinate system: 
+
+$\vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)$. This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
 
 For the trial direction, two random seeds are used. Each follows a uniform distribution: $\texttt{ranPi}\sim U(0,\pi)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. Then the trial direction is built as: $\vec{u}_{0}=(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta)$, with zenith angle $\theta=\texttt{ranPi}$ and azimuth angle $\phi=\texttt{ran2Pi}$.
 

@@ -36,10 +36,10 @@
 \contentsline {subsubsection}{\numberline {3.3.7.1}Measurement Setup and Data Acquisition}{47}{subsubsection.3.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.3.7.2}Measurement}{50}{subsubsection.3.3.7.2}%
 \contentsline {subsubsection}{\numberline {3.3.7.3}Results}{56}{subsubsection.3.3.7.3}%
-\contentsline {section}{\numberline {3.4}SNO+ Electronics}{56}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Calibration}{58}{section.3.5}%
+\contentsline {section}{\numberline {3.4}SNO+ Electronics}{57}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Calibration}{59}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}The $^{16}$N Calibration Source}{60}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{62}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{63}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{64}{chapter.4}%
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{64}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Multi-path Vertex and Direction Reconstructions for the Water Phase}{67}{section.4.2}%
@@ -86,8 +86,8 @@
 \contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{145}{subsection.5.3.4}%
 \contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{145}{subsubsection.5.3.4.1}%
 \contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{147}{subsubsection.5.3.4.2}%
-\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{147}{subsubsection.5.3.4.3}%
-\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{152}{subsubsection.5.3.4.4}%
+\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{150}{subsubsection.5.3.4.3}%
+\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{153}{subsubsection.5.3.4.4}%
 \contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{156}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Backgrounds}{157}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Internal backgrounds}{157}{subsection.6.1.1}%
@@ -103,7 +103,7 @@
 \contentsline {subsection}{\numberline {6.3.7}Fitting Whole Low Background Dataset}{178}{subsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.3.8}Evaluating $^8$B Solar Neutrino Flux}{179}{subsection.6.3.8}%
 \contentsline {subsection}{\numberline {6.3.9}Systematics Evaluation}{183}{subsection.6.3.9}%
-\contentsline {subsection}{\numberline {6.3.10}A Summary of Results}{187}{subsection.6.3.10}%
+\contentsline {subsection}{\numberline {6.3.10}Summary of Results}{187}{subsection.6.3.10}%
 \contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{189}{subsection.6.3.11}%
 \contentsline {chapter}{\numberline {7}Conclusions}{190}{chapter.7}%
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{192}{appendix.A}%

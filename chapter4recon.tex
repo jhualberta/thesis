@@ -104,7 +104,7 @@ A 1D PDF, serving as a model of the angular distribution of the triggered PMTs a
 
 For the $i^{th}$ hit PMT, $\cos\theta^i_{\mathrm{Ch}}=\vec{u}_0\cdot\frac{\vec{X}^i_{{\mathrm{diff}}}}{|\vec{X}^i_{{\mathrm{diff}}}|}$, then the likelihood function is built as:
 \begin{equation}
-\ln \mathcal{L}(\vec{u}_0)=\sum_{i=1}^{{\mathrm{Nhits}}}L_i(\cos\theta_{\mathrm{Ch}}^i),
+\ln \mathcal{L}(\vec{u}_0)=\sum_{i=1}^{{\mathrm{NHits}}}\mathcal{L}_i(\cos\theta_{\mathrm{Ch}}^i),
 \end{equation}
 
 Finally, the fitter fits for the angular PDF by using the MRQ method to obtain the best-fit direction. There are several optimizations for improving the fitter performance. First, the group velocity used in the $t_{\mathrm{transit}}$ calculation is tuned, as shown in Sect.~\ref{sect:tuneGroupVelocity}. In Sect.~\ref{sect:fitterPull}, a drive correction for compensating the pulls in the reconstructed position is discussed. In Sect.~\ref{sect:PMTselector}, PMT selectors for sending proper PMT information to the fitter are discussed. 
@@ -140,7 +140,7 @@ In practice, $v_\mathrm{gr,eff}$ is calculated by an effective refractive index 
 	\caption[Group velocity vs. radial bias for the \texttt{MPW fitter}.]{Group velocity vs. radial bias for the \texttt{MPW fitter}.	\label{fig:plotVgr}}
 \end{figure}
 
-Later I turned to a more data-driven approach rather than only tuning from the simulations. This approach is to extract an average group velocity by analyzing the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run-100934 and run-107055, the source was deployed almost at the PSUP center, and the optical photons propagated to reach PMTs on the PSUP. 
+Later I turned to a more data-driven approach. This approach is to tune the average group velocity by analyzing the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run 100934 and run 107055, the source was deployed almost at the PSUP center, and the optical photons propagated to reach PMTs on the PSUP. 
 
 For each event, suppose the triggered PMTs were found within a solid angle
 \begin{equation*}
@@ -160,7 +160,7 @@ On the other hand, a solid angle $\Omega'$ is calculated as opposed to the solid
 v_\mathrm{gr}=\frac{2 r_\mathrm{PSUP}}{(T_1+T_2)}.
 \end{equation}
 
-The final estimate for $v_\mathrm{gr}$ was calculated by averaging the $v_\mathrm{gr}$ values obtained from all the events and triggered PMTs in both run-100934 and run-107055. It was found that $v_\mathrm{gr}=c/n_\mathrm{water,eff}=216.478$ mm/ns, where $n_\mathrm{water,eff}=1.38486$.
+The final estimate for $v_\mathrm{gr}$ was calculated by averaging the $v_\mathrm{gr}$ values obtained from all the events and triggered PMTs in both run 100934 and run 107055. It was found that $v_\mathrm{gr}=c/n_\mathrm{water,eff}=216.478$ mm/ns, where $n_\mathrm{water,eff}=1.38486$.
 
 The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs \cite{anderson2021optical,groupVmeasure}. That analysis can give a more accurate value for $v_\mathrm{gr}$, but it it was not applied here.
 
@@ -195,13 +195,12 @@ To obtain the values of $p_0$ and $p_1$, I generated electron events uniformly d
 \end{equation}
 and the parameters ($p_0$, $p_1$) were obtained by minimizing the $\chi^2$ function. When calculating $\chi^2$, fitted events having $|\vec{X}_{fit}-\vec{X}_{MC}| > 3~\mathrm{m}$ were rejected to improve the $\chi^2$ minimization results.
 
-For the 2 to 10 MeV $e^-$ event simulations (using \texttt{RAT} version 6.17.6), the values obtained for ($p_0$, $p_1$) are energy- (or NHit-) dependent. However using NHits-dependent functions $p_0(\mathrm{NHit}), p_1(\mathrm{NHit})$ as drive corrections does not improve the results. 
-Finally we take average values from the 5 to 10 MeV electron simulations and find the optimal drive correction is: 
+For the 2 to 10 MeV $e^-$ event simulations (using \texttt{RAT} version 6.17.6), the values obtained for ($p_0$, $p_1$) are energy- (or NHit-) dependent. However using NHits-dependent functions $p_0(\mathrm{NHits}), p_1(\mathrm{NHits})$ as drive corrections does not improve the results. Finally we take average values from the 5 to 10 MeV electron simulations and find the optimal drive correction is:
 \begin{equation}
 \vec{X}_{\mathrm{corrected}} = 0.9868\vec{X}_{fit} \, - \, 78.417\vec{u}_{fit}~\mathrm{[mm]} .
 \end{equation}
 
-Note that these drive correction parameters were obtained from simulations, and so changes of the simulation model, and especially changes to the optical model of the detector, can affect the $n_{gr,eff}$, mode cut and time residual cut, and thereby affect the drive correction parameters. If needed however the drive correction parameters can be re-coordinated with the changes in the simulation.
+Note that these drive correction parameters were obtained from simulations, and so changes of the simulation model, and especially changes to the optical model of the detector, can affect the $n_\mathrm{gr,eff}$, mode cut and time residual cut, and thereby affect the drive correction parameters. If needed however the drive correction parameters can be re-coordinated with the changes in the simulation.
 
 \begin{figure}[!htb]
 	\centering
@@ -249,12 +248,12 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. Thus the number of the hit PMTs is reduced to $n\times n$ for the fitter, i.e., $n_\mathrm{select}=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
 	
-		Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
+	Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
 
-A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln L/\mathrm{NHit}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
+A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln L/\mathrm{NHits}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
 
 \subsection{Performance of the Water Vertex Reconstruction}\label{sect:waterFitterVertex}
 
@@ -418,7 +417,7 @@ A reconstruction algorithm was developed to investigate the proposal, mentioned 
 	\caption[Position distribution of hit PMTs (zenith and azimuth angles).]{Position distribution of hit PMTs (zenith and azimuth angles) for 5 MeV electrons traveling along the $+x$ direction in pure water (left) and water bearing 0.1 ppm PPO (right).\label{pmt_wls}}	
 \end{figure}
 
-Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the $\mathrm{NHit}$ distribution (mean NHits). In pure water, a 1 MeV electron may cause about 7 PMT hits (but below the detector trigger threshold), while in the wbWLS case the 1 MeV electron simulation results (on average) detect an event with NHits = 20.
+Fig.~\ref{nhit_wls} shows the energies of simulated electrons as a function of the mean value of the NHits distribution (mean NHits). In pure water, a 1 MeV electron may cause about 7 PMT hits (but below the detector trigger threshold), while in the wbWLS case the 1 MeV electron simulation results (on average) detect an event with NHits = 20.
 
 \begin{figure}[htbp]
 	\centering	
@@ -810,7 +809,7 @@ This tagging algorithm was applied to reconstructed event vertices. Fig.~\ref{fi
 
 \begin{table}[ht]
 	\centering
-	\caption{\label{tab:partial_bipo214} Fit position biases and resolutions for the $^{214}$Bi-$^{214}$Po tagging. Unit: mm.}	
+	\caption[Fit position biases and resolutions for the $^{214}$Bi-$^{214}$Po tagging.]{\label{tab:partial_bipo214} Fit position biases and resolutions for the $^{214}$Bi-$^{214}$Po tagging. Unit: mm.}	
 	{\centering
 		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccc}
 			\toprule 
@@ -943,7 +942,7 @@ The SNO+ Antineutrino working group developed three figure of merit (FoM) quanti
 	\item[$\bullet$] $Z$-factor ($Z_{factor}$):
 	a score that uses the medians and median absolute deviations of hit probabilities from \texttt{EnergyRSP}:
 	\begin{equation}
-     Z'\equiv 1-\frac{3(\sigma_p+\sigma_n)}{\mu_p-\mu_n},
+     Z'\equiv 1-\frac{3(\sigma_p+\sigma_n)}{\mu_p-\mu_n}\; ,
     \end{equation}
     where $\mu_p$ is the median probability of all active PMT channels with hits; $\mu_n$ is the median probability of all active PMT channels; $\sigma_p$ is the median absolute deviation of hit PMT probability distribution; and
     $\sigma_n$ is median absolute deviation of PMT probability distribution.

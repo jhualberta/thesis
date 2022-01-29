@@ -200,7 +200,7 @@ By repeating the random selection, an ensemble of fake datasets were created. Ea
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{ensemble_fitExample.pdf}
-	\caption[An example of the $\cos\theta_\mathrm{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$.]{An example of the $\cos\theta_\mathrm{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line shows the fit. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fit results are $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.	\label{ensemble_test}}
+	\caption[An example of the $\cos\theta_\mathrm{sun}$ distribution fitted with $(N_{sig},N_{bkg})$.]{An example of the $\cos\theta_\mathrm{sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$. The black dots are data points and the red line shows the fit. For $N^r_{sig} = 73$ and $N^r_{bkg}=44$, the fit results are $N_{sig} = 73.42\pm9.42$ and $N_{bkg} = 43.58 \pm 7.73$, with a $\chi^2/ndf = 60.19/40 = 1.50$.	\label{ensemble_test}}
 \end{figure} 
 
 The fit pull and the fit bias were defined by \cite{leta}:
@@ -241,7 +241,7 @@ p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}}) \; d(-2\ln
 
 For the solar neutrino analysis, I used a quantity called ``Kullback–Leibler (KL) divergence'' (also called ``relative entropy'') as a new quantity to calculate the dissimilarity between a reconstructed event and a simulated solar neutrino event, and then to classify the possible solar neutrino event and the background event. Generally, the KL divergence is used to measure the dissimilarity of two probability distributions \cite{murphy2012machine}. The angle $\theta_\mathrm{Ch}$ between the reconstructed event orientation $\vec{u}_{fit}$ and the line joining fitted event position $\vec{X}_{fit}$ to PMT position is given by:
 \begin{equation*}
-\cos\theta_\mathrm{Ch}=\vec{u}_{fit} \, \cdot \, \frac{\vec{X}_{PMT}-\vec{X}_{fit}}{|\vec{X}_{PMT}-\vec{X}_{fit}|} \; ,
+\cos\theta_\mathrm{Ch}=\vec{u}_{fit} \, \cdot \, \frac{\vec{X}_\mathrm{PMT}-\vec{X}_{fit}}{|\vec{X}_\mathrm{PMT}-\vec{X}_{fit}|} \; ,
 \end{equation*}
 and this angle is compared with the averaged angular distribution of solar $\nu_e$ events extracted from the MC simulations (with the reconstructed $\vec{u}$ and $\vec{X}$ from MC), which is set as the nominal distribution. According to the simulations, the solar $\nu_e$ events produce nice Cherenkov angular distribution, which is peaked around the Cherenkov angle ($\theta_\mathrm{Ch}\sim 0.75$). On the other hand, background events with energies below 5 MeV may have smeared angular distributions. The dissimilarity of the event distribution to be investigated and the nominal distribution is calculated. The quantity $klDiv(p||q)$ is calculated as: 
 \begin{equation}\label{eq:kldiv}
@@ -267,12 +267,12 @@ Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. This symmetric quan
 
 To further reduce the background events, in addition to the `beforehand' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration\footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{Rat water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
 \begin{itemize}
-    \item $-11<Z_{factor}<1$ \, , 
-    \item $scaleLogL>10.85$ \, ,
-    \item $0<G_{test}<1.9$ \, ,
-    \item $U_{test}<0.95$ \, , 
-    \item ITR$>0.55$ \, , 
-    \item $-0.12<\beta_{14}<0.95$ \, . 
+    \item $-11<Z_{factor}<1$, 
+    \item $scaleLogL>10.85$,
+    \item $0<G_{test}<1.9$,
+    \item $U_{test}<0.95$,
+    \item ITR$>0.55$,
+    \item $-0.12<\beta_{14}<0.95$. 
 \end{itemize}
 These cuts are denoted as ``default cuts''.
 
@@ -343,9 +343,9 @@ F_k = \frac{\sqrt{N_SN_B}}{N_S+N_B}\sum_{l=1}^{n_{params}}1/W_{kl}(\bar{x}_{S,l}
 \end{equation} 
 where $N_{S(B)}$ are the number of signal (background) events in the training sample; $\bar{x}_{{S(B),l}}$ are the means of input variables for signal (background); and $W_{kl}$ is the covariance matrix \cite{tmvaWebsite}.
 
-For the settings in the TMVA, the BDT method was set by: (1) using the adaptive boosting (AdaBoost) algorithm; (2) training 400 trees with a maximum depth of 3; and (3) using gini index for the decision tree. 
+Considering both the CPU time and machine learning performances, the settings in the TMVA methods were optimized as follows. The BDT method was set by: (1) using the adaptive boosting (AdaBoost) algorithm; (2) training 400 trees with a maximum depth of 3; and (3) using gini index for the decision tree. 
 
-The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles.
+The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles. Detailed descriptions of these settings can be found in Ref.~\cite{albertsson2007tmva}.
 
 Nine variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant:  NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
 
@@ -736,7 +736,7 @@ Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} t
 
 Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.02306}_{-0.01912}$. Using the same procedure to evaluate the systematics of the elastic scattering flux fraction $f^{ES}_s$ gives $({f^{ES}_s})^{+0.009655}_{-0.008305}$.
 
-\subsection{A Summary of Results} \label{sect:solarESresults}
+\subsection{Summary of Results} \label{sect:solarESresults}
 
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
@@ -752,12 +752,12 @@ A quadratic total uncertainty $\sigma_{tot}$ is calculated by combining the larg
 \sigma_{tot}=\sqrt{\sigma^2_{stat,larger}+\sigma^2_{sys,larger}}.
 \end{equation}
 
-Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given here to recent measurements from other experiments (mentioned in Sect.~\ref{sect:solarNu}), including the SNO+ water phase measurement published in 2018 \cite{anderson2019measurement}, the Super-K phase-IV measurement (Super-K IV) and the combined four phases measurement (Super-K combined) \cite{abe2016solar}, and the Borexino measurements published in 2020 (Borexino 2020) \cite{agostini2020improved}.
-
+Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given here to recent measurements from SNO+ \cite{anderson2019measurement}, Super-K \cite{abe2016solar} and Borexino \cite{agostini2020improved}. The energy regions for , start and end dates of data-taking, and live time are also shown in the figure.
+ 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=12cm]{ESfluxCompare.pdf}
-	\caption[A comparison of the ES flux measured recently by three independent experiments (after BDT selection).]{A comparison of the ES fluxes measured recently by three independent experiments (after BDT selection). The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded band is for the unconstrained average value and uncertainty of all the results: $\hat \theta \pm 1\sigma_{\hat \theta}$.	\label{fig:ESfluxCompare}}
+	\includegraphics[width=12cm]{ESfluxCompare.png}
+	\caption[A comparison of the ES flux measured recently by three independent experiments.]{A comparison of the ES fluxes measured recently by three independent experiments: SNO+ 2018 published data (SNO+ 2018) \cite{anderson2019measurement}, Super-K phase-IV measurement (Super-K IV) and the combined four phases measurement (Super-K combined) \cite{abe2016solar}, and the Borexino measurements published in 2020 (Borexino 2020) \cite{agostini2020improved}. The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded band is for the unconstrained average value and uncertainty of all the results: $\hat \theta \pm 1\sigma_{\hat \theta}$.\label{fig:ESfluxCompare}}
 \end{figure}
 
 To combine the results from different experiments, an unconstrained average value $\hat \theta$ and its uncertainty $\sigma_{\hat\theta}$ are calculated by \cite{pdg2020,behnke2013data}:

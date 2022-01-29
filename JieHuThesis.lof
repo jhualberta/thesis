@@ -1,6 +1,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Feynman diagrams for the elastic scattering interaction in different channels at tree level.}}{9}{figure.2.1}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Feynman diagrams for the elastic scattering interaction at tree level.}}{9}{figure.2.1}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CC ES.}}}{9}{figure.2.1}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {NC ES.}}}{9}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces A diagram of the $\nu + e^-$ elastic scattering in the lab frame.}}{10}{figure.2.2}%
@@ -11,7 +11,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$2\nu \beta \beta $.}}}{27}{figure.2.6}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$0\nu \beta \beta $.}}}{27}{figure.2.6}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Energy spectrum of the $^{130}$Te $2\nu \beta \beta $ decay and the hypothetical $0\nu \beta \beta $ decay.}}{29}{figure.2.7}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Natural abundance vs. Q-values for different $2\nu \beta \beta $ isotopes, from Ref.\nobreakspace {}\cite {snop_nim_draft}.}}{30}{figure.2.8}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Natural abundance vs. Q-values for different $2\nu \beta \beta $ isotopes.}}{30}{figure.2.8}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The SNO+ detector labeled with main structures.}}{33}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces A Jablonski diagram for the organic scintillator.}}{39}{figure.3.2}%
@@ -22,11 +22,11 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces A vial filled with the test sample and the measurement setup.}}{48}{figure.3.7}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces A diagram shows the light yield measurement setup.}}{49}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces A typical triggered waveform.}}{52}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut}}{52}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces The 2D energy spectrum of the counting measurements.}}{53}{figure.3.11}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut.}}{52}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces The 2D energy spectrum of the counting measurements.}}{54}{figure.3.11}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces The single p.e. peak fitted with an asymmetric Gaussian function.}}{55}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Two dimensional spectrum of LAB-PPO sample with coincidence cut.}}{55}{figure.3.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces The SNO+ Source Manipulator System.}}{60}{figure.3.14}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Two dimensional spectrum of LAB-PPO sample with coincidence cut.}}{56}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces The SNO+ Source Manipulator System.}}{61}{figure.3.14}%
 \contentsline {figure}{\numberline {3.15}{\ignorespaces $^{16}$N calibration source geometry.}}{61}{figure.3.15}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces $^{16}$N main decay scheme.}}{62}{figure.3.16}%
 \addvspace {10\p@ }
@@ -112,7 +112,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N y-scan runs.}}}{137}{figure.5.11}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$^{16}$N z-scan runs.}}}{137}{figure.5.11}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Distributions of the angular error in direction reconstruction, from the data and from MC.}}{140}{figure.5.12}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Fitted direction resolution parameters $\beta _M$, $\beta _S$ for the source scans on ($x, y, z$)-axes respectively. Solid squares, MC; Open circles, data.}}{142}{figure.5.13}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Fitted direction resolution parameters $\beta _M$, $\beta _S$ for the source scans.}}{142}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N $x$-scan runs.}}}{142}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N $y$-scan runs.}}}{142}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$^{16}$N $z$-scan runs.}}}{142}{figure.5.13}%
@@ -129,21 +129,21 @@
 \contentsline {figure}{\numberline {5.20}{\ignorespaces $^{16}$N central-run 107055, $Z_{factor}$ vs. $E_{fit}$/5.1 MeV.}}{147}{figure.5.20}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC}}}{147}{figure.5.20}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {data}}}{147}{figure.5.20}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Reconstructed energy spectrum from the $^{16}$N central run 106925 and 107055.}}{148}{figure.5.21}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N run 106925}}}{148}{figure.5.21}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N run 107055}}}{148}{figure.5.21}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces NHit spectrum for the $^{16}$N central run 107055.}}{149}{figure.5.22}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces NHits spectrum of the $^{16}$N central run 107055.}}{147}{figure.5.21}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.}}{148}{figure.5.22}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N run 107055}}}{148}{figure.5.22}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N run 106925}}}{148}{figure.5.22}%
 \contentsline {figure}{\numberline {5.23}{\ignorespaces Simulated $^{16}$N energy spectrum for different processes.}}{149}{figure.5.23}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MPW data}}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MPW MC}}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {RAT} data}}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {RAT} MC}}}{150}{figure.5.24}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Converting number of photons to effective electron spectrum.}}{151}{figure.5.25}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{151}{figure.5.25}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{151}{figure.5.25}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{149}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MPW data}}}{149}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MPW MC}}}{149}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {RAT} data}}}{149}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {RAT} MC}}}{149}{figure.5.24}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Converting number of photons to effective electron spectrum.}}{150}{figure.5.25}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{150}{figure.5.25}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{150}{figure.5.25}%
 \contentsline {figure}{\numberline {5.26}{\ignorespaces The reconstructed energy spectrum fitted with resolution function.}}{152}{figure.5.26}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Fitted energy scales as a function of the source manipulator's radial position.}}{153}{figure.5.27}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Fitted energy scales as a function of the source manipulator's radial position.}}{152}{figure.5.27}%
 \contentsline {figure}{\numberline {5.28}{\ignorespaces Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.}}{153}{figure.5.28}%
 \contentsline {figure}{\numberline {5.29}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{154}{figure.5.29}%
 \contentsline {figure}{\numberline {5.30}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{155}{figure.5.30}%
@@ -157,7 +157,7 @@
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{160}{figure.6.1}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces The $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution of solar $\nu _e$ used as a PDF function.}}{162}{figure.6.2}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts.}}{164}{figure.6.3}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces An example of the $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution from a fake dataset fitted with $(N_{sig},N_{bkg})$.}}{165}{figure.6.4}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces An example of the $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution fitted with $(N_{sig},N_{bkg})$.}}{165}{figure.6.4}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets. }}{166}{figure.6.5}%
 \contentsline {figure}{\numberline {6.6}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets. }}{166}{figure.6.6}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces The $-2\qopname \relax o{ln}L$ distribution of the best fit results from the 5000 fake datasets. }}{167}{figure.6.7}%
@@ -196,7 +196,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{186}{figure.6.21}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{186}{figure.6.21}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{186}{figure.6.21}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments (after BDT selection).}}{188}{figure.6.22}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{188}{figure.6.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{199}{figure.A.1}%
