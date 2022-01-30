@@ -42,13 +42,13 @@ The vertex is defined by four parameters, namely $x,y,z$ and $t$. The fitter fir
 For each triggered event, photons created around the event position propagate to the hit PMTs. In a simplified detector geometry model that neglects the effects of scattering, reflection, and refraction, these photons are considered as propagating along straight lines that connect the trial event vertex to the hit PMTs. Thus the fitter evaluates a timing parameter, called the time residual ($t_\mathrm{res}$), which is defined as:
 \begin{equation}
 \label{eq:tres_define}
-t_\mathrm{res}=t_\mathrm{PMT} - t_{\mathrm{transit}} - t_{\mathrm{event}},
+t_\mathrm{res}=t_\mathrm{PMT} - t_{\mathrm{transit}} - t_{\mathrm{event}}\;,
 \end{equation}
 where $t_\mathrm{PMT}$ is the PMT trigger time recorded by the detector, $t_{\mathrm{event}}$ is the time when an event occurs (event time), and $t_{\mathrm{transit}}$ is the total transit time (or time of flight, TOF) taken by a photon traveling from the event position ($\vec{X}_{\mathrm{event}}$) to the hit PMT ($\vec{X}_{\mathrm{PMT}}$) and crossing different materials in the detector.
 
 To calculate $t_{\mathrm{transit}}$, the fitter uses Cherenkov photons in a prompt time window (called the ``prompt light''), chosen as $-10<t_{\mathrm{res}}<10$ ns for the \texttt{MPW fitter}, and the photons are assumed to propagate in straight lines (straight light paths). By assuming straight light paths, or rather, by neglecting that they are {\em not} perfectly straight, complicated aspects of photon propagation are neglected, including refraction and reflection when photons cross boundaries between different detector materials, absorption and scattering by the detector medium, and the lensing effects caused by the spherical structure of the acrylic vessel. In this case, the TOF can be simply calculated as 
 \begin{equation*}
-t_{\mathrm{transit}}=\frac{|\vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}|}{v_{\mathrm{water}}} \, 
+t_{\mathrm{transit}}=\frac{|\vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}|}{v_{\mathrm{water}}} \; , 
 \end{equation*}
 where $v_{\mathrm{water}}$ is an effective average photon group velocity obtained by tuning on Monte Carlo simulations. Sect.~\ref{sect:tuneGroupVelocity} will show the details of this tuning. Based on reconstruction experience from the SNO experiment, it is found that even without the detailed tuning of $v_{\mathrm{water}}$ the fitter still produces results that are rather consistent with the outcome that {\em does} use a more detailed calculation \cite{boulay2004direct,jones2011background}. Fig.~\ref{mpwdiagram_position} shows straight light paths from the event position to the hit PMT positions.
 \begin{figure}[htbp]
@@ -69,7 +69,7 @@ A one-dimensional (1D) probability density function (PDF) is used for fitting th
 
 For a trial vertex $(\vec{X}_0,t_0)$, the fitter calculates a $t_{\mathrm{res}}$ value with respect to each hit PMT. Looping over all the hit PMTs, a likelihood function is built as:
 \begin{equation}\label{eq:vertexLogL}
-\ln\mathcal{L}(\vec{X}_0,t_0)=\sum_{i=1}^{{\mathrm{NHits}}}\ln P(t^i_{\mathrm{res}}),
+\ln\mathcal{L}(\vec{X}_0,t_0)=\sum_{i=1}^{{\mathrm{NHits}}}\ln P(t^i_{\mathrm{res}})\;,
 \end{equation}
 where $t^i_{\mathrm{res}}$ is the time residual calculated from the $i^{th}$ hit PMT; NHits is the total number of PMTs triggered by an event and $P(t^i_{\mathrm{res}})$ is the probability returned by reading the PDF when given a $t^i_{\mathrm{res}}$ for the $i^{th}$ hit PMT.
 

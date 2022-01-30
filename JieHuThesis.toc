@@ -35,11 +35,11 @@
 \contentsline {subsection}{\numberline {3.3.7}Relative Light Yield Measurements of the Te-loaded Liquid Scintillators}{47}{subsection.3.3.7}%
 \contentsline {subsubsection}{\numberline {3.3.7.1}Measurement Setup and Data Acquisition}{47}{subsubsection.3.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.3.7.2}Measurement}{50}{subsubsection.3.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.3.7.3}Results}{56}{subsubsection.3.3.7.3}%
-\contentsline {section}{\numberline {3.4}SNO+ Electronics}{57}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Calibration}{59}{section.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.7.3}Results}{55}{subsubsection.3.3.7.3}%
+\contentsline {section}{\numberline {3.4}SNO+ Electronics}{56}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Calibration}{58}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}The $^{16}$N Calibration Source}{60}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{63}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{62}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{64}{chapter.4}%
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{64}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Multi-path Vertex and Direction Reconstructions for the Water Phase}{67}{section.4.2}%
