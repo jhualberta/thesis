@@ -487,7 +487,7 @@ Typical CPU times ($t_{CPU}$) to train each algorithm for chosen energy regions 
 	\end{tabular*}
 \end{table}
 
-The testing results in Table.~\ref{tab:tmvaMethod_allE} show that the Fisher/LD output gives the worst AUC. The BDT and MLP outputs are close to each other while the MLP gives the largest AUC values. However, the MLP was the expensive method in terms of CPU usage. All three methods are less successful in  separating signal from backgrounds in the lower energy region.
+The testing results in Table.~\ref{tab:tmvaMethod_allE} show that the Fisher/LD output gives the worst AUC. The BDT and MLP outputs are close to each other while the MLP gives the largest AUC values. However, the MLP was the most expensive method in terms of CPU usage. All three methods are less successful in separating signal from backgrounds in the lower energy region.
 
 The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MLP method on the test sub-dataset. For the real dataset from run-200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event and the discriminator responses, $D_{BDT}$ and $D_{MLP}$ were calculated respectively. Cuts of $D_{BDT}>0.0$ and $D_{MLP}>0.5$ were applied to extract the solar $\nu_e$ signals from backgrounds. 
 %The distributions of $\cos\theta_\mathrm{sun}$ were shown in Fig. as the results.
@@ -520,7 +520,7 @@ The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance
 %\end{figure}
 \subsection{TMVA Outputs}
 
-The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 80.8\% of the total data as background events while the MLP classifies about 76.17\% as background. Rather flat distributions for  $\cos\theta_\mathrm{sun}$ are apparent the plots. Since background events are predominant in the $4<E<5$ MeV region, the analyses to follow will focus only on the $5<E<15$ MeV region.
+The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 80.8\% of the total data as background events while the MLP classifies about 76.17\% as background. Rather flat distributions for  $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region, the analyses to follow will focus only on the $5<E<15$ MeV region.
 
 \begin{figure}[!htb]
 	\centering
