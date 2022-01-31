@@ -1,56 +1,15 @@
-Since the researches in this thesis relate to the SNO+ experiment, the results described in this thesis required the effort of many individuals from the multi-national SNO+ collaboration. While the thesis focuses on the work performed by the author, some of the work was based on the methods and tools developed by the SNO+ working groups. 
+Since the researches in this thesis relate to the SNO+ experiment, the results described in this thesis required the effort of many individuals from the multi-national SNO+ collaboration. While the thesis focuses on the work performed by the author, some of the work was based on the methods and tools developed by the SNO+ working groups. The author also got a few suggestions and ideas from the SNO+ working groups.
 
 Usage of work other than the author's is appropriately cited in the text. Chapter 2 is a review of the literature and experimental results of neutrino physics available at the time of writing this work. 
 
-Chapter 3 is an overview of the SNO+ detector based on the work of the SNO+ collaboration. The relative light yield measurements of the Te-loaded liquid scintillators presented in the same chapter (Sect.~\ref{sect:RelativeLightYieldMeasurement}) was performed by the author, with the assistance from the author's supervisor, Dr. A. L. Hallin, and Dr. M. Sharma and Prof. J. Veinot from the Chemistry Department at U. Alberta.
+Chapter 3 is an overview of the SNO+ detector based on the work of the collaboration. The relative light yield measurements of the Te-loaded liquid scintillators presented in Sect.~\ref{sect:RelativeLightYieldMeasurement} was performed by the author, with the assistance from the author's supervisor, Dr. A. L. Hallin, and Dr. M. Sharma and Prof. J. Veinot from the Chemistry Department at U. Alberta.
 
 Unless otherwise stated or cited in the text, the analyses of simulations and data from Chapters 4 to 6 are my own work, performed under the supervision of Drs. A. L. Hallin, J. P. Y\'{a}\~{n}ez Garza, and C. B. Krauss. 
 
-The framework of the reconstruction algorithm presented in the Chapter 4 was first developed by Dr. A. L. Hallin. Drs. K. Singh and D. J. Auty (U. Alberta) further developed and extended the framework for the SNO+ water phase. Dr. J. Tseng (U. Oxford) restructured the framework using more flexible and efficient C++ code logic, and implemented it into the SNO+ software. The author first involved in testing and optimizing the algorithm on simulations and data. To do these, the author used the software programs developed by the SNO+ collaboration for the detector simulation (\texttt{RAT}) and basic tools for accessing data (\texttt{RAT Tool}). Later, the author extended the framework's usage for the SNO+ multiple physics phases, which is crucial for the analyses during the SNO+ partial-fill phase. The reconstruction algorithms relay on the data and parameters measured by the bench-top experiments. These measurements were performed by the collaboration.
+The framework of the reconstruction algorithms presented in the Chapter 4 was first developed by Dr. A. L. Hallin. Drs. K. Singh and D. J. Auty (U. Alberta) further developed and extended the framework for the SNO+ water phase. The SNO+ reconstruction and CIC working groups helped to implement it into the SNO+ software (\texttt{RAT}). The author first involved in testing and optimizing the algorithms on simulations and data. Later, the author extended the framework's usage for the SNO+ multiple physics phases. Particularly, the author developed the position reconstruction algorithm which is crucial for the analyses of the SNO+ partial-fill phase. The algorithms require the timing and light yield parameters of the liquid scintillator. The values of these parameters were measured and determined by the collaboration. To develop the reconstruction framework, the author performed simulations by using the \texttt{RAT}. The other reconstruction algorithms developed by the collaboration were also introduced in this chapter for completeness.
+ 
+The data used in Chapters 5 and 6 were collected by the SNO+ detector during the operation, which require a collaborative effort. The simulations used in the two chapters were mostly produced by the SNO+ calibration and background working groups. The author applied the reconstruction algorithms (described in chapter 4) to the data and simulations in the two chapters. The author evaluated the reconstruction systematics for the water physics in Chapter 5, following the routines and methods used by the SNO+ water physics analysis.
 
-The various simulations and data presented in Chapters 5 and 6, 
+In Chapter 6, the author used the position and direction reconstruction algorithms to analyze the water physics data. The author evaluated the Boron-8 solar neutrino rates and the background rates from the dataset. The systematics and uncertainties from Chapter 5 were evaluated and included in the results.
 
-collected using the SNO+detector, were the result of a collaborative effort in detector operation. 
-
-
-The
-	design of an antineutrino search algorithm (Chapter 5), its application on the
-	data and simulations (Chapters 5{8), and its optimization (Chapter 6) were
-		my own work.
-
-
-
-
-The author applied the reconstruction algorithm 
-
-
-Chapter 5 focuses on the calibration during the SNO+ water phase. The \texttt{MP water fitter} was applied to the calibration data and simulations. Among the reconstructed quantities, the position and direction results were based on the MultiPath water fitter, while the energy and classifier results were extracted using the SNO+ official algorithms. However, these results (energy, event type) depend on the position and direction results provided by \texttt{MP water fitter}. By comparing simulations and data, I obtained the reconstruction resolutions and uncertainties, following procedures suggested by the collaboration. This chapter also discusses the calibration during the partial-fill phase. The \texttt{MP partial fitter} was applied. Based on the calibration data, analysis for extracting the Cherenkov signals from the scintillation lights is discussed.
-
-
-
-
-The simulations of the SNO+ detector, described in Chapters 5, were performed by myself using the software programs developed by the SNO+ collaboration. The background simulation, also detailed in Chapter 5 was my own
-work. 
-
-
-
-
-
-
-
-
-
-The results of Chapter 5 underpin an analysis (in Chapter 6) of solar neutrinos during the SNO+ water phase. 
-
-The \texttt{MP water fitter} was applied to the water phase physics data and simulations. Based on the simulations, I applied a machine learning analysis to optimize the signal and background separation. Then the optimized separation parameters were applied to the data to extract the solar neutrinos from the backgrounds. I evaluated the solar neutrino rates and the background rates from the dataset. The systematics and uncertainties from Chapter 5 were evaluated and included in the results. Finally, a $^8$B solar neutrino flux was evaluated.
-
-The \texttt{RAT} Monte-Carlo used in the analysis is the work of the SNO collaboration.
-
-using the computing resources, provided by Compute Canada
-
-and also with the helps of technical support team at U. Alberta.
-
-data with the efforts
-
-
-The author also got a few suggestions and ideas from Brian Karr and Dr. Alex Wright.
+The author executed algorithms on data and simulation mentioned above by using the Compute Canada computing resources, that wereallocated to Dr. C. B. Krauss, and also with the help of the technical support team at U. Alberta.
