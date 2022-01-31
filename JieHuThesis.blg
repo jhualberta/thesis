@@ -3,16 +3,20 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: JieHuThesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
-You're missing a field name---line 1134 of file thesis.bib
+I was expecting a `,' or a `}'---line 866 of file thesis.bib
+ :   title={Search for Majorana neutrinos near the inverted mass hierarchy region with {K}am{LAND}}
+ :                                                                                                 -{Z}en},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1133 of file thesis.bib
  : 
  : %%% title={The {SNO+} experiment},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1791 of file thesis.bib
+Repeated entry---line 1790 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2040 of file thesis.bib
+Repeated entry---line 2039 of file thesis.bib
  : @phdthesis{sorensen2016temperature
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -22,6 +26,9 @@ Warning--can't use both volume and number fields in gann2015everything
 Warning--empty journal in davini2016cno
 Warning--empty journal in websiteHyperK
 Warning--empty journal in websiteDune
+Warning--empty author in gando2016search
+Warning--empty journal in gando2016search
+Warning--empty year in gando2016search
 Warning--empty journal in snolabuserhandbook
 Warning--empty author in muonflux
 Warning--empty journal in muonflux
@@ -42,43 +49,43 @@ Warning--empty year in markNeuralTalk
 Warning--empty journal in marzec2019measurement
 You've used 192 entries,
             1876 wiz_defined-function locations,
-            1404 strings with 34350 characters,
-and the built_in function-call counts, 40235 in all, are:
-= -- 3528
-> -- 2285
+            1402 strings with 34212 characters,
+and the built_in function-call counts, 39939 in all, are:
+= -- 3502
+> -- 2251
 < -- 0
-+ -- 862
-- -- 670
-* -- 2739
-:= -- 6327
-add.period$ -- 251
++ -- 851
+- -- 659
+* -- 2717
+:= -- 6275
+add.period$ -- 250
 call.type$ -- 192
 change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 216
-duplicate$ -- 2219
-empty$ -- 3695
-format.name$ -- 670
-if$ -- 9531
+cite$ -- 219
+duplicate$ -- 2207
+empty$ -- 3688
+format.name$ -- 659
+if$ -- 9461
 int.to.chr$ -- 0
 int.to.str$ -- 192
 missing$ -- 185
 newline$ -- 638
-num.names$ -- 186
-pop$ -- 669
+num.names$ -- 185
+pop$ -- 675
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1098
+skip$ -- 1081
 stack$ -- 0
-substring$ -- 928
-swap$ -- 725
+substring$ -- 916
+swap$ -- 712
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 24
-while$ -- 281
+warning$ -- 27
+while$ -- 279
 width$ -- 195
-write$ -- 1784
-(There were 3 error messages)
+write$ -- 1778
+(There were 4 error messages)
