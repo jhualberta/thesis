@@ -168,7 +168,7 @@ Fig.~\ref{MPWscanXYZResols} shows that the resolution for vertex reconstruction 
 To quantify the discrepancies between the MC and data, a relative difference of $\sigma_p$ between the MC and data is defined as \cite{waterunidoc}
 
 \begin{equation}
-\sigma_{p,\delta}\equiv\sqrt{\sum_i|(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2|}~~(i=x,y,z),
+\sigma_{p,\delta}\equiv\sqrt{\sum_i|(\sigma^{data}_{P,i})^2-(\sigma^{MC}_{P,i})^2|}~~(i=x,y,z)\; ,
 \end{equation}
 
 Fig.~\ref{pos_relative_sigma_biasesVsPositions} shows that $\sigma_{p,\delta}$ varies along the internal ($x, y, z$)-axis scans. All the $\sigma_p$ values are smaller than $190~$mm, except for that with the source at $z=4973.567~$mm (run 106979) and (therefore) in proximity to the neck of the AV, whose presence probably is responsible for the anomaly. Looking at the pattern on Fig.~\ref{pos_relative_sigma_biasesVsPositions} we see that $\sigma_p$ is larger (worse) when the source is close to the AV (i.e. at the end of the position axes) and that when the source is close to the {\em center} of the AV, the differences are below $100~$mm.
@@ -261,7 +261,7 @@ The vertex scale systematics were then transformed, e.g. $x'=(1+\delta_x/100)x$ 
 
 The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r$ is calculated as\cite{waterunidoc}:
 \begin{equation}
-\delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}}.
+\delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}}\; .
 \end{equation}
 Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table.~\ref{tab:vertexScale}, the $\delta_r^+$ and $\delta_r^-$ are calculated, respectively. Then the two-sided bounds for the confidence interval of reconstructed radius $r$ are calculated by as $r^+=(1+\delta^+_r/100) \; r$ and $r^-=(1+\delta^-_r/100) \; r$.
 
@@ -279,9 +279,9 @@ Now define $\theta$ as the angular difference between the ``true'' and the recon
 
 The distribution of $\cos\theta$ was fitted with the direction resolution function (Eqn.~\ref{eq:directResol}) mentioned in Sect.~\ref{sect:directResol}. Before the fitting, a few cuts relating to the position and energy reconstructions were applied to the data or simulation results. As mentioned in Chapter 4, the direction reconstruction relies on the position. Therefore, the $posFoM$ cut ($scaleLogL>10$) was applied before evaluating the direction reconstruction. Other cuts were suggested by the SNO+ collaboration to remove instrumental backgrounds, and poor reconstructions for events close to the source container or far away from the source. To remove instrumental backgrounds, the cuts
 \begin{itemize}
-\item $E_{fit} > 3.5$ MeV
-\item ITR$>0.55$
-\item $-0.12<\beta_{14}<0.95$
+\item $E_{fit} > 3.5$ MeV\;,
+\item ITR$>0.55$\;,
+\item $-0.12<\beta_{14}<0.95$\;,
 \end{itemize}
 were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut, $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm, was applied. For the internal scans, a radius cut $R'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans \cite{waterunidoc}.
 

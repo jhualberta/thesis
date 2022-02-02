@@ -142,7 +142,7 @@ Before the analysis, the following ``beforehand cuts'' were applied:
 \end{itemize}
 Here $\mathrm{NHits}>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with $\mathrm{NHits}>20$ were reconstructed by the \texttt{MPW fitter}. The $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
 \begin{equation*}
-R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}
+R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}\;, 
 \end{equation*}
 (the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4.). The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
 
@@ -162,11 +162,11 @@ Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as the free parameters
 
 \begin{equation}\label{eq:solar_poissonFitMinimizer}
 -2\ln\mathcal \lambda(N_{sig},N_{bkg})
-=2\sum_{i=0}^{N_{bins}}[\mu_i(N_{sig},N_{bkg})-n_i+n_i\ln\frac{n_i}{\mu_i(N_{sig},N_{bkg})}],
+=2\sum_{i=0}^{N_{bins}}[\mu_i(N_{sig},N_{bkg})-n_i+n_i\ln\frac{n_i}{\mu_i(N_{sig},N_{bkg})}]\; ,
 \end{equation}
 where $\mu_i(N_{sig},N_{bkg})$ is the expected number of events in each bin
 \begin{equation*}
-\mu_i(N_{sig},N_{bkg})=N_{sig}\cdot P^i_{ES}(E^i)+N_{bkg}\cdot\frac{1}{N_{bins}}\,
+\mu_i(N_{sig},N_{bkg})=N_{sig}\cdot P^i_{ES}(E^i)+N_{bkg}\cdot\frac{1}{N_{bins}}\; ,
 \end{equation*}
 and $N_{bins}$ is the total number of the bins, usually taken as 40 (for a bin width of 0.05 covering -1 to 1). The calculation of Eqn.~\ref{eq:solar_poissonFitMinimizer} includes the cases when the bin contains zero ($n_i=0$).
 
@@ -205,11 +205,11 @@ By repeating the random selection, an ensemble of fake datasets were created. Ea
 
 The fit pull and the fit bias were defined by \cite{leta}:
 \begin{equation}
-\mathrm{bias}=\frac{N_{sig}-N^r_{sig}}{N_{sig}},
+\mathrm{bias}=\frac{N_{sig}-N^r_{sig}}{N_{sig}}\; ,
 \end{equation}
 
 \begin{equation}
-\mathrm{pull}=\frac{N_{sig}-N^r_{sig}}{\sigma_{sig}},
+\mathrm{pull}=\frac{N_{sig}-N^r_{sig}}{\sigma_{sig}}\; ,
 \end{equation}
 where $N_{sig}$ is the fitted number of signal events, $\sigma_{sig}$ is the statistical uncertainty of $N_{sig}$; $N^{r}_{sig}$ is used as the true number of signal events in the fake dataset.
 
@@ -245,7 +245,7 @@ For the solar neutrino analysis, I used a quantity called ``Kullback–Leibler (
 \end{equation*}
 and this angle is compared with the averaged angular distribution of solar $\nu_e$ events extracted from the MC simulations (with the reconstructed $\vec{u}$ and $\vec{X}$ from MC), which is set as the nominal distribution. According to the simulations, the solar $\nu_e$ events produce nice Cherenkov angular distribution, which is peaked around the Cherenkov angle ($\theta_\mathrm{Ch}\sim 0.75$). On the other hand, background events with energies below 5 MeV may have smeared angular distributions. The dissimilarity of the event distribution to be investigated and the nominal distribution is calculated. The quantity $klDiv(p||q)$ is calculated as: 
 \begin{equation}\label{eq:kldiv}
-klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}},
+klDiv(p||q) \equiv \sum_{i}^N p(x_i)\log{\frac{p(x_i)}{q(x_i)}}\; ,
 \end{equation}
 where $p(x_i)$ is the angular distribution after a time residual window cut: $-5<t_{Res}<1~ns$, to extract prompt Cherenkov lights. Both of the event and the MC distributions were filled into a histogram with 40 bins ranging from [-1,1] and the $klDiv$ values were calculated bin by bin excluding the empty bins (zero count). A small $klDiv$ value indicates a small dissimilarity.
 
@@ -259,7 +259,7 @@ These values were used for distinguishing the signal from backgrounds, which wil
 
 A symmetrical form of $klDiv$ can be taken as:
 \begin{equation}\label{eq:symKlDiv}
-klDiv(p,q) \equiv \frac{1}{2}\sum_{i}^N (p\log{\frac{p}{q}}+q\log{\frac{q}{p}}),
+klDiv(p,q) \equiv \frac{1}{2}\sum_{i}^N (p\log{\frac{p}{q}}+q\log{\frac{q}{p}})\; ,
 \end{equation}
 Since $klDiv(p,q)=klDiv(q,p)$, it has a meaning of distance. This symmetric quantity is used in the TMVA method in Sect.~\ref{sect:tmva}.
 
@@ -335,11 +335,11 @@ Three machine-learning algorithms/classification methods implemented in the \tex
 
 The Fisher discriminant $y_{F_i}(i)$ for classifying event $i$ is defined by \cite{tmvaWebsite}:
 \begin{equation}
-y_{F_i}(i) = F_0+\sum_{k=1}^{n_{params}}F_k x_k(i),
+y_{F_i}(i) = F_0+\sum_{k=1}^{n_{params}}F_k x_k(i)\; ,
 \end{equation}
 where $n_{params}$ is the number of input variables, and the Fisher coefficient $F_k$ is given by:
 \begin{equation}
-F_k = \frac{\sqrt{N_SN_B}}{N_S+N_B}\sum_{l=1}^{n_{params}}1/W_{kl}(\bar{x}_{S,l}-\bar{x}_{B,l}),
+F_k = \frac{\sqrt{N_SN_B}}{N_S+N_B}\sum_{l=1}^{n_{params}}1/W_{kl}(\bar{x}_{S,l}-\bar{x}_{B,l})\; ,
 \end{equation} 
 where $N_{S(B)}$ are the number of signal (background) events in the training sample; $\bar{x}_{{S(B),l}}$ are the means of input variables for signal (background); and $W_{kl}$ is the covariance matrix \cite{tmvaWebsite}.
 
@@ -643,12 +643,12 @@ The $N_{sig}$ and $N_{bkg}$ values obtained here by fitting the flux fractions a
 With the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}$, the estimated total flux is:
 
 \begin{equation}
-\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}},
+\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.459(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; ,
 \end{equation}
 
 and the estimated elastic scattering flux is:
 \begin{equation}
-\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.074\pm 0.2061(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
+\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.074\pm 0.2061(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
 \end{equation}
 
 The next section will evaluate the systematic uncertainties of the flux fractions.
@@ -736,20 +736,20 @@ Applying the systematic transformation in Table.~\ref{tab:solar_uncertainties} t
 
 Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.02306}_{-0.01912}$. Using the same procedure to evaluate the systematics of the elastic scattering flux fraction $f^{ES}_s$ gives $({f^{ES}_s})^{+0.009655}_{-0.008305}$.
 
-\subsection{Summary of Results} \label{sect:solarESresults}
+\subsection{Summary of Results}\label{sect:solarESresults}
 
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
-{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.459(stat.)^{+0.126}_{-0.104}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}},
+{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.459(stat.)^{+0.126}_{-0.104}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}}\; ,
 \end{equation}
 while the ES flux is:
 \begin{equation}
-\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.07\pm 0.206(stat.)^{+0.0527}_{-0.0454} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}.
+\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.07\pm 0.206(stat.)^{+0.0527}_{-0.0454} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
 \end{equation}
 
 A quadratic total uncertainty $\sigma_{tot}$ is calculated by combining the larger uncertainties in statistics and systematics:
 \begin{equation}
-\sigma_{tot}=\sqrt{\sigma^2_{stat,larger}+\sigma^2_{sys,larger}}.
+\sigma_{tot}=\sqrt{\sigma^2_{stat,larger}+\sigma^2_{sys,larger}}\; .
 \end{equation}
 
 Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given here to recent measurements from SNO+ \cite{anderson2019measurement}, Super-K \cite{abe2016solar} and Borexino \cite{agostini2020improved}. The energy regions for , start and end dates of data-taking, and live time are also shown in the figure.
@@ -762,11 +762,11 @@ Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given
 
 To combine the results from different experiments, an unconstrained average value $\hat \theta$ and its uncertainty $\sigma_{\hat\theta}$ are calculated by \cite{pdg2020,behnke2013data}:
 \begin{equation}
-\hat \theta = \sum_{i=1}^{N} \left(\frac{x_i}{\sigma_i^2}\right)\Biggm/\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right),
+\hat \theta = \sum_{i=1}^{N} \left(\frac{x_i}{\sigma_i^2}\right)\Biggm/\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right)\; ,
 \end{equation}
 
 \begin{equation}
-\sigma_{\hat\theta} =\left[\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right) \right]^{-\frac{1}{2}},
+\sigma_{\hat\theta} =\left[\sum_{i=1}^{N}\left(\frac{1}{\sigma_i^2}\right) \right]^{-\frac{1}{2}}\; ,
 \end{equation}
 where $x_i$ is the measured $\Phi_{ES}$ value from each experiment, and the $\sigma_i$ is the total uncertainty $\sigma_{tot}$ calculated from each experiment. 
 

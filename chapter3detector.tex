@@ -174,7 +174,7 @@ To load the $^{130}$Te into the liquid scintillator, an organo-metallic compound
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[height = 3cm]{TeBD_process.png}
-	\caption{Initial stages of the TeBD compound formation, modified from Ref.~\cite{Paton:2019kgy}.}
+	\caption[Initial stages of the TeBD compound formation.]{Initial stages of the TeBD compound formation, modified from Ref.~\cite{Paton:2019kgy}.}
 	\label{fig:paton_te}
 \end{figure}
 
@@ -280,7 +280,7 @@ To quantify the light yield differences between different samples, an analysis m
 First, from the energy spectrum, the single p.e. peak was fitted with an asymmetric Gaussian function ($f_{asym}$ in Eqn.~\ref{eq:asyGaus}), as shown in Fig.~\ref{fitSinglePE}. The mean value of the asymmetric Gaussian ($p_0$) represents the ADC channel number corresponding to the single p.e. peak for the weighting. 
 
 \begin{equation}\label{eq:asyGaus}
-f_{asym}=c \; \exp\left[- \frac{(x-\mu)^2}{2 \sigma^2} \, \right] \; \mathrm{Erfc}(\xi),
+f_{asym}=c \; \exp\left[- \frac{(x-\mu)^2}{2 \sigma^2} \, \right] \; \mathrm{Erfc}(\xi)\; ,
 \end{equation}
 where $\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma}$.
 
@@ -333,7 +333,7 @@ The anode pulse produced from the PMT travels along 35 m long RG59/U type coaxia
 
 To tidily manage the more than 9000 PMTs in the SNO+ detector, the coaxial cables connected to the PMTs are grouped into bundles. Each bundle is connected to a Paddle Card, which is linked to a PMT Interface Card (PMTIC). The PMTIC supplies the high voltages and receives the signals from the PMTs. 32 channels (for 32 PMTs) in the PMTIC are plugged into a Front End Card (FEC) that processes, digitizes, and stores those 32 PMT signals. There are in total over 300 of the Front End Cards, distributed (or organized) across 19 `crates' to energize and monitor the 9728 PMT channels in total. Of that total, 32 channels are reserved for calibration inputs and labeled as FEC Diagnostic (FECD) channels. These FECD channels are mainly used to tag calibration events. The triggered PMTs can be labeled by the logical channel number (lcn) using the map of the PMT to the crates and cards \cite{snop_jinst,stringer2019sensitivity}:
 \begin{equation}
-\mathrm{lcn = 512 \times crate + 32 \times FEC + channel}.
+\mathrm{lcn = 512 \times crate + 32 \times FEC + channel}\; .
 \end{equation}
 
 A 10-MHz and a 50-MHz clock are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined origin $zero$, namely midnight on January 1, 2010 (GMT), until the moment when the event happens. A 10-MHz clock used for counting the absolute time started at $zero$. It has a 53 bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the global trigger time (GT) to 20 ns. This clock has a 43 bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays \cite{rattime,stringer2019sensitivity}. 
