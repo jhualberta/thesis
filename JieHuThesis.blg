@@ -8,9 +8,18 @@ You're missing a field name---line 1117 of file thesis.bib
  : %%% title={The {SNO+} experiment},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1259 of file thesis.bib
+ : } 
+ :   %%% not used
+I'm skipping whatever remains of this entry
 Repeated entry---line 1765 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2032 of file thesis.bib
+ :   
+ :   school={University of Pennsylvania},
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty journal in superKwebsite
 Warning--can't use both volume and number fields in gann2015everything
@@ -33,40 +42,40 @@ Warning--can't use both volume and number fields in singh2020underwater
 Warning--empty year in brunroot
 Warning--empty year in markMachineLearning
 Warning--empty year in markNeuralTalk
-Warning--empty journal in marzec2019measurement
+Warning--empty school in marzec2019measurement
 You've used 192 entries,
             1876 wiz_defined-function locations,
-            1405 strings with 34507 characters,
-and the built_in function-call counts, 40254 in all, are:
-= -- 3534
-> -- 2285
+            1405 strings with 34552 characters,
+and the built_in function-call counts, 40298 in all, are:
+= -- 3540
+> -- 2296
 < -- 0
-+ -- 862
-- -- 670
-* -- 2738
-:= -- 6330
-add.period$ -- 252
++ -- 865
+- -- 673
+* -- 2745
+:= -- 6340
+add.period$ -- 253
 call.type$ -- 192
-change.case$ -- 143
+change.case$ -- 142
 chr.to.int$ -- 0
 cite$ -- 214
-duplicate$ -- 2221
-empty$ -- 3696
-format.name$ -- 670
-if$ -- 9537
+duplicate$ -- 2219
+empty$ -- 3690
+format.name$ -- 673
+if$ -- 9544
 int.to.chr$ -- 0
 int.to.str$ -- 192
-missing$ -- 184
-newline$ -- 639
+missing$ -- 183
+newline$ -- 640
 num.names$ -- 186
-pop$ -- 667
+pop$ -- 664
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1100
+skip$ -- 1102
 stack$ -- 0
 substring$ -- 928
-swap$ -- 727
+swap$ -- 728
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -74,5 +83,5 @@ type$ -- 0
 warning$ -- 22
 while$ -- 281
 width$ -- 195
-write$ -- 1788
-(There were 2 error messages)
+write$ -- 1790
+(There were 4 error messages)
