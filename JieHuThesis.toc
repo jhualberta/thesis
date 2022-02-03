@@ -86,34 +86,34 @@
 \contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{145}{subsection.5.3.4}%
 \contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{145}{subsubsection.5.3.4.1}%
 \contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{147}{subsubsection.5.3.4.2}%
-\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{147}{subsubsection.5.3.4.3}%
+\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{148}{subsubsection.5.3.4.3}%
 \contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{152}{subsubsection.5.3.4.4}%
-\contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{156}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Backgrounds}{157}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Internal backgrounds}{157}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}External backgrounds}{158}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Solar Neutrino Analysis in Open Dataset}{158}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Likelihood Fits for Solar Neutrino Candidate Events}{161}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Maximum Likelihood Fit}{162}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{163}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Kullback–Leibler Divergence for High Level Cuts}{165}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Signal-background Discrimination Based on TMVA}{168}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}TMVA Outputs}{175}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}Discussions of TMVA Results}{178}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Fitting Whole Low Background Dataset}{178}{subsection.6.3.7}%
-\contentsline {subsection}{\numberline {6.3.8}Evaluating $^8$B Solar Neutrino Flux}{179}{subsection.6.3.8}%
-\contentsline {subsection}{\numberline {6.3.9}Systematics Evaluation}{183}{subsection.6.3.9}%
-\contentsline {subsection}{\numberline {6.3.10}Summary of Results}{187}{subsection.6.3.10}%
-\contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{189}{subsection.6.3.11}%
-\contentsline {chapter}{\numberline {7}Conclusions}{190}{chapter.7}%
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{192}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{192}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{193}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{196}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{197}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{198}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{198}{section.A.6}%
-\contentsline {section}{\numberline {A.7}Information for $^{16}$N Scan Runs}{203}{section.A.7}%
-\contentsline {chapter}{\numberline {B}Bi-Po Analysis}{208}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Uranium chain and Bi-Po Analysis}{208}{section.B.1}%
-\contentsline {chapter}{References}{210}{appendix*.6}%
+\contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{157}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Backgrounds}{158}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Internal backgrounds}{158}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}External backgrounds}{159}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Solar Neutrino Analysis in Open Dataset}{159}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Likelihood Fits for Solar Neutrino Candidate Events}{162}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Maximum Likelihood Fit}{163}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{164}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Kullback–Leibler Divergence for High Level Cuts}{166}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Signal-background Discrimination Based on TMVA}{169}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}TMVA Outputs}{176}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Discussions of TMVA Results}{179}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Fitting Whole Low Background Dataset}{179}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}Evaluating $^8$B Solar Neutrino Flux}{180}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.9}Systematics Evaluation}{184}{subsection.6.3.9}%
+\contentsline {subsection}{\numberline {6.3.10}Summary of Results}{188}{subsection.6.3.10}%
+\contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{190}{subsection.6.3.11}%
+\contentsline {chapter}{\numberline {7}Conclusions}{191}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{193}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{193}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{194}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{197}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{198}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{199}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{199}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Information for $^{16}$N Scan Runs}{204}{section.A.7}%
+\contentsline {chapter}{\numberline {B}Bi-Po Analysis}{209}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Uranium chain and Bi-Po Analysis}{209}{section.B.1}%
+\contentsline {chapter}{References}{211}{appendix*.6}%

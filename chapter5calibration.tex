@@ -87,7 +87,7 @@ Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstr
 
 As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mis-reconstructed) by the \texttt{MPW fitter}, resulting in a position error of over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
 
-\subsubsection{Position Resolution}
+\subsubsection{Position Resolution}\label{sect:positionResol}
 
 A position resolution function is defined for the reconstructed electron position distribution \cite{boulay2004direct}:
 \begin{equation}
@@ -95,7 +95,7 @@ R(x)=\frac{1-\alpha_e}{\sqrt{2\pi}\sigma_p}\exp{[-\frac{1}{2}(\frac{x-\mu_p}{\si
 \end{equation}
 where $\alpha_e$ is the fractional exponential component, $\sigma_p$ is the Gaussian width (corresponding to the position resolution), $\mu_p$ is the Gaussian shift (corresponding to the position bias) and $\tau_p$ is the exponential slope (corresponding to the position distributions in tails).
 
-The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering, as shown in Fig.~\ref{N16centralDiagram}. The position distribution of the $\gamma$ interaction vertices (i.e. locations where electrons undergo scattering and are set in motion, producing Cherenkov light) encircles the source container, and extends out to a radius of about 2 meters. Fig.~\ref{hsx}, obtained from MC simulation, shows the spatial distribution $S(x)$ of the {\em first} $\gamma$-ray interaction positions (first Compton scatter) projected onto the $x$-axis. Therefore, the $^{16}$N source is considered to be an {\em electron} source having a known spatial distribution \cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
+The $\gamma$-rays emitted from the $^{16}$N source interact with the water in the detector mainly via Compton scattering, as shown in Fig.~\ref{N16centralDiagram}. The position distribution of the $\gamma$ interaction vertices (i.e. locations where electrons undergo scattering and are set in motion, producing Cherenkov light) encircles the source container, and extends out to a radius of about 2 meters. Fig.~\ref{hsx}, obtained from MC simulation, shows the spatial distribution $S(x)$ of the {\em first} $\gamma$-ray interaction positions (first Compton scatter) projected onto the $x$-axis. Therefore, the $^{16}$N source can be treated as an {\em electron} source having a known spatial distribution \cite{boulay2004direct}. For simplicity, in the following we always discuss the $x$ component of the position vector $\vec{X}$. 
 
 \begin{figure}[!htb]
 	\centering
@@ -459,43 +459,27 @@ All the cuts on the three energy FoM quantities remove 0.40\% events from MC and
 
 \subsubsection{Energy Resolution and Systematics}
 
-The energy fitters for the water phase were applied to the $^{16}$N MC simulations and data. As described in Sect.~\ref{sect:energyFitter}, the energy fitters utilize the reconstructed vertex and direction of an event to convert the NHits value into the reconstructed energy. Before the energy reconstruction, a reconstruction threshold cut $\mathrm{NHits}>5$ was applied to both of the \texttt{RAT} and \texttt{MPW} fitters during the vertex and direction reconstructions. Then the energy fitters were applied to the results of the two fitters respectively. Fig.~\ref{fig:N16nhits} shows the NHits spectra of the reconstructed events from the $^{16}$N central run 107055, comparing results from the MC and data, with an $\mathrm{ITR}>0.55$ cut. The figure shows that the \texttt{MPW} fitter gives more events in the $6<\mathrm{NHits}\leq 10$ region. In the region of $\mathrm{NHits}>10$, the two fitters generally match with each other, while the number of events of the MC is slightly less than the data, which is due to the biases in simulation models. 
-
-Spectra of the reconstructed energies of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}
+The energy fitters for the water phase were applied to the $^{16}$N MC simulations and data. As described in Sect.~\ref{sect:energyFitter}, the energy fitters utilize the reconstructed vertex and direction of an event to convert the NHits value into the reconstructed energy. Before the energy reconstruction, a reconstruction threshold cut $\mathrm{NHits}>5$ was applied to both of the \texttt{RAT} and \texttt{MPW} fitters during the vertex and direction reconstructions. Then the energy fitters were applied to the results of the two fitters respectively. Fig.~\ref{fig:N16nhits} shows the spectra of the NHits of the $^{16}$N events in the central run 107055, comparing results from the MC and data. An $\mathrm{ITR}>0.55$ cut was also applied. The figure shows that the \texttt{MPW} fitter has more events in the $6\geq \mathrm{NHits}\leq 10$ region. In the region of $\mathrm{NHits}>10$, the two fitters generally match with each other, while the number of events of the MC is slightly less than the data, which is due to the biases in simulation models. 
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
-	\caption[NHits spectrum of the $^{16}$N central run 107055.]{NHits spectrum of the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.\label{fig:N16nhits}}	
+	\caption[NHits spectra of the $^{16}$N central run 107055.]{NHits spectra of the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.\label{fig:N16nhits}}	
 \end{figure}
+
+Fig.~\ref{fig:N16energy} shows two examples for the reconstructed energy spectra of the $^{16}$N events. Cuts of $\mathrm{NHits}>5$ and $\mathrm{ITR}>0.55$ were applied. The upper plot shows the reconstructed energies of the $^{16}$N events in the central run 107055, comparing results from the MC and data. The reconstructed energies based on the results of the \texttt{RAT} and \texttt{MPW} fitters are also compared. The plot shows that the shapes of the spectra are very similar to the NHits case in Fig.~\ref{fig:N16nhits}, and the \texttt{MPW} fitter has more events around the $0.5<E<2$ MeV region. The lower plot shows the reconstructed energies for the run 106025 (the source position at (-186.0,254.0,-4999.9) mm), comparing the \texttt{MPW} results from the MC and data. The plot shows that when the source was close to the AV bottom, the performance of the energy reconstruction is still good.
 
 \begin{figure}[htbp]
 	\centering
    \subfigure[$^{16}$N run 107055]{\includegraphics[width=8cm]{N16_reconE_107055.png}}
 	\subfigure[$^{16}$N run 106925]{\includegraphics[width=8cm]{N16energyMPWcompare_106925.pdf}}
-	\caption[Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.]{Reconstructed energy spectra from the $^{16}$N central run 107055 (upper) and 106925 (lower). For run 107055 (lower), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared; for run 106925 (lower), the reconstructed data (black dots) are compared to the MC (blue line), both being \texttt{MPW fitter} results. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.\label{fig:N16energy}}
+	\caption[Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.]{Reconstructed energy spectra from the $^{16}$N central run 107055 (upper) and 106925 (lower). For run 107055 (upper), the \texttt{MPW fitter} results and the \texttt{RAT} results are also compared. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results. For run 106925 (lower), the reconstructed data (black dots) are compared to the MC (blue line), both being \texttt{MPW fitter} results.\label{fig:N16energy}}
 \end{figure}
+
+Fig.~\ref{fig:EvsBeta14} shows the relationship between the reconstructed energies ($E_{fit}$) and $\beta_{14}$ values, comparing the \texttt{MPW} and \texttt{RAT} results from the MC and data respectively. 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
-	\caption[Simulated $^{16}$N energy spectrum for different processes.]{Simulated $^{16}$N energy spectrum for different processes, extracted from $10^5$ MC simulations.\label{N16nhitsSimu}}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\subfigure[MPW data]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_MPW_data_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[MPW MC]{ 
-		\begin{minipage}[b]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
-		\end{minipage}
-	}
 	\subfigure[\texttt{RAT} data]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
@@ -503,17 +487,36 @@ Spectra of the reconstructed energies of the $^{16}$N events are shown in Fig.~\
 		\end{minipage}
 	}
 	\subfigure[\texttt{RAT} MC]{ 
-		\begin{minipage}[t]{0.4\textwidth}
+		\begin{minipage}[b]{0.4\textwidth}
 			\centering
 			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
 		\end{minipage}
 	}
-	\caption[$E_{fit}$ vs $\beta_{14}$ for the data and MC.]{$E_{fit}$ vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} and the \texttt{MPW} results are shown.\label{EvsBeta14}}
+	\subfigure[\texttt{MPW} data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_MPW_data_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[\texttt{MPW} MC]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
+		\end{minipage}
+	}
+	\caption[$E_{fit}$ vs $\beta_{14}$ for the data and MC.]{$E_{fit}$ vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} (a, b) and the \texttt{MPW} (c, d) results are shown.\label{fig:EvsBeta14}}
 \end{figure}
 
 \subsubsection{Energy Resolutions}
+As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be treated as an electron source with a known spatial distribution. The $\gamma$-particles emitted from the source interact with the detector materials via different processes and produce electrons with various energies. Fig.~\ref{fig:N16nhitsSimu} shows the spectra of electron energies derived from the simulations of the $^{16}$N central run 107055. The dominant contribution is from Compton scattering, while the photoelectric absorption is negligible. 
 
-Following the methods described in Ref.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap} (a). By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
+	\caption[Simulated electron energy spectra for different processes.]{Simulated electron energy spectra for different processes, extracted from $10^5$ MC simulations of $^{16}$N central run 107055. Contributions from three processes: Compton scattering, pair production, and photoelectricabsorption are shown.\label{fig:N16nhitsSimu}}
+\end{figure}
+
+Following the methods described in Refs.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in the upper plot of Fig.~\ref{N16energyMap}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
 
 \begin{figure}[htbp]
 	\centering
@@ -544,7 +547,7 @@ A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to avoid 
 \begin{figure}
 	\centering
 	\includegraphics[width=8cm]{N16data_energy_fitted_107055.png}
-	\caption[The reconstructed energy spectrum fitted with resolution function.]{The reconstructed energy spectrum of central run 107055 data, fitted with the resolution function (red).	\label{fittedEnergyResol}}
+	\caption[The reconstructed energy spectrum fitted with resolution function.]{The reconstructed energy spectrum of central run 107055 data, fitted with the resolution function (red).\label{fittedEnergyResol}}
 \end{figure}
 
 For all the internal scans, Fig.~\ref{fig:EscaleVsR} and Fig.~\ref{fig:EresolVsR} show the energy scale ($\delta_E$) and energy resolution ($b$) as a function of the source manipulator's radial position. Both the data and MC are shown.

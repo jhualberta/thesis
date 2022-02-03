@@ -129,83 +129,83 @@
 \contentsline {figure}{\numberline {5.20}{\ignorespaces $^{16}$N central-run 107055, $Z_{factor}$ vs. $E_{fit}$/5.1 MeV.}}{147}{figure.5.20}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC}}}{147}{figure.5.20}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {data}}}{147}{figure.5.20}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces NHits spectrum of the $^{16}$N central run 107055.}}{148}{figure.5.21}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces NHits spectra of the $^{16}$N central run 107055.}}{148}{figure.5.21}%
 \contentsline {figure}{\numberline {5.22}{\ignorespaces Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.}}{149}{figure.5.22}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N run 107055}}}{149}{figure.5.22}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N run 106925}}}{149}{figure.5.22}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Simulated $^{16}$N energy spectrum for different processes.}}{150}{figure.5.23}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MPW data}}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MPW MC}}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {RAT} data}}}{150}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {RAT} MC}}}{150}{figure.5.24}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{150}{figure.5.23}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\texttt {RAT} data}}}{150}{figure.5.23}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\texttt {RAT} MC}}}{150}{figure.5.23}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {MPW} data}}}{150}{figure.5.23}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {MPW} MC}}}{150}{figure.5.23}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Simulated electron energy spectra for different processes.}}{150}{figure.5.24}%
 \contentsline {figure}{\numberline {5.25}{\ignorespaces Converting number of photons to effective electron spectrum.}}{151}{figure.5.25}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{151}{figure.5.25}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{151}{figure.5.25}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces The reconstructed energy spectrum fitted with resolution function.}}{152}{figure.5.26}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces The reconstructed energy spectrum fitted with resolution function.}}{153}{figure.5.26}%
 \contentsline {figure}{\numberline {5.27}{\ignorespaces Fitted energy scales as a function of the source manipulator's radial position.}}{153}{figure.5.27}%
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.}}{153}{figure.5.28}%
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{154}{figure.5.29}%
-\contentsline {figure}{\numberline {5.30}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{155}{figure.5.30}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.}}{154}{figure.5.28}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{155}{figure.5.29}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{156}{figure.5.30}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.}}{160}{figure.6.1}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{160}{figure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{160}{figure.6.1}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{160}{figure.6.1}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{160}{figure.6.1}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{160}{figure.6.1}%
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{160}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution of solar $\nu _e$ used as a PDF function.}}{162}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Real data from run-200004 to 203602, after the beforehand cuts.}}{164}{figure.6.3}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces An example of the $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution fitted with $(N_{sig},N_{bkg})$.}}{165}{figure.6.4}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets. }}{166}{figure.6.5}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets. }}{166}{figure.6.6}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The $-2\qopname \relax o{ln}L$ distribution of the best fit results from the 5000 fake datasets. }}{167}{figure.6.7}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Angular distributions of the MC events in run-by-run simulations.}}{168}{figure.6.8}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Energy spectrum of events from different simulations.}}{170}{figure.6.9}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Multiple variables as the inputs for the TMVA analysis, for the $4<E<15$ MeV dataset.}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta _{14}$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$E_{fit}$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$U_{test}$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$Z_{factor}$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ITR}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {$scaleLogL$}}}{172}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$klDiv$}}}{172}{figure.6.10}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA outputs for signal/background separations by different methods, for the $4<E<15$ MeV testing dataset.}}{173}{figure.6.11}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{173}{figure.6.11}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{173}{figure.6.11}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{173}{figure.6.11}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{174}{figure.6.12}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{174}{figure.6.12}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{174}{figure.6.12}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{174}{figure.6.12}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$, with $4<E_{fit}<15$ MeV.}}{176}{figure.6.13}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces BDT outputs from one random fake dataset, with $5<E_{fit}<15$ MeV.}}{177}{figure.6.14}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Event count fractions from BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV.}}{177}{figure.6.15}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV.}}{179}{figure.6.16}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{179}{figure.6.16}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{179}{figure.6.16}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{179}{figure.6.16}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{180}{figure.6.17}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.}}{181}{figure.6.18}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces A fit on the total $^8$B flux.}}{182}{figure.6.19}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{183}{figure.6.20}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{186}{figure.6.21}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{186}{figure.6.21}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{186}{figure.6.21}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{186}{figure.6.21}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{188}{figure.6.22}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.}}{161}{figure.6.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Run 100093, GTID 11108354}}}{161}{figure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Run 100207, GTID 5079885}}}{161}{figure.6.1}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Run 100632, GTID 7882360}}}{161}{figure.6.1}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Run 100663, GTID 15767175}}}{161}{figure.6.1}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{161}{figure.6.1}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{161}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution of solar $\nu _e$ used as a PDF function.}}{163}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Real data from run-200004 to 203602, after the beforehand cuts.}}{165}{figure.6.3}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces An example of the $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution fitted with $(N_{sig},N_{bkg})$.}}{166}{figure.6.4}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets. }}{167}{figure.6.5}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets. }}{167}{figure.6.6}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The $-2\qopname \relax o{ln}L$ distribution of the best fit results from the 5000 fake datasets. }}{168}{figure.6.7}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Angular distributions of the MC events in run-by-run simulations.}}{169}{figure.6.8}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Energy spectrum of events from different simulations.}}{171}{figure.6.9}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Multiple variables as the inputs for the TMVA analysis, for the $4<E<15$ MeV dataset.}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta _{14}$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$E_{fit}$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$U_{test}$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$Z_{factor}$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ITR}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {$scaleLogL$}}}{173}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$klDiv$}}}{173}{figure.6.10}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA outputs for signal/background separations by different methods, for the $4<E<15$ MeV testing dataset.}}{174}{figure.6.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{174}{figure.6.11}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{174}{figure.6.11}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{174}{figure.6.11}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{175}{figure.6.12}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{175}{figure.6.12}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{175}{figure.6.12}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{175}{figure.6.12}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$, with $4<E_{fit}<15$ MeV.}}{177}{figure.6.13}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces BDT outputs from one random fake dataset, with $5<E_{fit}<15$ MeV.}}{178}{figure.6.14}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Event count fractions from BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV.}}{178}{figure.6.15}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV.}}{180}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{180}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{180}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{180}{figure.6.16}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{181}{figure.6.17}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the BDT selections.}}{182}{figure.6.18}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces A fit on the total $^8$B flux.}}{183}{figure.6.19}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{184}{figure.6.20}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{187}{figure.6.21}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{187}{figure.6.21}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{187}{figure.6.21}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{187}{figure.6.21}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{189}{figure.6.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{199}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{199}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{199}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{199}{figure.A.1}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{200}{figure.A.2}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{201}{figure.A.3}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{201}{figure.A.4}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{202}{figure.A.5}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on X-Y, Y-Z, X-Z planes.}}{200}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-Y plane.}}}{200}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Y-Z plane.}}}{200}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {X-Z plane.}}}{200}{figure.A.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{201}{figure.A.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of $\qopname \relax o{ln}L$ of an {$^{16}$}N event projected on x, y, z, t-axis respectively.}}{202}{figure.A.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{202}{figure.A.4}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{203}{figure.A.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{209}{figure.B.1}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{210}{figure.B.1}%
