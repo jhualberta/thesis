@@ -195,9 +195,9 @@ To obtain the values of $p_0$ and $p_1$, I generated electron events uniformly d
 \end{equation}
 and the parameters ($p_0$, $p_1$) were obtained by minimizing the $\chi^2$ function. When calculating $\chi^2$, fitted events having $|\vec{X}_{fit}-\vec{X}_{MC}| > 3~\mathrm{m}$ were rejected to improve the $\chi^2$ minimization results.
 
-For the 2 to 10 MeV $e^-$ event simulations (using \texttt{RAT} version 6.17.6), the values obtained for ($p_0$, $p_1$) are energy- (or NHit-) dependent. However using NHit-dependent functions $p_0(\mathrm{NHits}), p_1(\mathrm{NHits})$ as drive corrections does not improve the results. Finally we take average values from the 5 to 10 MeV electron simulations and find the optimal drive correction is:
+For the 2 to 10 MeV $e^-$ event simulations (using \texttt{RAT} version 6.17.6), the values obtained for ($p_0$, $p_1$) are energy- (or NHit-) dependent, as shown in Fig.~\ref{fig:pullParVsEnergy}. However using NHit-dependent functions $p_0(\mathrm{NHits}), p_1(\mathrm{NHits})$ as drive corrections does not improve the results. Finally I take average values from the 5 to 10 MeV electron simulations and find the optimal drive correction is:
 \begin{equation}
-\vec{X}_{\mathrm{corrected}} = 0.9868\vec{X}_{fit} \, - \, 78.417\vec{u}_{fit}~\mathrm{[mm]} .
+\vec{X}_{\mathrm{corrected}} = 0.9868\vec{X}_{fit} \, - \, 78.417\vec{u}_{fit}~\mathrm{[mm]}\;.
 \end{equation}
 
 Note that these drive correction parameters were obtained from simulations, and so changes of the simulation model, and especially changes to the optical model of the detector, can affect the $n_\mathrm{gr,eff}$, mode cut and time residual cut, and thereby affect the drive correction parameters. If needed however the drive correction parameters can be re-coordinated with the changes in the simulation.
@@ -205,16 +205,14 @@ Note that these drive correction parameters were obtained from simulations, and 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{pullParVsEnergy.pdf}
-	\caption{Drive correction parameter $p_0$ (left) and $p_1$ (right) as a function of electron energy.}
-	\label{pullParVsEnergy}
+	\caption{Drive correction parameter $p_0$ (left) and $p_1$ (right) as a function of electron energy.	\label{fig:pullParVsEnergy}}
 \end{figure}
 
-To check the effects of the drive correction, 1000 simulations of 5 MeV electrons were generated at the detector center, with their momentum vector oriented along $(1,0,0)$. It was found that the drive effect in the reconstruction caused about +50 mm bias away from the detector center and along the $x$-axis (i.e., the pull lay along positive $x$). The drive correction reduced this pull down to about +0.2 mm along the $x$-axis. The resolution of the $r_\mathrm{bias}$ distribution was also improved by $\sim$20 mm. With the same simulation settings, various electron energies from 2 to 10 MeV (with a 1 MeV step) were generated to check the effects before and after the drive correction, with the outcome shown in Fig.~\ref{drivecorVsEnergy}. The pull is quantified by the radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The distributions of the $r_\mathrm{bias}$ in each simulation were fitted with Gaussian functions, and the Gaussian means were used as the pull. It can be seen that the pull effect is larger at higher electron energy. The drive corrections improve the radial biases by about 55 mm. The drive correction is also applied in the \texttt{Rat water fitter}, and those results are also shown.
+To check the effects of the drive correction, 1000 simulations of 5 MeV electrons were generated at the detector center, with their momentum vector oriented along $(1,0,0)$. It was found that the drive effect in the reconstruction caused about +50 mm bias away from the detector center and along the $x$-axis (i.e., the pull towards positive $x$). The drive correction reduced this pull down to about +0.2 mm along the $x$-axis. The resolution of the $r_\mathrm{bias}$ distribution was also improved by $\sim$20 mm. With the same simulation settings, various electron energies from 2 to 10 MeV (with a 1 MeV step) were generated to check the effects before and after the drive correction, with the outcome shown in Fig.~\ref{fig:drivecorVsEnergy}. The pull is quantified by the radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The distributions of the $r_\mathrm{bias}$ in each simulation were fitted with Gaussian functions, and the Gaussian means were used as the pull. It can be seen that the pull effect is larger at higher electron energy. The drive corrections improve the radial biases by about 55 mm. The drive correction is also applied in the \texttt{Rat water fitter}, and those results are also shown.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=9cm]{pullEffectVsEnergy.pdf}
-	\caption[Radial biases of simulated electron events as a function of energy.]{Radial biases of simulated electron events before (unfilled triangles) and after the application of a drive correction (filled triangles), as a function of energy. The results from the official \texttt{RAT water fitter} are also shown, with the unfilled blue squares for biases before the correction and filled blue square after the correction.}
-	\label{drivecorVsEnergy}
+	\caption[Radial biases of simulated electron events as a function of energy.]{Radial biases of simulated electron events before (unfilled triangles) and after the application of a drive correction (filled triangles), as a function of energy. The results from the official \texttt{RAT water fitter} are also shown, with the unfilled blue squares for biases before the correction and filled blue square after the correction. \label{fig:drivecorVsEnergy}}
 \end{figure}
 
 \subsection{PMT Selectors for the Reconstruction}\label{sect:PMTselector}
@@ -264,19 +262,19 @@ The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ sim
 	\centering 
 	\subfigure[$x_{fit}-x_{mc}$]{
 		\begin{minipage}[t]{0.5\textwidth}
-			\includegraphics[width=8cm]{5MeVbetaX.pdf}
+			\includegraphics[width=7.5cm]{5MeVbetaX.pdf}
 		\end{minipage}
 	}
 	\subfigure[$y_{fit}-y_{mc}$]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{5MeVbetaY.pdf}
+			\includegraphics[width=7.5cm]{5MeVbetaY.pdf}
 		\end{minipage}
 	}
 	\subfigure[$z_{fit}-z_{mc}$]{ 
 		\begin{minipage}[b]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{5MeVbetaZ.pdf}
+			\includegraphics[width=7.5cm]{5MeVbetaZ.pdf}
 		\end{minipage}
 	}
 	\caption[The position biases projected on the x, y and z axes.]{The position biases projected on the x, y and z axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.\label{fig:5MeVbeta_center_water}}
@@ -288,19 +286,19 @@ In Fig.~\ref{fig:5MeVbeta_center_water} there are a few events with position bia
 	\centering 
 	\subfigure[$x_{fit}-x_{mc}$ vs. $scaleLogL$.]{
 		\begin{minipage}[t]{0.5\textwidth}
-			\includegraphics[width=8cm]{scaleLogLvsX_water5MeV.pdf}
+			\includegraphics[width=7.5cm]{scaleLogLvsX_water5MeV.pdf}
 		\end{minipage}
 	}
 	\subfigure[$y_{fit}-y_{mc}$ vs. $scaleLogL$.]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{scaleLogLvsY_water5MeV.pdf}
+			\includegraphics[width=7.5cm]{scaleLogLvsY_water5MeV.pdf}
 		\end{minipage}
 	}
 	\subfigure[$z_{fit}-z_{mc}$ vs. $scaleLogL$.]{ 
 		\begin{minipage}[b]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{scaleLogLvsZ_water5MeV.pdf}
+			\includegraphics[width=7.5cm]{scaleLogLvsZ_water5MeV.pdf}
 		\end{minipage}
 	}
 	\caption[The position biases against the position FoMs.]{The position biases against the position FoMs. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.\label{fig:posFOM_5MeVbeta_center_water}}
@@ -319,8 +317,7 @@ These results show that the fit position biases $\mu_{x,y,z}$ are stable across 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posResolVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in x (red circle), y (green square), and z (black triangle) axes as a function of energy.}
-	\label{fig:MPWposResol_isoFill}
+	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in x (red circle), y (green square), and z (black triangle) axes as a function of energy.	\label{fig:MPWposResol_isoFill}}
 \end{figure}
 
 To check the radial dependence of reconstruction performance, simulations were performed with 5 MeV electrons generated (with an isotropic orientation, and uniformly in azimuth and elevation angles) within each of eleven concentric shells. The centers of these shells were at the AV center, and their inner and outer radii were at $r, r+0.001$ m, where $r$ ranged from 0.5 m to 5.5 m with a step of 0.5 m. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position bias and resolution respectively. Evidently fit position bias is rather stable across the differing radii, but resolution deteriorates for events close to the AV wall, or $R>5$ m. This is called the ``near AV effect'', and it was observed in the SNO experiment. For events that occur close to the AV wall, the plexiglass can serve as a lens that distorts the light path \cite{brice1996monte}. A complicated calculation to encompass this complication, and a technique called the ``Near AV cut'', are discussed in Refs.~\cite{coulter2013modelling,jones2011background}, but they are not applied in this thesis. 
