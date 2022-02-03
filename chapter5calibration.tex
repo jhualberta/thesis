@@ -54,7 +54,7 @@ Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and 
 \begin{figure}
 	\centering
 	\includegraphics[width=14cm]{N16_107055_highLevelCuts.pdf}
-	\caption[Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055.]{Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$). \label{n16_highLevelCut}}
+	\caption[Position biases vs ITR and $\beta_{14}$ for the $^{16}$N central run 107055.]{Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$). \label{n16_highLevelCut}}
 \end{figure}
 
 
@@ -71,7 +71,7 @@ The position figure of merit (posFoM) cuts mentioned in Sect.~\ref{sect:position
 \begin{figure}
 	\centering
 	\includegraphics[width=13cm]{N16_107055_scaleLogLvsPosBias.pdf}
-	\caption[Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055.]{Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).\label{posBiasVsFOM}}
+	\caption[Position biases vs $scaleLogL$ for the $^{16}$N central run 107055.]{Position biases ($|\vec{X}_{fit}-\vec{X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$).\label{posBiasVsFOM}}
 \end{figure}
 
 For the MC (data) case, about 0.035\% (0.043\%) of the total reconstructed events have large biases ($|\vec{X}_{fit}-\vec{X}_{MC}|>6000$ mm). A cut of $scaleLogL>10$ removes 96.0\% (97.3\%) of the events which have biases over 6000 mm, with a sacrifice of removing 0.012\% (0.016\%) of the total events.
@@ -240,7 +240,7 @@ To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with l
 
 \end{figure}
 
-From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{tab:vertexScale}. Since the $\chi^2/\mathrm{ndf}$ values here were large, according to Refs.~\cite{waterunidoc,pdg2020}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(\mathrm{ndf}-1)}$. The downward systematic was calculated as the slope minus the slope error as well as the inflated error. In contrast, the upward systematic was taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the $z$ scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive, possibly due to the bias in simulation from the neck geometry effects. This point was not used in the linear fit.
+From the linear fits, the values of vertex shifts were obtained and listed in Table.~\ref{tab:vertexScale}. Since the $\chi^2/\mathrm{ndf}$ values here were large, according to Refs.~\cite{pdg2020,waterunidoc}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(\mathrm{ndf}-1)}$. The downward systematic was calculated as the slope minus the slope error as well as the inflated error. In contrast, the upward systematic was taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the $z$ scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive, possibly due to the bias in simulation from the neck geometry effects. This point was not used in the linear fit.
 %%%\footnote{John: {red}Here `ndf' means `number of degrees of freedom.' See ?? for background on this measure of goodness of fit.{red}}
 \begin{table}[ht]
 	\centering
@@ -295,13 +295,13 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 \end{figure}
 
 \begin{table}[ht]
-	\caption{Direction resolution of two fitters, when applied to $^{16}$N calibration data and when applied to MC simulations of the calibration process.\label{tab:angularResolValuesUpdated}}
+	\caption[Direction resolution of the \texttt{MPW} and \texttt{RAT} fitters.]{Direction resolution of the \texttt{MPW} and \texttt{RAT} fitters, when applied to $^{16}$N calibration data and when applied to MC simulations of the calibration process.\label{tab:angularResolValuesUpdated}}
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
 	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
 	\hline
-	MPW data & 4.15$\pm$0.18 & 19.08$\pm$0.94 & 0.58$\pm$0.02 & 77.1/66 & 0.964 & 0.744 & 0.410 \\
-	MPW MC & 4.42$\pm$0.19 & 20.41$\pm$1.01 & 0.56$\pm$0.02 & 83.8/66 & 0.974 & 0.768 & 0.454	 \\	
+	\texttt{MPW} data & 4.15$\pm$0.18 & 19.08$\pm$0.94 & 0.58$\pm$0.02 & 77.1/66 & 0.964 & 0.744 & 0.410 \\
+	\texttt{MPW} MC & 4.42$\pm$0.19 & 20.41$\pm$1.01 & 0.56$\pm$0.02 & 83.8/66 & 0.974 & 0.768 & 0.454	 \\	
 \hline
 	\texttt{RAT} data & 3.76$\pm$0.18 & 17.90$\pm$0.82 & 0.55$\pm$0.02 & 70.5/66 & 0.974 & 0.731 & 0.364 \\
 	\texttt{RAT} MC & 4.02$\pm$0.18 & 20.89$\pm$0.92 & 0.54$\pm$0.03 & 94.9/66 & 0.979 & 0.753 & 0.409	\\
@@ -325,7 +325,7 @@ Fig.~\ref{angularResolScan} shows the results for the fitted $\beta_M$ and $\bet
 
 The relative difference between data and MC of a fitted resolution quantity $q\pm \delta_q$ is defined as
 \begin{equation}
-(\Delta q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%,
+(\Delta q)_{rel} = \frac{q_{data}-q_{MC}}{q_{MC}}\times 100\%\;,
 \end{equation}
 and the error of the relative difference is defined as 
 \begin{equation}

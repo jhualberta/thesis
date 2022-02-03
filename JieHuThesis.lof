@@ -18,7 +18,7 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Structural formulae of LAB and PPO.}}{43}{figure.3.3}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Spectral absorption length for SNO+ optical components.}}{43}{figure.3.4}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Time profiles for liquid scintillators in different SNO+ phases.}}{45}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Initial stages of the TeBD compound formation, modified from Ref.\nobreakspace {}\cite {Paton:2019kgy}.}}{46}{figure.3.6}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Initial stages of the TeBD compound formation.}}{46}{figure.3.6}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces A vial filled with the test sample and the measurement setup.}}{48}{figure.3.7}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces A diagram shows the light yield measurement setup.}}{49}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces A typical triggered waveform.}}{52}{figure.3.9}%
@@ -98,8 +98,8 @@
 \contentsline {figure}{\numberline {4.42}{\ignorespaces The Gaussian resolutions ($\sigma $) of the \texttt {MP scint fitter} fit position biases as a function of energy, for the $x$, $y$, and $z$ axes.}}{115}{figure.4.42}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The deployed source positions of the $^{16}$N scan runs.}}{123}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Position biases vs ITR (top) and $\beta _{14}$ (bottom) for the $^{16}$N central run 107055.}}{126}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Position biases ($|\vec {X}_{fit}-\vec {X}_{MC}|$) vs $scaleLogL$ for the $^{16}$N central run 107055.}}{127}{figure.5.3}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Position biases vs ITR and $\beta _{14}$ for the $^{16}$N central run 107055.}}{126}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Position biases vs $scaleLogL$ for the $^{16}$N central run 107055.}}{127}{figure.5.3}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055.}}{128}{figure.5.4}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Schematic of the $^{16}$N source.}}{130}{figure.5.5}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Spatial distribution of {$^{16}$}N $\gamma $-ray's first interaction positions, projected onto the $x$-axis.}}{130}{figure.5.6}%
@@ -156,7 +156,7 @@
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Run 100915, GTID 169700}}}{160}{figure.6.1}%
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Legends}}}{160}{figure.6.1}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces The $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution of solar $\nu _e$ used as a PDF function.}}{162}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Real data from run-200004 to 203602 (half-dataset), after the beforehand cuts.}}{164}{figure.6.3}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Real data from run-200004 to 203602, after the beforehand cuts.}}{164}{figure.6.3}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces An example of the $\qopname \relax o{cos}\theta _\mathrm {sun}$ distribution fitted with $(N_{sig},N_{bkg})$.}}{165}{figure.6.4}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces $N_{sig}$ fit biases for 5000 fake datasets. }}{166}{figure.6.5}%
 \contentsline {figure}{\numberline {6.6}{\ignorespaces $N_{sig}$ fit pulls for 5000 fake datasets. }}{166}{figure.6.6}%
@@ -177,7 +177,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{173}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{173}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{173}{figure.6.11}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces TMVA outputs for signal/background separations by different methods}}{174}{figure.6.12}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{174}{figure.6.12}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{174}{figure.6.12}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{174}{figure.6.12}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{174}{figure.6.12}%
