@@ -129,21 +129,21 @@
 \contentsline {figure}{\numberline {5.20}{\ignorespaces $^{16}$N central-run 107055, $Z_{factor}$ vs. $E_{fit}$/5.1 MeV.}}{147}{figure.5.20}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC}}}{147}{figure.5.20}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {data}}}{147}{figure.5.20}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces NHits spectrum of the $^{16}$N central run 107055.}}{147}{figure.5.21}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.}}{148}{figure.5.22}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N run 107055}}}{148}{figure.5.22}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N run 106925}}}{148}{figure.5.22}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Simulated $^{16}$N energy spectrum for different processes.}}{149}{figure.5.23}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{149}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MPW data}}}{149}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MPW MC}}}{149}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {RAT} data}}}{149}{figure.5.24}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {RAT} MC}}}{149}{figure.5.24}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Converting number of photons to effective electron spectrum.}}{150}{figure.5.25}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{150}{figure.5.25}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{150}{figure.5.25}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces NHits spectrum of the $^{16}$N central run 107055.}}{148}{figure.5.21}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Reconstructed energy spectra from the $^{16}$N central run 107055 and 106925.}}{149}{figure.5.22}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N run 107055}}}{149}{figure.5.22}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N run 106925}}}{149}{figure.5.22}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Simulated $^{16}$N energy spectrum for different processes.}}{150}{figure.5.23}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{150}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MPW data}}}{150}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MPW MC}}}{150}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {RAT} data}}}{150}{figure.5.24}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {RAT} MC}}}{150}{figure.5.24}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Converting number of photons to effective electron spectrum.}}{151}{figure.5.25}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{151}{figure.5.25}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{151}{figure.5.25}%
 \contentsline {figure}{\numberline {5.26}{\ignorespaces The reconstructed energy spectrum fitted with resolution function.}}{152}{figure.5.26}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Fitted energy scales as a function of the source manipulator's radial position.}}{152}{figure.5.27}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Fitted energy scales as a function of the source manipulator's radial position.}}{153}{figure.5.27}%
 \contentsline {figure}{\numberline {5.28}{\ignorespaces Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.}}{153}{figure.5.28}%
 \contentsline {figure}{\numberline {5.29}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{154}{figure.5.29}%
 \contentsline {figure}{\numberline {5.30}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055.}}{155}{figure.5.30}%

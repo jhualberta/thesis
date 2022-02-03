@@ -142,7 +142,6 @@
 %
 %%
 %
-
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{PrincetonThesis}[2002/07/01 v1.0 Princeton Univ. thesis class]
 

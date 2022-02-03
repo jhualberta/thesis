@@ -14,7 +14,7 @@ During the water phase, in June and in November 2017 the $^{16}$N source was dep
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can extract the resolution and bias of the fitter. Here I determined the performance of both the \texttt{RAT water fitter} and the \texttt{MPW fitter} for vertex and direction reconstruction, characterizing that performance in terms of statistics pertaining to vertex shift (or offset), and uncertainty. 
 
-When analyzing $^{16}$N run data and simulations, an FECD tag cut (FECD$==9188$) was applied during data processing, to save the events only when the source trigger fired. A reconstruction threshold (NHits$\geq 6$) was applied to the MC and data. In addition to these cuts, high-level cuts based on classifiers were used. 
+When analyzing $^{16}$N run data and simulations, an FECD tag cut (FECD$==9188$) was applied during data processing, to save the events only when the source trigger fired. A reconstruction threshold ($\mathrm{NHits}>5$) was applied to the MC and data. In addition to these cuts, high-level cuts based on classifiers were used. 
 
 \section{High Level Cuts for the Water Phase}\label{sect:high_level_cuts}
 
@@ -351,7 +351,7 @@ This angular remapping function was used to smear the angular distributions for 
 
 \subsection{$\beta_{14}$ and its Systematic}
 
-Since $\beta_{14}$ itself is used as the high-level cut, only the cuts ITR$>0.55$ and NHits$>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
+Since $\beta_{14}$ itself is used as the high-level cut, only the cuts $\mathrm{ITR}>0.55$ and $\mathrm{NHits}>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
 
 \begin{figure}[htbp]
 	\centering
@@ -459,9 +459,9 @@ All the cuts on the three energy FoM quantities remove 0.40\% events from MC and
 
 \subsubsection{Energy Resolution and Systematics}
 
-The energy fitters for the water phase (mentioned in Sect.~\ref{sect:energyFitter}) were applied to the $^{16}$N MC simulations and data. The fitters converted the NHits into the reconstructed energies. Fig.~\ref{fig:N16nhits} shows the NHits spectra of the $^{16}$N central run 107055, comparing results from the MC and the data.
+The energy fitters for the water phase were applied to the $^{16}$N MC simulations and data. As described in Sect.~\ref{sect:energyFitter}, the energy fitters utilize the reconstructed vertex and direction of an event to convert the NHits value into the reconstructed energy. Before the energy reconstruction, a reconstruction threshold cut $\mathrm{NHits}>5$ was applied to both of the \texttt{RAT} and \texttt{MPW} fitters during the vertex and direction reconstructions. Then the energy fitters were applied to the results of the two fitters respectively. Fig.~\ref{fig:N16nhits} shows the NHits spectra of the reconstructed events from the $^{16}$N central run 107055, comparing results from the MC and data, with an $\mathrm{ITR}>0.55$ cut. The figure shows that the \texttt{MPW} fitter gives more events in the $6<\mathrm{NHits}\leq 10$ region. In the region of $\mathrm{NHits}>10$, the two fitters generally match with each other, while the number of events of the MC is slightly less than the data, which is due to the biases in simulation models. 
 
-Spectra of the reconstructed energy of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}.
+Spectra of the reconstructed energies of the $^{16}$N events are shown in Fig.~\ref{fig:N16energy}
 
 \begin{figure}[htbp]
 	\centering
@@ -534,7 +534,7 @@ Before fitting the reconstructed energy spectrum with the energy resolution func
 \begin{itemize}
 \item the position FoM cut $scaleLogL>10$ and the energy FoM cuts mentioned in the previous sections, i.e. $0<G_{test}<1.9$, $U_{test}<0.95$ and $-11<Z_{factor}<1$;
 
-\item cuts NHit$>5$, ITR$>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
+\item cuts $\mathrm{NHit}>5$, $\mathrm{ITR}>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
 
 \item a conditional distance cut, $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{leta,waterunidoc} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
 

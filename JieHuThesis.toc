@@ -86,8 +86,8 @@
 \contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{145}{subsection.5.3.4}%
 \contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{145}{subsubsection.5.3.4.1}%
 \contentsline {subsubsection}{\numberline {5.3.4.2}Energy Resolution and Systematics}{147}{subsubsection.5.3.4.2}%
-\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{150}{subsubsection.5.3.4.3}%
-\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{153}{subsubsection.5.3.4.4}%
+\contentsline {subsubsection}{\numberline {5.3.4.3}Energy Resolutions}{147}{subsubsection.5.3.4.3}%
+\contentsline {subsubsection}{\numberline {5.3.4.4}Energy Uncertainties}{152}{subsubsection.5.3.4.4}%
 \contentsline {chapter}{\numberline {6}Solar Neutrino Analysis in the SNO+ Water Phase}{156}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Backgrounds}{157}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Internal backgrounds}{157}{subsection.6.1.1}%
