@@ -12,11 +12,11 @@ I was expecting a `,' or a `}'---line 1259 of file thesis.bib
  : } 
  :   %%% not used
 I'm skipping whatever remains of this entry
-Repeated entry---line 1765 of file thesis.bib
+Repeated entry---line 1763 of file thesis.bib
  : @article{anderson2021optical
  :                             ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2032 of file thesis.bib
+I was expecting a `,' or a `}'---line 2030 of file thesis.bib
  :   
  :   school={University of Pennsylvania},
 (Error may have been on previous line)
@@ -43,45 +43,45 @@ Warning--empty year in brunroot
 Warning--empty year in markMachineLearning
 Warning--empty year in markNeuralTalk
 Warning--empty school in marzec2019measurement
-You've used 192 entries,
+You've used 193 entries,
             1876 wiz_defined-function locations,
-            1405 strings with 34552 characters,
-and the built_in function-call counts, 40298 in all, are:
-= -- 3540
-> -- 2296
+            1409 strings with 34816 characters,
+and the built_in function-call counts, 40707 in all, are:
+= -- 3573
+> -- 2331
 < -- 0
-+ -- 865
-- -- 673
-* -- 2745
-:= -- 6340
-add.period$ -- 253
-call.type$ -- 192
-change.case$ -- 142
++ -- 877
+- -- 684
+* -- 2778
+:= -- 6403
+add.period$ -- 254
+call.type$ -- 193
+change.case$ -- 143
 chr.to.int$ -- 0
-cite$ -- 214
-duplicate$ -- 2219
-empty$ -- 3690
-format.name$ -- 673
-if$ -- 9544
+cite$ -- 215
+duplicate$ -- 2240
+empty$ -- 3714
+format.name$ -- 684
+if$ -- 9640
 int.to.chr$ -- 0
-int.to.str$ -- 192
-missing$ -- 183
-newline$ -- 640
-num.names$ -- 186
-pop$ -- 664
+int.to.str$ -- 193
+missing$ -- 184
+newline$ -- 643
+num.names$ -- 187
+pop$ -- 666
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1102
+skip$ -- 1121
 stack$ -- 0
-substring$ -- 928
-swap$ -- 728
+substring$ -- 940
+swap$ -- 741
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 22
-while$ -- 281
-width$ -- 195
-write$ -- 1790
+while$ -- 283
+width$ -- 196
+write$ -- 1801
 (There were 4 error messages)
