@@ -109,8 +109,8 @@
 \contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{193}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Create a Random Vertex}{193}{section.A.1}%
 \contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{194}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{197}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{198}{section.A.4}%
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{198}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{199}{section.A.4}%
 \contentsline {section}{\numberline {A.5}Likelihood Surfaces}{199}{section.A.5}%
 \contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{199}{section.A.6}%
 \contentsline {section}{\numberline {A.7}Information for $^{16}$N Scan Runs}{204}{section.A.7}%

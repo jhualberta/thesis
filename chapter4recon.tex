@@ -205,7 +205,7 @@ Note that these drive correction parameters were obtained from simulations, and 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{pullParVsEnergy.pdf}
-	\caption{Drive correction parameter $p_0$ (left) and $p_1$ (right) as a function of electron energy.	\label{fig:pullParVsEnergy}}
+	\caption[Drive correction parameters as a function of electron energy.]{Drive correction parameters $p_0$ (left) and $p_1$ (right) as a function of electron energy. \label{fig:pullParVsEnergy}}
 \end{figure}
 
 To check the effects of the drive correction, 1000 simulations of 5 MeV electrons were generated at the detector center, with their momentum vector oriented along $(1,0,0)$. It was found that the drive effect in the reconstruction caused about +50 mm bias away from the detector center and along the $x$-axis (i.e., the pull towards positive $x$). The drive correction reduced this pull down to about +0.2 mm along the $x$-axis. The resolution of the $r_\mathrm{bias}$ distribution was also improved by $\sim$20 mm. With the same simulation settings, various electron energies from 2 to 10 MeV (with a 1 MeV step) were generated to check the effects before and after the drive correction, with the outcome shown in Fig.~\ref{fig:drivecorVsEnergy}. The pull is quantified by the radial bias mentioned in Sect.~\ref{sect:tuneGroupVelocity}. The distributions of the $r_\mathrm{bias}$ in each simulation were fitted with Gaussian functions, and the Gaussian means were used as the pull. It can be seen that the pull effect is larger at higher electron energy. The drive corrections improve the radial biases by about 55 mm. The drive correction is also applied in the \texttt{Rat water fitter}, and those results are also shown.
@@ -278,7 +278,7 @@ The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ sim
 			\includegraphics[width=7.5cm]{5MeVbetaZ.pdf}
 		\end{minipage}
 	}
-	\caption[The position biases projected on the x, y and z axes.]{The position biases projected on the x, y and z axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.\label{fig:5MeVbeta_center_water}}
+	\caption[The position biases projected on the $x$, $y$ and $z$ axes.]{The position biases projected on the $x$, $y$ and $z$ axes. The distributions were fitted with Gaussian functions. The MC generated 10000 5-MeV $e^-$ particles at the detector center with isotropic directions.\label{fig:5MeVbeta_center_water}}
 \end{figure}
 
 In Fig.~\ref{fig:5MeVbeta_center_water} there are a few events with position biases larger than 2000 mm, and these are interpreted as being mis-reconstructed events. Some of these events are due to relatively lower log-likelihood values and can be tagged by the $posFoM$ mentioned in Sect.~\ref{sect:positionFoM}. As shown in Fig.~\ref{fig:posFOM_5MeVbeta_center_water}, a cut requiring $scaleLogL>10$ can remove some mis-reconstructed events. The remainder may have resulted from the `straight light path' approximation used by the \texttt{MP fitter}, since this calculation misrepresents refracted and/or reflected light paths from event to PMT, as mentioned in Sect.~\ref{sect:waterVertex}. However, the fraction of these mis-reconstructed events is low, about 0.1\% and thus it is tolerable.
@@ -312,13 +312,13 @@ These results show that the fit position biases $\mu_{x,y,z}$ are stable across 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posBiasVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position biases in x(red circle), y (green square), and z (black triangle) axes as a function of energy. \label{fig:MPWposBias_isoFill}}
+	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position biases in $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of energy. \label{fig:MPWposBias_isoFill}}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posResolVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in x (red circle), y (green square), and z (black triangle) axes as a function of energy.	\label{fig:MPWposResol_isoFill}}
+	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of energy.	\label{fig:MPWposResol_isoFill}}
 \end{figure}
 
 To check the radial dependence of reconstruction performance, the volume inside the AV sphere was divided into eleven concentric shells. The centers of these fictitious shells were at the AV center, and their inner and outer radii were at $r, r+0.001$ m, where $r$ ranged from 0.5 m to 5.5 m with a step of 0.5 m. Simulations were performed with 5 MeV electrons generated (with an isotropic orientation, and uniformly in azimuth and elevation angles) within each of eleven concentric shells. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position bias and resolution respectively. Evidently fit position bias is rather stable across the differing radii, but resolution deteriorates for events close to the AV wall, or $R>5$ m. This is called the ``near AV effect'', and it was observed in the SNO experiment. For events that occur close to the AV wall, the plexiglass can serve as a lens that distorts the light path \cite{brice1996monte}. A complicated calculation to encompass this complication, and a technique called the ``Near AV cut'', are discussed in Refs.~\cite{coulter2013modelling,jones2011background}, but they are not applied in this thesis. 
@@ -326,14 +326,14 @@ To check the radial dependence of reconstruction performance, the volume inside 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{shellTest_RvsBias.pdf}
-	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energies.]{The \texttt{MPW fitter} fit position biases of x (red circle), y (green square), and z (black triangle) axes as a function of radius.}
+	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of radius.]{The \texttt{MPW fitter} fit position biases of $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of radius.}
 	\label{fig:FitBiasVsShell}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{shellTest_RvsResol.pdf}
-	\caption[The \texttt{MPW fitter} position resolutions ($\sigma_{x,y,z}$) as a function of energies.]{The \texttt{MPW fitter} position resolutions of x (red circle), y (green square), and z (black triangle) axes as a function of radius.}
+	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of radius.]{The \texttt{MPW fitter} fit position resolutions of $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of radius.}
 	\label{fig:FitResolVsShell}
 \end{figure}
  
@@ -356,7 +356,7 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \begin{equation}\label{eq:cosTheta_fraction}
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) \, d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) \, d\cos\theta_e} = a\times 100\% \; ,
 \end{equation}
-where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table~\ref{tab:angularResol_MPW}, are slightly better than those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.3\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
+where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table~\ref{tab:angularResol_MPW}, are slightly better than those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.30\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
 
 \begin{table}[ht]
 	\caption{Direction resolutions for the reconstruction of 5 MeV $e^-$ events.\label{tab:angularResol_MPW}}
@@ -388,8 +388,8 @@ For analyzing the AmBe calibration data, reconstructing $\gamma$-events with ene
 		\toprule 
 		simulation & $\Delta x \pm \sigma_x$ [mm]& $\Delta y \pm \sigma_y$ [mm]&$\Delta z \pm \sigma_z$ [mm] \\
 		\midrule
-		2.2-MeV  & $2.278\pm 626.927$ & $-5.663\pm 608.182$& $-10.523\pm 626.034$\\	
-		4.4-MeV  & $-6.964\pm364.725$ & $-2.804\pm 368.752$ & $-1.342\pm 368.398$\\
+		2.2-MeV  & $2.278\pm626.927$ & $-5.663\pm608.182$& $-10.523\pm626.034$\\	
+		4.4-MeV  & $-6.964\pm364.725$ & $-2.804\pm368.752$ & $-1.342\pm368.398$\\
 		\bottomrule	
 	\end{tabular*}
 \end{table}
@@ -648,7 +648,7 @@ Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~
 	{\centering
 		\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccccc}
 			\toprule 
-			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_\mathrm{eff,scint}$ & $V_{gr,water}$ [mm/ns]& $n_\mathrm{eff,water}$\\
+			PPO [g/L] & $V_\mathrm{gr,scint}$ [mm/ns]& $n_\mathrm{eff,scint}$ & $V_\mathrm{gr,water}$ [mm/ns]& $n_\mathrm{eff,water}$\\
 			\midrule
 			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
 			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$5.773 & 1.417 \\
@@ -693,7 +693,7 @@ The average fit speed for vertex reconstruction of events in the scintillator re
 			\includegraphics[width=6.5cm]{partial_top_3MeV_zbias.pdf}
 		\end{minipage}
 	}
-	\caption{Reconstructed position and fit bias for simulated 3 MeV electron events in the scintillator region.\label{fig:partial_inScint}}
+	\caption{Reconstructed position and fit bias for simulated 3-MeV electron events in the scintillator region.\label{fig:partial_inScint}}
 \end{figure}
 
 Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint} (d). Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut.
@@ -863,7 +863,7 @@ Since a 2.5 MeV event is the signal of major interest in the scintillator and te
 		\end{minipage}
 	}
 	%\includegraphics[width=6cm]{fullscint_2p5MeV_radialBias.png}
-	\caption[The fit position biases projected on the $x$, $y$ and $z$ axes, for 2.5-MeV $e^-$ in full scintillator simulations.]{The fit position biases projected on the x, y and z axes, for 2.5-MeV $e^-$ in full scintillator simulations. The distributions were fitted with Gaussian functions.\label{fig:scintIsoFill_2p5MeV}}
+	\caption[The fit position biases for 2.5-MeV $e^-$ events in full scintillator simulations.]{The fit position biases projected on the $x$, $y$ and $z$ axes, for 2.5-MeV $e^-$ events in full scintillator simulations. The distributions were fitted with Gaussian functions.\label{fig:scintIsoFill_2p5MeV}}
 \end{figure}
 
 A test of the quality of vertex reconstruction versus event radial position was performed, and this was similar to the tests in the Sect.~\ref{sect:waterFitterVertex}. In simulations, 2.5 MeV $e^-$ were generated within each of eleven thin concentric shells. Fig.~\ref{fig:scintShellVsBias} and Fig.~\ref{fig:scintShellVsResol} respectively show the biases ($\mu$) and resolutions ($\sigma$) as a function of radius: for all values of event radial position ($R$), $\mu_{x,y,z}\in(-10,5)$ mm and $\sigma_{x,y,z} < 70$ mm. 

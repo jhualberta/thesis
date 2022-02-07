@@ -40,10 +40,10 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces $^{16}$N central run for evaluating the average group velocity.}}{75}{figure.4.8}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces A cartoon shows fitter pull effect.}}{76}{figure.4.9}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces A diagram illustrating the drive correction.}}{77}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Drive correction parameter $p_0$ (left) and $p_1$ (right) as a function of electron energy. }}{78}{figure.4.11}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Drive correction parameters as a function of electron energy.}}{78}{figure.4.11}%
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Radial biases of simulated electron events as a function of energy.}}{79}{figure.4.12}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces PMTs are grouped by partitioning the PSUP sphere into intervals of latitude and longitude.}}{81}{figure.4.13}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces The position biases projected on the x, y and z axes.}}{83}{figure.4.14}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces The position biases projected on the $x$, $y$ and $z$ axes.}}{83}{figure.4.14}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$}}}{83}{figure.4.14}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$}}}{83}{figure.4.14}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$}}}{83}{figure.4.14}%
@@ -53,8 +53,8 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$ vs. $scaleLogL$.}}}{84}{figure.4.15}%
 \contentsline {figure}{\numberline {4.16}{\ignorespaces The \texttt {MPW fitter} fit position biases ($\mu _{x,y,z}$) as a function of energy.}}{85}{figure.4.16}%
 \contentsline {figure}{\numberline {4.17}{\ignorespaces The \texttt {MPW fitter} fit position resolutions ($\sigma _{x,y,z}$) as a function of energy.}}{86}{figure.4.17}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces The \texttt {MPW fitter} fit position biases ($\mu _{x,y,z}$) as a function of energies.}}{87}{figure.4.18}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces The \texttt {MPW fitter} position resolutions ($\sigma _{x,y,z}$) as a function of energies.}}{87}{figure.4.19}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces The \texttt {MPW fitter} fit position biases ($\mu _{x,y,z}$) as a function of radius.}}{87}{figure.4.18}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces The \texttt {MPW fitter} fit position resolutions ($\sigma _{x,y,z}$) as a function of radius.}}{87}{figure.4.19}%
 \contentsline {figure}{\numberline {4.20}{\ignorespaces The bias between the fitted and true (MC) direction.}}{88}{figure.4.20}%
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Direction resolutions as a function of radius.}}{89}{figure.4.21}%
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Position distribution of hit PMTs (zenith and azimuth angles).}}{91}{figure.4.22}%
@@ -68,7 +68,7 @@
 \contentsline {figure}{\numberline {4.30}{\ignorespaces Tuning the effective group velocities in the scintillator and water.}}{101}{figure.4.30}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tuning the $v_\mathrm {gr,scint}$.}}}{101}{subfigure.4.31.2}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Tuning the $v_\mathrm {gr,water}$.}}}{101}{subfigure.4.31.2}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Reconstructed position and fit bias for simulated 3 MeV electron events in the scintillator region.}}{103}{figure.4.31}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Reconstructed position and fit bias for simulated 3-MeV electron events in the scintillator region.}}{103}{figure.4.31}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\rho =\sqrt {x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.}}}{103}{figure.4.31}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$x_{fit}-x_{mc}$.}}}{103}{figure.4.31}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$y_{fit}-y_{mc}$.}}}{103}{figure.4.31}%
@@ -88,7 +88,7 @@
 \contentsline {figure}{\numberline {4.37}{\ignorespaces Fit position biases for tagged $^{214}$Bi and $^{214}$Po.}}{111}{figure.4.37}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$z_{fit}-z_{MC}$ for tagged $^{214}$Bi.}}}{111}{figure.4.37}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$z_{fit}-z_{MC}$ for tagged $^{214}$Po.}}}{111}{figure.4.37}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces The fit position biases projected on the $x$, $y$ and $z$ axes, for 2.5-MeV $e^-$ in full scintillator simulations.}}{113}{figure.4.38}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces The fit position biases for 2.5-MeV $e^-$ events in full scintillator simulations.}}{113}{figure.4.38}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$x_{fit}-x_{mc}$}}}{113}{figure.4.38}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$y_{fit}-y_{mc}$}}}{113}{figure.4.38}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$z_{fit}-z_{mc}$}}}{113}{figure.4.38}%
@@ -163,7 +163,7 @@
 \contentsline {figure}{\numberline {6.7}{\ignorespaces The $-2\qopname \relax o{ln}L$ distribution of the best fit results from the 5000 fake datasets. }}{168}{figure.6.7}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Angular distributions of the MC events in run-by-run simulations.}}{169}{figure.6.8}%
 \contentsline {figure}{\numberline {6.9}{\ignorespaces Energy spectrum of events from different simulations.}}{171}{figure.6.9}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Multiple variables as the inputs for the TMVA analysis, for the $4<E<15$ MeV dataset.}}{173}{figure.6.10}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Multiple variables as the inputs for the TMVA analysis.}}{173}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta _{14}$}}}{173}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$E_{fit}$}}}{173}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{173}{figure.6.10}%
@@ -173,18 +173,18 @@
 \contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{173}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(h)}{\ignorespaces {$scaleLogL$}}}{173}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$klDiv$}}}{173}{figure.6.10}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA outputs for signal/background separations by different methods, for the $4<E<15$ MeV testing dataset.}}{174}{figure.6.11}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{174}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{174}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{174}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{174}{figure.6.11}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{175}{figure.6.12}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces TMVA outputs (ROC) for signal/background separations by different methods.}}{175}{figure.6.12}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{175}{figure.6.12}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{175}{figure.6.12}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{175}{figure.6.12}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$, with $4<E_{fit}<15$ MeV.}}{177}{figure.6.13}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces BDT outputs from one random fake dataset, with $5<E_{fit}<15$ MeV.}}{178}{figure.6.14}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Event count fractions from BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV.}}{178}{figure.6.15}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV.}}{180}{figure.6.16}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$ ($4<E_{fit}<15$ MeV).}}{177}{figure.6.13}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces BDT outputs from one random fake dataset ($5<E_{fit}<15$ MeV).}}{178}{figure.6.14}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Event count fractions from BDT outputs on 5000 fake datasets.}}{178}{figure.6.15}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV range.}}{180}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{180}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{180}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{180}{figure.6.16}%
