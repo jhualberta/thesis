@@ -510,10 +510,6 @@ Fig.~\ref{fig:EvsBeta14} shows the relationship between the reconstructed energi
 \subsubsection{Energy Resolutions}
 As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be considered as an electron source with a known spatial distribution. The $\gamma$-particles emitted from the source interact with the detector materials via different processes and produce electrons with various energies. Fig.~\ref{fig:N16nhitsSimu} shows the spectra of electron energies derived from the simulations of the $^{16}$N central run 107055. The dominant contribution is from Compton scattering, while the photoelectric absorption is negligible. 
 
-
-The apparent energy spectrum Psource(Te) is generated with RAT and relates the 16N $\gamma$ energy to apparent energy by considering Cherenkov photon production, Compton scattering, pair production, and energy
-deposition in the source container.
-
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=12cm]{N16_MCenergySpectrum.png}
@@ -521,7 +517,16 @@ deposition in the source container.
 absorption are shown.\label{fig:N16nhitsSimu}}
 \end{figure}
 
-Following the methods described in Refs.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in the upper plot of Fig.~\ref{N16energyMap}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
+Following the methods described in Refs.~\cite{askins2015physics,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in the upper plot of Fig.~\ref{N16energyMap}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$)\cite{waterunidoc}.
+
+ Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
+
+
+
+%%The apparent energy spectrum $P_{source(Te) is generated with RAT and relates the 16N $\gamma$ energy to apparent energy by considering Cherenkov photon production, Compton scattering, pair production, and energy
+%%deposition in the source container.
+
+%%the source energy must be mapped to electron-equivalent energy
 
 \begin{figure}[htbp]
 	\centering
