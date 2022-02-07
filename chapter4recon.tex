@@ -91,9 +91,9 @@ which is easily seen to have unit magnitude.
 	\caption[Cherenkov cone and straight line light paths (SNO+ water phase).]{Cherenkov cone and straight line light paths, in the SNO+ water phase geometry.}
 	\label{mpwdiagram_direction}
 \end{figure}
-To fit for the direction with its two parameters ($\theta$, $\phi$), as for the vertex reconstruction a random trial direction $\vec{u}_0(\phi_0,\theta_0)$ is first generated using \texttt{CLHEP} (see Sect.~\ref{appendix:random_gen}). The direction fitter then evaluates an angular parameter, $\cos\theta_{\mathrm{Ch}}$, which is the angle between $\vec{u}_{0}$ and $\vec{X}_{\mathrm{diff}}\equiv \vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}$. Therefore, the direction fitter requires an event position as input, and necessarily runs after the vertex fitter\footnote{It has been discussed that, instead of fitting in two steps, the vertex and direction can be fitted simultaneously by utilizing the MRQ algorithm for fitting six parameters ($x,y,z,t,\theta,\phi$). However, results were worse by using this method, because the likelihood function with more parameters becomes more complicated, which makes it more difficult for the fitter to find a global maximum.}.
+To fit for the direction with its two parameters ($\theta$, $\phi$), as for the vertex reconstruction a random trial direction $\vec{u}_0(\phi_0,\theta_0)$ is first generated using \texttt{CLHEP} (see Sect.~\ref{appendix:random_gen}). The direction fitter then evaluates an angular parameter, $\cos\theta_{\mathrm{Ch}}$, which is the angle between $\vec{u}_{0}$ and $\vec{X}_{\mathrm{diff}}\equiv \vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}$. Therefore, the direction fitter requires an event position as input, and necessarily runs after the vertex fitter \footnote{It has been discussed that, instead of fitting in two steps, the vertex and direction can be fitted simultaneously by utilizing the MRQ algorithm for fitting six parameters ($x,y,z,t,\theta,\phi$). However, results were worse by using this method, because the likelihood function with more parameters becomes more complicated, which makes it more difficult for the fitter to find a global maximum.}.
 
-A 1D PDF, serving as a model of the angular distribution of the triggered PMTs and shown in Fig.~\ref{fig:MPW_angularPDF}, is used for fitting the angular model. It was obtained from 10000 MC simulations of 5-MeV $e^-$ events generated at the detector center ($\vec{X}_{MC}=(0,0,0)$), and traveling along the positive side of the $x$-axis, i.e., the orientation of the momentum vector is $\vec{u}_{\mathrm{MC}}=(1,0,0)$\footnote{Here 5 MeV is a typical energy for the SNO+ water phase analysis. No obvious changes in fitter performances by using PDFs generated with alternative values for electron energy.}.
+A 1D PDF, serving as a model of the angular distribution of the triggered PMTs and shown in Fig.~\ref{fig:MPW_angularPDF}, is used for fitting the angular model. It was obtained from 10000 MC simulations of 5-MeV $e^-$ events generated at the detector center ($\vec{X}_{MC}=(0,0,0)$), and traveling along the positive side of the $x$-axis, i.e., the orientation of the momentum vector is $\vec{u}_{\mathrm{MC}}=(1,0,0)$ \footnote{Here 5 MeV is a typical energy for the SNO+ water phase analysis. No obvious changes in fitter performances by using PDFs generated with alternative values for electron energy.}.
 
 \begin{figure}[!htb]
 	\centering
@@ -104,7 +104,7 @@ A 1D PDF, serving as a model of the angular distribution of the triggered PMTs a
 
 For the $i^{th}$ hit PMT, $\cos\theta^i_{\mathrm{Ch}}=\vec{u}_0\cdot\frac{\vec{X}^i_{{\mathrm{diff}}}}{|\vec{X}^i_{{\mathrm{diff}}}|}$, then the likelihood function is built as:
 \begin{equation}
-\ln \mathcal{L}(\vec{u}_0)=\sum_{i=1}^{{\mathrm{NHits}}}\mathcal{L}_i(\cos\theta_{\mathrm{Ch}}^i),
+\ln \mathcal{L}(\vec{u}_0)=\sum_{i=1}^{{\mathrm{NHits}}}\mathcal{L}_i(\cos\theta_{\mathrm{Ch}}^i)\;,
 \end{equation}
 
 Finally, the fitter fits for the angular PDF by using the MRQ method to obtain the best-fit direction. There are several optimizations for improving the fitter performance. First, the group velocity used in the $t_{\mathrm{transit}}$ calculation is tuned, as shown in Sect.~\ref{sect:tuneGroupVelocity}. In Sect.~\ref{sect:fitterPull}, a drive correction for compensating the pulls in the reconstructed position is discussed. In Sect.~\ref{sect:PMTselector}, PMT selectors for sending proper PMT information to the fitter are discussed. 
@@ -122,7 +122,7 @@ When photons travel through the detector, their group velocities ($v_\mathrm{gr}
 
 To simplify reconstruction, a tuned value (of $v_\mathrm{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_\mathrm{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_\mathrm{transit}=|\vec{X}_\mathrm{event}-\vec{X}_\mathrm{PMT}|/v_\mathrm{gr,eff}$, where the $v_\mathrm{water}$ is replaced by the effective group velocity $v_\mathrm{gr,eff}$. The value of $v_\mathrm{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathrm{gr,eff}$ (a fast effective group velocity) will decrease $t_\mathrm{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_\mathrm{res}$ will increase. During the reconstruction, when the fitter compares the large $t_\mathrm{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_\mathrm{transit}$ and then decrease $t_\mathrm{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathrm{gr,eff}$ is set too small (i.e. too slow), $t_\mathrm{transit}$ will increase while $t_\mathrm{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_\mathrm{res}$. These effects can be quantified as radial bias ($r_\mathrm{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
 \begin{equation}
-r_\mathrm{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC}.
+r_\mathrm{bias} \equiv (\vec{X}_{fit}-\vec{X}_{MC})\cdot \hat{X}_{MC}\;.
 \end{equation}
 
 \begin{figure}[!htb]
@@ -157,7 +157,7 @@ where $L$ is the line segment and $r_\mathrm{PSUP}=8390$ mm is the radius of the
 
 On the other hand, a solid angle $\Omega'$ is calculated as opposed to the solid angle $\Omega$ subtended at the source position. Similarly, the triggered PMTs within the $\Omega'$ were found and then the arrival time $T_2$ was calculated. An average group velocity was then calculated as:
 \begin{equation}
-v_\mathrm{gr}=\frac{2 r_\mathrm{PSUP}}{(T_1+T_2)}.
+v_\mathrm{gr}=\frac{2 r_\mathrm{PSUP}}{(T_1+T_2)}\;.
 \end{equation}
 
 The final estimate for $v_\mathrm{gr}$ was calculated by averaging the $v_\mathrm{gr}$ values obtained from all the events and triggered PMTs in both run 100934 and run 107055. It was found that $v_\mathrm{gr}=c/n_\mathrm{water,eff}=216.478$ mm/ns, where $n_\mathrm{water,eff}=1.38486$.
@@ -236,18 +236,19 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	\item[$\bullet$] Earliest Hit PMT Selector
 	
-	This selector first groups the PMTs by their positions on the PSUP sphere. Taking the centre of the sphere as the origin of the coordinate, the sphere is decomposed into intervals of azimuth angle $\phi$ (longitude) and zenith angle $\theta$ (latitude). The PMT positions are projected to $\phi\in [-\pi,\pi]$ and $\cos\theta\in [-1, 1]$ on the sphere, each range being uniformly divided into $n$ intervals. Thus, the PMTs are grouped into $n\times n$ panels by $\phi$ and $\cos\theta$: $\mathrm{PMT}(\phi_i,\cos\theta_j) \in [i\cdot\phi/n, j\cdot\cos\theta/n],~(i,j=1,2,..,n)$, see Fig.~\ref{GroupPMTs}.
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[width=5cm]{GroupPMTs.png}
-		\caption{PMTs are grouped by partitioning the PSUP sphere into intervals of latitude and longitude.}
-		\label{GroupPMTs}
-	\end{figure}
+	This selector first groups the PMTs by their positions on the PSUP sphere. Taking the centre of the sphere as the origin of the coordinate, the sphere is decomposed into intervals of azimuth angle $\phi$ (longitude) and zenith angle $\theta$ (latitude). The PMT positions are projected to $\phi\in [-\pi,\pi]$ and $\cos\theta\in [-1, 1]$ on the sphere, each range being uniformly divided into $n$ intervals, where $n$ is an integer. The whole PSUP sphere is thus decomposed into $N'=n\times n$ panels by $\phi$ and $\cos\theta$, and the PMTs are grouped into these panels: $\mathrm{PMT}(\phi_i,\cos\theta_j) \in [i\cdot\phi/n, j\cdot\cos\theta/n],~(i,j=1,2,..,n)$, see Fig.~\ref{GroupPMTs}.
 	
 	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. Thus the number of the hit PMTs is reduced to $n\times n$ for the fitter, i.e., $n_\mathrm{select}=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
 	
 	Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
+
+	\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5cm]{GroupPMTs.png}
+	\caption{PMTs are grouped by partitioning the PSUP sphere into intervals of latitude and longitude.}
+	\label{GroupPMTs}
+   \end{figure}
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
 
@@ -340,7 +341,7 @@ To check the radial dependence of reconstruction performance, the volume inside 
 
 The bias between the true event direction (unit vector $\vec{u}_{\mathrm{MC}}$) and the reconstructed direction (unit vector $\vec{u}_{\mathrm{fit}}$) is described by the angle ``$\theta_e$'', defined as $\cos\theta_e \equiv \vec{u}_{\mathrm{fit}} \cdot \vec{u}_{\mathrm{MC}}$. To describe the distribution of $\cos\theta_e$, an empirical function for the angular resolution was adopted by SNO\cite{boulay2004direct} and it is defined as a combination of two exponential components,
 \begin{equation}\label{eq:directResol}
-P(\cos\theta_e)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta_e)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta_e)]}{1-\exp(-2\beta_s)},
+P(\cos\theta_e)=\alpha_M\frac{\beta_M\exp[-\beta_M(1-\cos\theta_e)]}{1-\exp(-2\beta_M)}+(1-\alpha_M)\frac{\beta_s\exp[-\beta_s(1-\cos\theta_e)]}{1-\exp(-2\beta_s)}\;,
 \end{equation}
 where the parameters $\beta_M$ and $\beta_S$ are the ``decay'' constants or the ``slopes'' of the two exponential components, and $\alpha_M$ adjusts the relative weighting (or blending) of the two exponential components. The first component is due to single scattering of the electrons and represents the true angular resolution of the detector, while the second component, which has a broad tail, is mainly due to the multiple scattering of electrons; this broad tail also includes back-scattering on detector components and poorly reconstructed events \cite{boulay2004direct}. Fig.~\ref{fig:directionResol_5MeV} shows the $\cos\theta_e$ distribution for 5 MeV $e^-$ particles generated at the detector center, with isotropic directions.
 
@@ -353,7 +354,7 @@ where the parameters $\beta_M$ and $\beta_S$ are the ``decay'' constants or the 
 Another way to quantify the performance of the reconstruction is to calculate the angles that contain 50\%, 80\%
 or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_{0.8}$ and $\cos\theta_{0.9}$ respectively\cite{coulter2013modelling}. Their values (represented in Eqn.~\ref{eq:cosTheta_fraction} by the abstract $\cos\theta_{a}$) are obtained by solving:
 \begin{equation}\label{eq:cosTheta_fraction}
-\frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) \, d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) \, d\cos\theta_e} = a\times 100\% \, ,
+\frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) \, d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) \, d\cos\theta_e} = a\times 100\% \; ,
 \end{equation}
 where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table~\ref{tab:angularResol_MPW}, are slightly better than those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.3\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
 
@@ -365,7 +366,7 @@ where $P(\cos\theta_e)$ is the direction resolution function with the best fit p
 		\toprule 
 	    $\beta_M$ &  $\beta_S$ & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
         \hline
-         4.47$\pm$0.12 & 21.54 $\pm$0.91 & 0.978 & 0.777 & 0.624\\
+         4.47$\pm$0.12 & 21.54$\pm$0.91 & 0.978 & 0.777 & 0.624\\
 		\bottomrule	
 	\end{tabular*}
 \end{table}
@@ -504,7 +505,7 @@ If $\Delta>0$, one may solve to evaluate two roots,
 \begin{equation}\label{eq:ray-sphere}
 a_{\pm} = -(\vec{X}_0-\vec{O}_\mathrm{AV})\cdot\vec{u}\pm\sqrt{\Delta} \;.
 \end{equation}
-In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_\mathrm{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point\footnote{the line intersection with no direction can pass two points}, and then the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_\mathrm{AV}$ is automatically met. 
+In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_\mathrm{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point \footnote{the line intersection with no direction can pass two points}, and then the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_\mathrm{AV}$ is automatically met. 
 
 If $\Delta\leq 0$, there is either {\bf no} intersection point (Fig.~\ref{line-sphere} (c)) or there is {\bf one} intersection point (Fig.~\ref{line-sphere} (d)). In either case, the ray vector never passes through the AV sphere.
 
@@ -524,7 +525,7 @@ If $u_z=z_\mathrm{PMT}-z_0=0$, the ray is parallel to the plane and never inters
 If $u_z\neq 0$, solve the intersection equation $l_{0,z}=Z_\mathrm{split}$, we have: $a=(Z_\mathrm{split}-z_0)/u_z$.
 Let: 
 \begin{equation}
-a_3 \equiv a = \frac{(Z_\mathrm{split}-z_0)|\vec{X}_{\mathrm{PMT}}-\vec{X_0}|}{z_\mathrm{PMT}-z_0}~~(if ~z_\mathrm{PMT}-z_0\neq 0),
+a_3 \equiv a = \frac{(Z_\mathrm{split}-z_0)|\vec{X}_{\mathrm{PMT}}-\vec{X_0}|}{z_\mathrm{PMT}-z_0}~~(if ~z_\mathrm{PMT}-z_0\neq 0)\;,
 \end{equation}
 
 Similar to the case of ray-sphere intersection, if $a_3<0$, the ray-plane intersection point is on the extended line along the opposite direction to the ray; $a_3 \geq 0$ ensures the ray hits the interface. Note that here we consider the plane to be infinitely large: later we will combine with further logic to correct this fallacy. 
@@ -615,7 +616,7 @@ These Oxford-measured time profiles were convolved with the PMT time response pr
 \begin{equation}\label{eq:OxfordTimingPDF}
 f(t)_{PDF} = f_{optics}(t)\otimes f_{PMT~response}(t-t')
 \end{equation}
-for vertex reconstruction during the partial-fill. I wrote a python tool to create the timing PDFs to re-coordinate the partial fitter for the different PPO concentration cases \cite{partialFitterPDF}, as shown in Fig.~\ref{fig:oxfordPdf}\footnote{For other potential phases, the PDF can be built by using the timing spectrum described in Sect.~\ref{sect:LS_SNO+}.}.
+for vertex reconstruction during the partial-fill. I wrote a python tool to create the timing PDFs to re-coordinate the partial fitter for the different PPO concentration cases \cite{partialFitterPDF}, as shown in Fig.~\ref{fig:oxfordPdf} \footnote{For other potential phases, the PDF can be built by using the timing spectrum described in Sect.~\ref{sect:LS_SNO+}.}.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{oxfordPdf_log.png}
@@ -650,7 +651,7 @@ Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~
 			PPO [g/L] & $V_{gr,scint}$ [mm/ns]& $n_\mathrm{eff,scint}$ & $V_{gr,water}$ [mm/ns]& $n_\mathrm{eff,water}$\\
 			\midrule
 			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
-			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$-5.773 & 1.417 \\
+			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$5.773 & 1.417 \\
 			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
 			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
 			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
@@ -903,7 +904,7 @@ The \texttt{MP fitter} has already been implemented into the \texttt{RAT} softwa
 
 The \texttt{MP fitter} first loads the fitter database, which contains the parameters used by the fitter. Parameters includes the physical constants (e.g., speed of light); geometrical parameters of the detector (e.g., $r_\mathrm{PSUP}$, length of neck, water level); fitter setting parameters (e.g., the effective group velocity, fitter iteration number, etc.); and various optimized PDFs. This collection of parameters (and others not mentioned) is known as the \texttt{RAT} database (ratdb), stored in a \texttt{JSON} format\cite{JSONwiki}, and contains tables which are structured by different indices to indicate specific physics phases or detection media. For example, for the partial-fill phase with a PPO concentration of 0.5 g/L, the fitter extracts the PDFs and fitter setting parameters under the index of ``\texttt{labppo\_0p5\_scintillator}''. These fitter setting parameters and PDFs were optimized for the 0.5 g/L PPO partial-fill geometry.
 
-After loading the database the \texttt{MP fitter} goes through the event-by-event reconstruction. For a triggered event, it calls PMT selectors and sends the timing and charge information of the selected PMTs to a \texttt{Likelihood Calculation Class}. Sect.~\ref{sect:PMTselector} will give the details about the PMT selectors. In the \texttt{Likelihood Calculation Class}, there are four main likelihood calculation functions\footnote{The \texttt{AirWaterVertex} for the early partial water fill test in 2014 and the \texttt{WavelengthShifterVertex} for the conceptual wavelength-shifter test, as mentioned in the previous sections, were not included in the current version of \texttt{RAT} since they are not used in actual physics phases.}: the \texttt{WaterVertex} and \texttt{WaterDirection} for the event vertex and direction reconstruction in the water phase; the \texttt{ScintWaterVertex} for vertex reconstruction in the partial-fill phase; and the \texttt{ScintVertex} for vertex reconstruction in the scintillator and tellurium-loading phases.
+After loading the database the \texttt{MP fitter} goes through the event-by-event reconstruction. For a triggered event, it calls PMT selectors and sends the timing and charge information of the selected PMTs to a \texttt{Likelihood Calculation Class}. Sect.~\ref{sect:PMTselector} will give the details about the PMT selectors. In the \texttt{Likelihood Calculation Class}, there are four main likelihood calculation functions \footnote{The \texttt{AirWaterVertex} for the early partial water fill test in 2014 and the \texttt{WavelengthShifterVertex} for the conceptual wavelength-shifter test, as mentioned in the previous sections, were not included in the current version of \texttt{RAT} since they are not used in actual physics phases.}: the \texttt{WaterVertex} and \texttt{WaterDirection} for the event vertex and direction reconstruction in the water phase; the \texttt{ScintWaterVertex} for vertex reconstruction in the partial-fill phase; and the \texttt{ScintVertex} for vertex reconstruction in the scintillator and tellurium-loading phases.
 
 Reading the detector geometry settings and the assigned index of detection medium, the fitter selects proper likelihood functions to construct the likelihood functions and to calculate the likelihoods and their derivatives by evaluating fit parameters based on different light path calculations in different detector geometries. The calculated likelihoods and derivatives are sent to the MRQ method class to maximize the likelihood and find the best-fit values. The MRQ method class does not ``care'' about how the likelihood functions had been constructed nor how the likelihoods and derivatives had been calculated. 
 	
