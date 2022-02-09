@@ -484,7 +484,7 @@ Once having computed $t_{\mathrm{transit}}$ the time residual $t_\mathrm{res}$ c
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=7cm]{scintpath.png}
-	\caption[Light path calculation for the \texttt{MP scint-water fitter fitter}.]{Light path calculation for the \texttt{MP scint-water fitter fitter}. In the figure, a light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, $d_{sp}$) includes the paths in the neck ($d_{sp,\mathrm{neck}}$) and in the AV ($d_{sp,\mathrm{AV}}$). Calculations of the ray-cylinder, ray-plane and ray-sphere intersections are applied.	\label{fig:scintpath}}
+	\caption[Light path calculation for the \texttt{MP scint-water fitter}.]{Light path calculation for the \texttt{MP scint-water fitter}. In the figure, a light path intersects with the neck cylinder surface, the AV sphere as well as the water-scintillator interface. The total length of the path in the scintillator region (scintillator path, $d_{sp}$) includes the paths in the neck ($d_{sp,\mathrm{neck}}$) and in the AV ($d_{sp,\mathrm{AV}}$). Calculations of the ray-cylinder, ray-plane and ray-sphere intersections are applied.	\label{fig:scintpath}}
 \end{figure}
 
 It follows that the crucial part of the calculation is obtaining $d_{sp}$. The light path vector $\vec{l}_p$, encoding length and direction, may intersect and one or more of three geometrical objects: the neck cylinder, the AV sphere, and the water-scintillator interface plane. As illustrated in Fig.~\ref{fig:scintpath}, a detailed calculation of $d_{sp}$ includes evaluation of (1) $\vec{l}_p$ and neck (ray-cylinder) intersection; (2) $\vec{l}_p$ and the AV (ray-sphere) intersection and (3) $\vec{l}_p$ and the water-scintillator interface (ray-plane) intersection. The distance $d_{sp}$ is further separated into path segments within the neck ($d_{sp,\mathrm{neck}}$) and within the AV ($d_{sp,\mathrm{AV}}$). 
@@ -871,14 +871,14 @@ A test of the quality of vertex reconstruction versus event radial position was 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{shellTestScintFitter_RvsBias.pdf}
-	\caption[The Gaussian biases ($\mu$) of the \texttt{MP scint fitter} fit position biases as a function of radius, for the $x$, $y$, and $z$ axes.]{The Gaussian biases ($\mu$) of the fit position biases as a function of radius, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
+	\caption[The Gaussian means ($\mu$) of the \texttt{MP scint fitter} fit position biases as a function of radius.]{The Gaussian biases ($\mu$) of the \texttt{MP scint fitter} fit position biases as a function of radius, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
 	\label{fig:scintShellVsBias}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{shellTestScintFitter_RvsResol.pdf}
-	\caption[The Gaussian resolutions ($\sigma$) of the \texttt{MP scint fitter} fit position biases as a function of radius, for the $x$, $y$, and $z$  axes.]{The Gaussian resolutions ($\sigma$) of the fit position biases as a function of radius, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
+	\caption[The Gaussian resolutions ($\sigma$) of the \texttt{MP scint fitter} fit position biases as a function of radius.]{The Gaussian resolutions ($\sigma$) of the \texttt{MP scint fitter} fit position biases as a function of radius, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
 	\label{fig:scintShellVsResol}
 \end{figure}
 
@@ -887,14 +887,14 @@ For other energies (from 1 to 10 MeV), the Gaussian means and resolutions of the
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{fullScintBiasVsE.pdf}
-	\caption[The Gaussian means ($\mu$) of the \texttt{MP scint fitter} fit position biases as a function of energy, for the $x$, $y$, and $z$ axes.]{The Gaussian means ($\mu$) of the fit position biases as a function of energy, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
+	\caption[The Gaussian means ($\mu$) of the \texttt{MP scint fitter} fit position biases as a function of energy.]{The Gaussian means ($\mu$) of the \texttt{MP scint fitter} fit position biases as a function of energy, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
 	\label{fig:scintBiasVsE}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=10cm]{fullScintResolVsE.pdf}
-	\caption[The Gaussian resolutions ($\sigma$) of the \texttt{MP scint fitter} fit position biases as a function of energy, for the $x$, $y$, and $z$ axes.]{The Gaussian resolutions ($\sigma$) of the fit position biases as a function of energy, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
+	\caption[The Gaussian resolutions ($\sigma$) of the \texttt{MP scint fitter} fit position biases as a function of energy.]{The Gaussian resolutions ($\sigma$) of the \texttt{MP scint fitter} fit position biases as a function of energy, for the $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes.}
 	\label{fig:scintResolVsE}
 \end{figure}
 
