@@ -18,7 +18,7 @@ When analyzing $^{16}$N run data and simulations, an FECD tag cut (FECD$==9188$)
 
 \section{High Level Cuts for the Water Phase}\label{sect:high_level_cuts}
 
-A set of (event-) classifiers, developed originally for the SNO analysis, have been adjusted and optimized for the SNO+ water phase analysis\cite{highlevel}. These event classifiers utilize reconstructed quantities, so they always require a valid reconstruction.
+A set of (event-) classifiers, developed originally for the SNO analysis, have been adjusted and optimized for the SNO+ water phase analysis \cite{highlevel}. These event classifiers utilize reconstructed quantities, so they always require a valid reconstruction.
 
 \begin{itemize}
 	\item[$\bullet$] In time ratio (ITR) classifier
@@ -44,7 +44,7 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 
 \subsection{Effects of the High-level Cuts}
 
-As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events such as instrumental noises, cuts of $\mathrm{ITR}>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration\cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
+As described above, the classifiers can help to distinguish the physical events from Cherenkov events and nonphysical events from non-Cherenkov events, such as instrumental noises. To remove the non-Cherenkov background events such as instrumental noises, cuts of $\mathrm{ITR}>0.55$ and $-0.12<\beta_{14}<0.95$ (termed ``high-level cuts'') were suggested by the collaboration \cite{waterunidoc}. These cuts are based on the analysis of simulated physics events, as well as the experience gathered by the SNO collaboration \cite{waterunidoc,marzec2019measurement,dunmore2004separation}. %John: {red}(Jie it was not clear to me what you meant by ``analyses of data cleaning'' so I took it out. If the idea you were expressing is important, it needs to be expressed more clearly.){red}
 
 The $^{16}$N central run 107055 data and (corresponding) MC simulation were used to check the effects of the high-level cuts. For the MC (data), the cut ITR$>0.55$ removed 0.69\% (0.79\%) of the total events and the cut $-0.12<\beta_{14}<0.95$ removed 1.11\% (0.93\%) of the total events. Combining the ITR and $\beta_{14}$ cuts, 1.69\% (1.62\%) of the total events were removed.
 
@@ -259,7 +259,7 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 
 The vertex scale systematics were then transformed, e.g. $x'=(1+\delta_x/100)x$ with equivalent formulae for the $(y,z)$ axes.
 
-The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r$ is calculated as\cite{waterunidoc}:
+The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r$ is calculated as \cite{waterunidoc}:
 \begin{equation}
 \delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}}\; .
 \end{equation}
@@ -342,7 +342,7 @@ To be conservative, taking the largest and smallest values of the $\Delta(\beta_
 	\caption[Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position.]{Relative differences of $\beta_M$ and $\beta_S$ as a function of the $^{16}$N source position. For simplicity, the corner scans are not shown in this figure. The red squares represent the results from the $x$-scan runs; green circles represent the $y$-scan runs and the blue triangles represent the $z$-scan runs. \label{relative_biasesVsPositions}}
 \end{figure}
 
-To propagate the uncertainties in $\beta_M$ and $\beta_S$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration\cite{drouin2012three}:
+To propagate the uncertainties in $\beta_M$ and $\beta_S$ to the direction resolution, a first-order approximation function was derived by the SNO collaboration \cite{drouin2012three}:
 \begin{equation}\label{remapTheta}
 \cos\theta'=1+(\cos\theta-1)(1+\delta_{\theta}) \, .
 \end{equation}
@@ -351,7 +351,7 @@ This angular remapping function was used to smear the angular distributions for 
 
 \subsection{$\beta_{14}$ and its Systematic}
 
-Since $\beta_{14}$ itself is used as the high-level cut, only the cuts $\mathrm{ITR}>0.55$ and $\mathrm{NHits}>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation\cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
+Since $\beta_{14}$ itself is used as the high-level cut, only the cuts $\mathrm{ITR}>0.55$ and $\mathrm{NHits}>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation \cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
 
 \begin{figure}[htbp]
 	\centering
@@ -485,7 +485,7 @@ As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be consi
 	\caption[Simulated electron energy spectra for different processes.]{Simulated electron energy spectra for different processes, extracted from $10^5$ MC simulations of $^{16}$N central run 107055. Contributions from three processes: Compton scattering, pair production, and photoelectric absorption are shown.\label{fig:N16nhitsSimu}}
 \end{figure}
 
-Following the methods described in Refs.~\cite{morganThesis,waterunidoc}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in the upper plot of Fig.~\ref{N16energyMap}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$)\cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
+Following the methods described in Refs.~\cite{waterunidoc,morganThesis}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in the upper plot of Fig.~\ref{N16energyMap}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$) \cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
 
 %%The apparent energy spectrum $P_{source(Te) is generated with RAT and relates the 16N $\gamma$ energy to apparent energy by considering Cherenkov photon production, Compton scattering, pair production, and energy
 %%deposition in the source container.
@@ -584,7 +584,7 @@ To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is sme
 	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:EscaleSmear}}
 \end{figure}
 
-To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided\cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
+To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided \cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEresol_N16_new.pdf}
