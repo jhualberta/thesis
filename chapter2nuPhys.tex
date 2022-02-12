@@ -167,7 +167,7 @@ Then the probability that the neutrino $\nu_\alpha$ at time $t_0=0$ transforms i
  \begin{split}
 &P(\nu_\alpha\to\nu_\beta;L,E)= |\mathcal{A}|^2 \; = \; \mathcal{A} \mathcal{A}^* \, =  \\%|\langle\mathcal{A}(\nu_\alpha\to\nu_\beta;L,E)|\mathcal{A}(\nu_\alpha\to\nu_\beta;L,E)\rangle|^2=\\
 &(U^*_{\alpha 1}U_{\beta 1}e^{-iE_1t+ip_1L}+U^*_{\alpha 2}U_{\beta 2}e^{-iE_2t+ip_2L}+...)(U_{\alpha 1}U^*_{\beta 1}e^{+iE_1t-ip_1L}+U_{\alpha 2}U^*_{\beta 2}e^{+iE_2t-ip_2L}+...)=\\
-&\sum_j |U_{\alpha j}|^2|U_{\beta j}|^2 + \sum_{j>k}(U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k})\exp\{-i(E_j-E_k)t+i(p_j-p_k)L\}+(j\leftrightarrow k),
+&\sum_j |U_{\alpha j}|^2|U_{\beta j}|^2 + \sum_{j>k}(U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k})\exp\{-i(E_j-E_k)t+i(p_j-p_k)L\}+(j\leftrightarrow k)\;,
 \end{split}
 \end{equation}
 where $(j\leftrightarrow k)$ stands for the second term exchanging the $j,k$ indices.
@@ -193,7 +193,7 @@ where
 Then combining the second term (of Eqn.~\ref{oscillationEq1}) and the corresponding $(j\leftrightarrow k)$ term, Eqn.~\ref{oscillationEq1} can be written as \cite{aitchison2012gauge}:
 \begin{equation}\label{oscillationEq2}
 P_{\nu_\alpha\to\nu_\beta}(L,E)=
-\sum_j |U_{\alpha j}|^2|U_{\beta j}|^2 + 2\sum_{j>k}|U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k}|\cos(\frac{\Delta m^2_{jk}}{2E}L-\phi_{\alpha\beta;jk}),
+\sum_j |U_{\alpha j}|^2|U_{\beta j}|^2 + 2\sum_{j>k}|U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k}|\cos(\frac{\Delta m^2_{jk}}{2E}L-\phi_{\alpha\beta;jk}) \; ,
 \end{equation}
 where (recall) $L$ is distance from source to detector, and $E$ is the energy of the neutrino {\em averaged along the path}.
 
@@ -201,7 +201,7 @@ Because the matrix $U$ is unitary the second term in Eqn.~\ref{oscillationEq2} e
 \begin{equation}
  \begin{split}
 &|U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k}|\{\cos(\phi_{\alpha\beta;jk})\cos(\frac{\Delta m^2_{jk}}{2E}L)+\sin(\phi_{\alpha\beta;jk})\sin(\frac{\Delta m^2_{jk}}{2E}L)\}=\\
-&\Re(U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k})(1-2\sin^2\frac{\Delta m^2_{jk}L}{4E})+\Im(U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k})\sin\frac{\Delta m^2_{jk}L}{2E},
+&\Re(U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k})(1-2\sin^2\frac{\Delta m^2_{jk}L}{4E})+\Im(U^*_{\alpha j}U_{\beta j}U_{\alpha k}U^*_{\beta k})\sin\frac{\Delta m^2_{jk}L}{2E} \;,
  \end{split}
 \end{equation}
 and when $t=L=0$, Eqn.~\ref{oscillationEq2} becomes
@@ -217,7 +217,7 @@ P_{\nu_\alpha\to\nu_\beta}(L,E) = \delta_{\alpha\beta} &-& 4\sum_{j>k} \Re[U_{\b
 
 Choosing a set of units commonly used by experiments and with dimensional transformation, we have \cite{pdg2020}:
 \begin{equation}\label{oscillationCondition}
-X_{jk}\equiv \frac{\Delta m^2_{jk}L}{4E}=\frac{1.267\Delta m_{jk}^2[\mathrm{eV}^2]L[\mathrm{m}]}{E_\nu[\mathrm{MeV}]}.
+X_{jk}\equiv \frac{\Delta m^2_{jk}L}{4E}=\frac{1.267\Delta m_{jk}^2[\mathrm{eV}^2]L[\mathrm{m}]}{E_\nu[\mathrm{MeV}]}\; .
 \end{equation}
 Maximum oscillation occurs when $X_{jk}\sim \pi$, which gives an effective length $L^{osc}(\Delta m_{jk},E_\nu)=4\pi E/|\Delta m_{jk}^2|$.
 
@@ -260,7 +260,7 @@ This provides a measure of CP violation \cite{aitchison2012gauge},
 \begin{equation}\label{cpV_eq1}
 %\begin{split}
 \mathcal{A}_{CP}=P_{\nu_\alpha\to\nu_\beta}(L,E)-P_{\bar{\nu}_\alpha\to\bar{\nu}_\beta}(L,E)=
-4\sum_{j>k} \Im(U_{\beta j}U^*_{\alpha j}U_{\alpha k}U^*_{\beta k})\sin\frac{\Delta m^2_{jk}L}{2E},
+4\sum_{j>k} \Im(U_{\beta j}U^*_{\alpha j}U_{\alpha k}U^*_{\beta k})\sin\frac{\Delta m^2_{jk}L}{2E} \;,
 %\end{split}
 \end{equation}
 where $\delta_{CP}$ is examined by the experiments which measure the difference between neutrino and antineutrino oscillation probabilities $P(\bar{\nu}_\alpha\to\bar{\nu}_\beta)$ and $P(\nu_\alpha\to\nu_\beta)$ \cite{xing2011neutrinos}. In 2019, the Tokai-to-Kamioka (T2K) experiment in Japan claimed confidence intervals for $\delta_{CP}$ with three standard deviations ($3\sigma$): [-3.41,-0.03] (NH) or [-2.54,-0.32] (IH). This result indicates that leptons exhibit CP violation \cite{abe2019constraint}.
@@ -280,7 +280,7 @@ In vacuum two-flavor mixing, the Schr\"{o}dinger equation can be written (in nat
 	\begin{pmatrix}
 		\nu_e\\
 		\nu_\mu\\
-	\end{pmatrix},
+	\end{pmatrix}\; ,
 \end{equation}
 where
 \begin{equation} \label{eq:H0f}
@@ -293,7 +293,7 @@ where
 \end{pmatrix}+\frac{(m_1^2+m_2^2)}{4E}\begin{pmatrix}
 	1 & 0\\
 	0 &1\\
-\end{pmatrix},
+\end{pmatrix}\;,
 \end{aligned}
 \end{equation}
 and $\Delta m^2_{21}=(m^2_2 - m^2_1)$.
@@ -307,11 +307,11 @@ To simplify the calculation, we can drop the second unitary term of $H^f_0$ that
 \end{equation}
 By analogy with mixing in vacuum, a mixing angle in matter, $\theta_m$ is defined as
 \begin{equation}\label{eq:thetaM}
-	\tan 2\theta_m = \frac{\Delta m^2\sin2\theta}{\Delta m^2\cos2\theta-2\sqrt 2E G_Fn_e},
+	\tan 2\theta_m = \frac{\Delta m^2\sin2\theta}{\Delta m^2\cos2\theta-2\sqrt 2E G_Fn_e}\; ,
 \end{equation}
 and an effective squared-mass difference in matter, $\Delta m^2_m$ is defined as:
 \begin{equation}
-	\Delta m^2_m = \sqrt{(\Delta m^2\cos2\theta - 2\sqrt 2EG_Fn_e)^2+(\Delta m^2\sin2\theta)^2}.
+	\Delta m^2_m = \sqrt{(\Delta m^2\cos2\theta - 2\sqrt 2EG_Fn_e)^2+(\Delta m^2\sin2\theta)^2}\; .
 \end{equation}
 Thus we can write the mixing equation relating the energy eigenstates in matter ($\nu_{1m},\nu_{2m}$) to the flavor eigenstates by a unitary matrix:
 \begin{equation}\label{eq:matter_mixing}
@@ -326,16 +326,16 @@ Thus we can write the mixing equation relating the energy eigenstates in matter 
 	\begin{pmatrix}
 		\nu_{1m}\\
 		\nu_{2m}\\
-	\end{pmatrix}.
+	\end{pmatrix}\; .
 \end{equation}
 
 The probability of flavor transformation in matter is:
 \begin{equation}
-	P_{\nu_e\to\nu_{\mu}}=\sin^2(2\theta_m)\sin^2\Big(\frac{\Delta m_m^2L}{4E}\Big).
+	P_{\nu_e\to\nu_{\mu}}=\sin^2(2\theta_m)\sin^2\Big(\frac{\Delta m_m^2L}{4E}\Big)\; .
 \end{equation}
 The denominator in equation (\ref{eq:thetaM}) implies a resonance condition:
 \begin{equation}\label{eq:reson_condition}
-	V(n_e)=\sqrt 2G_Fn_e=\frac{\Delta m^2\cos2\theta}{2E}.
+	V(n_e)=\sqrt 2G_Fn_e=\frac{\Delta m^2\cos2\theta}{2E}\; .
 \end{equation}
 From this condition, for a given $E$, there is a resonance density $n^{\mathrm{res}}_e$ while for a given $n_e$, there is a resonance energy $E^{\mathrm{res}}$. When the resonance condition is satisfied, $\theta_m = \frac{\pi}{4}$ and two flavor neutrinos are maximally mixed, even if the vacuum mixing angle $\theta$ is small. This is called matter enhanced neutrino oscillation \cite{smirnov2016solar,fukugita2013physics}. The matter effect was first observed by measuring the solar neutrino fluxes, which will be discussed in the next section.
 
@@ -391,11 +391,11 @@ The electron neutrinos $\nu_e$ produced in the solar nuclear reactions are calle
 
 The average energy of a solar electron neutrino ($\nu_e$) is calculated by summing over the energies $E^i_{\nu_e}$ from the $i^{th}$ reaction chain with a flux of $\Phi_{\nu_e}^i$ and dividing by $\Phi^{tot}_{\nu_e}$\cite{antonio2018state}:
 \begin{equation}\label{eq:solarNuEaverage}
-\langle E_{\nu_e}\rangle = \sum_i E^i_{\nu_e} \; \frac{\Phi^i_{\nu_e}}{\Phi^{\mathrm{tot}}_{\nu_e}}\approx 0.265~\mathrm{MeV}.
+\langle E_{\nu_e}\rangle = \sum_i E^i_{\nu_e} \; \frac{\Phi^i_{\nu_e}}{\Phi^{\mathrm{tot}}_{\nu_e}}\approx 0.265~\mathrm{MeV}\; .
 \end{equation}
 For every MeV of released energy, there are about two $\nu_e$ generated. Then the solar $\nu_e$ flux at the Earth's surface can be estimated via the measured solar radiation energy on the Earth surface:
 \begin{equation}
-\Phi_{\nu_e} \simeq \frac{\mathcal{L}_{\odot}}{4\pi D_\odot^2} \; \frac{2}{Q-2\langle E_{\nu_e} \rangle}\simeq 6.40\times 10^{10}~\nu_e/\mathrm{cm^2/s},
+\Phi_{\nu_e} \simeq \frac{\mathcal{L}_{\odot}}{4\pi D_\odot^2} \; \frac{2}{Q-2\langle E_{\nu_e} \rangle}\simeq 6.40\times 10^{10}~\nu_e/\mathrm{cm^2/s} \; ,
 \end{equation}
 where the solar constant $G_{sc}=\mathcal{L}_\odot/(4\pi D^2_\odot)\simeq 0.136$ W/cm$^2$ \cite{suekane2015neutrino}. 
 
@@ -426,7 +426,7 @@ SNO used a 1-kilotonne heavy water (D$_2$O) Cherenkov detector to distinguish th
 In 2002, SNO reported that the measured total $^8$B solar neutrino flux via the NC channel ($\Phi_{NC}$) was consistent with the SSM while the $\nu_e$
 component of the flux ($\Phi_e$) was about one-third of the total flux\cite{ahmad2002direct}:
 \begin{equation}
-R = \Phi_{CC}/\Phi_{NC} = \Phi_e/\Phi_{tot}=0.34\pm 0.04.
+R = \Phi_{CC}/\Phi_{NC} = \Phi_e/\Phi_{tot}=0.34\pm 0.04 \; .
 \end{equation}
 
 A combined analysis of SNO data acquired from 1999 to 2006 gave the measured total flux of $^8$B solar neutrinos as $\Phi_{^8\mathrm{B}}=5.25\pm0.16(stat.)^{+0.11}_{-0.13}(syst.)$ cm$^{-2}$s$^{-1}$. Based on a two-flavor neutrino oscillation analysis, SNO implied that $\Delta m^2_{21}=(5.6^{+1.9}_{-1.4})\times 10^{-5}$ eV$^2$ and $\tan^2\theta_{12}=0.427^{+0.033}_{-0.029}$ \cite{aharmim2013combined}.
@@ -494,7 +494,7 @@ In 1939 W. H. Furry \cite{furry1939transition} proposed that {\em if} neutrinos 
 
 For the Majorana neutrino, an effective Majorana mass $\langle m_{ee}\rangle$ is defined as \cite{suekane2015neutrino,zuber2020neutrino}:
 \begin{equation}\label{eq:effective_nuMass}
-\langle m_{ee}\rangle = |\sum_{i=1}^3 U^2_{ei}m_i|= |c^2_{13}c^2_{12}m_1+c^2_{13}s^2_{12}e^{i\alpha_1}m_2+s^2_{13}e^{i\alpha_2}m_3|,
+\langle m_{ee}\rangle = |\sum_{i=1}^3 U^2_{ei}m_i|= |c^2_{13}c^2_{12}m_1+c^2_{13}s^2_{12}e^{i\alpha_1}m_2+s^2_{13}e^{i\alpha_2}m_3| \;,
 \end{equation}
 where the values of $U_{ei}$ are the elements of the neutrino mixing matrix for the flavor state $\nu_e$, and $m_i$ are the mass eigenvalues of the mass eigenstates, according to Enq.~\ref{eq:mixingmatrix}; $\alpha_1,\alpha_2$ are two Majorana CP-violation phase factors ranging from 0 to $\pi$, and $\alpha_2$ can also be taken as $\alpha_2-\delta_{CP}$.
 
@@ -548,4 +548,3 @@ For $^{130}$Te, the current best limit is from the CUORE experiment (Cryogenic U
 For $^{76}$Ge, the current best limit is from the GERDA experiment (GERmanium Detector Array). In 2019, GERDA reported a lower limit half-life of $T^{0\nu}_{1/2}(^{76}$Ge$)>1.8\times 10^{26}$ years at 90\% C.L. with $\langle m_{ee}\rangle<(79-180)$ meV \cite{agostini2020final}.
 
 Future experiments such as the KamLAND2-Zen, LEGEND-1000 and nEXO, coming to fruition within about a decade, are required to reach $T^{0\nu}_{1/2}$ at $\mathcal{O}(10^{27}-10^{28})$ years \cite{dolinski2019neutrinoless}.
-

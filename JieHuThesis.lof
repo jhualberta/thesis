@@ -60,7 +60,7 @@
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Position distribution of hit PMTs (zenith and azimuth angles).}}{90}{figure.4.22}%
 \contentsline {figure}{\numberline {4.23}{\ignorespaces The energies of simulated electrons as a function of mean NHits.}}{90}{figure.4.23}%
 \contentsline {figure}{\numberline {4.24}{\ignorespaces The timing PDF for the wbWLS.}}{91}{figure.4.24}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Fitted $x$ position.}}{92}{figure.4.25}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces A comparison of fitted $x$ positions.}}{92}{figure.4.25}%
 \contentsline {figure}{\numberline {4.26}{\ignorespaces Light path calculation for the \texttt {MP scint-water fitter}.}}{94}{figure.4.26}%
 \contentsline {figure}{\numberline {4.27}{\ignorespaces Line-sphere intersections.}}{95}{figure.4.27}%
 \contentsline {figure}{\numberline {4.28}{\ignorespaces Timing PDFs used by the \texttt {MP scint-water fitter}.}}{97}{figure.4.28}%
