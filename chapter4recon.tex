@@ -116,8 +116,7 @@ When photons travel through the detector, their group velocities ($v_\mathrm{gr}
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6cm]{refractiveIndexVsWavelength.pdf}
-	\caption[Refractive index of water vs wavelength.]{Refractive index of water vs wavelength, reproduced from \texttt{RAT}. These values are based on the measurements from laserball calibration scans in the SNO+ water phase \cite{laserball_groupVelocity}.}
-	\label{nVsWavelength}
+	\caption[Refractive index of water vs wavelength.]{Refractive index of water vs wavelength, reproduced from \texttt{RAT}. These values are based on the measurements from laserball calibration scans in the SNO+ water phase \cite{laserball_groupVelocity}.	\label{nVsWavelength}}
 \end{figure}
 
 To simplify reconstruction, a tuned value (of $v_\mathrm{gr}$) is used in the straight line light path calculation. As mentioned in Sect.~\ref{sect:mpw}, the water vertex fitter calculates $t_\mathrm{transit}$ by evaluating the distances from the trial vertex to the hit PMTs: $t_\mathrm{transit}=|\vec{X}_\mathrm{event}-\vec{X}_\mathrm{PMT}|/v_\mathrm{gr,eff}$, where the $v_\mathrm{water}$ is replaced by the effective group velocity $v_\mathrm{gr,eff}$. The value of $v_\mathrm{gr,eff}$ set in the fitter can introduce bias in the reconstructed position, mainly due to a ``complementary'' effect of the fitter. Setting a large value of $v_\mathrm{gr,eff}$ (a fast effective group velocity) will decrease $t_\mathrm{transit}$, while according to Eqn.~\ref{eq:tres_define}, $t_\mathrm{res}$ will increase. During the reconstruction, when the fitter compares the large $t_\mathrm{res}$ with the timing PDF, it will attempt to place the trial vertex further away from the hit PMTs to increase $t_\mathrm{transit}$ and then decrease $t_\mathrm{res}$, as illustrated in Fig.~\ref{fig:effectiveVg}. On the other hand, if $v_\mathrm{gr,eff}$ is set too small (i.e. too slow), $t_\mathrm{transit}$ will increase while $t_\mathrm{res}$ will decrease, and the fitter will place the trial vertex closer to the hit PMTs to increase $t_\mathrm{res}$. These effects can be quantified as radial bias ($r_\mathrm{bias}$), which is the difference between the reconstructed and true (MC) positions ($\vec{X}_{fit}-\vec{X}_{MC}$), projected along the radial component of the true position (the unit vector $\hat{X}_{MC}$) \cite{coulter2013modelling}:
@@ -137,7 +136,7 @@ In practice, $v_\mathrm{gr,eff}$ is calculated by an effective refractive index 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=6.5cm]{tune_groupVelocity_MPW.png}
-	\caption[Group velocity vs. radial bias for the \texttt{MPW fitter}.]{Group velocity vs. radial bias for the \texttt{MPW fitter}.	\label{fig:plotVgr}}
+	\caption[Group velocity vs. radial bias for the \texttt{MPW fitter}.]{Group velocity vs. radial bias for the \texttt{MPW fitter}. \label{fig:plotVgr}}
 \end{figure}
 
 Later I turned to a more data-driven approach. This approach is to tune the average group velocity based on the analysis of the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run 100934 and run 107055, the source was deployed almost at the PSUP center, and the optical photons propagated to reach PMTs on the PSUP. 
