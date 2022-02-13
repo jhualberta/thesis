@@ -39,7 +39,7 @@ The \texttt{MPW fitter} determines the vertex and direction of a triggered event
 
 The vertex is defined by four parameters, namely $x,y,z$ and $t$. The fitter first creates a randomly-generated position inside a sphere of radius $10$ m (i.e. larger than the PSUP radius $r_{\mathrm{PSUP}}=8.39~$m). Meanwhile, a random event time $t_0$ (relating to the global trigger time) is also generated from a uniform distribution in the range of $[100,300]$~ns. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $(\vec{X}_0,t_0)$. Details are given in the Appendix.~\ref{appendix:random_gen}.
 
-For each triggered event, photons created around the event position propagate to the hit PMTs. In a simplified detector geometry model that neglects the effects of scattering, reflection, and refraction, these photons are considered as propagating along straight lines that connect the trial event vertex to the hit PMTs. Thus the fitter evaluates a timing parameter, called the time residual ($t_\mathrm{res}$), which is defined as:
+For each triggered event, photons created around the event position propagate to the hit PMTs. In a simplified detector geometry model that neglects the effects of scattering, reflection, and refraction, these photons are considered as propagating along straight lines that connect the trial event vertex to the hit PMTs. Thus the fitter evaluates a timing parameter, called the time residual ($t_\mathrm{res}$), which is defined as \cite{boulay2004direct}:
 \begin{equation}
 \label{eq:tres_define}
 t_\mathrm{res}=t_\mathrm{PMT} - t_{\mathrm{transit}} - t_{\mathrm{event}}\;,
@@ -140,7 +140,7 @@ In practice, $v_\mathrm{gr,eff}$ is calculated by an effective refractive index 
 	\caption[Group velocity vs. radial bias for the \texttt{MPW fitter}.]{Group velocity vs. radial bias for the \texttt{MPW fitter}.	\label{fig:plotVgr}}
 \end{figure}
 
-Later I turned to a more data-driven approach. This approach is to tune the average group velocity by analyzing the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run 100934 and run 107055, the source was deployed almost at the PSUP center, and the optical photons propagated to reach PMTs on the PSUP. 
+Later I turned to a more data-driven approach. This approach is to tune the average group velocity based on the analysis of the $^{16}$N calibration source data. As shown in Fig.~\ref{fig:n16_groupVeloctiy}, for the $^{16}$N central run 100934 and run 107055, the source was deployed almost at the PSUP center, and the optical photons propagated to reach PMTs on the PSUP. 
 
 For each event, suppose the triggered PMTs were found within a solid angle
 \begin{equation*}
@@ -168,7 +168,7 @@ For the vertex fitters used in the partial-fill and scintillator phases, since n
 
 \subsection{Fitter Pull and Drive Correction}\label{sect:fitterPull}
 
-An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The distribution of $(\vec{X}_{fit}-\vec{X}_{MC})/|\vec{X}_{fit}-\vec{X}_{MC}|\cdot \vec{u}_{fit}$ shows a large peak at +1, which indicates that the fitted position $\vec{X}_{fit}$ is prone to be pulled forward from the true position systematically along the event direction$\vec{u}$ \cite{driveCorPeter,brice1996monte,coulter2013modelling}. 
+An effect of ``fitter pull'' in the event vertex reconstruction utilizing the Cherenkov light was observed in the SNO experiment. The distribution of $(\vec{X}_{fit}-\vec{X}_{MC})/|\vec{X}_{fit}-\vec{X}_{MC}|\cdot \vec{u}_{fit}$ shows a large peak at +1, which indicates that the fitted position $\vec{X}_{fit}$ is prone to be pulled forward from the true position systematically along the event direction $\vec{u}$ \cite{coulter2013modelling,driveCorPeter,brice1996monte}. 
 
 Similar to the SNO heavy water case, in the SNO+ ultrapure water, Cherenkov photons created by an event trigger most of the PMT-hits with early timing and these hits are located within the Cherenkov cone; for the same event, there are also a few PMT-hits with later timing. These later PMT hits can be caused by scattered or reflected photons, and the positions of the hit PMTs are randomly distributed on the PSUP. A random PMT hit is more likely to be placed outside the Cherenkov cone, due to the detector geometry. This can be understood as follows. Consider an event at the center of the PSUP: the Cherenkov cone it produces will intersect the PSUP over an area of $2\pi R^2_\mathrm{PSUP}(1-\cos41^\circ)$, equivalent to about 12\% of the total area of the PSUP sphere. Therefore a random PMT-hit on the PSUP sphere has more than an 88\% likelihood of {\em not} lying within the Cherenkov cone. 
 
@@ -668,26 +668,26 @@ The average fit speed for vertex reconstruction of events in the scintillator re
 
 \begin{figure}[htbp]\setcounter{subfigure}{0}
 	\centering
-	\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.]
+	\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.\label{fig:partial_inScint:a}]
 	{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_top_3MeV_rhoVsZ.pdf}
 		\end{minipage}
 	}
-	\subfigure[$x_{fit}-x_{mc}$.]{
+	\subfigure[$x_{fit}-x_{mc}$.\label{fig:partial_inScint:b}]{
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_top_3MeV_xbias.pdf}
 		\end{minipage}
 	}   
-	\subfigure[$y_{fit}-y_{mc}$.]{
+	\subfigure[$y_{fit}-y_{mc}$.\label{fig:partial_inScint:c}]{
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_top_3MeV_ybias.pdf}
 		\end{minipage}
 	}
-	\subfigure[$z_{fit}-z_{mc}$.]{
+	\subfigure[$z_{fit}-z_{mc}$.\label{fig:partial_inScint:d}]{
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_top_3MeV_zbias.pdf}
@@ -696,24 +696,24 @@ The average fit speed for vertex reconstruction of events in the scintillator re
 	\caption{Reconstructed position and fit bias for simulated 3-MeV electron events in the scintillator region.\label{fig:partial_inScint}}
 \end{figure}
 
-Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint} (d). Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut.
+Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint:d}. Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut.
 
-Fig.~\ref{fig:partial_scaleLogLcut} (a) shows the (vertical) fit error $z_{fit}-z_{MC}$ versus the $posFoM$ quantity $scaleLogL$ mentioned in Sect.~\ref{sect:positionFoM}. Application of a $scaleLogL>9.8$ cut removes more than a third of the mis-reconstructed events with $|\vec{X}_{fit}-\vec{X}_{MC}|>1000$ mm. In Fig.~\ref{fig:partial_scaleLogLcut} (b), the fit position bias in $z$ ($z_{fit}-z_{MC}$) after the cut is plotted in red, overlaid with the distribution before the cut in black. By fitting with the Gaussian function, it is evident that the cut removes some mis-reconstructed events on the tail of the distribution, improving the resolution by about 1.5 mm and reducing the bias by about 1.9 mm compared to the plot in Fig.~\ref{fig:partial_inScint} (d). As shown in Fig.~\ref{fig:partial_scaleLogLcut} (c), this cut removes most of the outliers observed in the $\rho$ vs $z$ plot in Fig.~\ref{fig:partial_inScint} (a).
+Fig.~\ref{fig:partial_scaleLogLcut:a} shows the (vertical) fit error $z_{fit}-z_{MC}$ versus the $posFoM$ quantity $scaleLogL$ mentioned in Sect.~\ref{sect:positionFoM}. Application of a $scaleLogL>9.8$ cut removes more than a third of the mis-reconstructed events with $|\vec{X}_{fit}-\vec{X}_{MC}|>1000$ mm. In Fig.~\ref{fig:partial_scaleLogLcut:b}, the fit position bias in $z$ ($z_{fit}-z_{MC}$) after the cut is plotted in red, overlaid with the distribution before the cut in black. By fitting with the Gaussian function, it is evident that the cut removes some mis-reconstructed events on the tail of the distribution, improving the resolution by about 1.5 mm and reducing the bias by about 1.9 mm compared to the plot in Fig.~\ref{fig:partial_inScint:d}. As shown in Fig.~\ref{fig:partial_scaleLogLcut:c}, this cut removes most of the outliers observed in the $\rho$ vs $z$ plot in Fig.~\ref{fig:partial_inScint:a}.
 
 \begin{figure}[htbp]
 	\centering
-	\subfigure[$z_{fit}-z_{MC}$ vs. $scaleLogL$.]{ 
+	\subfigure[$z_{fit}-z_{MC}$ vs. $scaleLogL$.\label{fig:partial_scaleLogLcut:a}]{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6cm]{scaleLogLvsZbias_top.pdf}
 		\end{minipage}
 	}
-	\subfigure[$z_{fit}-z_{mc}$, before (black) and after (red) the $scaleLogL>9.8$ cut.]{
+	\subfigure[$z_{fit}-z_{mc}$, before (black) and after (red) the $scaleLogL>9.8$ cut.\label{fig:partial_scaleLogLcut:b}]{
 		\begin{minipage}[t]{0.38\textwidth}
 			\includegraphics[width=6.5cm]{zbias_top_afterScaleLogLcut.pdf}
 		\end{minipage}
 	}   
-	\subfigure[$\rho_{fit}$ vs. $z_{fit}$, with $scaleLogL>9.8$.]{ 
+	\subfigure[$\rho_{fit}$ vs. $z_{fit}$, with $scaleLogL>9.8$.\label{fig:partial_scaleLogLcut:c}]{ 
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_top_scaleLogL9p8cut_3MeV_rhoVsZ.pdf}
@@ -722,30 +722,30 @@ Fig.~\ref{fig:partial_scaleLogLcut} (a) shows the (vertical) fit error $z_{fit}-
 	\caption{Effects of the $scaleLogL$ cut on the reconstructed positions and fit biases.\label{fig:partial_scaleLogLcut}}
 \end{figure}
 
-For events in the water region, the fit position biases in $x$ and $y$ ($\mu_{x,y}$) are comparable to the results of the \texttt{MPW fitter} shown in Sect.~\ref{sect:waterFitterVertex}, while $\mu_z$ is about 50 mm worse and the resolutions $\sigma_{x,y,z}$ are about 100 mm worse. This is due to the previously mentioned effects of the water-scintillator interface and boundaries. These boundary effects are more obvious (more severe) for events in the water than for those in the scintillator region, as shown by the $\rho$ vs. $z$ plot in Fig.~\ref{fig:partial_inWater} (a). This is due to the lower NHits (fewer triggered PMTs) of events in the water, providing less information for the fitter. However, the poorer reconstruction performance for water events is not significant for the partial-fill analysis: since the analysis is focused on studying the liquid scintillator, events in the water region are less interesting and are mostly removed by the NHits and fiducial volume cuts (NHits$>40$ was applied on the data processing during the partial-fill phase). 
+For events in the water region, the fit position biases in $x$ and $y$ ($\mu_{x,y}$) are comparable to the results of the \texttt{MPW fitter} shown in Sect.~\ref{sect:waterFitterVertex}, while $\mu_z$ is about 50 mm worse and the resolutions $\sigma_{x,y,z}$ are about 100 mm worse. This is due to the previously mentioned effects of the water-scintillator interface and boundaries. These boundary effects are more obvious (more severe) for events in the water than for those in the scintillator region, as shown by the $\rho$ vs. $z$ plot in Fig.~\ref{fig:partial_inWater:a}. This is due to the lower NHits (fewer triggered PMTs) of events in the water, providing less information for the fitter. However, the poorer reconstruction performance for water events is not significant for the partial-fill analysis: since the analysis is focused on studying the liquid scintillator, events in the water region are less interesting and are mostly removed by the NHits and fiducial volume cuts ($\mathrm{NHits}>40$ was applied on the data processing during the partial-fill phase). 
 
 \begin{figure}[htbp]
 	\centering
-	\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.]
+	\subfigure[$\rho=\sqrt{x_{fit}^2+y_{fit}^2}$ vs. $z_{fit}$.\label{fig:partial_inWater:a}]
 	{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_bot_3MeV_rhoVsZ.pdf}
 		\end{minipage}
 	}
-	\subfigure[$x_{fit}-x_{mc}$.]{
+	\subfigure[$x_{fit}-x_{mc}$.\label{fig:partial_inWater:b}]{
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_bot_3MeV_xbias.pdf}
 		\end{minipage}
 	}   
-	\subfigure[$y_{fit}-y_{mc}$.]{ 
+	\subfigure[$y_{fit}-y_{mc}$.\label{fig:partial_inWater:c}]{ 
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_bot_3MeV_ybias.pdf}
 		\end{minipage}
 	}
-	\subfigure[$z_{fit}-z_{mc}$.]{ 
+	\subfigure[$z_{fit}-z_{mc}$.\label{fig:partial_inWater:d}]{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
 			\includegraphics[width=6.5cm]{partial_bot_3MeV_zbias.pdf}
@@ -758,7 +758,7 @@ For events in the water region, the fit position biases in $x$ and $y$ ($\mu_{x,
 
 To study the effects of different PPO concentrations, in the partial-fill geometry, the water level was set at 3 m from the AV bottom, and the PPO concentrations were set to 0.25, 0.5, 1, 2, and 6 g/L respectively. Simulations of 5000 3-MeV $e^-$ were generated in the scintillator region with uniformly distributed positions and isotropic directions. The \texttt{MP scint-water fitter} uses the effective velocities and PDFs re-coordinated to the simulation geometries with corresponding PPO concentrations. The distributions of the position biases between the reconstruction and MC in x, y, and z axes were fitted with Gaussians to obtain the fit position biases ($\mu_{x,y,z}$) and resolutions ($\sigma_{x,y,z}$).
 
-Fig.~\ref{fig:partialBiasVsPPO} and Fig.~\ref{fig:partialResolVsPPO} show the $\mu_{x,y,z}$ and $\sigma_{x,y,z}$ against PPO concentrations. Biases $\mu_{x,y,z}$ are stable in the [-15,15] mm region, while the resolutions ($\sigma_{x,y,z}$) improve (i.e. decrease) from about 150 mm to about 60 mm as the PPO concentration increases. The cause of this improvement in resolution is the higher light yield of the liquid scintillator with increasing PPO concentration, resulting in events causing larger NHits values and thus more information for the fitter. However the improvement from the 2 g/L case to the 6 g/L case is small, indicating a saturation effect for the PPO concentration above 2 g/L.
+Fig.~\ref{fig:partialBiasVsPPO} and Fig.~\ref{fig:partialResolVsPPO} show the $\mu_{x,y,z}$ and $\sigma_{x,y,z}$ against PPO concentrations. Biases $\mu_{x,y,z}$ are stable in the [-10,16] mm region, while the resolutions ($\sigma_{x,y,z}$) improve (i.e. decrease) from about 150 mm to about 60 mm as the PPO concentration increases. The cause of this improvement in resolution is the higher light yield of the liquid scintillator with increasing PPO concentration, resulting in events causing larger NHits values and thus more information for the fitter. However the improvement from the 2 g/L case to the 6 g/L case is small, indicating a saturation effect for the PPO concentration above 2 g/L.
 
 \begin{figure}[!htb]
 	\centering
