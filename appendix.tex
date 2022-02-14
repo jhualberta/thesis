@@ -12,7 +12,7 @@ Let $r=\sqrt[3]{\texttt{ran0}}*8390$ mm \footnote{$r_{PSUP}=8390$~mm is the radi
 \begin{equation*} 
  \vec{x}_{trial}=(r\sin\theta\cos\phi, r\sin\theta\sin\phi, r\cos\theta)\;.
  \end{equation*}
-This procedure ensures that a proper random position is generated inside a sphere with a radius of $10~m$.
+This procedure ensures that a proper random position is generated inside a sphere with a radius of $8.39$ m.
 
 For the trial direction, two random seeds are used. Each follows a uniform distribution: $\texttt{ranPi}\sim U(0,\pi)$ and $\texttt{ran2Pi}\sim U(0,2\pi)$. Then the trial direction is built as: $\vec{u}_{0}=(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta)$, with zenith angle $\theta=\texttt{ranPi}$ and azimuth angle $\phi=\texttt{ran2Pi}$.
 
@@ -127,43 +127,43 @@ The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\
 
 Then it comes out for the water vertex case,
 \begin{equation}
-\frac{\partial L}{\partial t_0}=\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}} \;,
+\frac{\partial \mathcal{L}}{\partial t_0}=\frac{d\mathcal{L}_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}} \;,
 \end{equation}
 
 \begin{equation}
-\frac{\partial L}{\partial x}=\frac{\partial L_{\mathrm{Ch}}}{\partial t_{\mathrm{Ch}}}\frac{dt_{\mathrm{Ch}}}{\partial x}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{X_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g} \;,
+\frac{\partial \mathcal{L}}{\partial x}=\frac{\partial \mathcal{L}_{\mathrm{Ch}}}{\partial t_{\mathrm{Ch}}}\frac{dt_{\mathrm{Ch}}}{\partial x}=-\frac{d\mathcal{L}_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{X_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g} \;,
 \end{equation}
 
 \begin{equation}
-\frac{\partial L}{\partial y}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Y_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g}\; ,
+\frac{\partial \mathcal{L}}{\partial y}=-\frac{d\mathcal{L}_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Y_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g}\; ,
 \end{equation}
 
 \begin{equation}
-\frac{\partial L}{\partial z}=-\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Z_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g}\; ,
+\frac{\partial \mathcal{L}}{\partial z}=-\frac{d\mathcal{L}_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}\frac{Z_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|\cdot v_g}\; ,
 \end{equation}
 
-where the derivative $\frac{dL_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing PDF saved as a binned histogram.
+where the derivative $\frac{d\mathcal{L}_{\mathrm{Ch}}}{dt_{\mathrm{Ch}}}$ can be calculated numerically from the timing PDF saved as a binned histogram.
 
 For the water direction case,
 \begin{equation}
-\frac{\partial L}{\partial\theta}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{\partial\theta}
-=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\theta}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|}\; ,
+\frac{\partial \mathcal{L}}{\partial\theta}=\frac{d\mathcal{L}_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{\partial\theta}
+=\frac{d\mathcal{L}_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\theta}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|}\; ,
 \end{equation}
 
 where $d\vec{u}_0/d\theta=(\cos\phi\cos\theta, \sin\phi\cos\theta, -\sin\theta)$ and 
 
 \begin{equation}
-\frac{\partial L}{\partial\phi}=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{d\phi}
-=\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\phi}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|}\; ,
+\frac{\partial \mathcal{L}}{\partial\phi}=\frac{d\mathcal{L}_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\cos\theta_{\mathrm{Ch}}}{d\phi}
+=\frac{d\mathcal{L}_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}\frac{d\vec{u}_0}{d\phi}\cdot\frac{\vec{X}_{{\mathrm{diffCh}}}}{|\vec{X}_{{\mathrm{diffCh}}}|}\; ,
 \end{equation} 
-where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. The derivative $\frac{dL_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}$ can be calculated numerically from the PMT angular response PDF saved as a binned histogram.
+where $d\vec{u}_0/d\phi=(-\sin\phi\sin\theta, \cos\phi\sin\theta, 0)$. The derivative $\frac{d\mathcal{L}_{\mathrm{Ch}}}{d\cos\theta_{\mathrm{Ch}}}$ can be calculated numerically from the PMT angular response PDF saved as a binned histogram.
 
 \section{Inversion of Hessian Matrix}
 Matrix inversion is a frequent calculation when applying the MRQ method. In the \texttt{MP fitter}, the inversion of a $2\times 2$ Hessian matrix (usually used for direction reconstruction with two parameters) is calculated directly. For the higher dimension matrix, usually the $4\times 4$ matrix for vertex reconstruction, a \texttt{SDecompQRH} class is called for calculating the inversion matrix by using QR decomposition method \cite{press2007numerical}. This class was introduced by Jeff Tseng and it was modified from the \texttt{ROOT TDecompQRH} class \cite{TDecompQRH}. Compared to the ROOT version, its \texttt{Solve()} function was slightly modified for solving the matrix equation $Ax=b$, where $A = QR$ is composed of an orthogonal matrix $Q$ and an upper triangular matrix $R$. If the diagonal element in R is too small, instead of returning failure, the modified algorithm simply sets the corresponding x component to be 0. This allows an optimization for the MRQ method to continue in frequent cases when the matrix is singular.
 
 \section{Likelihood Surfaces}\label{appendix:likelihoodSurface}
 
-Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the \texttt{MP water fitter}, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on $X-Y$, $X-Z$ and $Y-Z$ planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. 
+Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MRQ method in the \texttt{MP water fitter}, for an typical {$^{16}$}N event (central run-100934, event GTID = 61836), projected on $X-Y$, $X-Z$ and $Y-Z$ planes. A clear global maxima gives the reconstructed vertex: $\vec{X}_{fit}=(-211.958, 503.399, 275.990)$ mm and $t_{fit}=217.039$ ns. Fig.~\ref{logLxyz} shows the likelihood surface projected on $x,y,z,t$-axis respectively (i.e., the best-fit $\ln \mathcal{L}$ values as functions of the trial $x,y,z,t$ values). Each of these one dimensional curves show a global maximum. Fig.~\ref{derivative_logLxyz} shows the derivatives of the best-fit $\ln \mathcal{L}$ with respect to the trial $x,y,z$ and $t$ values. The analytical derivatives mostly match with the numerical derivatives used by the fitter. The best-fit parameters were obtained when the $\frac{\partial \ln \mathcal{L}}{\partial x^i} = 0\; (x^i = x,y,z,t)$, or the best-fit points are at $(x^i_{trial},\frac{\partial \ln \mathcal{L}}{\partial x^i_{trial}} )=(x^i_{best},0)\; (x^i = x,y,z,t)$. It also shows clearly that all the derivative curves pass through the best-fit points almost linearly.
 
 \begin{figure}
 	\centering
@@ -173,25 +173,23 @@ Fig.~\ref{likelihoodSurface} shows vertex likelihood surfaces produced by the MR
 	\subfigure[$X-Y$ plane.]{\includegraphics[width=75mm]{surf3_likelihoodXY.pdf}\label{likelihoodSurface:a}}
 	\subfigure[$Y-Z$ plane.]{\includegraphics[width=75mm]{surf3_likelihoodYZ.pdf}\label{likelihoodSurface:b}}
 	\subfigure[$X-Z$ plane.]{\includegraphics[width=75mm]{surf3_likelihoodXZ.pdf}\label{likelihoodSurface:c}}
-	\caption[Likelihood surface of an {$^{16}$}N event projected on $X-Y, \;Y-Z, \;X-Z$ planes.]{Likelihood surface of an {$^{16}$}N event projected on $X-Y,\; Y-Z,\; X-Z$ planes. A clear global maxima is reached for the fitted vertex.	\label{likelihoodSurface}}
-
+	\caption[Likelihood surface of an {$^{16}$}N event projected on planes.]{Likelihood surface of an {$^{16}$}N event projected on $X-Y,\; Y-Z,\; X-Z$ planes. A clear global maxima is reached for the fitted vertex.	\label{likelihoodSurface}}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=160mm]{logL_xyzt.pdf}
-	\caption{Likelihood surface of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}
-	\label{logLxyz}
+	\caption{Likelihood surface of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.\label{logLxyz}}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=160mm]{derivativeLogL_xyzt.pdf}
-	\caption[Derivatives of $\ln L$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.]{Derivatives of $\ln L$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They basically match with each other.\label{derivative_logLxyz}}
+	\caption[Derivatives of the best-fit $\ln \mathcal{L}$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.]{Derivatives of the best-fit $\ln \mathcal{L}$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively. The analytical derivatives (blue) are overlaid with numerical derivatives (red). They mostly match with each other.\label{derivative_logLxyz}}
 \end{figure}
 
-\section{Detailed Light Path Calculations in the \texttt{MP Partial Fitter}}\label{appendix:lightpath}
-The following algorithm shows the detailed calculations for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by Latin letters (a, b or c). 
+\section{Detailed Light Path Calculations in the Partial Fitter}\label{appendix:lightpath}
+The following algorithm shows the detailed calculations in the \texttt{MP partial fitter} for evaluating the light path in the scintillator regions. Each check steps are marked by number and if-conditions are marked by Latin letters (a, b or c). 
 
 \begin{algorithm}
 	First check the ray-sphere intersection (Eqn.~\ref{eq:ray-cylinder}):\\

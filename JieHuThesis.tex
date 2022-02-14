@@ -74,20 +74,21 @@
 \chapter{Conclusions}
 \input conclusion.tex
 
+\cleardoublepage
+%\nocite{*} %% use everything in bibtex file, even if not cited
+%\bibliographystyle{abbrv} %% or your favorite style
+\bibliographystyle{ieeetr}
+\bibliography{thesis} %% assuming your bibtex file is thesis.bib	
+
 \appendix
 \cleardoublepage
 \chapter{Details for the MultiPath Fitter}
 \input appendix.tex
-%\chapter{Information for $^{16}$N Scan Runs}
+\chapter{Information for $^{16}$N Scan Runs}
 \input appendix16N.tex
 \chapter{Bi-Po Analysis}
 \input appendixBiPo.tex
 %\chapter{Run Lists Used for Water Analysis}
 %\input appendixWaterRuns.tex
 
-\cleardoublepage
-%\nocite{*} %% use everything in bibtex file, even if not cited
-%\bibliographystyle{abbrv} %% or your favorite style
-\bibliographystyle{ieeetr}
-\bibliography{thesis} %% assuming your bibtex file is thesis.bib	
 \end{document}

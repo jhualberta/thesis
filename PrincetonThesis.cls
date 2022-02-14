@@ -399,7 +399,7 @@
 	%\null
 	\vskip 8em	\large\baselineskip 2em
 %	\begin{center}
- \copyright\ Jie Hu, 2021
+ \copyright\ Jie Hu, 2022
 %		All rights reserved.
 	\end{center}
 	\null\vfil
@@ -529,7 +529,7 @@
 
 %% BIBLIOGRAPHY
 
-\renewcommand*{\bibname}{References}
+\renewcommand*{\bibname}{Bibliography}
 
 %% ABSTRACT / ACKNOWLEDGEMENTS
 

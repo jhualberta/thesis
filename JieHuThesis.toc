@@ -107,14 +107,15 @@
 \contentsline {subsection}{\numberline {6.3.10}Summary of Results}{187}{subsection.6.3.10}%
 \contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{189}{subsection.6.3.11}%
 \contentsline {chapter}{\numberline {7}Conclusions}{190}{chapter.7}%
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{192}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{192}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{193}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{197}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{198}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{198}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the \texttt {MP Partial Fitter}}{198}{section.A.6}%
-\contentsline {section}{\numberline {A.7}Information for $^{16}$N Scan Runs}{203}{section.A.7}%
-\contentsline {chapter}{\numberline {B}Bi-Po Analysis}{208}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Uranium chain and Bi-Po Analysis}{208}{section.B.1}%
-\contentsline {chapter}{References}{210}{appendix*.7}%
+\contentsline {chapter}{Bibliography}{192}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{212}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{212}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{213}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{217}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{218}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{218}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{221}{section.A.6}%
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{223}{appendix.B}%
+\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{223}{section.B.1}%
+\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{229}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{229}{section.C.1}%
