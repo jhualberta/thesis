@@ -9,7 +9,7 @@
 
 A particle interaction that happens in the SNO+ detector can produce Cherenkov or scintillation photons or both. These photons propagate through the detector, and may trigger PMTs when they reach the PSUP. As described in the last chapter, if sufficiently many PMTs are triggered within a defined time window, an `event' is determined by the trigger system to have occurred, and the time and charge information measured by the hit PMTs are recorded.
 
-By utilizing the recorded time and charge information, reconstruction algorithms attempt to calculate the physical quantities underlying (i.e. causing) the, including the event position and time (the ``vertex''), the direction of motion of the charged particle that prompted the primary light emission, and its energy. Several reconstruction algorithms (called ``fitters'') have been implemented in the SNO+ RAT software, or are still being developed. These fitters are based on differing methods, and can be coordinated and optimized for different detector situations or physics phases.
+By utilizing the recorded time and charge information, reconstruction algorithms attempt to calculate the physical quantities, including the event position and time (the ``vertex''), the direction of motion of the charged particle that prompted the primary light emission, and its energy. Several reconstruction algorithms (called ``fitters'') have been implemented in the SNO+ \texttt{RAT} software, or are still being developed. These fitters are based on differing methods, and can be coordinated and optimized for different detector situations or physics phases.
 
 According to the physics quantities they determine, the SNO+ fitters can be generally classified as:
 \begin{itemize}
@@ -21,14 +21,14 @@ According to the physics quantities they determine, the SNO+ fitters can be gene
 	
 	\item Energy fitter. An energy fitter generally translates the number of photons created from an event to kinetic energy. Similar to the vertex fitters, the energy fitters have been used in the water and partial-fill phases at the time of this writing, and they are ready for the scintillator and tellurium-loading phases.
 
-	\item Muon track fitter. This fitter is used to reconstruct the tracks of cosmic muons. Each muon track is treated as a straight line, and by dividing the SNO+ detector into several XY-slices along Z, the fitter reconstructs the path's intersection point on each slice by utilizing the position and timing information of the set of hit PMTs \cite{muonTrackRecon}. The muon track fitter is currently being developed for the scintillator and tellurium-loading phases, and will help to tag and reduce the cosmogenic backgrounds, especially the $^{11}$C backgrounds induced by muon spallation on the liquid scintillators \cite{sorensen2016temperature}.
+	\item Muon track fitter. This fitter is used to reconstruct the tracks of cosmic muons. Each muon track is treated as a straight line, and by dividing the SNO+ detector into several $XY$-slices along $Z$, the fitter reconstructs the path's intersection point on each slice by utilizing the position and timing information of the set of hit PMTs \cite{muonTrackRecon}. The muon track fitter is currently being developed for the scintillator and tellurium-loading phases, and will help to tag and reduce the cosmogenic backgrounds, especially the $^{11}$C backgrounds induced by muon spallation on the liquid scintillators \cite{sorensen2016temperature}.
 \end{itemize}
 
-A fitter's performance is first tested on Monte Carlo simulations of specific physics processes, then on both simulations and data from the calibration runs. Once the algorithm has been proven to give good results and is approved by the SNO+ collaboration, it is implemented into the SNO+ RAT software to process the SNO+ simulations and data files.
+A fitter's performance is first tested on Monte Carlo simulations of specific physics processes, then on both simulations and data from the calibration runs. Once the algorithm has been proven to give good results and is approved by the SNO+ collaboration, it is implemented into the SNO+ \texttt{RAT} software to process the SNO+ simulations and data files.
 
 For a specific SNO+ physics phase, the fitters for reconstructing different physics quantities of an event are integrated. Currently, there are three integrated fitters: the \texttt{Water Fitter} for the water phase, the \texttt{Partial Fitter} for the partial-fill phase, and the \texttt{Scint Fitter} for the scintillator phase and the tellurium loading phase. The fitter parameters, such as the optical parameters, fitter optimization parameters, are coordinated and optimized based on simulations and calibration data from that specific physics phase. In addition, PMT selectors and classifiers are also included in the integrated fitters. The PMT selectors are used to remove the outliers of the hit PMTs for a specific fitter, such as PMTs whose hit(s) probably were triggered by noise. These selectors can help to make the fitter more accurate or to boost fitter speed. The classifiers mainly use the reconstructed results to calculate specific quantities which describe the probability of determining an event as an expected signal or background.
 
-In this chapter, a Multi-path (MP) reconstruction framework and its principles are discussed.It was developed by the University of Alberta group as an additional fitter to provide event vertex and direction reconstructions. In this framework, the fitters can be adapted for all the SNO+ physics phases by switching light path calculations, input parameters such as the optical parameters, and the detector state. That is the reason why it is called ``multiple paths''.  It was applied in the water phase to provide an alternative diagnosis of event position and direction; it also works as the vertex reconstruction algorithm for the \texttt{Partial Fitter}. After re-coordination for the scintillator and tellurium loading phases, I also show the potential of the vertex fitter for application in these two future phases.
+In this chapter, a Multi-Path (MP) reconstruction framework and its principles are discussed. It was developed by the University of Alberta group as an additional fitter to provide event vertex and direction reconstructions. In this framework, the fitters can be adapted for all the SNO+ physics phases by switching light path calculations, input parameters such as the optical parameters, and the detector state. That is the reason why it is called ``multiple paths''.  It was applied in the water phase to provide an alternative diagnosis of event position and direction; it also works as the vertex reconstruction algorithm for the \texttt{Partial Fitter}. After re-coordination for the scintillator and tellurium loading phases, I also show the potential of the vertex fitter for application in these two future phases.
 \section{Multi-path Vertex and Direction Reconstructions for the Water Phase}\label{sect:mpw}
 
 In the SNO+ water phase, both the cavity and the AV were filled with ultra-pure water. In this case, the detector geometry is simple since everything inside the PSUP sphere can be simplified as water (if one neglects the effects of the plexiglass AV shell). Therefore to explain the reconstruction concepts, I will start with the \texttt{MP water fitter} (the \texttt{MPW fitter}).
@@ -91,7 +91,7 @@ which is easily seen to have unit magnitude.
 	\caption[Cherenkov cone and straight line light paths (SNO+ water phase).]{Cherenkov cone and straight line light paths, in the SNO+ water phase geometry.}
 	\label{mpwdiagram_direction}
 \end{figure}
-To fit for the direction with its two parameters ($\theta$, $\phi$), as for the vertex reconstruction a random trial direction $\vec{u}_0(\phi_0,\theta_0)$ is first generated using \texttt{CLHEP} (see Sect.~\ref{appendix:random_gen}). The direction fitter then evaluates an angular parameter, $\cos\theta_{\mathrm{Ch}}$, which is the angle between $\vec{u}_{0}$ and $\vec{X}_{\mathrm{diff}}\equiv \vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}$. Therefore, the direction fitter requires an event position as input, and necessarily runs after the vertex fitter \footnote{It has been discussed that, instead of fitting in two steps, the vertex and direction can be fitted simultaneously by utilizing the MRQ algorithm for fitting six parameters ($x,y,z,t,\theta,\phi$). However, results were worse by using this method, because the likelihood function with more parameters becomes more complicated, which makes it more difficult for the fitter to find a global maximum.}.
+To fit for the direction with its two parameters ($\theta$, $\phi$), as for the vertex reconstruction a random trial direction $\vec{u}_0(\phi_0,\theta_0)$ is first generated using \texttt{CLHEP} (see Sect.~\ref{appendix:random_gen}). The direction fitter then evaluates an angular parameter, $\cos\theta_{\mathrm{Ch}}$, which is the angle between $\vec{u}_{0}$ and $\vec{X}_{\mathrm{diff}}\equiv \vec{X}_{\mathrm{event}}-\vec{X}_{\mathrm{PMT}}$. Therefore, the direction fitter requires an event position as input, and necessarily runs after the vertex fitter \footnote{It has been discussed that, instead of fitting in two steps, the vertex and direction can be fitted simultaneously by utilizing the MRQ algorithm for fitting six parameters ($x,y,z,t,\theta,\phi$). However, results were worse by using this method, because the likelihood function with more parameters becomes more complicated, which makes the fitter more difficult to find a global maximum.}.
 
 A 1D PDF, serving as a model of the angular distribution of the triggered PMTs and shown in Fig.~\ref{fig:MPW_angularPDF}, is used for fitting the angular model. It was obtained from 10000 MC simulations of 5-MeV $e^-$ events generated at the detector center ($\vec{X}_{MC}=(0,0,0)$), and traveling along the positive side of the $x$-axis, i.e., the orientation of the momentum vector is $\vec{u}_{\mathrm{MC}}=(1,0,0)$ \footnote{Here 5 MeV is a typical energy for the SNO+ water phase analysis. No obvious changes in fitter performances by using PDFs generated with alternative values for electron energy.}.
 
@@ -145,7 +145,7 @@ For each event, suppose the triggered PMTs were found within a solid angle
 \begin{equation*}
 \Omega=\frac{\pi(L/2)^2}{r^2_\mathrm{PSUP}}\; ,
 \end{equation*}
-where $L$ is the line segment and $r_\mathrm{PSUP}=8390$ mm is the radius of the PSUP, as shown in Fig.~\ref{fig:n16_groupVeloctiy}. Since the diameter of the PMT concentrator is 27 cm, the line segment is chosen as $L = 50$ cm ($\theta=\arcsin(\frac{1}{2}L/r_\mathrm{PSUP})\approx 0.17^\circ$) to let roughly 2 triggered PMTs be within the $\Omega$ (these PMTs are called `PMTin$\Omega$'). Then the arrival time $T_1$ was found by calculating $|\vec{X}_\mathrm{source}-\vec{X}_\mathrm{PMTin\Omega}|/v_\mathrm{water}$, where $v_\mathrm{water}=217.554$ mm/ns is an effective velocity obtained by the SNO+ collaboration for light in water \cite{coulter2013modelling}.
+where $L$ is the line segment and $r_\mathrm{PSUP}=8390$ mm is the radius of the PSUP, as shown in Fig.~\ref{fig:n16_groupVeloctiy}. Since the diameter of the PMT concentrator is 27 cm, the line segment is chosen as $L = 50$ cm ($\theta=\arcsin(\frac{1}{2}L/r_\mathrm{PSUP})\approx 0.17^\circ$) to let roughly 2 triggered PMTs be within the $\Omega$ (these PMTs are denoted by `PMTin$\Omega$'). Then the arrival time $T_1$ was found by calculating $|\vec{X}_\mathrm{source}-\vec{X}_\mathrm{PMTin\Omega}|/v_\mathrm{water}$, where $v_\mathrm{water}=217.554$ mm/ns is an effective velocity obtained by the SNO+ collaboration for light in water \cite{coulter2013modelling}.
 
 \begin{figure}[!htb]
 	\centering
@@ -161,7 +161,7 @@ v_\mathrm{gr}=\frac{2 r_\mathrm{PSUP}}{(T_1+T_2)}\;.
 
 The final estimate for $v_\mathrm{gr}$ was calculated by averaging the $v_\mathrm{gr}$ values obtained from all the events and triggered PMTs in both run 100934 and run 107055. It was found that $v_\mathrm{gr}=c/n_\mathrm{water,eff}=216.478$ mm/ns, where $n_\mathrm{water,eff}=1.38486$.
 
-The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs \cite{anderson2021optical,groupVmeasure}. That analysis can give a more accurate value for $v_\mathrm{gr}$, but it it was not applied here.
+The SNO+ collaboration used a more complicated approach to measure actual group velocities in the SNO+ water detector by analyzing a set of laserball calibration runs \cite{anderson2021optical,groupVmeasure}. That analysis can give more accurate values of $v_\mathrm{gr}$ as a function of wavelength (see Figure 14 in Ref.~\cite{anderson2021optical}), but it was not applied here.
 
 For the vertex fitters used in the partial-fill and scintillator phases, since no internal calibration was performed, I adopted the linear interpolation method, which will be discussed in Sect.~\ref{sect:scintFitter}.
 
@@ -199,7 +199,7 @@ For the 2 to 10 MeV $e^-$ event simulations (using \texttt{RAT} version 6.17.6),
 \vec{X}_{\mathrm{corrected}} = 0.9868\vec{X}_{fit} \, - \, 78.417\vec{u}_{fit}~\mathrm{[mm]}\;.
 \end{equation}
 
-Note that these drive correction parameters were obtained from simulations, and so changes of the simulation model, and especially changes to the optical model of the detector, can affect the $n_\mathrm{gr,eff}$, mode cut and time residual cut, and thereby affect the drive correction parameters. If needed however the drive correction parameters can be re-coordinated with the changes in the simulation.
+Note that these drive correction parameters were obtained from simulations, and so changes of the simulation model, and especially changes to the optical model of the detector, can affect the $n_\mathrm{gr,eff}$, mode cut and time residual cut, and thereby affect the drive correction parameters. If needed, however, the drive correction parameters can be re-coordinated with the changes in the simulation.
 
 \begin{figure}[!htb]
 	\centering
@@ -237,7 +237,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	This selector first groups the PMTs by their positions on the PSUP sphere. Taking the centre of the sphere as the origin of the coordinate, the sphere is decomposed into intervals of azimuth angle $\phi$ (longitude) and zenith angle $\theta$ (latitude). The PMT positions are projected to $\phi\in [-\pi,\pi]$ and $\cos\theta\in [-1, 1]$ on the sphere, each range being uniformly divided into $n$ intervals, where $n$ is an integer. The whole PSUP sphere is thus decomposed into $N'=n\times n$ panels by $\phi$ and $\cos\theta$, and the PMTs are grouped into these panels: $\mathrm{PMT}(\phi_i,\cos\theta_j) \in [i\cdot\phi/n, j\cdot\cos\theta/n],~(i,j=1,2,..,n)$, see Fig.~\ref{GroupPMTs}.
 	
-	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. Thus the number of the hit PMTs is reduced to $n\times n$ for the fitter, i.e., $n_\mathrm{select}=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
+	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. In each of the $N'$ panels 1 PMT (or no PMT \footnote{If all the hit PMTs in a panel are triggered too early and removed by $t_{PMT}<100$ ns, there would be no PMT in that panel.}) is selected, thus the number of the hit PMTs is reduced to $n_\mathrm{select}$ for the fitter, and $n_\mathrm{select}\leq N'=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
 	
 	Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
@@ -257,7 +257,7 @@ A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstr
 
 Using the \texttt{RAT} (version 6.17.6) package, MC simulations were performed in which 10,000 electron events were generated at the detector center (in the PSUP coordinate frame) with isotropic direction, i.e. the orientation of the momentum vector was generated randomly and uniformly over the entire solid angle ($4\pi$). The default detector trigger settings of the SNO+ water phase were \texttt{N100Hi}=21.0, \texttt{N100Med}=16.0 and \texttt{N100Lo}=11.0 and with those settings some events, especially those with lower energies ($E<3$ MeV), may fail to trigger the detector. Since the fitters only reconstruct triggered events, the number of events reconstructed by the fitter may be lower than the number simulated.
 
-The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ simulations was 0.005 s/event and for the direction reconstruction fit speed was 0.002 second/event, figures that are very fast and certainly acceptable for the data processing in the SNO+ water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performance for the 5 MeV $e^-$ events. The bias between the fitted and MC positions, $\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$, was projected onto the $(x,y,z)$ axes respectively and its distribution was fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the standard deviation ($\sigma$) is taken as the fit position resolution.
+The average fit speed of the event vertex reconstruction for the 5 MeV $e^-$ simulations was 0.005 s/event and for the direction reconstruction the fit speed was 0.002 s/event, figures that are very fast and certainly acceptable for the data processing in the SNO+ water phase. Fig.~\ref{fig:5MeVbeta_center_water} shows the position reconstruction results and performance for the 5 MeV $e^-$ events. The bias between the fitted and MC positions, $\vec{X}_{fit}-\vec{X}_{mc}=(x_{fit}-x_{MC},y_{fit}-y_{MC},z_{fit}-z_{MC})$, was projected onto the $(x,y,z)$ axes respectively and its distribution was fitted with Gaussian functions. The mean of the fitted Gaussian ($\mu$) is taken as the fit position bias while the standard deviation ($\sigma$) is taken as the fit position resolution.
 \begin{figure}[htbp]
 	\centering 
 	\subfigure[$x_{fit}-x_{mc}$]{
@@ -311,13 +311,13 @@ These results show that the fit position biases $\mu_{x,y,z}$ are stable across 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posBiasVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position biases in $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of energy. \label{fig:MPWposBias_isoFill}}
+	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position biases in $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes as a function of energy. \label{fig:MPWposBias_isoFill}}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{MPW_isoFill_posResolVsE.pdf}
-	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of energy.	\label{fig:MPWposResol_isoFill}}
+	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of energy.]{The \texttt{MPW fitter} fit position resolutions in $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes as a function of energy.	\label{fig:MPWposResol_isoFill}}
 \end{figure}
 
 To check the radial dependence of reconstruction performance, the volume inside the AV sphere was divided into eleven concentric shells. The centers of these fictitious shells were at the AV center, and their inner and outer radii were at $r, r+0.001$ m, where $r$ ranged from 0.5 m to 5.5 m with a step of 0.5 m. Simulations were performed with 5 MeV electrons generated (with an isotropic orientation, and uniformly in azimuth and elevation angles) within each of eleven concentric shells. Fig.~\ref{fig:FitBiasVsShell} and Fig.~\ref{fig:FitResolVsShell} show the fit position bias and resolution respectively. Evidently fit position bias is rather stable across the differing radii, but resolution deteriorates for events close to the AV wall, or $R>5$ m. This is called the ``near AV effect'', and it was observed in the SNO experiment. For events that occur close to the AV wall, the plexiglass can serve as a lens that distorts the light path \cite{brice1996monte}. A complicated calculation to encompass this complication, and a technique called the ``Near AV cut'', are discussed in Refs.~\cite{jones2011background,coulter2013modelling}, but they are not applied in this thesis. 
@@ -325,14 +325,14 @@ To check the radial dependence of reconstruction performance, the volume inside 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{shellTest_RvsBias.pdf}
-	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of radius.]{The \texttt{MPW fitter} fit position biases of $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of radius.}
+	\caption[The \texttt{MPW fitter} fit position biases ($\mu_{x,y,z}$) as a function of radius.]{The \texttt{MPW fitter} fit position biases of $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes as a function of radius.}
 	\label{fig:FitBiasVsShell}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering	
 	\includegraphics[width=9cm]{shellTest_RvsResol.pdf}
-	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of radius.]{The \texttt{MPW fitter} fit position resolutions of $x$ (red circle), $y$ (green square), and $z$ (black triangle) axes as a function of radius.}
+	\caption[The \texttt{MPW fitter} fit position resolutions ($\sigma_{x,y,z}$) as a function of radius.]{The \texttt{MPW fitter} fit position resolutions of $x$-(red circle), $y$-(green square), and $z$-(black triangle) axes as a function of radius.}
 	\label{fig:FitResolVsShell}
 \end{figure}
  
@@ -355,7 +355,7 @@ or 90\% of the reconstructed events, denoted by $\cos\theta_{0.5}$, $\cos\theta_
 \begin{equation}\label{eq:cosTheta_fraction}
 \frac{\int_{\cos\theta_{a}}^1 P(\cos\theta_e) \, d\cos\theta_e}{\int_{-1}^1 P(\cos\theta_e) \, d\cos\theta_e} = a\times 100\% \; ,
 \end{equation}
-where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table~\ref{tab:angularResol_MPW}, are slightly better than those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which \cite{boulay2004direct} $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.30\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
+where $P(\cos\theta_e)$ is the direction resolution function with the best fit parameters. A larger $\cos\theta_{a}$ means the $\cos\theta_e$ distribution is more peaked around +1, and implies a better direction reconstruction. The results of this analysis for direction resolution, listed in Table~\ref{tab:angularResol_MPW}, are slightly better than those obtained from the SNO fitter results for the 5-MeV $e^-$ in heavy water, for which Ref.~\cite{boulay2004direct} lists $(\beta_M=3.348\pm 0.08119, \, \beta_S=19.30\pm 0.6929)$. Fig.~\ref{fig:diResolVsShell_5MeV} shows the direction resolution parameters $\beta_M$ (left plot) and $\beta_S$ (right plot) as a function of event radial position, based on the simulations described in Sect.~\ref{sect:waterFitterVertex}
 
 \begin{table}[ht]
 	\caption{Direction resolutions for the reconstruction of 5 MeV $e^-$ events.\label{tab:angularResol_MPW}}
@@ -378,10 +378,11 @@ where $P(\cos\theta_e)$ is the direction resolution function with the best fit p
 
 \subsection{Test on Gamma Events}
 
-For analyzing the AmBe calibration data, reconstructing $\gamma$-events with energies of 2.2 MeV and 4.4 MeV is crucial. When a realistic trigger setting for the antineutrino analysis (taken as that of run-106904) is adopted in simulations, only about 53\% of the (simulated) low energy 2.2-MeV $\gamma$ events triggered a detector response. The event count for simulations was therefore doubled to $2\times10^4$. Table~\ref{tab:bias_water_gamma} shows the performance (bias and resolution on each axis) of the event position reconstruction for these important gamma events.
+For analyzing the AmBe calibration data, reconstructing $\gamma$-events with energies of 2.2 MeV and 4.4 MeV is crucial. When a realistic trigger setting for the antineutrino analysis (taken as that of run 106904) is adopted in simulations, only about 53\% of the (simulated) low energy 2.2-MeV $\gamma$ events triggered a detector response. The event count for simulations was therefore doubled to $2\times10^4$. Table~\ref{tab:bias_water_gamma} shows the performance (bias and resolution on each axis) of the event position reconstruction for these important gamma events.
 
 \begin{table}[ht]
-	\caption{Reconstruction performances for the 2.2-MeV and 4.4-MeV $\gamma$ events.}\label{tab:bias_water_gamma}
+	\caption{Reconstruction performances for the 2.2-MeV and 4.4-MeV $\gamma$ events.\label{tab:bias_water_gamma}}
+	\vspace{2mm}
 	\centering		
 	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule 
@@ -451,6 +452,7 @@ To test the performance of the \texttt{MP WLS fitter}, a simulation was performe
 As it had been in Sect.~\ref{sect:directResol}, again here $\cos\theta_a$ in Eqn.~\ref{eq:cosTheta_fraction} was used to characterize the performance of the direction reconstruction. Table~\ref{tab:quantAngular} compares the \texttt{MP WLS Fitter}'s $\cos\theta_{a}$ values when applied to SNO heavy water data \cite{boulay2004direct}, and to simulations for both SNO+ pure water and SNO+ wbWLS. The best direction reconstruction is obtained for the SNO+ pure water case, with results for the wbWLS case proving less satisfactory (e.g. by about 30\% for $\cos\theta_{0.9}$).
 \begin{table}[ht]
 	\caption{A comparison of quantitative estimates for the angular resolution for the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.\label{tab:quantAngular}}
+		\vspace{2mm}
 				\centering		
 		\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 			\toprule 
@@ -504,7 +506,7 @@ If $\Delta>0$, one may solve to evaluate two roots,
 \begin{equation}\label{eq:ray-sphere}
 a_{\pm} = -(\vec{X}_0-\vec{O}_\mathrm{AV})\cdot\vec{u}\pm\sqrt{\Delta} \;.
 \end{equation}
-In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_\mathrm{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point \footnote{the line intersection with no direction can pass two points}, and then the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_\mathrm{AV}$ is automatically met. 
+In this case, both $a_+$ and $a_-$ exist and their values are distinct. If $a_{+} > a_{-} > 0$, the length of the path inside the sphere is $a_{+} - a_{-} $, as illustrated in Fig.~\ref{line-sphere} (a). Due to this geometry, the event position should be outside the AV, the condition $|\vec{X}_0|\geq r_\mathrm{AV}$ is automatically met. If $a_{+} > 0 >a_{-}$, then $a_{-}$ determines an intersection point along the opposite direction of the ray vector. Thus the ray vector actually does not pass that point \footnote{The line intersection with no direction can pass two points.}, and then the length of the path inside the sphere is $a_{+}$, as illustrated in Fig.~\ref{line-sphere} (b). Also, the condition $|\vec{X}_0| < r_\mathrm{AV}$ is automatically met. 
 
 If $\Delta\leq 0$, there is either {\bf no} intersection point (Fig.~\ref{line-sphere} (c)) or there is {\bf one} intersection point (Fig.~\ref{line-sphere} (d)). In either case, the ray vector never passes through the AV sphere.
 
@@ -663,7 +665,7 @@ Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~
 
 The performance of the \texttt{MP scint-water fitter} was studied with MC simulations. During the partial-fill phase, the filling and mixing of the liquid scintillator was stable at several water levels for data taking and data analysis. A typical water level is 3 m from the AV bottom, and a typical PPO concentration is 0.5 g/L. With these two settings in the partial-fill geometry, to test the partial fitter's performance 5000  electron events (3 MeV, uniform in position, isotropic in direction) were simulated in each of the regions, i.e. scintillator region and water region.
 
-The average fit speed for vertex reconstruction of events in the scintillator region proved to be 0.2 second/event, which is acceptable for the data processing during the partial-fill phase. For the events in the water region, the average fit speed was 0.05 s/event, which is similar to the value yielded by the \texttt{MPW fitter}. Fig.~\ref{fig:partial_inScint} and Fig.~\ref{fig:partial_inWater} show the results of the \texttt{MP scint-water fitter} reconstructed positions in the scintillator and water regions respectively. The subfigures (a) are the reconstructed positions projected onto the ($\sqrt{x^2+y^2}$, $z$) plane while the subfigures (b), (c) and (d) are the position biases between the reconstruction and MC truth, projected onto the ($x,y,z$)-axes respectively. The distributions of the position bias were fitted with Gaussian functions and the values of the Gaussian mean ($\mu_{x,y,z}$) and standard deviation ($\sigma_{x,y,z}$) quantify fit bias and resolution.
+The average fit speed for vertex reconstruction of events in the scintillator region proved to be 0.2 s/event, which is acceptable for the data processing during the partial-fill phase. For the events in the water region, the average fit speed was 0.05 s/event, which is similar to the value yielded by the \texttt{MPW fitter}. Fig.~\ref{fig:partial_inScint} and Fig.~\ref{fig:partial_inWater} show the results of the \texttt{MP scint-water fitter} reconstructed positions in the scintillator and water regions respectively. The subfigures (a) are the reconstructed positions projected onto the ($\sqrt{x^2+y^2}$, $z$) plane while the subfigures (b), (c) and (d) are the position biases between the reconstruction and MC truth, projected onto the ($x,y,z$)-axes respectively. The distributions of the position bias were fitted with Gaussian functions and the values of the Gaussian mean ($\mu_{x,y,z}$) and standard deviation ($\sigma_{x,y,z}$) quantify fit bias and resolution.
 
 \begin{figure}[htbp]\setcounter{subfigure}{0}
 	\centering
@@ -695,14 +697,14 @@ The average fit speed for vertex reconstruction of events in the scintillator re
 	\caption{Reconstructed position and fit bias for simulated 3-MeV electron events in the scintillator region.\label{fig:partial_inScint}}
 \end{figure}
 
-Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint:d}. Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut.
+Fig.~\ref{fig:partial_inScint} shows that for events in the scintillator region, the resolutions $\sigma_{x,y,z}$ are all better than 150 mm. The biases on $x$ and $y$ axes ($\mu_{x,y}$) are smaller than 1.5 mm, while the bias $\mu_z$ along $z$ is significantly larger, about -29 mm. The larger bias in $z$ is mostly caused by events that are mis-reconstructed in the water region. The main reason for that mis-reconstruction is caused by the fitter omitting the calculations relating to reflection and refraction of light paths happening at the water-scintillator interface or at AV boundaries, as earlier mentioned \footnote{The reflection and transmission of light are described by the Fresnel equations, and the refraction of light is described by the Snell's law. These functions are not implemented in this thesis.}. Since the refractive index of the liquid scintillator exceeds that of water, some photons are reflected off the water-scintillator interface. The reflection results in a light path with a longer $t_\mathrm{transit}$, but the event is still created in the scintillator region. While the fitter does properly handle the reflected light path, it will pull the event into the water region a little further from the actual position to ``explain'' the longer $t_\mathrm{transit}$, causing the event to be mis-reconstructed in the water region. This explains the mis-reconstructed events with $z_{fit}-z_{MC}<0$ in Fig.~\ref{fig:partial_inScint:d}. Sect.~\ref{sect:partialFitterDiscuss} will discuss improving the fitter. Some of these mis-reconstructed events can be removed by applying the $posFoM$ cut.
 
 Fig.~\ref{fig:partial_scaleLogLcut:a} shows the (vertical) fit error $z_{fit}-z_{MC}$ versus the $posFoM$ quantity $scaleLogL$ mentioned in Sect.~\ref{sect:positionFoM}. Application of a $scaleLogL>9.8$ cut removes more than a third of the mis-reconstructed events with $|\vec{X}_{fit}-\vec{X}_{MC}|>1000$ mm. In Fig.~\ref{fig:partial_scaleLogLcut:b}, the fit position bias in $z$ ($z_{fit}-z_{MC}$) after the cut is plotted in red, overlaid with the distribution before the cut in black. By fitting with the Gaussian function, it is evident that the cut removes some mis-reconstructed events on the tail of the distribution, improving the resolution by about 1.5 mm and reducing the bias by about 1.9 mm compared to the plot in Fig.~\ref{fig:partial_inScint:d}. As shown in Fig.~\ref{fig:partial_scaleLogLcut:c}, this cut removes most of the outliers observed in the $\rho$ vs $z$ plot in Fig.~\ref{fig:partial_inScint:a}.
 
 \begin{figure}[htbp]
 	\centering
 	\subfigure[$z_{fit}-z_{MC}$ vs. $scaleLogL$.\label{fig:partial_scaleLogLcut:a}]{ 
-		\begin{minipage}[b]{0.38\textwidth}
+		\begin{minipage}[b]{0.4\textwidth}
 			\centering
 			\includegraphics[width=6cm]{scaleLogLvsZbias_top.pdf}
 		\end{minipage}
@@ -845,20 +847,20 @@ Since a 2.5 MeV event is the signal of major interest in the scintillator and te
 \begin{figure}[htbp]
 	\centering
 	\subfigure[$x_{fit}-x_{mc}$]{
-		\begin{minipage}[t]{0.38\textwidth}
-			\includegraphics[width=6cm]{fullScint_2p5_xbias.png}
+		\begin{minipage}[t]{0.45\textwidth}
+			\includegraphics[width=7cm]{fullScint_2p5_xbias.png}
 		\end{minipage}
 	}   
 	\subfigure[$y_{fit}-y_{mc}$]{ 
 		\begin{minipage}[t]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6cm]{fullScint_2p5_ybias.png}
+			\includegraphics[width=7cm]{fullScint_2p5_ybias.png}
 		\end{minipage}
 	}
 	\subfigure[$z_{fit}-z_{mc}$]{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6cm]{fullScint_2p5_zbias.png}
+			\includegraphics[width=7cm]{fullScint_2p5_zbias.png}
 		\end{minipage}
 	}
 	%\includegraphics[width=6cm]{fullscint_2p5MeV_radialBias.png}
@@ -972,4 +974,4 @@ Once the neural networks are trained, the reconstruction speed is expected to be
 
 \section{Conclusion}
 
-The Multi-path Fitter framework for event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the \texttt{MP water fitter} works as an alternative fitter to provide additional reconstruction information for water data, and it gives good position and direction resolution for the water analysis. The \texttt{MP scint-water fitter} works as the prime fitter for the SNO+ partial-fill phase.
+The Multi-path Fitter framework for event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the \texttt{MP water fitter} works as an alternative fitter to provide additional reconstruction information for water data, and it gives good position and direction resolution for the water analysis. The \texttt{MP scint-water fitter} works as the prime fitter for the SNO+ partial-fill phase, which is crucial to the physics analyses in the partial-fill phase.

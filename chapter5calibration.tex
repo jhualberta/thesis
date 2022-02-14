@@ -127,16 +127,16 @@ where $N_R^{fit}$ is a trial fit to the $N_R$ obtained by tuning $(\alpha_e,\mu_
 
 \begin{figure}
 	\centering
-	\includegraphics[width=140mm]{posResol.pdf}
+	\includegraphics[width=12cm]{posResol.pdf}
 	\caption[Distributions of the reconstructed position projected onto the $x$-axis.]{Distributions of the reconstructed position projected onto the $x$-axis, obtained from the SNO+ {$^{16}$}N central run data (red) and MC (black). The distributions are fitted with $N_R^{fit}$ (red and black lines).	\label{fig:posresol}}
 \end{figure}
 
 Table~\ref{tab:posresol} summarizes the values of position resolution parameters (for the $x$-axis) obtained from data and MC of {$^{16}$}N calibration runs at the detector center.
-\vspace{1mm}
+%\vspace{1mm}
 \begin{table}[ht]
 	\centering
-	\caption{Position resolution parameters for the \texttt{MPW fitter} ($x$-axis).}
-	\label{tab:posresol}
+	\caption{Position resolution parameters for the \texttt{MPW fitter} ($x$-axis).	\label{tab:posresol}}
+	\vspace{3mm}
 	\begin{tabular}{ccccc}
 		\toprule
 		MPW fitter & $\alpha_e$ & $\sigma_P$ (mm) & $\tau_P$ (mm)& $\mu_P$ (mm)\\
@@ -151,7 +151,7 @@ Table~\ref{tab:posresol} summarizes the values of position resolution parameters
 
 \subsubsection{Position Systematics}
 
-To evaluate the position uncertainties, the MC and data runs of the $^{16}$N internal scans along ($x, y, z$) axes were taken to evaluate the $(x, y, z)$ position uncertainties respectively (the runs are listed in Table~\ref{table:n16scanTable_zscan} to ~\ref{table:n16scanTable_xscan}. Three neck runs in the $z$-scan were not used). The high-level cuts mentioned earlier, as well as the $E_{fit}>3.5$~MeV and $scaleLogL>10$ cuts, were applied. The fit range was set as $[X_\mathrm{source}-2000, X_\mathrm{source}+2000]$~mm, where $X=(x,y,z)$ for the scans along $(x,y,z)$ axes respectively. This is because, recall, most of the source $\gamma$'s have their first Compton scatter -- knocking an $e^{-}$ into motion -- within that distance from the source. If the value of $(X-2000)~$mm was smaller than -6000~mm, it was set to -6000~mm; if the $(X+2000)~$mm was larger than 6000~mm, it was set to +6000~mm. This was used to remove the AV effects, mainly the AV lensing and the material boundaries which distort the reconstruction performances, as mentioned in Chapter 4.
+To evaluate the position uncertainties, the MC and data runs of the $^{16}$N internal scans along ($x, y, z$) axes were taken to evaluate the $(x, y, z)$ position uncertainties respectively (the runs are listed in Table~\ref{table:n16scanTable_zscan} to \ref{table:n16scanTable_xscan}. Three neck runs in the $z$-scan were not used). The high-level cuts mentioned earlier, as well as the $E_{fit}>3.5$~MeV and $scaleLogL>10$ cuts, were applied. The fit range was set as $[X_\mathrm{source}-2000, X_\mathrm{source}+2000]$~mm, where $X=(x,y,z)$ for the scans along $(x,y,z)$ axes respectively. This is because, recall, most of the source $\gamma$'s have their first Compton scatter -- knocking an $e^{-}$ into motion -- within that distance from the source. If the value of $(X-2000)~$mm was smaller than -6000~mm, it was set to -6000~mm; if the $(X+2000)~$mm was larger than 6000~mm, it was set to +6000~mm. This was used to remove the AV effects, mainly the AV lensing and the material boundaries which distort the reconstruction performances, as mentioned in Chapter 4.
 
 The position resolution function was first fitted with four free parameters, $(\alpha_e,\mu_p$, $\sigma_p$, $\tau_p$). The average values of $\alpha_e$ and $\tau_p$ were calculated from all the scan runs used here and then, to simplify the calculation in propagating systematics, those average values \footnote{Using fixed values for ($\alpha_e$, $\tau_p$) is justified by the fact that these parameters in principle can be viewed as corrections to the spatial distribution of the $\gamma$'s ($S(x)$) that would not depend on position \cite{waterunidoc}.} were assigned as constant values: $\alpha_e=0.5288$ (0.5375) for the MC (data) and $\tau_p=271.738$ (263.735) for the MC (data). With the fixed values of $\alpha_e$ and $\tau_p$, both the data and the MC were refitted to optimize $\mu_p$ and $\sigma_p$ only. 
 
@@ -183,8 +183,8 @@ Fig.~\ref{pos_relative_sigma_biasesVsPositions} shows that $\sigma_{p,\delta}$ v
 As listed in Table~\ref{vertexResolsSys}, the averages and the standard deviations of $\sigma_{p,\delta}$ were taken as the resolution systematics for the $(x, y, z$)-axes respectively. To smear the position results, a Gaussian distribution $\mathcal{N}(0,\delta)$ was convolved with positions. The listed values for the standard deviation ($\delta$) of this Gaussian were used to smear the positions.
 \begin{table}[ht]
 	\centering
-	\caption[Systematic uncertainties of the \texttt{MPW fitter} for position on $(x,y,z)$-axes.]{Systematic uncertainties of the \texttt{MPW fitter} for position on $(x,y,z)$-axes.	Unit: mm.\label{vertexResolsSys}}
-	\vspace{3mm}
+	\caption[Systematic uncertainties of the \texttt{MPW fitter} for position on $(x,y,z)$-axes.]{Systematic uncertainties of the \texttt{MPW fitter} for position on $(x,y,z)$-axes. Unit: mm.\label{vertexResolsSys}}
+	\vspace{2mm}
 	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		axis & systematic uncertainties & systematic to be applied ($\delta$) &smearing\\
@@ -208,7 +208,7 @@ In Table~\ref{vertexShifts}, the averages and the standard deviations of $\mu_{P
 \begin{table}[ht]
 	\centering
 	\caption{Vertex shifts for the reconstructed positions on ($x, y, z$) axes. Unit: mm. \label{vertexShifts}}
-	\vspace{3mm}
+	\vspace{2mm}
 
 	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule
@@ -296,6 +296,7 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 
 \begin{table}[ht]
 	\caption[Direction resolution of the \texttt{MPW} and \texttt{RAT} fitters.]{Direction resolution of the \texttt{MPW} and \texttt{RAT} fitters, when applied to $^{16}$N calibration data and when applied to MC simulations of the calibration process.\label{tab:angularResolValuesUpdated}}
+	\vspace{2.5mm}
 	\begin{tabular}{cccccccc}%{|p{2.2cm}|p{1.8cm}|p{2cm}|p{2cm}|p{1.8cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}| }
 		\toprule
 	107055& $\beta_M$ &  $\beta_S$ & $\alpha_M$ & $\chi^2$/ndf & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
@@ -477,7 +478,7 @@ Fig.~\ref{fig:N16energy} shows two examples for the reconstructed energy spectra
 \end{figure}
 
 \subsubsection{Energy Resolutions}
-As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be considered as an electron source with a known spatial distribution. The $\gamma$-particles emitted from the source interact with the detector materials via different processes and produce electrons with various energies. Fig.~\ref{fig:N16nhitsSimu} shows the spectra of electron energies derived from the simulations of the $^{16}$N central run 107055. It shows the contributions from three processes: Compton scattering, pair production, and photoelectric absorption. Among these contributions, Compton scattering is dominant, while photoelectric absorption is negligible. The $\gamma$-particles transfer energies to electrons, while the energy reconstruction for SNO+ is based on electron equivalent energy (unit: MeVee), the source energy must be mapped to electron equivalent energy \cite{morganThesis}. 
+As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be considered as an electron source with a known spatial distribution. The $\gamma$-photons emitted from the source interact with the detector materials via different processes and produce electrons with various energies. Fig.~\ref{fig:N16nhitsSimu} shows the spectra of electron energies derived from the simulations of the $^{16}$N central run 107055. It shows the contributions from three processes: Compton scattering, pair production, and photoelectric absorption. Among these contributions, Compton scattering is dominant, while photoelectric absorption is negligible. The $\gamma$-photons transfer energies to electrons, while the energy reconstruction for SNO+ is based on electron equivalent energy (unit: MeVee), so the source energy must be mapped to electron equivalent energy \cite{morganThesis}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -485,7 +486,7 @@ As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be consi
 	\caption[Simulated electron energy spectra for different processes.]{Simulated electron energy spectra for different processes, extracted from $10^5$ MC simulations of $^{16}$N central run 107055. Contributions from three processes: Compton scattering, pair production, and photoelectric absorption are shown.\label{fig:N16nhitsSimu}}
 \end{figure}
 
-Following the methods described in Refs.~\cite{waterunidoc,morganThesis}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in the upper plot of Fig.~\ref{N16energyMap}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$) \cite{waterunidoc}. Fig.~\ref{N16energyMap} (b) shows the effective electron spectrum of $^{16}$N central run 107055.
+Following the methods described in Refs.~\cite{waterunidoc,morganThesis}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap:a}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$) \cite{waterunidoc}. Fig.~\ref{N16energyMap:b} shows the effective electron spectrum of $^{16}$N central run 107055.
 
 %%The apparent energy spectrum $P_{source(Te) is generated with RAT and relates the 16N $\gamma$ energy to apparent energy by considering Cherenkov photon production, Compton scattering, pair production, and energy
 %%deposition in the source container.
@@ -494,17 +495,17 @@ Following the methods described in Refs.~\cite{waterunidoc,morganThesis}, a map 
 
 \begin{figure}[htbp]
 	\centering
-    \subfigure[]{\includegraphics[width=8cm]{2dmap_EvsNphoton.png}}
-	\subfigure[]{\includegraphics[width=8cm]{N16_run107055_apparentEnergy.pdf}}
-	\caption[Converting number of photons to effective electron spectrum.]{Converting number of photons to effective electron spectrum. (a): A 2D map of Electron energy vs number of Cherenkov photons. (b):	Effective electron spectrum of $^{16}$N central run 107055.\label{N16energyMap}}
+    \subfigure[\label{N16energyMap:a}]{\includegraphics[width=8cm]{2dmap_EvsNphoton.png}}
+	\subfigure[\label{N16energyMap:b}]{\includegraphics[width=8cm]{N16_run107055_apparentEnergy.pdf}}
+	\caption[Converting number of photons to effective electron spectrum.]{Converting number of photons to effective electron spectrum. (a): A 2D map relates the energies of the simulated electrons to the number of Cherenkov photons. (b): Effective electron spectrum of $^{16}$N central run 107055.\label{N16energyMap}}
 \end{figure}
 
-To obtain the energy reconstruction resolutions, the reconstructed energy spectrum $P(T_{eff})$ is fitted with the energy resolution function defined as \cite{waterunidoc}:
+To obtain the energy reconstruction resolutions, the reconstructed energy spectrum $P(T_\mathrm{eff})$ is fitted with the energy resolution function defined as \cite{waterunidoc}:
 
 \begin{equation}
-P(T_{eff})=N\int P_\mathrm{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma_E} \; \exp \left[ -\frac{[(1+\delta_E)T_{eff}-T_e]^2}{2\sigma_E^2} \, \right] \, ,
+P(T_\mathrm{eff})=N\int P_\mathrm{source}(T_e)\frac{1}{\sqrt{2\pi}\sigma_E} \; \exp \left[ -\frac{[(1+\delta_E)T_\mathrm{eff}-T_e]^2}{2\sigma_E^2} \, \right] \, ,
 \end{equation}
-where the predicted apparent energy spectrum, $P_\mathrm{source}(T_e)$, is convolved with a Gaussian resolution function. In the Gaussian function, $\sigma_E$ is the detector resolution and $\sigma_E = b\sqrt {T_{eff}}$, where $b$ is the energy resolution parameter and $\delta_E$ is the energy scale parameter. $P_\mathrm{source}(T_e)$ is the apparent energy spectrum.
+where the predicted apparent energy spectrum, $P_\mathrm{source}(T_e)$, is convolved with a Gaussian resolution function. In the Gaussian function, $\sigma_E$ is the detector resolution and $\sigma_E = b\sqrt {T_\mathrm{eff}}$, where $b$ is the energy resolution parameter and $\delta_E$ is the energy scale parameter. $P_\mathrm{source}(T_e)$ is the apparent energy spectrum.
 
 Before fitting the reconstructed energy spectrum with the energy resolution function, the following cuts were applied (on both the data and MC): 
 
@@ -517,7 +518,7 @@ Before fitting the reconstructed energy spectrum with the energy resolution func
 
 \end{itemize}
 
-Fig.~\ref{fig:EvsBeta14} shows the relationship between the reconstructed energies ($E_{fit}$) and $\beta_{14}$ values, comparing the \texttt{MPW} and \texttt{RAT} results from the MC and data respectively. 
+Fig.~\ref{fig:EvsBeta14} shows the relationship between the reconstructed energies ($E_{fit}$) and $\beta_{14}$ values from $^{16}$N central run 107055, comparing the \texttt{MPW} and \texttt{RAT} results from the MC and data respectively. 
 
 \begin{figure}[htbp]
 	\centering

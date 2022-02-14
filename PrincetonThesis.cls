@@ -262,7 +262,7 @@
 
 \def\singlespace{
 	\vskip \baselineskip
-	\def\baselinestretch{1}
+	\def\baselinestretch{1.5}
 	\setspace@size
 	\vskip -\baselineskip
 }
@@ -317,12 +317,13 @@
 %	}
 %\fi
 
+%%% Jie comment out: single space 1.6, double space 2.0
 \def\doublespacing{
-	\def\baselinestretch{1.6}
+	\def\baselinestretch{2.0}
 	\setspace@size
 }
 \def\doublespace{
-	\spacing{1.6}
+	\spacing{2.0}
 }
 \let\enddoublespace=\endspacing
 
@@ -572,8 +573,8 @@
 	\cleardoublepage
 	\pagestyle{plain}
 	\pagenumbering{roman}
-	\setcounter{page}{3}%%default
-	\setcounter{secnumdepth}{3}%%Jay added
+	\setcounter{page}{2}%%Jie added, must be page ii for abstract 
+	\setcounter{secnumdepth}{3}%%Jie added, sub section numbers to 3 level
 }{
 	\pu@tocpage
 	\pu@lofpage
@@ -584,7 +585,7 @@
 }
 
 \AtBeginDocument{
-	\doublespacing
+	\singlespace
 	\raggedbottom
 	\pagestyle{headings}
 
