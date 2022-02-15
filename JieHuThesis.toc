@@ -43,7 +43,7 @@
 \contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{59}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{61}{chapter.4}%
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{61}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Multi-path Vertex and Direction Reconstructions for the Water Phase}{63}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Multi-Path Vertex and Direction Reconstructions for the Water Phase}{63}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Vertex Reconstruction}{64}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Direction Reconstruction}{67}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Effective Group Velocity}{68}{subsection.4.2.3}%
@@ -65,7 +65,7 @@
 \contentsline {subsection}{\numberline {4.4.5}Discussions for the Partial Fitter}{104}{subsection.4.4.5}%
 \contentsline {section}{\numberline {4.5}Vertex Reconstruction for the Scintillator Phase}{106}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Performance of the Vertex Reconstruction}{107}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Multi-path Fitter Structure for Multiple SNO+ Physics Phases}{107}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Multi-Path Fitter Structure for Multiple SNO+ Physics Phases}{107}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Energy Reconstruction}{112}{section.4.7}%
 \contentsline {subsection}{\numberline {4.7.1}Energy Figure of Merit}{112}{subsection.4.7.1}%
 \contentsline {subsection}{\numberline {4.7.2}Energy Reconstruction in Partial-fill Phase}{113}{subsection.4.7.2}%
@@ -82,7 +82,7 @@
 \contentsline {subsubsection}{\numberline {5.3.1.3}Vertex Scale Uncertainties}{130}{subsubsection.5.3.1.3}%
 \contentsline {subsection}{\numberline {5.3.2}Direction Reconstruction Evaluation}{132}{subsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.2.1}Direction Resolution}{132}{subsubsection.5.3.2.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.2}Direction Systematics}{133}{subsubsection.5.3.2.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}Direction Systematics}{134}{subsubsection.5.3.2.2}%
 \contentsline {subsection}{\numberline {5.3.3}$\beta _{14}$ and its Systematic}{136}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}Energy Reconstruction Evaluation}{138}{subsection.5.3.4}%
 \contentsline {subsubsection}{\numberline {5.3.4.1}Energy Figure of Merits}{138}{subsubsection.5.3.4.1}%
@@ -107,15 +107,15 @@
 \contentsline {subsection}{\numberline {6.3.10}Summary of Results}{180}{subsection.6.3.10}%
 \contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{182}{subsection.6.3.11}%
 \contentsline {chapter}{\numberline {7}Conclusions}{184}{chapter.7}%
-\contentsline {chapter}{Bibliography}{185}{chapter*.7}%
-\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{204}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{204}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{205}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{208}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{209}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{210}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{210}{section.A.6}%
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{215}{appendix.B}%
-\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{215}{section.B.1}%
-\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{221}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{221}{section.C.1}%
+\contentsline {chapter}{Bibliography}{186}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Details for the MultiPath Fitter}{205}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{205}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{206}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{209}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{210}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{211}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{211}{section.A.6}%
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{216}{appendix.B}%
+\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{216}{section.B.1}%
+\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{222}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{222}{section.C.1}%

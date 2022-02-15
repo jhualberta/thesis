@@ -1,4 +1,4 @@
-%\epigraphfontsize{\small\itshape}
+\textbf{}%\epigraphfontsize{\small\itshape}
 %\setlength\epigraphwidth{8cm}
 %\setlength\epigraphrule{0pt}
 %\epigraphfontsize{\small\itshape}
@@ -15,7 +15,7 @@ According to the physics quantities they determine, the SNO+ fitters can be gene
 \begin{itemize}
 	\item Vertex fitter. A vertex fitter reconstructs the event position and time by utilizing the positions and timing information of the hit PMTs. Currently, vertex fitters have been used to process the data and simulations for the water and partial-fill phases. They are also ready for the scintillator and tellurium-loading phases.
 	
-    On the other hand, some types of events, such as radioactive background events that emit $\gamma$-particles, can create multiple correlated vertices. A multi-site or multi-vertex fitter will be helpful in tagging and removing such types of events during the $0\nu\beta\beta$ search. This kind of fitter is being developed.
+    On the other hand, some types of events, such as radioactive background events that emit $\gamma$-photons, can create multiple correlated vertices. A multi-site or multi-vertex fitter will be helpful in tagging and removing such types of events during the $0\nu\beta\beta$ search. This kind of fitter is being developed.
 
 	\item Direction fitter. A direction fitter reconstructs the event direction by using the information encoded in the spatial distribution of the detected Cherenkov photons, which cause ring-like patterns of hit PMT positions. The direction fitter has been used in the water phase analysis. However during the scintillator and tellurium-loading phases the Cherenkov patterns will be submerged in scintillation photons, so that direction reconstruction requires a different approach, which is being developed currently. 
 	
@@ -29,7 +29,7 @@ A fitter's performance is first tested on Monte Carlo simulations of specific ph
 For a specific SNO+ physics phase, the fitters for reconstructing different physics quantities of an event are integrated. Currently, there are three integrated fitters: the \texttt{Water Fitter} for the water phase, the \texttt{Partial Fitter} for the partial-fill phase, and the \texttt{Scint Fitter} for the scintillator phase and the tellurium loading phase. The fitter parameters, such as the optical parameters, fitter optimization parameters, are coordinated and optimized based on simulations and calibration data from that specific physics phase. In addition, PMT selectors and classifiers are also included in the integrated fitters. The PMT selectors are used to remove the outliers of the hit PMTs for a specific fitter, such as PMTs whose hit(s) probably were triggered by noise. These selectors can help to make the fitter more accurate or to boost fitter speed. The classifiers mainly use the reconstructed results to calculate specific quantities which describe the probability of determining an event as an expected signal or background.
 
 In this chapter, a Multi-Path (MP) reconstruction framework and its principles are discussed. It was developed by the University of Alberta group as an additional fitter to provide event vertex and direction reconstructions. In this framework, the fitters can be adapted for all the SNO+ physics phases by switching light path calculations, input parameters such as the optical parameters, and the detector state. That is the reason why it is called ``multiple paths''.  It was applied in the water phase to provide an alternative diagnosis of event position and direction; it also works as the vertex reconstruction algorithm for the \texttt{Partial Fitter}. After re-coordination for the scintillator and tellurium loading phases, I also show the potential of the vertex fitter for application in these two future phases.
-\section{Multi-path Vertex and Direction Reconstructions for the Water Phase}\label{sect:mpw}
+\section{Multi-Path Vertex and Direction Reconstructions for the Water Phase}\label{sect:mpw}
 
 In the SNO+ water phase, both the cavity and the AV were filled with ultra-pure water. In this case, the detector geometry is simple since everything inside the PSUP sphere can be simplified as water (if one neglects the effects of the plexiglass AV shell). Therefore to explain the reconstruction concepts, I will start with the \texttt{MP water fitter} (the \texttt{MPW fitter}).
 
@@ -37,7 +37,7 @@ The \texttt{MPW fitter} determines the vertex and direction of a triggered event
 
 \subsection{Vertex Reconstruction}\label{sect:waterVertex}
 
-The vertex is defined by four parameters, namely $x,y,z$ and $t$. The fitter first creates a randomly-generated position inside a sphere of radius $10$ m (i.e. larger than the PSUP radius $r_{\mathrm{PSUP}}=8.39~$m). Meanwhile, a random event time $t_0$ (relating to the global trigger time) is also generated from a uniform distribution in the range of $[100,300]$~ns. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $(\vec{X}_0,t_0)$. Details are given in the Appendix.~\ref{appendix:random_gen}.
+The vertex is defined by four parameters, namely $x,y,z$ and $t$. The fitter first creates a randomly-generated position inside a sphere of radius $8.39$ m (i.e. the PSUP radius $r_{\mathrm{PSUP}}$). Meanwhile, a random event time $t_0$ (relating to the global trigger time) is also generated from a uniform distribution in the range of $[100,300]$~ns. The Class Library for High Energy Physics (\texttt{CLHEP}) is used for creating pseudo-random numbers. The random position and the random time are combined to form a random event vertex as the trial event vertex $(\vec{X}_0,t_0)$. Details are given in the Appendix.~\ref{appendix:random_gen}.
 
 For each triggered event, photons created around the event position propagate to the hit PMTs. In a simplified detector geometry model that neglects the effects of scattering, reflection, and refraction, these photons are considered as propagating along straight lines that connect the trial event vertex to the hit PMTs. Thus the fitter evaluates a timing parameter, called the time residual ($t_\mathrm{res}$), which is defined as \cite{boulay2004direct}:
 \begin{equation}
@@ -237,7 +237,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 	
 	This selector first groups the PMTs by their positions on the PSUP sphere. Taking the centre of the sphere as the origin of the coordinate, the sphere is decomposed into intervals of azimuth angle $\phi$ (longitude) and zenith angle $\theta$ (latitude). The PMT positions are projected to $\phi\in [-\pi,\pi]$ and $\cos\theta\in [-1, 1]$ on the sphere, each range being uniformly divided into $n$ intervals, where $n$ is an integer. The whole PSUP sphere is thus decomposed into $N'=n\times n$ panels by $\phi$ and $\cos\theta$, and the PMTs are grouped into these panels: $\mathrm{PMT}(\phi_i,\cos\theta_j) \in [i\cdot\phi/n, j\cdot\cos\theta/n],~(i,j=1,2,..,n)$, see Fig.~\ref{GroupPMTs}.
 	
-	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. In each of the $N'$ panels 1 PMT (or no PMT \footnote{If all the hit PMTs in a panel are triggered too early and removed by $t_{PMT}<100$ ns, there would be no PMT in that panel.}) is selected, thus the number of the hit PMTs is reduced to $n_\mathrm{select}$ for the fitter, and $n_\mathrm{select}\leq N'=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
+	In each panel, the selector first removes the hit PMTs which are triggered too early ($t_\mathrm{PMT}<100$ ns, where 100 ns is set as a default threshold). These PMTs could be triggered by noises, such as the pre-pulsing from thermal noises. Then in the rest of the hit PMTs, the selector picks up one PMT which has the earliest $t_\mathrm{PMT}$ in the panel. In each of the $N'$ panels 1 PMT (or no PMT \footnote{If all the hit PMTs in a panel are triggered too early and are removed by $t_{PMT}<100$ ns, there would be no PMT in that panel.}) is selected, thus the number of the hit PMTs is reduced to $n_\mathrm{select}$ for the fitter, and $n_\mathrm{select}\leq N'=n\times n$. If $\mathrm{NHits}\leq n_\mathrm{select}$, the selector does nothing. 
 	
 	Other timing parameters can also be used for selecting the PMT in each panel, such as $t_\mathrm{mode}$ or $t_\mathrm{median}$. However, tests on the simulations for the scintillator phase showed that using the earliest hit time $t_\mathrm{PMT}$ gave smaller fit bias and better fit resolution. Tests on the 10 MeV $e^-$ simulations in the scintillator phase showed that by applying this selector with $n_\mathrm{select}=16\times16$, the fit speed was reduced from 1.2 s/event to 0.4 s/event.
 \end{itemize}
@@ -251,7 +251,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
 
-A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln L/\mathrm{NHits}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
+A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln \mathcal{L}/\mathrm{NHits}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
 
 \subsection{Performance of the Water Vertex Reconstruction}\label{sect:waterFitterVertex}
 
@@ -792,15 +792,15 @@ This tagging algorithm was applied to reconstructed event vertices. Fig.~\ref{fi
 	\centering
 	\subfigure[$z_{fit}-z_{MC}$ for tagged $^{214}$Bi.]
 	{ 
-		\begin{minipage}[b]{0.38\textwidth}
+		\begin{minipage}[b]{0.45\textwidth}
 			\centering
-			\includegraphics[width=6.5cm]{214Bi_Bipo214_deltaZ.pdf}
+			\includegraphics[width=7cm]{214Bi_Bipo214_deltaZ.pdf}
 		\end{minipage}
 	}
 	\subfigure[$z_{fit}-z_{MC}$ for tagged $^{214}$Po.]{ 
 		\begin{minipage}[b]{0.38\textwidth}
 			\centering
-			\includegraphics[width=6.5cm]{214Po_Bipo214_deltaZ.pdf}
+			\includegraphics[width=7cm]{214Po_Bipo214_deltaZ.pdf}
 		\end{minipage}
 	}
 	\caption[Fit position biases for tagged $^{214}$Bi and $^{214}$Po.]{Fit position biases for tagged $^{214}$Bi (left) and $^{214}$Po (right).\label{fig:parital_bipo214}}
@@ -899,7 +899,7 @@ For other energies (from 1 to 10 MeV), the Gaussian means and resolutions of the
 	\label{fig:scintResolVsE}
 \end{figure}
 
-\section{Multi-path Fitter Structure for Multiple SNO+ Physics Phases}
+\section{Multi-Path Fitter Structure for Multiple SNO+ Physics Phases}
 
 The \texttt{MP fitter} has already been implemented into the \texttt{RAT} software for data processing and analysis. Following the \texttt{RAT} event reconstruction structure, the \texttt{MP fitter} is suitable for multiple SNO+ physics phases. 
 
@@ -974,4 +974,4 @@ Once the neural networks are trained, the reconstruction speed is expected to be
 
 \section{Conclusion}
 
-The Multi-path Fitter framework for event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the \texttt{MP water fitter} works as an alternative fitter to provide additional reconstruction information for water data, and it gives good position and direction resolution for the water analysis. The \texttt{MP scint-water fitter} works as the prime fitter for the SNO+ partial-fill phase, which is crucial to the physics analyses in the partial-fill phase.
+The Multi-Path Fitter framework for event vertex reconstruction was developed for multiple SNO+ physics phases. Under this framework, the \texttt{MP water fitter} works as an alternative fitter to provide additional reconstruction information for water data, and it gives good position and direction resolution for the water analysis. The \texttt{MP scint-water fitter} works as the prime fitter for the SNO+ partial-fill phase, which is crucial to the physics analyses in the partial-fill phase.
