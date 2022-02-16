@@ -50,13 +50,44 @@ The $^{16}$N central run 107055 data and (corresponding) MC simulation were used
 
 Poorly reconstructed events with large position bias ($>6000~$mm) were counted. For the MC case, the position biases were taken as the distance between the reconstructed position and the true (MC) position, $|\vec{X}_{fit}-\vec{X}_{MC}|$. For the data however, the bias was taken as the difference between the reconstructed position and the source manipulator position, $|\vec{X}_{fit}-\vec{X}_{src}|$ \footnote{The source manipulator position is mainly measured by the ropes in the source manipulator system described in Sect.~\ref{sect:calibr}.}. Events with (so-defined) bias exceeding 6000 mm made up 0.13\% of the total event count, both in the MC and experimental calibration data. The high-level cuts removed 73.12\% (66.82\%) of these from the population of MC (data) events. In summary, the high-level cuts remove more than half of the events having large (reconstructed) position offset, while removing only about 1.6\% of the total events. 
 
-Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and the ITR, $\beta_{14}$ respectively, for the data and MC.
+Fig.~\ref{n16_highLevelCut} shows the relations between the position biases and the ITR, $\beta_{14}$ respectively, for the \texttt{MPW} results from the data and MC.
+
+Fig.~\ref{fig:EvsBeta14} shows the relations between the reconstructed energies ($E_{fit}$) and $\beta_{14}$ values from $^{16}$N central run 107055, comparing the \texttt{MPW} and \texttt{RAT} results from the data and MC, respectively. 
+
 \begin{figure}
 	\centering
 	\includegraphics[width=14cm]{N16_107055_highLevelCuts.pdf}
 	\caption[Position biases vs ITR and $\beta_{14}$ for the $^{16}$N central run 107055.]{Position biases vs ITR (top) and $\beta_{14}$ (bottom) for the $^{16}$N central run 107055. Left panels are data and right are MC. For the data, the offset of a reconstructed vertex was defined relative to the source position ($\vec{X}_{src}$). \label{n16_highLevelCut}}
 \end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\subfigure[\texttt{RAT} data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_rat_data_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[\texttt{RAT} MC]{ 
+		\begin{minipage}[b]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[\texttt{MPW} data]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_MPW_data_EvsBeta14.png}
+		\end{minipage}
+	}
+	\subfigure[\texttt{MPW} MC]{ 
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
+		\end{minipage}
+	}
+	\caption[$E_{fit}$ vs $\beta_{14}$ for the data and MC.]{$E_{fit}$ vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} (a, b) and the \texttt{MPW} (c, d) results are shown.\label{fig:EvsBeta14}}
+\end{figure}
 
 \section{Quality of Event Reconstruction Judged by $^{16}$N Calibration Scans in the Water Phase}
 
@@ -82,7 +113,6 @@ Fig.~\ref{energyVsFOM} shows a relation between the $scaleLogL$ and the reconstr
 	\centering
 	\includegraphics[width=13cm]{N16_107055_scaleLogLvsEnergy.pdf}
 	\caption[Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055.]{Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055. Left is MC and right is data.\label{energyVsFOM}}
-
 \end{figure}
 
 As a summary, about 0.04\% of the events were poorly reconstructed (i.e. were mis-reconstructed) by the \texttt{MPW fitter}, resulting in a position error of over 6 meters. Applying a cut in $posFoM$ with $scaleLogL>10$ can remove over 96\% mis-reconstructed events. This $posFoM$ cut was used in the following direction and energy reconstruction evaluations.
@@ -196,6 +226,24 @@ As listed in Table~\ref{vertexResolsSys}, the averages and the standard deviatio
 	\end{tabular*}
 \end{table}
 
+Fig.~\ref{fig:smearXYZresol} shows the effects of smearing the reconstructed positions of $^{16}$N central run 107055 MC smeared by the resolution systematic uncertainties. It shows that smearing with the additional resolutions coming from the uncertainties widens the reconstructed distributions.
+ 
+\begin{figure}
+	\centering
+	\subfigure[Smeared $x_{fit}$.]{\includegraphics[width=7cm]{smearXresol.pdf}}
+	\subfigure[Smeared $y_{fit}$.]{\includegraphics[width=7cm]{smearYresol.pdf}}
+	\subfigure[Smeared $z_{fit}$.]{\includegraphics[width=7cm]{smearZresol.pdf}}
+	\caption[Smeared reconstructed positions of $^{16}$N central run 107055 MC.]{Smeared reconstructed positions of $^{16}$N central run 107055 MC by the position resolution systematics.\label{fig:smearXYZresol}}
+\end{figure}
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=10cm]{}
+%	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 by radius scales.]{Smeared reconstructed radius $r'$ of $^{16}$N central run 107055 by radius scales. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:xResolSmear}}
+%\end{figure}
+
+
+
 To quantify the vertex shifts between the MC and data, values of vertex shifts: $\mu_{P,\delta}\equiv\mu_P(data)-\mu_P(MC)$ were calculated for the ($x, y, z$) scans. Fig.~\ref{fig:verteshitfs} shows these results.
 \begin{figure}[!htb]
 	\centering
@@ -237,7 +285,6 @@ To obtain $\alpha$, the results in Fig.~\ref{fig:verteshitfs} were fitted with l
 	\subfigure[$^{16}$N y-scan runs.]{\includegraphics[width=8cm]{vertexScaleSysY.pdf}}
 	\subfigure[$^{16}$N z-scan runs.]{\includegraphics[width=8cm]{vertexScaleSysZ.pdf}}
 	\caption{Vertex shifts along x, y, z axes and fitted with linear functions.\label{fig:vertexScale}}
-
 \end{figure}
 
 From the linear fits, the values of vertex shifts were obtained and listed in Table~\ref{tab:vertexScale}. Since the $\chi^2/\mathrm{ndf}$ values here were large, according to Refs.~\cite{pdg2020,waterunidoc}, inflated errors were calculated as $S\times$(slope errors), where the error scale factor $S=\sqrt{\chi^2/(\mathrm{ndf}-1)}$. The downward systematic was calculated as the slope minus the slope error as well as the inflated error. In contrast, the upward systematic was taken as the positive inflated error, as suggested by \cite{waterunidoc}. For the $z$ scan, the position at $(-185.037,247.24,4973.567)$ mm pulls the slope results to the positive, possibly due to the bias in simulation from the neck geometry effects. This point was not used in the linear fit.
@@ -259,11 +306,19 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 
 The vertex scale systematics were then transformed, e.g. $x'=(1+\delta_x/100)x$ with equivalent formulae for the $(y,z)$ axes.
 
-The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r$ is calculated as \cite{waterunidoc}:
+The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. The reconstructed radius is always used for defining the fiducial volume inside the AV. In this case, due to the AV offset mentioned in Chapter 3 and Chapter 4, a correction in $z$ with $z'=z-108$ (mm) should be applied, and then $r$ is changed to $r'=\sqrt{x^2+y^2+(z-108)^2}$. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r'$ is calculated as \cite{waterunidoc}:
 \begin{equation}
-\delta_r =\sqrt{\sum_{i=1}^3(\frac{\partial r}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+z^2\delta_z^2}{r^2}}\; .
+\delta_{r'} =\sqrt{\sum_{i=1}^3(\frac{\partial r'}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+(z-108)^2\delta_z^2}{r'^2}}\; .
 \end{equation}
-Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table~\ref{tab:vertexScale}, the $\delta_r^+$ and $\delta_r^-$ are calculated, respectively. Then the two-sided bounds for the confidence interval of reconstructed radius $r$ are calculated by as $r^+=(1+\delta^+_r/100) \; r$ and $r^-=(1+\delta^-_r/100) \; r$.
+Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table~\ref{tab:vertexScale}, the $\delta_{r'}^+$ and $\delta_{r'}^-$ are calculated, respectively. Then the two-sided bounds for the confidence interval of $r'$ are calculated by as $r'^+=(1+\delta^+_{r'}/100) \; r'$ and $r'^-=(1-\delta^-_{r'}/100) \; r'$.
+
+Fig.~\ref{fig:RscaleSmear} shows the effects of smearing the radius scales on the reconstructed $r'$ radius of the $^{16}$N central run 107055. Both the data and MC are shown. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{SmearedEscale_N16.pdf}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 by radius scales.]{Smeared reconstructed radius $r'$ of $^{16}$N central run 107055 by radius scales. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:RscaleSmear}}
+\end{figure} 
 
 %Uncertainties from the source manipulator positions are assumed to be 50~mm.
 
@@ -291,7 +346,6 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 	\centering
 	\includegraphics[width=10cm]{16NangularResol.pdf}
 	\caption[Distributions of the angular error in direction reconstruction, from the data and from MC.]{Distributions of the angular error in direction reconstruction, from the data (red solid line) and MC (black dashed line); both are reconstructed by the \texttt{MPW fitter}. These distributions are fitted with the angular resolution functions over the range [0.3,1].\label{angularResolMPW}}
-
 \end{figure}
 
 \begin{table}[ht]
@@ -515,39 +569,7 @@ Before fitting the reconstructed energy spectrum with the energy resolution func
 \item cuts $\mathrm{NHit}>5$, $\mathrm{ITR}>0.55$ and $-0.12<\beta_{14}<0.95$, used to remove instrumental backgrounds;
 
 \item a conditional distance cut, $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{leta,waterunidoc} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
-
 \end{itemize}
-
-Fig.~\ref{fig:EvsBeta14} shows the relationship between the reconstructed energies ($E_{fit}$) and $\beta_{14}$ values from $^{16}$N central run 107055, comparing the \texttt{MPW} and \texttt{RAT} results from the MC and data respectively. 
-
-\begin{figure}[htbp]
-	\centering
-	\subfigure[\texttt{RAT} data]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_rat_data_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[\texttt{RAT} MC]{ 
-		\begin{minipage}[b]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_rat_mc_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[\texttt{MPW} data]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_MPW_data_EvsBeta14.png}
-		\end{minipage}
-	}
-	\subfigure[\texttt{MPW} MC]{ 
-		\begin{minipage}[t]{0.4\textwidth}
-			\centering
-			\includegraphics[width=6cm]{N16_MPW_mc_EvsBeta14.png}
-		\end{minipage}
-	}
-	\caption[$E_{fit}$ vs $\beta_{14}$ for the data and MC.]{$E_{fit}$ vs $\beta_{14}$ for the data and MC. Both the \texttt{RAT} (a, b) and the \texttt{MPW} (c, d) results are shown.\label{fig:EvsBeta14}}
-\end{figure}
 
 A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to avoid including poorly reconstructed events due to the trigger inefficiency. Fig.~\ref{fittedEnergyResol} shows the energy resolution function fitted with the reconstructed energy spectrum of the $^{16}$N central run-107055 data, after applying the cuts mentioned above.
 \begin{figure}
@@ -577,17 +599,17 @@ By comparing the differences between data and MC, the uncertainties of the energ
 \end{equation}
 where $\delta=b$ or $\delta_E$, and $\Delta_b=\sqrt{\Delta^2_{b}}$ since the resolution is always positive; while $\Delta_{\delta_E}=\pm\sqrt{\Delta^2_{\delta_E}}$. The fit errors in data and MC were also included in the uncertainties. Taking the $^{16}$N scan runs within $r<6~$m, the averaged uncertainties are: $\overline{\Delta_{\delta_E}}=0.0107$ and $\overline{\Delta_{b}}=0.0369$. For the $^{16}$N scan runs within $r<5.5~\mathrm{m}$, which is the fiducial volume of the solar neutrino analysis mentioned in Chapter 6, $\overline{\Delta_{\delta_E}}=0.0100$ and $\overline{\Delta_{b}}=0.0320$.
 
-To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E}) \; E_{fit}$, where the ``$+$" sign is for scaling up the energy while ``$-$" is for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run 107055. It is obvious that scaling up the $E_{fit}$ widens the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
+To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E}) \; E_{fit}$, where the ``$+$" sign is for scaling up the energy while ``$-$" is for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run 107055 MC (the unsmeared data spectrum is compared). It is obvious that scaling up the $E_{fit}$ widens the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEscale_N16.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:EscaleSmear}}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:EscaleSmear}}
 \end{figure}
 
-To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055. It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided \cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
+To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055 MC (the unsmeared data spectrum is compared). It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is one-sided \cite{marzec2019measurement}. Therefore, in the analysis in Chapter 6, I simply took symmetric uncertainties with different signs.
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEresol_N16_new.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055. The red dash line is for smearing the $E_{fit}$ with $\mathrm{Gaus}(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.\label{fig:EresolSmear}}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 by the energy resolution.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055 by the energy resolution. The red dash line is for smearing the $E_{fit}$ with $\mathrm{Gaus}(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.\label{fig:EresolSmear}}
 \end{figure}
