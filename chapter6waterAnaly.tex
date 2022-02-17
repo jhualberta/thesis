@@ -658,22 +658,26 @@ In Chapter 5, the reconstruction systematics of the event position, direction an
 
 \begin{table}[ht]
 	\centering
-	\caption{Systematics for the solar $\nu_e$ analysis in the water phase.\label{tab:solar_uncertainties}}
+	\caption{Systematics for the solar $\nu_e$ analysis in the water phase. See Sect.~\ref{sect:posSystematics}, \ref{sect:dirSystematics}, \ref{sect:beta14Systematics} and \ref{sect:eneryUncertianties} for details.\label{tab:solar_uncertainties}}
 	
-	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}ccc}
+	\begin{tabular*}{145mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		Systematics & values (positive/negative) & transformation   \\
 		\hline
 		x shift ($\Delta x$) & +6.48/-5.98 mm  & $x_{fit}\pm \Delta x$ \\	
 		y shift ($\Delta y$)& +6.13/-4.11 mm   & $y_{fit}\pm \Delta y$ \\
 		z shift ($\Delta z$)& +6.71/-4.82 mm   & $z_{fit}\pm \Delta z$ \\
-		x scale ($\Delta s_x$)& +0.07\%/-0.06\%  & $(1\pm \Delta s_x)x_{fit}$\\	
-		y scale ($\Delta s_y$)& +0.02\%/-0.07\%  & $(1\pm \Delta s_y)y_{fit}$ \\
-		z scale ($\Delta s_z$)& +0.08\%/-0.01\%  & $(1\pm \Delta s_z)z_{fit}$ \\
-		direction $\delta_\theta$  & +0.013/-0.101 & $1+\frac{\cos\theta_\mathrm{sun}-1}{1\pm\delta_\theta}$\\
+		x resolution ($\sigma_{x}$) & $113.6$ mm& $x_{fit}+Gaus(0,\sigma_{x})$\\	
+		y resolution ($\sigma_{y}$) & $90.99$ mm& $y_{fit}+Gaus(0,\sigma_{y})$\\
+		z resolution ($\sigma_{z}$) & $145.56$ mm& $z_{fit}+Gaus(0,\sigma_{z})$\\
+		x scale ($\delta_x$)& +0.07\%/-0.06\%  & $(1\pm \delta_x)x_{fit}$\\	
+		y scale ($\delta_y$)& +0.02\%/-0.07\%  & $(1\pm \delta_y)y_{fit}$ \\
+		z scale ($\delta_z$)& +0.08\%/-0.01\%  & $(1\pm \delta_z)z_{fit}$ \\
+		$r'$ scale ($\delta_{r'}$)&  $\sqrt{\sum_{i=1}^3(\frac{\partial r'}{\partial x_i})^2({\delta^{\pm}_{x_i}})^2}$    & $(1\pm\delta^{\pm}_{r'}/100)r'$\\
+		direction $\delta_\theta$  & +0.013/-0.101 & $1+(\cos\theta_\mathrm{sun}-1)/(1\pm\delta_\theta)$\\
 		$E_{scale}~(\Delta_{\delta_E})$ &  1.0\%  & $(1\pm \Delta_{\delta_E})E_{fit}$\\
 		$E_{resol}~(\Delta_b)$ &  0.037 $\sqrt{\mathrm{MeV}}$  & $E_{fit}+Gaus(0,\sigma_{smear})$ , \\
-		& &$\sigma_{smear}=\sqrt{E_{fit}}\sqrt{(1+\Delta_b)^2-1}$\\
+		-- & -- &$\sigma_{smear}=\sqrt{E_{fit}}\sqrt{(1+\Delta_b)^2-1}$\\
 		$\beta_{14}$ shift ($\Delta \beta_{14}$) & +0.010/-0.036 & $\beta_{14}\pm \Delta \beta_{14}$\\
 		\bottomrule
 	\end{tabular*}
@@ -727,6 +731,10 @@ Applying the systematic transformation in Table~\ref{tab:solar_uncertainties} to
 		x shift & $+0.001891/-0.001962$\\	
 		y shift & $+0.001888/-0.001955$\\
 		z shift & $+0.002071/-0.001818$\\
+		x resolution & $5$\\	
+		y resolution & $5$\\
+		z resolution & $5$\\
+		$r'$ scale & $5$\\
 		position scale & $+0.000583/-0.00306$\\\	
 		$\delta_\theta$  &$+0.01676/-0.004034$\\		
 		$E_{scale}~(\Delta_{\delta_E})$ & $+0.01456/-0.01752$\\
