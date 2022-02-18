@@ -100,22 +100,22 @@
 \contentsline {subsection}{\numberline {6.3.3}Kullback–Leibler Divergence for High-level Cuts}{161}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Signal-background Discrimination Based on TMVA}{164}{subsection.6.3.4}%
 \contentsline {subsection}{\numberline {6.3.5}TMVA Outputs}{171}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}Discussions of TMVA Results}{173}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Fitting Whole Low Background Dataset}{174}{subsection.6.3.7}%
-\contentsline {subsection}{\numberline {6.3.8}Evaluating $^8$B Solar Neutrino Flux}{176}{subsection.6.3.8}%
-\contentsline {subsection}{\numberline {6.3.9}Systematics Evaluation}{180}{subsection.6.3.9}%
-\contentsline {subsection}{\numberline {6.3.10}Summary of Results}{184}{subsection.6.3.10}%
+\contentsline {subsection}{\numberline {6.3.6}Discussions of TMVA Results}{174}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Fitting Whole Low Background Dataset}{176}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}Evaluating $^8$B Solar Neutrino Flux}{177}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.9}Systematics Evaluation}{181}{subsection.6.3.9}%
+\contentsline {subsection}{\numberline {6.3.10}Summary of Results}{185}{subsection.6.3.10}%
 \contentsline {subsection}{\numberline {6.3.11}Limitations of this Study}{186}{subsection.6.3.11}%
-\contentsline {chapter}{\numberline {7}Conclusions}{187}{chapter.7}%
-\contentsline {chapter}{Bibliography}{189}{chapter*.7}%
-\contentsline {chapter}{\numberline {A}Details for the Multi-Path Fitter}{208}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{208}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{209}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{212}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{213}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{214}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{214}{section.A.6}%
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{219}{appendix.B}%
-\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{219}{section.B.1}%
-\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{225}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{225}{section.C.1}%
+\contentsline {chapter}{\numberline {7}Conclusions}{188}{chapter.7}%
+\contentsline {chapter}{Bibliography}{190}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Details for the Multi-Path Fitter}{209}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{209}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{210}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{213}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{214}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{215}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{215}{section.A.6}%
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{220}{appendix.B}%
+\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{220}{section.B.1}%
+\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{226}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{226}{section.C.1}%

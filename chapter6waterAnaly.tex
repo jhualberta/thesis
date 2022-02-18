@@ -237,7 +237,7 @@ p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}}) \; d(-2\ln
 	\caption{The $-2\ln L$ distribution of the best fit results from the 5000 fake datasets. \label{poisson_fitLnL}}
 \end{figure}
 
-\subsection{Kullback–Leibler Divergence for High-level Cuts}
+\subsection{Kullback–Leibler Divergence for High-level Cuts}\label{sect:kldiv}
 
 For the solar neutrino analysis, I used a quantity called ``Kullback–Leibler (KL) divergence'' (also called ``relative entropy'') as a new quantity to calculate the dissimilarity between a reconstructed event and a simulated solar neutrino event, and then to classify the possible solar neutrino event and the background event. Generally, the KL divergence is used to measure the dissimilarity of two probability distributions \cite{murphy2012machine}. The angle $\theta_\mathrm{Ch}$ between the reconstructed event orientation $\vec{u}_{fit}$ and the line joining fitted event position $\vec{X}_{fit}$ to PMT position is given by:
 \begin{equation*}
@@ -263,6 +263,14 @@ klDiv(p,q) \equiv \frac{1}{2}\sum_{i}^N (p\log{\frac{p}{q}}+q\log{\frac{q}{p}})\
 \end{equation}
 Since it is non-negative and $klDiv(p,q)=klDiv(q,p)$, it is close to the meaning of distance. This symmetric quantity is used in the TMVA method in Sect.~\ref{sect:tmva}.
 
+Fig.~\ref{fig:kLdiv_distributions} compares the distributions of $klDiv$ (in symmetrical form) between the simulated internal and external $^{214}$Bi backgrounds and the solar $\nu_e$ signals. Here the external $^{214}$Bi backgrounds include the simulations inside the AV and in the external water region. The figure shows that this quantity can make good separations for the external ${208}$Tl and $^{214}$Bi backgrounds, as well as the internal $^{214}$Bi backgrounds. But further studies show that it is not good for the internal $^{208}$Tl backgrounds, which will be discussed in Sect.~\ref{sect:TMVAdiscussion}.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8cm]{cmpKlDiv_signal_Bi214.pdf}
+	\caption[ A comparison of the symmetrical $klDiv$ distributions between the $^{214}$Bi backgrounds and solar $\nu_e$ signals.]{A comparison of the symmetrical $klDiv$ distributions between the $^{214}$Bi backgrounds and solar $\nu_e$ signals. The solid black line is for solar $\nu_e$, and the solid (dashed) red line is for the internal (external) $^{214}$B backgrounds. The distributions are normalized to their integrals.\label{fig:kLdiv_distributions}}
+\end{figure}
+
 \subsection{Signal-background Discrimination Based on TMVA}\label{sect:tmva}
 
 To further reduce the background events, in addition to the ``beforehand'' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration \footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{Rat water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
@@ -278,7 +286,7 @@ These cuts are denoted as ``default cuts''.
 
 To optimize the cuts on the FoM and $klDiv$ variables, the \texttt{TMVA} package was used. The run-by-run simulations of the solar neutrinos (as signals) and various backgrounds were used to train the machine learning methods in the TMVA. All these variables were used as inputs for training the signal-background discrimination.
 
-For the MC dataset, two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds), in the AV, and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
+For the MC dataset, two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds), inside the AV, and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
 	\centering
 	\caption{Datasets of MC simulations.	\label{table:mixed_MC}}
@@ -288,11 +296,11 @@ For the MC dataset, two types of background isotopes, $^{208}$Tl and $^{214}$Bi 
 		Simulations & Simulated positions in the detector\\
 		\hline 
 		$^{208}$Tl & inner AV (internal $^{208}$Tl)\\
-		-- & AV \\
+		-- & AV ($^{208}$Tl AV)\\
 		-- & external water (external $^{208}$Tl)\\
 		\midrule
 		$^{214}$Bi & inner AV (internal $^{214}$Bi)\\
-		-- & AV \\
+		-- & AV ($^{214}$Bi AV)\\
 		-- & external water (external $^{214}$Bi)\\
 		\midrule
 		Solar $\nu_e$ & inner AV (internal $\nu_e$)\\
@@ -347,7 +355,7 @@ Considering both the CPU time and machine learning performances, the settings in
 
 The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles. Detailed descriptions of these settings can be found in Ref.~\cite{albertsson2007tmva}.
 
-Nine variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant:  NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
+Nine variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$, $\vec{u}\cdot \vec{R}$ and $klDiv$ (in the symmetrical form: Eqn.~\ref{eq:symKlDiv}). Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant: NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
 
 Using the $4<E<15$ MeV training dataset as an example, the distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences in distributions between the signal inputs (black solid lines) and background inputs (red dotted lines) can be observed.
 
@@ -547,9 +555,9 @@ As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT selection to eac
 
 In this case, although the number of signal events is underestimated, the TMVA methods do succeed to remove most of the background events. Also, for the Poisson fit, the TMVA methods were also applied to the MC simulations used as PDFs, these effects can be neutralized in fitting the events. Sect.~\ref{sect:fitTheWhole} will show the fit of the TMVA outputs for the whole dataset. 
 
-\subsection{Discussions of TMVA Results}
+\subsection{Discussions of TMVA Results}\label{sect:TMVAdiscussion}
 
-Further studies show that the underestimation of the signal and the overestimation of the background shown in Fig.~\ref{fig:TMVAfractions} can be reduced by training the TMVA methods with different MC datasets, rather than using a merged MC dataset here. Training the TMVA methods with the MC datasets of the internal and external backgrounds separately can be especially useful, since the distributions of a few variables ($\vec{u}\cdot\vec{R'}$, $\beta_{14}$, $U_{test}$, $G_{test}$ and $Z_{factor}$) are different in the cases of the internal and external backgrounds, as show in Fig.~\ref{fig:cmpExternalInternal}. The TMVA outputs can be improved by applying the trained weights from different MC datasets separately. However, this procedure is complicated and not included in this thesis. 
+Further studies show that the underestimation of the signal and the overestimation of the background shown in Fig.~\ref{fig:TMVAfractions} can be reduced by training the TMVA methods with different MC datasets, rather than using a merged MC dataset here. Training the TMVA methods with the MC datasets of the internal and external backgrounds separately can be especially useful, since the distributions of a few variables ($\vec{u}\cdot\vec{R'}$, $\beta_{14}$, $klDiv$, $U_{test}$, $G_{test}$ and $Z_{factor}$) are different in the cases of the internal and external backgrounds, as show in Fig.~\ref{fig:cmpExternalInternal}. Also, different types of background isotopes (such as $^{208}$Tl and $^{214}$Bi) have different distributions of the input variables. Different MC datasets can be prepared for the TMVA training, and the TMVA outputs can be improved by applying the trained weights from different MC datasets separately. However, this procedure is complicated and not included in this thesis. 
 
 \begin{figure}[htbp]
 	\centering
@@ -564,29 +572,36 @@ Further studies show that the underestimation of the signal and the overestimati
 			\includegraphics[width=5cm]{beta14_cmpExternalInternal.pdf}
 		\end{minipage}
 	}
-	\subfigure[$G_{test}$\label{fig:cmpExternalInternal:3}]{
+	\subfigure[$klDiv$\label{fig:cmpExternalInternal:3}]{
 		\begin{minipage}[b]{0.4\textwidth}
 			\centering
-			\includegraphics[width=5cm]{Gtest_cmpExternalInternal.pdf}
+			\includegraphics[width=5cm]{klDiv_cmpExternalInternal.pdf}
 		\end{minipage}
 	}
-
-	\subfigure[$U_{test}$\label{fig:cmpExternalInternal:4}]{
+	\subfigure[$G_{test}$\label{fig:cmpExternalInternal:4}]{
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=5cm]{Gtest_cmpExternalInternal.pdf}
+	\end{minipage}
+}
+	\subfigure[$U_{test}$\label{fig:cmpExternalInternal:5}]{
 	\begin{minipage}[b]{0.4\textwidth}
 		\centering
 		\includegraphics[width=5cm]{Utest_cmpExternalInternal.pdf}
 	\end{minipage}
    }
-	\subfigure[$Z_{factor}$\label{fig:cmpExternalInternal:5}]{
+	\subfigure[$Z_{factor}$\label{fig:cmpExternalInternal:6}]{
 	\begin{minipage}[b]{0.4\textwidth}
 		\centering
 		\includegraphics[width=5cm]{zfactor_cmpExternalInternal.pdf}
 	\end{minipage}
    }
-	\caption[The distributions of five variables from the simulated internal and external $^{208}$Tl backgrounds.]{ The distributions of five variables from the simulated internal and external $^{208}$Tl backgrounds. The solar $\nu_e$ signal distributions are also compared. Here the ``external backgrounds'' include the AV and external water backgrounds. The distributions of the internal (external) backgrounds are shown in solid (dashed) red lines, while the signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:cmpExternalInternal}}
+	\caption[The distributions of six variables from the simulated internal and external $^{208}$Tl backgrounds.]{The distributions of six variables from the simulated internal and external $^{208}$Tl backgrounds, with $5<E_{fit}<15$ MeV. The solar $\nu_e$ signal distributions are also compared. Here the ``external backgrounds'' include the AV and external water backgrounds. The distributions of the internal (external) backgrounds are shown in solid (dashed) red lines, while the signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:cmpExternalInternal}}
 \end{figure}
 
-Removing the input variables with small differences observed in the distributions of signal and background, for example, the ITR shown in Fig.~\ref{fig:inputParamsTMVA:i}, can boost the TMVA training speed. However, the changes in the BDT and MLP outputs are small, since these two methods can put fewer weights on such variables.
+Removing the input variables with small differences observed in the distributions of signal and background can boost the TMVA training speed (for example, the ITR shown in Fig.~\ref{fig:inputParamsTMVA:i}). However, the changes in the BDT and MLP outputs are small, since these two methods can put fewer weights on such variables.
+
+As mentioned in Sect.~\ref{sect:kldiv}, the $klDiv$ quantity is not powerful for separating the internal $^{208}$Tl backgrounds. In this case, the internal $^{208}$Tl backgrounds give smaller values of $klDiv$, as shown in Fig.~\ref{fig:cmpExternalInternal:3}. The events triggered by the internal $^{208}$Tl backgrounds in the $5<E_{fit}<15$ MeV region could have clear Cherenkov PMT hit patterns, which makes the $\cos\theta_{Ch}$ distribution close to the solar $\nu$ distribution. However, removing the $klDiv$ variable for the analysis presented in Sect.~\ref{sect:tmva} almost did not change the BDT and MLP outputs, since the two methods put fewer weights on it.
 
 The TMVA methods optimize the cuts on more variables (FoMs and $klDiv$) and make more stringent cuts to reduce the background events compared to the beforehand cuts. A more stringent radial cut (or tighter FV) can be applied on the low energy region $4<E_{fit}<5$~MeV to eliminate further background events, which dominate in that region. However, tighter cuts can also eliminate the signal events.
 
