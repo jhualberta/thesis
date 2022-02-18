@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {2.4.2}SNO}{20}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}KamLAND}{21}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Borexino}{22}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}More Studies on Solar Neutrino and Future Experiments}{22}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}More Studies on Solar Neutrino and Future Experiments}{23}{subsection.2.4.5}%
 \contentsline {section}{\numberline {2.5}Neutrinoless Double Beta Decay}{24}{section.2.5}%
 \contentsline {chapter}{\numberline {3}The SNO+ Experiment}{29}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Overview}{29}{section.3.1}%

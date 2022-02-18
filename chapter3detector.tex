@@ -48,7 +48,7 @@ Between the water phase and the scintillator phase, the liquid scintillator occu
 
 \subsection{Tellurium Phase} \label{sect:tePhase}
 
-In the final, ``Te-loaded scintillator'' phase, 1.3 tonnes of $^{130}$Te will be loaded into the scintillator to achieve a planned mixing ratio of 0.5\% natural Tellurium (Te) by mass (more details in Sect.~\ref{sect:TeLS_SNO+}). Higher loading concentrations would be possible for a further loading plan \cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
+In the final, ``Te-loaded scintillator'' phase, 1.3 tonnes of $^{130}$Te will be loaded into the scintillator to achieve a planned mixing ratio of 0.5\% natural tellurium (Te) by mass (more details in Sect.~\ref{sect:TeLS_SNO+}). Higher loading concentrations would be possible for a further loading plan \cite{Paton:2019kgy}. The main purpose of this phase is to search for the $0\nu\beta\beta$ signals in $^{130}$Te.
 
 \section{Detection Media} \label{sect:detectionMedia}
 
@@ -111,7 +111,7 @@ The $S^*$ state will then de-excite, emitting delayed scintillation light. This 
 For a typical scintillator detector, the time scale of detector response is $\mathcal{O}(1-100)$~ns. In this time region, the emission of the scintillation light contains the primary fluorescence from the de-excitation of the singlet states (prompt component) and the delayed fluorescence from the de-excitation of the indirect triplet states (delayed component) \cite{dunger2018topological}. The time profile of the scintillation light is a mixture of prompt and delayed components. 
 
 Different types of charged particles can cause different ionization densities when they deposit energy into the scintillator molecules. The ionization density affects the relative populations of the excited singlet and triplet states. Compared to an electron, an $\alpha$-particle causes a high ionization density, producing a higher ratio of triplet states to singlet states. Therefore, the time profile for the $\alpha$-particle has more delayed light (or longer tails) than that of the electron. This enables the organic scintillator detector to distinguish an $\alpha$ particle from an electron or other lighter charged particle \cite{dunger2018topological, collaboration2020development}.
-An empirical formula, Birk's law \cite{birks1951scintillations, birks1965theory}, describes the photon yield per unit distance produced by the incident particle:
+An empirical formula, Birk's law \cite{birks1965theory,birks1951scintillations}, describes the photon yield per unit distance produced by the incident particle:
 \begin{equation}
 \frac{dY}{dx}=A \, \frac{dE/dx}{1+k_B \, dE/dx} \; ,
 \end{equation}
@@ -125,7 +125,7 @@ The SNO+ project has developed such liquid scintillators, compatible with the de
 
 \subsection{Water-based Wavelength Shifter (Proposal)}\label{sect:wbWLS}
 
-X. Dai et al. \cite{dai2008wavelength} proposed adding wavelength shifter (WLS) into a water Cherenkov detector like SNO. A WLS is a fluorescent organic chemical containing polyaromatic hydrocarbons or heterocycles in their molecules which absorb photons and re-emit them at longer wavelengths \cite{dai2008wavelength,wavelengthShifterWebsite}. Relative to a water Cherenkov detector, a detector using a water-based wavelength shifter (wbWLS) has a higher light yield (about threefold higher than SNO \cite{dai2008wavelength}) and thus has a lower energy threshold for particle detection, i.e. low energy events. At the same time, such a detector retains the directionality characteristic of the Cherenkov signal, in contrast to the case of a \emph{pure} liquid scintillator detector. For studying directional signals such as solar neutrinos, this directionality helps to suppress the background events. This concept of keeping the directionality is also the purpose of developing the water-based liquid scintillator (mentioned in Sect.~\ref{sect:futureSolar}) for future neutrino experiments, such as the Advanced Scintillation Detector Concept (ASDC) \cite{alonso2014advanced}, the WATCHMAN experiment \cite{askins2015physics} and the Jinping experiment \cite{beacom2017physics}.
+X. Dai et al. \cite{dai2008wavelength} proposed adding wavelength shifter (WLS) into a water Cherenkov detector like SNO. A WLS is a fluorescent organic chemical containing polyaromatic hydrocarbons or heterocycles in their molecules which absorb photons and re-emit them at longer wavelengths \cite{dai2008wavelength,wavelengthShifterWebsite}. Relative to a water Cherenkov detector, a detector using a water-based wavelength shifter (wbWLS) has a higher light yield (about threefold higher than SNO \cite{dai2008wavelength}) and thus has a lower energy threshold for particle detection, i.e. low energy events. At the same time, such a detector retains the directionality characteristic of the Cherenkov signal, in contrast to the case of a \emph{pure} liquid scintillator detector. For studying directional signals such as solar neutrinos, this directionality helps to suppress the background events. This concept of keeping the directionality is also the purpose of developing the water-based liquid scintillator (mentioned in Sect.~\ref{sect:futureSolar}) for future neutrino experiments, such as the ASDC-THEIA \cite{alonso2014advanced}, the WATCHMAN experiment \cite{askins2015physics} and the Jinping experiment \cite{beacom2017physics}.
 
 The U.~Alberta group made a proposal of adding WLS into the SNO+ detector in the middle of the water phase. The specific wavelength shifter we considered is PPO, which is a well-studied ingredient of the liquid scintillator used in the SNO+ scintillator phase and tellurium phase. It can be dissolved into the water by mixing with a suitable water surfactant. Although this proposal was not adopted due to the experiment schedule, it is still worthwhile for a conceptual study of a SNO+-like detector that uses wbWLS as the detection medium. In Sect.~\ref{sect:WLSfitter}, an event reconstruction algorithm based on the use of wbWLS is discussed. This algorithm that relative to an ordinary water-Cherenkov detector, the energy threshold can be lowered and the resolution of the reconstructed event position improved, while still retaining the directionality response (i.e. permitting to reconstruct the direction of the incoming particle's path from the Cherenkov light). This feature will help for measuring low-energy solar neutrinos.
 
@@ -139,11 +139,11 @@ SNO+ adopted a liquid scintillator cocktail containing two primary components: L
 	\label{labppo-molecule}
 \end{figure}
 
-LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons \cite{collaboration2020development,wiki_LAB}. It has been used as a biodegradable surfactant to detergent since the 1960s and is known to be relatively non-toxic, and carry a very low risk for the environment and for human health \cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber to transfer the energy deposited by a passing charged particle into light. It also has a long attenuation length of ($72\pm 14$) m at 546 nm and thus has good optical transparency \cite{snop_jinst}. Fig.~\ref{absLength} shows the absorption lengths of SNO+ optical components, comparing the LAB, PPO to the water.
+LAB is a family of alkylated aromatic organic compounds with a phenyl group attached to a long carbon chain varying from 9 to 14 carbons \cite{collaboration2020development,wiki_LAB}. It has been used as a biodegradable surfactant to detergent since the 1960s and is known to be relatively non-toxic, and carry a very low risk for the environment and for human health \cite{wiki_LAB}. Due to the long carbon chain, LAB is an effective energy absorber to transfer the energy deposited by a passing charged particle into light. It also has a long attenuation length of ($72\pm 14$) m at 546 nm and thus has good optical transparency \cite{snop_jinst}. Fig.~\ref{absLength} shows the absorption lengths of SNO+ optical components, comparing the LAB, PPO to the water (plot from the data based on the SNO+ optical calibrations).
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{absLength.png}
-	\caption[Spectral absorption length for SNO+ optical components.]{Spectral absorption length for individual SNO+ optical components. The internal (solid blue line) and external water (dashed blue line) absorption curves are based on the measurements of the laserball scans in July 2018 during the SNO+ water phase. The horizontal lines are a conservative extrapolation to wavelengths at which measurements are lacking.}
+	\caption[Spectral absorption length for SNO+ optical components.]{Spectral absorption length for individual SNO+ optical components. The internal (solid blue line) and external water (dashed blue line) absorption curves are based on the measurements of the laserball scans in July 2018 during the SNO+ water phase (optical calibrations). The horizontal lines are a conservative extrapolation to wavelengths at which measurements are lacking.}
 	\label{absLength}
 \end{figure}
 
@@ -186,7 +186,7 @@ For the $^{130}${Te} $0\nu\beta\beta$-decay process, the signature energy peak i
 
 As mentioned in the previous section, the light yield of the TeLS is crucial for the $0\nu\beta\beta$-decay experiments since it determines the energy resolution of the detector and sensitivity for studying the $0\nu\beta\beta$ process from the $^{130}$Te. With tellurium being loaded into the LAB, the light yield of the liquid scintillator will go down since the light output is quenched by the TeBD complex. A few efforts are aimed to develop high light yield Tellurium-loaded scintillators \cite{biller2017new}.
 
-Here I measured the light yield of $0.5\%$ Te-loaded LAB samples relative to the LAB-PPO scintillator (called ``relative light yield'', RLT). These measurements help to understand the light yields of the TeLS samples made by different Te-loading methods, and it is also useful for preparing the quality control of the TeLS during the SNO+ tellurium phase.
+Here I measured the light yield of $0.5\%$ Te-loaded LAB samples relative to the LAB-PPO scintillator (called ``relative light yield''). These measurements help to understand the light yields of the TeLS samples made by different Te-loading methods, and it is also useful for preparing the quality control of the TeLS during the SNO+ tellurium phase.
 
 \subsubsection{Measurement Setup and Data Acquisition}
 
@@ -222,11 +222,11 @@ Fig.~\ref{teLSsetup} shows a diagram of the whole measurement setup. The plastic
 
 The signal cables from the split box were connected to a two-channel Hewlett Packard (HP) amplifier, which inverted the signals and amplified them by 26 dB. The amplified signals were then input to a two-channel digitizer whence they were recorded on a desktop computer.
 
-To obtain and analyze the data, I used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari (CAEN). Running in a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz and 10-bit resolution for voltage (about 0.98 mV) for each channel \cite{caen}.
+To obtain and analyze the data, I used a desktop Waveform Digitizer, the DT5751 module provided by the Costruzioni Apparecchiature Elettroniche Nucleari (CAEN). Running in a digital pulse processing mode, the module records the digitized PMT waveforms with a data-taking rate of 1 GHz for each channel. For each channel, the digitizer provides an input voltage up to 1 V with a 10-bit resolution (about 0.98 mV) \cite{caen}.
 
 This module was controlled by the \texttt{CoMPASS} software provided by CAEN. The software set up the threshold and trigger parameters. Once the triggered event passed the threshold, the software recorded event time, trigger flag, and waveform histograms from the two channels. By integrating the waveforms, the energy of a triggered event was calculated \cite{compass}.
 
-Each channel recorded the signals from each PMT individually. With the two-PMT setup, I applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels was set to 48 ns, based on checking the recorded waveforms from two channels. For a certain event, the \texttt{CoMPASS} software compares the event time difference between two channels and only records it if the event time difference is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
+Each channel recorded the signals from each PMT individually. With the two-PMT setup, I applied coincidence time mode measurements. In the coincidence mode, a coincidence time window between two channels was set to 48 ns, based on checking the recorded waveforms from two channels. For a certain event, the \texttt{CoMPASS} software compares the event time difference between two channels and only records the waveforms from the two channels if the event time difference is less than 48 ns. A smaller window of 10 ns was further applied for analysis.
 
 \subsubsection{Measurement}
 
@@ -250,7 +250,7 @@ If the measurement system were to be calibrated, the ADC channel number could be
 	\label{teLSwaveform}
 \end{figure}
 
-In a coincidence time measurement, the event times of the events recorded by each of the two PMTs were compared. If the event time differences between two events from each PMTs were too long, those events were considered to be random noise rather than the physics events and were not recorded. I optimized a coincidence time cut as 40 ns and set that cut during the digitizer data-taking based on checking the recorded waveforms. If the coincidence time was set too long, more waveforms from background noises with multiple small peaks fluctuating around the baseline were recorded; on the other hand, if the time was set too short, waveforms from physics events were cut off and too few events were recorded. Multiple tests of the one-minute measurements were performed to obtain the optimized coincidence time cut.
+In a coincidence time measurement, the event times of the events recorded by each of the two PMTs were compared. If the event time differences between two events from each PMTs were too long, those events were considered to be random noise rather than the physics events and were not recorded. I optimized a coincidence time cut as 40 ns and set that cut during the digitizer data-taking based on checking the recorded waveforms. If the coincidence time was set too long, more waveforms from background noises with multiple small peaks fluctuating around the baseline were recorded; on the other hand, if the time was set too short, waveforms from physics events were cut off and too few events were recorded. Multiple one-minute measurements were tested to obtain the optimized coincidence time cut.
 
 \begin{figure}[htbp]
 	\centering	
@@ -270,37 +270,38 @@ Fig.~\ref{teLScoinCut} shows the measured LAB-PPO energy spectrum with and witho
 
 Fig.~\ref{teLSresults} (a) shows the result of a one-minute measurement for the LAB-PPO sample. The data points in the 2D plot represent the triggered events read by the ADC channel 0 and 1 simultaneously. A 10 ns coincidence window cut was applied to cut down noise, single $p.e.$, and background events. The events in the 0 ADC channel, which represent noise, were totally cut off after applying the coincidence cut. Fig.~\ref{teLSresults} (b) and (c) show corresponding results for the TeSOP and TeDDA samples respectively. Compared to the LAB-PPO sample, a shift of the multiple $p.e.$ peak due to the different light yields can be observed clearly. %% John: confusions here
 
-The 2D plots were projected onto a single channel, as shown in Fig.~\ref{teLSresults} (d). I used an empty vial and let $\gamma$-particles from the $^{137}$Cs source pass through it as a background run (without imposing the coincidence cut). This was to verify the single $p.e.$ peak and noise region, shown as the black background spectrum. From this plot, the single $p.e.$ peaks for all the samples and the background match together. The several different multiple $p.e.$ peaks indicate the different light yields of the scintillator samples. Here it showed that the multiple $p.e.$ peak of the LAB-PPO occupied the largest ADC channel number, while the channels of TeSOP are slightly larger than the TeDDA. 
+The 2D plots were projected onto a single channel, as shown in Fig.~\ref{teLSresults} (d). I used an empty vial and let $\gamma$-particles from the $^{137}$Cs source pass through it as a background run (without imposing the coincidence cut). This was to verify the single $p.e.$ peak and noise region, shown as the black background spectrum. From this plot, the single $p.e.$ peaks for all the samples and the background match together. The several different multiple $p.e.$ peaks indicate the different light yields of the scintillator samples. Here it shows that the multiple $p.e.$ peak of the LAB-PPO occupies the largest ADC channel number, while the channels of TeSOP are slightly larger than the TeDDA.
 
 To quantify the light yield differences between different samples, an analysis method of charge weighted photon number has been applied as the following:
 
-First, from the energy spectrum, the single $p.e.$ peak was fitted with an asymmetric Gaussian function ($f_{asym}$ in Eqn.~\ref{eq:asyGaus}), as shown in Fig.~\ref{fitSinglePE} \footnote{This fitting is suggested by Ref.~\cite{von2016measurement}, which allows for non-zero skewness due to contributions from background peaks.}. The mean value of the asymmetric Gaussian ($p_0$) represents the ADC channel number corresponding to the single $p.e.$ peak for the weighting. 
+First, from the energy spectrum, the single $p.e.$ peak was fitted with an asymmetric Gaussian function ($f_{asym}$) \footnote{This fitting is suggested by Ref.~\cite{von2016measurement}, which allows for non-zero skewness due to contributions from background peaks.}:
 
 \begin{equation}\label{eq:asyGaus}
 f_{asym}=c \; \exp\left[- \frac{(x-\mu)^2}{2 \sigma^2} \, \right] \; \mathrm{Erfc}(\xi)\; ,
 \end{equation}
-where $\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma}$.
+where $\xi=-\frac{\alpha(x-\mu)}{\sqrt 2\sigma}$,
+as shown in Fig.~\ref{fitSinglePE}. The mean value of the asymmetric Gaussian ($p_0$) represents the ADC channel number corresponding to the single $p.e.$ peak for the weighting. 
 
 Then in the multiple $p.e.$ region, weighting (dividing) the counts of the event in each channel with the single $p.e.$ ADC channel number to calculate the total number of the photons.
 
 \begin{figure}[htbp]
 	\centering	
-	\includegraphics[width=6cm]{fitSinglePE.png}
-	\caption[The single $p.e.$ peak fitted with an asymmetric Gaussian function.]{The single $p.e.$ peak is fitted with an asymmetric Gaussian function ($f_{asym}$) to obtain the ADC channel for weighting. Here the parameters $(p_0,p_1,p_2,p_3)$ represent $(\mu, \sigma, \alpha, c)$ respectively in Eqn.~\ref{eq:asyGaus}. The mean value of $p_0$ (or $\mu$) is used as the ADC channel number relative to a single $p.e.$ peak.}
+	\includegraphics[width=6.5cm]{fitSinglePE.png}
+	\caption[The single $p.e.$ peak fitted with an asymmetric Gaussian function.]{The single $p.e.$ peak is fitted with an asymmetric Gaussian function ($f_{asym}$) to obtain the ADC channel for weighting. Here the parameters $(p_0,p_1,p_2,p_3)$ represent $(\mu, \sigma, \alpha, c)$ in Eqn.~\ref{eq:asyGaus}, respectively. The mean value of $p_0$ (or $\mu$) is used as the ADC channel number relative to a single $p.e.$ peak.}
 	\label{fitSinglePE}
 \end{figure}
 
 To define the multiple $p.e.$ region for the counting, the spectrum projected on each channel with and without coincidence cut were compared to define a threshold of the ADC channel for counting. By integrating from this threshold, the total numbers of events between the two spectra were close to each other. From two channels, I got two thresholds and then define a box cut in the 2D coincidence plot. I weighed the events in the box to obtain the total number of photons.
 \begin{figure}[htbp]
 	\centering	
-	\includegraphics[width=6cm]{TeLS_2DboxCut.png}
+	\includegraphics[width=8cm]{TeLS_2DboxCut.png}
 	\caption[Two dimensional spectrum of LAB-PPO sample with coincidence cut.]{Two dimensional spectrum of LAB-PPO sample with coincidence cut. A box cut is defined for multiple $p.e.$ counting.}
 	\label{2DboxCut}
 \end{figure}
 
 Two dimensional (2D) spectrum of LAB-PPO with coincidence cut is shown in Fig.~\ref{2DboxCut}. A box cut is defined for multiple $p.e.$ counting. 
 
-Once the total number of photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield.
+Once the total number of photons for a certain sample is counted, we can calculate its ratio to the LAB-PPO sample to obtain the relative light yield (RLY).
 
 \subsubsection{Results}
 \begin{table}[ht]
@@ -318,7 +319,7 @@ Once the total number of photons for a certain sample is counted, we can calcula
 	\end{tabular*}
 \end{table}
 
-Table~\ref{lightyield1} shows the number of photons calculated by the charge weighted photon number method. Here we quantify the relative light yields of our samples. The light yield of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.67$ and the one of the $0.5\%$ Te by DDA procedure is 0.61. The light yield of TeSOP is slightly larger than the TeDDA. These results are close to the relative light yield of $\sim 0.65$ for the $0.5\%$ Te loading samples reported by Ref.~\cite{biller2017new}.
+Table~\ref{lightyield1} shows the number of photons calculated by the charge weighted photon number method. Then the RLY of the samples were obtained. The RLY of the $0.5\%$ Te by SOP synthesis procedure (TeSOP) is $0.67$ and the one of the $0.5\%$ Te by DDA procedure is 0.61. The RLY of TeSOP is slightly larger than the TeDDA. These results are close to the RLY of $\sim 0.65$ for the $0.5\%$ Te loading samples reported by Ref.~\cite{biller2017new}.
 
 \section{SNO+ Electronics}
 
@@ -333,9 +334,9 @@ To tidily manage the more than 9000 PMTs in the SNO+ detector, the coaxial cable
 \mathrm{lcn = 512 \times crate + 32 \times FEC + channel}\; .
 \end{equation}
 
-A 10-MHz and a 50-MHz clock are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined origin $zero$, namely midnight on January 1, 2010 (GMT), until the moment when the event happens. A 10-MHz clock used for counting the absolute time started at $zero$. It has a 53-bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50 MHz clock gives more accurate timing. It limits the best time resolution of the global trigger time (GT) to 20 ns. This clock has a 43-bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays \cite{stringer2019sensitivity,rattime}. 
+A 10-MHz and a 50-MHz clock are used to record the time of the triggered event. The universal time of the triggered event is calculated as the time elapsed from a predefined origin $zero$, namely midnight on January 1, 2010 (GMT), until the moment when the event happens. A 10-MHz clock used for counting the absolute time started at $zero$. It has a 53-bit register and can run for 28.5 years. Its accuracy is maintained by a GPS system. The 50-MHz clock gives more accurate timing. It limits the best time resolution of the global trigger time (GT) to 20 ns. This clock has a 43-bit register and rolls over every 2.04 days. The relative time between the events can be used for analyzing specific physics processes, such as radioactive decays \cite{stringer2019sensitivity,rattime}. 
 
-The recorded hit information of the triggered event, including the time and charge information of hit PMTs and the trigger settings, are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher data transfer rates compared to SNO, with a maximum rate of 14 MB/s, which is sufficient for typical data-taking rates of $~2.5$ MB/s \cite{bonventre2014neutron,rumleskie2021sno+}. The XL3 cards read the recorded data, wrap them as Ethernet packets, and send them to the Data Acquisition System (DAQ) and Event Builder system \cite{walker2016study}. The Event Builder system writes information into event records based on their GT identification number (GTID) and saves them on storage disk \cite{snop_jinst}. These raw data are written to the disc and are further processed into ROOT format by high-performance computing clusters.
+The recorded hit information of the triggered event, including the time and charge information of hit PMTs and the trigger settings, are sent to a Crate Controller Card (XL3) in each crate. These cards were installed for SNO+ to handle higher data transfer rates compared to SNO, with a maximum rate of 14 MB/s, which is sufficient for typical data-taking rates of $~2.5$ MB/s \cite{bonventre2014neutron,rumleskie2021sno+}. The XL3 cards read the recorded data, wrap them as Ethernet packets, and send them to the Data Acquisition System (DAQ) and Event Builder system \cite{walker2016study}. The Event Builder system writes information into event records based on their GT identification number (GTID) and saves them on storage disk \cite{snop_jinst}. These raw data are written to the disc and are further processed into \texttt{ROOT} format by high-performance computing clusters.
 
 The SNO+ electronic system can measure signals with a nanosecond-level timing resolution and a single-photon level charge resolution. It can handle a ``routine'' event rate of several kHz, and when called for can handle much higher rates for cases such as the burst events from a galactic supernova \cite{snop_jinst}.
 
@@ -409,4 +410,4 @@ The software was originally developed by Stan Seibert from the Braidwood Collabo
 
 The SNO+ version of \texttt{RAT} links the existing \texttt{ROOT}, \texttt{Geant4} and \texttt{GLG4sim} packages to minimize code duplication. The SNO+ \texttt{RAT} is being developed by the whole collaboration and evolves with the experiment's progress to precisely simulate the SNO+ detector in its different physics phases, as well as being applied for many analysis tasks. The relatively flexible code structure of \texttt{RAT} allows the user to introduce their own code into the simulation or analysis process \cite{ratManual}. It can be updated and optimized with the measured parameters from detector calibration; it can be equipped with more precise descriptions of the physical processes in the detector; it can also be introduced with more advanced analysis tools. Users can perform different analysis tasks, such as using different reconstruction algorithms on the same set of events \cite{ratManual}. Therefore, different versions of \texttt{RAT} appropriate to and serving different SNO+ physics phases may give different outputs. For the work in this thesis, multiple \texttt{RAT} versions were used, mainly the versions for the water phase and the partial-fill phase. In this case, I will specify the \texttt{RAT} version when I discuss a specific analysis.
 
-\texttt{RAT} is also used by other astroparticle physics experiments, such as DEAP \cite{caldwell2014simulation}. 
+\texttt{RAT} is also used by other astroparticle physics experiments, such as DEAP \cite{caldwell2014simulation}.
