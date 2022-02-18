@@ -111,12 +111,12 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Distributions of the reconstructed position projected onto the $x$-axis.}}{126}{figure.5.8}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces The fitted values of $\mu _P$ and $\sigma _P$ along $x$, $y$ and $z$-scans.}}{128}{figure.5.9}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Relative differences of $\sigma _P$ ($\sigma _{p,\delta }$) as a function of the $^{16}$N source position.}}{129}{figure.5.10}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Smeared reconstructed positions of $^{16}$N central run 107055 MC.}}{130}{figure.5.11}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smeared $x_{fit}$.}}}{130}{figure.5.11}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smeared $y_{fit}$.}}}{130}{figure.5.11}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smeared $z_{fit}$.}}}{130}{figure.5.11}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Vertex shifts of $\mu _P$ ($\mu _{p,\delta }$) as a function of the $^{16}$N source position.}}{131}{figure.5.12}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Vertex shifts along x, y, z axes and fitted with linear functions.}}{133}{figure.5.13}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Smeared reconstructed positions of $^{16}$N central run 107055 MC.}}{131}{figure.5.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smeared $x_{fit}$.}}}{131}{figure.5.11}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smeared $y_{fit}$.}}}{131}{figure.5.11}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smeared $z_{fit}$.}}}{131}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Vertex shifts of $\mu _P$ ($\mu _{p,\delta }$) as a function of the $^{16}$N source position.}}{132}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Vertex shifts along $x, y, z$ axes and fitted with linear functions: $shift = p_0+ p_1\cdot x_i$, $(x_i=x,y,z)$.}}{133}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N x-scan runs.}}}{133}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N y-scan runs.}}}{133}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$^{16}$N z-scan runs.}}}{133}{figure.5.13}%
@@ -129,7 +129,7 @@
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Relative differences of $\beta _M$ and $\beta _S$ as a function of the $^{16}$N source position.}}{139}{figure.5.17}%
 \contentsline {figure}{\numberline {5.18}{\ignorespaces Distributions of $\beta _{14}$ for the $^{16}$N central run 107055.}}{140}{figure.5.18}%
 \contentsline {figure}{\numberline {5.19}{\ignorespaces A comparison of the $\beta _{14}$ for the data and the MC in run 107055. }}{140}{figure.5.19}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces $\beta _{14}$ systematic along $(x, y, z$) scans. }}{141}{figure.5.20}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces $\beta _{14}$ systematics along $(x, y, z$) scans. }}{141}{figure.5.20}%
 \contentsline {figure}{\numberline {5.21}{\ignorespaces $^{16}$N central-run 107055, $U_{test}$ vs. $E_{fit}$/5.1 MeV.}}{142}{figure.5.21}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MC}}}{142}{figure.5.21}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {data}}}{142}{figure.5.21}%
@@ -189,29 +189,35 @@
 \contentsline {figure}{\numberline {6.13}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$ ($4<E_{fit}<15$ MeV).}}{172}{figure.6.13}%
 \contentsline {figure}{\numberline {6.14}{\ignorespaces BDT outputs from one random fake dataset ($5<E_{fit}<15$ MeV).}}{172}{figure.6.14}%
 \contentsline {figure}{\numberline {6.15}{\ignorespaces Event count fractions from BDT outputs on 5000 fake datasets.}}{173}{figure.6.15}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV range.}}{175}{figure.6.16}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{175}{figure.6.16}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{175}{figure.6.16}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{175}{figure.6.16}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{176}{figure.6.17}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations after the BDT selections ($5<E_{fit}<15$ MeV).}}{177}{figure.6.18}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces A fit on the total $^8$B flux.}}{178}{figure.6.19}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{178}{figure.6.20}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{181}{figure.6.21}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{181}{figure.6.21}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{181}{figure.6.21}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{181}{figure.6.21}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{183}{figure.6.22}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces The distributions of five variables from the simulated internal and external $^{208}$Tl backgrounds.}}{175}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{175}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta _{14}$}}}{175}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{175}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$U_{test}$}}}{175}{figure.6.16}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$Z_{factor}$}}}{175}{figure.6.16}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV range.}}{176}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{176}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{176}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{176}{figure.6.17}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{177}{figure.6.18}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations after the BDT selections ($5<E_{fit}<15$ MeV).}}{178}{figure.6.19}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces A fit on the total $^8$B flux.}}{179}{figure.6.20}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{180}{figure.6.21}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{183}{figure.6.22}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{183}{figure.6.22}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{183}{figure.6.22}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{183}{figure.6.22}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{185}{figure.6.23}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on planes.}}{214}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$X-Y$ plane.}}}{214}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$Y-Z$ plane.}}}{214}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$X-Z$ plane.}}}{214}{figure.A.1}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{215}{figure.A.2}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of the best-fit $\qopname \relax o{ln}\mathcal {L}$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{215}{figure.A.3}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{216}{figure.A.4}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{217}{figure.A.5}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on planes.}}{215}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$X-Y$ plane.}}}{215}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$Y-Z$ plane.}}}{215}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$X-Z$ plane.}}}{215}{figure.A.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{216}{figure.A.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of the best-fit $\qopname \relax o{ln}\mathcal {L}$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{216}{figure.A.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{217}{figure.A.4}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{218}{figure.A.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{225}{figure.C.1}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{226}{figure.C.1}%

@@ -1,6 +1,6 @@
 \section{Create a Random Vertex}\label{appendix:random_gen}
 
-This section is derived from P. G. Jones and I. Coutler's early work on the SNO+ reconstruction algorithms \cite{jones2011background,coulter2013modelling}, and K. Singh's work on the \texttt{MultiPath} processor \cite{kalpanaMPFitter}.
+This section is derived from P. G. Jones and I. Coutler's early work on the SNO+ reconstruction algorithms \cite{jones2011background,coulter2013modelling}, and K. Singh's work on the \texttt{MultiPath processor} \cite{kalpanaMPFitter}.
 
 To create a random vertex, four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
 
@@ -32,7 +32,7 @@ where $\gamma$ is a $M$-dimension constant vector around $\bf a$, $\bf d$ is a $
 To find a ${\bf a}_{min}$ so that a $\min\chi^2({\bf a}_{min})$ is reached, in computing science we usually use iteration steps: 
 \begin{equation} \label{eq:2}{\bf a}_{min}={\bf a}_{cur}+D^{-1}[-\nabla\chi^2({\bf a}_{cur})] \; ,
 \end{equation} 
-where ${\bf a}_{cur}$ is the current trial value of $\bf a$ and we assume matrix $\bf D$ is invertible. The ${\bf a}_{cur}$ thus jumps onto ${\bf a}_{min}$. 
+where ${\bf a}_{cur}$ is the current trial value of $\bf a$ and we assume matrix $\bf D$ is invertible. The ${\bf a}_{cur}$ thus jumps onto ${\bf a}_{min}$.
 
 According to the definition of a $\chi^2$ merit function, it can be written out explicitly as:
 \begin{equation}
@@ -124,7 +124,7 @@ A trade-off between the accuracy \& precision of the reconstructed results and t
 \section{Calculations of Derivatives of Likelihood Functions}\label{appendix:likelihoodCalcu}
 The MRQ method requires the derivatives of the likelihood function. These derivatives can be calculated analytically in explicit mathematical forms.
 
-The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$. Then the $TOF$ for the prompt Cherenkov light is $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $L_{\mathrm{Ch}}=L(t_{\mathrm{Ch}})$.
+The position difference is defined as $\vec{X}_{{\mathrm{diffCh}}} = \vec{X_0}-\vec{X}_{\mathrm{pmt}}$. Then the $TOF$ for the prompt Cherenkov light is $t_{\mathrm{Ch}}=|\vec{X}_{{\mathrm{diffCh}}}|/v_g$ and $\mathcal{L}_{\mathrm{Ch}}=\mathcal{L}(t_{\mathrm{Ch}})$.
 
 Then it comes out for the water vertex case,
 \begin{equation}
@@ -234,33 +234,33 @@ The following algorithm shows the detailed calculations in the \texttt{MP partia
 	
 	\hspace{2mm}(step. 1a) if $a'_+a'_-<0$ (event position is inside the cylinder), check the z position of the intersection point on neck, $z_+ = z_0 + a'_+u_z$: 
 	
-	\hspace{6mm}(2a-a) if $6108<z_+<8390~mm$ (in the valid neck region), then check the AV sphere:
+	\hspace{6mm}(2a-a) if $6108<z_+<8390$~mm (in the valid neck region), then check the AV sphere:
 	
 	\hspace{8mm}(3a-a-a) if $|\vec{X}_0|\geq r_{AV}$: $d_{sp,neck}=a'_+$, see Fig.~\ref{lightpath_scintNeck} (a).
 	
 	\hspace{8mm}(3a-a-b) if $|\vec{X}_0|<r_{AV}$ and $a_+a_-<0$: $d_{sp,neck}=a'_+-a_+$, the light ray first hits the sphere inside the cylinder and then hits the cylinder, see Fig.~\ref{lightpath_scintNeck} (b). 
 	
-	\hspace{6mm}(2a-b) if $z_+<6108~mm$:
+	\hspace{6mm}(2a-b) if $z_+<6108$~mm:
 	
-	\hspace{8mm}(3a-b) if $|\vec X_0|\geq r_{AV}$ and $6108<z_0<8390~mm$:
+	\hspace{8mm}(3a-b) if $|\vec X_0|\geq r_{AV}$ and $6108<z_0<8390$~mm:
 	
 	\hspace{10mm}(4a-b) if $a_+>a_->0$: $d_{sp,neck}=a_-$, see Fig.~\ref{lightpath_scintNeck} (c).
 	
 	\hspace{2mm}(step. 1b) if $a'_+>a'_->0$ (event position is outside the cylinder), check the z position of the intersection point on neck, $z'_{\pm}=z_0+a'_\pm\cdot u_z$:
 	
-	\hspace{6mm}(2b-a) if $6108<z'_\pm-<8390~mm$, check the AV intersection:
+	\hspace{6mm}(2b-a) if $6108<z'_\pm-<8390$~mm, check the AV intersection:
 	
 	\hspace{8mm}(3b-a-a) if $a_\pm$ do not exit (never passes through AV), $d_{sp,neck}=a'_+ - a'_-$, see Fig.~\ref{lightpath_scintNeck} (d).
 	
 	\hspace{8mm}(3b-a-b) if $a_+>a_->0$, evaluate the z positions of the ray-sphere intersection points $z_\pm=z_0+a_\pm\cdot u_z$:
 	
-	\hspace{10mm}(4b-a-a) if $z_\pm\geq 6108~mm$: $d_{sp,neck}=a'_+ - a'_--(a_+-a_-)$, see Fig.~\ref{lightpath_scintNeck} (e). The path inside the sphere is subtracted to avoid duplicated calculation.
+	\hspace{10mm}(4b-a-a) if $z_\pm\geq 6108$~mm: $d_{sp,neck}=a'_+ - a'_--(a_+-a_-)$, see Fig.~\ref{lightpath_scintNeck} (e). The path inside the sphere is subtracted to avoid duplicated calculation.
 	
-	\hspace{10mm}(4b-a-b) if $z_+<6108$ and $6108<z_-<8390~mm$:
+	\hspace{10mm}(4b-a-b) if $z_+<6108$ and $6108<z_-<8390$~mm:
 	
 	\hspace{12mm}(5b-a-b-a) if $a_+>a_->0$: $d_{sp,neck}=a_--a'_-$, see Fig.~\ref{lightpath_scintNeck} (f).
 	
-	\hspace{12mm}(5b-a-b-b) if $z_-<6108$ and $6108<z_+<8390~mm$:
+	\hspace{12mm}(5b-a-b-b) if $z_-<6108$ and $6108<z_+<8390$~mm:
 	
 	\hspace{14mm}in this case, either the event position is inside the sphere ($a_+a_-<0$), shown in Fig.~\ref{lightpath_scintNeck} (g), or outside the sphere ($a_+a_-<0$), shown in Fig.~\ref{lightpath_scintNeck} (h)), the path in neck is same: $d_{sp,neck}=a'_+ - a_+$.
 \end{algorithm}
