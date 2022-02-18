@@ -104,7 +104,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\texttt {RAT} MC}}}{121}{figure.5.3}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\texttt {MPW} data}}}{121}{figure.5.3}%
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\texttt {MPW} MC}}}{121}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Position biases vs $scaleLogL$ for the $^{16}$N central run 107055.}}{122}{figure.5.4}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Position biases vs $scaleLogL$ for the $^{16}$N central run 107055.}}{123}{figure.5.4}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055.}}{123}{figure.5.5}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Schematic of the $^{16}$N source.}}{125}{figure.5.6}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Spatial distribution of {$^{16}$}N $\gamma $-ray's first interaction positions, projected onto the $x$-axis.}}{125}{figure.5.7}%
@@ -120,7 +120,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N x-scan runs.}}}{133}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N y-scan runs.}}}{133}{figure.5.13}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$^{16}$N z-scan runs.}}}{133}{figure.5.13}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Smeared reconstructed radius $r'$ spectrum of $^{16}$N central run 107055 MC by radius scales.}}{134}{figure.5.14}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Smeared reconstructed radius $r'$ spectrum of $^{16}$N central run 107055 MC by radius scales.}}{135}{figure.5.14}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Distributions of the angular error in direction reconstruction, from the data and from MC.}}{136}{figure.5.15}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Fitted direction resolution parameters $\beta _M$, $\beta _S$ for the source scans.}}{138}{figure.5.16}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N $x$-scan runs.}}}{138}{figure.5.16}%
@@ -150,7 +150,7 @@
 \contentsline {figure}{\numberline {5.28}{\ignorespaces The reconstructed energy spectrum fitted with resolution function.}}{148}{figure.5.28}%
 \contentsline {figure}{\numberline {5.29}{\ignorespaces Fitted energy scales as a function of the source manipulator's radial position.}}{149}{figure.5.29}%
 \contentsline {figure}{\numberline {5.30}{\ignorespaces Fitted energy resolutions ($b$) as a function of the source manipulator's radial position.}}{149}{figure.5.30}%
-\contentsline {figure}{\numberline {5.31}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales.}}{150}{figure.5.31}%
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales.}}{151}{figure.5.31}%
 \contentsline {figure}{\numberline {5.32}{\ignorespaces Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by the energy resolution.}}{151}{figure.5.32}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.}}{156}{figure.6.1}%
