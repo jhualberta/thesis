@@ -45,7 +45,7 @@ Warning--empty year in markNeuralTalk
 Warning--empty school in marzec2019measurement
 You've used 199 entries,
             1876 wiz_defined-function locations,
-            1440 strings with 35838 characters,
+            1440 strings with 35840 characters,
 and the built_in function-call counts, 42443 in all, are:
 = -- 3736
 > -- 2424
