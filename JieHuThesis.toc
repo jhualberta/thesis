@@ -99,10 +99,10 @@
 \contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{159}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{161}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}TMVA Outputs}{169}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{172}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{173}{subsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.3.6}Fitting Whole Low Background Dataset}{173}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{176}{subsection.6.3.7}%
-\contentsline {subsection}{\numberline {6.3.8}Systematics Evaluation}{179}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{175}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}Systematics Evaluation}{180}{subsection.6.3.8}%
 \contentsline {subsection}{\numberline {6.3.9}Summary of Results}{183}{subsection.6.3.9}%
 \contentsline {subsection}{\numberline {6.3.10}Limitations of this Study}{185}{subsection.6.3.10}%
 \contentsline {chapter}{\numberline {7}Conclusions}{187}{chapter.7}%

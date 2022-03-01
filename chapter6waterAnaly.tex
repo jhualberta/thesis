@@ -398,23 +398,17 @@ Using the $4<E<15$ MeV training dataset as an example, the distributions of thes
 		\end{minipage}
 	}	
 	\subfigure[$\vec{u}\cdot\vec{R'}$\label{fig:inputParamsTMVA:g}]{
-		\begin{minipage}[b]{0.3\textwidth}
+		\begin{minipage}[b]{0.4\textwidth}
 			\centering
 			\includegraphics[width=4cm]{tmvaCompare_udotR.pdf}
 		\end{minipage}
 	}
 	\subfigure[$scaleLogL$\label{fig:inputParamsTMVA:h}]{
-		\begin{minipage}[b]{0.3\textwidth}
+		\begin{minipage}[b]{0.4\textwidth}
 			\centering
 			\includegraphics[width=4cm]{tmvaCompare_scaleLogL.pdf}
 		\end{minipage}
 	}	
-	\subfigure[$klDiv$\label{fig:inputParamsTMVA:i}]{
-		\begin{minipage}[b]{0.3\textwidth}
-			\centering
-			\includegraphics[width=4cm]{tmvaCompare_klDiv.pdf}
-		\end{minipage}
-	}
 	%   \subfigure[$\cos\theta_\mathrm{sun}$]{
 	%	\begin{minipage}[b]{0.3\textwidth}
 	%		\centering
@@ -429,22 +423,22 @@ The output signal/background distributions on the test sub-dataset are shown in 
 	\centering
 	\subfigure[Fisher/LD output.]{
 		\begin{minipage}[t]{0.5\textwidth}
-			\includegraphics[width=8cm]{output_allE_Fisher.pdf}
+			\includegraphics[width=7cm]{output_E5to15_Fisher.pdf}
 		\end{minipage}
 	}
 	\subfigure[BDT output.]{
 		\begin{minipage}[b]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{output_allE_BDT.pdf}
+			\includegraphics[width=7cm]{output_E5to15_BDT.pdf}
 		\end{minipage}
 	}
 	\subfigure[MLP output]{
 		\begin{minipage}[b]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{output_allE_MLP.pdf}
+			\includegraphics[width=7cm]{output_E5to15_MLP.pdf}
 		\end{minipage}
 	}
-	\caption[TMVA outputs for signal/background separations by different methods.]{TMVA outputs for signal/background separations by different methods, for the $4<E<15$ MeV testing dataset.\label{output_separation_allE}}
+	\caption[TMVA outputs for signal/background separations by different methods.]{TMVA outputs for signal/background separations by the Fisher (a), BDT (b) and MLP (c) methods, for the $5<E<15$ MeV testing dataset.\label{output_separation_allE}}
 \end{figure}
 As one of the essential TMVA outputs, the background rejection versus signal efficiency curve is denoted as a receiver operating characteristic (ROC) curve, which is usually used to test the performance of a machine learning classifier. The integral of the ROC curve, named ``area under the curve'' (AUC), is often used to summarize the quality of a ROC curve \cite{murphy2012machine}. Fig.~\ref{fig:energyVsROC} shows the ROC curves for three different methods and for the testing datasets with different energy regions.
 
@@ -452,17 +446,17 @@ As one of the essential TMVA outputs, the background rejection versus signal eff
 	\centering
 	\subfigure[$4<E_{fit}<15$~MeV.]{
 		\begin{minipage}[t]{0.5\textwidth}
-			\includegraphics[width=8cm]{ROC_E4to15.pdf}
+			\includegraphics[width=7cm]{ROC_E4to15.pdf}
 		\end{minipage}
 	}
 	\subfigure[$5<E_{fit}<15$ MeV (energy above 5 MeV).]{
 		\begin{minipage}[b]{0.43\textwidth}
-			\includegraphics[width=8cm]{ROC_E5to15.pdf}
+			\includegraphics[width=7cm]{ROC_E5to15.pdf}
 		\end{minipage}
 	}
 	\subfigure[$4<E_{fit}<5$~MeV.]{
 		\begin{minipage}[b]{0.4\textwidth}
-			\includegraphics[width=8cm]{ROC_E4to5.pdf}
+			\includegraphics[width=7cm]{ROC_E4to5.pdf}
 		\end{minipage}
 	}
 	\caption[TMVA ROC outputs for signal/background separations by different methods.]{TMVA outputs (ROC) for signal/background separations by different methods, for the $4<E<15$ MeV, $5<E<15$ MeV, and $4<E<5$ MeV testing dataset.\label{fig:energyVsROC}}
@@ -478,9 +472,9 @@ Typical CPU times ($t_{CPU}$) to train each algorithm for chosen energy regions 
 		Method & AUC & $t_{CPU}$ (second/$10^6$ events) \\
 		\midrule
 		$4<E_{fit}<15$~MeV \\
-		Fisher/LD & 0.915 & 0.81\\
-		BDT &  0.940 & 249.53 \\
-		MLP & 0.944 & 1370.02\\
+		Fisher/LD & 0.917 & 0.81\\
+		BDT &  0.941 & 249.53 \\
+		MLP & 0.943 & 1370.02\\
 		\hline
 		$5<E_{fit}<15$ MeV\\
 		Fisher/LD & 0.915& 0.93\\
@@ -488,8 +482,8 @@ Typical CPU times ($t_{CPU}$) to train each algorithm for chosen energy regions 
 		MLP &  0.958 & 1450.90\\
 		\hline
 		$4<E_{fit}<5$ MeV \\
-		Fisher/LD & 0.782 & 0.84\\
-		BDT & 0.816 & 280.1\\
+		Fisher/LD & 0.783 & 0.84\\
+		BDT & 0.817 & 280.1\\
 		MLP & 0.823 &1337.9\\
 		\bottomrule
 	\end{tabular*}
@@ -536,27 +530,22 @@ To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensembl
 	\caption[BDT outputs from one random fake dataset ($5<E_{fit}<15$ MeV).]{BDT outputs from one random fake dataset, with $5<E_{fit}<15$ MeV. The solid blue line and the solid red line are for the BDT output of the signal and background events, respectively; the dashed black line and the shaded red histogram are for the true signal and background events, respectively. Finally, the results after the default cuts are shown in the blue shaded area.\label{fig:BDToutputs}}
 \end{figure}
 
-
-
-
-
-
-As shown in Fig.~\ref{fig:TMVAfractionsBDT} and Fig.~\ref{fig:TMVAfractionsMLP}, applying the TMVA BDT and MLP selections to each of the 5000 fake datasets, the ratios of the BDT-selected event count to the true event count are $N_\mathrm{select,BDT}/N_\mathrm{sig,true}=0.9766\pm 0.05244$ for signal events, and $N_\mathrm{select,BDT}/N_\mathrm{bkg,true}=1.058\pm 0.1001$ for background events (using the histogram mean and root mean square). For the MLP case, the ratios are $N_\mathrm{select,MLP}/N_\mathrm{sig,true}=0.9802\pm0.05059$ and $N_\mathrm{select,MLP}/N_\mathrm{bkg,true}=1.050\pm0.009587$.
+As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT and MLP selections to each of the 5000 fake datasets, the ratios of the BDT-selected event count to the true event count are $\frac{N_\mathrm{select,BDT}}{N_\mathrm{true,sig}}=0.9766\pm 0.05244$ for signal events, and $\frac{N_\mathrm{total}-N_\mathrm{select,BDT}}{N_\mathrm{true,bkg}}=1.058\pm 0.1001$ for background events (using the histogram mean and root mean square). For the MLP case, the ratios are $\frac{N_\mathrm{select,MLP}}{N_\mathrm{true,sig}}=0.9802\pm0.05059$ and $\frac{N_\mathrm{total}-N_\mathrm{select,MLP}}{N_\mathrm{true,bkg}}=1.050\pm0.09587$. All these ratios fluctuate around 1.0, therefore the TMVA selections are reasonable.
 
 \begin{figure}[htbp]
 	\centering
 	\subfigure[BDT.]{
-		\begin{minipage}[t]%{0.5\textwidth}
+		\begin{minipage}[t]{0.5\textwidth}
 			\includegraphics[width=8cm]{BDTfractions_ensemble.pdf}
 		\end{minipage}
 	}
 	\subfigure[MLP.]{
-		\begin{minipage}[b]%{0.5\textwidth}
+		\begin{minipage}[b]{0.5\textwidth}
 			\centering
 			\includegraphics[width=8cm]{MLPfractions_ensemble.pdf}
 		\end{minipage}
 	}
-	\caption[Event count ratios from BDT outputs on 5000 fake datasets.]{Event count ratios from BDT outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV. The black histogram is the distribution of the signal fraction, and the dashed red histogram is the distribution of the background fraction.\label{fig:TMVAfractions}}
+	\caption[Event count ratios from TMVA outputs on 5000 fake datasets.]{Event count ratios from TMVA outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV. The top is for the BDT results and the bottom is for the MLP results. The black histogram is the distribution of the signal ratios, and the dashed red histogram is the distribution of the background ratios.\label{fig:TMVAfractions}}
 \end{figure}
 
 In this case, although the number of signal events is underestimated, the TMVA methods do succeed to remove most of the background events. Also, for the Poisson fit, the TMVA methods were also applied to the MC simulations used as PDFs, these effects can be neutralized in fitting the events. Sect.~\ref{sect:fitTheWhole} will show the fit of the TMVA outputs for the whole dataset. 
