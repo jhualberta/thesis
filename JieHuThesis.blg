@@ -43,45 +43,45 @@ Warning--empty year in brunroot
 Warning--empty year in markMachineLearning
 Warning--empty year in markNeuralTalk
 Warning--empty school in marzec2019measurement
-You've used 199 entries,
+You've used 200 entries,
             1876 wiz_defined-function locations,
-            1440 strings with 35840 characters,
-and the built_in function-call counts, 42443 in all, are:
-= -- 3736
-> -- 2424
+            1445 strings with 35975 characters,
+and the built_in function-call counts, 42574 in all, are:
+= -- 3747
+> -- 2428
 < -- 0
-+ -- 911
-- -- 712
-* -- 2910
-:= -- 6665
-add.period$ -- 261
-call.type$ -- 199
-change.case$ -- 148
++ -- 913
+- -- 713
+* -- 2917
+:= -- 6687
+add.period$ -- 262
+call.type$ -- 200
+change.case$ -- 149
 chr.to.int$ -- 0
-cite$ -- 221
-duplicate$ -- 2327
-empty$ -- 3860
-format.name$ -- 712
-if$ -- 10054
+cite$ -- 222
+duplicate$ -- 2336
+empty$ -- 3877
+format.name$ -- 713
+if$ -- 10085
 int.to.chr$ -- 0
-int.to.str$ -- 199
-missing$ -- 189
-newline$ -- 662
-num.names$ -- 193
-pop$ -- 680
+int.to.str$ -- 200
+missing$ -- 190
+newline$ -- 665
+num.names$ -- 194
+pop$ -- 684
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1180
+skip$ -- 1181
 stack$ -- 0
 substring$ -- 1032
-swap$ -- 779
+swap$ -- 780
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 22
-while$ -- 300
-width$ -- 202
-write$ -- 1864
+while$ -- 301
+width$ -- 203
+write$ -- 1872
 (There were 4 error messages)
