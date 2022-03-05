@@ -129,7 +129,7 @@ From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) i
 In addition to refitting the candidate events found by the \texttt{RAT}, the \texttt{MPW} fitter can be (and was) used directly to search for candidate events, with the result shown in Table~\ref{tab:opendataMPW}. Evidently, the \texttt{MPW} fitter obtained a different set of candidate events, albeit overlapping with the set provided by the \texttt{RAT} fitter, and so it provides an alternative analysis of the solar neutrinos.
 % Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
 
-\section{Likelihood Fits for Solar Neutrino Candidate Events}
+\section{Likelihood Fits for Solar Neutrino Candidate Events}\label{sect:likelihoodFitsSolarNu}
 
 For this section, I focus on the 190.33 live-day low background dataset taken in the second stage of the water phase, with nitrogen cover gas at the top of the neck isolating the newly-filled LAB from lab air. A maximum likelihood fit method for counting the number of the candidate solar neutrino events ($N_{sig}$) and background events ($N_{bkg}$) in a dataset is discussed. To check the method, the dataset from run 200004 to 203602 was used. This dataset has a live time of 92.54 days, about half of the whole 190.33 live-day dataset, so it is denoted as the ``half-dataset''. The actual data and the run-by-run MC simulations of this half-dataset were used for testing the analyses in this section and the next.
 
@@ -280,7 +280,7 @@ To further reduce the background events, in addition to the ``beforehand'' cuts 
     \item $0<G_{test}<1.9$\;,
     \item $U_{test}<0.95$\;,
     \item $\mathrm{ITR}>0.55$\;,
-    \item $-0.12<\beta_{14}<0.95$\;. 
+    \item $-0.12<\beta_{14}<0.95$\;.
 \end{itemize}
 These cuts are denoted as ``default cuts''.
 
@@ -289,7 +289,7 @@ To optimize the cuts on the FoM, the \texttt{TMVA} package was used. The run-by-
 For the MC dataset, two types of background isotopes, $^{208}$Tl and $^{214}$Bi were simulated in different detector regions. In this study, the background events simulated in the inner AV (internal backgrounds), inside the AV, and in the external water region were checked. The solar $\nu_e$ events simulated in the inner AV were used as signals. Table~\ref{table:mixed_MC} summarizes the types of simulations used in this study. 
 \begin{table}[ht]
 	\centering
-	\caption{Datasets of MC simulations.	\label{table:mixed_MC}}
+	\caption{Datasets of MC simulations.\label{table:mixed_MC}}
 \vspace{2mm}
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cccccccc}
 		\toprule
@@ -524,7 +524,7 @@ To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensembl
 	\caption[MLP outputs from one random fake dataset ($5<E_{fit}<15$ MeV).]{MLP outputs from one random fake dataset, with $5<E_{fit}<15$ MeV. The dashed black line and the shaded red histogram are for the true signal and background events, respectively; the solid black line and the solid red line are for the MLP output of the signal and background events, respectively. Finally, the results after the default cuts are shown in the blue shaded area.\label{fig:BDToutputs}}
 \end{figure}
 
-As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT and MLP selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the MLP case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, an upper scale ratio 1.031 and a lower scale ratio 0.9296 were applied to the solar $\nu_e$ MC simulations for evaluating the systematics in solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
+As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA MLP and BDT selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the BDT case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, an upper scale ratio of 1.031 and a lower scale ratio of 0.9296 were applied to the solar $\nu_e$ MC simulations for evaluating the systematics in solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
 
 \begin{figure}[htbp]
 	\centering
@@ -542,25 +542,31 @@ As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT and MLP selectio
 	\caption[Event count ratios from TMVA outputs on 5000 fake datasets.]{Event count ratios from TMVA outputs on 5000 fake datasets, with $5<E_{fit}<15$ MeV. The top is for the BDT results and the bottom is for the MLP results. The black histogram is the distribution of the signal ratios, and the dashed red histogram is the distribution of the background ratios.\label{fig:TMVAfractions}}
 \end{figure}
 
-To evaluate the differences of the TMVA selection between the data and MC, the default cuts and the TMVA selections were applied to the $^{16}$N central run 107055 data and MC. Here the cut ratio for the $^{16}$N events is defined as $R=N_\mathrm{select}/N_\mathrm{default}$, where $N_\mathrm{default}$ is the number of events passed the default cuts, and $N_\mathrm{select}$ is the number of events passed the default cuts as well as the TMVA selection.
+To evaluate the differences of the TMVA selection between the data and MC, the data and MC of $^{16}$N central run 107055 were used again. For the energy region $5<E<15$ MeV, the beforehand cuts (see Sect.~\ref{{sect:likelihoodFitsSolarNu}) were first applied to the $^{16}$N data and MC, and then the TMVA selections were applied. Here the acceptance for the $^{16}$N events is defined as $A=N_\mathrm{select}/N_\mathrm{beforehand}$, where $N_\mathrm{beforehand}$ is the number of events passed the beforehand cuts only, and $N_\mathrm{select}$ is the number of events passed both the beforehand cuts and the TMVA selection. Finally, a fractional acceptance between the data and MC is calculated as $R=A_\mathrm{data}/A_{MC}$. After applying the TMVA selection optimized for the solar $\nu_e$ to the $^{16}$N data and MC respectively, the results give $R=0.9867$ for MLP and $R=0.9867$ for BDT. For the $\nu_\mu$ case, $R=0.9896$ for MLP and $R=0.9994$ for BDT. To evaluate the flux scale discussed in Sect.~\ref{sect:evaluateFlux}, the solar $\nu_e$ ($\nu_\mu$) MC simulations were scaled by the factor 0.9867 (0.9896) for MLP and 1.002 (0.9994) for BDT.
+	
+% Table~\ref{table:TMVAon16N} shows the values for the $\nu_e$ and $\nu_\mu$ cases.
+%
 %\begin{table}[ht]
-%	\small{
 %	\centering
-%	\caption{TMVA selection ratios between data and MC, for $^{16}$N central run 107055.  \label{table:TMVAon16N}}
-%%	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccc}
-%%		\toprule
-%%		Methods & $N_\mathrm{default}$ & $N_\mathrm{MLP}$ & $N_\mathrm{BDT}$ & $R_\mathrm{MLP}$ & $R_\mathrm{BDT}$ \\
-%%		\hline
-%%		data & 78671 &  65008 &  64615 & 0.8213 & 0.8263  \\
-%%		MC   & 64806 & 53457 & 53947 &  0.8324 & 0.8249 \\
-%%		$(R_\mathrm{data}-R_{MC})(\times 100\%)$ & -- & -- & -- & +0.14\% & -1.11\% \\ 
-%%		\bottomrule
-%%	\end{tabular*}
-%}
+%	\caption{TMVA selection acceptance for $^{16}$N central run 107055 data and MC. \label{table:TMVAon16N}}
+%	\begin{tabular*}{140mm}{c@{\extracolsep{\fill}}cccccc}
+%		\toprule
+%			Methods & $N_\mathrm{default}$ & $N_\mathrm{MLP}$ & $R_\mathrm{MLP}$ & $N_\mathrm{BDT}$ & $R_\mathrm{BDT}$ \\
+%				\hline
+%				data ($\nu_e$) & 78671 & 64615  & 0.8213 &  65008  & 0.8263\\
+%				                72048 
+%				MC ($\nu_e$) & 64806 & 53947 &  0.8324 & 53457  & 0.8249 \\
+%				               60880
+%				$A_\mathrm{data}/A_{MC}$ & -- & -- & 0.9867  & -- & 1.002 \\ 
+%				\hline
+%				data ($\nu_\mu$) & 78671 & 64099 & 0.8148 &  67422  & 0.8570 \\
+%				MC ($\nu_\mu$) &  64806 &  53359 & 0.8234   & 55574 & 0.8575 \\
+%				$A_\mathrm{data}/A_{MC}$ & -- & -- & 0.9896  & -- &  0.9994\\ 
+%		\bottomrule
+%	\end{tabular*}
 %\end{table}
 
 
-To evaluate the flux scale discussed in Sect.~\ref{sect:evaluateFlux}, the scale factors (1-0.61\%) and (1+0.14\%) were applied to the solar $\nu_e$ MC simulations for MLP and BDT, respectively. 
 
 \subsection{Discussions of TMVA Results}\label{sect:TMVAdiscussion}
 
