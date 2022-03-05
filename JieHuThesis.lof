@@ -205,11 +205,11 @@
 \contentsline {figure}{\numberline {6.20}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations after the BDT selections ($5<E_{fit}<15$ MeV).}}{178}{figure.6.20}%
 \contentsline {figure}{\numberline {6.21}{\ignorespaces A fit on the total $^8$B flux.}}{179}{figure.6.21}%
 \contentsline {figure}{\numberline {6.22}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{179}{figure.6.22}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{182}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{182}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{182}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{182}{figure.6.23}%
-\contentsline {figure}{\numberline {6.24}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{184}{figure.6.24}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{183}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{183}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{183}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{183}{figure.6.23}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{185}{figure.6.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on planes.}}{215}{figure.A.1}%

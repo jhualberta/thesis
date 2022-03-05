@@ -103,7 +103,7 @@
 \contentsline {subsection}{\numberline {6.3.6}Fitting Whole Low Background Dataset}{175}{subsection.6.3.6}%
 \contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{175}{subsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.3.8}Systematics Evaluation}{180}{subsection.6.3.8}%
-\contentsline {subsection}{\numberline {6.3.9}Summary of Results}{183}{subsection.6.3.9}%
+\contentsline {subsection}{\numberline {6.3.9}Summary of Results}{184}{subsection.6.3.9}%
 \contentsline {subsection}{\numberline {6.3.10}Limitations of this Study}{185}{subsection.6.3.10}%
 \contentsline {chapter}{\numberline {7}Conclusions}{187}{chapter.7}%
 \contentsline {chapter}{Bibliography}{189}{chapter*.7}%
