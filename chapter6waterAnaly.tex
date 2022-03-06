@@ -524,7 +524,7 @@ To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensembl
 	\caption[MLP outputs from one random fake dataset ($5<E_{fit}<15$ MeV).]{MLP outputs from one random fake dataset, with $5<E_{fit}<15$ MeV. The dashed black line and the shaded red histogram are for the true signal and background events, respectively; the solid black line and the solid red line are for the MLP output of the signal and background events, respectively. Finally, the results after the default cuts are shown in the blue shaded area.\label{fig:BDToutputs}}
 \end{figure}
 
-As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA MLP and BDT selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the BDT case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, an upper scale ratio of 1.031 and a lower scale ratio of 0.9296 were applied to the solar $\nu_e$ MC simulations for evaluating the systematics in solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
+As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA MLP and BDT selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the BDT case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, a scale ratio of 1.031 (0.9296) was applied to scale up (down) the MC simulated solar $\nu_e$ MC histograms. The scaled histograms were used to evaluate the systematics in solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
 
 \begin{figure}[htbp]
 	\centering
@@ -738,13 +738,14 @@ In Chapter 5, the reconstruction systematics of the event position, direction, a
 		$z$ resolution ($\sigma_{z}$) & $145.56$ mm& $z_{fit}+Gaus(0,\sigma_{z})$\\
 		$x$ scale ($\delta_x^{\pm}$)& +0.07\%/-0.06\%  & $(1+\delta_x^{\pm})x_{fit}$\\	
 		$y$ scale ($\delta_y^{\pm}$)& +0.02\%/-0.07\%  & $(1+\delta_y^{\pm})y_{fit}$ \\
-		$z$ scale ($\delta_z^{\pm}$)& +0.08\%/-0.01\%  & $(1+\delta_z^{\pm})z_{fit}$ \\
+		$z$ scale ($\delta_z^{\pm}$)& +0.08\%/-0.01\%  & $(1+\delta_zNote 10^{\pm})z_{fit}$ \\
 		$r'$ scale ($\delta_{r'}^{\pm}$)&  $\sqrt{\sum_{i=1}^3(\frac{\partial r'}{\partial x_i})^2({\delta^{\pm}_{x_i}})^2}$    & $(1\pm\delta^{\pm}_{r'}/100)r'$\\
 		direction resolution ($\delta_\theta^{\pm}$)  & +0.013/-0.101 & $1+(\cos\theta_\mathrm{sun}-1)/(1+\delta_\theta^{\pm})$\\
 		$E_{scale}~(\Delta_{\delta_E})$ &  1.0\%  & $(1\pm \Delta_{\delta_E})E_{fit}$\\
 		$E_{resol}~(\Delta_b)$ &  0.037 $\sqrt{\mathrm{MeV}}$  & $E_{fit}+Gaus(0,\sigma_{smear})$ , \\
 		-- & -- &$\sigma_{smear}=\sqrt{E_{fit}}\sqrt{(1+\Delta_b)^2-1}$\\
 		$\beta_{14}$ shift ($\Delta \beta_{14}^\pm$) & +0.010/-0.036 & $\beta_{14}+\Delta \beta_{14}^\pm$\\
+		selection ratios ($r_s$) & 1.031/0.9296 & $r_s\cdot N_{sig}$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -785,7 +786,7 @@ Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, en
 	\caption[Smearing effects on the $\cos\theta_\mathrm{sun}$ PDF.]{Smearing effects on the $\cos\theta_\mathrm{sun}$. The histogram with a solid black line is the PDF before smearing. The dotted blue histogram is for smearing up the quantity (i.e., taking the positive values) and the dashed red is for smearing down (i.e., taking the positive values).\label{smearESpdfs}}
 \end{figure}
 
-Applying the systematic transformation in Table~\ref{tab:solar_uncertainties} to the MC ES PDF, and then refitting the data with the smeared PDFs for each quantity, the smeared values of the flux fractions ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table~\ref{tab:smearingResults}. To summarise, the systematic uncertainties from the smeared $\beta_{14}$ are negligible, while those resulting from smearing the position, direction, and energy result in more significant uncertainties. 
+Applying the systematic transformation in Table~\ref{tab:solar_uncertainties} to the MC ES PDF, and then refitting the data with the smeared PDFs for each quantity, the smeared values of the flux fractions ($f'_s$) were found. The systematics of the $f_s$ are calculated by $\Delta f_s =f'_s-f_s$. These results are listed in Table~\ref{tab:smearingResults}. To summarize, the systematic uncertainties from the smeared $\beta_{14}$ are negligible, while those resulting from smearing the position, direction, and energy result in more significant uncertainties. 
 \begin{table}[ht]
 	\centering
 	\caption{Systematics for the fitted flux scale $f_s$.\label{tab:smearingResults}}
@@ -806,6 +807,7 @@ Applying the systematic transformation in Table~\ref{tab:solar_uncertainties} to
 		$E_{scale}~(\Delta_{\delta_E})$ & +0.01456/-0.01752\\
 		$E_{resol}~(\Delta_b)$ & +0.003363/-0.003363 \\
 		$\beta_{14}$ shifts & +0.003968/-0.003285\\
+		selection ratios ($r_s$) & / \\
 		\bottomrule
 	\end{tabular*}
 \end{table}
