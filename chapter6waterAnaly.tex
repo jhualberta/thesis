@@ -321,7 +321,7 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 
 \end{figure}
 %%%% Jie
-From the simulations of the half-dataset, about 70\% of the events were randomly selected as the training dataset, while the balance were randomly selected as the test dataset. The machine learning algorithms in the TMVA train the weights of the input variables by using the training set, while they apply the trained weights to the testing set for validations of the signal-background separation. Once the weights of the input variables were obtained, they were applied to the actual data. Three ranges of $E_{fit}$ were tested: $4<E_{fit}<15$ MeV, $5<E_{fit}<15$ MeV ($E>5$ MeV region), and $4<E_{fit}<5$ MeV (low energy region). Table~\ref{tab:signalToBkg_tmva} lists the ratios of the signal event count ($N_{sig}$) to the background event count ($N_{bkg}$) for the different energy regions, after application of these beforehand cuts. In the low energy region $4<E_{fit}<5$ MeV background events are dominant, while for  $E_{fit}>5$ MeV background events are significantly reduced.
+From the simulations of the half-dataset, about 70\% of the events were randomly selected from the MC half-dataset as the training dataset, while the balance were randomly selected as the test dataset. The machine learning algorithms in the TMVA train the weights of the input variables by using the training set, while they apply the trained weights to the testing set for validations of the signal-background separation. Once the weights of the input variables were obtained, they were applied to the actual data. Three ranges of $E_{fit}$ were tested: $4<E_{fit}<15$ MeV, $5<E_{fit}<15$ MeV ($E>5$ MeV region), and $4<E_{fit}<5$ MeV (low energy region). Table~\ref{tab:signalToBkg_tmva} lists the ratios of the signal event count ($N_{sig}$) to the background event count ($N_{bkg}$) for the different energy regions, after application of the beforehand cuts. In the low energy region $4<E_{fit}<5$ MeV background events are dominant, while for  $E_{fit}>5$ MeV background events are significantly reduced.
 
 \begin{table}[ht]
 	\centering
@@ -355,7 +355,7 @@ Considering both the CPU time and machine learning performances, the settings in
 
 The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles. Detailed descriptions of these settings can be found in Ref.~\cite{albertsson2007tmva}.
 
-Eight variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$ and $\vec{u}\cdot \vec{R}$. Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant: NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
+Eight variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$ and $\vec{u}\cdot \vec{R}$. Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant: NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$.
 
 Using the $4<E<15$ MeV training dataset as an example, the distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences in distributions between the signal inputs (black solid lines) and background inputs (red dotted lines) can be observed.
 
@@ -617,7 +617,7 @@ Other multivariate analysis packages, such as \texttt{StatPatternRecognition} (S
 \subsection{Fitting Whole Low Background Dataset}\label{sect:fitTheWhole}
 To combine the analyses in the previous two sections, the TMVA selection methods were applied to the actual data of the 190.33 live-day whole dataset, and then a maximum likelihood fit was applied to the selected data. 
 
-For the whole dataset, the TMAV methods were applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations \footnote{The simulations of solar $\nu_{\mu}$ were also trained with the background simulations separately to calculate the detected $\nu_\mu$ from the oscillated solar neutrino flux mentioned in next section}. Similarly, the training subset used 70.25\% of the whole dataset (run 200004 to 205296), while the testing subset used the rest 29.75\% (run 205297 to 207718). The trained MLP and BDT weights were applied to the whole dataset.
+For the whole dataset, the TMAV methods were applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations \footnote{The simulations of solar $\nu_{\mu}$ were also trained with the background simulations separately to calculate the detected $\nu_\mu$ from the oscillated solar neutrino flux mentioned in next section}. Similarly, the training subset used about 70\% of the total events randomly selected from the whole MC dataset, while the testing subset used the rest 30\%. The trained MLP and BDT weights were applied to the whole dataset.
 
 In the region of $5<E_{fit}<15$~MeV, the outputs from the MLP and BDT were fitted to obtain $N_{sig}$ and $N_{bkg}$. Fig.~\ref{fig:wholeDataset_poissonFit:a} and \ref{fig:wholeDataset_poissonFit:b} show their results respectively. For comparison, the results from applying the default cuts are shown in Fig.~\ref{fig:wholeDataset_poissonFit:c}. The fit results are summarized in Table~\ref{table:wholedata_output}. 
 %{John: try not to use "also" over and over as a way to give continuity}
@@ -684,7 +684,7 @@ Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ a
 	\caption[The MC $\cos\theta_\mathrm{sun}$ distributions used as PDFs for the flux calculations after the MLP selections ($5<E_{fit}<15$ MeV).]{The MC $\cos\theta_\mathrm{sun}$ distributions used as PDFs for the flux calculations, for $5<E_{fit}<15$ MeV after the MLP selections. The black histogram is the $\nu_e$ flux without oscillation, denoted PDF$(\nu_e, \, \mathrm{without~oscillation})$. This histogram is used for fitting the elastic scattering flux. The histogram in dashed red line is the $\nu_e$ flux and the green shaded histogram is the $\nu_\mu$ flux, both including the oscillation. These two histograms were combined to form the total flux including the oscillation, which is given by the blue line and is denoted by PDF$(\nu_e+\nu_\mu, \, \mathrm{oscillated})$. This (blue) histogram is used for fitting the total flux.\label{fig:MCfluxPdfs}}
 \end{figure} 
 
-Reading from the above histograms, the expected event count for $\nu_e$ without the oscillation is $N_{\nu_e} = 314.679$. Assuming a flux of $\nu_\mu$, the expected number of $\nu_\mu$ is $N_{\nu_\mu}=49.2741$, then $N_{\nu_e}/N_{\nu_\mu}\approx 6.4$, which is consistent with the ratio of the cross-sections mentioned before. Including the oscillations, the expected event counts for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} = 109.494$ and $N^{osci}_{\nu_\mu} = 32.0757$ respectively, and the combined event count is $N^{osci}_{\nu_e+\nu_\mu}=141.569$. %%%% 
+Reading from the above histograms, the expected event count for $\nu_e$ without the oscillation is $N_{\nu_e} = 328.003$. Assuming a flux of $\nu_\mu$, the expected number of $\nu_\mu$ is $N_{\nu_\mu}=$, then $N_{\nu_e}/N_{\nu_\mu}\approx 6.4$, which is consistent with the ratio of the cross-sections mentioned before. Including the oscillations, the expected event counts for $\nu_e$ and $\nu_\mu$ are $N^{osci}_{\nu_e} =116.364$ and $N^{osci}_{\nu_\mu} = 33.0989$ respectively, and the combined event count is $N^{osci}_{\nu_e+\nu_\mu}=149.463$. %%%% 
  
 To fit for the total $^8$B neutrino flux, the fit parameter used here is the flux scale $f^{tot}_s$, which is interpreted as the fraction of the observed $^8$B flux to the expected flux. Using the same method in Sect.~\ref{sect:poisson_fit}, and in the Eqn.~\ref{eq:solar_poissonFitMinimizer}, replacing the $N_{sig}$ with $N_{sig}=f^{tot}_s\cdot N^{osci}_{\nu_e+\nu_\mu}$(where the estimated $N^{osci}_{\nu_e+\nu_\mu}=141.57$), and then fitting the $f^{tot}_s$ and the $N_{bkg}$ with the $\mathrm{PDF}(\nu_e+\nu_\mu,\mathrm{oscillated})$. The fit results are $f^{tot}_s=0.8462\pm 0.08398$ (corresponding to $N_{sig}=119.8\pm11.89$ events) and $N_{bkg}=38.20\pm7.731$ events, with a $p$-value of 0.1470. Fig.~\ref{fig:TOTALfluxFit} shows the fit spectrum.
 
@@ -707,12 +707,12 @@ The $N_{sig}$ and $N_{bkg}$ values obtained here by fitting the flux fractions a
 With the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}$, the estimated total flux is:
 
 \begin{equation}
-\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.447(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; ,
+\Phi^{total}(\mathrm{^8 B})=f^{tot}_s\cdot \Phi^{total}_{MC}=(4.62 \pm 0.447\mathrm{(stat.)})\times 10^6~\mathrm{cm^{-2}s^{-1}}\; ,
 \end{equation}
 
 and the estimated elastic scattering flux is:
 \begin{equation}
-\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.10\pm 0.204(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
+\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.10\pm 0.204\mathrm{(stat.)})\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
 \end{equation}
 
 The next section will evaluate the systematic uncertainties of the flux fractions.
@@ -793,35 +793,34 @@ Applying the systematic transformation in Table~\ref{tab:solar_uncertainties} to
 		\toprule
 		Systematics & $\Delta f_s$ (+/-)\\
 		\hline
-		$x$ shift & +0.00001891/-0.00006\\	
+		$x$ shift & +0.00001800/-0.00006000\\	
 		$y$ shift & +0.00001500/-0.00004500\\
-		$z$ shift & +0.002071/-0.001818\\
-		$x$ resolution & +0.0001450/-0.0001450\\	
-		$y$ resolution & +0.00009800/-0.00009800\\
-		$z$ resolution & +0.0001290/-0.0001290\\
-		$r'$ scale & +0.001423/-0.001237\\
-		position scale & +0.000583/-0.00306\\	
-		direction resolution ($\delta_\theta$)  &+0.01676/-0.004034\\		
-		$E_{scale}~(\Delta_{\delta_E})$ & +0.01456/-0.01752\\
-		$E_{resol}~(\Delta_b)$ & +0.003363/-0.003363 \\
-		$\beta_{14}$ shifts & +0.003968/-0.003285\\
+		$z$ shift & +0.00009300/-0.0001580\\
+		$x$ resolution & +0.0001940/-0.0001940\\	
+		$y$ resolution & +0.00005300/-0.00005300\\
+		$z$ resolution & +0.0002780/-0.0002780\\
+		$r'$ scale & +0.001400/-0.001210\\
+		position scale & +0.001295/-0.001115\\	
+		direction resolution ($\delta_\theta$)  &+0.01881/-0.002016\\		
+		$E_{scale}~(\Delta_{\delta_E})$ & +0.01577/-0.01496\\
+		$E_{resol}~(\Delta_b)$ & +0.0004400/-0.0004400 \\
+		$\beta_{14}$ shifts & +0.004514/-0.0009990\\
 		selection ratios ($r_s$) & 0.04890/-0.01994\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
 
-Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.2999}_{-0.1370}$. Using the same procedure to evaluate the systematics of the elastic scattering flux fraction $f^{ES}_s$ gives $({f^{ES}_s})^{+0.1695}_{-0.008324}$.
-
+Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$, and $\sigma_{tot}^\pm=\pm\sqrt{\sum_i \sigma^2_i}$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.05493}_{-0.02509}$. Using the same procedure to evaluate the systematics of the elastic scattering flux fraction $f^{ES}_s$ gives $({f^{ES}_s})^{+0.03104}_{-0.01322}$.
 
 \subsection{Summary of Results}\label{sect:solarESresults}
 
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
-{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.447(stat.)^{+0.126}_{-0.105}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}}\; ,
+{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.447\mathrm{(stat.)}^{+0.300}_{-0.137}\mathrm{(syst.)})\times 10^6~\mathrm{cm^{-2}s^{-1}}}\; ,
 \end{equation}
 while the ES flux is:
 \begin{equation}
-\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.10\pm 0.204(stat.)^{+0.0528}_{-0.0455} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
+\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.10\pm 0.204\mathrm{(stat.)}^{+0.169}_{-0.0722}\mathrm{(syst.)})\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
 \end{equation}
 
 A quadratic total uncertainty $\sigma_{tot}$ is calculated by combining the larger uncertainties in statistics and systematics:
@@ -833,7 +832,7 @@ Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given
  
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=12cm]{ESfluxCompare.png}
+	\includegraphics[width=14cm]{ESfluxCompare.png}
 	\caption[A comparison of the ES flux measured recently by three independent experiments.]{A comparison of the ES fluxes measured recently by three independent experiments: SNO+ 2018 published data (SNO+ 2018) \cite{anderson2019measurement}, Super-K phase-IV measurement (Super-K IV) and the combined four phases measurement (Super-K combined) \cite{abe2016solar}, and the Borexino measurements published in 2020 (Borexino 2020) \cite{agostini2020improved}. The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded band is for the unconstrained average value and uncertainty of all the results: $\hat \theta \pm 1\sigma_{\hat \theta}$.\label{fig:ESfluxCompare}}
 \end{figure}
 
