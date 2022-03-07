@@ -320,8 +320,8 @@ Fig.~\ref{TMVA_bkgs_1} shows the energy spectrum of simulated internal events wi
 	\caption[Energy spectrum of events from different simulations.]{Energy spectrum of events from different simulations in the half-dataset: $^{214}$Bi (black), $^{208}$Tl (blue) and solar $\nu_e$ (orange). Solid lines show the internal events and dotted lines show the AV events.	\label{TMVA_bkgs_1}}
 
 \end{figure}
-
-From the simulations of the half-dataset, runs from run 200004 to 202516 were taken as the training set (about 67 live days and 72.4\% of the half-dataset), and the balance (run 202517 to 203602, 27.6\%) were taken as the testing set \footnote{For a more unbiased analysis, a bootstrap method \cite{murphy2012machine} that randomly separates the training and testing datasets can be used, but it was not applied here.}. The machine learning algorithms in the TMVA train the weights of the input variables by using the training set, while they apply the trained weights to the testing set for validations of the signal-background separation. Once the weights of the input variables were obtained, they were applied to the actual data. Three ranges of $E_{fit}$ were tested: $4<E_{fit}<15$ MeV, $5<E_{fit}<15$ MeV ($E>5$ MeV region), and $4<E_{fit}<5$ MeV (low energy region). Table~\ref{tab:signalToBkg_tmva} lists the ratios of the signal event count ($N_{sig}$) to the background event count ($N_{bkg}$) for the different energy regions, after application of these beforehand cuts. In the low energy region $4<E_{fit}<5$ MeV background events are dominant, while for  $E_{fit}>5$ MeV background events are significantly reduced.
+%%%% Jie
+From the simulations of the half-dataset, about 70\% of the events were randomly selected as the training dataset, while the balance were randomly selected as the test dataset. The machine learning algorithms in the TMVA train the weights of the input variables by using the training set, while they apply the trained weights to the testing set for validations of the signal-background separation. Once the weights of the input variables were obtained, they were applied to the actual data. Three ranges of $E_{fit}$ were tested: $4<E_{fit}<15$ MeV, $5<E_{fit}<15$ MeV ($E>5$ MeV region), and $4<E_{fit}<5$ MeV (low energy region). Table~\ref{tab:signalToBkg_tmva} lists the ratios of the signal event count ($N_{sig}$) to the background event count ($N_{bkg}$) for the different energy regions, after application of these beforehand cuts. In the low energy region $4<E_{fit}<5$ MeV background events are dominant, while for  $E_{fit}>5$ MeV background events are significantly reduced.
 
 \begin{table}[ht]
 	\centering
@@ -355,7 +355,7 @@ Considering both the CPU time and machine learning performances, the settings in
 
 The MLP method was set with: (1) using sigmoid function as the activate function; and (2) using neural networks with 4 hidden layers and 200 training cycles. Detailed descriptions of these settings can be found in Ref.~\cite{albertsson2007tmva}.
 
-Eight variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$ and $\vec{u}\cdot \vec{R'}$. Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant: NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
+Eight variables were used as the TMVA inputs: ITR, $\beta_{14}$, $E_{fit}$, $G_{test}$, $U_{test}$, $scaleLogL$, $Z_{factor}$ and $\vec{u}\cdot \vec{R}$. Among them, the beforehand cuts had been applied to the ITR and $\beta_{14}$, and the $E_{fit}$ had been selected for different regions, as mentioned previously. NHits and $\theta_{ij}$ were not used for they are considered redundant: NHits is correlated with the event energy, while $\theta_{ij}$ is anticorrelated with $\beta_{14}$. 
 
 Using the $4<E<15$ MeV training dataset as an example, the distributions of these variables are shown in Fig.~\ref{fig:inputParamsTMVA}. The differences in distributions between the signal inputs (black solid lines) and background inputs (red dotted lines) can be observed.
 
@@ -506,12 +506,12 @@ The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance
 
 \subsection{TMVA Outputs}\label{sect:tmvaOutput}
 
-The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 80.8\% of the total data as background events while the MLP classifies about 76.17\% as background. Rather flat distributions for $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region, the analyses to follow will focus only on the $5<E<15$ MeV region.
+The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 68.39\% of the total data as background events while the MLP classifies about 65.08\% as background. Rather flat distributions for $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region   \footnote{Applying the likelihood fit described in Sect.~\ref{sect:poisson_fit} , the analyses to follow will focus only on the $5<E<15$ MeV region to the MLP selected signal histogram of the half-dataset, it gives a signal rate of $1.224\pm0.1829$ event/(kt$\cdot$day) and a background rate of $3.986\pm0.2764$ event/(kt$\cdot$day).}.
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=10cm]{cosThetaToSun_4to15_output.pdf}
-	\caption[BDT and MLP outputs for the $\cos\theta_\mathrm{sun}$ ($4<E_{fit}<15$ MeV).]{BDT and MLP outputs for $\cos\theta_\mathrm{sun}$, in the $4<E_{fit}<15$ MeV energy range. The solid red line shows the BDT-selected candidate solar $\nu_e$ events, while the blue shaded histogram shows the MLP-selected ones. The dotted red line is for BDT-selected backgrounds, while the solid blue line is for the MLP-selected backgrounds.\label{fig:cosThetaToSun_4to15_output}}
+	\includegraphics[width=10cm]{cosThetaToSun_E4to15_output.pdf}
+	\caption[BDT and MLP outputs for the $\cos\theta_\mathrm{sun}$ ($4<E_{fit}<15$ MeV).]{MLP and BDT outputs for $\cos\theta_\mathrm{sun}$, in the $4<E_{fit}<15$ MeV energy range. The blue shaded histogram shows the MLP-selected candidate solar $\nu_e$ events, while the solid red line shows the BDT-selected ones. The dashed blue line is for the MLP-selected backgrounds, while the dotted red line is for BDT-selected backgrounds.\label{fig:cosThetaToSun_4to15_output}}
 \end{figure}
 
 To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensemble} were used. Fig.~\ref{fig:BDToutputs} shows the MLP output distributions of the $\cos\theta_\mathrm{sun}$ for one random fake dataset, for event energy range $5<E_{fit}<15$ MeV. The output after the default cuts is also shown here as a comparison. For this fake dataset, the true number of signal and background events are: $N^\mathrm{true}_{sig}=68$ and $N^\mathrm{true}_{bkg}=46$, while the MLP outputs are $N^\mathrm{MLP}_{sig}=70$ and $N^\mathrm{MLP}_{bkg}=44$. Then the selection ratios of the MLP-selected event count to the true event count are $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=1.029$  for signal and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=0.9565$ for background.
@@ -524,7 +524,7 @@ To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensembl
 	\caption[MLP outputs from one random fake dataset ($5<E_{fit}<15$ MeV).]{MLP outputs from one random fake dataset, with $5<E_{fit}<15$ MeV. The dashed black line and the shaded red histogram are for the true signal and background events, respectively; the solid black line and the solid red line are for the MLP output of the signal and background events, respectively. Finally, the results after the default cuts are shown in the blue shaded area.\label{fig:BDToutputs}}
 \end{figure}
 
-As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA MLP and BDT selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the BDT case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, a scale ratio of 1.031 (0.9296) was applied to scale up (down) the MC simulated solar $\nu_e$ MC histograms. The scaled histograms were used to evaluate the systematics in solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
+As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA MLP and BDT selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the BDT case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, a scale ratio of 1.031 (0.9296) was applied to scale up (down) the MC simulated solar $\nu_e$ MC histograms. The scaled histograms were used to evaluate the systematics in evaluating the solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
 
 \begin{figure}[htbp]
 	\centering
@@ -567,8 +567,6 @@ To evaluate the differences of the TMVA selection between the data and MC, the d
 %		\bottomrule
 %	\end{tabular*}
 %\end{table}
-
-
 
 \subsection{Discussions of TMVA Results}\label{sect:TMVAdiscussion}
 
@@ -657,7 +655,7 @@ In the region of $5<E_{fit}<15$~MeV, the outputs from the MLP and BDT were fitte
 		\hline
 		BDT & 124.1 $\pm$ 12.15 & 39.94 $\pm$ 7.966 & 0.9381 $\pm$ 0.09186 & 0.3020 $\pm$ 0.06024 & 0.1417\\
 		MLP & 126.1 $\pm$ 12.23 & 40.94 $\pm$ 8.022 & 0.9532 $\pm$ 0.09245  & 0.3096 $\pm$ 0.06066  & 0.1179\\
-		Default & 119.33 $\pm$ 11.96 & 42.67 $\pm$ 8.15 &  0.90 $\pm$ 0.09 & 0.32 $\pm$ 0.06 & 0.19\\
+		Default & 119.3 $\pm$ 11.96 & 42.67 $\pm$ 8.15 &  0.90 $\pm$ 0.09 & 0.32 $\pm$ 0.06 & 0.19\\
 		\bottomrule
 	\end{tabular*}
 }
@@ -678,7 +676,7 @@ Approximation) was implemented in \texttt{RAT} \cite{fady_pselmaa}. The software
 
 In order to enlarge the MC datasets for analysis, the MC simulations of solar neutrinos were produced much larger than the expected numbers. The number of simulated solar $\nu_e$ events is 1700 times the nominal ($\mathrm{flux~scale} = \frac{1}{1700}$); while the number of solar $\nu_\mu$ events is 9600 times the nominal ($\mathrm{flux~scale}=\frac{1}{9600}$). The two $\mathrm{flux~scale}$ factors are prescribed according to the ratio of the ES cross-sections: $\sigma^{ES}(\nu_{e}+e^-)/\sigma^{ES}(\nu_{\mu,\tau}+e^-)\approx 6.5$, as mentioned in Sect.~\ref{sect:NuEStheory}. A nominal $^8$B solar $\nu_e$ flux $\Phi^{total}_{MC}=5.46\times 10^6$~cm$^{-2}$s$^{-1}$ from the SSM prediction (see Refs.~\cite{pdg2020,vinyoles2017new}) is used by the simulation.
 
-Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ by detecting the elastic scattering events, $\nu_\tau$ is not generated separately \cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC simulated histograms: $f_\mathrm{live~time}=\frac{t_\mathrm{data~live~time}}{t_\mathrm{MC~run~time}}=\frac{190.33~days}{198.17~days} = 0.96$. Similarly, assuming a sacrifice of 1.2\% from the data cleaning cuts on the data\footnote{This sacrifice was determined by the collaboration in 2017 \cite{waterunidoc,morganDataClean} and was used in Refs.~\cite{kaptanoglu2020reactor,marzec2019measurement}. However, this value needs to be updated in the future. See Ref.~\cite{dianaDataClean1} for details.}, a scale factor $f_\mathrm{dataClean}=(1-\frac{1.2}{100})=0.988$ was applied to the MC histograms. In addition, the fractional acceptance ($R_{accept}$) values discussed in Sect.~\ref{sect:tmvaOutput} were applied to scale the simulated solar $\nu_e$ and $\nu_\mu$ histograms: the solar $\nu_e$ ($\nu_\mu$) MC histograms were scaled by the factor 0.9867 (0.9896) for the MLP selection and 1.002 (0.9994) for the BDT selection. Accordingly the numbers of MC-generated $\nu_e$ and $\nu_\mu$ events are scaled by $f_\mathrm{live\, time}$, $\mathrm{flux~scale}$ and $R_{accept}$, then weighted by the oscillation probabilities $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the MLP selections to the MC histograms, the MC $\cos\theta_\mathrm{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV are shown (with and without oscillations) in Fig.~\ref{fig:MCfluxPdfs}.
+Since it is impossible for the SNO+ detector to discriminate between $\nu_\mu$ and $\nu_\tau$ by detecting the elastic scattering events, $\nu_\tau$ is not generated separately \cite{marzec2019measurement}. Therefore, the generated solar $\nu_\mu$ events are considered as a combination of $\nu_\mu$ and $\nu_\tau$ ($\nu_\mu\approx\nu_{\mu,\tau}$) in the solar neutrino flux. In addition, due to the data cleaning procedure, the actual live time of the data is slightly shorter than the raw live time used by the MC simulations. To compare the MC with the data, a live time fraction was applied to the MC simulated histograms: $f_\mathrm{live~time}=\frac{t_\mathrm{data~live~time}}{t_\mathrm{MC~run~time}}=\frac{190.33~\mathrm{days}}{198.17~\mathrm{days}} = 0.96$. Similarly, assuming a sacrifice of 1.2\% from the data cleaning cuts on the data\footnote{This sacrifice was determined by the collaboration in 2017 \cite{waterunidoc,morganDataClean} and was used in Refs.~\cite{kaptanoglu2020reactor,marzec2019measurement}. However, this value needs to be updated in the future. See Ref.~\cite{dianaDataClean1} for details.}, a scale factor $f_\mathrm{dataClean}=(1-\frac{1.2}{100})=0.988$ was applied to the MC histograms. In addition, the fractional acceptance ($R_{accept}$) values discussed in Sect.~\ref{sect:tmvaOutput} were applied to scale the simulated solar $\nu_e$ and $\nu_\mu$ histograms: the solar $\nu_e$ ($\nu_\mu$) MC histograms were scaled by the factor 0.9867 (0.9896) for the MLP selection and 1.002 (0.9994) for the BDT selection. Accordingly the numbers of MC-generated $\nu_e$ and $\nu_\mu$ events are scaled by $f_\mathrm{live\, time}$, $\mathrm{flux~scale}$ and $R_{accept}$, then weighted by the oscillation probabilities $P_{ee}$ and $P_{e\alpha}=1-P_{ee}$. Applying these weighting parameters as well as the MLP selections to the MC histograms, the MC $\cos\theta_\mathrm{sun}$ distributions in the energy region $5<E_{fit}<15$ MeV are shown (with and without oscillations) in Fig.~\ref{fig:MCfluxPdfs}.
 
 \begin{figure}[!htb]
 	\centering
@@ -714,7 +712,7 @@ With the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}$, the estimated to
 
 and the estimated elastic scattering flux is:
 \begin{equation}
-\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.099\pm 0.2035(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
+\Phi^{ES}=f^{ES}_s\cdot \Phi^{total}_{MC}=(2.10\pm 0.204(stat.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
 \end{equation}
 
 The next section will evaluate the systematic uncertainties of the flux fractions.
@@ -812,18 +810,18 @@ Applying the systematic transformation in Table~\ref{tab:solar_uncertainties} to
 	\end{tabular*}
 \end{table}
 
-Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.2999}_{-0.1370}$. Using the same procedure to evaluate the systematics of the elastic scattering flux fraction $f^{ES}_s$ gives $({f^{ES}_s})^{+}_{-0.008324}$.
+Using the quadrature sum ($\sigma^2_{tot}=\sum_i \sigma^2_i$) which assumes that all the systematic variables are independent, the total systematic uncertainty of the total flux fraction $f^{tot}_s$ is expected to be: $({f^{tot}_s})^{+0.2999}_{-0.1370}$. Using the same procedure to evaluate the systematics of the elastic scattering flux fraction $f^{ES}_s$ gives $({f^{ES}_s})^{+0.1695}_{-0.008324}$.
 
 
 \subsection{Summary of Results}\label{sect:solarESresults}
 
 With the systematic uncertainties of the flux fractions obtained from the previous section, the total flux is:
 \begin{equation}
-{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.459(stat.)^{+0.126}_{-0.105}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}}\; ,
+{\Phi^{total}_{fit}(\mathrm{^8 B})=f_s\cdot \Phi^{total}_{MC}=(4.62\pm 0.447(stat.)^{+0.126}_{-0.105}(syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}}\; ,
 \end{equation}
 while the ES flux is:
 \begin{equation}
-\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.07\pm 0.206(stat.)^{+0.0528}_{-0.0455} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
+\Phi_{\mathrm{ES}}=f_s\cdot \Phi^{total}_{MC}=(2.10\pm 0.204(stat.)^{+0.0528}_{-0.0455} (syst.))\times 10^6~\mathrm{cm^{-2}s^{-1}}\; .
 \end{equation}
 
 A quadratic total uncertainty $\sigma_{tot}$ is calculated by combining the larger uncertainties in statistics and systematics:

@@ -2,8 +2,8 @@
 \contentsline {chapter}{Preface}{iv}{chapter*.2}%
 \contentsline {chapter}{Acknowledgements}{vi}{chapter*.3}%
 \contentsline {chapter}{Contents}{viii}{chapter*.3}%
-\contentsline {chapter}{List of Figures}{xii}{chapter*.4}%
-\contentsline {chapter}{List of Tables}{xviii}{chapter*.5}%
+\contentsline {chapter}{List of Figures}{xiii}{chapter*.4}%
+\contentsline {chapter}{List of Tables}{xix}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Neutrino physics}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Overview}{4}{section.2.1}%
@@ -98,22 +98,23 @@
 \contentsline {subsection}{\numberline {6.3.1}Maximum Likelihood Fit}{158}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{159}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{161}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}TMVA Outputs}{169}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{173}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.4}TMVA Outputs}{170}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{172}{subsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.3.6}Fitting Whole Low Background Dataset}{175}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{175}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{176}{subsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.3.8}Systematics Evaluation}{180}{subsection.6.3.8}%
 \contentsline {subsection}{\numberline {6.3.9}Summary of Results}{184}{subsection.6.3.9}%
-\contentsline {subsection}{\numberline {6.3.10}Limitations of this Study}{185}{subsection.6.3.10}%
-\contentsline {chapter}{\numberline {7}Conclusions}{187}{chapter.7}%
-\contentsline {chapter}{\numberline {A}Details for the Multi-Path Fitter}{189}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Create a Random Vertex}{189}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{190}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{193}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{194}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{195}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{195}{section.A.6}%
-\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{200}{appendix.B}%
-\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{200}{section.B.1}%
-\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{206}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{206}{section.C.1}%
+\contentsline {subsection}{\numberline {6.3.10}Limitations of this Study}{186}{subsection.6.3.10}%
+\contentsline {chapter}{\numberline {7}Conclusions}{188}{chapter.7}%
+\contentsline {chapter}{Bibliography}{190}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Details for the Multi-Path Fitter}{209}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Create a Random Vertex}{209}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Levenberg-Marquardt Method}{210}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Calculations of Derivatives of Likelihood Functions}{213}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Inversion of Hessian Matrix}{214}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Likelihood Surfaces}{215}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Detailed Light Path Calculations in the Partial Fitter}{215}{section.A.6}%
+\contentsline {chapter}{\numberline {B}Information for $^{16}$N Scan Runs}{220}{appendix.B}%
+\contentsline {section}{\numberline {B.1}$^{16}$N Source Positions in the Scan Runs}{220}{section.B.1}%
+\contentsline {chapter}{\numberline {C}Bi-Po Analysis}{226}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Uranium chain and Bi-Po Analysis}{226}{section.C.1}%

@@ -541,8 +541,8 @@
 %	{\end{orig@abstract}}
 
 \newenvironment{thesisabstract}
-	{\chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}}
-	{\clearpage}
+{\chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}}
+{\clearpage}
 
 %%%%% Preface
 \newenvironment{preface}
@@ -551,8 +551,8 @@
 
 \newcommand{\ackname}{Acknowledgements}
 \newenvironment{acknowledgements}
-	{\chapter*{\ackname}\addcontentsline{toc}{chapter}{\ackname}}
-	{\clearpage}
+{\chapter*{\ackname}\addcontentsline{toc}{chapter}{\ackname}}
+{\clearpage}
 
 %% CHAPTER
 
