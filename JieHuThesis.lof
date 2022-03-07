@@ -184,32 +184,32 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{168}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{168}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{168}{figure.6.11}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces MLP cut efficiency, with $5<E_{fit}<15$ MeV.}}{170}{figure.6.12}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces BDT cut efficiency, with $5<E_{fit}<15$ MeV.}}{170}{figure.6.13}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces BDT cut efficiency, with $5<E_{fit}<15$ MeV.}}{170}{figure.6.12}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces MLP cut efficiency, with $5<E_{fit}<15$ MeV.}}{170}{figure.6.13}%
 \contentsline {figure}{\numberline {6.14}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$ ($4<E_{fit}<15$ MeV).}}{171}{figure.6.14}%
 \contentsline {figure}{\numberline {6.15}{\ignorespaces MLP outputs from one random fake dataset ($5<E_{fit}<15$ MeV).}}{172}{figure.6.15}%
 \contentsline {figure}{\numberline {6.16}{\ignorespaces Event count ratios from TMVA outputs on 5000 fake datasets.}}{173}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{173}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{173}{figure.6.16}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces The distributions of six variables from the simulated internal and external $^{208}$Tl backgrounds.}}{174}{figure.6.17}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{174}{figure.6.17}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta _{14}$}}}{174}{figure.6.17}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{174}{figure.6.17}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$U_{test}$}}}{174}{figure.6.17}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$Z_{factor}$}}}{174}{figure.6.17}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV range.}}{176}{figure.6.18}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{176}{figure.6.18}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{176}{figure.6.18}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{176}{figure.6.18}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{177}{figure.6.19}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations after the MLP selections ($5<E_{fit}<15$ MeV).}}{178}{figure.6.20}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces A fit on the total $^8$B flux.}}{179}{figure.6.21}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{180}{figure.6.22}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{183}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{183}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{183}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{183}{figure.6.23}%
-\contentsline {figure}{\numberline {6.24}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{185}{figure.6.24}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces The distributions of six variables from the simulated internal and external $^{208}$Tl backgrounds.}}{175}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{175}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta _{14}$}}}{175}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{175}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$U_{test}$}}}{175}{figure.6.17}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$Z_{factor}$}}}{175}{figure.6.17}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Poisson fit results for the $5<E_{fit}<15$\nobreakspace {}MeV range.}}{177}{figure.6.18}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{177}{figure.6.18}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{177}{figure.6.18}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Default cuts.}}}{177}{figure.6.18}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{178}{figure.6.19}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations after the MLP selections ($5<E_{fit}<15$ MeV).}}{179}{figure.6.20}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces A fit on the total $^8$B flux.}}{180}{figure.6.21}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{181}{figure.6.22}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{184}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{184}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{184}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{184}{figure.6.23}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{186}{figure.6.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on planes.}}{216}{figure.A.1}%
