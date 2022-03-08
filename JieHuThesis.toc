@@ -97,7 +97,7 @@
 \contentsline {section}{\numberline {6.3}Likelihood Fits for Solar Neutrino Candidate Events}{157}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Maximum Likelihood Fit}{158}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{159}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{161}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{163}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}TMVA Outputs}{169}{subsection.6.3.4}%
 \contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{172}{subsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.3.6}Fitting Whole Low Background Dataset}{174}{subsection.6.3.6}%
