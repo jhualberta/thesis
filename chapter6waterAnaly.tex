@@ -15,14 +15,14 @@ The outputs from the data were fitted to obtain the number of signal events and 
 
 \subsection{Internal backgrounds}
 
-Most background events are due to natural radioactive isotopes inside or around the detector, such as isotopes in the detection medium, detector walls, ropes, the PMTs, and the other materials. The major isotopes in the water phase are: $^{238}$U, $^{232}$Th, $^{40}$K, and $^{222}$Rn. These have been monitored by \emph{in-situ} and \emph{ex-situ} measurements and analyses. 
+Most background events are due to natural radioactive isotopes inside or around the detector, such as isotopes in the detection medium, detector walls, ropes, the PMTs, and the other materials. The major isotopes in the water phase are: $^{238}$U, $^{232}$Th, $^{40}$K, and $^{222}$Rn. These have been monitored by \emph{in-situ} and \emph{ex-situ} measurements and analyses \cite{snop_jinst,waterunidoc}. 
 
 The ubiquitous $^{238}$U and $^{232}$Th isotopes decay sequentially and form decay chains. 
 The target levels in the SNO+ water phase are $3.5\times 10^{-14}$ gram $^{238}$U in per gram water (gU/gH$_2$O) and $3.5\times 10^{-14}$ gTh/gH$_2$O \cite{waterunidoc}. The rates of the background events caused by the decays from specific isotopes, especially the $\beta$-decays of $^{214}$Bi (from the $^{238}$U decay chain) and $^{208}$Tl (from the $^{232}$Th decay chain), were carefully calculated and were put into the simulations. In this chapter, the simulated background events from the $^{214}$Bi and the $^{208}$Tl $\beta$-decays were used to develop a multivariable analysis to select (discriminate) solar neutrino events from the background events.
 
 \subsection{External backgrounds}
 
-As mentioned in Sect.~\ref{sect:overview}, due to the great depth of the SNO+ detector underground, the event rate of cosmogenic backgrounds induced by cosmic muons is low. Nevertheless, there certainly are some muon events and muon-induced events. There are also instrumental backgrounds, such as the flashers from the PMTs, noise from PMT channels, etc. In order to remove these external backgrounds, a set of data cleaning cuts are applied to the actual data by using the analysis mask. In the following analyses, the data cleaning cuts were always applied to the actual data.
+As mentioned in Sect.~\ref{sect:overview}, due to the great depth of the SNO+ detector underground, the event rate of cosmogenic backgrounds induced by cosmic muons is low. Nevertheless, there certainly are some muon events and muon-induced events. There are also instrumental backgrounds, such as the flashers from the PMTs, noise from PMT channels, etc. In order to remove these external backgrounds, a set of data cleaning cuts are applied to the actual data by using the analysis mask \cite{dataCleanDoc}. In the following analyses, the data cleaning cuts were always applied to the actual data.
 
 %\section{Solar \texorpdfstring{$\nu_e$}{Lg} Analysis and Background Separation in Water Phase}
 \section{Solar Neutrino Analysis in Open Dataset}
@@ -50,16 +50,16 @@ were applied to the data (as mentioned in Sect.~\ref{sect:high_level_cuts}). The
 		\toprule
 		Fitter &	Run &  GTID &  $z-0.108$(m) & $R$(m)& $(R/R_{av})^3$ & $\cos\theta_\mathrm{sun}$ & SNO+ Day\\
 		\hline 
-		Rat & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954 &2683.92 \\	
-		MPW &  --& --& 3.43 &	3.52 &	0.20	& -0.906 & --\\
-		Rat &	100207 &5079885 &-2.61 &4.60 &0.45 &0.816 &2687.04\\
-		MPW &	 --& --& -3.63 & \textbf{7.61} &	2.03 & \textbf{0.656} & -- \\
-		Rat &100632 &7882360 &1.77 &3.19 &0.15 &0.937 &2696.93\\
-		MPW &    --& --&  1.67 & 3.11 &	0.14 & 0.911 & -- \\
-		Rat &100663 &15767175 &-4.33& 4.96 &0.56 &0.978 &2698.18\\
-		MPW & --& -- &-4.45 &	5.07 &	0.60 &	0.980 & -- \\
-		Rat &100915 &169700 &-1.00 &5.10 &0.61 &0.341 &2701.23\\
-		MPW &	--& --& -1.08 &	5.08 &	0.61 &	0.337 & -- \\	
+		\texttt{RAT} & 100093 &11108354 &3.49 &3.57 &0.21 &-0.954 &2683.92 \\	
+		\texttt{MPW} &  --& --& 3.43 &	3.52 &	0.20	& -0.906 & --\\
+		\texttt{RAT} &	100207 &5079885 &-2.61 &4.60 &0.45 &0.816 &2687.04\\
+		\texttt{MPW} &	 --& --& -3.63 & \textbf{7.61} &	2.03 & \textbf{0.656} & -- \\
+		\texttt{RAT} &100632 &7882360 &1.77 &3.19 &0.15 &0.937 &2696.93\\
+		\texttt{MPW} &    --& --&  1.67 & 3.11 &	0.14 & 0.911 & -- \\
+		\texttt{RAT} &100663 &15767175 &-4.33& 4.96 &0.56 &0.978 &2698.18\\
+		\texttt{MPW} & --& -- &-4.45 &	5.07 &	0.60 &	0.980 & -- \\
+		\texttt{RAT} &100915 &169700 &-1.00 &5.10 &0.61 &0.341 &2701.23\\
+		\texttt{MPW} &	--& --& -1.08 &	5.08 &	0.61 &	0.337 & -- \\	
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -81,7 +81,7 @@ were applied to the data (as mentioned in Sect.~\ref{sect:high_level_cuts}). The
 	\end{tabular*}
 \end{table}
 
-Firstly, all of the solar neutrino candidate events found by the \texttt{Rat water fitter} were refitted by the \texttt{MPW fitter}. The results are compared in Table~\ref{tab:opendataCompare}. For each event, their hit PMT distributions, as well as the reconstructed positions and directions from the two fitters, are compared in Fig.~\ref{fig:openDataSetCandidate}. 
+Firstly, all of the solar neutrino candidate events found by the \texttt{RAT water fitter} were refitted by the \texttt{MPW fitter}. The results are compared in Table~\ref{tab:opendataCompare}. For each event, their hit PMT distributions, as well as the reconstructed positions and directions from the two fitters, are compared in Fig.~\ref{fig:openDataSetCandidate}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -121,10 +121,10 @@ Firstly, all of the solar neutrino candidate events found by the \texttt{Rat wat
 			{\includegraphics[width=5cm]{solarLegends.png}}
 		\end{minipage}
 	}
-	\caption[Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.]{Reconstruction results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the \texttt{Rat water fitter}; red open star stands for the direction fitted by the \texttt{MPW fitter}; full double diamond stands for the solar direction times -1; blue full square stands for the event position fitted by the \texttt{Rat water fitter}; open square stands for the position fitted by the \texttt{MPW fitter}.	\label{fig:openDataSetCandidate}}
+	\caption[Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.]{Reconstruction results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the \texttt{RAT water fitter}; red open star stands for the direction fitted by the \texttt{MPW fitter}; full double diamond stands for the solar direction times -1; blue full square stands for the event position fitted by the \texttt{RAT water fitter}; open square stands for the position fitted by the \texttt{MPW fitter}.	\label{fig:openDataSetCandidate}}
 \end{figure}
 
-From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) it can be seen that, for the candidate events, the results from the \texttt{MPW} are largely consistent with those from \texttt{RAT}, although (not apparent from the figure) the \texttt{MPW} fitter disfavored one event in run 100207 (with GTID=5079885), placing its position outside the AV, and the $\cos\theta_\mathrm{sun}$ becomes smaller and is further away from +1. For this event, the $posFoM$ of the \texttt{RAT} position fitter is $scaleLogL=10.41$, while the \texttt{MPW} is $scaleLogL=11.60$, both for 35 selected PMTs ($\mathrm{NHits_{selected}}=35$). So for this event, the \texttt{MPW} fitter has a better position reconstruction quality than the \texttt{RAT}.
+From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) it can be seen that, for the candidate events, the results from the \texttt{MPW} are largely consistent with those from \texttt{RAT}, although (not apparent from the figure) the \texttt{MPW} fitter disfavored one event in run 100207 (with GTID=5079885), placing its position outside the AV, and the $\cos\theta_\mathrm{sun}$ value becomes smaller and is further away from +1. For this event, the $posFoM$ quantity, $scaleLogL$ can be compared to evaluate the position reconstruction quality. Since the \texttt{RAT} fitter returned $scaleLogL=10.41$ while the \texttt{MPW} returned $scaleLogL=11.60$ (both for 35 selected PMTs, $\mathrm{NHits_{selected}}=35$), for this event the \texttt{MPW} fitter has a better position reconstruction quality than the \texttt{RAT}.
 
 In addition to refitting the candidate events found by the \texttt{RAT}, the \texttt{MPW} fitter can be (and was) used directly to search for candidate events, with the result shown in Table~\ref{tab:opendataMPW}. Evidently, the \texttt{MPW} fitter obtained a different set of candidate events, albeit overlapping with the set provided by the \texttt{RAT} fitter, and so it provides an alternative analysis of the solar neutrinos.
 % Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
@@ -144,18 +144,18 @@ Here $\mathrm{NHits}>20$ is a reconstruction threshold set for the solar neutrin
 \begin{equation*}
 R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}\;, 
 \end{equation*}
-(the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4.). The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
+where the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
 
 \subsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
 
 To prepare for the fit, the values of the solar angle, $\cos\theta_\mathrm{sun}$ from the data were filled into a histogram covering a range of [-1,1] with 40 bins. For each bin, the observed event count ($n_{obs}$) was considered as a sum of solar $\nu_e$ and background events. The count in each bin was assumed to follow a Poisson distribution: $Poisson(n_{obs}, N_{bkg} \, P_{bkg}+N_{sig} \, P_{ES}(E))$, where $P_{bkg}$ and $P_{ES}(E)$ are the assumed distributions of background events and solar $\nu_e$ events respectively.
 
-For background events, a uniform distribution of $\cos\theta_\mathrm{sun}$ was assumed. On the other hand, $\cos\theta_\mathrm{sun}$ distributions for solar $\nu_e$ events were extracted from the realistic run simulations after applying the beforehand cuts, as shown in Fig.~\ref{solarPDF}. 
+For background events, a uniform distribution of $\cos\theta_\mathrm{sun}$ was assumed. On the other hand, $\cos\theta_\mathrm{sun}$ distributions for solar $\nu_e$ events were extracted from the realistic run simulations after applying the beforehand cuts, as shown in Fig.~\ref{solarPDF}. The histogram is scaled (so as to have an integral of 1) to obtain a probability density function (PDF).
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{solarPDF.pdf}
-	\caption[The $\cos\theta_\mathrm{sun}$ distribution of solar $\nu_e$ used as a PDF function.]{The $\cos\theta_\mathrm{sun}$ distribution for solar $\nu_e$ events extracted from the simulations, which is scaled (so as to have an integral of 1) to obtain a probability density function.\label{solarPDF}}
+	\caption[The $\cos\theta_\mathrm{sun}$ distribution of solar $\nu_e$ used as a PDF function.]{The $\cos\theta_\mathrm{sun}$ distribution for solar $\nu_e$ events extracted from the simulations. It is used as a PDF function.\label{solarPDF}}
 \end{figure}
 
 Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as the free parameters for fitting, the maximum likelihood function was built as \cite{pdg2020}:
@@ -273,7 +273,7 @@ p=\int_{-2\ln L^{i}_{best}}^{-2\ln L^{max}_{best}}f({-2\ln L_{best}}) \; d(-2\ln
 
 \subsection{Signal-background Discrimination Based on TMVA}\label{sect:tmva}
 
-To further reduce the background events, in addition to the ``beforehand'' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration \footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{Rat water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
+To further reduce the background events, in addition to the ``beforehand'' cuts mentioned in the previous section, the cuts applied on the position and energy FoMs, as well as the $klDiv$, were also considered here. The FoM cuts suggested by the collaboration \footnote{These cuts are mainly based on the $^{16}$N analyses. Suggested by the collaboration, there is also a cut on the quantity of position error calculated by the \texttt{RAT water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
 \begin{itemize}
     \item $-11<Z_{factor}<1$\;, 
     \item $scaleLogL>10.85$\;,
