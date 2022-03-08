@@ -155,7 +155,7 @@ For background events, a uniform distribution of $\cos\theta_\mathrm{sun}$ was a
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=8cm]{solarPDF.pdf}
-	\caption[The $\cos\theta_\mathrm{sun}$ distribution of solar $\nu_e$ used as a PDF function.]{The $\cos\theta_\mathrm{sun}$ distribution for solar $\nu_e$ events extracted from the simulations. It is used as a PDF function.\label{solarPDF}}
+	\caption[The $\cos\theta_\mathrm{sun}$ distribution of solar $\nu_e$ used as a PDF function.]{The $\cos\theta_\mathrm{sun}$ distribution for solar $\nu_e$ events extracted from the simulations. It is scaled and used as a PDF function.\label{solarPDF}}
 \end{figure}
 
 Adding up each bin $i$ and taking $N_{bkg}$ and $N_{sig}$ as the free parameters for fitting, the maximum likelihood function was built as \cite{pdg2020}:
@@ -305,7 +305,7 @@ p=\int_{-2\ln \mathcal{L}^{i}_{best}}^{-2\ln \mathcal{L}^{max}_{best}}f({-2\ln \
 
 \subsection{Signal-background Discrimination Based on TMVA}\label{sect:tmva}
 
-To further reduce the background events, in addition to the ``beforehand'' cuts mentioned in the previous section, the `` FoM cuts'' applied to the position and energy FoMs, as well as a ``u.R'' ($\vec{u}\cdot \vec{R}$) quantity, were also considered here. The $\vec{u}\cdot \vec{R}$ quantity calculates the inner product of the reconstructed event direction ($\vec{u}$) and the reconstructed position vector ($\vec{R}=(x,y,z)$). It is suggested by the collaboration for classifying the incoming and outgoing events, which is useful for identifying the external backgrounds, especially the PMT backgrounds with $\vec{u}\cdot \vec{R}$ close to -1 \cite{waterunidoc}.
+To further reduce the background events, in addition to the ``beforehand'' cuts mentioned in the previous section, the ``FoM cuts'' for the position and energy FoMs, as well as a ``u.R'' ($\vec{u}\cdot \vec{R}$) quantity, were also considered here. The $\vec{u}\cdot\vec{R}$ quantity is the inner product of the reconstructed event direction ($\vec{u}$) and the reconstructed position vector ($\vec{R}=(x,y,z)$). It is suggested by the collaboration for identifying the external backgrounds with $\vec{u}\cdot\vec{R}>0$, and the PMT backgrounds with $\vec{u}\cdot \vec{R}$ close to -1 \cite{waterunidoc}.
 
 The FoM cuts suggested by the collaboration \footnote{These cuts are mainly based on the $^{16}$N analyses. Also suggested by the collaboration, there is a cut on the quantity of position error calculated by the \texttt{RAT water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
 \begin{itemize}
@@ -508,7 +508,7 @@ The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance
 
 \subsection{TMVA Outputs}\label{sect:tmvaOutput}
 
-The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 68.39\% of the total data as background events while the MLP classifies about 65.08\% as background. Rather flat distributions for $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region \footnote{Applying the likelihood fit described in Sect.~\ref{sect:poisson_fit} and Sect.~\ref{sect:fitTheWhole}, the analyses to follow will focus only on the $5<E<15$ MeV region to the MLP selected signal histogram of the half-dataset, it gives a signal rate of $1.227\pm0.1268$ event/(kt$\cdot$day) and a background rate of $3.673\pm0.186$ event/(kt$\cdot$day), with a $p$-value of 0.311.}.
+The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 68.39\% of the total data as background events while the MLP classifies about 65.08\% as background. Rather flat distributions for $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region \footnote{Applying the likelihood fit described in Sect.~\ref{sect:poisson_fit} and Sect.~\ref{sect:fitTheWhole}, the analyses to follow will focus only on the $5<E<15$ MeV region to the MLP selected signal histogram of the half-dataset, it gives a signal rate of $1.227\pm0.1268$ event/(kilotonne$\cdot$day) and a background rate of $3.673\pm0.186$ event/(kilotonne$\cdot$day), with a $p$-value of 0.311.}.
 
 \begin{figure}[!htb]
 	\centering
@@ -617,9 +617,9 @@ Other multivariate analysis packages, such as \texttt{StatPatternRecognition} (S
 \subsection{Fitting Whole Low Background Dataset}\label{sect:fitTheWhole}
 To combine the analyses in the previous two sections, the TMVA selection methods were applied to the actual data of the 190.33 live-day whole dataset, and then a maximum likelihood fit was applied to the selected data. 
 
-For the whole dataset, the TMAV methods were applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations \footnote{The simulations of solar $\nu_{\mu}$ were also trained with the background simulations separately to calculate the detected $\nu_\mu$ from the oscillated solar neutrino flux mentioned in next section}. Similarly, the training subset used about 70\% of the total events randomly selected from the whole MC dataset, while the testing subset used the rest 30\%. The trained MLP and BDT weights were applied to the whole dataset.
+For the whole dataset, the TMAV methods were applied to the whole MC datasets of the solar $\nu_e$ simulations as well as the background simulations \footnote{The simulations of solar $\nu_{\mu}$ were trained with the background simulations separately to calculate the detected $\nu_\mu$ from the oscillated solar neutrino flux mentioned in next section}. Similarly, the training subset used about 70\% of the total events randomly selected from the whole MC dataset, while the testing subset used the rest 30\%. The trained MLP and BDT weights were applied to the whole dataset.
 
-In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitted to obtain $N_{sig}$ and $N_{bkg}$. Fig.~\ref{fig:wholeDataset_poissonFit:a} and \ref{fig:wholeDataset_poissonFit:b} show their results respectively. For comparison, the results from applying the default cuts are shown in Fig.~\ref{fig:wholeDataset_poissonFit:c}. The fit results are summarized in Table~\ref{table:wholedata_output}. 
+In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitted to obtain $N_{sig}$ and $N_{bkg}$. Fig.~\ref{fig:wholeDataset_poissonFit:a} and \ref{fig:wholeDataset_poissonFit:b} show their results respectively. For comparison, the results from applying the default cuts are shown in Fig.~\ref{fig:wholeDataset_poissonFit:c}. The fit results are summarized in Table~\ref{table:wholedata_output}. In the table, the number of events was converted to the event rate ($R$) by dividing the time duration (190.33 days) and the mass of the water target (0.69482 kilotonne for a 5.5-m fiducial volume). 
 %{John: try not to use "also" over and over as a way to give continuity}
 
 \begin{figure}[!htb]
@@ -648,11 +648,11 @@ In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitte
 \begin{table}[ht]
 	\small{
 	\centering
-	\caption{Fit results for the whole dataset ($5<E<15$~MeV).	\label{table:wholedata_output}}
+	\caption{Fit results for the whole dataset ($5<E<15$~MeV). Unit: $N$ event; $R$ event/(kt$\cdot$day). \label{table:wholedata_output}}
 	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccc}
 		\toprule
 		Methods & $N_{sig}$ & $N_{bkg}$ & $R_{sig}$ & $R_{bkg}$ & $p$-value\\
-		\hline
+		\midrule
 		BDT & 124.1 $\pm$ 12.15 & 39.94 $\pm$ 7.966 & 0.9381 $\pm$ 0.09186 & 0.3020 $\pm$ 0.06024 & 0.1417\\
 		MLP & 126.1 $\pm$ 12.23 & 40.94 $\pm$ 8.022 & 0.9532 $\pm$ 0.09245  & 0.3096 $\pm$ 0.06066  & 0.1179\\
 		Default & 118.9 $\pm$ 11.96 & 43.11 $\pm$ 8.207 & 0.8990 $\pm$ 0.09047 & 0.3260 $\pm$ 0.06206 & 0.1998\\
@@ -661,7 +661,7 @@ In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitte
 }
 \end{table}
 
-Results from the three methodologies are consistent with each other. The estimated background rate in the [5,15] MeV energy region is about $\frac{1}{3}$ of the signal rate, which indicates that a low background measurement is achieved for the solar neutrino analysis with the energy down to 5 MeV. For the sake of simplicity, since the output from the MLP selection gives a better $p$-value, the analyses to follow will use only the MLP selector. 
+Results from the three methodologies are consistent with each other. The estimated background rate in the [5,15] MeV energy region is about $\frac{1}{3}$ of the signal rate, which indicates that a low background measurement is achieved for the solar neutrino analysis with the energy down to 5 MeV. This energy threshold is lower than the $E>6$ MeV threshold used in the SNO+ previous measurements for the first stage water data (May 2017 to October 2018) \cite{anderson2019measurement}. For the sake of simplicity, since the output from the MLP selection gives a better $p$-value, the analyses to follow will use only the MLP selector. 
 
 \subsection{Evaluating $^8$B Solar Neutrino Flux}\label{sect:evaluateFlux}
 
@@ -727,7 +727,7 @@ In Chapter 5, the reconstruction systematics of the event position, direction, a
 	\begin{tabular*}{148mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
 		Systematics & values ($Q^+/Q^-$) & transformation   \\
-		\hline
+		\midrule
 		$x$ shift ($\Delta x^\pm$) & +6.48/-5.98 mm  & $x_{fit}+\Delta x^\pm$ \\	
 		$y$ shift ($\Delta y^\pm$)& +6.13/-4.11 mm   & $y_{fit}+\Delta y^\pm$ \\
 		$z$ shift ($\Delta z^\pm$)& +6.71/-4.82 mm   & $z_{fit}+\Delta z^\pm$ \\
@@ -791,7 +791,7 @@ Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, en
 	\begin{tabular*}{90mm}{c@{\extracolsep{\fill}}cc}
 		\toprule
 		Systematics & $\Delta f_s$ (+/-)\\
-		\hline
+		\midrule
 		$x$ shift & +0.00001800/-0.00006000\\	
 		$y$ shift & +0.00001500/-0.00004500\\
 		$z$ shift & +0.00009300/-0.0001580\\
@@ -830,7 +830,7 @@ A quadratic total uncertainty $\sigma_{tot}$ is calculated by combining the larg
 \end{equation}
 
 Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given here to recent measurements from SNO+ \cite{anderson2019measurement}, Super-K \cite{abe2016solar} and Borexino \cite{agostini2020improved}. The energy regions for the analyses, the start and end dates of the data-taking, and the live time are also shown in the figure.
- 
+
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=14cm]{ESfluxCompare.png}
@@ -857,7 +857,7 @@ The $\Phi_{ES}$ result from this thesis is combined with the SNO+ 2018 result an
 	\begin{tabular*}{100mm}{c@{\extracolsep{\fill}}cc}
 		\toprule
 		Combinations & $\Phi_{ES}$ ($\times 10^6$ cm$^{-2}$s$^{-1}$)\\
-		\hline
+		\midrule
 		 not including this work & $2.336 \pm 0.02880$\\
          this work and SNO+ 2018 & $2.264 \pm 0.2080$\\ 
          all & $2.333\pm0.02863$\\ 
