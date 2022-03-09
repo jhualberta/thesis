@@ -251,7 +251,7 @@ PMT selectors were developed to optimally select a set of hit PMTs for the recon
 
 \subsection{Position Figure of Merit}\label{sect:positionFoM}
 
-A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln \mathcal{L}/\mathrm{NHits}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
+A quantity called scaled $\log L$ ($scaleLogL$) is used as the position reconstruction figure of merit ($posFoM$): $scaleLogL = \ln \mathcal{L}/\mathrm{NHits}_\mathrm{selected}$. This quantity utilizes the best log-likelihood returned by the \texttt{MP fitter} (or the \texttt{RAT fitter}) for a successfully reconstructed event vertex, and then it is scaled by the ``selected'' NHits ($\mathrm{NHits}_\mathrm{selected}$), which is the number of the PMTs actually used by the fitter for the event vertex reconstruction, after the PMT selection mentioned in Sect.~\ref{sect:PMTselector}. This $posFoM$ quantity can remove a few mis-reconstruct events and thereby improve the results of the reconstruction.
 
 \subsection{Performance of the Water Vertex Reconstruction}\label{sect:waterFitterVertex}
 
@@ -365,7 +365,7 @@ where $P(\cos\theta_e)$ is the direction resolution function with the best fit p
 		\toprule 
 	    $\beta_M$ &  $\beta_S$ & $\cos\theta_{0.5}$ & $\cos\theta_{0.8}$& $\cos\theta_{0.9}$\\
         \midrule
-         4.47$\pm$0.12 & 21.54$\pm$0.91 & 0.978 & 0.777 & 0.624\\
+         $4.47\pm0.12$ & $21.54\pm0.91$ & 0.978 & 0.777 & 0.624\\
 		\bottomrule	
 	\end{tabular*}
 \end{table}
@@ -384,7 +384,7 @@ For analyzing the AmBe calibration data, reconstructing $\gamma$-events with ene
 	\caption{Reconstruction performances for the 2.2-MeV and 4.4-MeV $\gamma$ events.\label{tab:bias_water_gamma}}
 	\vspace{2mm}
 	\centering		
-	\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
+	\begin{tabular*}{130mm}{c@{\extracolsep{\fill}}cccc}
 		\toprule 
 		simulation & $\Delta x \pm \sigma_x$ [mm]& $\Delta y \pm \sigma_y$ [mm]&$\Delta z \pm \sigma_z$ [mm] \\
 		\midrule
@@ -451,7 +451,7 @@ To test the performance of the \texttt{MP WLS fitter}, a simulation was performe
 
 As it had been in Sect.~\ref{sect:directResol}, again here $\cos\theta_a$ in Eqn.~\ref{eq:cosTheta_fraction} was used to characterize the performance of the direction reconstruction. Table~\ref{tab:quantAngular} compares the \texttt{MP WLS Fitter}'s $\cos\theta_{a}$ values when applied to SNO heavy water data \cite{boulay2004direct}, and to simulations for both SNO+ pure water and SNO+ wbWLS. The best direction reconstruction is obtained for the SNO+ pure water case, with results for the wbWLS case proving less satisfactory (e.g. by about 30\% for $\cos\theta_{0.9}$).
 \begin{table}[ht]
-	\caption{A comparison of quantitative estimates for the angular resolution for the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.\label{tab:quantAngular}}
+	\caption{A comparison of quantitative estimates to the angular resolution for the SNO heavy water, SNO+ wbWLS and the SNO+ pure water cases.\label{tab:quantAngular}}
 		\vspace{2mm}
 				\centering		
 		\begin{tabular*}{120mm}{c@{\extracolsep{\fill}}cccc}
@@ -651,11 +651,11 @@ Following the same method as was used for tuning $v_\mathrm{gr,eff}$ (see Sect.~
 			\toprule 
 			PPO [g/L] & $V_\mathrm{gr,scint}$ [mm/ns]& $n_\mathrm{eff,scint}$ & $V_\mathrm{gr,water}$ [mm/ns]& $n_\mathrm{eff,water}$\\
 			\midrule
-			0.25 & 184.068$\pm$5.153 & 1.629 & 211.871$\pm$5.731 & 1.415\\
-			0.5  & 183.467$\pm$5.159 &1.634& 211.587$\pm$5.773 & 1.417 \\
-			1.0 & 182.93$\pm$5.193 &1.639& 211.393$\pm$5.805& 1.418 \\
-			2.0 & 183.045$\pm$5.184& 1.638& 211.629$\pm$5.767 & 1.417	\\
-			6.0 & 184.218$\pm$5.135& 1.627& 211.173$\pm$5.843 &1.420\\
+			0.25 & $184.1\pm5.153$ & 1.629 & $211.9\pm5.731$ & 1.415\\
+			0.5  & $183.5\pm5.159$ &1.634& $211.6\pm5.773$ & 1.417 \\
+			1.0 & $182.9\pm5.193$ &1.639& $211.4\pm5.805$ & 1.418 \\
+			2.0 & $183.0\pm5.184$& 1.638& $211.6\pm5.767$ & 1.417	\\
+			6.0 & $184.2\pm5.135$& 1.627& $211.2\pm5.843$ &1.420\\
 			\bottomrule	
 		\end{tabular*}
 	}
@@ -814,8 +814,8 @@ This tagging algorithm was applied to reconstructed event vertices. Fig.~\ref{fi
 			\toprule 
 			Tagged isotope & $\mu_x\pm \sigma_x$ & $\mu_y\pm \sigma_y$ & $\mu_z\pm \sigma_z$\\
 			\midrule
-			$^{214}$Bi &  -7.657$\pm$127.2 & -2.071$\pm$129.6 & 2.041$\pm$114.5 \\
-			$^{214}$Po &  -0.695$\pm$128.5 & -0.1355$\pm$129.3 & -22.21$\pm$103.0\\
+			$^{214}$Bi &  $-7.657\pm127.2$ & $-2.071\pm129.6$ & $2.041\pm114.5$ \\
+			$^{214}$Po &  $-0.6950\pm128.5$ & $-0.1355\pm129.3$ & $-22.21\pm103.0$\\
 			\bottomrule	
 		\end{tabular*}
 	}
@@ -960,7 +960,7 @@ In the NHits-ratio method, the NHits value of an $e^-$ event at (0,0,0) mm in th
 \begin{equation}
 E_\mathrm{full} = f(\mathrm{NHits})=0.051+0.003\cdot \mathrm{NHits}+2.49\times 10^{-7}\cdot \mathrm{NHits} \; .    
 \end{equation}
-Then for the partial-fill geometry with a given $Z_\mathrm{water}$, $e^-$ events were simulated at different $(\rho=\sqrt{x^2+y^2},z)$ positions in the AV, with $\rho$ ranging from 0 to 5500 mm with a step of 500 mm, and $z$ ranging from -5500 to 5500 with a step of 500 mm (these ranges cover the AV volume of interest). The value of scaled NHits for an event at $(\rho_0,z_0)$ is found by
+Then for the partial-fill geometry with a given $Z_\mathrm{water}$, $e^-$ events were simulated at different $(\rho=\sqrt{x^2+y^2},z)$ positions in the AV, with $\rho$ ranging from 0 to 5500 mm with a step of 500 mm, and $z$ ranging from -5500 to 5500 mm with a step of 500 mm (these ranges cover the AV volume of interest). The value of scaled NHits for an event at $(\rho_0,z_0)$ is found by
 \begin{equation}
 \mathrm{NHits' = NHits_{partial}/(NHits(\rho_0,z_0)/NHits_{ref})} \; ,
 \end{equation}

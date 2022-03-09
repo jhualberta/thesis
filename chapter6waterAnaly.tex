@@ -605,7 +605,7 @@ The outputs of the TMVA methods depend on the MC simulations and MC datasets. He
 		\includegraphics[width=5cm]{zfactor_cmpExternalInternal.pdf}
 	\end{minipage}
    }
-	\caption[The distributions of six variables from the simulated internal and external $^{208}$Tl backgrounds.]{The distributions of six variables from the simulated internal and external $^{208}$Tl backgrounds, with $5<E_{fit}<15$ MeV. The solar $\nu_e$ signal distributions are also compared. Here the ``external backgrounds'' include the AV and external water backgrounds. The distributions of the internal (external) backgrounds are shown in solid (dashed) red lines, while the solar $\nu_e$ signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:cmpExternalInternal}}
+	\caption[The distributions of 5 variables from the simulated internal and external $^{208}$Tl backgrounds.]{The distributions of 5 variables from the simulated internal and external $^{208}$Tl backgrounds, with $5<E_{fit}<15$ MeV. The solar $\nu_e$ signal distributions are also compared. Here the ``external backgrounds'' include the AV and external water backgrounds. The distributions of the internal (external) backgrounds are shown in solid (dashed) red lines, while the solar $\nu_e$ signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:cmpExternalInternal}}
 \end{figure}
 
 Removing the input variables with small differences observed in the distributions of signal and background can boost the TMVA training speed (for example, the ITR shown in Fig.~\ref{fig:inputParamsTMVA:f}). However, the changes in the BDT and MLP outputs are small, since these two methods can put fewer weights on such variables.
@@ -648,7 +648,7 @@ In the region of $5<E_{fit}<15$~MeV, the outputs from the BDT and MLP were fitte
 \begin{table}[ht]
 	\small{
 	\centering
-	\caption{Fit results for the whole dataset ($5<E<15$~MeV). Unit: $N$ event; $R$ event/(kt$\cdot$day). \label{table:wholedata_output}}
+	\caption[Fit results for the whole dataset ($5<E<15$~MeV).]{Fit results for the whole dataset ($5<E<15$~MeV). Unit: $N$ event; $R$ event/(kt$\cdot$day). \label{table:wholedata_output}}
 	\begin{tabular*}{150mm}{c@{\extracolsep{\fill}}cccccc}
 		\toprule
 		Methods & $N_{sig}$ & $N_{bkg}$ & $R_{sig}$ & $R_{bkg}$ & $p$-value\\
@@ -722,7 +722,7 @@ In Chapter 5, the reconstruction systematics of the event position, direction, a
 
 \begin{table}[ht]
 	\centering
-\caption{Systematics for the solar $\nu_e$ analysis in the water phase. See Sect.~\ref{sect:posSystematics}, \ref{sect:dirSystematics}, \ref{sect:beta14Systematics} and \ref{sect:eneryUncertianties} for details. The positive and negative values of a quantity $Q$ are denoted as $Q^+$ and $Q^-$, respectively.\label{tab:solar_uncertainties}}
+\caption[Systematics for the solar $\nu_e$ analysis in the water phase.]{Systematics for the solar $\nu_e$ analysis in the water phase, see Sect.~\ref{sect:posSystematics}, \ref{sect:dirSystematics}, \ref{sect:beta14Systematics} and \ref{sect:eneryUncertianties} for details. The positive and negative values of a quantity $Q$ are denoted as $Q^+$ and $Q^-$, respectively.\label{tab:solar_uncertainties}}
 	\vspace{2mm}
 	\begin{tabular*}{148mm}{c@{\extracolsep{\fill}}ccc}
 		\toprule
@@ -736,7 +736,7 @@ In Chapter 5, the reconstruction systematics of the event position, direction, a
 		$z$ resolution ($\sigma_{z}$) & $145.56$ mm& $z_{fit}+Gaus(0,\sigma_{z})$\\
 		$x$ scale ($\delta_x^{\pm}$)& +0.07\%/-0.06\%  & $(1+\delta_x^{\pm})x_{fit}$\\	
 		$y$ scale ($\delta_y^{\pm}$)& +0.02\%/-0.07\%  & $(1+\delta_y^{\pm})y_{fit}$ \\
-		$z$ scale ($\delta_z^{\pm}$)& +0.08\%/-0.01\%  & $(1+\delta_zNote 10^{\pm})z_{fit}$ \\
+		$z$ scale ($\delta_z^{\pm}$)& +0.08\%/-0.01\%  & $(1+\delta_z^{\pm})z_{fit}$ \\
 		$r'$ scale ($\delta_{r'}^{\pm}$)&  $\sqrt{\sum_{i=1}^3(\frac{\partial r'}{\partial x_i})^2({\delta^{\pm}_{x_i}})^2}$    & $(1\pm\delta^{\pm}_{r'}/100)r'$\\
 		direction resolution ($\delta_\theta^{\pm}$)  & +0.013/-0.101 & $1+(\cos\theta_\mathrm{sun}-1)/(1+\delta_\theta^{\pm})$\\
 		$E_{scale}~(\Delta_{\delta_E})$ &  1.0\%  & $(1\pm \Delta_{\delta_E})E_{fit}$\\
@@ -834,7 +834,7 @@ Fig.~\ref{fig:ESfluxCompare} shows a comparison of the $\Phi_{ES}$ results given
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=14cm]{ESfluxCompare.png}
-	\caption[A comparison of the ES flux measured recently by three independent experiments.]{A comparison of the ES fluxes measured recently by three independent experiments: SNO+ 2018 published data (SNO+ 2018) \cite{anderson2019measurement}, Super-K phase-IV measurement (Super-K IV) and the combined four phases measurement (Super-K combined) \cite{abe2016solar}, and the Borexino measurements published in 2020 (Borexino 2020) \cite{agostini2020improved}. The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded band is for the unconstrained average value and uncertainty of all the results: $\hat \theta \pm 1\sigma_{\hat \theta}$. The region between the two dashed vertical lines gives a $\hat \theta \pm 3\sigma_{\hat \theta}$ band.\label{fig:ESfluxCompare}}
+	\caption[A comparison of the ES flux measured recently by three independent experiments.]{A comparison of the ES fluxes measured recently by three independent experiments: SNO+ 2018 published data (SNO+ 2018) \cite{anderson2019measurement}, Super-K phase-IV measurement (Super-K IV) and the combined four phases measurement (Super-K combined) \cite{abe2016solar}, and the Borexino measurements published in 2020 (Borexino 2020) \cite{agostini2020improved}. The thick error bars include the statistical errors and the thin ones are quadratic errors including both the statistical and systematical errors. The shaded band is for the unconstrained average value and uncertainty of all the results: $\hat \theta \pm 1\sigma_{\hat \theta}$. The region between the two dashed vertical lines is $\hat \theta \pm 3\sigma_{\hat \theta}$ band.\label{fig:ESfluxCompare}}
 \end{figure}
 
 To combine the results from different experiments, an unconstrained average value $\hat \theta$ and its uncertainty $\sigma_{\hat\theta}$ are calculated by \cite{pdg2020,behnke2013data}:
@@ -859,8 +859,8 @@ The $\Phi_{ES}$ result from this thesis is combined with the SNO+ 2018 result an
 		Combinations & $\Phi_{ES}$ ($\times 10^6$ cm$^{-2}$s$^{-1}$)\\
 		\midrule
 		 not including this work & $2.336 \pm 0.02880$\\
-         this work and SNO+ 2018 & $2.264 \pm 0.2080$\\ 
-         all & $2.333\pm0.02863$\\ 
+         this work and SNO+ 2018 & $2.264 \pm 0.2080$\\
+         all & $2.333\pm0.02863$\\
 		\bottomrule
 	\end{tabular*}
 \end{table}
@@ -876,4 +876,4 @@ To fit the background events, I assumed a flat distribution of $\cos\theta_\math
 
 The evaluation here of systematic uncertainties is not comprehensive. In particular, uncertainties intrinsic to the solar neutrino model used by the MC simulations to ``produce'' solar neutrinos and apply oscillations are {\em not included} here. The uncertainties in the SSM model as well as the neutrino flavor transformation parameters can affect the MC simulations. In addition, the energy calibration used to mitigate the difference between data and simulations is not applied. This procedure can reduce the uncertainties from the energy reconstructions. 
 
-Since the dataset used here has a very low level of background events, it is possible to probe the energy region down to 3.5 MeV, enabling the study of the solar neutrinos in a lower energy region. However, since the reconstruction threshold was set as $\mathrm{NHits}>20$, that analysis is not included in the thesis. It may be worthwhile to investigate the data with a lower NHit threshold down to $\mathrm{NHits}>6$, and to apply a proper TMVA method selection for reducing the backgrounds in the lower energy region.
+Since the dataset used here has a very low level of background events, it is possible to probe the energy region down to 3.5 MeV, enabling the study of the solar neutrinos in a lower energy region. However, since the reconstruction threshold was set as $\mathrm{NHits}>20$, that analysis is not included in the thesis. It may be worthwhile to investigate the data with a lower NHit threshold down to $\mathrm{NHits}>5$, and to apply a proper TMVA method selection for reducing the backgrounds in the lower energy region.

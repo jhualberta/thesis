@@ -18,7 +18,7 @@ Warning--empty journal in compass
 Warning--empty journal in hamamatsu2018photomultiplier
 You've used 202 entries,
             1876 wiz_defined-function locations,
-            1454 strings with 36153 characters,
+            1454 strings with 36163 characters,
 and the built_in function-call counts, 42959 in all, are:
 = -- 3796
 > -- 2436
