@@ -181,7 +181,7 @@ Table~\ref{tab:posresol} summarizes the values of position resolution parameters
 
 \subsubsection{Position Systematics}\label{sect:posSystematics}
 
-To evaluate the position uncertainties, the MC and data runs of the $^{16}$N internal scans along ($x, y, z$) axes were taken to evaluate the $(x, y, z)$ position uncertainties respectively (the runs are listed in Table~\ref{table:n16scanTable_zscan} to \ref{table:n16scanTable_xscan}. Three neck runs in the $z$-scan were not used). The high level cuts mentioned earlier, as well as the $E_{fit}>3.5$~MeV and $scaleLogL>10$ cuts, were applied. The fit range was set as $[X_\mathrm{src}-2000, X_\mathrm{src}+2000]$~mm, where $X_\mathrm{src}$ is the source position on the $(x,y,z)$ axes for the scans along $(x,y,z)$ axes respectively. This is because, recall, most of the source $\gamma$'s have their first Compton scatter -- knocking an $e^{-}$ into motion -- within that distance from the source. If the value of $(X-2000)~$mm was smaller than -6000~mm, it was set to -6000~mm; if the $(X+2000)~$mm was larger than 6000~mm, it was set to +6000~mm. This was used to remove the AV effects, mainly the AV lensing and the material boundaries which distort the reconstruction performances, as mentioned in Chapter 4.
+To evaluate the position uncertainties, the MC and data runs of the $^{16}$N internal scans along ($x, y, z$) axes were taken to evaluate the $(x, y, z)$ position uncertainties respectively (the runs are listed in Table~\ref{table:n16scanTable_zscan} to \ref{table:n16scanTable_xscan}. Three neck runs in the $z$-scan were not used). The high level cuts mentioned earlier, as well as the $E_{fit}>3.5$~MeV and $scaleLogL>10$ cuts, were applied. The fit range was set as $[X_\mathrm{src}-2000, X_\mathrm{src}+2000]$~mm, where $X_\mathrm{src}$ is the source position on the $(x,y,z)$ axes for the scans along $(x,y,z)$ axes respectively. This is because, recall, most of the source $\gamma$'s have their first Compton scatter -- knocking an $e^{-}$ into motion -- within that distance from the source. If the value of $(X_\mathrm{src}-2000)~$mm was smaller than -6000~mm, it was set to -6000~mm; if the $(X_\mathrm{src}+2000)~$mm was larger than 6000~mm, it was set to +6000~mm. This was used to remove the AV effects, mainly the AV lensing and the material boundaries which distort the reconstruction performances, as mentioned in Chapter 4.
 
 The position resolution function was first fitted with four free parameters, $(\alpha_e,\mu_p$, $\sigma_p$, $\tau_p$). The average values of $\alpha_e$ and $\tau_p$ were calculated from all the scan runs used here and then, to simplify the calculation in propagating systematics, those average values \footnote{Using fixed values for ($\alpha_e$, $\tau_p$) is justified by the fact that these parameters in principle can be viewed as corrections to the spatial distribution of the $\gamma$'s ($S(x)$) that would not depend on position \cite{waterunidoc}.} were assigned as constant values: $\alpha_e=0.5288$ (0.5375) for the MC (data) and $\tau_p=271.738$ (263.735) for the MC (data). With the fixed values of $\alpha_e$ and $\tau_p$, both the data and the MC were refitted to optimize $\mu_p$ and $\sigma_p$ only. 
 
@@ -298,18 +298,18 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 
 The vertex scale systematics were then transformed, e.g. $x'=(1+\delta_x/100)x$ with equivalent formulae for the $(y,z)$ axes.
 
-The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. The reconstructed radius is always used for defining the fiducial volume inside the AV. In this case, due to the AV offset mentioned in Chapter 3 and Chapter 4, a correction in $z$ with $z'=z-108$ (mm) should be applied, and then $r$ is changed to $r'=\sqrt{x^2+y^2+(z-108)^2}$. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_r'$ is calculated as \cite{waterunidoc}:
+The scale systematics also depend on the radius $r=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. The reconstructed radius is always used for defining the fiducial volume inside the AV. In this case, due to the AV offset mentioned in Chapter 3 and Chapter 4, a correction in $z$ with $z'=z-108$ (mm) should be applied, and then $r$ is changed to $R'=\sqrt{x^2+y^2+(z-108)^2}$. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_R'$ is calculated as \cite{waterunidoc}:
 \begin{equation}
-\delta_{r'} =\sqrt{\sum_{i=1}^3(\frac{\partial r'}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+(z-108)^2\delta_z^2}{r'^2}}\; .
+\delta_{R'} =\sqrt{\sum_{i=1}^3(\frac{\partial R'}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+(z-108)^2\delta_z^2}{R'^2}}\; .
 \end{equation}
-Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table~\ref{tab:vertexScale}, the $\delta_{r'}^+$ and $\delta_{r'}^-$ are calculated, respectively. Then the two-sided bounds for the confidence interval of $r'$ are calculated by as $r'^+=(1+\delta^+_{r'}/100) \; r'$ and $r'^-=(1-\delta^-_{r'}/100) \; r'$.
+Using the $\delta^+$ and $\delta^-$ for $(x,y,z)$ scales in Table~\ref{tab:vertexScale}, the $\delta_{R'}^+$ and $\delta_{R'}^-$ are calculated, respectively. Then the two-sided bounds for the confidence interval of $R'$ are calculated by as $R'^+=(1+\delta^+_{R'}/100) \; R'$ and $R'^-=(1-\delta^-_{R'}/100) \; R'$.
 
-Fig.~\ref{fig:RscaleSmear} shows the effects of smearing the radius scales on the reconstructed $r'$ radius of the $^{16}$N central run 107055 MC. 
+Fig.~\ref{fig:RscaleSmear} shows the effects of smearing the radius scales on the reconstructed $R'$ radius of the $^{16}$N central run 107055 MC. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{smearRadResol.pdf}
-	\caption[Smeared reconstructed radius $r'$ spectrum of $^{16}$N central run 107055 MC by radius scales.]{Smeared reconstructed radius $r'$ of $^{16}$N central run 107055 by radius scales. The solid black line is for the unsmeared MC; the red dashed line is for scaling up the $r'$ in MC; the blue dotted line is for scaling down the $r'_{fit}$ in MC.\label{fig:RscaleSmear}}
+	\caption[Smeared reconstructed radius $R'$ spectrum of $^{16}$N central run 107055 MC by radius scales.]{Smeared reconstructed radius $R'$ of $^{16}$N central run 107055 by radius scales. The solid black line is for the unsmeared MC; the red dashed line is for scaling up the $R'$ in MC; the blue dotted line is for scaling down the $R'_{fit}$ in MC.\label{fig:RscaleSmear}}
 \end{figure} 
 
 %Uncertainties from the source manipulator positions are assumed to be 50~mm.
@@ -330,7 +330,7 @@ The distribution of $\cos\theta$ was fitted with the direction resolution functi
 \item $\mathrm{ITR}>0.55$\;,
 \item $-0.12<\beta_{14}<0.95$\;,
 \end{itemize}
-were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut, $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm, was applied. For the internal scans, a radius cut $r'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans \cite{waterunidoc}.
+were used. To remove poorly reconstructed events which were close to the source container due to its shadow effect, and also the events far away from the source, a distance cut, $1000<|\vec{X}_{fit}-\vec{X}_{src}|<2300$ mm, was applied. For the internal scans, a radius cut $R'<5850$ mm was also applied. This radial cut was not applied on the external and neck scans \cite{waterunidoc}.
 
 Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions over a fit range (in $\cos \theta_e$) of $[0.3,1]$, after the cuts mentioned, and the resolution parameters are shown in Table~\ref{tab:angularResolValuesUpdated}. Direction resolution for the MC is better than for the data, due to the idealized (simpler) configuration modelled in the simulations. The reconstruction performances of the \texttt{MPW fitter} and the \texttt{RAT water fitter} are similar, while for both the detector data and MC, $\beta_M$ values yielded by \texttt{MPW} are about 10\% higher than those from \texttt{RAT}. In short, direction resolution of the \texttt{MPW} is slightly better than that of the \texttt{RAT}.
 
@@ -398,7 +398,7 @@ This angular remapping function was used to smear the angular distributions for 
 
 \subsection{$\beta_{14}$ and its Systematics} \label{sect:beta14Systematics}
 
-Since $\beta_{14}$ itself is used as the high level cut, only the cuts $\mathrm{ITR}>0.55$ and $\mathrm{NHits}>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation \cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the MPW processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
+Since $\beta_{14}$ itself is used as the high level cut, only the cuts $\mathrm{ITR}>0.55$ and $\mathrm{NHits}>5$ were applied on the data and MC to extract the $\beta_{14}$ distributions. Fig.~\ref{fig:N16beta14} shows the $\beta_{14}$ distributions of the central run 107055 data and MC, reconstructed by the \texttt{MPW fitter} and the official \texttt{RAT} fitter respectively. The $\beta_{14}$ is calculated based on the reconstructed position, time, and direction of an event, and the $\beta_{14}$ distributions from the \texttt{MPW} and \texttt{RAT} fitter results are consistent. However, both fitters show a discrepancy between the data and the MC, a discrepancy that may be caused by inaccurate modeling of the Cherenkov process in the Geant4 simulation \cite{dunmore2004separation,beta14discrepancy}. Fig.~\ref{fig:N16beta14MPW} compares the $\beta_{14}$ values from the data and the MC of run 107055. Both of the distributions are the \texttt{MPW} processed results and are fitted with Gaussian distributions over the range $-0.5 \le \beta_{14} \le 1.5$. The data shows a slightly smaller Gaussian mean value, $\mu_{data}=0.4157$, compared to $\mu_{MC}=0.4388$.
 
 \begin{figure}[htbp]
 	\centering
@@ -502,7 +502,7 @@ Three energy FoM quantities, namely $G_{test}$, $U_{test}$ and $Z_{factor}$, wer
 	
 \end{itemize}
 
-All the cuts on the three energy FoM quantities remove 0.40\% events from MC and 0.37\% events from data. These cuts were also used in the water phase analysis in Chapter 6.
+All the cuts on the three energy FoM quantities remove 0.40\% events from MC and 0.37\% events from data. These energy FoM cuts were considered in the water phase analysis, which will be discussed in Chapter 6.
 
 \subsubsection{Energy Resolution and Systematics} \label{sect:energySystematics}
 
@@ -511,10 +511,10 @@ The energy fitters for the water phase were applied to the $^{16}$N MC simulatio
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=10cm]{N16_nhits_107055.png}
-	\caption[NHits spectra of the $^{16}$N central run 107055.]{NHits spectra of the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the MPW fitter results and black for the \texttt{RAT} results.\label{fig:N16nhits}}	
+	\caption[NHits spectra of the $^{16}$N central run 107055.]{NHits spectra of the $^{16}$N central run 107055. Dashed lines for the MC and solid lines for data; red for the \texttt{MPW fitter} results and black for the \texttt{RAT} results.\label{fig:N16nhits}}	
 \end{figure}
 
-Fig.~\ref{fig:N16energy} shows two examples for the reconstructed energy spectra of the $^{16}$N events. Cuts of $\mathrm{NHits}>5$ and $\mathrm{ITR}>0.55$ were applied. The upper plot shows the reconstructed energies of the $^{16}$N events in the central run 107055, comparing results from the MC and data. The reconstructed energies based on the results of the \texttt{RAT} and \texttt{MPW} fitters are also compared. The plot shows that the shapes of the spectra are very similar to the NHits case in Fig.~\ref{fig:N16nhits}, and the \texttt{MPW} fitter has more events around the $0.5<E<2$ MeV region. The lower plot shows the reconstructed energies for the run 106025 when the source position was at (-186.0,254.0,-4999.9) mm, comparing the \texttt{MPW} results from the MC and data. The plot shows that when the source was close to the AV bottom, the performance of the energy reconstruction is still good.
+Fig.~\ref{fig:N16energy} shows two examples for the reconstructed energy spectra of the $^{16}$N events. Cuts of $\mathrm{NHits}>5$ and $\mathrm{ITR}>0.55$ were applied. The upper plot shows the reconstructed energies of the $^{16}$N events in the central run 107055, comparing results from the MC and data. The reconstructed energies based on the results of the \texttt{RAT} and \texttt{MPW} fitters are also compared. The plot shows that the shapes of the spectra are very similar to the NHits case in Fig.~\ref{fig:N16nhits}, and the \texttt{MPW} fitter has more events around the $0.5<E<2$ MeV region. The lower plot shows the reconstructed energies for the run 106025 when the source position was at $(-186.0,254.0,-4999.9)$ mm, comparing the \texttt{MPW} results from the MC and data. The plot shows that when the source was close to the AV bottom, the performance of the energy reconstruction is still good.
 
 \begin{figure}[htbp]
 	\centering
@@ -532,7 +532,7 @@ As mentioned in Sect.~\ref{sect:positionResol}, the $^{16}$N source can be consi
 	\caption[Simulated electron energy spectra for different processes.]{Simulated electron energy spectra for different processes, extracted from $10^5$ MC simulations of $^{16}$N central run 107055. Contributions from three processes: Compton scattering, pair production, and photoelectric absorption are shown.\label{fig:N16nhitsSimu}}
 \end{figure}
 
-Following the methods described in Refs.~\cite{waterunidoc,morganThesis}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap:a}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum ($P_\mathrm{source}(T_e)$) \cite{waterunidoc}. Fig.~\ref{N16energyMap:b} shows the effective electron spectrum of $^{16}$N central run 107055.
+Following the methods described in Refs.~\cite{waterunidoc,morganThesis}, a map that relates the number of Cherenkov photons to the electron energy is created by simulating electron events with different energies at the detector center, as shown in Fig.~\ref{N16energyMap:a}. By looking up the map and applying linear interpolation, the number of the photons created from the $^{16}$N source can be converted into an effective or apparent electron energy spectrum $P_\mathrm{source}(T_e)$ \cite{waterunidoc}. Fig.~\ref{N16energyMap:b} shows the effective electron spectrum of $^{16}$N central run 107055.
 
 %%The apparent energy spectrum $P_{source(Te) is generated with RAT and relates the 16N $\gamma$ energy to apparent energy by considering Cherenkov photon production, Compton scattering, pair production, and energy
 %%deposition in the source container.
@@ -563,7 +563,7 @@ Before fitting the reconstructed energy spectrum with the energy resolution func
 \item a conditional distance cut, $|\vec{X}_{fit}-\vec{X}_{src}|>700~$mm was suggested by Refs.~\cite{waterunidoc,leta} to remove shadow effects when the events are close to the source container. The conditional cut is applied as follows: an event reconstructed within the $700~ \mathrm{mm}$ proximity to the source is retained only if its direction $\vec{u}_{fit}$ is within 45$^\circ$ of the vector from the source to its vertex, i.e., if $\sqrt2/2<\vec{u}_{true}\cdot \vec{u}_{fit}<1$.
 \end{itemize}
 
-A fit range of [3.5, 6.0]~MeV was suggested by Ref.~\cite{waterunidoc} to avoid including poorly reconstructed events due to the trigger inefficiency. Fig.~\ref{fittedEnergyResol} shows the energy resolution function fitted with the reconstructed energy spectrum of the $^{16}$N central run 107055 data, after applying the cuts mentioned above.
+A fit range of $[3.5, 6.0]$~MeV was suggested by Ref.~\cite{waterunidoc} to avoid including poorly reconstructed events due to the trigger inefficiency. Fig.~\ref{fittedEnergyResol} shows the energy resolution function fitted with the reconstructed energy spectrum of the $^{16}$N central run 107055 data, after applying the cuts mentioned above.
 \begin{figure}
 	\centering
 	\includegraphics[width=8cm]{N16data_energy_fitted_107055.png}
@@ -589,7 +589,7 @@ By comparing the differences between data and MC, the uncertainties of the energ
 \begin{equation}
 \Delta^2_{\delta}= (\delta_{data}-\delta_{MC})^2+\mathrm{Error}^2_{\delta,data}+\mathrm{Error}^2_{\delta,MC}\; ,
 \end{equation}
-where $\delta=b$ or $\delta_E$, and $\Delta_b=\sqrt{\Delta^2_{b}}$ since the resolution is always positive; while $\Delta_{\delta_E}=\pm\sqrt{\Delta^2_{\delta_E}}$. The fit errors in data and MC were also included in the uncertainties. Taking the $^{16}$N scan runs within $r<6~$m, the averaged uncertainties are: $\overline{\Delta_{\delta_E}}=0.0107$ and $\overline{\Delta_{b}}=0.0369$. For the $^{16}$N scan runs within $r<5.5~\mathrm{m}$, which is the fiducial volume of the solar neutrino analysis mentioned in Chapter 6, $\overline{\Delta_{\delta_E}}=0.0100$ and $\overline{\Delta_{b}}=0.0320$.
+where $\delta=b$ or $\delta_E$, and $\Delta_b=\sqrt{\Delta^2_{b}}$ since the resolution is always positive; while $\Delta_{\delta_E}=\pm\sqrt{\Delta^2_{\delta_E}}$. The fit errors in data and MC were also included in the uncertainties. Taking the $^{16}$N scan runs within $R'<6~$m, the averaged uncertainties are: $\overline{\Delta_{\delta_E}}=0.0107$ and $\overline{\Delta_{b}}=0.0369$. For the $^{16}$N scan runs within $R'<5.5~\mathrm{m}$, which is the fiducial volume of the solar neutrino analysis mentioned in Chapter 6, $\overline{\Delta_{\delta_E}}=0.0100$ and $\overline{\Delta_{b}}=0.0320$.
 
 To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is smeared by $E'_{fit}=(1\pm\Delta_{\delta_E}) \; E_{fit}$, where the ``$+$" sign is for scaling up the energy while ``$-$" is for scaling down. Fig.~\ref{fig:EscaleSmear} shows the effects of smearing the energy scales on the reconstructed energy spectrum of the $^{16}$N central run 107055 MC (the unsmeared data spectrum is also compared). It is obvious that scaling up the $E_{fit}$ widens the $E_{fit}$ spectrum while scaling down the $E_{fit}$ narrows the spectrum. 
 

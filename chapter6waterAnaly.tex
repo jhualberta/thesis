@@ -144,7 +144,7 @@ Here $\mathrm{NHits}>20$ is a reconstruction threshold set for the solar neutrin
 \begin{equation*}
 R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}\;, 
 \end{equation*}
-where the 108 mm offset in $z$ was discussed in Chapter 3 and Chapter 4. The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
+where the 108 mm offset in $z$ was discussed in Chapter 3, 4 and 5. The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
 
 \subsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
 
@@ -694,7 +694,7 @@ To fit for the total $^8$B neutrino flux, the fit parameter used here is the flu
 	\caption[A fit on the total $^8$B flux.]{A fit on the total $^8$B flux. The black dots are the data points and the blue histogram is the fit.\label{fig:TOTALfluxFit}}
 \end{figure}
 
-To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=328.00)$ and the PDF was changed to $\mathrm{PDF}(\nu_e,\mathrm{without~oscillation})$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f^{ES}_s=0.3844\pm 0.03727$ (corresponding to $N_{sig}=126.1\pm12.23$ events) and $N_{bkg}=40.92\pm 8.021$ events, with a $p$-value = 0.118.
+To fit for the $^8$B flux corresponding to an observed flux of ES interactions, the same procedure was used, while the fit parameter was changed to $N_{sig}=f_s\cdot N_{\nu_e}(=328.00)$ and the PDF was changed to $\mathrm{PDF}(\nu_e,\mathrm{without~oscillation})$. As shown in Fig.~\ref{fig:ESfluxFit}, the fit results are $f^{ES}_s=0.3844\pm 0.03727$ (corresponding to $N_{sig}=126.1\pm12.22$ events) and $N_{bkg}=40.92\pm 8.021$ events, with a $p$-value = 0.118.
 
 \begin{figure}[!htb]
 	\centering
@@ -702,7 +702,7 @@ To fit for the $^8$B flux corresponding to an observed flux of ES interactions, 
 	\caption[Fitting with the spectrum of elastic scattering.]{Fitting with the spectrum of elastic scattering. The black dots are the data points and the blue histogram is the fit.\label{fig:ESfluxFit}}
 \end{figure}
 
-The $N_{sig}$ and $N_{bkg}$ values obtained here by fitting the flux fractions are consistent with the values obtained in Sect.~\ref{sect:fitTheWhole}.
+The $N_{sig}$ and $N_{bkg}$ values obtained here by fitting the flux fractions are consistent with the values obtained in Table \ref{table:wholedata_output} in Sect.~\ref{sect:fitTheWhole}.
 
 With the nominal $^8$B solar neutrino flux $\Phi^{total}_{MC}$, the estimated total flux is:
 
@@ -737,7 +737,7 @@ In Chapter 5, the reconstruction systematics of the event position, direction, a
 		$x$ scale ($\delta_x^{\pm}$)& +0.07\%/-0.06\%  & $(1+\delta_x^{\pm})x_{fit}$\\	
 		$y$ scale ($\delta_y^{\pm}$)& +0.02\%/-0.07\%  & $(1+\delta_y^{\pm})y_{fit}$ \\
 		$z$ scale ($\delta_z^{\pm}$)& +0.08\%/-0.01\%  & $(1+\delta_z^{\pm})z_{fit}$ \\
-		$r'$ scale ($\delta_{r'}^{\pm}$)&  $\sqrt{\sum_{i=1}^3(\frac{\partial r'}{\partial x_i})^2({\delta^{\pm}_{x_i}})^2}$    & $(1\pm\delta^{\pm}_{r'}/100)r'$\\
+		$R'$ scale ($\delta_{R'}^{\pm}$)&  $\sqrt{\sum_{i=1}^3(\frac{\partial R'}{\partial x_i})^2({\delta^{\pm}_{x_i}})^2}$    & $(1\pm\delta^{\pm}_{R'}/100)R'$\\
 		direction resolution ($\delta_\theta^{\pm}$)  & +0.013/-0.101 & $1+(\cos\theta_\mathrm{sun}-1)/(1+\delta_\theta^{\pm})$\\
 		$E_{scale}~(\Delta_{\delta_E})$ &  1.0\%  & $(1\pm \Delta_{\delta_E})E_{fit}$\\
 		$E_{resol}~(\Delta_b)$ &  0.037 $\sqrt{\mathrm{MeV}}$  & $E_{fit}+Gaus(0,\sigma_{smear})$ , \\
@@ -798,7 +798,7 @@ Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, en
 		$x$ resolution & +0.0001940/-0.0001940\\	
 		$y$ resolution & +0.00005300/-0.00005300\\
 		$z$ resolution & +0.0002780/-0.0002780\\
-		$r'$ scale & +0.001400/-0.001210\\
+		$R'$ scale & +0.001400/-0.001210\\
 		position scale & +0.001295/-0.001115\\	
 		direction resolution ($\delta_\theta$)  &+0.01881/-0.002016\\		
 		$E_{scale}~(\Delta_{\delta_E})$ & +0.01577/-0.01496\\
