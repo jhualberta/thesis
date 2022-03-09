@@ -572,7 +572,7 @@ To evaluate the differences of the TMVA selection between the data and MC, the d
 
 \subsection{Discussions of TMVA Results}\label{sect:TMVAdiscussion}
 
-The outputs of the TMVA methods depend on the MC simulations and MC datasets. Here only the MC datasets listed in Table \ref{table:mixed_MC} (two types of background isotopes simulated in three detector regions) were used. More accurate MC simulations, larger MC datasets including a wide range of simulations can improve the outputs. Furthermore, here all the background datasets were merged for training the TMVA methods. Since the distributions of a few variables ($\vec{u}\cdot\vec{R}$, $\beta_{14}$, $U_{test}$, $G_{test}$ and $Z_{factor}$) are different in the cases of the internal and external backgrounds, as show in Fig.~\ref{fig:cmpExternalInternal}, training the TMVA methods with distinct MC datasets of the internal and external backgrounds separately can be useful. Also, different types of background isotopes (such as $^{208}$Tl and $^{214}$Bi) have different distributions of the input variables. Therefore, various MC datasets can be prepared for the TMVA training, and the TMVA outputs can be improved by applying the trained weights obtained from the MC datasets separately. However, this procedure is complicated and not included in this thesis. 
+The outputs of the TMVA methods depend on the MC simulations and MC datasets. Here only the MC datasets listed in Table \ref{table:mixed_MC} (two types of background isotopes simulated in three detector regions) were used. More accurate MC simulations, larger MC datasets including a wide range of simulations can improve the outputs. Furthermore, here all the background datasets were merged for training the TMVA methods. Since the distributions of a few variables ($\vec{u}\cdot\vec{R}$, $\beta_{14}$, $U_{test}$, $G_{test}$ and $Z_{factor}$) are different in the cases of the internal and external backgrounds, as shown in Fig.~\ref{fig:cmpExternalInternal}. So training the TMVA methods with distinct MC datasets of the internal and external backgrounds separately can be useful to obtain more accurate discrimination. Also, different types of background isotopes (such as $^{208}$Tl and $^{214}$Bi) have different distributions of the input variables. Therefore, various MC datasets can be prepared for the TMVA training, and the TMVA outputs can be improved by applying the trained weights obtained from the different MC datasets separately. However, this procedure is complicated and not included in this thesis. 
 
 \begin{figure}[htbp]
 	\centering
@@ -766,19 +766,19 @@ Fig.~\ref{smearESpdfs} shows the effects of smearing the direction parameter, en
 	\subfigure[Smearing direction parameter $\delta_\theta$.]{ 
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=8cm]{smearCosSunPDF_Dir.pdf}
+			\includegraphics[width=7.5cm]{smearCosSunPDF_Dir.pdf}
 		\end{minipage}
 	}
 	\subfigure[Smearing energy resolution $\Delta_b$.]{ 
-		\begin{minipage}[b]{0.5\textwidth}
+		\begin{minipage}[b]{0.45\textwidth}
 			\centering
-			\includegraphics[width=8cm]{smearCosSunPDF_Eresol.pdf}
+			\includegraphics[width=7.5cm]{smearCosSunPDF_Eresol.pdf}
 		\end{minipage}
 	}
 	\subfigure[Smearing energy scale $\Delta_{\delta_E}$.]{ 
 		\begin{minipage}[t]{0.4\textwidth}
 			\centering
-			\includegraphics[width=8cm]{smearCosSunPDF_Escale.pdf}
+			\includegraphics[width=7.5cm]{smearCosSunPDF_Escale.pdf}
 		\end{minipage}
 		}
 	\caption[Smearing effects on the $\cos\theta_\mathrm{sun}$ PDF.]{Smearing effects on the $\cos\theta_\mathrm{sun}$. The histogram with a solid black line is the PDF before smearing. The dotted blue histogram is for smearing up the quantity (i.e., taking the positive values) and the dashed red is for smearing down (i.e., taking the positive values).\label{smearESpdfs}}
