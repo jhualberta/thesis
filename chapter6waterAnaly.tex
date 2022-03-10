@@ -124,7 +124,7 @@ Firstly, all of the solar neutrino candidate events found by the \texttt{RAT wat
 	\caption[Reconstruction results for the candidate events, projected onto PMT sinusoidal maps.]{Reconstruction results for the candidate events, projected onto PMT sinusoidal maps. Black circles stand for the hit PMTs used by the fitter; crosses stand for the hit PMTs removed by the selectors; blue full star stands for the event direction fitted by the \texttt{RAT water fitter}; red open star stands for the direction fitted by the \texttt{MPW fitter}; full double diamond stands for the solar direction times -1; blue full square stands for the event position fitted by the \texttt{RAT water fitter}; open square stands for the position fitted by the \texttt{MPW fitter}.	\label{fig:openDataSetCandidate}}
 \end{figure}
 
-From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) it can be seen that, for the candidate events, the results from the \texttt{MPW} are largely consistent with those from \texttt{RAT}, although (not apparent from the figure) the \texttt{MPW} fitter disfavored one event in run 100207 (with GTID=5079885), placing its position outside the AV, and the $\cos\theta_\mathrm{sun}$ value becomes smaller and is further away from +1. For this event, the $posFoM$ quantity, $scaleLogL$ can be compared to evaluate the position reconstruction quality. Since the \texttt{RAT} fitter returned $scaleLogL=10.41$ while the \texttt{MPW} returned $scaleLogL=11.60$ (both for 35 selected PMTs, $\mathrm{NHits_{selected}}=35$), for this event the \texttt{MPW} fitter has a better position reconstruction quality than the \texttt{RAT}.
+From the proximity of the colored points (Fig.~\ref{fig:openDataSetCandidate}) it can be seen that, for the candidate events, the results from the \texttt{MPW} are largely consistent with those from \texttt{RAT}, although (not apparent from the figure) the \texttt{MPW} fitter disfavored one event in run 100207 (with GTID=5079885), placing its position outside the AV, and the $\cos\theta_\mathrm{sun}$ value becomes smaller and is further away from +1. For this event, the $posFoM$ quantity, $scaleLogL$ can be compared to evaluate the position reconstruction quality: $scaleLogL=10.41$ for \texttt{RAT} and $scaleLogL=11.60$ for \texttt{MPW}, both for 35 selected PMTs ($\mathrm{NHits_{selected}}=35$). Therefore, \texttt{MPW} fitter has a better position reconstruction quality than the \texttt{RAT} for this event.
 
 In addition to refitting the candidate events found by the \texttt{RAT}, the \texttt{MPW} fitter can be (and was) used directly to search for candidate events, with the result shown in Table~\ref{tab:opendataMPW}. Evidently, the \texttt{MPW} fitter obtained a different set of candidate events, albeit overlapping with the set provided by the \texttt{RAT} fitter, and so it provides an alternative analysis of the solar neutrinos.
 % Compare the $klDiv$ quantities for the \texttt{MPW fitter} and \texttt{Rat water fitter} results. 
@@ -140,11 +140,11 @@ Before the analysis, the following ``beforehand cuts'' were applied:
     \item $\mathrm{ITR}>0.55$\;,
     \item $-0.12<\beta_{14}<0.95$\;. 
 \end{itemize}
-Here $\mathrm{NHits}>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with $\mathrm{NHits}>20$ were reconstructed by the \texttt{MPW fitter}. The $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
+Here $\mathrm{NHits}>20$ is a reconstruction threshold set for the solar neutrino analysis, which means that only the events with $\mathrm{NHits}>20$ were reconstructed by the \texttt{MPW fitter}. As mentioned in Sect.~\ref{sect:vertexUncertainties}, $R'_{fit}$ is the magnitude of the reconstructed event position $\vec{X}_{fit}$ after the AV coordinate correction:
 \begin{equation*}
 R'_{fit}\equiv\sqrt{x^2_{fit}+y^2_{fit}+(z_{fit}-108)^2}\;, 
 \end{equation*}
-where the 108 mm offset in $z$ was discussed in Chapter 3, 4 and 5. The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
+where the 108 mm offset. The cut on $R'_{fit}$ defines a fiducial volume of $5500$ mm for solar neutrino analysis. Finally, the high level cuts ITR and $\beta_{14}$ cuts were mentioned previously.
 
 \subsection{Maximum Likelihood Fit}\label{sect:poisson_fit}
 
@@ -307,7 +307,7 @@ p=\int_{-2\ln \mathcal{L}^{i}_{best}}^{-2\ln \mathcal{L}^{max}_{best}}f({-2\ln \
 
 To further reduce the background events, in addition to the ``beforehand'' cuts mentioned in the previous section, the ``FoM cuts'' for the position and energy FoMs, as well as a ``u.R'' ($\vec{u}\cdot \vec{R}$) quantity, were also considered here. The $\vec{u}\cdot\vec{R}$ quantity is the inner product of the reconstructed event direction ($\vec{u}$) and the reconstructed position vector ($\vec{R}=(x,y,z)$). It is suggested by the collaboration for identifying the external backgrounds with $\vec{u}\cdot\vec{R}>0$, and the PMT backgrounds with $\vec{u}\cdot \vec{R}$ close to -1 \cite{waterunidoc}.
 
-The FoM cuts suggested by the collaboration \footnote{These cuts are mainly based on the $^{16}$N analyses. Also suggested by the collaboration, there is a cut on the quantity of position error calculated by the \texttt{RAT water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.} are \cite{morganFOM}: 
+The FoM cuts suggested by the collaboration are \cite{morganFOM}: 
 \begin{itemize}
     \item $-11<Z_{factor}<1$\;, 
     \item $scaleLogL>10.85$\;,
@@ -316,7 +316,8 @@ The FoM cuts suggested by the collaboration \footnote{These cuts are mainly base
     \item $\mathrm{ITR}>0.55$\;,
     \item $-0.12<\beta_{14}<0.95$\;.
 \end{itemize}
-These cuts are denoted as ``default cuts''.
+These cuts are denoted as ``default cuts'', which were mainly determined by the $^{16}$N analyses \cite{morganFOM,brianLowBG}. Also suggested by the collaboration, there is a cut on the quantity of position error calculated by the \texttt{RAT water fitter}, with position error$<525$~mm. However, this quantity was not calculated by the \texttt{MPW fitter}, so it was not included here.
+
 
 To optimize these cuts, the \texttt{TMVA} package was used. The run-by-run simulations of the solar neutrinos (as signals) and various backgrounds were used to train the machine learning methods in the TMVA. All these FoM quantities were used as input variables for training the signal-background discrimination.
 
@@ -419,7 +420,7 @@ Using the $4<E<15$ MeV training dataset as an example, the distributions of thes
 	\caption[Multiple variables as the inputs for the TMVA analysis.]{Multiple variables as the inputs for the TMVA analysis, for the $4<E<15$ MeV dataset. The distributions of the backgrounds are shown in dotted red lines while the signals are shown in solid black lines. The distributions are normalized to their integrals.\label{fig:inputParamsTMVA}}
 \end{figure}
 
-The output signal/background distributions on the test sub-dataset are shown in Fig.~\ref{output_separation_allE}.
+The output of the signal/background discriminator responses ($D$) on the test sub-dataset are shown as 1D distributions in Fig.~\ref{output_separation_allE}, for the Fisher/LD, BDT and MLP methods respectively. Putting cuts on $D$ can reject the majority of backgrounds while keeping most of the signals.
 \begin{figure}[htbp]
 	\centering
 	\subfigure[Fisher/LD output.]{
@@ -460,7 +461,7 @@ As one of the essential TMVA outputs, the background rejection versus signal eff
 			\includegraphics[width=7.3cm]{ROC_E4to5.pdf}
 		\end{minipage}
 	}
-	\caption[TMVA ROC outputs for signal/background separations by different methods.]{TMVA outputs (ROC) for signal/background separations by different methods, for the $4<E<15$ MeV, $5<E<15$ MeV, and $4<E<5$ MeV testing dataset.\label{fig:energyVsROC}}
+	\caption[TMVA ROC outputs for signal/background separations by different methods.]{TMVA outputs (ROC) for signal/background separations by different methods, for the (a) $4<E<15$ MeV, (b) $5<E<15$ MeV, and (c) $4<E<5$ MeV testing dataset.\label{fig:energyVsROC}}
 \end{figure}
 
 Typical CPU times ($t_\mathrm{CPU}$) to train each algorithm for chosen energy regions are listed in Table~\ref{tab:tmvaMethod_allE}.
@@ -490,9 +491,9 @@ Typical CPU times ($t_\mathrm{CPU}$) to train each algorithm for chosen energy r
 	\end{tabular*}
 \end{table}
 
-The testing results in Table~\ref{tab:tmvaMethod_allE} show that the Fisher/LD output gives the worst AUC. The BDT and MLP outputs are close to each other while the MLP gives the largest AUC values. However, the MLP was the most expensive method in terms of CPU usage during the training. Once the MLP was trained, compared to the BDT method, it actually took less time when applying the MLP to the test datasets. All three methods are less successful in separating signals from backgrounds in the lower energy region.
+The testing results in Table~\ref{tab:tmvaMethod_allE} show that the Fisher/LD output gives the worst AUC. The BDT and MLP outputs are close to each other while the MLP gives the largest AUC values. However, the MLP was the most expensive method in terms of CPU usage during the training. On the other hand, compared to the BDT method, once the MLP was trained, it actually took less time when it was applied to the test datasets to evaluate the outputs. All three methods are less successful in separating signals from backgrounds in the lower energy region.
 
-The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MLP method on the test sub-dataset. For the real dataset from run 200004 to 207718, the trained weights and variables from the BDT and the MLP methods were applied event by event, and then the discriminator responses, $D_\mathrm{BDT}$ and $D_\mathrm{MLP}$ were ca by the TMVA respectively. The optimized cuts for the $D_\mathrm{BDT}$ and $D_\mathrm{MLP}$ were obtained by maximizing the \emph{statistical significance} $S/\sqrt{S+B}$, where $S$ is the number of the signal events and $B$ is the number of the background events. As shown in Fig.~\ref{fig:TMVAcutEffiencyBDT} and Fig.~\ref{fig:TMVAcutEffiencyMLP}, for the case of 71 solar $\nu_e$ events ($S=71$) and 38 background events ($B=38$) (these two numbers were derived from the half dataset), the optimized cuts of $D_\mathrm{BDT}>-0.0578$ and $D_\mathrm{MLP}>0.3476$ were found by the TMVA. Similarly, for the $\nu_\mu$ case, the optimized cuts of $D_\mathrm{BDT}>-0.0752$ and $D_\mathrm{MLP}>0.4585$ were found. These cuts were applied to the whole dataset to select the solar neutrino signal events and remove the backgrounds as well.
+The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance of the solar $\nu_e$ event selection and background event discrimination. Here I applied the BDT and the MLP method on the test sub-dataset. For the real dataset from run 200004 to 207718 (the whole dataset), the trained weights and variables from the BDT and the MLP methods were applied event by event, and then the discriminator responses, $D_\mathrm{BDT}$ and $D_\mathrm{MLP}$ were calculated by the TMVA respectively. The optimized cuts for the $D_\mathrm{BDT}$ and $D_\mathrm{MLP}$ were obtained by maximizing the \emph{statistical significance} $S/\sqrt{S+B}$, where $S$ is the number of the signal events and $B$ is the number of the background events. As shown in Fig.~\ref{fig:TMVAcutEffiencyBDT} and Fig.~\ref{fig:TMVAcutEffiencyMLP}, for the case of 71 solar $\nu_e$ events ($S=71$) and 38 background events ($B=38$) (these two numbers were derived from the half dataset), the optimized cuts of $D_\mathrm{BDT}>-0.0578$ and $D_\mathrm{MLP}>0.3476$ were found by the TMVA. Similarly, for the $\nu_\mu$ case, the optimized cuts of $D_\mathrm{BDT}>-0.0752$ and $D_\mathrm{MLP}>0.4585$ were found. These cuts were applied to the whole dataset to select the solar neutrino signal events and remove the backgrounds as well.
 
 \begin{figure}[!htb]
 	\centering
@@ -508,7 +509,7 @@ The distributions of $\cos\theta_\mathrm{sun}$ were used to show the performance
 
 \subsection{TMVA Outputs}\label{sect:tmvaOutput}
 
-The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 68.39\% of the total data as background events while the MLP classifies about 65.08\% as background. Rather flat distributions for $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region \footnote{Applying the likelihood fit described in Sect.~\ref{sect:poisson_fit} and Sect.~\ref{sect:fitTheWhole}, the analyses to follow will focus only on the $5<E<15$ MeV region to the MLP selected signal histogram of the half-dataset, it gives a signal rate of $1.227\pm0.1268$ event/(kilotonne$\cdot$day) and a background rate of $3.673\pm0.186$ event/(kilotonne$\cdot$day), with a $p$-value of 0.311.}.
+The trained weights were applied to both the simulations and the actual data from the 92.54 live-day half-dataset.  Fig.~\ref{fig:cosThetaToSun_4to15_output} shows the results provided by the BDT and MLP selections for the $4<E<15$ MeV region. The BDT selection classifies about 68.39\% of the total data as background events while the MLP classifies about 65.08\% as background. Rather flat distributions for $\cos\theta_\mathrm{sun}$ are apparent in the plots. Since background events are predominant in the $4<E<5$ MeV region \footnote{Applying the likelihood fit described in Sect.~\ref{sect:poisson_fit} and Sect.~\ref{sect:fitTheWhole} to the MLP selected signal histogram of the half-dataset in the $4<E<15$ region, it gives a signal rate of $1.227\pm0.1268$ event/(kilotonne$\cdot$day) and a background rate of $3.673\pm0.186$ event/(kilotonne$\cdot$day), with a $p$-value of 0.311.}, the analyses to follow will focus only on the $5<E<15$ MeV region.
 
 \begin{figure}[!htb]
 	\centering
@@ -526,7 +527,7 @@ To test the outputs, the same fake datasets mentioned in Sect.~\ref{sect:ensembl
 	\caption[MLP outputs from one random fake dataset ($5<E_{fit}<15$ MeV).]{MLP outputs from one random fake dataset, with $5<E_{fit}<15$ MeV. The dashed black line and the shaded red histogram are for the true signal and background events, respectively; the solid black line and the solid red line are for the MLP output of the signal and background events, respectively. Finally, the results after the default cuts are shown in the blue shaded area.\label{fig:BDToutputs}}
 \end{figure}
 
-As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA MLP and BDT selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ for signal events, and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$ for background events (using the histogram mean and root mean square). For the BDT case, the ratios are $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the MLP selection, a scale ratio of 1.031 (0.9296) was applied to scale up (down) the MC simulated solar $\nu_e$ MC histograms. The scaled histograms were used to evaluate the systematics in evaluating the solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
+As shown in Fig.~\ref{fig:TMVAfractions}, applying the TMVA BDT and MLP selections to each of the 5000 fake datasets, the selection ratios were found to be $N^\mathrm{BDT}_{sig}/N^\mathrm{true}_{sig}=0.9766\pm 0.05244$ for signal events, and $N^\mathrm{BDT}_{bkg}/N^{\mathrm{true}}_{bkg}=1.058\pm 0.1001$ for background events (using the histogram mean and root mean square). For the MLP case, the ratios are $N^\mathrm{MLP}_{sig}/N^\mathrm{true}_{sig}=0.9802\pm0.05059$ and $N^\mathrm{MLP}_{bkg}/N^\mathrm{true}_{bkg}=1.050\pm0.09587$. All these ratios fluctuate around 1.0, thus the TMVA selections are reasonable. To count for the systematic uncertainties from the BDT selection, a scale ratio of 1.029 (0.9242) was applied to scale up (down) the MC simulated solar $\nu_e$ MC histograms. For the MLP selection, the scale ratios are 1.031 (scale up) and 0.9296 (scale down). The scaled histograms were used to evaluate the systematics in evaluating the solar $\nu_e$ flux, which will be discussed in Sect.~\ref{sect:fluxSystem}.
 
 \begin{figure}[htbp]
 	\centering
@@ -572,7 +573,7 @@ To evaluate the differences of the TMVA selection between the data and MC, the d
 
 \subsection{Discussions of TMVA Results}\label{sect:TMVAdiscussion}
 
-The outputs of the TMVA methods depend on the MC simulations and MC datasets. Here only the MC datasets listed in Table \ref{table:mixed_MC} (two types of background isotopes simulated in three detector regions) were used. More accurate MC simulations, larger MC datasets including a wide range of simulations can improve the outputs. Furthermore, here all the background datasets were merged for training the TMVA methods. Since the distributions of a few variables ($\vec{u}\cdot\vec{R}$, $\beta_{14}$, $U_{test}$, $G_{test}$ and $Z_{factor}$) are different in the cases of the internal and external backgrounds, as shown in Fig.~\ref{fig:cmpExternalInternal}. So training the TMVA methods with distinct MC datasets of the internal and external backgrounds separately can be useful to obtain more accurate discrimination. Also, different types of background isotopes (such as $^{208}$Tl and $^{214}$Bi) have different distributions of the input variables. Therefore, various MC datasets can be prepared for the TMVA training, and the TMVA outputs can be improved by applying the trained weights obtained from the different MC datasets separately. However, this procedure is complicated and not included in this thesis. 
+The outputs of the TMVA methods depend on the MC simulations and MC datasets. Here only the MC datasets listed in Table \ref{table:mixed_MC} (two types of background isotopes simulated in three detector regions) were used. More accurate MC simulations, larger MC datasets including comprehensive datasets of simulations can improve the outputs. Furthermore, here all the background datasets were merged for training the TMVA methods. Since the distributions of the input variables are different in the cases of the internal and external backgrounds, as shown in Fig.~\ref{fig:cmpExternalInternal}, training the TMVA methods with the internal and external backgrounds MC datasets separately can be useful to make the signal/background discrimination more accurate. Also, different types of background isotopes (such as $^{208}$Tl and $^{214}$Bi) have different distributions of the input variables. Therefore, various MC datasets can be prepared for the TMVA training, and the TMVA outputs can be improved by applying the trained weights obtained from the different MC datasets separately. However, this procedure is complicated and not included in this thesis. 
 
 \begin{figure}[htbp]
 	\centering
@@ -865,7 +866,7 @@ The $\Phi_{ES}$ result from this thesis is combined with the SNO+ 2018 result an
 	\end{tabular*}
 \end{table}
 
-From the average result including all the experiments mentioned, the region of $\hat \theta\pm 1\sigma_{\hat\theta,tot}$ is plotted as the shaded band in Fig.~\ref{fig:ESfluxCompare}.
+From the average result including all the experiments mentioned, the region of $\hat \theta\pm 1\sigma_{\hat\theta,tot}$ is plotted as the shaded band in Fig.~\ref{fig:ESfluxCompare}. The $3\sigma$ region is also shown.
 
 \subsection{Limitations of this Study}
 This study focuses on measuring solar neutrinos in the energy region [5,15] MeV with a fiducial volume of 5.5 m.
@@ -874,6 +875,6 @@ As listed in Table~\ref{table:mixed_MC}, I only used the $^{208}$Tl and $^{214}$
 
 To fit the background events, I assumed a flat distribution of $\cos\theta_\mathrm{sun}$. A more realistic distribution could be investigated to more properly describe the backgrounds. Furthermore, background levels might vary over time, so a more detailed analysis including different time intervals would increase confidence that the present results are representative.
 
-The evaluation here of systematic uncertainties is not comprehensive. In particular, uncertainties intrinsic to the solar neutrino model used by the MC simulations to ``produce'' solar neutrinos and apply oscillations are {\em not included} here. The uncertainties in the SSM model as well as the neutrino flavor transformation parameters can affect the MC simulations. In addition, the energy calibration used to mitigate the difference between data and simulations is not applied. This procedure can reduce the uncertainties from the energy reconstructions. 
+The evaluation of systematic uncertainties here is not comprehensive. In particular, uncertainties intrinsic to the solar neutrino model used by the MC simulations to ``produce'' solar neutrinos and apply oscillations are {\em not included} here. The uncertainties in the SSM model as well as the neutrino flavor transformation parameters can affect the MC simulations. In addition, the energy calibration used to mitigate the difference between data and simulations is not applied. This procedure can reduce the uncertainties from the energy reconstructions. 
 
 Since the dataset used here has a very low level of background events, it is possible to probe the energy region down to 3.5 MeV, enabling the study of the solar neutrinos in a lower energy region. However, since the reconstruction threshold was set as $\mathrm{NHits}>20$, that analysis is not included in the thesis. It may be worthwhile to investigate the data with a lower NHit threshold down to $\mathrm{NHits}>5$, and to apply a proper TMVA method selection for reducing the backgrounds in the lower energy region.

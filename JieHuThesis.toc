@@ -98,13 +98,13 @@
 \contentsline {subsection}{\numberline {6.3.1}Maximum Likelihood Fit}{159}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Ensemble Test}{160}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Signal-background Discrimination Based on TMVA}{164}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}TMVA Outputs}{170}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{173}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.4}TMVA Outputs}{171}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Discussions of TMVA Results}{175}{subsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.3.6}Fitting Whole Low Background Dataset}{175}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{178}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.7}Evaluating $^8$B Solar Neutrino Flux}{177}{subsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.3.8}Systematics Evaluation}{182}{subsection.6.3.8}%
-\contentsline {subsection}{\numberline {6.3.9}Summary of Results}{185}{subsection.6.3.9}%
-\contentsline {subsection}{\numberline {6.3.10}Limitations of this Study}{187}{subsection.6.3.10}%
+\contentsline {subsection}{\numberline {6.3.9}Summary of Results}{186}{subsection.6.3.9}%
+\contentsline {subsection}{\numberline {6.3.10}Limitations of this Study}{188}{subsection.6.3.10}%
 \contentsline {chapter}{\numberline {7}Conclusions}{189}{chapter.7}%
 \contentsline {chapter}{Bibliography}{191}{chapter*.7}%
 \contentsline {chapter}{\numberline {A}Details for the Multi-Path Fitter}{210}{appendix.A}%
