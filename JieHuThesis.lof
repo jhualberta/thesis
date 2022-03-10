@@ -176,22 +176,22 @@
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ITR}}}{167}{figure.6.9}%
 \contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\vec {u}\cdot \vec {R'}$}}}{167}{figure.6.9}%
 \contentsline {subfigure}{\numberline {(h)}{\ignorespaces {$scaleLogL$}}}{167}{figure.6.9}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces TMVA outputs for signal/background separations by different methods.}}{168}{figure.6.10}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces TMVA outputs for signal/background discriminator responses by different methods.}}{168}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{168}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{168}{figure.6.10}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output}}}{168}{figure.6.10}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output.}}}{168}{figure.6.10}%
 \contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA ROC outputs for signal/background separations by different methods.}}{169}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{169}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{169}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{169}{figure.6.11}%
 \contentsline {figure}{\numberline {6.12}{\ignorespaces BDT cut efficiency, with $5<E_{fit}<15$ MeV.}}{171}{figure.6.12}%
 \contentsline {figure}{\numberline {6.13}{\ignorespaces MLP cut efficiency, with $5<E_{fit}<15$ MeV.}}{171}{figure.6.13}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$ ($4<E_{fit}<15$ MeV).}}{172}{figure.6.14}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces BDT and MLP outputs for the $\qopname \relax o{cos}\theta _\mathrm {sun}$ of the actual half-dataset ($4<E_{fit}<15$ MeV).}}{172}{figure.6.14}%
 \contentsline {figure}{\numberline {6.15}{\ignorespaces MLP outputs from one random fake dataset ($5<E_{fit}<15$ MeV).}}{173}{figure.6.15}%
 \contentsline {figure}{\numberline {6.16}{\ignorespaces Event count ratios from TMVA outputs on 5000 fake datasets.}}{174}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {BDT.}}}{174}{figure.6.16}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MLP.}}}{174}{figure.6.16}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces The distributions of 5 variables from the simulated internal and external $^{208}$Tl backgrounds.}}{176}{figure.6.17}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces The distributions of input variables from the simulated internal and external $^{208}$Tl backgrounds.}}{176}{figure.6.17}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\vec {u}\cdot \vec {R}$}}}{176}{figure.6.17}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta _{14}$}}}{176}{figure.6.17}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G_{test}$}}}{176}{figure.6.17}%
@@ -212,14 +212,14 @@
 \contentsline {figure}{\numberline {6.24}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{187}{figure.6.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on planes.}}{217}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$X-Y$ plane.}}}{217}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$Y-Z$ plane.}}}{217}{figure.A.1}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$X-Z$ plane.}}}{217}{figure.A.1}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{218}{figure.A.2}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of the best-fit $\qopname \relax o{ln}\mathcal {L}$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{218}{figure.A.3}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{219}{figure.A.4}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{220}{figure.A.5}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on planes.}}{219}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$X-Y$ plane.}}}{219}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$Y-Z$ plane.}}}{219}{figure.A.1}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$X-Z$ plane.}}}{219}{figure.A.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Likelihood surface of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{220}{figure.A.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Derivatives of the best-fit $\qopname \relax o{ln}\mathcal {L}$ of an {$^{16}$}N event projected on $x, y, z, t$-axis respectively.}}{220}{figure.A.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Layouts for the scintillator light paths inside the AV sphere.}}{221}{figure.A.4}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Layouts of the scintillator light paths inside the neck cylinder.}}{222}{figure.A.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{228}{figure.C.1}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces A flow chart for Bi-Po tagging.}}{230}{figure.C.1}%

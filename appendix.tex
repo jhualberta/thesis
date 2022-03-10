@@ -2,7 +2,7 @@
 
 This section is derived from P. G. Jones and I. Coutler's early work on the SNO+ reconstruction algorithms \cite{jones2011background,coulter2013modelling}, and K. Singh's work on the \texttt{MultiPath processor} \cite{kalpanaMPFitter}.
 
-To create a random vertex, four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
+To create a random vertex \emph{efficiently} in \texttt{RAT}, four random seeds are generated from the uniform distribution function: \texttt{RandFlat} in Class Library for High Energy Physics library (\texttt{CLHEP}).
 
 One random seed is used for generating the time of the vertex: $t$ is a random variable following a uniform distribution in a range of $[100, 300]$~ns, say, $t\sim U(100,300)$~ns.
 

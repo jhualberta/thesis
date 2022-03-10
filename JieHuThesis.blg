@@ -16,45 +16,45 @@ Warning--empty journal in pmtR580
 Warning--empty journal in caen
 Warning--empty journal in compass
 Warning--empty journal in hamamatsu2018photomultiplier
-You've used 203 entries,
+You've used 206 entries,
             1876 wiz_defined-function locations,
-            1459 strings with 36259 characters,
-and the built_in function-call counts, 43090 in all, are:
-= -- 3807
-> -- 2440
+            1472 strings with 36575 characters,
+and the built_in function-call counts, 43378 in all, are:
+= -- 3840
+> -- 2443
 < -- 0
-+ -- 919
++ -- 922
 - -- 716
-* -- 2923
-:= -- 6770
-add.period$ -- 265
-call.type$ -- 203
+* -- 2932
+:= -- 6800
+add.period$ -- 271
+call.type$ -- 206
 change.case$ -- 152
 chr.to.int$ -- 0
-cite$ -- 216
-duplicate$ -- 2375
-empty$ -- 3935
+cite$ -- 219
+duplicate$ -- 2393
+empty$ -- 3977
 format.name$ -- 716
-if$ -- 10227
+if$ -- 10305
 int.to.chr$ -- 0
-int.to.str$ -- 203
+int.to.str$ -- 206
 missing$ -- 193
-newline$ -- 674
+newline$ -- 686
 num.names$ -- 197
-pop$ -- 691
+pop$ -- 697
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1202
+skip$ -- 1211
 stack$ -- 0
 substring$ -- 1044
-swap$ -- 792
+swap$ -- 795
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 13
 while$ -- 305
-width$ -- 206
-write$ -- 1905
+width$ -- 209
+write$ -- 1929
 (There were 13 warnings)
