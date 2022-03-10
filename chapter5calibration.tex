@@ -1,3 +1,5 @@
+\epigraph{There are two possible outcomes: If the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.}{---\textup{ Enrico Fermi}}
+
 A detailed description of the SNO+ detector has been implemented in the \texttt{RAT} software package for Monte Carlo (MC) simulations, as mentioned in Chapter 3. However, when the simulations are compared to the real world, there always exist discrepancies. To make precise measurements, calibration sources were implemented in the SNO+ detector during the water phase and the partial-fill phase. During the water phase, the $^{16}$N source (described in Sect.~\ref{sect:n16}) was used for the primary detector calibration. The $^{16}$N calibration data ($^{16}$N runs) were mainly used to check the performance of the reconstruction algorithms for event position, direction, and energy. 
 
 In this chapter, the \texttt{MPW fitter} (described in Sect.~\ref{sect:mpw}) was applied to both the experimental data from, and simulations of, the $^{16}$N runs in the water phase. By analyzing the differences between the $^{16}$N data and corresponding MC simulations, systematics of the position and direction reconstruction were extracted, and these were used in the solar neutrino analysis of Chapter 6. The event energy was reconstructed by the SNO+ energy fitter for the water phase (described in Sect.~\ref{sect:energyFitter}), which utilizes the \texttt{MPW fitter}'s event vertex and direction. Also, based on the \texttt{MPW fitter}'s reconstructed vertex and direction, other parameters, such as the in-time ratio (ITR) and the isotropy parameter ($\beta_{14}$) were calculated.
@@ -9,7 +11,7 @@ During the water phase, in June and in November 2017 the $^{16}$N source was dep
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=15cm]{N16_3Dscan.pdf}
-	\caption[The deployed source positions of the $^{16}$N scan runs.]{The deployed source positions of the $^{16}$N scan runs used by this thesis. The black dots are internal runs while the red squares are external runs.	\label{N16_3Dscan}}
+	\caption[The deployed source positions of the $^{16}$N scan runs.]{The deployed source positions of the $^{16}$N scan runs used by this thesis. The black dots are internal runs while the red squares are external runs.\label{N16_3Dscan}}
 \end{figure}
 
 The $^{16}$N calibration runs provide an ideal test of fitter performance. From a comparison of reconstructions for data and MC, we can extract the resolution and bias of the fitter. Here I determined the performance of both the \texttt{RAT water fitter} and the \texttt{MPW fitter} for vertex and direction reconstruction, characterizing that performance in terms of statistics pertaining to vertex shift (or offset), and uncertainty. 
@@ -27,11 +29,17 @@ A set of (event-) classifiers, developed originally for the SNO analysis, have b
 	
 	\item[$\bullet$] $\theta_{ij}$ isotropy classifier
 
-	This classifier describes the angle subtended at an event vertex by PMT \#i and PMT \#j, as defined by:
+	This classifier describes the angle subtended at a fitted event vertex by PMT $\#i$ and PMT $\#j$, as defined by:
 	\begin{equation}
 	\cos\theta_{ij}=\frac{(\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event})\cdot (\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event})}{|\vec{X}_{PMT\#i}- \vec{X}_\mathrm{event}||\vec{X}_{PMT\#j}- \vec{X}_\mathrm{event}|}\;.
 	\end{equation}
-	%% John: Jie, is this number, or rather, set of numbers, really an event classifier? There are, what, $N^2$ values of this property for EACH event? So it is not a single number for a given event. I wonder whether actually it is just needed as an input for $\beta_{14}$? Maybe I'm wrong, but it seems out of place, it doesn't have the same character as ITR and beta14 John
+	
+	And the $\langle \theta_{ij} \rangle$ calculates the average angle between all PMT hits in an event,
+	relative to the fitted vertex \cite{dunmore2004separation}:
+	\begin{equation}
+     \langle \theta_{ij} \rangle = \frac{2}{N(N-1)}\left[\sum_{i=1}^{N-1}\sum_{j=i+1}^N\theta_{ij}\right]\;.
+	\end{equation}
+	
 	\item[$\bullet$] $\beta_{14}$ isotropy classifier
 	
 	This classifier is derived from the event's {\em set} of angles $\theta_{ij}$. The first ($\beta_1$) and the fourth ($\beta_4$) spherical harmonics of an event are determined from
@@ -298,7 +306,7 @@ From the linear fits, the values of vertex shifts were obtained and listed in Ta
 
 The vertex scale systematics were then transformed, e.g. $x'=(1+\delta_x/100)x$ with equivalent formulae for the $(y,z)$ axes.
 
-The scale systematics also depend on the radius $R=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. The reconstructed radius is always used for defining the fiducial volume inside the AV. In this case, due to the AV offset mentioned in Chapter 3 and Chapter 4, a correction in $z$ with $z'=z-108$ (mm) should be applied, and then $R$ is changed to $R'=\sqrt{x^2+y^2+(z-108)^2}$. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, $\delta_R'$ is calculated as \cite{waterunidoc}:
+The scale systematics also depend on the radius $R=\sqrt{x^2+y^2+z^2}$ \cite{waterunidoc}. The reconstructed radius is always used for defining the fiducial volume inside the AV. In this case, due to the AV offset mentioned in Chapter 3 and Chapter 4, a correction in $z$ with $z'=z-108$ (mm) should be applied, and then $R$ is changed to $R'=\sqrt{x^2+y^2+(z-108)^2}$. By the usual logic for calculating error propagation, for an event position $(x,y,z)$, the \emph{radial scale} $\delta_R'$ is calculated as \cite{waterunidoc}:
 \begin{equation}
 \delta_{R'} =\sqrt{\sum_{i=1}^3(\frac{\partial R'}{\partial x_i})^2 \; \delta^2_{x_i}}= \sqrt{\frac{x^2\delta_x^2+y^2\delta_y^2+(z-108)^2\delta_z^2}{R'^2}}\; .
 \end{equation}
@@ -309,7 +317,7 @@ Fig.~\ref{fig:RscaleSmear} shows the effects of smearing the radius scales on th
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{smearRadResol.pdf}
-	\caption[Smeared reconstructed radius $R'$ spectrum of $^{16}$N central run 107055 MC by radius scales.]{Smeared reconstructed radius $R'$ of $^{16}$N central run 107055 by radius scales. The solid black line is for the unsmeared MC; the red dashed line is for scaling up the $R'$ in MC; the blue dotted line is for scaling down the $R'_{fit}$ in MC.\label{fig:RscaleSmear}}
+	\caption[Smeared reconstructed radius $R'$ spectrum of $^{16}$N central run 107055 MC by radius scales.]{Smeared reconstructed radius $R'$ of $^{16}$N central run 107055 by radius scales. The solid black line is for the unsmeared MC; the dashed red line is for scaling up the $R'$ in MC; the dotted blue line is for scaling down the $R'_{fit}$ in MC.\label{fig:RscaleSmear}}
 \end{figure} 
 
 %Uncertainties from the source manipulator positions are assumed to be 50~mm.
@@ -337,7 +345,7 @@ Fig.~\ref{angularResolMPW} shows the fitted results of the angular distributions
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{16NangularResol.pdf}
-	\caption[Distributions of the angular error in direction reconstruction, from the data and from MC.]{Distributions of the angular error in direction reconstruction, from the data (red solid line) and MC (black dashed line); both are reconstructed by the \texttt{MPW fitter}. These distributions are fitted with the angular resolution functions over the range [0.3,1].\label{angularResolMPW}}
+	\caption[Distributions of the angular error in direction reconstruction, from the data and from MC.]{Distributions of the angular error in direction reconstruction, from the data (solid red line) and MC (dashed black line); both are reconstructed by the \texttt{MPW fitter}. These distributions are fitted with the angular resolution functions over the range [0.3,1].\label{angularResolMPW}}
 \end{figure}
 
 \begin{table}[ht]
@@ -596,12 +604,12 @@ To apply the energy scale systematics, the reconstructed energy $E_{fit}$ is sme
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEscale_N16.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the red dash line is for scaling up the $E_{fit}$ in MC; the blue dot line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:EscaleSmear}}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by energy scales. The solid black line is for data and the gray dash-dot line is for unsmeared MC; the dashed red line is for scaling up the $E_{fit}$ in MC; the dotted blue line is for scaling down the $E_{fit}$ in MC. Histograms are normalized to the total counts of the data.\label{fig:EscaleSmear}}
 \end{figure}
 
 To apply the energy resolution systematics, the spectrum of the reconstructed energy $E_{fit}$ is convolved with an additional Gaussian resolution function $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, where $\sigma_\mathrm{smear}=\sqrt{E_{fit}} \; \sqrt{(1+\Delta_{b})^2-1}$. To smear the $E_{fit}$ event by event, $E_\mathrm{smear}$ is randomly sampled from $\mathrm{Gaus}(0,\sigma_\mathrm{smear})$, and then $E'_{fit}=E_{fit}+E_\mathrm{smear}$. Fig.~\ref{fig:EresolSmear} shows the effects of smearing the energy resolution on the $E_{fit}$ spectrum of the $^{16}$N central run 107055 MC (the unsmeared data spectrum is compared). It is obvious that smearing with the additional resolution coming from the uncertainties in $b$ widens the $E_{fit}$ spectrum. Similar to the case of position resolutions, because there is no unfolding procedure to improve or narrow the energy resolution, this energy resolution systematic is also one-sided \cite{marzec2019measurement}. Therefore, symmetric uncertainties with different signs were taken in the analyses in Chapter 6.
 \begin{figure}
 	\centering
 	\includegraphics[width=10cm]{SmearedEresol_N16_new.pdf}
-	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by the energy resolution.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by the energy resolution. The red dash line is for smearing the $E_{fit}$ with $\mathrm{Gaus}(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.\label{fig:EresolSmear}}
+	\caption[Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by the energy resolution.]{Smeared reconstructed energy spectrum of $^{16}$N central run 107055 MC by the energy resolution. The dashed red line is for smearing the $E_{fit}$ with $\mathrm{Gaus}(E_{fit},\sigma)$. Histograms are normalized to the total counts of the data.\label{fig:EresolSmear}}
 \end{figure}
