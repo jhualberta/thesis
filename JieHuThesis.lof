@@ -24,10 +24,10 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces A typical triggered waveform.}}{50}{figure.3.9}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Measured LAB-PPO energy spectrum with and without coincidence cut.}}{51}{figure.3.10}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces The 2D energy spectrum of the counting measurements.}}{52}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces The single $p.e.$ peak fitted with an asymmetric Gaussian function.}}{53}{figure.3.12}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces The single $p.e.$ peak fitted with an asymmetric Gaussian function.}}{54}{figure.3.12}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Two dimensional spectrum of LAB-PPO sample with coincidence cut.}}{54}{figure.3.13}%
 \contentsline {figure}{\numberline {3.14}{\ignorespaces The SNO+ Source Manipulator System.}}{59}{figure.3.14}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces $^{16}$N calibration source geometry.}}{59}{figure.3.15}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces $^{16}$N calibration source geometry.}}{60}{figure.3.15}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces $^{16}$N main decay scheme.}}{60}{figure.3.16}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Straight light path calculation in the water geometry.}}{66}{figure.4.1}%
@@ -97,7 +97,7 @@
 \contentsline {figure}{\numberline {4.41}{\ignorespaces The Gaussian means ($\mu $) of the \texttt {MP scint fitter} fit position biases as a function of energy.}}{112}{figure.4.41}%
 \contentsline {figure}{\numberline {4.42}{\ignorespaces The Gaussian resolutions ($\sigma $) of the \texttt {MP scint fitter} fit position biases as a function of energy.}}{112}{figure.4.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The deployed source positions of the $^{16}$N scan runs.}}{120}{figure.5.1}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The deployed source positions of the $^{16}$N scan runs.}}{119}{figure.5.1}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Position biases vs ITR and $\beta _{14}$ for the $^{16}$N central run 107055.}}{123}{figure.5.2}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces $E_{fit}$ vs $\beta _{14}$ for the data and MC.}}{123}{figure.5.3}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\texttt {RAT} data}}}{123}{figure.5.3}%
@@ -109,7 +109,7 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Schematic of the $^{16}$N source.}}{126}{figure.5.6}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Spatial distribution of {$^{16}$}N $\gamma $-ray's first interaction positions.}}{127}{figure.5.7}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Distributions of the reconstructed position projected onto the $x$-axis.}}{128}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces The fitted values of $\mu _P$ and $\sigma _P$ along $x$, $y$ and $z$-scans.}}{130}{figure.5.9}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces The fitted values of $\mu _P$ and $\sigma _P$ along $x$, $y$ and $z$-scans.}}{129}{figure.5.9}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Relative differences of $\sigma _P$ ($\sigma _{p,\delta }$) as a function of the $^{16}$N source position.}}{131}{figure.5.10}%
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Smeared reconstructed positions of $^{16}$N central run 107055 MC.}}{132}{figure.5.11}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smeared $x_{fit}$.}}}{132}{figure.5.11}%
@@ -117,9 +117,9 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smeared $z_{fit}$.}}}{132}{figure.5.11}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Vertex shifts of $\mu _P$ ($\mu _{p,\delta }$) as a function of the $^{16}$N source position.}}{133}{figure.5.12}%
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Vertex shifts along $x, y, z$ axes and fitted with linear functions.}}{135}{figure.5.13}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N x-scan runs.}}}{135}{figure.5.13}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N y-scan runs.}}}{135}{figure.5.13}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$^{16}$N z-scan runs.}}}{135}{figure.5.13}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$^{16}$N $X$-scan runs.}}}{135}{figure.5.13}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$^{16}$N $Y$-scan runs.}}}{135}{figure.5.13}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$^{16}$N $Z$-scan runs.}}}{135}{figure.5.13}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Smeared reconstructed radius $R'$ spectrum of $^{16}$N central run 107055 MC by radius scales.}}{136}{figure.5.14}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Distributions of the angular error in direction reconstruction, from the data and from MC.}}{138}{figure.5.15}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Fitted direction resolution parameters $\beta _M$, $\beta _S$ for the source scans.}}{139}{figure.5.16}%
@@ -204,9 +204,9 @@
 \contentsline {figure}{\numberline {6.19}{\ignorespaces The MSW survival probability curves as functions of MC energies.}}{180}{figure.6.19}%
 \contentsline {figure}{\numberline {6.20}{\ignorespaces The MC $\qopname \relax o{cos}\theta _\mathrm {sun}$ distributions used as PDFs for the flux calculations after the MLP selections ($5<E_{fit}<15$ MeV).}}{181}{figure.6.20}%
 \contentsline {figure}{\numberline {6.21}{\ignorespaces A fit on the total $^8$B flux.}}{182}{figure.6.21}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Fitting with the spectrum of elastic scattering.}}{183}{figure.6.22}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces A fit on the elastic scattering flux.}}{183}{figure.6.22}%
 \contentsline {figure}{\numberline {6.23}{\ignorespaces Smearing effects on the $\qopname \relax o{cos}\theta _\mathrm {sun}$ PDF.}}{186}{figure.6.23}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction parameter $\delta _\theta $.}}}{186}{figure.6.23}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Smearing direction resolution $\delta _\theta $.}}}{186}{figure.6.23}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Smearing energy resolution $\Delta _b$.}}}{186}{figure.6.23}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Smearing energy scale $\Delta _{\delta _E}$.}}}{186}{figure.6.23}%
 \contentsline {figure}{\numberline {6.24}{\ignorespaces A comparison of the ES flux measured recently by three independent experiments.}}{188}{figure.6.24}%

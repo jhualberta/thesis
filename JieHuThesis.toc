@@ -39,8 +39,8 @@
 \contentsline {subsubsection}{\numberline {3.3.7.3}Results}{54}{subsubsection.3.3.7.3}%
 \contentsline {section}{\numberline {3.4}SNO+ Electronics}{55}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Calibration}{57}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}The $^{16}$N Calibration Source}{58}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{60}{section.3.6}%
+\contentsline {subsection}{\numberline {3.5.1}The $^{16}$N Calibration Source}{59}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Monte Carlo Simulation and RAT Software}{61}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Event Reconstruction}{62}{chapter.4}%
 \contentsline {section}{\numberline {4.1}An Overview of the Reconstruction Algorithms in SNO+}{62}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Multi-Path Vertex and Direction Reconstructions for the Water Phase}{64}{section.4.2}%
