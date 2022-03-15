@@ -31,9 +31,9 @@
 \contentsline {figure}{\numberline {3.16}{\ignorespaces $^{16}$N main decay scheme.}}{60}{figure.3.16}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Straight light path calculation in the water geometry.}}{66}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The PMT response time profile, used as the timing PDF for vertex reconstruction.}}{67}{figure.4.2}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The PMT response time profile as PDF for vertex reconstruction.}}{67}{figure.4.2}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Cherenkov cone and straight line light paths (SNO+ water phase).}}{68}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces PMT angular distribution as the angular response PDF for direction reconstruction.}}{69}{figure.4.4}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The PMT angular distribution as PDF for direction reconstruction.}}{69}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Refractive index of water vs wavelength.}}{70}{figure.4.5}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces A cartoon shows effects of tuning the effective group velocity.}}{71}{figure.4.6}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Group velocity vs. radial bias for the \texttt {MPW fitter}.}}{72}{figure.4.7}%
@@ -107,7 +107,7 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Position biases vs $scaleLogL$ for the $^{16}$N central run 107055.}}{124}{figure.5.4}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Reconstructed energy vs $scaleLogL$ for the $^{16}$N central run 107055.}}{125}{figure.5.5}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Schematic of the $^{16}$N source.}}{126}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Spatial distribution of {$^{16}$}N $\gamma $-ray's first interaction positions, projected onto the $x$-axis.}}{127}{figure.5.7}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Spatial distribution of {$^{16}$}N $\gamma $-ray's first interaction positions.}}{127}{figure.5.7}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Distributions of the reconstructed position projected onto the $x$-axis.}}{128}{figure.5.8}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces The fitted values of $\mu _P$ and $\sigma _P$ along $x$, $y$ and $z$-scans.}}{130}{figure.5.9}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Relative differences of $\sigma _P$ ($\sigma _{p,\delta }$) as a function of the $^{16}$N source position.}}{131}{figure.5.10}%
@@ -180,7 +180,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fisher/LD output.}}}{169}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {BDT output.}}}{169}{figure.6.10}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {MLP output.}}}{169}{figure.6.10}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA ROC outputs for signal/background separations by different methods.}}{170}{figure.6.11}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces TMVA ROC outputs for signal/background separations.}}{170}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$4<E_{fit}<15$\nobreakspace {}MeV.}}}{170}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$5<E_{fit}<15$ MeV (energy above 5 MeV).}}}{170}{figure.6.11}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$4<E_{fit}<5$\nobreakspace {}MeV.}}}{170}{figure.6.11}%
