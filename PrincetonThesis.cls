@@ -577,17 +577,20 @@
 	\setcounter{secnumdepth}{3}%%Jie added, sub section numbers to 3 level
 }{
 	\pu@tocpage
-	\pu@lofpage
-	\pu@lotpage
+
+	\pu@lotpage %% Jie: list of tables first
+	 
+	\pu@lofpage %% Jie: list of figures
+	 
 	\cleardoublepage
-	\pagestyle{headings}
+	\pagestyle{plain}  %% Jie change from headings to plain
 	\pagenumbering{arabic}
 }
 
 \AtBeginDocument{
 	\singlespace
 	\raggedbottom
-	\pagestyle{headings}
+	\pagestyle{plain}  %% Jie change from headings to plain
 
 	% natbib redefines \thebibliography so we have to put this here
 	\let\pu@thebibliography\thebibliography
